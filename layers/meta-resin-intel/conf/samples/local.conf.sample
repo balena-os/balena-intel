@@ -1,5 +1,5 @@
 # Supported machines
-#MACHINE ?= "nuc"
+#MACHINE ?= "intel-corei7-64"
 
 # Set this to yes if staging build is desired
 #RESIN_STAGING_BUILD ?= "yes"

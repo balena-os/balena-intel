@@ -12,7 +12,6 @@ BBLAYERS ?= " \
     ${TOPDIR}/../layers/meta-openembedded/meta-networking \
     ${TOPDIR}/../layers/meta-openembedded/meta-python \
     ${TOPDIR}/../layers/meta-intel \
-    ${TOPDIR}/../layers/meta-intel/meta-nuc \
     ${TOPDIR}/../layers/meta-resin/meta-resin-common \
     ${TOPDIR}/../layers/meta-resin/meta-resin-fido \
     ${TOPDIR}/../layers/meta-resin-intel \

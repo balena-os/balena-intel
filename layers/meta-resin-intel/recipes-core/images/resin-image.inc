@@ -1,17 +1,17 @@
 #
-# intel nuc
+# intel intel-corei7-64
 #
 
-IMAGE_FSTYPES_append_nuc = " resin-sdcard"
+IMAGE_FSTYPES_append_intel-corei7-64 = " resin-sdcard"
 
 # Do not support live USB stick
-NOISO_nuc = "1"
-NOHDD_nuc = "1"
+NOISO_intel-corei7-64 = "1"
+NOHDD_intel-corei7-64 = "1"
 
 # Customize resin-sdcard
-RESIN_IMAGE_BOOTLOADER_nuc = "grub-efi"
-RESIN_BOOT_PARTITION_FILES_nuc = " \
+RESIN_IMAGE_BOOTLOADER_intel-corei7-64 = "grub-efi"
+RESIN_BOOT_PARTITION_FILES_intel-corei7-64 = " \
     bootx64.efi:/EFI/BOOT/ \
     grub.cfg:/EFI/BOOT/ \
-    bzImage-nuc.bin:/vmlinuz \
+    bzImage-intel-corei7-64.bin:/vmlinuz \
     "

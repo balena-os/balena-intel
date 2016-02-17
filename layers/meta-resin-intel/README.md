@@ -4,4 +4,4 @@
 This repository enables building resin.io for Intel machines.
 
 ## Supported machines
-* nuc
+* intel-corei7-64
