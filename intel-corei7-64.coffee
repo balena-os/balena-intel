@@ -112,11 +112,11 @@ module.exports =
 		linux: 'http://docs.resin.io/#/pages/installing/gettingStarted-NUC.md#on-mac-and-linux'
 
 	yocto:
-		machine: 'nuc'
+		machine: 'intel-corei7-64'
 		image: 'resin-image-flasher'
 		fstype: 'resin-sdcard'
-		version: 'yocto-fido'
-		deployArtifact: 'resin-image-flasher-nuc.resin-sdcard'
+		version: 'yocto-jethro'
+		deployArtifact: 'resin-image-flasher-intel-corei7-64.resin-sdcard'
 
 	configuration:
 		config:

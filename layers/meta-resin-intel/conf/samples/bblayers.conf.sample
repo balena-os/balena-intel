@@ -12,9 +12,8 @@ BBLAYERS ?= " \
     ${TOPDIR}/../layers/meta-openembedded/meta-networking \
     ${TOPDIR}/../layers/meta-openembedded/meta-python \
     ${TOPDIR}/../layers/meta-intel \
-    ${TOPDIR}/../layers/meta-intel/meta-nuc \
     ${TOPDIR}/../layers/meta-resin/meta-resin-common \
-    ${TOPDIR}/../layers/meta-resin/meta-resin-fido \
+    ${TOPDIR}/../layers/meta-resin/meta-resin-jethro \
     ${TOPDIR}/../layers/meta-resin-intel \
     "
 
@@ -22,5 +21,5 @@ BBLAYERS_NON_REMOVABLE ?= " \
     ${TOPDIR}/../layers/poky/meta \
     ${TOPDIR}/../layers/poky/meta-yocto \
     ${TOPDIR}/../layers/meta-resin/meta-resin-common \
-    ${TOPDIR}/../layers/meta-resin/meta-resin-fido \
+    ${TOPDIR}/../layers/meta-resin/meta-resin-jethro \
     "
