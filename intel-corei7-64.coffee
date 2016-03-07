@@ -61,7 +61,7 @@ module.exports =
 	aliases: [ 'nuc' ]
 	name: 'Intel NUC'
 	arch: 'amd64'
-	state: 'preview'
+	state: 'released'
 
 	stateInstructions:
 		postProvisioning: [
