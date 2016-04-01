@@ -56,6 +56,13 @@ NUC_POWERON = 'Press the power on button on your Intel NUC.'
 
 NUC_BOOT_SETUP = 'Press F2 to enter Setup. Select the UEFI:SATA option under Boot Drive Order, save and exit Setup.'
 
+postProvisioningInstructions = [
+	instructions.BOARD_SHUTDOWN
+	instructions.REMOVE_INSTALL_MEDIA
+	NUC_POWERON
+	NUC_BOOT_SETUP
+]
+
 module.exports =
 	slug: 'intel-nuc'
 	aliases: [ 'nuc' ]
@@ -64,47 +71,14 @@ module.exports =
 	state: 'released'
 
 	stateInstructions:
-		postProvisioning: [
-			instructions.BOARD_SHUTDOWN
-			instructions.REMOVE_INSTALL_MEDIA
-			NUC_POWERON
-			NUC_BOOT_SETUP
-		]
+		postProvisioning: postProvisioningInstructions
 
-	instructions:
-		windows: [
-			instructions.WINDOWS_DISK_IMAGER_USB
-			instructions.EJECT_USB
-			instructions.FLASHER_WARNING
-			NUC_FLASH
-			instructions.BOARD_SHUTDOWN
-			instructions.REMOVE_INSTALL_MEDIA
-			NUC_POWERON
-			NUC_BOOT_SETUP
-		]
-		osx: [
-			instructions.OSX_PLUG_USB
-			instructions.OSX_UNMOUNT_USB
-			instructions.DD_BURN_IMAGE_USB
-			instructions.EJECT_USB
-			instructions.FLASHER_WARNING
-			NUC_FLASH
-			instructions.BOARD_SHUTDOWN
-			instructions.REMOVE_INSTALL_MEDIA
-			NUC_POWERON
-			NUC_BOOT_SETUP
-		]
-		linux: [
-			instructions.LINUX_DF_USB
-			instructions.DD_BURN_IMAGE_USB
-			instructions.EJECT_USB
-			instructions.FLASHER_WARNING
-			NUC_FLASH
-			instructions.BOARD_SHUTDOWN
-			instructions.REMOVE_INSTALL_MEDIA
-			NUC_POWERON
-			NUC_BOOT_SETUP
-		]
+	instructions: [
+		instructions.ETCHER_USB
+		instructions.EJECT_USB
+		instructions.FLASHER_WARNING
+		NUC_FLASH
+	].concat(postProvisioningInstructions)
 
 	gettingStartedLink:
 		windows: 'http://docs.resin.io/#/pages/installing/gettingStarted-NUC.md#windows'
