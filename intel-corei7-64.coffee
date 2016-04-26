@@ -91,6 +91,7 @@ module.exports =
 		fstype: 'resin-sdcard'
 		version: 'yocto-jethro'
 		deployArtifact: 'resin-image-flasher-intel-corei7-64.resin-sdcard'
+		compressed: true
 
 	configuration:
 		config:
