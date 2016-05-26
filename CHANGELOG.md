@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Configure builds with RM_OLD_IMAGE [Theodor]
 * Bump meta-resin to include switch from rce to docker [Andrei]
 
 # v1.1.4 - 2016-04-16
