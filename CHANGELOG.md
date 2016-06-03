@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Update meta-resin submodule for including bootloader specific removal changes [Florin]
 * Bump yocto-resin-scripts to bring in improvements for in-docker builds [Andrei]
 * Configure builds with RM_OLD_IMAGE [Theodor]
 * Bump meta-resin to include switch from rce to docker [Andrei]
