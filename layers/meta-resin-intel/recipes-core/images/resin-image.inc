@@ -12,6 +12,5 @@ NOHDD_intel-corei7-64 = "1"
 RESIN_IMAGE_BOOTLOADER_intel-corei7-64 = "grub-efi"
 RESIN_BOOT_PARTITION_FILES_intel-corei7-64 = " \
     bootx64.efi:/EFI/BOOT/ \
-    grub.cfg:/EFI/BOOT/ \
     bzImage-intel-corei7-64.bin:/vmlinuz \
     "
