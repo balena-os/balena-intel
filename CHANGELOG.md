@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Add support for optional supervisor image [Andrei]
 * Update meta-resin to v1.2 [Andrei]
 * Bump meta-resin to HEAD [Andrei]
 * Use new flasher strategy (specify internal bootloader config file and location where to copy it) [Florin]
