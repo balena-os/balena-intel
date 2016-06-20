@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Bump meta-resin to include connectable builds [Andrei]
 * Add support for optional supervisor image [Andrei]
 * Update meta-resin to v1.2 [Andrei]
 * Bump meta-resin to HEAD [Andrei]
