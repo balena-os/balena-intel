@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Custom docker images in connectable builds [Andrei]
 * Bump meta-resin to include connectable builds [Andrei]
 * Add support for optional supervisor image [Andrei]
 * Update meta-resin to v1.2 [Andrei]
