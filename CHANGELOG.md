@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Update meta-resin to include kernel modules compress support [Andrei]
 * Replace SUPERVISOR_TAG by TARGET_TAG [Andrei]
 * Custom docker images in connectable builds [Andrei]
 * Bump meta-resin to include connectable builds [Andrei]
