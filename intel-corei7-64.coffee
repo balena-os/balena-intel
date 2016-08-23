@@ -65,7 +65,7 @@ postProvisioningInstructions = [
 
 module.exports =
 	slug: 'intel-nuc'
-	aliases: [ 'nuc' ]
+	aliases: [ 'nuc', 'edge' ]
 	name: 'Intel NUC'
 	arch: 'amd64'
 	state: 'released'
