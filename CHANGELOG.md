@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Include firmware for ibt [Michal]
+
 # v1.10.0 - 2016-08-24
 
 * Update meta-resin to v1.10 [Florin]
