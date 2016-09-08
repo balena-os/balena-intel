@@ -1,6 +1,9 @@
 Change log
 -----------
 
+* Eanble subset of ip_set kernel modules [Florin]
+* Enable ip6table_nat and nf_nat_ipv6 kernel modules [Florin]
+
 # v1.11.0 - 2016-08-31
 
 * Update meta-resin to v1.11 [Florin]
