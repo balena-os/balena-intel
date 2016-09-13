@@ -64,6 +64,7 @@ postProvisioningInstructions = [
 ]
 
 module.exports =
+	version: 1
 	slug: 'intel-nuc'
 	aliases: [ 'nuc' ]
 	name: 'Intel NUC'
@@ -96,8 +97,7 @@ module.exports =
 	configuration:
 		config:
 			partition:
-				primary: 4
-				logical: 1
+				primary: 1
 			path: '/config.json'
 
 	options: [ networkOptions.group ]
