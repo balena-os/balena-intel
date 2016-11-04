@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Update resin-yocto-scripts to fix logging in container builds
+
 # v2.0.0-beta.1 - 2016-10-11
 
 * Update meta-resin to v2.0-beta.1 [Andrei]
