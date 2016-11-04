@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Cleanup docker-resin-supervisor-disk of unneeded variables [Andrei]
 * Update resin-yocto-scripts to fix logging in container builds
 
 # v2.0.0-beta.1 - 2016-10-11
