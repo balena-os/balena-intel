@@ -1,1 +1,2 @@
-inherit kernel-resin
+MODULE_COMPRESS = "xz"
+inherit kernel-resin compress-kernel-modules
