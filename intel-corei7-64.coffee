@@ -90,7 +90,7 @@ module.exports =
 		machine: 'intel-corei7-64'
 		image: 'resin-image-flasher'
 		fstype: 'resin-sdcard'
-		version: 'yocto-jethro'
+		version: 'yocto-morty'
 		deployArtifact: 'resin-image-flasher-intel-corei7-64.resin-sdcard'
 		compressed: true
 
