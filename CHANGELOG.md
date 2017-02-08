@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Update to morty [Andrei]
+
 # v2.0.0-beta.9 - 2017-02-08
 
 * Update meta-resin to v2.0-beta.9 [Andrei]
