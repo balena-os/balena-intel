@@ -85,6 +85,6 @@ case $label in
         boot_rootfs flash-root
         ;;
     *)
-        boot_rootfs resin-root
+        boot_rootfs $label
         ;;
 esac
