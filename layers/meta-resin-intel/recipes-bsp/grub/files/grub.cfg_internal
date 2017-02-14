@@ -4,6 +4,6 @@ default=boot
 timeout=3
 
 menuentry 'boot'{
-linux /vmlinuz root=/dev/ram0 rootwait
+linux /vmlinuz LABEL=resin-root root=/dev/ram0 rootwait
 initrd /initramfs
 }
