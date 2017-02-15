@@ -44,29 +44,29 @@ read_args() {
 }
 
 boot_rootfs() {
-   local _what=$1
+    local _what=$1
 
     echo "init-external-media.sh: Waiting for udev to populate /dev/disk/by-label/$_what... "
-    while true
+    while :
     do
-        if ls -A /dev/disk/by-label/$_what >/dev/null 2>&1; then
+        if ls -A "/dev/disk/by-label/$_what" >/dev/null 2>&1; then
             break
         fi
         sleep 1
     done
     echo "init-external-media.sh: Found $_what label."
 
-    mkdir /$_what
-    mount /dev/disk/by-label/$_what /$_what
+    mkdir "/$_what"
+    mount "/dev/disk/by-label/$_what" "/$_what"
     # Watches the udev event queue, and exits if all current events are handled
     killall "${_UDEV_DAEMON##*/}" 2>/dev/null
 
-    exec switch_root /$_what /sbin/init ||
-        fatal "init-external-media.sh: Couldn't switch_root, dropping to shell"
+    exec switch_root "/$_what" /sbin/init ||
+        fatal "Couldn't switch_root, dropping to shell"
 }
 
 fatal() {
-    echo $1 >$CONSOLE
+    echo "init-external-media.sh: $1" >$CONSOLE
     echo >$CONSOLE
     exec sh
 }
