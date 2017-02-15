@@ -61,14 +61,7 @@ boot_rootfs() {
     # Watches the udev event queue, and exits if all current events are handled
     killall "${_UDEV_DAEMON##*/}" 2>/dev/null
 
-    exec switch_root "/$_what" /sbin/init ||
-        fatal "Couldn't switch_root, dropping to shell"
-}
-
-fatal() {
-    echo "init-external-media.sh: $1" >$CONSOLE
-    echo >$CONSOLE
-    exec sh
+    exec switch_root "/$_what" /sbin/init
 }
 
 early_setup
