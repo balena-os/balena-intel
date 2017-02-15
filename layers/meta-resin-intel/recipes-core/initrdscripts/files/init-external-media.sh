@@ -1,6 +1,7 @@
 #!/bin/sh
 
 PATH=/sbin:/bin:/usr/sbin:/usr/bin
+SCRIPTNAME=$(basename $0)
 
 udev_daemon() {
 	OPTIONS="/sbin/udev/udevd /sbin/udevd /lib/udev/udevd /lib/systemd/systemd-udevd"
@@ -46,7 +47,7 @@ read_args() {
 boot_rootfs() {
     local _what=$1
 
-    echo "init-external-media.sh: Waiting for udev to populate /dev/disk/by-label/$_what... "
+    echo "$SCRIPTNAME: Waiting for udev to populate /dev/disk/by-label/$_what... "
     while :
     do
         if ls -A "/dev/disk/by-label/$_what" >/dev/null 2>&1; then
@@ -54,7 +55,7 @@ boot_rootfs() {
         fi
         sleep 1
     done
-    echo "init-external-media.sh: Found $_what label."
+    echo "$SCRIPTNAME: Found $_what label."
 
     mkdir "/$_what"
     mount "/dev/disk/by-label/$_what" "/$_what"
