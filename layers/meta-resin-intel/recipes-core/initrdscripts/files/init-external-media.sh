@@ -1,6 +1,7 @@
 #!/bin/sh
 
 PATH=/sbin:/bin:/usr/sbin:/usr/bin
+SCRIPTNAME=$(basename $0)
 
 udev_daemon() {
 	OPTIONS="/sbin/udev/udevd /sbin/udevd /lib/udev/udevd /lib/systemd/systemd-udevd"
@@ -43,20 +44,25 @@ read_args() {
     done
 }
 
-boot_external_rootfs() {
-    mkdir /.flasher_root
-    mount /dev/disk/by-label/flash-root /.flasher_root
+boot_rootfs() {
+    local _what=$1
+
+    echo "$SCRIPTNAME: Waiting for udev to populate /dev/disk/by-label/$_what... "
+    while :
+    do
+        if ls -A "/dev/disk/by-label/$_what" >/dev/null 2>&1; then
+            break
+        fi
+        sleep 1
+    done
+    echo "$SCRIPTNAME: Found $_what label."
+
+    mkdir "/$_what"
+    mount "/dev/disk/by-label/$_what" "/$_what"
     # Watches the udev event queue, and exits if all current events are handled
     killall "${_UDEV_DAEMON##*/}" 2>/dev/null
 
-    exec switch_root /.flasher_root /sbin/init ||
-        fatal "Couldn't switch_root, dropping to shell"
-}
-
-fatal() {
-    echo $1 >$CONSOLE
-    echo >$CONSOLE
-    exec sh
+    exec switch_root "/$_what" /sbin/init
 }
 
 early_setup
@@ -65,25 +71,14 @@ early_setup
 
 read_args
 
-echo "Waiting for udev to populate /dev/disk/by-label/ from USB media"
-
-while true
-do
-    if ls -A /dev/disk/by-label/flash-root >/dev/null 2>&1; then
-        break
-    fi
-    sleep 1
-done
-
 # unmount the USB partitions from /run/media/ (to be checked in the future if we will disable this automounting behaviour)
 umount /run/media/* 2>/dev/null
 
 case $label in
-    boot)
-	boot_external_rootfs
-	;;
+    flash)
+        boot_rootfs flash-root
+        ;;
     *)
-	# Not sure what boot label is provided.  Try to boot to avoid locking up.
-	boot_external_rootfs
-	;;
+        boot_rootfs $label
+        ;;
 esac

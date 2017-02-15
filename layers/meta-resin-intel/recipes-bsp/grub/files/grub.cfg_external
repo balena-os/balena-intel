@@ -3,7 +3,7 @@ serial --unit=0 --speed=115200 --word=8 --parity=no --stop=1
 default=boot
 timeout=3
 
-menuentry 'boot'{
-linux /vmlinuz LABEL=boot root=/dev/ram0 rootwait
+menuentry 'flash'{
+linux /vmlinuz LABEL=flash root=/dev/ram0 rootwait
 initrd /initramfs
 }

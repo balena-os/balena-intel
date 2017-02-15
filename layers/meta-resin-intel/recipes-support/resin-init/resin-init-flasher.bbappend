@@ -1,5 +1,6 @@
 # On Intel intel-corei7-64, we flash on internal hard disk drive
-INTERNAL_DEVICE_KERNEL_intel-corei7-64 = "sda"
+# The first one found will be used
+INTERNAL_DEVICE_KERNEL_intel-corei7-64 = "nvme0n1 sda"
 
 # the name of the bootloader config file to be written to internal media
 INTERNAL_DEVICE_BOOTLOADER_CONFIG_intel-corei7-64 = "grub.cfg_internal"
