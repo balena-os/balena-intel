@@ -89,9 +89,9 @@ module.exports =
 	yocto:
 		machine: 'intel-corei7-64'
 		image: 'resin-image-flasher'
-		fstype: 'resin-sdcard'
+		fstype: 'resinos-img'
 		version: 'yocto-morty'
-		deployArtifact: 'resin-image-flasher-intel-corei7-64.resin-sdcard'
+		deployArtifact: 'resin-image-flasher-intel-corei7-64.resinos-img'
 		compressed: true
 
 	configuration:
