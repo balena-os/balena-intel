@@ -1,6 +1,8 @@
 Change log
 -----------
 
+# v2.0.0-beta12.rev1 - 2017-02-27
+
 * Bump resin-yocto-scripts to current HEAD [Andrei]
 * meta-resin: Bump to 2.0.0-beta12 [Andrei]
 
