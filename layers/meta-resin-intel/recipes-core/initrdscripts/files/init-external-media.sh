@@ -74,11 +74,4 @@ read_args
 # unmount the USB partitions from /run/media/ (to be checked in the future if we will disable this automounting behaviour)
 umount /run/media/* 2>/dev/null
 
-case $label in
-    flash)
-        boot_rootfs flash-root
-        ;;
-    *)
-        boot_rootfs $label
-        ;;
-esac
+boot_rootfs $label
