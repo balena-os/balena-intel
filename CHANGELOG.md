@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Integrate our current initramfs in the new initramfs framework [Theodor]
+
 # v2.0.0-beta12.rev2 - 2017-02-28
 
 * Fix partition labels from last meta-resin update [Andrei]
