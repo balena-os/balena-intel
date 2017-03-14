@@ -16,5 +16,5 @@ RESIN_IMAGE_BOOTLOADER_intel-corei7-64 = "grub-efi"
 RESIN_BOOT_PARTITION_FILES_intel-corei7-64 = " \
     core-image-minimal-initramfs-intel-corei7-64.cpio.gz:/initramfs \
     bootx64.efi:/EFI/BOOT/ \
-    bzImage-intel-corei7-64.bin:/vmlinuz \
+    bzImage${KERNEL_INITRAMFS}-intel-corei7-64.bin:/vmlinuz \
     "
