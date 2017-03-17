@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Update the meta-resin submodule to version v2.0.0-rc4 [Florin]
 * Integrate our current initramfs in the new initramfs framework [Theodor]
 
 # v2.0.0-beta12.rev2 - 2017-02-28
