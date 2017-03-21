@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Update the Poky submodule [Will]
+
 # v2.0.0-rc4.rev1 - 2017-03-17
 
 * Update the meta-resin submodule to version v2.0.0-rc4 [Florin]
