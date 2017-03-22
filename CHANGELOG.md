@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Update the Poky submodule, which reverts previous change [Will]
 * Do not show kernel boot messages on the display for production images [Florin]
 * Update the Poky submodule [Will]
 
