@@ -5,7 +5,7 @@ labelrootfs_enabled() {
 }
 
 labelrootfs_run() {
-    echo "Waiting for udev to populate /dev/disk/by-label/$bootparam_LABEL... "
+    info "Waiting for udev to populate /dev/disk/by-label/$bootparam_LABEL... "
     while :
     do
         if test -e /dev/disk/by-label/$bootparam_LABEL; then
@@ -13,7 +13,7 @@ labelrootfs_run() {
         fi
         sleep 1
     done
-    echo "Found $bootparam_LABEL label."
+    info "Found $bootparam_LABEL label."
 
     bootparam_root="/dev/disk/by-label/$bootparam_LABEL"
 }
