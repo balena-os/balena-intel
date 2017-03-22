@@ -1,7 +1,7 @@
 # Automatically created by OE
 serial --unit=0 --speed=115200 --word=8 --parity=no --stop=1
 default=boot
-timeout=3
+timeout=0
 
 menuentry 'boot'{
 linux /vmlinuz LABEL=resin-rootA rootwait quiet loglevel=0 splash udev.log-priority=3 vt.global_cursor_default=0
