@@ -4,6 +4,5 @@ default=boot
 timeout=3
 
 menuentry 'flash'{
-linux /vmlinuz LABEL=flash-rootA root=/dev/ram0 rootwait
-initrd /initramfs
+linux /vmlinuz root=LABEL=flash-rootA rootwait
 }
