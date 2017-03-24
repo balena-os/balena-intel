@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Drop the external initramfs and only use the initramfs bundled in the kernel [Florin]
 * Update the meta-resin submodule to version v2.0.0-rc5 [Florin]
 * Enable the DLM module for intel NUC [Theodor]
 * Update the Poky submodule, which reverts previous change [Will]
