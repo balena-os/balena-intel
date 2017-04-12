@@ -15,3 +15,13 @@ RESIN_CONFIGS_append_intel-corei7-64 = " dlm"
 RESIN_CONFIGS[dlm] = " \
     CONFIG_DLM=m \
     "
+
+#
+# Support for serial console and more than 4 serial ports
+#
+RESIN_CONFIGS_append_intel-corei7-64 = " serial_8250"
+RESIN_CONFIGS[serial_8250] = " \
+    CONFIG_SERIAL_8250_CONSOLE=y \
+    CONFIG_SERIAL_8250_NR_UARTS=32 \
+    CONFIG_SERIAL_8250_RUNTIME_UARTS=32 \
+    "
