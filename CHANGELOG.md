@@ -1,6 +1,10 @@
 Change log
 -----------
 
+# v2.0.2+rev1 - 2017-04-24
+
+* Update the meta-resin submodule to version v2.0.2 [Andrei]
+
 # v2.0.0+rev3 - 2017-04-13
 
 * Bump resin-yocto-scripts to include deployment routine [Andrei]
