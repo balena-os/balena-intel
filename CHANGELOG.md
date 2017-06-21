@@ -1,6 +1,8 @@
 Change log
 -----------
 
+# v1.16.2 - 2017-06-21
+
 * Update resin-yocto-scripts to HEAD of 1.X branch [Florin]
 
 # v1.16.1 - 2017-06-21
