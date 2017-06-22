@@ -1,6 +1,9 @@
 Change log
 -----------
 
+# v1.26.0 - 2017-06-22
+
+* Update meta-resin to v1.26 [Florin]
 * Update resin-yocto-scripts to HEAD of 1.X branch [Florin]
 * Update resin-yocto-scripts to master [Will]
 
