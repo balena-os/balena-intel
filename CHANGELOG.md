@@ -1,6 +1,9 @@
 Change log
 -----------
 
+# v2.3.0+rev1 - 2017-08-17
+
+* Update the meta-resin submodule to version v2.3.0 [Florin]
 * Update the getting started links [Zach]
 
 # v2.2.0+rev1 - 2017-07-30
