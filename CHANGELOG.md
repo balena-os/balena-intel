@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Update to Pyro [Will]
 * Include meta-rust layer [Will]
 * Add meta-rust layer [Will]
 * Add missing bluetooth firmware [Florin]
