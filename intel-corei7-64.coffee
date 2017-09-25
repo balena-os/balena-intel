@@ -90,7 +90,7 @@ module.exports =
 		machine: 'intel-corei7-64'
 		image: 'resin-image-flasher'
 		fstype: 'resinos-img'
-		version: 'yocto-morty'
+		version: 'yocto-pyro'
 		deployArtifact: 'resin-image-flasher-intel-corei7-64.resinos-img'
 		compressed: true
 
