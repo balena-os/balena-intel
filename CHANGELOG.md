@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Add meta-rust layer [Will]
+
 * Add missing bluetooth firmware [Florin]
 
 # v2.3.0+rev1 - 2017-08-17
