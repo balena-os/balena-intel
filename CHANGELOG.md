@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Update meta-openembedded to latest pyro branch [Will]
 * Update poky to latest pyro branch [Will]
 * Update to Pyro [Will]
 * Include meta-rust layer [Will]
