@@ -1,0 +1,31 @@
+#!/bin/sh
+
+set -e
+
+FLASHER_CONF_FILE=/etc/resin-init-flasher.conf
+
+# source the flasher configuration file
+if [ -f $FLASHER_CONF_FILE ]; then
+    source $FLASHER_CONF_FILE
+else
+    echo "No configuration for resin-init-flasher-board. Cannot create UEFI boot entry with efibootmgr."
+    exit 1
+fi
+
+internal_dev=""
+for d in $INTERNAL_DEVICE_KERNEL; do
+    if [ -b "/dev/$d" ]; then
+        internal_dev=$d
+        break
+    fi
+done
+
+if [ -z "$internal_dev" ]; then
+    echo "Failed to find internal device for which to set the resinOS UEFI boot entry. Exiting"
+    exit 1
+fi
+
+echo "Add UEFI boot entry for starting resinOS from internal media."
+efibootmgr -c -d /dev/$internal_dev -p 1 -L "resinOS" -l "\EFI\BOOT\bootx64.efi"
+
+exit 0
