@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Include efibootmgr in the flasher so we create the appropriate UEFI boot entry for resinOS [Florin]
 * Switch back to EFI GRUB instead of the systemd gummiboot implementation [Florin]
 * Update meta-openembedded to latest pyro branch [Will]
 * Update poky to latest pyro branch [Will]
