@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Update the resin-yocto-scripts submodule to e3a06d48a2f8b7e32d3047c33066a5b896e6ae93 (on master branch) [Florin]
 * Include efibootmgr in the flasher so we create the appropriate UEFI boot entry for resinOS [Florin]
 * Switch back to EFI GRUB instead of the systemd gummiboot implementation [Florin]
 * Update meta-openembedded to latest pyro branch [Will]
