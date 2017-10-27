@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Provide hook to update hostapp [Theodor]
+
 # v2.7.4+rev1
 ## (2017-10-26)
 
