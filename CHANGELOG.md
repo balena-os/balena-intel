@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Install in the rootfs the 99-resin-grub hostapp hook needed for GRUB to switch the root partition when doing host OS updates [Florin]
+
 # v2.7.4+rev1
 ## (2017-10-26)
 
