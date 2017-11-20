@@ -1,5 +1,5 @@
 # Supported machines
-#MACHINE ?= "intel-corei7-64"
+#MACHINE ?= "genericx86-64"
 
 # More info meta-resin/README.md
 #RESIN_CONNECTABLE ?= "1"
