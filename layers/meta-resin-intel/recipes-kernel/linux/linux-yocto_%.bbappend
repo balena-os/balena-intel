@@ -3,7 +3,7 @@ inherit kernel-resin
 #
 # Support for NVME block devices
 #
-RESIN_CONFIGS_append_intel-corei7-64 = " nvme"
+RESIN_CONFIGS_append = " nvme"
 RESIN_CONFIGS[nvme] = " \
     CONFIG_BLK_DEV_NVME=y \
     "
@@ -11,7 +11,7 @@ RESIN_CONFIGS[nvme] = " \
 #
 # Support for DLM module
 #
-RESIN_CONFIGS_append_intel-corei7-64 = " dlm"
+RESIN_CONFIGS_append = " dlm"
 RESIN_CONFIGS[dlm] = " \
     CONFIG_DLM=m \
     "
@@ -19,7 +19,7 @@ RESIN_CONFIGS[dlm] = " \
 #
 # Support for serial console and more than 4 serial ports
 #
-RESIN_CONFIGS_append_intel-corei7-64 = " serial_8250"
+RESIN_CONFIGS_append = " serial_8250"
 RESIN_CONFIGS[serial_8250] = " \
     CONFIG_SERIAL_8250_CONSOLE=y \
     CONFIG_SERIAL_8250_NR_UARTS=32 \
