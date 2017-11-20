@@ -14,7 +14,7 @@ BBLAYERS ?= " \
     ${TOPDIR}/../layers/meta-openembedded/meta-python \
     ${TOPDIR}/../layers/meta-resin/meta-resin-common \
     ${TOPDIR}/../layers/meta-resin/meta-resin-pyro \
-    ${TOPDIR}/../layers/meta-resin-intel \
+    ${TOPDIR}/../layers/meta-resin-genericx86 \
     ${TOPDIR}/../layers/meta-rust \
     "
 
