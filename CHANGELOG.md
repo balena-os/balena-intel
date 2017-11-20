@@ -1,6 +1,10 @@
 Change log
 -----------
 
+* Support I350-based Intel® Gigabit Ethernet Network Connections [Theodor]
+* Allow genericx86-64 to be configured with or without UEFI [Theodor]
+* Move to a more generic device type: intel-corei7-64 -> genericx86-64 [Theodor]
+
 # v2.7.8+rev1
 ## (2017-11-17)
 
