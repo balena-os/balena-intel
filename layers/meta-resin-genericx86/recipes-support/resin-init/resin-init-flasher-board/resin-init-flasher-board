@@ -2,6 +2,33 @@
 
 set -e
 
+INTERNAL_DEVICE_BOOT_PART_MOUNTPOINT=/tmp/internal_boot
+
+if efibootmgr &>/dev/null ; then 
+    INSTALL_UEFI="yes"
+fi
+
+# Mount internal device boot partition
+mkdir -p $INTERNAL_DEVICE_BOOT_PART_MOUNTPOINT
+echo "[resin-init-flasher-board] Mounting internal device boot partition."
+if ! mount /dev/disk/by-label/resin-boot $INTERNAL_DEVICE_BOOT_PART_MOUNTPOINT; then
+    echo "[resin-init-flasher-board] Unable to mount boot partition"
+    exit 1
+fi
+
+if [ -z $INSTALL_UEFI ]; then
+    echo "[resin-init-flasher-board] non-UEFI installation."
+    rm -rf "$INTERNAL_DEVICE_BOOT_PART_MOUNTPOINT/EFI"
+else 
+    echo "[resin-init-flasher-board] UEFI installation."
+    rm -rf "$INTERNAL_DEVICE_BOOT_PART_MOUNTPOINT/grub"
+fi
+
+umount $INTERNAL_DEVICE_BOOT_PART_MOUNTPOINT
+sync
+
+[ -z $INSTALL_UEFI ] && exit 0
+
 FLASHER_CONF_FILE=/etc/resin-init-flasher.conf
 
 # source the flasher configuration file
