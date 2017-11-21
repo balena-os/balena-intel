@@ -8,3 +8,4 @@ INTERNAL_DEVICE_BOOTLOADER_CONFIG = "grub.cfg_internal"
 # the pathname (relative to /boot/) where the internal bootloader config file should reside in
 # (currently assuming this is on partition 1 of the internal media)
 INTERNAL_DEVICE_BOOTLOADER_CONFIG_PATH = "/EFI/BOOT/grub.cfg"
+INTERNAL_DEVICE_BOOTLOADER_LEGACY_CONFIG_PATH = "/grub/grub.cfg"
