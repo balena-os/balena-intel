@@ -25,3 +25,14 @@ RESIN_CONFIGS[serial_8250] = " \
     CONFIG_SERIAL_8250_NR_UARTS=32 \
     CONFIG_SERIAL_8250_RUNTIME_UARTS=32 \
     "
+
+#
+# Support Intel(R) 82575/82576 PCI-Express Gigabit Ethernet
+#
+RESIN_CONFIGS_append = " igb"
+RESIN_CONFIGS_DEPS[igb] = " \
+    CONFIG_PCI=m \
+    "
+RESIN_CONFIGS[igb] = " \
+    CONFIG_IGB=m \
+    "
