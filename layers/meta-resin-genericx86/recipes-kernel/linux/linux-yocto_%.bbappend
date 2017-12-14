@@ -9,6 +9,21 @@ RESIN_CONFIGS[nvme] = " \
     "
 
 #
+# Support Intel wrieless LAN adapter
+#
+RESIN_CONFIGS_append = " iwlwifi"
+RESIN_CONFIGS_DEPS[iwlwifi] = " \
+    CONFIG_PCI=m \
+    CONFIG_MAC80211=m \
+    CONFIG_HAS_IOMEM=m \
+    "
+RESIN_CONFIGS[iwlwifi] = " \
+    CONFIG_IWLMVM=m \
+    CONFIG_IWLDVM=m \
+    CONFIG_IWLWIFI=m \
+    "
+
+#
 # Support for DLM module
 #
 RESIN_CONFIGS_append = " dlm"
