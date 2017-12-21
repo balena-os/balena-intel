@@ -18,8 +18,8 @@ postProvisioningInstructions = [
 
 module.exports =
 	version: 1
-	slug: 'genericx86-64'
-	aliases: [ 'nuc', 'intel-nuc' ]
+	slug: 'intel-nuc'
+	aliases: [ 'nuc', 'intel-nuc', 'genericx86-64' ]
 	name: 'Generic x86-64'
 	arch: 'amd64'
 	state: 'released'
