@@ -1,6 +1,9 @@
 Change log
 -----------
 
+# v2.9.2+rev2
+## (2017-12-21)
+
 * Revert device type rename, to not face issues with existing devices [Theodor]
 * Add generic icon [Theodor]
 
