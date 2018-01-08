@@ -4,7 +4,7 @@ deviceTypesCommon = require '@resin.io/device-types/common'
 GENERIC_FLASH = '''
 	Please make sure you do not have any other USB keys inserted.
 	Power up the <%= TYPE_NAME %>. Make sure you have a keyboard connected.
-	Press the F10 key (may differ on some platforms) while BIOS is loading in order to enter the boot menu. 
+	Press the F10 key (may differ on some platforms) while BIOS is loading in order to enter the boot menu.
 	Next, select the name of your USB key.
 '''
 
@@ -18,9 +18,9 @@ postProvisioningInstructions = [
 
 module.exports =
 	version: 1
-	slug: 'genericx86-64'
-	aliases: [ 'nuc', 'intel-nuc' ]
-	name: 'Generic x86-64'
+	slug: 'intel-nuc'
+	aliases: [ 'nuc' ]
+	name: 'Intel NUC'
 	arch: 'amd64'
 	state: 'released'
 
@@ -35,9 +35,9 @@ module.exports =
 	].concat(postProvisioningInstructions)
 
 	gettingStartedLink:
-		windows: 'http://docs.resin.io/genericx86-64/nodejs/getting-started/#adding-your-first-device'
-		osx: 'http://docs.resin.io/genericx86-64/nodejs/getting-started/#adding-your-first-device'
-		linux: 'http://docs.resin.io/genericx86-64/nodejs/getting-started/#adding-your-first-device'
+		windows: 'http://docs.resin.io/nuc/nodejs/getting-started/#adding-your-first-device'
+		osx: 'http://docs.resin.io/nuc/nodejs/getting-started/#adding-your-first-device'
+		linux: 'http://docs.resin.io/nuc/nodejs/getting-started/#adding-your-first-device'
 
 	yocto:
 		machine: 'genericx86-64'
