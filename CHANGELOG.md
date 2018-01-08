@@ -1,6 +1,9 @@
 Change log
 -----------
 
+# v2.9.2+rev2
+## (2018-01-08)
+
 * Deploy generic x86-64 images under the old nuc slug [Andrei]
 
 # v2.9.2+rev1
