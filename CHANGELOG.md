@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Activate kernel drivers for bluetooth to work on the Intel NUC when using the genericx86-64 machine [Florin]
+
 # v2.9.3+rev1
 ## (2018-01-09)
 

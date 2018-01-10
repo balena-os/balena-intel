@@ -24,6 +24,16 @@ RESIN_CONFIGS[iwlwifi] = " \
     "
 
 #
+# Support Intel NUC Bluetooth
+#
+RESIN_CONFIGS_append = " nuc_bluetooth"
+RESIN_CONFIGS[nuc_bluetooth] = " \
+    CONFIG_BT_HCIUART=m \
+    CONFIG_BT_HCIUART_INTEL=y \
+    CONFIG_BT_HCIBTUSB=m \
+    "
+
+#
 # Support for DLM module
 #
 RESIN_CONFIGS_append = " dlm"
