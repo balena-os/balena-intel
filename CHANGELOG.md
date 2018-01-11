@@ -1,6 +1,10 @@
 Change log
 -----------
 
+# v2.9.5+rev1
+## (2018-01-11)
+
+* Update the meta-resin submodule to version v2.9.5 [Florin]
 * Update the resin-yocto-scripts submodule to 6f7a9ab326bb822196e3e48b08ef1d73d08caec6 (on master branch) [Florin]
 * Activate kernel drivers for bluetooth to work on the Intel NUC when using the genericx86-64 machine [Florin]
 
