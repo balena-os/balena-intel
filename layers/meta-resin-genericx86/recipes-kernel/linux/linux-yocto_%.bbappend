@@ -1,6 +1,14 @@
 inherit kernel-resin
 
 #
+# EHCI drivers
+#
+RESIN_CONFIGS_append = " ehci"
+RESIN_CONFIGS[ehci] = " \
+    CONFIG_USB_EHCI_HCD_PLATFORM=y \
+    "
+
+#
 # Support for NVME block devices
 #
 RESIN_CONFIGS_append = " nvme"
