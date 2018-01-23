@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Activate CONFIG_USB_EHCI_HCD_PLATFORM in kernel [Andrei]
+
 # v2.9.6+rev1
 ## (2018-01-13)
 
