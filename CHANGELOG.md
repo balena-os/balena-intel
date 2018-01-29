@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Support RTL8723BE and RTL8821AE based WiFi/BT cards [Florin]
 * Activate CONFIG_USB_EHCI_HCD_PLATFORM in kernel [Andrei]
 
 # v2.9.6+rev1
