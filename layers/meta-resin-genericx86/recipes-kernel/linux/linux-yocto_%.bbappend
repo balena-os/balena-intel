@@ -69,3 +69,13 @@ RESIN_CONFIGS_DEPS[igb] = " \
 RESIN_CONFIGS[igb] = " \
     CONFIG_IGB=m \
     "
+
+# Support for RTL8723BE and RTL8821AE based WiFi/BT cards
+RESIN_CONFIGS_append = " rtl8723be_rtl8821ae"
+RESIN_CONFIGS_DEPS[rtl8723be_rtl8821ae] = " \
+        CONFIG_RTL_CARDS=m \
+"
+RESIN_CONFIGS[rtl8723be_rtl8821ae] = " \
+    CONFIG_RTL8723BE=m \
+    CONFIG_RTL8821AE=m \
+"
