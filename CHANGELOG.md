@@ -1,6 +1,10 @@
 Change log
 -----------
 
+# v2.9.7+rev1
+## (2018-02-01)
+
+* Update the meta-resin submodule to version v2.9.7 [Florin]
 * Update the resin-yocto-scripts submodule to 6f7a9ab326bb822196e3e48b08ef1d73d08caec6 (on master branch) [Florin]
 * Support RTL8723BE and RTL8821AE based WiFi/BT cards [Florin]
 * Activate CONFIG_USB_EHCI_HCD_PLATFORM in kernel [Andrei]
