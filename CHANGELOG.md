@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Update the resin-yocto-scripts submodule to 6f7a9ab326bb822196e3e48b08ef1d73d08caec6 (on master branch) [Florin]
 * Support RTL8723BE and RTL8821AE based WiFi/BT cards [Florin]
 * Activate CONFIG_USB_EHCI_HCD_PLATFORM in kernel [Andrei]
 
