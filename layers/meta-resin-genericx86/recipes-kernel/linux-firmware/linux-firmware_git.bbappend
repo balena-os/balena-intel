@@ -1,4 +1,4 @@
-PACKAGES =+ "${PN}-ibt"
+PACKAGES =+ "${PN}-ibt ${PN}-rtl8723b-bt"
 
 FILES_${PN}-ibt = " \
     /lib/firmware/intel/ibt-11-5.ddc \
@@ -7,4 +7,8 @@ FILES_${PN}-ibt = " \
     /lib/firmware/intel/ibt-12-16.sfi \
     /lib/firmware/intel/ibt-hw-37.8.bseq \
     /lib/firmware/intel/ibt-hw-37.8.10-fw-1.10.3.11.e.bseq \
+    "
+
+FILES_${PN}-rtl8723b-bt = " \
+    /lib/firmware/rtl_bt/rtl8723b_fw.bin \
     "
