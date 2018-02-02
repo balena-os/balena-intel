@@ -1,1 +1,1 @@
-CONNECTIVITY_FIRMWARES =+ "linux-firmware-ibt linux-firmware-rtl8723 linux-firmware-rtl8821"
+CONNECTIVITY_FIRMWARES =+ "linux-firmware-ibt linux-firmware-rtl8723 linux-firmware-rtl8821 linux-firmware-rtl8723b-bt"
