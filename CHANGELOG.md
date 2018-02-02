@@ -1,6 +1,9 @@
 Change log
 -----------
 
+# v2.9.7+rev2
+## (2018-02-02)
+
 * Conditionally write grub legacy to internal boot device's MBR [Florin]
 * Include bluetooth firmware for Realtek 8723 based cards [Florin]
 
