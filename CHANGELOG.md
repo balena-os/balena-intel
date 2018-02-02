@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Include bluetooth firmware for Realtek 8723 based cards [Florin]
+
 # v2.9.7+rev1
 ## (2018-02-01)
 
