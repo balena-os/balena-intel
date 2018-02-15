@@ -79,3 +79,10 @@ RESIN_CONFIGS[rtl8723be_rtl8821ae] = " \
     CONFIG_RTL8723BE=m \
     CONFIG_RTL8821AE=m \
 "
+
+# Enable Intel Low Power Subsystem Support
+# (for detecting the eMMC on some Atom based Intel SoCs)
+RESIN_CONFIGS_append = " lpss"
+RESIN_CONFIGS[lpss] = " \
+    CONFIG_X86_INTEL_LPSS=y \
+"
