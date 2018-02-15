@@ -29,7 +29,7 @@ fi
 internal_dev=""
 for d in $INTERNAL_DEVICE_KERNEL; do
     if [ "$CURRENT_ROOT" = "$d" ]; then
-        inform "$d is our install media, skip it..."
+        echo "[resin-init-flasher-board] $d is our install media, skip it..."
         continue
     fi
     if [ -b "/dev/$d" ]; then
