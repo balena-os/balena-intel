@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Update submodules to include multistaging support [Andrei]
 * Enable VXLAN support [Florin]
 * Fix eMMC detection on some Atom based SoCs [Florin]
 
