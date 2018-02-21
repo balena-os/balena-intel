@@ -86,3 +86,9 @@ RESIN_CONFIGS_append = " lpss"
 RESIN_CONFIGS[lpss] = " \
     CONFIG_X86_INTEL_LPSS=y \
 "
+
+# Enable vxlan support (requested by customer)
+RESIN_CONFIGS_append = " vxlan"
+RESIN_CONFIGS[vxlan] = " \
+    CONFIG_VXLAN=m \
+"
