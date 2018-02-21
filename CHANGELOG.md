@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Enable VXLAN support [Florin]
 * Fix eMMC detection on some Atom based SoCs [Florin]
 
 # v2.9.7+rev2
