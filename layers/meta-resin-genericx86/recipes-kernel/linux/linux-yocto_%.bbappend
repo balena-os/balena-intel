@@ -92,3 +92,9 @@ RESIN_CONFIGS_append = " vxlan"
 RESIN_CONFIGS[vxlan] = " \
     CONFIG_VXLAN=m \
 "
+
+# enable audio over HDMI (requested by customer for the Intel Compute Stick)
+RESIN_CONFIGS_append = " hdmi_lpe_audio"
+RESIN_CONFIGS[hdmi_lpe_audio] = " \
+    CONFIG_HDMI_LPE_AUDIO=m \
+"
