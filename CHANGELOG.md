@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.10.0+rev1
+## (2018-02-27)
+
+* Update the meta-resin submodule to version v2.10.0 [Andrei]
+* Update to rocko [Andrei]
 * Enable VXLAN support [Florin]
 * Fix eMMC detection on some Atom based SoCs [Florin]
 
