@@ -1,6 +1,10 @@
 Change log
 -----------
 
+# v2.10.1+rev1
+## (2018-02-28)
+
+* Update the meta-resin submodule to version v2.10.1 [Florin]
 * Add entry for the disabling of random MAC address generation when scanning for a WiFi connection [Florin]
 * Update the resin-yocto-scripts submodule to dc9dfe466e48d934e55fb20a05156886873b1ab1 (on master branch) [Florin]
 
