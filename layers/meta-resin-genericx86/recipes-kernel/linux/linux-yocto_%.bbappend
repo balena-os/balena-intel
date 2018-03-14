@@ -1,5 +1,9 @@
 inherit kernel-resin
 
+FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
+
+SRC_URI += "file://0001-Add-support-for-Quectel-EC20-modem.patch"
+
 #
 # EHCI drivers
 #
@@ -97,4 +101,21 @@ RESIN_CONFIGS[vxlan] = " \
 RESIN_CONFIGS_append = " hdmi_lpe_audio"
 RESIN_CONFIGS[hdmi_lpe_audio] = " \
     CONFIG_HDMI_LPE_AUDIO=m \
+"
+
+RESIN_CONFIGS_append = " quectel_ec20"
+RESIN_CONFIGS_DEPS[quectel_ec20] = "\
+    CONFIG_USB_SERIAL_OPTION=m \
+    CONFIG_USB_SERIAL_WWAN=m \
+"
+RESIN_CONFIGS[quectel_ec20] ="\
+    CONFIG_USB_SERIAL_QUALCOMM=m \
+"
+
+RESIN_CONFIGS_append = " batman"
+RESIN_CONFIGS[batman] = "\
+    CONFIG_BATMAN_ADV=m \
+    CONFIG_BATMAN_ADV_DAT=y \
+    CONFIG_BATMAN_ADV_MCAST=y \
+    CONFIG_BATMAN_ADV_DEBUG=y \
 "

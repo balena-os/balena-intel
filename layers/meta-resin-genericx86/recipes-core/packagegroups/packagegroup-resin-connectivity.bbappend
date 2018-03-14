@@ -6,4 +6,9 @@ CONNECTIVITY_FIRMWARES =+ " \
 	linux-firmware-rtl8723 \
 	linux-firmware-rtl8821 \
 	linux-firmware-rtl8723b-bt \
+	linux-firmware-ralink-nic \
 	"
+
+CONNECTIVITY_MODULES =+ " \
+	rtl8812au \
+"

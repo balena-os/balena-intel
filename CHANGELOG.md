@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Add support for VIA AMOS-3005 board [Sebastian]
+
 # v2.12.2+rev1
 ## (2018-03-14)
 
