@@ -1,6 +1,10 @@
 Change log
 -----------
 
+# v2.12.3+rev1
+## (2018-03-15)
+
+* Update the meta-resin submodule to version v2.12.3 [Florin]
 * Add support for VIA AMOS-3005 board [Sebastian]
 
 # v2.12.2+rev1
