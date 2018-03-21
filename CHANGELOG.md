@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Make hostapp-update-hooks flash grub legacy only when UEFI is not supported [Florin]
+
 # v2.12.3+rev1
 ## (2018-03-15)
 
