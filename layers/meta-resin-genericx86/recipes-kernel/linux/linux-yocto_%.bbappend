@@ -119,3 +119,9 @@ RESIN_CONFIGS[batman] = "\
     CONFIG_BATMAN_ADV_MCAST=y \
     CONFIG_BATMAN_ADV_DEBUG=y \
 "
+
+# Enable USB audio support
+RESIN_CONFIGS_append = " usb_audio"
+RESIN_CONFIGS[usb_audio]=" \
+    CONFIG_SND_USB_AUDIO=m \
+"
