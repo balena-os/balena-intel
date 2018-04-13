@@ -4,5 +4,5 @@ default=boot
 timeout=0
 
 menuentry 'boot'{
-linux /vmlinuz root=LABEL=resin-rootA rootwait quiet loglevel=0 splash udev.log-priority=3 vt.global_cursor_default=0
+linux /vmlinuz root=LABEL=resin-rootA rootwait quiet loglevel=0 splash udev.log-priority=3 vt.global_cursor_default=0 intel_idle.max_cstate=1
 }
