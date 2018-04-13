@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Limit the CPU cstate to 1 [Florin]
+
 # v2.12.5+rev1
 ## (2018-03-28)
 
