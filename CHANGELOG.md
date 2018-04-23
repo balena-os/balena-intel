@@ -1,6 +1,9 @@
 Change log
 -----------
 
+# v2.12.5+rev2
+## (2018-04-23)
+
 * Update the resin-yocto-scripts submodule to f7718efbbf53369aaacb7eb54e707ee8a5d4fc4b (on master branch) [Florin]
 * Limit the CPU cstate to 1 [Florin]
 
