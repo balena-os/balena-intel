@@ -125,3 +125,9 @@ RESIN_CONFIGS_append = " usb_audio"
 RESIN_CONFIGS[usb_audio]=" \
     CONFIG_SND_USB_AUDIO=m \
 "
+
+# Enable WiFi adapters that use Realtek chipset (like Edimax EW-7811Un)
+RESIN_CONFIGS_append = " rtl_wifi"
+RESIN_CONFIGS[rtl_wifi]=" \
+    CONFIG_RTL8192CU=m \
+"
