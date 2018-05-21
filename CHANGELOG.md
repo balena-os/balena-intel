@@ -1,6 +1,9 @@
 Change log
 -----------
 
+# v2.12.7+rev2
+## (2018-05-21)
+
 * linux-yocto: Add support for WiFi adapters that use Realtek chipset (like Edimax EW-7811Un) [Sebastian]
 
 # v2.12.7+rev1
