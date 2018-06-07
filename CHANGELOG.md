@@ -1,6 +1,10 @@
 Change log
 -----------
 
+# v2.13.0+rev1
+## (2018-06-07)
+
+* Update the meta-resin submodule to version v2.13.0 [Florin]
 * Enable overlayfs as a kernel module (not switching to overlay2 as balena storage driver yet) [Florin]
 
 # v2.12.7+rev2
