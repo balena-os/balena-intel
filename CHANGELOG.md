@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Enable overlayfs as a kernel module (not switching to overlay2 as balena storage driver yet) [Florin]
+
 # v2.12.7+rev2
 ## (2018-05-21)
 
