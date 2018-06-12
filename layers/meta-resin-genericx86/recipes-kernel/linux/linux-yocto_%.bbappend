@@ -131,3 +131,9 @@ RESIN_CONFIGS_append = " rtl_wifi"
 RESIN_CONFIGS[rtl_wifi]=" \
     CONFIG_RTL8192CU=m \
 "
+
+# Add overlayfs module in the rootfs (some user containers need this even though we do not yet switch from aufs to overlay2 as balena storage driver)
+RESIN_CONFIGS_append = " overlayfs"
+RESIN_CONFIGS[overlayfs] = " \
+    CONFIG_OVERLAY_FS=m \
+"
