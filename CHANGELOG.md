@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Include support for the RealSense camera [Theodor]
+
 # v2.12.7+rev2
 ## (2018-05-21)
 
