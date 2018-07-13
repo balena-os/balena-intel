@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Enable CAN modules [Florin]
+
 # v2.13.5+rev1
 ## (2018-07-09)
 
