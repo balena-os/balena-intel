@@ -137,3 +137,12 @@ RESIN_CONFIGS_append = " overlayfs"
 RESIN_CONFIGS[overlayfs] = " \
     CONFIG_OVERLAY_FS=m \
 "
+
+# Add CAN support (requested by customer)
+RESIN_CONFIGS_append = " enable_can"
+RESIN_CONFIGS[enable_can] = " \
+    CONFIG_CAN=m \
+    CONFIG_CAN_DEV=m \
+    CONFIG_CAN_RAW=m \
+    CONFIG_CAN_SLCAN=m \
+"
