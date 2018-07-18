@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Delete references to obsolete RESIN_CONNECTABLE* variables [Florin]
+
 # v2.14.0+rev1
 ## (2018-07-18)
 
