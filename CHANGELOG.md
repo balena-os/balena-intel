@@ -1,6 +1,9 @@
 Change log
 -----------
 
+* Update resin-yocto-scripts to current HEAD [Andrei]
+* Update poky submodule to yocto-2.4.3 [Andrei]
+* Avoid os-config segfault at runtime by disabling UPX [Andrei]
 * Delete references to obsolete RESIN_CONNECTABLE* variables [Florin]
 
 # v2.14.0+rev1
