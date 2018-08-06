@@ -1,6 +1,10 @@
 Change log
 -----------
 
+# v2.14.1+rev1
+## (2018-08-06)
+
+* Update the meta-resin submodule to version v2.14.1 [Andrei]
 * Update resin-yocto-scripts to current HEAD [Andrei]
 * Update poky submodule to yocto-2.4.3 [Andrei]
 * Avoid os-config segfault at runtime by disabling UPX [Andrei]
