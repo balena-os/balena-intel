@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Enable support for Huawei USB modems [Florin]
+
 # v2.14.1+rev1
 ## (2018-08-06)
 
