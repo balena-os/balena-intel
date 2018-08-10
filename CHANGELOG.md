@@ -1,6 +1,9 @@
 Change log
 -----------
 
+# v2.14.1+rev3
+## (2018-08-10)
+
 * Switch to sumo-19.0.0 [Florin]
 
 # v2.14.1+rev2
