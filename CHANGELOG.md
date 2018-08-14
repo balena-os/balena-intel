@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.14.3+rev1
+## (2018-08-14)
+
+* Update the meta-resin submodule to version v2.14.3 [Florin]
+* Enable CONFIG_NETFILTER_XT_MATCH_TIME in kernel [Florin]
 * Remove efibootmgr and efivar recipes as we have them in meta-oe [Andrei]
 
 # v2.14.1+rev3

@@ -155,3 +155,9 @@ RESIN_CONFIGS_DEPS[huawei_modems] = " \
 RESIN_CONFIGS[huawei_modems] ="\
     CONFIG_USB_NET_HUAWEI_CDC_NCM=m \
 "
+
+# requested by customer
+RESIN_CONFIGS_append = " netfilter_time"
+RESIN_CONFIGS[netfilter_time] = " \
+    CONFIG_NETFILTER_XT_MATCH_TIME=m \
+"
