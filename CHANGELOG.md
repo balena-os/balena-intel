@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Enable CONFIG_NETFILTER_XT_MATCH_TIME in kernel [Florin]
 * Remove efibootmgr and efivar recipes as we have them in meta-oe [Andrei]
 
 # v2.14.1+rev3
