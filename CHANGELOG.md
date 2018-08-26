@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Add versionist support [Florin]
+
 # v2.14.3+rev1
 ## (2018-08-14)
 
