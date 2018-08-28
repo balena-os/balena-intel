@@ -161,3 +161,16 @@ RESIN_CONFIGS_append = " netfilter_time"
 RESIN_CONFIGS[netfilter_time] = " \
     CONFIG_NETFILTER_XT_MATCH_TIME=m \
 "
+
+# requested by customer (support for Kontron PLD devices)
+RESIN_CONFIGS_append = " gpio_i2c_kempld"
+RESIN_CONFIGS_DEPS[gpio_i2c_kempld] = " \
+    CONFIG_GPIOLIB=y \
+    CONFIG_I2C=y \
+    CONFIG_HAS_IOMEM=y \
+    CONFIG_MFD_KEMPLD=m \
+"
+RESIN_CONFIGS[gpio_i2c_kempld] = " \
+    CONFIG_GPIO_KEMPLD=m \
+    CONFIG_I2C_KEMPLD=m \
+"
