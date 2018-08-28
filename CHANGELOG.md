@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.14.3+rev2
+## (2018-08-27)
+
+* Add versionist support [Giovanni Garufi]
+
 # v2.14.3+rev1
 ## (2018-08-14)
 
