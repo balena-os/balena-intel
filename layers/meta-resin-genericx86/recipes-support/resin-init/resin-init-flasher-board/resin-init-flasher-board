@@ -46,10 +46,9 @@ fi
 if [ -z $INSTALL_UEFI ]; then
     echo "[resin-init-flasher-board] non-UEFI installation."
     rm -rf "$INTERNAL_DEVICE_BOOT_PART_MOUNTPOINT/EFI"
-    dd if=/mnt/boot/grub/boot.img of=/dev/$internal_dev conv=fdatasync bs=1
-    dd if=/mnt/boot/grub/core.img of=/dev/$internal_dev conv=fdatasync bs=1 seek=512
 else
     echo "[resin-init-flasher-board] UEFI installation."
+    dd if=/dev/zero/ of=/dev/$internal_dev bs=1 count=446
     rm -rf "$INTERNAL_DEVICE_BOOT_PART_MOUNTPOINT/grub"
 fi
 
