@@ -4,5 +4,6 @@ default=boot
 timeout=3
 
 menuentry 'flash'{
-linux /vmlinuz root=LABEL=flash-rootA rootwait
+search --set=root --label flash-rootA
+linux /boot/bzImage root=LABEL=flash-rootA rootwait
 }
