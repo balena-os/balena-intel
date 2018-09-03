@@ -14,3 +14,5 @@ do_deploy_append() {
         install -m 644 ${WORKDIR}/grub.cfg_internal-prod ${DEPLOYDIR}/grub.cfg_internal
     fi
 }
+
+RDEPENDS_${PN}_class-target_remove = "grub-common"
