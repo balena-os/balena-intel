@@ -1,6 +1,13 @@
 Change log
 -----------
 
+# v2.15.1+rev1
+## (2018-09-05)
+
+* Update the meta-resin submodule to version v2.15.1 [Florin Sarbu]
+* Make the default resin-image have both grub EFI and grub legacy [Florin Sarbu]
+* Do not install grub-common in the rootfs [Florin Sarbu]
+
 # v2.14.3+rev3
 ## (2018-08-28)
 
