@@ -1,0 +1,483 @@
+- version: v2.15.1+rev1
+  date: 2018-09-04T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.15.1 [Florin Sarbu]'
+    - subject: >-
+        Make the default resin-image have both grub EFI and grub legacy [Florin
+        Sarbu]
+    - subject: 'Do not install grub-common in the rootfs [Florin Sarbu]'
+- version: v2.14.3+rev3
+  date: 2018-08-27T22:00:00.000Z
+  commits:
+    - subject: >-
+        Enable kernel I2C and GPIO support for Kontron PLD devices [Florin
+        Sarbu]
+- version: v2.14.3+rev2
+  date: 2018-08-26T22:00:00.000Z
+  commits:
+    - subject: 'Add versionist support [Giovanni Garufi]'
+- version: v2.14.3+rev1
+  date: 2018-08-13T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.14.3 [Florin]'
+    - subject: 'Enable CONFIG_NETFILTER_XT_MATCH_TIME in kernel [Florin]'
+    - subject: 'Remove efibootmgr and efivar recipes as we have them in meta-oe [Andrei]'
+- version: v2.14.1+rev3
+  date: 2018-08-09T22:00:00.000Z
+  commits:
+    - subject: 'Switch to sumo-19.0.0 [Florin]'
+- version: v2.14.1+rev2
+  date: 2018-08-08T22:00:00.000Z
+  commits:
+    - subject: 'Enable support for Huawei USB modems [Florin]'
+- version: v2.14.1+rev1
+  date: 2018-08-05T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.14.1 [Andrei]'
+    - subject: 'Update resin-yocto-scripts to current HEAD [Andrei]'
+    - subject: 'Update poky submodule to yocto-2.4.3 [Andrei]'
+    - subject: 'Avoid os-config segfault at runtime by disabling UPX [Andrei]'
+    - subject: Delete references to obsolete RESIN_CONNECTABLE
+    - subject: 'variables [Florin]'
+- version: v2.14.0+rev1
+  date: 2018-07-17T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.14.0 [Florin]'
+- version: v2.13.6+rev1
+  date: 2018-07-12T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.13.6 [Florin]'
+    - subject: 'Enable CAN modules [Florin]'
+- version: v2.13.5+rev1
+  date: 2018-07-08T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.13.5 [Florin]'
+    - subject: >-
+        Update the resin-yocto-scripts submodule to
+        59ccd8558435ff6424827fb36ccb43b14650f4d4 (on master branch) [Florin]
+- version: v2.13.3+rev1
+  date: 2018-07-05T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.13.3 [Florin]'
+    - subject: >-
+        Update the resin-yocto-scripts submodule to
+        6eddcc9a637e00dbca94815f9af0f2b7bf61eb88 (on master branch) [Florin]
+- version: v2.13.1+rev1
+  date: 2018-06-14T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.13.1 [Florin]'
+- version: v2.13.0+rev1
+  date: 2018-06-06T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.13.0 [Florin]'
+    - subject: >-
+        Enable overlayfs as a kernel module (not switching to overlay2 as balena
+        storage driver yet) [Florin]
+- version: v2.12.7+rev2
+  date: 2018-05-20T22:00:00.000Z
+  commits:
+    - subject: >-
+        linux-yocto: Add support for WiFi adapters that use Realtek chipset
+        (like Edimax EW-7811Un) [Sebastian]
+- version: v2.12.7+rev1
+  date: 2018-05-17T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.12.7 [Florin]'
+- version: v2.12.5+rev2
+  date: 2018-04-22T22:00:00.000Z
+  commits:
+    - subject: >-
+        Update the resin-yocto-scripts submodule to
+        f7718efbbf53369aaacb7eb54e707ee8a5d4fc4b (on master branch) [Florin]
+    - subject: 'Limit the CPU cstate to 1 [Florin]'
+- version: v2.12.5+rev1
+  date: 2018-03-27T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.12.5 [Florin]'
+    - subject: 'Enable support for USB audio [Florin]'
+    - subject: >-
+        Update the resin-yocto-scripts submodule to
+        9cecb1ca4d9d4713dd337148b7d04a17afdba772 (on master branch) [Florin]
+    - subject: >-
+        Make hostapp-update-hooks flash grub legacy only when UEFI is not
+        supported [Florin]
+- version: v2.12.3+rev1
+  date: 2018-03-14T23:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.12.3 [Florin]'
+    - subject: 'Add support for VIA AMOS-3005 board [Sebastian]'
+- version: v2.12.2+rev1
+  date: 2018-03-13T23:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.12.2 [Florin]'
+- version: v2.12.1+rev1
+  date: 2018-03-11T23:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.12.1 [Andrei]'
+- version: v2.12.0+rev1
+  date: 2018-03-08T23:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.12.0 [Theodor]'
+- version: v2.11.2+rev1
+  date: 2018-03-07T23:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.11.2 [Andrei]'
+- version: v2.11.1+rev1
+  date: 2018-03-07T23:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.11.1 [Andrei]'
+- version: v2.11.0+rev1
+  date: 2018-03-07T23:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.11.0 [Theodor]'
+- version: v2.10.1+rev1
+  date: 2018-02-27T23:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.10.1 [Florin]'
+    - subject: >-
+        Add entry for the disabling of random MAC address generation when
+        scanning for a WiFi connection [Florin]
+    - subject: >-
+        Update the resin-yocto-scripts submodule to
+        dc9dfe466e48d934e55fb20a05156886873b1ab1 (on master branch) [Florin]
+- version: v2.10.0+rev1
+  date: 2018-02-26T23:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.10.0 [Andrei]'
+    - subject: 'Update to rocko [Andrei]'
+    - subject: 'Enable VXLAN support [Florin]'
+    - subject: 'Fix eMMC detection on some Atom based SoCs [Florin]'
+- version: v2.9.7+rev2
+  date: 2018-02-01T23:00:00.000Z
+  commits:
+    - subject: 'Conditionally write grub legacy to internal boot device''s MBR [Florin]'
+    - subject: 'Include bluetooth firmware for Realtek 8723 based cards [Florin]'
+- version: v2.9.7+rev1
+  date: 2018-01-31T23:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.9.7 [Florin]'
+    - subject: >-
+        Update the resin-yocto-scripts submodule to
+        6f7a9ab326bb822196e3e48b08ef1d73d08caec6 (on master branch) [Florin]
+    - subject: 'Support RTL8723BE and RTL8821AE based WiFi/BT cards [Florin]'
+    - subject: 'Activate CONFIG_USB_EHCI_HCD_PLATFORM in kernel [Andrei]'
+- version: v2.9.6+rev1
+  date: 2018-01-12T23:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.9.6 [Florin]'
+- version: v2.9.5+rev1
+  date: 2018-01-10T23:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.9.5 [Florin]'
+    - subject: >-
+        Update the resin-yocto-scripts submodule to
+        6f7a9ab326bb822196e3e48b08ef1d73d08caec6 (on master branch) [Florin]
+    - subject: >-
+        Activate kernel drivers for bluetooth to work on the Intel NUC when
+        using the genericx86-64 machine [Florin]
+- version: v2.9.3+rev1
+  date: 2018-01-08T23:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.9.3 [Andrei]'
+- version: v2.9.2+rev2
+  date: 2018-01-07T23:00:00.000Z
+  commits:
+    - subject: 'Deploy generic x86-64 images under the old nuc slug [Andrei]'
+- version: v2.9.2+rev1
+  date: 2017-12-19T00:00:00.000Z
+  commits:
+    - subject: 'Support I350-based Intel® Gigabit Ethernet Network Connections [Theodor]'
+    - subject: 'Allow genericx86-64 to be configured with or without UEFI [Theodor]'
+    - subject: >-
+        Move to a more generic device type: intel-corei7-64 -> genericx86-64
+        [Theodor]
+- version: v2.7.8+rev1
+  date: 2017-11-17T00:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.7.8 [Florin]'
+    - subject: >-
+        Update the resin-yocto-scripts submodule to
+        c4db082fd2d5a3b4857035264c1e726962d7b826 (on master branch) [Florin]
+- version: v2.7.5+rev1
+  date: 2017-10-31T00:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.7.5 [Florin]'
+    - subject: >-
+        Install in the rootfs the 99-resin-grub hostapp hook needed for GRUB to
+        switch the root partition when doing host OS updates [Florin]
+- version: v2.7.4+rev1
+  date: 2017-10-26T00:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.7.4 [Florin]'
+    - subject: >-
+        Update the resin-yocto-scripts submodule to
+        e3a06d48a2f8b7e32d3047c33066a5b896e6ae93 (on master branch) [Florin]
+    - subject: >-
+        Include efibootmgr in the flasher so we create the appropriate UEFI boot
+        entry for resinOS [Florin]
+    - subject: >-
+        Switch back to EFI GRUB instead of the systemd gummiboot implementation
+        [Florin]
+    - subject: 'Update meta-openembedded to latest pyro branch [Will]'
+    - subject: 'Update poky to latest pyro branch [Will]'
+    - subject: 'Update to Pyro [Will]'
+    - subject: 'Include meta-rust layer [Will]'
+    - subject: 'Add meta-rust layer [Will]'
+    - subject: 'Add missing bluetooth firmware [Florin]'
+- version: v2.3.0+rev1
+  date: 2017-08-16T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.3.0 [Florin]'
+    - subject: 'Update the getting started links [Zach]'
+- version: v2.2.0+rev1
+  date: 2017-07-29T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.2.0 [Florin]'
+    - subject: 'Update the resin-yocto-scripts submodule to HEAD of master [Florin]'
+- version: v2.1.0+rev1
+  date: 2017-07-23T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.1.0 [Florin]'
+    - subject: 'Update the resin-yocto-scripts submodule to HEAD of master [Florin]'
+- version: v2.0.9+rev1
+  date: 2017-07-05T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.0.9 [Florin]'
+- version: v2.0.8+rev1
+  date: 2017-07-03T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.0.8 [Florin]'
+    - subject: 'Update the resin-yocto-scripts submodule to HEAD of master [Florin]'
+    - subject: 'Update the resin-yocto-scripts submodule [Florin]'
+- version: v2.0.4+rev1
+  date: 2017-05-17T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.0.4 [Florin]'
+    - subject: 'Update resin-yocto-scripts to master [Will]'
+- version: v2.0.2+rev2
+  date: 2017-04-30T22:00:00.000Z
+  commits:
+    - subject: 'Bump resin-yocto-scripts to fix Jenkins deployment [Andrei]'
+- version: v2.0.2+rev1
+  date: 2017-04-23T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.0.2 [Andrei]'
+- version: v2.0.0+rev3
+  date: 2017-04-12T22:00:00.000Z
+  commits:
+    - subject: 'Bump resin-yocto-scripts to include deployment routine [Andrei]'
+    - subject: 'Add support for more than 4 serial ports [Will]'
+- version: v2.0.0+rev2
+  date: 2017-04-03T22:00:00.000Z
+  commits:
+    - subject: 'Bump resin-yocto-scripts to fix resinOS docker registry push [Andrei]'
+- version: v2.0.0+rev1
+  date: 2017-04-02T22:00:00.000Z
+  commits:
+    - subject: 'Fix OS version to be semver compliant [Andrei]'
+- version: v2.0.0.rev1
+  date: 2017-03-31T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.0.0 [Andrei]'
+- version: v2.0.0-rc6.rev1
+  date: 2017-03-30T22:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.0.0-rc6 [Andrei]'
+- version: v2.0.0-rc5.rev1
+  date: 2017-03-25T23:00:00.000Z
+  commits:
+    - subject: >-
+        Drop the external initramfs and only use the initramfs bundled in the
+        kernel [Florin]
+    - subject: 'Update the meta-resin submodule to version v2.0.0-rc5 [Florin]'
+    - subject: 'Enable the DLM module for intel NUC [Theodor]'
+    - subject: 'Update the Poky submodule, which reverts previous change [Will]'
+    - subject: >-
+        Do not show kernel boot messages on the display for production images
+        [Florin]
+    - subject: 'Update the Poky submodule [Will]'
+- version: v2.0.0-rc4.rev1
+  date: 2017-03-16T23:00:00.000Z
+  commits:
+    - subject: 'Update the meta-resin submodule to version v2.0.0-rc4 [Florin]'
+    - subject: 'Integrate our current initramfs in the new initramfs framework [Theodor]'
+- version: v2.0.0-beta12.rev2
+  date: 2017-02-27T23:00:00.000Z
+  commits:
+    - subject: 'Fix partition labels from last meta-resin update [Andrei]'
+- version: v2.0.0-beta12.rev1
+  date: 2017-02-26T23:00:00.000Z
+  commits:
+    - subject: 'Bump resin-yocto-scripts to current HEAD [Andrei]'
+    - subject: 'meta-resin: Bump to 2.0.0-beta12 [Andrei]'
+- version: v2.0.0-beta11.rev2
+  date: 2017-02-14T23:00:00.000Z
+  commits:
+    - subject: 'Add NVME support [Andrei]'
+- version: v2.0.0-beta11.rev1
+  date: 2017-02-14T23:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v2.0.0-beta.11 [Andrei]'
+- version: v2.0.0-beta10.rev1
+  date: 2017-02-13T23:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v2.0.0-beta.10 [Andrei]'
+    - subject: 'Update to morty [Andrei]'
+- version: v2.0.0-beta.9
+  date: 2017-02-07T23:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v2.0-beta.9 [Andrei]'
+- version: v2.0.0-beta.8
+  date: 2017-01-26T23:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v2.0-beta.8 [Andrei]'
+    - subject: 'Update resin-yocto-scripts to HEAD of the master branch [Florin]'
+- version: v2.0.0-beta.7
+  date: 2016-12-04T23:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v2.0-beta.7 [Florin]'
+- version: v2.0.0-beta.6
+  date: 2016-12-04T23:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v2.0-beta.6 [Andrei]'
+- version: v2.0.0-beta.5
+  date: 2016-11-30T00:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v2.0-beta.5 [Andrei]'
+- version: v2.0.0-beta.3
+  date: 2016-11-06T23:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v2.0-beta.3 [Andrei]'
+    - subject: 'Cleanup docker-resin-supervisor-disk of unneeded variables [Andrei]'
+    - subject: Update resin-yocto-scripts to fix logging in container builds
+- version: v2.0.0-beta.1
+  date: 2016-10-11T00:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v2.0-beta.1 [Andrei]'
+    - subject: 'Add meta-filesystem as we need aufs-utils [Andrei]'
+    - subject: 'Add build support for resinos [Andrei]'
+    - subject: >-
+        Update resin-yocto-script to include changes in our image types
+        [Theodor]
+    - subject: 'Replace the concept of a debug image with a development image [Theodor]'
+    - subject: 'Update meta-resin to include avahi [Florin]'
+    - subject: >-
+        Update resin-yocto-scripts to include kernel headers handling as gzip
+        [Florin]
+- version: v1.16.0
+  date: 2016-09-26T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v1.16 [Florin]'
+- version: v1.15.0
+  date: 2016-09-23T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v1.15 [Florin]'
+- version: v1.14.0
+  date: 2016-09-22T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v1.14 [Florin]'
+- version: v1.13.0
+  date: 2016-09-22T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v1.13 [Florin]'
+- version: v1.12.0
+  date: 2016-09-20T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v1.12 [Florin]'
+    - subject: >-
+        Update resin-yocto-scripts to include resinhup upload to dockerhub
+        [Florin]
+    - subject: 'Update meta-resin [Florin]'
+    - subject: >-
+        Change .coffee to announce partition 1 now holds config.json and also
+        introduce versioning (v1) [Florin]
+- version: v1.11.0
+  date: 2016-08-30T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v1.11 [Florin]'
+    - subject: 'Include firmware for ibt [Michal]'
+- version: v1.10.0
+  date: 2016-08-23T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v1.10 [Florin]'
+- version: v1.9.0
+  date: 2016-08-23T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v1.9 [Florin]'
+    - subject: >-
+        Update resin-yocto-scripts for including kernel modules headers deploy
+        [Florin]
+    - subject: >-
+        Update yocto-resin-scripts for host nodejs detection improvements
+        [Florin]
+- version: v1.8.0
+  date: 2016-08-01T22:00:00.000Z
+  commits:
+    - subject: 'Bump meta-resin to v1.8 [Andrei]'
+    - subject: 'Bump resin-device-types to include partial manifest support [Andrei]'
+    - subject: No more debug images in staging
+- version: v1.7.0
+  date: 2016-07-13T22:00:00.000Z
+  commits:
+    - subject: Update meta-resin to v1.7
+- version: v1.6.0
+  date: 2016-07-05T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v1.6 [Florin]'
+- version: v1.5.0
+  date: 2016-07-03T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v1.5 [Florin]'
+- version: v1.5.0rc4
+  date: 2016-06-28T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to include supervisor update to v1.11.6 [Florin]'
+- version: v1.5.0rc3
+  date: 2016-06-28T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to include openvpn-resin.service refactoring [Florin]'
+- version: v1.5.0rc2
+  date: 2016-06-27T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to include docker key.json fix [Florin]'
+    - subject: 'Update meta-resin to include flasher fixes [Florin]'
+- version: v1.4.0
+  date: 2016-06-26T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v1.4 [Florin]'
+    - subject: 'Update meta-resin to allow let error out [Florin]'
+    - subject: 'Update meta-resin to allow patching of kernel-modules-headers [Florin]'
+    - subject: 'Bump meta-resin to fix various issues [Andrei]'
+    - subject: 'Fix a small syntax error in meta-resin [Andrei]'
+    - subject: 'Fix automation fix for debug image [Andrei]'
+    - subject: 'Replace RESIN_STAGING_BUILD by DEBUG_IMAGE [Andrei]'
+- version: v1.3.0
+  date: 2016-06-23T22:00:00.000Z
+  commits:
+    - subject: 'Update meta-resin to v1.3 [Florin]'
+    - subject: 'Update meta-resin to include kernel modules compress support [Andrei]'
+    - subject: 'Replace SUPERVISOR_TAG by TARGET_TAG [Andrei]'
+    - subject: 'Custom docker images in connectable builds [Andrei]'
+    - subject: 'Bump meta-resin to include connectable builds [Andrei]'
+    - subject: 'Add support for optional supervisor image [Andrei]'
+    - subject: 'Update meta-resin to v1.2 [Andrei]'
+    - subject: 'Bump meta-resin to HEAD [Andrei]'
+    - subject: >-
+        Use new flasher strategy (specify internal bootloader config file and
+        location where to copy it) [Florin]
+    - subject: >-
+        Update meta-resin submodule for including bootloader specific removal
+        changes [Florin]
+    - subject: >-
+        Bump yocto-resin-scripts to bring in improvements for in-docker builds
+        [Andrei]
+    - subject: 'Configure builds with RM_OLD_IMAGE [Theodor]'
+    - subject: 'Bump meta-resin to include switch from rce to docker [Andrei]'
+- version: v1.1.4
+  date: 2016-04-15T22:00:00.000Z
+  commits: []
+- version: v1.1.1
+  date: 2016-03-15T23:00:00.000Z
+  commits:
+    - subject: 'Promote intel-corei7-64 to released [Florin]'
+    - subject: 'Transition from fido -> jethro [theodor]'
