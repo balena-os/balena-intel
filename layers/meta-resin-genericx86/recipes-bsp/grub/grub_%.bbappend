@@ -4,6 +4,7 @@ SRC_URI_append = " \
     file://config \
     file://grub.cfg_external \
     file://grub.cfg_internal_template \
+    file://grubenv \
     "
 
 do_compile_append() {
@@ -40,7 +41,9 @@ do_deploy() {
     else
         install -m 644 ${WORKDIR}/grub.cfg_internal-prod ${DEPLOYDIR}/grub.cfg_internal
     fi
-    
+
+    install -m 644 ${WORKDIR}/grubenv ${DEPLOYDIR}/grubenv
+
     mkdir -p ${DEPLOYDIR}/grub/${GRUB_TARGET}
     cp -r ${D}/${libdir}/grub/${GRUB_TARGET}/*.mod ${DEPLOYDIR}/grub/${GRUB_TARGET}
 

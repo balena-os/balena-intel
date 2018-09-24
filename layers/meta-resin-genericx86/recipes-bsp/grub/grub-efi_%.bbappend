@@ -3,6 +3,7 @@ FILESEXTRAPATHS_append := ":${THISDIR}/files"
 SRC_URI_append = " \
     file://grub.cfg_external \
     file://grub.cfg_internal_template \
+    file://grubenv \
     "
 
 do_compile_append() {
@@ -22,6 +23,9 @@ do_deploy_append() {
     else
         install -m 644 ${WORKDIR}/grub.cfg_internal-prod ${DEPLOYDIR}/grub.cfg_internal
     fi
+
+    install -m 644 ${WORKDIR}/grubenv ${DEPLOYDIR}/grubenv
+
 }
 
 RDEPENDS_${PN}_class-target_remove = "grub-common"
