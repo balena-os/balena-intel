@@ -2,9 +2,51 @@
 serial --unit=0 --speed=115200 --word=8 --parity=no --stop=1
 default=boot
 insmod ext2
+insmod test
+insmod loadenv
 timeout=@@TIMEOUT@@
+resin_root_part=2
+upgrade_available=0
+
+load_env
+
+if [ ${upgrade_available} = 1 ] ; then
+ if [ ${bootcount} = 1 ] ; then
+  set bootcount=2
+  save_env bootcount
+ fi
+ if [ ${bootcount} = 0 ] ; then
+  set bootcount=1
+  save_env bootcount
+ fi
+fi
 
 menuentry 'boot'{
+if [ ${bootcount} = 2 ] ; then
+ if [ ${resin_root_part} = 2 ] ; then
+  search --set=root --label resin-rootB
+  linux /boot/bzImage root=LABEL=resin-rootB @@KERNEL_CMDLINE@@
+ else
+  search --set=root --label resin-rootA
+  linux /boot/bzImage root=LABEL=resin-rootA @@KERNEL_CMDLINE@@
+ fi
+else
+ if [ ${resin_root_part} = 2 ] ; then
+  search --set=root --label resin-rootA
+  linux /boot/bzImage root=LABEL=resin-rootA @@KERNEL_CMDLINE@@
+ else
+  search --set=root --label resin-rootB
+  linux /boot/bzImage root=LABEL=resin-rootB @@KERNEL_CMDLINE@@
+ fi
+fi
+}
+
+menuentry 'manualfallbackA' {
 search --set=root --label resin-rootA
 linux /boot/bzImage root=LABEL=resin-rootA @@KERNEL_CMDLINE@@
+}
+
+menuentry 'manualfallbackB' {
+search --set=root --label resin-rootB
+linux /boot/bzImage root=LABEL=resin-rootB @@KERNEL_CMDLINE@@
 }
