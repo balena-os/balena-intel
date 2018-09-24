@@ -48,7 +48,7 @@ if [ -z $INSTALL_UEFI ]; then
     rm -rf "$INTERNAL_DEVICE_BOOT_PART_MOUNTPOINT/EFI"
 else
     echo "[resin-init-flasher-board] UEFI installation."
-    dd if=/dev/zero/ of=/dev/$internal_dev bs=1 count=446
+    dd if=/dev/zero of=/dev/$internal_dev bs=1 count=446
     rm -rf "$INTERNAL_DEVICE_BOOT_PART_MOUNTPOINT/grub"
 fi
 
