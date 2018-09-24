@@ -3,9 +3,18 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 SRC_URI_append = " \
     file://config \
     file://grub.cfg_external \
-    file://grub.cfg_internal-dev \
-    file://grub.cfg_internal-prod \
+    file://grub.cfg_internal_template \
     "
+
+do_compile_append() {
+    sed -e 's/@@TIMEOUT@@/3/' \
+        -e 's/@@KERNEL_CMDLINE@@/rootwait intel_idle.max_cstate=1/' \
+        "${WORKDIR}/grub.cfg_internal_template" > "${WORKDIR}/grub.cfg_internal-dev"
+
+    sed -e 's/@@TIMEOUT@@/3/' \
+        -e 's/@@KERNEL_CMDLINE@@/rootwait quiet loglevel=0 splash udev.log-priority=3 vt.global_cursor_default=0 intel_idle.max_cstate=1/' \
+        "${WORKDIR}/grub.cfg_internal_template" > "${WORKDIR}/grub.cfg_internal-prod"
+}
 
 inherit deploy
 

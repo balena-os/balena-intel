@@ -1,8 +1,8 @@
 # Automatically created by OE
 serial --unit=0 --speed=115200 --word=8 --parity=no --stop=1
 default=boot
-timeout=3
+timeout=@@TIMEOUT@@
 
 menuentry 'boot'{
-linux /vmlinuz root=LABEL=resin-rootA rootwait intel_idle.max_cstate=1
+linux /vmlinuz root=LABEL=resin-rootA @@KERNEL_CMDLINE@@
 }
