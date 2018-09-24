@@ -1,8 +1,10 @@
 # Automatically created by OE
 serial --unit=0 --speed=115200 --word=8 --parity=no --stop=1
 default=boot
+insmod ext2
 timeout=@@TIMEOUT@@
 
 menuentry 'boot'{
-linux /vmlinuz root=LABEL=resin-rootA @@KERNEL_CMDLINE@@
+search --set=root --label resin-rootA
+linux /boot/bzImage root=LABEL=resin-rootA @@KERNEL_CMDLINE@@
 }
