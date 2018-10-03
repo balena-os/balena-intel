@@ -1,4 +1,18 @@
 - commits:
+    - subject: Re-add UPX compression for os-config
+      hash: 1d937c9a4a07057d184c9f3741b15f792d2e8167
+      body: |
+        Now meta-resin upgraded UPX to version 3.95 which fixes the segfaults
+        we have been seeing when compressing os-config on x86 platforms.
+      footer:
+        Changelog-entry: Re-add UPX compression for os-config
+        changelog-entry: Re-add UPX compression for os-config
+        Signed-off-by: Florin Sarbu <florin@resin.io>
+        signed-off-by: Florin Sarbu <florin@resin.io>
+      author: Florin Sarbu
+  version: 2.19.0+rev2
+  date: 2018-10-03T06:42:17.259Z
+- commits:
     - subject: Update meta-resin from v2.15.1 to v2.19.0
       hash: c3482cab389c8eab97070df0f2ca196266b27cbb
       body: |

@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.19.0+rev2
+## (2018-10-03)
+
+* Re-add UPX compression for os-config [Florin Sarbu]
+
 # v2.19.0+rev1
 ## (2018-09-24)
 
