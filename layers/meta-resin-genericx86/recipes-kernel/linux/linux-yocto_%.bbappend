@@ -174,3 +174,9 @@ RESIN_CONFIGS[gpio_i2c_kempld] = " \
     CONFIG_GPIO_KEMPLD=m \
     CONFIG_I2C_KEMPLD=m \
 "
+
+# requested by customer
+RESIN_CONFIGS_append = " snd_dyn_minors"
+RESIN_CONFIGS[snd_dyn_minors] = " \
+    CONFIG_SND_DYNAMIC_MINORS=y \
+"
