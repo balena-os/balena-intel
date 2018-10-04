@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'linux-yocto: Activate CONFIG_SND_DYNAMIC_MINORS in kernel'
+      hash: 5e8872b7e2ec9fd23916ad7c5f109a0d89c92f0e
+      body: ''
+      footer:
+        Changelog-entry: 'linux-yocto: Activate CONFIG_SND_DYNAMIC_MINORS in kernel'
+        changelog-entry: 'linux-yocto: Activate CONFIG_SND_DYNAMIC_MINORS in kernel'
+        Signed-off-by: Sebastian Panceac <sebastian@resin.io>
+        signed-off-by: Sebastian Panceac <sebastian@resin.io>
+      author: Sebastian Panceac
+  version: 2.19.0+rev3
+  date: 2018-10-04T09:38:55.246Z
+- commits:
     - subject: Re-add UPX compression for os-config
       hash: 1d937c9a4a07057d184c9f3741b15f792d2e8167
       body: |

@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.19.0+rev3
+## (2018-10-04)
+
+* Linux-yocto: Activate CONFIG_SND_DYNAMIC_MINORS in kernel [Sebastian Panceac]
+
 # v2.19.0+rev2
 ## (2018-10-03)
 
