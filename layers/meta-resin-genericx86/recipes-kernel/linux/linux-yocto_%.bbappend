@@ -2,7 +2,10 @@ inherit kernel-resin
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
-SRC_URI += "file://0001-Add-support-for-Quectel-EC20-modem.patch"
+SRC_URI += " \
+    file://0001-Add-support-for-Quectel-EC20-modem.patch \
+    file://0002-Revert-random-fix-crng_ready-test.patch \
+"
 
 #
 # EHCI drivers
