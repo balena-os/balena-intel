@@ -1,4 +1,18 @@
 - commits:
+    - subject: 'Revert "random: fix crng_ready() test" to fix balena delay start issue'
+      hash: 6ca53e9dc017b8a4dbe664e24afd718c9e89c5d4
+      body: |
+        The introduction of this patch caused balena to start with a delay
+        because not enough entropy is gathered by the time balena starts.
+      footer:
+        Changelog-entry: 'Revert "random: fix crng_ready() test" to fix balena delay start issue'
+        changelog-entry: 'Revert "random: fix crng_ready() test" to fix balena delay start issue'
+        Signed-off-by: Florin Sarbu <florin@resin.io>
+        signed-off-by: Florin Sarbu <florin@resin.io>
+      author: Florin Sarbu
+  version: 2.19.0+rev4
+  date: 2018-10-08T18:41:21.542Z
+- commits:
     - subject: 'linux-yocto: Activate CONFIG_SND_DYNAMIC_MINORS in kernel'
       hash: 5e8872b7e2ec9fd23916ad7c5f109a0d89c92f0e
       body: ''
