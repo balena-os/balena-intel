@@ -4,5 +4,6 @@ default=boot
 timeout=3
 
 menuentry 'boot'{
-linux /vmlinuz root=LABEL=resin-rootA rootwait intel_idle.max_cstate=1
+search --set=root --label resin-rootA
+linux /boot/bzImage root=LABEL=resin-rootA rootwait intel_idle.max_cstate=1
 }
