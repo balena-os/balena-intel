@@ -1,6 +1,66 @@
 Change log
 -----------
 
+# v2.21.0+rev1
+## (2018-10-19)
+
+* Add hook to remove kernel from boot parition after a HUP [Zubair Lutfullah Kakakhel]
+* Remove 99-flash-grub hook [Zubair Lutfullah Kakakhel]
+* Install legacy grub.cfg file in boot files [Zubair Lutfullah Kakakhel]
+* Add Automated Rollback support to grub.cfg [Zubair Lutfullah Kakakhel]
+* Add grub environment file [Zubair Lutfullah Kakakhel]
+* Remove the kernel from the boot partition [Zubair Lutfullah Kakakhel]
+* Update grub to boot kernel from root partition [Zubair Lutfullah Kakakhel]
+* Rework grub.cfg_internal to prepare for automated rollback [Zubair Lutfullah Kakakhel]
+* Update meta-resin to v2.21 [Zubair Lutfullah Kakakhel]
+
+<details>
+<summary> View details </summary>
+
+## meta-resin-2.21.0
+### (2018-10-18)
+
+* Improve systemd service ordering in rollbacks
+* Update resin-supervisor to v7.24.1
+
+## meta-resin-2.20.0
+### (2018-10-18)
+
+* Avoid expander on flasher based on root kernel argument
+* Resin-vars: Implement custom ssh keys service
+* Fix redsocks interface creation when no proxy configured
+* Replace NM's DHCP request option "Client indentifier" with udhcpc style option
+* Fix for rollbacks in case of old balenaOS version
+* Update resin-supervisor to v7.21.4
+* Warn if rules are found in /etc/udev/rules.d
+* Add support to load custom udev rules from config.json
+* Aufs-util: Package auplink separately
+* Enable kernel config dependencies for MBIM and QMI
+* Set UPX to use LZMA compression by default
+* Downgrade UPX to 3.94 for ARM
+* Balena update for rollbacks. mobynit can now mount rootfs from sysroot.
+* Fix proxy when using containers over bridge network
+* Add support for aufs 4.9.9+, 4.9.94+, 4.18
+* Add rollback-altboot service before balena service
+* Add Automated Rollback recipe
+* Add Automated Rollback support in u-boot env_resin.h
+* Add a hook to support Automated Rollbacks
+* Update HUP grub hook to support Automated Rollbacks
+* Update HUP u-boot hook to support Automated Rollbacks
+* Move kernel-image-initramfs from resin-image recipe to packagegroup-resin.inc
+* Have 99-resin-grub hostapp-update-hook decide which grub to use
+
+## meta-resin-2.19.0
+### (2018-09-23)
+
+* Update Balena to fix tty console hanging in some cases
+* Pin down cargo deps (using Cargo.lock) to versions known working with rust 1.24.1 (for sumo)
+* Remove duplicate packaging of bcm43143
+* Set ModemManager to ignore Inca Roads Serial Device
+* Add support for aufs 4.14.56+
+* Update resin-supervisor to v7.19.7
+</details>
+
 # v2.19.0+rev4
 ## (2018-10-08)
 
