@@ -3,9 +3,19 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 SRC_URI_append = " \
     file://config \
     file://grub.cfg_external \
-    file://grub.cfg_internal-dev \
-    file://grub.cfg_internal-prod \
+    file://grub.cfg_internal_template \
+    file://grubenv \
     "
+
+do_compile_append() {
+    sed -e 's/@@TIMEOUT@@/3/' \
+        -e 's/@@KERNEL_CMDLINE@@/rootwait intel_idle.max_cstate=1/' \
+        "${WORKDIR}/grub.cfg_internal_template" > "${WORKDIR}/grub.cfg_internal-dev"
+
+    sed -e 's/@@TIMEOUT@@/3/' \
+        -e 's/@@KERNEL_CMDLINE@@/rootwait quiet loglevel=0 splash udev.log-priority=3 vt.global_cursor_default=0 intel_idle.max_cstate=1/' \
+        "${WORKDIR}/grub.cfg_internal_template" > "${WORKDIR}/grub.cfg_internal-prod"
+}
 
 inherit deploy
 
@@ -31,7 +41,9 @@ do_deploy() {
     else
         install -m 644 ${WORKDIR}/grub.cfg_internal-prod ${DEPLOYDIR}/grub.cfg_internal
     fi
-    
+
+    install -m 644 ${WORKDIR}/grubenv ${DEPLOYDIR}/grubenv
+
     mkdir -p ${DEPLOYDIR}/grub/${GRUB_TARGET}
     cp -r ${D}/${libdir}/grub/${GRUB_TARGET}/*.mod ${DEPLOYDIR}/grub/${GRUB_TARGET}
 

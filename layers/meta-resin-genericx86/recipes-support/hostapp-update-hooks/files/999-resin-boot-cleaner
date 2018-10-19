@@ -1,0 +1,28 @@
+#!/bin/sh
+
+#
+# Script which cleans up boot partition of redundant files
+#
+
+set -o errexit
+
+. /usr/sbin/resin-vars
+
+DURING_UPDATE=${DURING_UPDATE:-0}
+
+if [ "$DURING_UPDATE" = "1" ]; then
+	grub_cfg=$(find "$RESIN_BOOT_MOUNTPOINT" -name grub.cfg)
+	if  grep -q "search --set=root" "$grub_cfg" ; then
+		if [ -e "$RESIN_BOOT_MOUNTPOINT/vmlinuz" ]; then
+			# Testing the destination sysroot bzImage is tricky. Lets check current root
+			# instead as all future roots will have the kernel in root partition in /boot
+			# This leaves the kernel lying around in boot partition until the next HUP
+			if [ -e "/boot/bzImage" ]; then
+				printf "[INFO] grub.cfg reads kernel from root partitions but found vmlinuz in boot \n"
+				printf "[INFO] removing $RESIN_BOOT_MOUNTPOINT/vmlinuz \n"
+				rm -f "$RESIN_BOOT_MOUNTPOINT/vmlinuz" || true
+				sync -f "$RESIN_BOOT_MOUNTPOINT"
+			fi
+		fi
+	fi
+fi
