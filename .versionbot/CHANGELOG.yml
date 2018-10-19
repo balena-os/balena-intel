@@ -1,4 +1,16 @@
 - commits:
+    - subject: Remove TI wl firmware
+      hash: a00cb4d92250c9f44430d4d72ddce575919de799
+      body: "The kernel drivers for this firmware is disabled. Remove the firmware.\n\nroot@balena:# cat /proc/config.gz | gunzip -d | grep WLAN_VENDOR_TI -A5\nCONFIG_WLAN_VENDOR_TI=y\n CONFIG_WL1251 is not set\n CONFIG_WL12XX is not set\n CONFIG_WL18XX is not set\n CONFIG_WLCORE is not set\nCONFIG_WLAN_VENDOR_ZYDAS=y\nroot@balena:~# du -hs /lib/firmware/ti-connectivity/\n8.6M\t/lib/firmware/ti-connectivity/\nroot@balena:~#\n"
+      footer:
+        Changelog-entry: Remove TI wl firmware
+        changelog-entry: Remove TI wl firmware
+        Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+        signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+      author: Zubair Lutfullah Kakakhel
+  version: 2.21.0+rev2
+  date: 2018-10-19T14:01:56.007Z
+- commits:
     - subject: Add hook to remove kernel from boot parition after a HUP
       hash: 5063e070dc0c6de4aa394e95f222ad6fa9a2759c
       body: |

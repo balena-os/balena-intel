@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.21.0+rev2
+## (2018-10-19)
+
+* Remove TI wl firmware [Zubair Lutfullah Kakakhel]
+
 # v2.21.0+rev1
 ## (2018-10-19)
 
