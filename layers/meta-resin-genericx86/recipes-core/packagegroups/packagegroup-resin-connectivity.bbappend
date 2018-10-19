@@ -8,6 +8,7 @@ CONNECTIVITY_FIRMWARES =+ " \
 	linux-firmware-rtl8723b-bt \
 	linux-firmware-ralink-nic \
 	"
+CONNECTIVITY_FIRMWARES_remove = "linux-firmware-wl12xx"
 
 CONNECTIVITY_MODULES =+ " \
 	rtl8812au \
