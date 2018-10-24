@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.24.0+rev1
+## (2018-10-24)
+
+* Update meta-resin from v2.21.0 to v2.24.0 [Florin Sarbu]
+
 # v2.21.0+rev2
 ## (2018-10-19)
 

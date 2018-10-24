@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update meta-resin from v2.21.0 to v2.24.0
+      hash: e12983ace34ada542be5d454d02822eef9ad3ebe
+      body: |
+        Update meta-resin from 2.21.0 to 2.24.0
+      footer:
+        Changelog-entry: Update meta-resin from v2.21.0 to v2.24.0
+        changelog-entry: Update meta-resin from v2.21.0 to v2.24.0
+        Signed-off-by: Florin Sarbu <florin@resin.io>
+        signed-off-by: Florin Sarbu <florin@resin.io>
+      author: Florin Sarbu
+  version: 2.24.0+rev1
+  date: 2018-10-24T08:16:55.436Z
+- commits:
     - subject: Remove TI wl firmware
       hash: a00cb4d92250c9f44430d4d72ddce575919de799
       body: "The kernel drivers for this firmware is disabled. Remove the firmware.\n\nroot@balena:# cat /proc/config.gz | gunzip -d | grep WLAN_VENDOR_TI -A5\nCONFIG_WLAN_VENDOR_TI=y\n CONFIG_WL1251 is not set\n CONFIG_WL12XX is not set\n CONFIG_WL18XX is not set\n CONFIG_WLCORE is not set\nCONFIG_WLAN_VENDOR_ZYDAS=y\nroot@balena:~# du -hs /lib/firmware/ti-connectivity/\n8.6M\t/lib/firmware/ti-connectivity/\nroot@balena:~#\n"
