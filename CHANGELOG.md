@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.24.0+rev2
+## (2018-10-25)
+
+* Workaround for usb_modeswitch crash on 64 bits platforms [Florin Sarbu]
+
 # v2.24.0+rev1
 ## (2018-10-24)
 

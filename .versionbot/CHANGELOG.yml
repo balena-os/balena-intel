@@ -1,4 +1,18 @@
 - commits:
+    - subject: Workaround for usb_modeswitch crash on 64 bits platforms
+      hash: a1f6b992c425e1f631391c6e9c4aa4a191e1d42d
+      body: |
+        On 64 bits platforms (generic Intel x86-64, NVidia Jetson TX2),
+        the systemd usb-modeswitch service will core dump when starting.
+      footer:
+        Changelog-entry: Workaround for usb_modeswitch crash on 64 bits platforms
+        changelog-entry: Workaround for usb_modeswitch crash on 64 bits platforms
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.24.0+rev2
+  date: 2018-10-25T13:01:21.231Z
+- commits:
     - subject: Update meta-resin from v2.21.0 to v2.24.0
       hash: e12983ace34ada542be5d454d02822eef9ad3ebe
       body: |
