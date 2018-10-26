@@ -8,7 +8,7 @@ timeout=@@TIMEOUT@@
 resin_root_part=2
 upgrade_available=0
 
-load_env
+bootcount=0
 
 if [ ${upgrade_available} = 1 ] ; then
  if [ ${bootcount} = 1 ] ; then
