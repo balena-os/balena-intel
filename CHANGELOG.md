@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.24.0+rev3
+## (2018-10-26)
+
+* Temporarily disable rollback functionality [Florin Sarbu]
+
 # v2.24.0+rev2
 ## (2018-10-25)
 

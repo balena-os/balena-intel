@@ -1,4 +1,24 @@
 - commits:
+    - subject: Temporarily disable rollback functionality
+      hash: 987879925498f26396334650e7f9e7216d171a4c
+      body: |
+        At this point we need to figure out more scenarios that would trigger
+        a reboot before healthcheck actually runs (such as supervisor triggered
+        reboots).
+        Such an early reboot is not an indication of a hostOS update failure and
+        so we do not wish for rollbacks to take place in these scenarios.
+
+        Until all corner cases are discussed and handled in the OS, we disable
+        rollback functionality.
+      footer:
+        Changelog-entry: Temporarily disable rollback functionality
+        changelog-entry: Temporarily disable rollback functionality
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.24.0+rev3
+  date: 2018-10-26T08:16:49.364Z
+- commits:
     - subject: Workaround for usb_modeswitch crash on 64 bits platforms
       hash: a1f6b992c425e1f631391c6e9c4aa4a191e1d42d
       body: |
