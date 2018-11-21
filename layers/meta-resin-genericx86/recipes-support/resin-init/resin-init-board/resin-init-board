@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+# make sure the bootstrap code (boot.img) is removed in case we are using EFI boot
+if [ -d /sys/firmware/efi ] ; then
+    device="/dev/"$(findmnt --noheadings --canonicalize --output SOURCE /mnt/boot/ | xargs lsblk -no pkname)
+    dd if=/dev/zero of=$device bs=446 count=1
+fi
+
+exit 0
