@@ -1,4 +1,22 @@
 - commits:
+    - subject: Add script to ensure correct future EFI boot
+      hash: ff816096d31e0d8439ccf70e0fcfd0802ed213ae
+      body: |
+        It's been observed on EFI machines that at the first boot after
+        provisioning there is some bootstrap code in the first sector of
+        the boot media (even though during provisioning we make sure we
+        remove this bootstrap code). In such a case (only on some machines),
+        the next time we reboot the machine, it will not recognize the media
+        as a valid EFI boot media and the boot will fail.
+      footer:
+        Changelog-entry: Add script to ensure correct future EFI boot
+        changelog-entry: Add script to ensure correct future EFI boot
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.26.0+rev2
+  date: 2018-11-21T12:31:06.250Z
+- commits:
     - subject: Update meta-resin from v2.25.0 to v2.26.0
       hash: ff90251af548b044554a71c436b4749995ec924f
       body: |
