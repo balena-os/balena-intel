@@ -1,1 +1,1 @@
-FILESEXTRAPATHS_append_artik10 := "${THISDIR}/${PN}"
+FILESEXTRAPATHS_append := "${THISDIR}/${PN}"
