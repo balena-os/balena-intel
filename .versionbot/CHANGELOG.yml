@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix incorrect FILESEXTRAPATHS append
+      hash: 546de0e5efe3c0ab62cee2f29d21d603d81dceb4
+      body: ''
+      footer:
+        Changelog-entry: Fix incorrect FILESEXTRAPATHS append
+        changelog-entry: Fix incorrect FILESEXTRAPATHS append
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.26.0+rev3
+  date: 2018-11-23T10:17:52.525Z
+- commits:
     - subject: Add script to ensure correct future EFI boot
       hash: ff816096d31e0d8439ccf70e0fcfd0802ed213ae
       body: |

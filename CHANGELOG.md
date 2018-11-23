@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.26.0+rev3
+## (2018-11-23)
+
+* Fix incorrect FILESEXTRAPATHS append [Florin Sarbu]
+
 # v2.26.0+rev2
 ## (2018-11-21)
 
