@@ -1,4 +1,28 @@
 - commits:
+    - subject: >-
+        Make hostapp-update-hooks clean-up legacy grub to ensure correct future
+        EFI boot
+      hash: 643864363220d03e155c9af80d25fe3b1ee60557
+      body: |
+        It's been observed on EFI machines that at the first boot after
+        provisioning there is some bootstrap code in the first sector of
+        the boot media (even though during provisioning we make sure we
+        remove this bootstrap code). In such a case (only on some machines),
+        the next time we reboot the machine, it will not recognize the media
+        as a valid EFI boot media and the boot will fail.
+      footer:
+        Changelog-entry: >-
+          Make hostapp-update-hooks clean-up legacy grub to ensure correct
+          future EFI boot
+        changelog-entry: >-
+          Make hostapp-update-hooks clean-up legacy grub to ensure correct
+          future EFI boot
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.28.0+rev2
+  date: 2018-12-10T20:21:58.134Z
+- commits:
     - subject: Update meta-resin from v2.27.0 to v2.28.0
       hash: 3bc50ea6255dc64e62dfc415aac070c3d334d0c3
       body: |

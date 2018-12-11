@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.28.0+rev2
+## (2018-12-10)
+
+* Make hostapp-update-hooks clean-up legacy grub to ensure correct future EFI boot [Florin Sarbu]
+
 # v2.28.0+rev1
 ## (2018-12-06)
 
