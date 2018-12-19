@@ -1,4 +1,25 @@
 - commits:
+    - subject: Update meta-resin from v2.28.0 to v2.29.0
+      hash: 102d8a0b968b26142bb18d79b5b0e86397402d2f
+      body: ''
+      footer:
+        Changelog-entry: Update meta-resin from v2.28.0 to v2.29.0
+        changelog-entry: Update meta-resin from v2.28.0 to v2.29.0
+        Signed-off-by: Sebastian Panceac <sebastian@balena.io>
+        signed-off-by: Sebastian Panceac <sebastian@balena.io>
+      author: Sebastian Panceac
+    - subject: Update balena-yocto-scripts submodule to v1.0.1
+      hash: 6a7bc7fc092be91e23eba54d31f0ad00d5372792
+      body: ''
+      footer:
+        Changelog-entry: Update balena-yocto-scripts submodule to v1.0.1
+        changelog-entry: Update balena-yocto-scripts submodule to v1.0.1
+        Signed-off-by: Sebastian Panceac <sebastian@balena.io>
+        signed-off-by: Sebastian Panceac <sebastian@balena.io>
+      author: Sebastian Panceac
+  version: 2.29.0+rev1
+  date: 2018-12-19T15:46:57.206Z
+- commits:
     - subject: >-
         Make hostapp-update-hooks clean-up legacy grub to ensure correct future
         EFI boot
