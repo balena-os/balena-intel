@@ -1,3 +1,6 @@
+- commits: []
+  version: 2.29.0+rev2
+  date: 2019-01-07T05:58:43.285Z
 - commits:
     - subject: Update meta-resin from v2.28.0 to v2.29.0
       hash: 102d8a0b968b26142bb18d79b5b0e86397402d2f
