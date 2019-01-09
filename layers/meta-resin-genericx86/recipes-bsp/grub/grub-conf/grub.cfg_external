@@ -1,0 +1,10 @@
+# Automatically created by OE
+serial --unit=0 --speed=115200 --word=8 --parity=no --stop=1
+insmod ext2
+default=boot
+timeout=3
+
+menuentry 'flash'{
+search --set=root --label flash-rootA
+linux /boot/bzImage root=LABEL=flash-rootA rootwait
+}
