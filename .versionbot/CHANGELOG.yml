@@ -1,3 +1,25 @@
+- commits:
+    - subject: >-
+        Split grub configuration in its own recipe to avoid yocto build deploy
+        issues
+      hash: 7b62c599a4350551991f9e088383bee73eafa1ea
+      body: |
+        This avoids having multiple providers writing the same configuration in
+        the same deploy directory path.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: >-
+          Split grub configuration in its own recipe to avoid yocto build deploy
+          issues
+        changelog-entry: >-
+          Split grub configuration in its own recipe to avoid yocto build deploy
+          issues
+        Signed-off-by: Andrei Gherzan <andrei@balena.io>
+        signed-off-by: Andrei Gherzan <andrei@balena.io>
+      author: Andrei Gherzan
+  version: 2.29.0+rev3
+  date: 2019-01-16T12:25:23.494Z
 - commits: []
   version: 2.29.0+rev2
   date: 2019-01-07T05:58:43.285Z

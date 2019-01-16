@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.29.0+rev3
+## (2019-01-16)
+
+* Split grub configuration in its own recipe to avoid yocto build deploy issues [Andrei Gherzan]
+
 # v2.29.0+rev2
 ## (2019-01-07)
 
