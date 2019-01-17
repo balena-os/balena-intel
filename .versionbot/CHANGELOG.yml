@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update meta-resin from v2.29.0 to v2.29.2
+      hash: c2419d51cfac93022d48c8acb6dc1b121f9b5f84
+      body: |
+        Update meta-resin from 2.29.0 to 2.29.2
+      footer:
+        Changelog-entry: Update meta-resin from v2.29.0 to v2.29.2
+        changelog-entry: Update meta-resin from v2.29.0 to v2.29.2
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 2.29.2+rev1
+  date: 2019-01-16T12:52:10.753Z
+- commits:
     - subject: >-
         Split grub configuration in its own recipe to avoid yocto build deploy
         issues
