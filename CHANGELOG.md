@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v2.29.2+rev2
+## (2019-02-01)
+
+* Remove older AC 8260 WiFi firmware [Florin Sarbu]
+* Add firmware for AC 9560 wifi chipset [Florin Sarbu]
+
 # v2.29.2+rev1
 ## (2019-01-16)
 

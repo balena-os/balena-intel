@@ -1,4 +1,27 @@
 - commits:
+    - subject: Remove older AC 8260 WiFi firmware
+      hash: 7c96b941c88c8485de1e0ef280a3b08125acb100
+      body: |
+        We remove older firmware because our rootfs has hit the limit
+      footer:
+        Changelog-entry: Remove older AC 8260 WiFi firmware
+        changelog-entry: Remove older AC 8260 WiFi firmware
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+    - subject: Add firmware for AC 9560 wifi chipset
+      hash: b0400e66b5dbc42b04a93d485b15875e1a511efc
+      body: |
+        We add the missing firmware in order to support this chipset
+      footer:
+        Changelog-entry: Add firmware for AC 9560 wifi chipset
+        changelog-entry: Add firmware for AC 9560 wifi chipset
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.29.2+rev2
+  date: 2019-02-01T08:40:32.152Z
+- commits:
     - subject: Update meta-resin from v2.29.0 to v2.29.2
       hash: c2419d51cfac93022d48c8acb6dc1b121f9b5f84
       body: |
