@@ -5,7 +5,7 @@
 	path = layers/meta-openembedded
 	url = https://github.com/openembedded/meta-openembedded.git
 [submodule "layers/meta-resin"]
-	path = layers/meta-resin
+	path = layers/meta-balena
 	url = https://github.com/resin-os/meta-resin.git
 [submodule "balena-yocto-scripts"]
 	path = balena-yocto-scripts
