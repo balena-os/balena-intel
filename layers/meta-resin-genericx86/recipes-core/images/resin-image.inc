@@ -26,3 +26,5 @@ write_mbr() {
 }
 
 IMAGE_POSTPROCESS_COMMAND_append = " write_mbr; "
+
+IMAGE_INSTALL_append = " efibootmgr"

@@ -1,4 +1,261 @@
 - commits:
+    - subject: Remove older AC 8260 WiFi firmware
+      hash: 7c96b941c88c8485de1e0ef280a3b08125acb100
+      body: |
+        We remove older firmware because our rootfs has hit the limit
+      footer:
+        Changelog-entry: Remove older AC 8260 WiFi firmware
+        changelog-entry: Remove older AC 8260 WiFi firmware
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+    - subject: Add firmware for AC 9560 wifi chipset
+      hash: b0400e66b5dbc42b04a93d485b15875e1a511efc
+      body: |
+        We add the missing firmware in order to support this chipset
+      footer:
+        Changelog-entry: Add firmware for AC 9560 wifi chipset
+        changelog-entry: Add firmware for AC 9560 wifi chipset
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.29.2+rev2
+  date: 2019-02-01T08:40:32.152Z
+- commits:
+    - subject: Update meta-resin from v2.29.0 to v2.29.2
+      hash: c2419d51cfac93022d48c8acb6dc1b121f9b5f84
+      body: |
+        Update meta-resin from 2.29.0 to 2.29.2
+      footer:
+        Changelog-entry: Update meta-resin from v2.29.0 to v2.29.2
+        changelog-entry: Update meta-resin from v2.29.0 to v2.29.2
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 2.29.2+rev1
+  date: 2019-01-16T12:52:10.753Z
+- commits:
+    - subject: >-
+        Split grub configuration in its own recipe to avoid yocto build deploy
+        issues
+      hash: 7b62c599a4350551991f9e088383bee73eafa1ea
+      body: |
+        This avoids having multiple providers writing the same configuration in
+        the same deploy directory path.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: >-
+          Split grub configuration in its own recipe to avoid yocto build deploy
+          issues
+        changelog-entry: >-
+          Split grub configuration in its own recipe to avoid yocto build deploy
+          issues
+        Signed-off-by: Andrei Gherzan <andrei@balena.io>
+        signed-off-by: Andrei Gherzan <andrei@balena.io>
+      author: Andrei Gherzan
+  version: 2.29.0+rev3
+  date: 2019-01-16T12:25:23.494Z
+- commits: []
+  version: 2.29.0+rev2
+  date: 2019-01-07T05:58:43.285Z
+- commits:
+    - subject: Update meta-resin from v2.28.0 to v2.29.0
+      hash: 102d8a0b968b26142bb18d79b5b0e86397402d2f
+      body: ''
+      footer:
+        Changelog-entry: Update meta-resin from v2.28.0 to v2.29.0
+        changelog-entry: Update meta-resin from v2.28.0 to v2.29.0
+        Signed-off-by: Sebastian Panceac <sebastian@balena.io>
+        signed-off-by: Sebastian Panceac <sebastian@balena.io>
+      author: Sebastian Panceac
+    - subject: Update balena-yocto-scripts submodule to v1.0.1
+      hash: 6a7bc7fc092be91e23eba54d31f0ad00d5372792
+      body: ''
+      footer:
+        Changelog-entry: Update balena-yocto-scripts submodule to v1.0.1
+        changelog-entry: Update balena-yocto-scripts submodule to v1.0.1
+        Signed-off-by: Sebastian Panceac <sebastian@balena.io>
+        signed-off-by: Sebastian Panceac <sebastian@balena.io>
+      author: Sebastian Panceac
+  version: 2.29.0+rev1
+  date: 2018-12-19T15:46:57.206Z
+- commits:
+    - subject: >-
+        Make hostapp-update-hooks clean-up legacy grub to ensure correct future
+        EFI boot
+      hash: 643864363220d03e155c9af80d25fe3b1ee60557
+      body: |
+        It's been observed on EFI machines that at the first boot after
+        provisioning there is some bootstrap code in the first sector of
+        the boot media (even though during provisioning we make sure we
+        remove this bootstrap code). In such a case (only on some machines),
+        the next time we reboot the machine, it will not recognize the media
+        as a valid EFI boot media and the boot will fail.
+      footer:
+        Changelog-entry: >-
+          Make hostapp-update-hooks clean-up legacy grub to ensure correct
+          future EFI boot
+        changelog-entry: >-
+          Make hostapp-update-hooks clean-up legacy grub to ensure correct
+          future EFI boot
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.28.0+rev2
+  date: 2018-12-10T20:21:58.134Z
+- commits:
+    - subject: Update meta-resin from v2.27.0 to v2.28.0
+      hash: 3bc50ea6255dc64e62dfc415aac070c3d334d0c3
+      body: |
+        Update meta-resin from 2.27.0 to 2.28.0
+      footer:
+        Changelog-entry: Update meta-resin from v2.27.0 to v2.28.0
+        changelog-entry: Update meta-resin from v2.27.0 to v2.28.0
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested:
+        - commits:
+            - subject: Update os-config to 1.0.0
+              hash: e9a428ae474c9a9e4573ae1071978b19e332f0b8
+              body: >
+                The main feature this brings is support for custom certificates
+                base64
+
+                encoded in config.json.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Update os-config to 1.0.0
+                changelog-entry: Update os-config to 1.0.0
+                Signed-off-by: Zahari Petkov <zahari@balena.io>
+                signed-off-by: Zahari Petkov <zahari@balena.io>
+              author: Zahari Petkov
+            - subject: Update libqmi to version 1.20.2
+              hash: 19bb5410ac28a89db7193490001ea358bbb37912
+              body: ''
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Update libqmi to version 1.20.2
+                changelog-entry: Update libqmi to version 1.20.2
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+            - subject: Update libmbim to version 1.16.2
+              hash: 7e8d7520288c916f694fe6cdf1d43fa0d0a275e3
+              body: ''
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Update libmbim to version 1.16.2
+                changelog-entry: Update libmbim to version 1.16.2
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+            - subject: 'kernel-modules-headers: Add basic sanity test'
+              hash: 51ff1d707273a27369e91b6cf99257633f0b9e21
+              body: >
+                Test if the ELFs inside the kernel module header tarball are the
+
+                correct architecture and don't have the sysroot as the
+                interpreter
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: Fix kernel module header generation
+              hash: 706829bc46c593048909686a67faef064adf6232
+              body: >
+                63baa421 introduced a bug where the tools in the header tarballs
+                were
+
+                compiled with the incorrect HOSTCC parameter. As a result the
+                tools
+
+                inside the tarball were compiled for x86-64 instead of the
+                native
+
+                device architecture. And they had the incorrect ld interpreter
+                path
+
+                as well.
+
+
+                Update to v0.0.12 to fix that.
+
+                This release also adds objtool support needed by the intel nuc
+                image.
+
+
+                Fixes #1302
+
+                Fixes #1303
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Fix kernel module header generation
+                changelog-entry: Fix kernel module header generation
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+            - subject: 'image-resin.bbclass: Fix config.json pretty format'
+              hash: 889d989a3d9059825d7d346fbf0e728be9869994
+              body: |
+                Fixes #1300
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+            - subject: Allow supervisor update on unmanaged devices
+              hash: b8705936f0a081a2f33f3fb590a90e4805547e9d
+              body: >
+                When the device hasn't joined a backend, there is no API key
+                available
+
+                and the update supervisor tool currently just bails out. This
+                blocks
+
+                switching the supervisor version on an unmanaged device.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Allow supervisor update on unmanaged devices
+                changelog-entry: Allow supervisor update on unmanaged devices
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+            - subject: Update resin-supervisor to v8.6.3
+              hash: 1f0a1b16102847412e0165ff01125a4d50ab4c81
+              body: ''
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Update resin-supervisor to v8.6.3
+                changelog-entry: Update resin-supervisor to v8.6.3
+                Signed-off-by: Cameron Diver <cameron@balena.io>
+                signed-off-by: Cameron Diver <cameron@balena.io>
+              author: Cameron Diver
+          version: meta-resin-2.28.0
+          date: 2018-12-05T15:21:33.157Z
+    - subject: Switch from resin-yocto-scripts to balena-yocto-scripts
+      hash: 660d59175fec596bed463b88c427b32826bee949
+      body: ''
+      footer:
+        Changelog-entry: Switch from resin-yocto-scripts to balena-yocto-scripts
+        changelog-entry: Switch from resin-yocto-scripts to balena-yocto-scripts
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.28.0+rev1
+  date: 2018-12-06T06:41:08.836Z
+- commits:
     - subject: Update meta-resin from v2.26.0 to v2.27.0
       hash: 3bda391d20e8f5d2e904137d189d07216a809b43
       body: |

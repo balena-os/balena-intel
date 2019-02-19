@@ -23,14 +23,14 @@ See below for using the build script.
 ### Build this repository
 
 * Run the build script:
-  `./resin-yocto-scripts/build/barys`
+  `./balena-yocto-scripts/build/barys`
 
 * You can also run barys with the -h switch to inspect the available options
 
 ### Custom build using this repository
 
 * Run the build script in dry run mode to setup an empty `build` directory
-    `./resin-yocto-scripts/build/barys --remove-build --dry-run`
+    `./balena-yocto-scripts/build/barys --remove-build --dry-run`
 
 * Edit the `local.conf` in the `build/conf` directory
 

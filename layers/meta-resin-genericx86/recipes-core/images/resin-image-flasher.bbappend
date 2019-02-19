@@ -6,5 +6,3 @@ RESIN_BOOT_PARTITION_FILES_append = " \
     grub.cfg_internal: \
     "
 
-IMAGE_INSTALL_append = " efibootmgr"
-
