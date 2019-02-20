@@ -187,3 +187,20 @@ RESIN_CONFIGS_append = " snd_dyn_minors"
 RESIN_CONFIGS[snd_dyn_minors] = " \
     CONFIG_SND_DYNAMIC_MINORS=y \
 "
+
+# requested by customer
+RESIN_CONFIGS_append = " tulip"
+RESIN_CONFIGS[tulip] = " \
+    CONFIG_NET_TULIP=y \
+    CONFIG_TULIP=m \
+"
+
+# requested by customer
+RESIN_CONFIGS_append = " hyperv_net"
+RESIN_CONFIGS_DEPS[hyperv_net] = " \
+    CONFIG_HYPERV=y \
+    CONFIG_HYPERVISOR_GUEST=y \
+"
+RESIN_CONFIGS[hyperv_net] = " \
+    CONFIG_HYPERV_NET=m \
+"
