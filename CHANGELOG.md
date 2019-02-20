@@ -1,6 +1,14 @@
 Change log
 -----------
 
+# v2.29.2+rev3
+## (2019-02-19)
+
+* kernel-modules-headers: Update for 4.18 kernel [Sebastian Panceac]
+* rtl8812au: Update source location [Sebastian Panceac]
+* Switch to kernel 4.18.14 [Florin Sarbu]
+* Add kernel 4.18.14 [Florin Sarbu]
+
 # v2.29.2+rev2
 ## (2019-02-01)
 

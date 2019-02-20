@@ -1,4 +1,51 @@
 - commits:
+    - subject: 'kernel-modules-headers: Update for 4.18 kernel'
+      hash: b386cdaef2df0540e4f4b9c9ba7b32fab8620e70
+      body: |
+        Update context of sed command int the headers generation
+        script for the 4.18 kernel
+      footer:
+        Changelog-entry: 'kernel-modules-headers: Update for 4.18 kernel'
+        changelog-entry: 'kernel-modules-headers: Update for 4.18 kernel'
+        Signed-off-by: Sebastian Panceac <sebastian@balena.io>
+        signed-off-by: Sebastian Panceac <sebastian@balena.io>
+      author: Sebastian Panceac
+    - subject: 'rtl8812au: Update source location'
+      hash: 222748b0e76190dcf243e4fd35caaba25144b1be
+      body: |
+        We change the SRC_URI for this package to a repo where
+        the code is adapted to work with the 4.18+ kernel version
+      footer:
+        Changelog-entry: 'rtl8812au: Update source location'
+        changelog-entry: 'rtl8812au: Update source location'
+        Signed-off-by: Sebastian Panceac <sebastian@balena.io>
+        signed-off-by: Sebastian Panceac <sebastian@balena.io>
+      author: Sebastian Panceac
+    - subject: Switch to kernel 4.18.14
+      hash: 51fce65c6bdad92827ac9897dfb791a134136159
+      body: |
+        We switch to using kernel version 4.18.14
+      footer:
+        Changelog-entry: Switch to kernel 4.18.14
+        changelog-entry: Switch to kernel 4.18.14
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+    - subject: Add kernel 4.18.14
+      hash: 6c345b0fbac4386b67f293cf3dae2cc878f7cab7
+      body: |
+        This recipe is taken from poky version thud-20.0.0:
+        https://git.yoctoproject.org/cgit/cgit.cgi/poky/tree/meta/
+        recipes-kernel/linux?h=thud-20.0.0
+      footer:
+        Changelog-entry: Add kernel 4.18.14
+        changelog-entry: Add kernel 4.18.14
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.29.2+rev3
+  date: 2019-02-19T17:22:58.315Z
+- commits:
     - subject: Remove older AC 8260 WiFi firmware
       hash: 7c96b941c88c8485de1e0ef280a3b08125acb100
       body: |
