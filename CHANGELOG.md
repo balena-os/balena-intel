@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.29.2+rev4
+## (2019-02-20)
+
+* Enable TULIP driver for Hyper-V [Florin Sarbu]
+
 # v2.29.2+rev3
 ## (2019-02-19)
 
