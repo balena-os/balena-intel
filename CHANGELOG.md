@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.29.2+rev5
+## (2019-02-21)
+
+* Revert a patch to kernel module headers that is in meta-balena now [Zubair Lutfullah Kakakhel]
+
 # v2.29.2+rev4
 ## (2019-02-20)
 

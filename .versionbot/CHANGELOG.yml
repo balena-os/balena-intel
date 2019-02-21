@@ -1,4 +1,19 @@
 - commits:
+    - subject: Revert a patch to kernel module headers that is in meta-balena now
+      hash: e3e2fc700171cffc9286e9117c710e78417efac2
+      body: |
+        This reverts commit b386cdaef2df0540e4f4b9c9ba7b32fab8620e70.
+        We have this change incorporated in meta-balena via
+        https://github.com/balena-os/meta-balena/pull/1401
+      footer:
+        Changelog-entry: Revert a patch to kernel module headers that is in meta-balena now
+        changelog-entry: Revert a patch to kernel module headers that is in meta-balena now
+        Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+        signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+      author: Zubair Lutfullah Kakakhel
+  version: 2.29.2+rev5
+  date: 2019-02-21T16:06:01.214Z
+- commits:
     - subject: Enable TULIP driver for Hyper-V
       hash: 78697ac0cc61f8ad4c8859d7f73af544b5a85cea
       body: ''
