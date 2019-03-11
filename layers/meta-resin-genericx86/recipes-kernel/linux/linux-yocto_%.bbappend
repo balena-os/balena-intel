@@ -205,3 +205,10 @@ RESIN_CONFIGS_DEPS[hyperv_net] = " \
 RESIN_CONFIGS[hyperv_net] = " \
     CONFIG_HYPERV_NET=m \
 "
+
+# requested by user
+RESIN_CONFIGS_append = " temp_sensors"
+RESIN_CONFIGS[temp_sensors] = " \
+    CONFIG_SENSORS_CORETEMP=m \
+    CONFIG_SENSORS_NCT6775=m \
+"
