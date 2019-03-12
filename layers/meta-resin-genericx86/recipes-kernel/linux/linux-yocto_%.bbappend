@@ -124,6 +124,7 @@ RESIN_CONFIGS[batman] = "\
     CONFIG_BATMAN_ADV=m \
     CONFIG_BATMAN_ADV_DAT=y \
     CONFIG_BATMAN_ADV_MCAST=y \
+    CONFIG_BATMAN_ADV_DEBUGFS=y \
     CONFIG_BATMAN_ADV_DEBUG=y \
 "
 
@@ -203,4 +204,11 @@ RESIN_CONFIGS_DEPS[hyperv_net] = " \
 "
 RESIN_CONFIGS[hyperv_net] = " \
     CONFIG_HYPERV_NET=m \
+"
+
+# requested by user
+RESIN_CONFIGS_append = " temp_sensors"
+RESIN_CONFIGS[temp_sensors] = " \
+    CONFIG_SENSORS_CORETEMP=m \
+    CONFIG_SENSORS_NCT6775=m \
 "
