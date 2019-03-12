@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.31.0+rev2
+## (2019-03-12)
+
+* Enable kernel drivers coretemp.ko and nct6775.ko [Florin Sarbu]
+
 # v2.31.0+rev1
 ## (2019-03-11)
 

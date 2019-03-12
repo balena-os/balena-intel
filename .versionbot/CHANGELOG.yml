@@ -1,4 +1,16 @@
 - commits:
+    - subject: Enable kernel drivers coretemp.ko and nct6775.ko
+      hash: d54aa22a26f4e9af5cf41728cd77d0b4bd520229
+      body: ''
+      footer:
+        Changelog-entry: Enable kernel drivers coretemp.ko and nct6775.ko
+        changelog-entry: Enable kernel drivers coretemp.ko and nct6775.ko
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.31.0+rev2
+  date: 2019-03-12T08:00:30.222Z
+- commits:
     - subject: Update meta-resin from v2.30.0 to v2.31.0
       hash: d10c438f738e7b4c3da7a75c4bb63c1013f24427
       body: |
