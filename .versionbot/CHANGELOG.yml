@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update meta-resin from v2.31.0 to v2.31.1
+      hash: f6c4faf9f442a9901e96c95113432666826a2d88
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: Update meta-resin from v2.31.0 to v2.31.1
+        changelog-entry: Update meta-resin from v2.31.0 to v2.31.1
+        Signed-off-by: Pablo Carranza Velez <pablocarranza@gmail.com>
+        signed-off-by: Pablo Carranza Velez <pablocarranza@gmail.com>
+      author: Pablo Carranza Velez
+  version: 2.31.1+rev1
+  date: 2019-03-18T20:50:52.156Z
+- commits:
     - subject: Enable kernel drivers coretemp.ko and nct6775.ko
       hash: d54aa22a26f4e9af5cf41728cd77d0b4bd520229
       body: ''
