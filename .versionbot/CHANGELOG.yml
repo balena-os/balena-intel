@@ -1,4 +1,32 @@
 - commits:
+    - subject: Update meta-resin from v2.31.1 to v2.31.2
+      hash: 080d60e76d97353c3e438ce3ae781120d4cab62c
+      body: |
+        Update meta-resin from 2.31.1 to 2.31.2
+      footer:
+        Changelog-entry: Update meta-resin from v2.31.1 to v2.31.2
+        changelog-entry: Update meta-resin from v2.31.1 to v2.31.2
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested:
+        - commits:
+            - subject: Update resin-supervisor to v9.11.1
+              hash: 0993710382367b865ce81113dbe5566e5814da10
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Update resin-supervisor to v9.11.1
+                changelog-entry: Update resin-supervisor to v9.11.1
+                Signed-off-by: Pablo Carranza Velez <pablo@balena.io>
+                signed-off-by: Pablo Carranza Velez <pablo@balena.io>
+              author: Pablo Carranza Velez
+          version: meta-resin-2.31.2
+          date: 2019-03-19T21:33:42.542Z
+  version: 2.31.2+rev1
+  date: 2019-03-20T11:57:16.882Z
+- commits:
     - subject: Update meta-resin from v2.31.0 to v2.31.1
       hash: f6c4faf9f442a9901e96c95113432666826a2d88
       body: ''
