@@ -1,4 +1,5 @@
 CONNECTIVITY_FIRMWARES =+ " \
+	linux-firmware-bcm43455 \
 	linux-firmware-ibt-11-5 \
 	linux-firmware-ibt-12-16 \
 	linux-firmware-ibt-hw-37-7 \
