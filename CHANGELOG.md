@@ -1,6 +1,36 @@
 Change log
 -----------
 
+# v2.31.5+rev1
+## (2019-04-09)
+
+* Update meta-balena from v2.31.2 to v2.31.5 [Florin Sarbu]
+
+<details>
+<summary> View details </summary>
+
+## meta-balena-2.31.5
+### (2019-03-21)
+
+* Update resin-supervisor to v9.11.3 [Andrei Gherzan]
+
+## meta-balena-2.31.4
+### (2019-03-20)
+
+* resin-supervisor: Recreate on start if config has changed [Rich Bayliss]
+
+## meta-balena-2.31.3
+### (2019-03-20)
+
+* Update resin-supervisor to v9.11.2 [Pablo Carranza Velez]
+</details>
+
+* Change the poky submodule to our github mirror [Florin Sarbu]
+* Update the balena-yocto-scripts submodule to v1.0.4 [Florin Sarbu]
+* Rename meta-resin to meta-balena in repository [Florin Sarbu]
+* Update repo.yml to be able to trigger VersionBot with `meta-balena` [Florin Sarbu]
+* Add BCM43455 firmware and nvram settings to rootfs [Florin Sarbu]
+
 # v2.31.2+rev1
 ## (2019-03-20)
 

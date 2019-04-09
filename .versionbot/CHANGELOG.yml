@@ -1,4 +1,113 @@
 - commits:
+    - subject: Update meta-balena from v2.31.2 to v2.31.5
+      hash: 568c31f41b9e26624b1ac82ded0a00904c972d70
+      body: |
+        Update meta-balena from 2.31.2 to 2.31.5
+      footer:
+        Changelog-entry: Update meta-balena from v2.31.2 to v2.31.5
+        changelog-entry: Update meta-balena from v2.31.2 to v2.31.5
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested:
+        - commits:
+            - subject: Update resin-supervisor to v9.11.3
+              hash: 7ad04ea5594fc1cf5f378b9cab3c75b2ee6f0e6e
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Update resin-supervisor to v9.11.3
+                changelog-entry: Update resin-supervisor to v9.11.3
+                Signed-off-by: Andrei Gherzan <andrei@balena.io>
+                signed-off-by: Andrei Gherzan <andrei@balena.io>
+              author: Andrei Gherzan
+          version: meta-balena-2.31.5
+          date: 2019-03-21T14:43:57.016Z
+        - commits:
+            - subject: 'resin-supervisor: Recreate on start if config has changed'
+              hash: 20032211302d25300c09310e169cafa01375e35e
+              body: >
+                Fix the ordering of the conditional check when starting the
+                supervisor container;
+
+                only check that the values being passed into the environment
+                match the ones held
+
+                in the config IF the container already exists.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Rich Bayliss <rich@balena.io>
+                signed-off-by: Rich Bayliss <rich@balena.io>
+              author: Rich Bayliss
+          version: meta-balena-2.31.4
+          date: 2019-03-20T23:25:52.136Z
+        - commits:
+            - subject: Update resin-supervisor to v9.11.2
+              hash: abb864096b5b473893aa7011a685ed8df97a28ee
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Update resin-supervisor to v9.11.2
+                changelog-entry: Update resin-supervisor to v9.11.2
+                Signed-off-by: Pablo Carranza Velez <pablo@balena.io>
+                signed-off-by: Pablo Carranza Velez <pablo@balena.io>
+              author: Pablo Carranza Velez
+          version: meta-balena-2.31.3
+          date: 2019-03-20T20:18:02.522Z
+    - subject: Change the poky submodule to our github mirror
+      hash: edf77cc116c60d49ef4282e75894868f10a57fdb
+      body: |
+        We do this change because we noticed frequent timeouts
+        in different parts of our build infrastructure when pulling
+        the poky repository from https://git.yoctoproject.org/git/poky
+      footer:
+        Changelog-entry: Change the poky submodule to our github mirror
+        changelog-entry: Change the poky submodule to our github mirror
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+    - subject: Update the balena-yocto-scripts submodule to v1.0.4
+      hash: 47f9ebe75ee851b8822e022b341afaa693721ca1
+      body: ''
+      footer:
+        Changelog-entry: Update the balena-yocto-scripts submodule to v1.0.4
+        changelog-entry: Update the balena-yocto-scripts submodule to v1.0.4
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+    - subject: Rename meta-resin to meta-balena in repository
+      hash: 45694aa60f281e7c340e932ec503c2ce58a3187a
+      body: ''
+      footer:
+        Changelog-entry: Rename meta-resin to meta-balena in repository
+        changelog-entry: Rename meta-resin to meta-balena in repository
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+    - subject: Update repo.yml to be able to trigger VersionBot with `meta-balena`
+      hash: c682ae9fb039f4ac33957ad6d90f7f991490b371
+      body: ''
+      footer:
+        Changelog-entry: Update repo.yml to be able to trigger VersionBot with `meta-balena`
+        changelog-entry: Update repo.yml to be able to trigger VersionBot with `meta-balena`
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+    - subject: Add BCM43455 firmware and nvram settings to rootfs
+      hash: eb6cc991b7f0284f9937c4c3aa64faf37e06a11f
+      body: ''
+      footer:
+        Changelog-entry: Add BCM43455 firmware and nvram settings to rootfs
+        changelog-entry: Add BCM43455 firmware and nvram settings to rootfs
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.31.5+rev1
+  date: 2019-04-09T09:37:49.552Z
+- commits:
     - subject: Update meta-resin from v2.31.1 to v2.31.2
       hash: 080d60e76d97353c3e438ce3ae781120d4cab62c
       body: |
