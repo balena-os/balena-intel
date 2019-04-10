@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.32.0+rev2
+## (2019-04-10)
+
+* Enable USB RNDIS driver [Zahari Petkov]
+
 # v2.32.0+rev1
 ## (2019-04-10)
 

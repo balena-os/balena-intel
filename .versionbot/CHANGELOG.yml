@@ -1,4 +1,16 @@
 - commits:
+    - subject: Enable USB RNDIS driver
+      hash: b3350ca5b27794de8532122de1d6b926dbed3888
+      body: ''
+      footer:
+        Changelog-entry: Enable USB RNDIS driver
+        changelog-entry: Enable USB RNDIS driver
+        Signed-off-by: Zahari Petkov <zahari@balena.io>
+        signed-off-by: Zahari Petkov <zahari@balena.io>
+      author: Zahari Petkov
+  version: 2.32.0+rev2
+  date: 2019-04-10T13:56:15.330Z
+- commits:
     - subject: Update meta-balena from v2.31.5 to v2.32.0
       hash: a26c378bc8da66d2da2c280ee4a53ceb29d9d1e4
       body: |
