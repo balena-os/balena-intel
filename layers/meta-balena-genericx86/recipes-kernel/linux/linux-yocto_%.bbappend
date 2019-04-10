@@ -164,6 +164,15 @@ RESIN_CONFIGS[huawei_modems] ="\
     CONFIG_USB_NET_HUAWEI_CDC_NCM=m \
 "
 
+RESIN_CONFIGS_append = " rndis"
+RESIN_CONFIGS_DEPS[rndis] = " \
+    CONFIG_USB_SERIAL_OPTION=m \
+    CONFIG_USB_USBNET=m \
+"
+RESIN_CONFIGS[rndis] ="\
+    CONFIG_USB_NET_RNDIS_HOST=m \
+"
+
 # requested by customer
 RESIN_CONFIGS_append = " netfilter_time"
 RESIN_CONFIGS[netfilter_time] = " \
