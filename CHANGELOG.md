@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.32.0+rev3
+## (2019-04-26)
+
+* Build ACPI_WMI kernel module as requested by customer [Florin Sarbu]
+
 # v2.32.0+rev2
 ## (2019-04-10)
 

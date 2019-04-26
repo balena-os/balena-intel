@@ -1,4 +1,17 @@
 - commits:
+    - subject: Build ACPI_WMI kernel module as requested by customer
+      hash: 5ba1d5114fe22f3161e5b387d662942149f577ce
+      body: |
+        As requested by customer
+      footer:
+        Changelog-entry: Build ACPI_WMI kernel module as requested by customer
+        changelog-entry: Build ACPI_WMI kernel module as requested by customer
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.32.0+rev3
+  date: 2019-04-26T12:41:12.213Z
+- commits:
     - subject: Enable USB RNDIS driver
       hash: b3350ca5b27794de8532122de1d6b926dbed3888
       body: ''
