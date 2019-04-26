@@ -221,3 +221,9 @@ RESIN_CONFIGS[temp_sensors] = " \
     CONFIG_SENSORS_CORETEMP=m \
     CONFIG_SENSORS_NCT6775=m \
 "
+
+# requested by user
+RESIN_CONFIGS_append = " acpi_wmi"
+RESIN_CONFIGS[acpi_wmi] = " \
+    CONFIG_ACPI_WMI=m \
+"
