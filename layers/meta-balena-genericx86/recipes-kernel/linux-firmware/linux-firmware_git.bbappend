@@ -25,6 +25,13 @@ FILES_${PN}-bcm43455 = " \
   ${nonarch_base_libdir}/firmware/brcm/brcmfmac43455-sdio.* \
 "
 
+PACKAGES =+ "${PN}-ibt-18-16-1"
+
+FILES_${PN}-ibt-18-16-1  = " \
+    ${nonarch_base_libdir}/firmware/intel/ibt-18-16-1.sfi \
+    ${nonarch_base_libdir}/firmware/intel/ibt-18-16-1.ddc \
+"
+
 do_install_append() {
     install -d ${D}${nonarch_base_libdir}/firmware/brcm/
     install -m 0644 ${WORKDIR}/raspbian-nf/brcm/brcmfmac43455-sdio.txt ${D}${nonarch_base_libdir}/firmware/brcm/
