@@ -1,4 +1,26 @@
 - commits:
+    - subject: Update the balena-yocto-scripts submodule to v1.0.6
+      hash: 34d9191414c7fbbdc2debee43c69299464260367
+      body: ''
+      footer:
+        Changelog-entry: Update the balena-yocto-scripts submodule to v1.0.6
+        changelog-entry: Update the balena-yocto-scripts submodule to v1.0.6
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+    - subject: Include in rootfs the bluetooth firmware ibt-18-16-1
+      hash: f9c33d0af524447792b1b7f17a3e751f26b4148d
+      body: |
+        customer needs this bluetooth firmware present in the rootfs
+      footer:
+        Changelog-entry: Include in rootfs the bluetooth firmware ibt-18-16-1
+        changelog-entry: Include in rootfs the bluetooth firmware ibt-18-16-1
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.32.0+rev4
+  date: 2019-04-29T09:41:05.994Z
+- commits:
     - subject: Build ACPI_WMI kernel module as requested by customer
       hash: 5ba1d5114fe22f3161e5b387d662942149f577ce
       body: |

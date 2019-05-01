@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v2.32.0+rev4
+## (2019-04-29)
+
+* Update the balena-yocto-scripts submodule to v1.0.6 [Florin Sarbu]
+* Include in rootfs the bluetooth firmware ibt-18-16-1 [Florin Sarbu]
+
 # v2.32.0+rev3
 ## (2019-04-26)
 
