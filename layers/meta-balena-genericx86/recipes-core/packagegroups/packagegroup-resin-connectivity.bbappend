@@ -2,6 +2,7 @@ CONNECTIVITY_FIRMWARES =+ " \
 	linux-firmware-bcm43455 \
 	linux-firmware-ibt-11-5 \
 	linux-firmware-ibt-12-16 \
+	linux-firmware-ibt-18-16-1 \
 	linux-firmware-ibt-hw-37-7 \
 	linux-firmware-ibt-hw-37-8 \
 	linux-firmware-iwlwifi-9000 \
