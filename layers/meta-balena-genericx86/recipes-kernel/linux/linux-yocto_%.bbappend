@@ -227,3 +227,9 @@ RESIN_CONFIGS_append = " acpi_wmi"
 RESIN_CONFIGS[acpi_wmi] = " \
     CONFIG_ACPI_WMI=m \
 "
+
+RESIN_CONFIGS_append = " mwifiex_pcie"
+RESIN_CONFIGS[mwifiex_pcie] = " \
+    CONFIG_MWIFIEX=m \
+    CONFIG_MWIFIEX_PCIE=m \
+"
