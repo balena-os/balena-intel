@@ -1,4 +1,5 @@
 CONNECTIVITY_FIRMWARES =+ " \
+	linux-firmware-ath10k-qca6174 \
 	linux-firmware-bcm43455 \
 	linux-firmware-ibt-11-5 \
 	linux-firmware-ibt-12-16 \
