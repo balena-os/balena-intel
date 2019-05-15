@@ -1,3 +1,11 @@
+FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
+
+SRC_URI += " \
+    file://board-2.bin \
+    file://board.bin \
+    file://firmware-6.bin \
+"
+
 # Augments upstream linux-firmware with additional and updated images
 # from Raspbian:
 # https://github.com/RPi-Distro/firmware-nonfree
@@ -32,7 +40,18 @@ FILES_${PN}-ibt-18-16-1  = " \
     ${nonarch_base_libdir}/firmware/intel/ibt-18-16-1.ddc \
 "
 
+PACKAGES =+ "${PN}-ath10k-qca6174"
+
+FILES_${PN}-ath10k-qca6174= " \
+    ${nonarch_base_libdir}/firmware/ath10k/QCA6174/hw3.0/board-2.bin \
+    ${nonarch_base_libdir}/firmware/ath10k/QCA6174/hw3.0/board.bin \
+    ${nonarch_base_libdir}/firmware/ath10k/QCA6174/hw3.0/firmware-6.bin \
+"
+
 do_install_append() {
     install -d ${D}${nonarch_base_libdir}/firmware/brcm/
     install -m 0644 ${WORKDIR}/raspbian-nf/brcm/brcmfmac43455-sdio.txt ${D}${nonarch_base_libdir}/firmware/brcm/
+
+    install -d ${D}${nonarch_base_libdir}/firmware/ath10k/QCA6174/hw3.0/
+    install -m 0644 ${WORKDIR}/board-2.bin ${WORKDIR}/board.bin ${WORKDIR}/firmware-6.bin ${D}${nonarch_base_libdir}/firmware/ath10k/QCA6174/hw3.0/
 }
