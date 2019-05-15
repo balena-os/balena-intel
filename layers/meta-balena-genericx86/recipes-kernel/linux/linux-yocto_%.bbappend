@@ -241,3 +241,11 @@ RESIN_CONFIGS_DEPS[uinput] = " \
 RESIN_CONFIGS[uinput] = " \
     CONFIG_INPUT_UINPUT=m \
 "
+
+RESIN_CONFIGS_append = " ath10k_pci"
+RESIN_CONFIGS_DEPS[ath10k_pci] = " \
+    CONFIG_ATH10K=m \
+"
+RESIN_CONFIGS[ath10k_pci] = " \
+    CONFIG_ATH10K_PCI=m \
+"
