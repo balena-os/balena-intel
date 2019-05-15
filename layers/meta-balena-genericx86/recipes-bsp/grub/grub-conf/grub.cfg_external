@@ -6,5 +6,5 @@ timeout=3
 
 menuentry 'flash'{
 search --set=root --label flash-rootA
-linux /boot/bzImage root=LABEL=flash-rootA rootwait
+linux /boot/bzImage root=LABEL=flash-rootA flasher rootwait
 }
