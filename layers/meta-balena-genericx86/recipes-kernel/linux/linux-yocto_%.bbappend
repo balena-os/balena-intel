@@ -233,3 +233,11 @@ RESIN_CONFIGS[mwifiex_pcie] = " \
     CONFIG_MWIFIEX=m \
     CONFIG_MWIFIEX_PCIE=m \
 "
+
+RESIN_CONFIGS_append = " uinput"
+RESIN_CONFIGS_DEPS[uinput] = " \
+    CONFIG_INPUT_MISC=y \
+"
+RESIN_CONFIGS[uinput] = " \
+    CONFIG_INPUT_UINPUT=m \
+"
