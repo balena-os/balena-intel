@@ -251,7 +251,7 @@ RESIN_CONFIGS[ath10k_pci] = " \
 "
 
 RESIN_CONFIGS_append = " mmc_realtek_pci"
-RESIN_CONFIGS_DEPS[mmc_realtek__pci] = " \
+RESIN_CONFIGS_DEPS[mmc_realtek_pci] = " \
     CONFIG_MISC_RTSX_PCI=m \
 "
 RESIN_CONFIGS[mmc_realtek_pci] = " \
