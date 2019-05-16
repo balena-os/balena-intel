@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix typo that prevented microSD card support for Microsoft Surface Go
+      hash: a895172f359090cbe501c142d9e670a5c01c73e9
+      body: ''
+      footer:
+        Changelog-entry: Fix typo that prevented microSD card support for Microsoft Surface Go
+        changelog-entry: Fix typo that prevented microSD card support for Microsoft Surface Go
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.34.1+rev2
+  date: 2019-05-16T12:54:33.419Z
+- commits:
     - subject: Update meta-balena from v2.33.0 to v2.34.1
       hash: 64d1d29856f2d24372cbee763e3731a966647169
       body: |

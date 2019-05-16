@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.34.1+rev2
+## (2019-05-16)
+
+* Fix typo that prevented microSD card support for Microsoft Surface Go [Florin Sarbu]
+
 # v2.34.1+rev1
 ## (2019-05-15)
 
