@@ -1,4 +1,17 @@
 - commits:
+    - subject: Pass 'flasher' kernel argument on flasher images
+      hash: 46e57a616547f2876d01da2ed4201b420c9dc4da
+      body: |
+        The OS uses it to check if it runs on a flasher.
+      footer:
+        Changelog-entry: Pass 'flasher' kernel argument on flasher images
+        changelog-entry: Pass 'flasher' kernel argument on flasher images
+        Signed-off-by: Andrei Gherzan <andrei@balena.io>
+        signed-off-by: Andrei Gherzan <andrei@balena.io>
+      author: Andrei Gherzan
+  version: 2.34.1+rev3
+  date: 2019-05-19T06:47:29.537Z
+- commits:
     - subject: Fix typo that prevented microSD card support for Microsoft Surface Go
       hash: a895172f359090cbe501c142d9e670a5c01c73e9
       body: ''

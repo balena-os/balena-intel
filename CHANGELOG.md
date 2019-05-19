@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.34.1+rev3
+## (2019-05-19)
+
+* Pass 'flasher' kernel argument on flasher images [Andrei Gherzan]
+
 # v2.34.1+rev2
 ## (2019-05-16)
 
