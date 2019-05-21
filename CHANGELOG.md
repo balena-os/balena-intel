@@ -1,6 +1,22 @@
 Change log
 -----------
 
+# v2.36.0+rev1
+## (2019-05-20)
+
+* Update meta-balena from v2.35.0 to v2.36.0 [Florin Sarbu]
+
+<details>
+<summary> View details </summary>
+
+## meta-balena-2.36.0
+### (2019-05-20)
+
+* Cleanup old versions of iwlwifi firmware files in Yocto Thud [Florin Sarbu]
+</details>
+
+* Update the balena-yocto-scripts submodule to v1.1.0 [Florin Sarbu]
+
 # v2.35.0+rev1
 ## (2019-05-20)
 
