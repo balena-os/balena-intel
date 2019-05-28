@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v2.36.0+rev4
+## (2019-05-28)
+
+* Add support for Microsoft Surface Pro 6 touchscreen [Florin Sarbu]
+* Add new machine Microsoft Surface Pro 6 [Florin Sarbu]
+
 # v2.36.0+rev3
 ## (2019-05-28)
 

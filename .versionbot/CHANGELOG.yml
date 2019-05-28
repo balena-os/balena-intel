@@ -1,4 +1,28 @@
 - commits:
+    - subject: Add support for Microsoft Surface Pro 6 touchscreen
+      hash: a9ccd4f18fe7c4625a0436a9851486b9ec10571e
+      body: |
+        The ipts patch is taken from
+        https://github.com/jakeday/linux-surface/tree/4.18.16-1/patches/4.18
+      footer:
+        Changelog-entry: Add support for Microsoft Surface Pro 6 touchscreen
+        changelog-entry: Add support for Microsoft Surface Pro 6 touchscreen
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+    - subject: Add new machine Microsoft Surface Pro 6
+      hash: 2eee7e47015a33f62a4feff43e55d53d06af384d
+      body: |
+        This is the Microsoft Surface Pro 6
+      footer:
+        Changelog-entry: Add new machine Microsoft Surface Pro 6
+        changelog-entry: Add new machine Microsoft Surface Pro 6
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.36.0+rev4
+  date: 2019-05-28T16:18:10.860Z
+- commits:
     - subject: Remove duplicate 4.18.14 kernel recipes
       hash: 35c22b6c2472e2a23f0357305d496c4a4908851e
       body: |
