@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.36.0+rev3
+## (2019-05-28)
+
+* Remove duplicate 4.18.14 kernel recipes [Florin Sarbu]
+
 # v2.36.0+rev2
 ## (2019-05-21)
 

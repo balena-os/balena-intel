@@ -1,4 +1,18 @@
 - commits:
+    - subject: Remove duplicate 4.18.14 kernel recipes
+      hash: 35c22b6c2472e2a23f0357305d496c4a4908851e
+      body: |
+        Remove preference for kernel version 4.18.14 since we
+        updated to Poky Thud which contains the same recipe.
+      footer:
+        Changelog-entry: Remove duplicate 4.18.14 kernel recipes
+        changelog-entry: Remove duplicate 4.18.14 kernel recipes
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.36.0+rev3
+  date: 2019-05-28T09:47:24.347Z
+- commits:
     - subject: Update the balena-yocto-scripts submodule to v1.1.1
       hash: de80d2bf325c3a84279f31da6dc2b515af1ff623
       body: ''
