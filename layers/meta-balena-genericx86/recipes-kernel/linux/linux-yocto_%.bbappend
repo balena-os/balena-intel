@@ -6,6 +6,9 @@ SRC_URI += " \
     file://0001-Add-support-for-Quectel-EC20-modem.patch \
     file://0002-Revert-random-fix-crng_ready-test.patch \
 "
+SRC_URI_append_surface-pro-6 = " \
+    file://0003-ipts.patch \
+"
 
 do_kernel_configme[depends] += "virtual/${TARGET_PREFIX}binutils:do_populate_sysroot"
 do_kernel_configme[depends] += "virtual/${TARGET_PREFIX}gcc:do_populate_sysroot"
@@ -256,4 +259,16 @@ RESIN_CONFIGS_DEPS[mmc_realtek_pci] = " \
 "
 RESIN_CONFIGS[mmc_realtek_pci] = " \
     CONFIG_MMC_REALTEK_PCI=m \
+"
+
+# enable touchscreen on the Microsoft Surface Pro 6
+RESIN_CONFIGS_append_surface-pro-6 = " touchscreen_sp6"
+RESIN_CONFIGS[touchscreen_sp6] = " \
+    CONFIG_INTEL_IPTS=m \
+"
+# the following are not compile deps but rather runtime deps
+RESIN_CONFIGS_DEPS[touchscreen_sp6] = " \
+    CONFIG_INTEL_MEI=m \
+    CONFIG_INTEL_MEI_ME=m \
+    CONFIG_HID_MULTITOUCH=m \
 "

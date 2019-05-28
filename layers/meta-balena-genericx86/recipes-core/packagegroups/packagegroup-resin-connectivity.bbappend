@@ -13,6 +13,12 @@ CONNECTIVITY_FIRMWARES =+ " \
 	linux-firmware-rtl8723b-bt \
 	linux-firmware-ralink-nic \
 	"
+
+CONNECTIVITY_FIRMWARES_append_surface-pro-6 = " \
+	linux-firmware-i915-kbl \
+	linux-firmware-ipts-v102 \
+"
+
 CONNECTIVITY_FIRMWARES_remove = "linux-firmware-wl12xx"
 
 CONNECTIVITY_MODULES =+ " \
