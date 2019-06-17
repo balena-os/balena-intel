@@ -57,6 +57,11 @@ sync
 
 [ -z $INSTALL_UEFI ] && exit 0
 
+# remove existing resinOS entries so we won't have duplicates
+mount -t efivarfs efivarfs /sys/firmware/efi/efivars
+duplicates=`efibootmgr | grep resinOS |sed 's/Boot*//g' | sed 's/* resinOS//g'`
+for i in $duplicates; do efibootmgr -B -b $i; done
+
 echo "Add UEFI boot entry for starting resinOS from internal media."
 efibootmgr -c -d /dev/$internal_dev -p 1 -L "resinOS" -l "\EFI\BOOT\bootx64.efi"
 
