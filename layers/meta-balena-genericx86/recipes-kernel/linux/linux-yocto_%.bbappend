@@ -284,3 +284,9 @@ RESIN_CONFIGS[tpm] = " \
     CONFIG_TCG_TIS=m \
     CONFIG_TCG_CRB=m \
 "
+
+# enable the Intel TCO Watchdog
+RESIN_CONFIGS_append = " watchdog"
+RESIN_CONFIGS[watchdog] = " \
+    CONFIG_ITCO_WDT=m \
+"
