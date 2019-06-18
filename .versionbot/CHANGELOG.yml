@@ -1,4 +1,20 @@
 - commits:
+    - subject: Added TPM kernel module support
+      hash: 142cd46f36a322d5119f6c843f6335763de6ecae
+      body: |
+        When TPM 2.0 support is present, the following devices
+        are available:
+        /dev/tpm0
+        /dev/tpmrm0
+      footer:
+        Changelog-entry: Added TPM kernel module support
+        changelog-entry: Added TPM kernel module support
+        Signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+        signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+      author: Vicentiu Galanopulo
+  version: 2.36.0+rev5
+  date: 2019-06-17T14:25:03.733Z
+- commits:
     - subject: Add support for Microsoft Surface Pro 6 touchscreen
       hash: a9ccd4f18fe7c4625a0436a9851486b9ec10571e
       body: |

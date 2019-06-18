@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.36.0+rev5
+## (2019-06-17)
+
+* Added TPM kernel module support [Vicentiu Galanopulo]
+
 # v2.36.0+rev4
 ## (2019-05-28)
 
