@@ -272,3 +272,15 @@ RESIN_CONFIGS_DEPS[touchscreen_sp6] = " \
     CONFIG_INTEL_MEI_ME=m \
     CONFIG_HID_MULTITOUCH=m \
 "
+
+RESIN_CONFIGS_append = " tpm"
+RESIN_CONFIGS_DEPS[tpm] = " \
+    CONFIG_HW_RANDOM_TPM=y \
+    CONFIG_SECURITYFS=y \
+"
+RESIN_CONFIGS[tpm] = " \
+    CONFIG_TCG_TPM=m \
+    CONFIG_TCG_TIS_CORE=m \
+    CONFIG_TCG_TIS=m \
+    CONFIG_TCG_CRB=m \
+"
