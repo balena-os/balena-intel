@@ -39,7 +39,7 @@ module.exports =
 		machine: 'surface-pro-6'
 		image: 'resin-image-flasher'
 		fstype: 'resinos-img'
-		version: 'yocto-thud'
+		version: 'yocto-warrior'
 		deployArtifact: 'resin-image-flasher-surface-pro-6.resinos-img'
 		compressed: true
 
