@@ -1,0 +1,32 @@
+From f57647c1a3239e6bbfd3d2b966f60fdc81dad732 Mon Sep 17 00:00:00 2001
+From: Florin Sarbu <florin@balena.io>
+Date: Sat, 22 Jun 2019 12:16:04 +0200
+Subject: [PATCH] gen_mod_headers: Use native fixdep for target objtool on
+ kernel 5.0.3
+
+We need to make sure we use the cross fixdep binary when compiling the
+target objtool in the context of kernel 5.0.3 which has a changed
+Makefile.
+
+Upstream-status: Pending
+Signed-off-by: Florin Sarbu <florin@balena.io>
+---
+ gen_mod_headers | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/gen_mod_headers b/gen_mod_headers
+index f1b9437..0e0221a 100755
+--- a/gen_mod_headers
++++ b/gen_mod_headers
+@@ -238,6 +238,8 @@ if [[ -n "$prefix" ]]; then
+ 
+ 		# trying to apply the previous sed in context of 4.18 kernel
+ 		sed -i 's|$(QUIET_LINK)$(HOSTCC) $(HOSTLDFLAGS) -o $@ $<|$(QUIET_LINK)$(HOSTCC) $(HOSTLDFLAGS) -o fixdep_temp $<|' tools/build/Makefile
++		# trying to apply the previous sed in context of 5.0.3 kernel
++		sed -i 's|$(QUIET_LINK)$(HOSTCC) $(KBUILD_HOSTLDFLAGS) -o $@ $<|$(QUIET_LINK)$(HOSTCC) $(KBUILD_HOSTLDFLAGS) -o fixdep_temp $<|' tools/build/Makefile
+ 	    fi
+ 
+ 	    echo Building objtool for target
+-- 
+2.7.4
+
