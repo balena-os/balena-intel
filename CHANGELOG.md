@@ -1,6 +1,25 @@
 Change log
 -----------
 
+# v2.38.1+rev1
+## (2019-06-22)
+
+* Update meta-balena from v2.38.0 to v2.38.1 [Florin Sarbu]
+
+<details>
+<summary> View details </summary>
+
+## meta-balena-2.38.1
+### (2019-06-20)
+
+* Add warrior to compatible layers for meta-balena-common [Florin Sarbu]
+* Fix image-resin.bbclass to be able to use deprecated layers [Andrei Gherzan]
+* Fix kernel-devsrc on thud when kernel version < 4.10 [Andrei Gherzan]
+</details>
+
+* Update the balena-yocto-scripts submodule to v1.2.1 [Florin Sarbu]
+* Update to Poky version warrior-21.0.0 [Florin Sarbu]
+
 # v2.38.0+rev1
 ## (2019-06-18)
 
