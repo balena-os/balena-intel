@@ -1,4 +1,24 @@
 - commits:
+    - subject: >-
+        Remove kernel-modules-headers fixdep patch for kernel 5.0.3 as it will
+        be applied in meta-balena
+      hash: e1f97725f57f93fb41259dfc2229f38dc919040e
+      body: |
+        The patch will be merged in meta-balena so let's remove it
+        ( https://github.com/balena-os/meta-balena/pull/1567 )
+      footer:
+        Changelog-entry: >-
+          Remove kernel-modules-headers fixdep patch for kernel 5.0.3 as it will
+          be applied in meta-balena
+        changelog-entry: >-
+          Remove kernel-modules-headers fixdep patch for kernel 5.0.3 as it will
+          be applied in meta-balena
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.38.1+rev2
+  date: 2019-06-25T11:33:03.473Z
+- commits:
     - subject: Update meta-balena from v2.38.0 to v2.38.1
       hash: 94fa7f7ddc87e16bba846159c42e0e2f05f0c0bb
       body: |

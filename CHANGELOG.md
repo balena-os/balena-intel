@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.38.1+rev2
+## (2019-06-25)
+
+* Remove kernel-modules-headers fixdep patch for kernel 5.0.3 as it will be applied in meta-balena [Florin Sarbu]
+
 # v2.38.1+rev1
 ## (2019-06-22)
 
