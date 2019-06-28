@@ -5,6 +5,10 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 SRC_URI += " \
     file://0001-Add-support-for-Quectel-EC20-modem.patch \
     file://0002-Revert-random-fix-crng_ready-test.patch \
+    file://0002-NFLX-2019-001-SACK-Panic.patch \
+    file://0004-NFLX-2019-001-SACK-Slowness.patch \
+    file://0005-NFLX-2019-001-Resour-Consump-Low-MSS.patch \
+    file://0006-NFLX-2019-001-Resour-Consump-Low-MSS.patch \
 "
 SRC_URI_append_surface-pro-6 = " \
     file://0003-ipts.patch \
