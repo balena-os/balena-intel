@@ -294,3 +294,12 @@ RESIN_CONFIGS_append = " watchdog"
 RESIN_CONFIGS[watchdog] = " \
     CONFIG_ITCO_WDT=m \
 "
+
+# requested by user
+RESIN_CONFIGS_append_genericx86-64 = " ad5593r"
+RESIN_CONFIGS[ad5593r] = " \
+    CONFIG_AD5593R=m \
+"
+RESIN_CONFIGS_DEPS[ad5593r] = " \
+    CONFIG_IIO=m \
+"
