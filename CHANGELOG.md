@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.38.2+rev3
+## (2019-07-03)
+
+* Enable the AD5593R driver [Florin Sarbu]
+
 # v2.38.2+rev2
 ## (2019-07-03)
 

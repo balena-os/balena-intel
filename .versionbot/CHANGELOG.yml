@@ -1,4 +1,16 @@
 - commits:
+    - subject: Enable the AD5593R driver
+      hash: 50a15712d7751f08663621f7949ef4d8f3008d8d
+      body: ''
+      footer:
+        Changelog-entry: Enable the AD5593R driver
+        changelog-entry: Enable the AD5593R driver
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.38.2+rev3
+  date: 2019-07-03T11:32:36.331Z
+- commits:
     - subject: Patches for TCP-based remote denial of service vulnerabilities
       hash: d8b2b073fd7cd8f6d33f2735c1d049a2374ddad6
       body: >
