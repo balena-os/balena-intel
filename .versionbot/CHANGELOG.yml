@@ -1,4 +1,25 @@
 - commits:
+    - subject: >-
+        Set ATA_PIIX as built-in so we can boot legacy IDE mode without adding
+        the ata_piix driver in the initramfs
+      hash: fce00b110207e54e434cafa41ead02ac151d4093
+      body: |
+        Some boards only support SATA IDE mode (no AHCI) so in order to boot
+        correctly without adding the ata_piix kernel module in the rootfs we
+        make the driver as built-in.
+      footer:
+        Changelog-entry: >-
+          Set ATA_PIIX as built-in so we can boot legacy IDE mode without adding
+          the ata_piix driver in the initramfs
+        changelog-entry: >-
+          Set ATA_PIIX as built-in so we can boot legacy IDE mode without adding
+          the ata_piix driver in the initramfs
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.38.2+rev4
+  date: 2019-07-04T14:07:07.741Z
+- commits:
     - subject: Enable the AD5593R driver
       hash: 50a15712d7751f08663621f7949ef4d8f3008d8d
       body: ''

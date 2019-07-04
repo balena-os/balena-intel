@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.38.2+rev4
+## (2019-07-04)
+
+* Set ATA_PIIX as built-in so we can boot legacy IDE mode without adding the ata_piix driver in the initramfs [Florin Sarbu]
+
 # v2.38.2+rev3
 ## (2019-07-03)
 
