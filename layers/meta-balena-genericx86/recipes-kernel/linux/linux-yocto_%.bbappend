@@ -303,3 +303,10 @@ RESIN_CONFIGS[ad5593r] = " \
 RESIN_CONFIGS_DEPS[ad5593r] = " \
     CONFIG_IIO=m \
 "
+
+# set ATA_PIIX as built-in so we can boot legacy IDE mode without adding the ata_piix driver in the initramfs
+# (some boards do not support AHCI mode)
+RESIN_CONFIGS_append_genericx86-64 = " ata_piix"
+RESIN_CONFIGS[ata_piix] = " \
+    CONFIG_ATA_PIIX=y \
+"
