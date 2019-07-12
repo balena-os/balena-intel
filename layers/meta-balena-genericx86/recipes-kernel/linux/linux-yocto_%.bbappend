@@ -145,10 +145,10 @@ RESIN_CONFIGS[rtl_wifi]=" \
     CONFIG_RTL8192CU=m \
 "
 
-# Add overlayfs module in the rootfs (some user containers need this even though we do not yet switch from aufs to overlay2 as balena storage driver)
+# Enable overlayfs to be used as balena engine storage driver.
 RESIN_CONFIGS_append = " overlayfs"
 RESIN_CONFIGS[overlayfs] = " \
-    CONFIG_OVERLAY_FS=m \
+    CONFIG_OVERLAY_FS=y \
 "
 
 # keep overlay as built-in for the Microsoft Surface machines as those are using overlay instead of aufs

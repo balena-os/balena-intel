@@ -6,6 +6,8 @@
 BALENA_STORAGE_surface-pro-6 = "overlay2"
 BALENA_STORAGE_surface-go = "overlay2"
 
+BALENA_STORAGE_genericx86-64 = "overlay2"
+
 # More info meta-resin/README.md
 #TARGET_REPOSITORY ?= ""
 #TARGET_TAG ?= ""
