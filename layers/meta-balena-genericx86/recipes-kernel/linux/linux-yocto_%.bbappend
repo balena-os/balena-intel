@@ -310,3 +310,9 @@ RESIN_CONFIGS_append_genericx86-64 = " ata_piix"
 RESIN_CONFIGS[ata_piix] = " \
     CONFIG_ATA_PIIX=y \
 "
+
+# requested by customer
+RESIN_CONFIGS_append_genericx86-64 = " pinctrl_baytrail"
+RESIN_CONFIGS[pinctrl_baytrail] = " \
+    CONFIG_PINCTRL_BAYTRAIL=y \
+"
