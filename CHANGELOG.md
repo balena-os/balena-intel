@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.38.3+rev5
+## (2019-07-18)
+
+* Enable PINCTRL_BAYTRAIL support in the kernel [Florin Sarbu]
+
 # v2.38.3+rev4
 ## (2019-07-15)
 

@@ -1,4 +1,17 @@
 - commits:
+    - subject: Enable PINCTRL_BAYTRAIL support in the kernel
+      hash: 7ce87572bfaa7aee8580c0700d744dc7032d1eb5
+      body: |
+        Requested by customer
+      footer:
+        Changelog-entry: Enable PINCTRL_BAYTRAIL support in the kernel
+        changelog-entry: Enable PINCTRL_BAYTRAIL support in the kernel
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.38.3+rev5
+  date: 2019-07-18T12:04:59.604Z
+- commits:
     - subject: Update the balena-yocto-scripts submodule to v1.3.5
       hash: 3c21c8b619d6caf0c386b46aa9261012ff28c3f0
       body: ''
