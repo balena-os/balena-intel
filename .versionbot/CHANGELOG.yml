@@ -1,4 +1,16 @@
 - commits:
+    - subject: Enable USB Winchiphead CH341 Single Port Serial Driver
+      hash: 63cbd8b2a1a4d958161c9d623cfd759a41978f62
+      body: ''
+      footer:
+        Changelog-entry: Enable USB Winchiphead CH341 Single Port Serial Driver
+        changelog-entry: Enable USB Winchiphead CH341 Single Port Serial Driver
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.38.3+rev6
+  date: 2019-07-31T10:10:01.902Z
+- commits:
     - subject: Enable PINCTRL_BAYTRAIL support in the kernel
       hash: 7ce87572bfaa7aee8580c0700d744dc7032d1eb5
       body: |

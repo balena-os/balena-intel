@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.38.3+rev6
+## (2019-07-31)
+
+* Enable USB Winchiphead CH341 Single Port Serial Driver [Florin Sarbu]
+
 # v2.38.3+rev5
 ## (2019-07-18)
 
