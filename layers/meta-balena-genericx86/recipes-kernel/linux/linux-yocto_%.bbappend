@@ -316,3 +316,9 @@ RESIN_CONFIGS_append_genericx86-64 = " pinctrl_baytrail"
 RESIN_CONFIGS[pinctrl_baytrail] = " \
     CONFIG_PINCTRL_BAYTRAIL=y \
 "
+
+# requested by user (this module was previously available but apparently got removed when we updated to warrior and a new kernel)
+RESIN_CONFIGS_append_genericx86-64 = " ch341"
+RESIN_CONFIGS[ch341] = " \
+    CONFIG_USB_SERIAL_CH341=m \
+"
