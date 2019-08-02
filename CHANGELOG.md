@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.39.0+rev2
+## (2019-08-02)
+
+* Enable rollback-altboot [Zubair Lutfullah Kakakhel]
+
 # v2.39.0+rev1
 ## (2019-07-31)
 

@@ -1,4 +1,18 @@
 - commits:
+    - subject: Enable rollback-altboot
+      hash: 95a20fca7359cc3c723c13fa6230ad670bf01953
+      body: |
+        Since https://github.com/balena-os/meta-balena/pull/1349 , we can now
+        use rollback-altboot
+      footer:
+        Changelog-entry: Enable rollback-altboot
+        changelog-entry: Enable rollback-altboot
+        Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+        signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+      author: Zubair Lutfullah Kakakhel
+  version: 2.39.0+rev2
+  date: 2019-08-02T06:39:02.267Z
+- commits:
     - subject: Update meta-balena from v2.38.3 to v2.39.0
       hash: 6702e5055d5f3edb8e8aa088c91956a143c871c4
       body: |
