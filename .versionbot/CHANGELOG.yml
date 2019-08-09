@@ -1,4 +1,18 @@
 - commits:
+    - subject: Backport iwlwifi patches for multicast frames handling
+      hash: 50269c6c3dd60f99d90df31830cb3a0fff879788
+      body: |
+        These patches fix the following issue related to multicast frames:
+        Unhandled alg: 0x707
+      footer:
+        Changelog-entry: Backport iwlwifi patches for multicast frames handling
+        changelog-entry: Backport iwlwifi patches for multicast frames handling
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.39.0+rev3
+  date: 2019-08-08T20:01:42.551Z
+- commits:
     - subject: Enable rollback-altboot
       hash: 95a20fca7359cc3c723c13fa6230ad670bf01953
       body: |

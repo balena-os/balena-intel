@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.39.0+rev3
+## (2019-08-08)
+
+* Backport iwlwifi patches for multicast frames handling [Florin Sarbu]
+
 # v2.39.0+rev2
 ## (2019-08-02)
 
