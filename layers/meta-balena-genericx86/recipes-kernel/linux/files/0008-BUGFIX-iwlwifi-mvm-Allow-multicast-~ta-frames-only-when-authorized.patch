@@ -1,0 +1,110 @@
+From 2fc5847ec08431b1b6e04aa799db686f53eeb31c Mon Sep 17 00:00:00 2001
+From: Ilan Peer <ilan.peer@intel.com>
+Date: Tue, 18 Jun 2019 08:55:50 +0300
+Subject: [PATCH] [BUGFIX] iwlwifi: mvm: Allow multicast data frames only when
+ authorized
+
+The fix introduced in commit 7413061ff579 ("[BUGFIX] iwlwifi: mvm: Allow
+multicast data frames only when associated") was not complete as it
+still allowed multicast data frames to be forwarded to the host
+while GTK was not installed yet.
+
+To fix this, indicate the FW that multicast data frames should be
+forwarded to the host only after the AP station is authorized.
+
+type=bugfix
+ticket=jira:WIFI-24625
+fixes=I8e7a197d413b804815758102bacde1051a0f20e0
+
+Change-Id: I7d967e372eed42b182ff55de1f68fc2573233fc6
+Signed-off-by: Ilan Peer <ilan.peer@intel.com>
+Reviewed-on: https://git-amr-3.devtools.intel.com/gerrit/226274
+Tested-by: ec ger unix iil jenkins <EC.GER.UNIX.IIL.JENKINS@INTEL.COM>
+Reviewed-by: Grumbach, Emmanuel <emmanuel.grumbach@intel.com>
+Reviewed-by: Luciano Coelho <luciano.coelho@intel.com>
+x-iwlwifi-stack-dev: 694d4c4b5529a34e4b11d4020424772f9f494eb7
+
+Patch adapted for kernel 5.0.3 from the one at https://kernel.googlesource.com/pub/scm/linux/kernel/git/iwlwifi/backport-iwlwifi/+/2fc5847ec08431b1b6e04aa799db686f53eeb31c
+
+Upstream-Status: Backport
+Signed-off-by: Florin Sarbu <florin@balena.io>
+---
+ drivers/net/wireless/intel/iwlwifi/mvm/mac-ctxt.c | 26 ++++++++++++++++++++++-
+ drivers/net/wireless/intel/iwlwifi/mvm/mac80211.c | 10 +++++++++
+ 2 files changed, 35 insertions(+), 1 deletion(-)
+
+diff --git a/drivers/net/wireless/intel/iwlwifi/mvm/mac-ctxt.c b/drivers/net/wireless/intel/iwlwifi/mvm/mac-ctxt.c
+index f2792f3..0d075a3 100644
+--- a/drivers/net/wireless/intel/iwlwifi/mvm/mac-ctxt.c
++++ b/drivers/net/wireless/intel/iwlwifi/mvm/mac-ctxt.c
+@@ -722,6 +722,8 @@ static int iwl_mvm_mac_ctxt_cmd_sta(struct iwl_mvm *mvm,
+ 	/* We need the dtim_period to set the MAC as associated */
+ 	if (vif->bss_conf.assoc && vif->bss_conf.dtim_period &&
+ 	    !force_assoc_off) {
++		struct iwl_mvm_vif *mvmvif = iwl_mvm_vif_from_mac80211(vif);
++		u8 ap_sta_id = mvmvif->ap_sta_id;
+ 		u32 dtim_offs;
+ 
+ 		/*
+@@ -757,7 +759,29 @@ static int iwl_mvm_mac_ctxt_cmd_sta(struct iwl_mvm *mvm,
+ 			       dtim_offs);
+ 
+ 		ctxt_sta->is_assoc = cpu_to_le32(1);
+-		cmd.filter_flags |= cpu_to_le32(MAC_FILTER_ACCEPT_GRP);
++
++               /*
++                * allow multicast data frames only as long as the station is
++                * authorized, i.e., GTK keys are already installed (if needed)
++                */
++               if (ap_sta_id < IWL_MVM_STATION_COUNT) {
++			struct ieee80211_sta *sta;
++
++			rcu_read_lock();
++
++			sta = rcu_dereference(mvm->fw_id_to_mac_id[ap_sta_id]);
++			if (!IS_ERR_OR_NULL(sta)) {
++				struct iwl_mvm_sta *mvmsta =
++					iwl_mvm_sta_from_mac80211(sta);
++
++				if (mvmsta->sta_state ==
++				    IEEE80211_STA_AUTHORIZED)
++					cmd.filter_flags |=
++						cpu_to_le32(MAC_FILTER_ACCEPT_GRP);
++			}
++
++			rcu_read_unlock();
++		}
+ 	} else {
+ 		ctxt_sta->is_assoc = cpu_to_le32(0);
+ 
+diff --git a/drivers/net/wireless/intel/iwlwifi/mvm/mac80211.c b/drivers/net/wireless/intel/iwlwifi/mvm/mac80211.c
+index 97dc464..b6d5ef9 100644
+--- a/drivers/net/wireless/intel/iwlwifi/mvm/mac80211.c
++++ b/drivers/net/wireless/intel/iwlwifi/mvm/mac80211.c
+@@ -3003,6 +3003,13 @@ static int iwl_mvm_mac_sta_state(struct ieee80211_hw *hw,
+ 		/* enable beacon filtering */
+ 		WARN_ON(iwl_mvm_enable_beacon_filter(mvm, vif, 0));
+ 
++		/*
++		 * Now that the station is authorized, i.e., keys were already
++		 * installed, need to indicate to the FW that
++		 * multicast data frames can be forwarded to the driver
++		 */
++		iwl_mvm_mac_ctxt_changed(mvm, vif, false, NULL);
++
+ 		iwl_mvm_rs_rate_init(mvm, sta, mvmvif->phy_ctxt->channel->band,
+ 				     true);
+ 
+@@ -3015,6 +3022,9 @@ static int iwl_mvm_mac_sta_state(struct ieee80211_hw *hw,
+ 			ret = 0;
+ 	} else if (old_state == IEEE80211_STA_AUTHORIZED &&
+ 		   new_state == IEEE80211_STA_ASSOC) {
++		/* Multicast data frames are no longer allowed */
++		iwl_mvm_mac_ctxt_changed(mvm, vif, false, NULL);
++
+ 		/* disable beacon filtering */
+ 		WARN_ON(iwl_mvm_disable_beacon_filter(mvm, vif, 0));
+ 		ret = 0;
+-- 
+2.7.4
+

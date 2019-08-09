@@ -1,0 +1,82 @@
+From 00925d1ae225cdd547e9d96ecb0abf609c593cff Mon Sep 17 00:00:00 2001
+From: Ilan Peer <ilan.peer@intel.com>
+Date: Tue, 11 Jun 2019 11:45:55 +0300
+Subject: [PATCH] [BUGFIX] iwlwifi: mvm: Allow multicast data frames only when
+ associated
+
+The MAC context configuration always allowed multicast data frames
+to pass to the driver for all MAC context types, and in the
+case of station MAC context both when associated and when not
+associated.
+
+One of the outcomes of this configuration is having the FW forward
+encrypted multicast frames to the driver with Rx status indicating
+that the frame was not decrypted (as expected, since no keys were
+configured yet) which in turn results with unnecessary error
+messages.
+
+Change this behavior to allow multicast data frames only when they
+are actually expected, e.g., station MAC context is associated etc.
+
+type=bugfix
+ticket=jira:WIFI-24625
+fixes=unknown
+
+Change-Id: I8e7a197d413b804815758102bacde1051a0f20e0
+Signed-off-by: Ilan Peer <ilan.peer@intel.com>
+Reviewed-on: https://git-amr-3.devtools.intel.com/gerrit/225375
+automatic-review: ec ger unix iil jenkins <EC.GER.UNIX.IIL.JENKINS@INTEL.COM>
+Tested-by: ec ger unix iil jenkins <EC.GER.UNIX.IIL.JENKINS@INTEL.COM>
+Reviewed-by: Luciano Coelho <luciano.coelho@intel.com>
+x-iwlwifi-stack-dev: 7413061ff579dce6c16b27721e847f822b3b8485
+
+Upstream-Status: Backport
+Signed-off-by: Florin Sarbu <florin@balena.io>
+---
+ drivers/net/wireless/intel/iwlwifi/mvm/mac-ctxt.c | 9 ++++++---
+ 1 files changed, 6 insertions(+), 3 deletions(-)
+
+diff --git a/drivers/net/wireless/intel/iwlwifi/mvm/mac-ctxt.c b/drivers/net/wireless/intel/iwlwifi/mvm/mac-ctxt.c
+index 50b563b..9c26dd4 100644
+--- a/drivers/net/wireless/intel/iwlwifi/mvm/mac-ctxt.c
++++ b/drivers/net/wireless/intel/iwlwifi/mvm/mac-ctxt.c
+@@ -555,7 +555,7 @@ static void iwl_mvm_mac_ctxt_cmd_common(struct iwl_mvm *mvm,
+ 		cpu_to_le32(vif->bss_conf.use_short_slot ?
+ 			    MAC_FLG_SHORT_SLOT : 0);
+ 
+-	cmd->filter_flags = cpu_to_le32(MAC_FILTER_ACCEPT_GRP);
++	cmd->filter_flags = 0;
+ 
+ 	for (i = 0; i < IEEE80211_NUM_ACS; i++) {
+ 		u8 txf = iwl_mvm_mac_ac_to_tx_fifo(mvm, i);
+@@ -668,6 +668,7 @@ static int iwl_mvm_mac_ctxt_cmd_sta(struct iwl_mvm *mvm,
+ 			       dtim_offs);
+ 
+ 		ctxt_sta->is_assoc = cpu_to_le32(1);
++		cmd.filter_flags |= cpu_to_le32(MAC_FILTER_ACCEPT_GRP);
+ 	} else {
+ 		ctxt_sta->is_assoc = cpu_to_le32(0);
+ 
+@@ -713,7 +714,8 @@ static int iwl_mvm_mac_ctxt_cmd_listener(struct iwl_mvm *mvm,
+ 				       MAC_FILTER_IN_CONTROL_AND_MGMT |
+ 				       MAC_FILTER_IN_BEACON |
+ 				       MAC_FILTER_IN_PROBE_REQUEST |
+-				       MAC_FILTER_IN_CRC32);
++				       MAC_FILTER_IN_CRC32 |
++				       MAC_FILTER_ACCEPT_GRP);
+ 	ieee80211_hw_set(mvm->hw, RX_INCLUDES_FCS);
+ 
+ 	/* Allocate sniffer station */
+@@ -737,7 +739,8 @@ static int iwl_mvm_mac_ctxt_cmd_ibss(struct iwl_mvm *mvm,
+ 	iwl_mvm_mac_ctxt_cmd_common(mvm, vif, &cmd, NULL, action);
+ 
+ 	cmd.filter_flags = cpu_to_le32(MAC_FILTER_IN_BEACON |
+-				       MAC_FILTER_IN_PROBE_REQUEST);
++				       MAC_FILTER_IN_PROBE_REQUEST |
++				       MAC_FILTER_ACCEPT_GRP);
+ 
+ 	/* cmd.ibss.beacon_time/cmd.ibss.beacon_tsf are curently ignored */
+ 	cmd.ibss.bi = cpu_to_le32(vif->bss_conf.beacon_int);
+-- 
+2.7.4
+
