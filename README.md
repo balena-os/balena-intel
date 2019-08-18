@@ -1,4 +1,4 @@
-#  resin-intel repository
+#  balena-intel repository
 
 ## Clone/Initialize the repository
 
@@ -14,7 +14,7 @@ bring in all the needed dependencies.
 
 ### Build flags
 
-* Consult layers/meta-resin/README.md for info on various build flags (setting
+* Consult layers/meta-balena/README.md for info on various build flags (setting
 up serial console support for example) and build prerequisites. Build flags can
 be set by using the build script (barys) or by manually modifying `local.conf`.
 
@@ -43,7 +43,7 @@ See below for using the build script.
 
 ### Issues
 
-For issues we use an aggregated github repository available [here](https://github.com/resin-os/resinos/issues). When you create issue make sure you select the right labels.
+For issues we use an aggregated github repository available [here](https://github.com/balena-os/balenaos/issues). When you create issue make sure you select the right labels.
 
 ### Pull requests
 
@@ -51,14 +51,36 @@ To contribute send github pull requests targeting this repository.
 
 Please refer to: [Yocto Contribution Guidelines](https://wiki.yoctoproject.org/wiki/Contribution_Guidelines#General_Information) and try to use the commit log format as stated there. Example:
 ```
-test.bb: I added a test
 
-[Issue #01]
+<component>: Short description
 
 I'm going to explain here what my commit does in a way that history
 would be useful.
 
+Changelog-entry: User facing description of the issue
 Signed-off-by: Joe Developer <joe.developer@example.com>
+```
+
+The header of each commit must not exceed 72 characters in length and must be in 1 line only.
+
+The header and the subject of each commit must be separated by an empty line.
+
+The subject of each commit must not exceed 72 characters in length but can be wrapped to several lines.
+
+The subject and the footer of each commit must be separated by an empty line.
+
+Every pull request must contain at least one commit annotated with the `Changelog-entry` footer. The messages contained in these footers will be used to automatically fill the changelog on every new version.
+
+Also, every update to `meta-balena` should be separated into its own commit, if the body of that commit contains the following line `Updated meta-balena from X to Y` the generated changelog will include a button to show all the updates in `meta-balena` from the version after `X` to `Y`.
+
+An example of a valid commit updating `meta-balena` is:
+
+```
+layers/meta-balena: Update to v2.24.0
+
+Update meta-balena from 2.19.0 to 2.24.0
+
+Changelog-entry: Update the meta-balena submodule from v2.19.0 to v2.24.0
 ```
 
 Make sure you mention the issue addressed by a PR. See:
