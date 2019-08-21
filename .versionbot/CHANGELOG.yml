@@ -1,4 +1,82 @@
 - commits:
+    - subject: 'iwlwifi: bump the API version to 46 for 9000 and 22000'
+      hash: c12be6622452ac3cdd2ed4f228cfc41cc5c4c269
+      body: |
+        This commit bumps the API version to 46 for 9000 and 22000
+      footer:
+        Changelog-entry: 'iwlwifi: bump the API version to 46 for 9000 and 22000'
+        changelog-entry: 'iwlwifi: bump the API version to 46 for 9000 and 22000'
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+    - subject: Update poky submodule to version warrior-21.0.1
+      hash: 456f78c8ac8e36950c93556defa2d8c815d1f011
+      body: ''
+      footer:
+        Changelog-entry: Update poky submodule to version warrior-21.0.1
+        changelog-entry: Update poky submodule to version warrior-21.0.1
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+    - subject: Update meta-balena from v2.39.0 to v2.40.0
+      hash: 7ab1408a2b86fd419cf926a02bed1a6ab9649b00
+      body: |
+        Update meta-balena from 2.39.0 to 2.40.0
+      footer:
+        Changelog-entry: Update meta-balena from v2.39.0 to v2.40.0
+        changelog-entry: Update meta-balena from v2.39.0 to v2.40.0
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested:
+        - commits:
+            - subject: Update balena-supervisor to v10.2.2
+              hash: 3afbe138f115fa15611cb823caa6664dbb093a8b
+              body: ''
+              footer:
+                Changelog-entry: Update balena-supervisor to v10.2.2
+                changelog-entry: Update balena-supervisor to v10.2.2
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Cameron Diver <cameron@balena.io>
+                signed-off-by: Cameron Diver <cameron@balena.io>
+              author: Cameron Diver
+            - subject: >-
+                Workaround for a cornercase bug in PersistentLogging where
+                journalctl filled the state partition. Vacuum the journal on
+                boot.
+              hash: 8284da08f245ed6da8308d558bb8dfcc66de9691
+              body: >
+                We have found a rare corner case bug where the journal bloats
+                beyond
+
+                its limit and fills the state partition. Triggering a vacuum on
+                reboot
+
+                helps a bit in case the device is restarted to recover its
+                function.
+
+
+                Fixes #1423
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: >-
+                  Workaround for a cornercase bug in PersistentLogging where
+                  journalctl filled the state partition. Vacuum the journal on
+                  boot.
+                changelog-entry: >-
+                  Workaround for a cornercase bug in PersistentLogging where
+                  journalctl filled the state partition. Vacuum the journal on
+                  boot.
+                Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+                signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+              author: Zubair Lutfullah Kakakhel
+          version: meta-balena-2.40.0
+          date: 2019-08-14T09:40:49.562Z
+  version: 2.40.0+rev1
+  date: 2019-08-19T03:54:13.427Z
+- commits:
     - subject: Backport iwlwifi patches for multicast frames handling
       hash: 50269c6c3dd60f99d90df31830cb3a0fff879788
       body: |

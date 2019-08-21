@@ -1,6 +1,22 @@
 Change log
 -----------
 
+# v2.40.0+rev1
+## (2019-08-19)
+
+* iwlwifi: bump the API version to 46 for 9000 and 22000 [Florin Sarbu]
+* Update poky submodule to version warrior-21.0.1 [Florin Sarbu]
+
+<details>
+<summary> Update meta-balena from v2.39.0 to v2.40.0 [Florin Sarbu] </summary>
+
+> ## meta-balena-2.40.0
+> ### (2019-08-14)
+> 
+> * Update balena-supervisor to v10.2.2 [Cameron Diver]
+> * Workaround for a cornercase bug in PersistentLogging where journalctl filled the state partition. Vacuum the journal on boot. [Zubair Lutfullah Kakakhel]
+</details>
+
 # v2.39.0+rev3
 ## (2019-08-08)
 
