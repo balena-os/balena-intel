@@ -11,6 +11,7 @@ SRC_URI += " \
     file://0006-NFLX-2019-001-Resour-Consump-Low-MSS.patch \
     file://0007-BUGFIX-iwlwifi-mvm-Allow-multicast-~ta-frames-only-when-associated.patch \
     file://0008-BUGFIX-iwlwifi-mvm-Allow-multicast-~ta-frames-only-when-authorized.patch \
+    file://0009-iwlwifi-bump-the-API-version-to-46-for-9000-and-2200.patch \
 "
 SRC_URI_append_surface-pro-6 = " \
     file://0003-ipts.patch \
