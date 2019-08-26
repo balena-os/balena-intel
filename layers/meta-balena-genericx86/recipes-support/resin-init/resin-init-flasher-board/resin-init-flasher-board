@@ -58,7 +58,7 @@ sync
 [ -z $INSTALL_UEFI ] && exit 0
 
 # remove existing resinOS entries so we won't have duplicates
-mount -t efivarfs efivarfs /sys/firmware/efi/efivars
+if ! mount | grep efivarfs > /dev/null; then mount -t efivarfs efivarfs /sys/firmware/efi/efivars; fi
 duplicates=`efibootmgr | grep resinOS |sed 's/Boot*//g' | sed 's/* resinOS//g'`
 for i in $duplicates; do efibootmgr -B -b $i; done
 
