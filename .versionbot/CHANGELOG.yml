@@ -1,4 +1,20 @@
 - commits:
+    - subject: Only mount efivarfs in flasher if it's not already mounted
+      hash: 0475e03129fca23e6914c36abdf308336b30ac74
+      body: |
+        In newer OS images, when the flasher runs, the efivarfs
+        is already mounted and this makes the flasher script error out.
+        Let's make sure we run the mount command only if efivarfs is not
+        already mounted.
+      footer:
+        Changelog-entry: Only mount efivarfs in flasher if it's not already mounted
+        changelog-entry: Only mount efivarfs in flasher if it's not already mounted
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.41.0+rev2
+  date: 2019-08-26T15:15:37.667Z
+- commits:
     - subject: Update meta-balena from v2.40.0 to v2.41.0
       hash: 7aab76e9a0a94beb0951a0e7b9f0faab9efdd6f9
       body: |
