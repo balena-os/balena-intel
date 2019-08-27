@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.41.0+rev2
+## (2019-08-26)
+
+* Only mount efivarfs in flasher if it's not already mounted [Florin Sarbu]
+
 # v2.41.0+rev1
 ## (2019-08-26)
 
