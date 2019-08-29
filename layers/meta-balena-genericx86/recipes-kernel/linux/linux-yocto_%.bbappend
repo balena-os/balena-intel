@@ -2,17 +2,17 @@ inherit kernel-resin
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
-SRC_URI += " \
-    file://0001-Add-support-for-Quectel-EC20-modem.patch \
-    file://0002-Revert-random-fix-crng_ready-test.patch \
-    file://0002-NFLX-2019-001-SACK-Panic.patch \
-    file://0004-NFLX-2019-001-SACK-Slowness.patch \
-    file://0005-NFLX-2019-001-Resour-Consump-Low-MSS.patch \
-    file://0006-NFLX-2019-001-Resour-Consump-Low-MSS.patch \
-    file://0007-BUGFIX-iwlwifi-mvm-Allow-multicast-~ta-frames-only-when-associated.patch \
-    file://0008-BUGFIX-iwlwifi-mvm-Allow-multicast-~ta-frames-only-when-authorized.patch \
-    file://0009-iwlwifi-bump-the-API-version-to-46-for-9000-and-2200.patch \
-"
+#SRC_URI += " \
+#    file://0001-Add-support-for-Quectel-EC20-modem.patch \
+#    file://0002-Revert-random-fix-crng_ready-test.patch \
+#    file://0002-NFLX-2019-001-SACK-Panic.patch \
+#    file://0004-NFLX-2019-001-SACK-Slowness.patch \
+#    file://0005-NFLX-2019-001-Resour-Consump-Low-MSS.patch \
+#    file://0006-NFLX-2019-001-Resour-Consump-Low-MSS.patch \
+#    file://0007-BUGFIX-iwlwifi-mvm-Allow-multicast-~ta-frames-only-when-associated.patch \
+#    file://0008-BUGFIX-iwlwifi-mvm-Allow-multicast-~ta-frames-only-when-authorized.patch \
+#    file://0009-iwlwifi-bump-the-API-version-to-46-for-9000-and-2200.patch \
+#"
 SRC_URI_append_surface-pro-6 = " \
     file://0003-ipts.patch \
 "
@@ -324,4 +324,6 @@ RESIN_CONFIGS[pinctrl_baytrail] = " \
 RESIN_CONFIGS_append_genericx86-64 = " ch341"
 RESIN_CONFIGS[ch341] = " \
     CONFIG_USB_SERIAL_CH341=m \
+    CONFIG_MFD_INTEL_LPSS_ACPI=m \
+    CONFIG_MFD_INTEL_LPSS_PCI=m \
 "

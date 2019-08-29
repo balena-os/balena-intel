@@ -2,6 +2,8 @@
 # Genericx86-64
 #
 
+DEPENDS_remove = "kernel-devsrc"
+
 IMAGE_FSTYPES_append = " resinos-img"
 
 # Do not support live USB stick

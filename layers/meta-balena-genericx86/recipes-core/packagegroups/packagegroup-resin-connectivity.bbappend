@@ -21,6 +21,6 @@ CONNECTIVITY_FIRMWARES_append_surface-pro-6 = " \
 
 CONNECTIVITY_FIRMWARES_remove = "linux-firmware-wl12xx"
 
-CONNECTIVITY_MODULES =+ " \
-	rtl8812au \
-"
+#CONNECTIVITY_MODULES =+ " \
+#	rtl8812au \
+#"
