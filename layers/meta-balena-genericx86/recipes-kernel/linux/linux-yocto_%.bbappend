@@ -325,3 +325,9 @@ RESIN_CONFIGS_append_genericx86-64 = " ch341"
 RESIN_CONFIGS[ch341] = " \
     CONFIG_USB_SERIAL_CH341=m \
 "
+
+RESIN_CONFIGS_append_genericx86-64 = " i2c_designware"
+RESIN_CONFIGS[i2c_designware] = " \
+    CONFIG_I2C_DESIGNWARE_PLATFORM=m \
+    CONFIG_I2C_DESIGNWARE_PCI=m \
+"
