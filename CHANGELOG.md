@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.41.0+rev3
+## (2019-08-30)
+
+* Enable I2C support on kernel 5.x for Intel Atom Cherry Trail based SoCs [Florin Sarbu]
+
 # v2.41.0+rev2
 ## (2019-08-26)
 

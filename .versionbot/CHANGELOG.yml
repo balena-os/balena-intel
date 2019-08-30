@@ -1,4 +1,24 @@
 - commits:
+    - subject: Enable I2C support on kernel 5.x for Intel Atom Cherry Trail based SoCs
+      hash: 13526cecc61f0b65aa26e061232f06778f86fac9
+      body: |
+        We switched to kernel 5.0.3 and by default this kernel lacks
+        DESIGNWARE I2C support.
+        This is needed to fix missing /dev/sri/card0 on Intel Atom
+        Cherry Trail based boards.
+      footer:
+        Changelog-entry: >-
+          Enable I2C support on kernel 5.x for Intel Atom Cherry Trail based
+          SoCs
+        changelog-entry: >-
+          Enable I2C support on kernel 5.x for Intel Atom Cherry Trail based
+          SoCs
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.41.0+rev3
+  date: 2019-08-30T20:14:05.151Z
+- commits:
     - subject: Only mount efivarfs in flasher if it's not already mounted
       hash: 0475e03129fca23e6914c36abdf308336b30ac74
       body: |
