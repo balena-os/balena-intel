@@ -21,6 +21,20 @@ do_kernel_configme[depends] += "virtual/${TARGET_PREFIX}binutils:do_populate_sys
 do_kernel_configme[depends] += "virtual/${TARGET_PREFIX}gcc:do_populate_sysroot"
 do_kernel_configme[depends] += "bc-native:do_populate_sysroot bison-native:do_populate_sysroot"
 
+RESIN_CONFIGS_append = " kms"
+RESIN_CONFIGS[kms] = " \
+    CONFIG_DRM_KMS_HELPER=m \
+    CONFIG_DRM_KMS_FB_HELPER=y \
+    CONFIG_DRM_VKMS=m \
+    CONFIG_DRM_I915=m \
+    CONFIG_DRM=m \
+    CONFIG_X86=y \
+    CONFIG_PCI=y \
+    CONFIG_DRM_CIRRUS_QEMU=m \
+    CONFIG_MMU=y \
+    "
+
+#CONFIG_DRM_KMS_CMA_HELPER=y
 #
 # EHCI drivers
 #
@@ -42,9 +56,8 @@ RESIN_CONFIGS[nvme] = " \
 #
 RESIN_CONFIGS_append = " iwlwifi"
 RESIN_CONFIGS_DEPS[iwlwifi] = " \
-    CONFIG_PCI=m \
     CONFIG_MAC80211=m \
-    CONFIG_HAS_IOMEM=m \
+    CONFIG_HAS_IOMEM=y \
     "
 RESIN_CONFIGS[iwlwifi] = " \
     CONFIG_IWLMVM=m \
@@ -84,9 +97,9 @@ RESIN_CONFIGS[serial_8250] = " \
 # Support Intel(R) 82575/82576 PCI-Express Gigabit Ethernet
 #
 RESIN_CONFIGS_append = " igb"
-RESIN_CONFIGS_DEPS[igb] = " \
-    CONFIG_PCI=m \
-    "
+#RESIN_CONFIGS_DEPS[igb] = " 
+#    CONFIG_PCI=m 
+#    "
 RESIN_CONFIGS[igb] = " \
     CONFIG_IGB=m \
     "
