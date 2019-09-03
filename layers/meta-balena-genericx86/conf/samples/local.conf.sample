@@ -1,5 +1,7 @@
 # Supported machines
 #MACHINE ?= "genericx86-64"
+#MACHINE ?= "surface-go"
+#MACHINE ?= "surface-pro-6"
 
 # More info meta-resin/README.md
 #TARGET_REPOSITORY ?= ""
