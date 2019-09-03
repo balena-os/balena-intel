@@ -151,6 +151,10 @@ RESIN_CONFIGS[overlayfs] = " \
     CONFIG_OVERLAY_FS=m \
 "
 
+# keep overlay as built-in for the Microsoft Surface machines as those are using overlay instead of aufs
+RESIN_CONFIGS_remove_surface-pro-6 = "overlayfs"
+RESIN_CONFIGS_remove_surface-go = "overlayfs"
+
 # Add CAN support (requested by customer)
 RESIN_CONFIGS_append = " enable_can"
 RESIN_CONFIGS[enable_can] = " \
