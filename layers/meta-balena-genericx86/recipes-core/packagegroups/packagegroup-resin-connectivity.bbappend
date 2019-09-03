@@ -14,6 +14,10 @@ CONNECTIVITY_FIRMWARES =+ " \
 	linux-firmware-ralink-nic \
 	"
 
+CONNECTIVITY_FIRMWARES_append_surface-go = " \
+	linux-firmware-i915-kbl \
+"
+
 CONNECTIVITY_FIRMWARES_append_surface-pro-6 = " \
 	linux-firmware-i915-kbl \
 	linux-firmware-ipts-v102 \
