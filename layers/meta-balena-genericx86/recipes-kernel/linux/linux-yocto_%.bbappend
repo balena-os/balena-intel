@@ -335,3 +335,9 @@ RESIN_CONFIGS[i2c_designware] = " \
     CONFIG_I2C_DESIGNWARE_PLATFORM=m \
     CONFIG_I2C_DESIGNWARE_PCI=m \
 "
+
+# enable Intel Low Power Subsystem support in PCI mode in order to have the Designware I2C chip functioning on the Microsoft Surface Go
+RESIN_CONFIGS_append_surface-go = " mfd_lpss_pci"
+RESIN_CONFIGS[mfd_lpss_pci] = " \
+    CONFIG_MFD_INTEL_LPSS_PCI=m \
+"
