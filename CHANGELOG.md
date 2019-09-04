@@ -1,6 +1,22 @@
 Change log
 -----------
 
+# v2.41.1+rev1
+## (2019-09-04)
+
+
+<details>
+<summary> Update meta-balena from v2.41.0 to v2.41.1 [Florin Sarbu] </summary>
+
+> ## meta-balena-2.41.1
+> ### (2019-09-03)
+> 
+> * Update ModemManager to version 1.10.4 [Florin Sarbu]
+> * Fix for some innocous systemd tmpfile warnings /var/run -> /run ones [Zubair Lutfullah Kakakhel]
+> * Fix for rollbacks where the inactive partition mount was unavailable when altboot triggered [Zubair Lutfullah Kakakhel]
+> * kernel-resin: Enable FTDI USB-serial convertors driver [Sebastian Panceac]
+</details>
+
 # v2.41.0+rev3
 ## (2019-08-30)
 
