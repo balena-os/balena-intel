@@ -331,3 +331,10 @@ RESIN_CONFIGS[i2c_designware] = " \
     CONFIG_I2C_DESIGNWARE_PLATFORM=m \
     CONFIG_I2C_DESIGNWARE_PCI=m \
 "
+
+# requested by user for mounting HFS drives
+RESIN_CONFIGS_append_genericx86-64 = " apple_hfs"
+RESIN_CONFIGS[apple_hfs] = " \
+    CONFIG_HFS_FS=m \
+    CONFIG_HFSPLUS_FS=m \
+"
