@@ -1,4 +1,20 @@
 - commits:
+    - subject: Pass partitions UUID in cmdline when available
+      hash: 5ac60cc6b3fed392bf1fe86017dfbc88356f9104
+      body: |
+        After first boot, the OS will generate the UUID of every partition and
+        store their values in a boot partition file. Source this file and pass
+        these UUIDs, when available, as part of cmdline so that the OS can use
+        them for partition mounts.
+      footer:
+        Changelog-entry: Pass partitions UUID in cmdline when available
+        changelog-entry: Pass partitions UUID in cmdline when available
+        Signed-off-by: Andrei Gherzan <andrei@balena.io>
+        signed-off-by: Andrei Gherzan <andrei@balena.io>
+      author: Andrei Gherzan
+  version: 2.41.1+rev3
+  date: 2019-09-20T10:33:47.947Z
+- commits:
     - subject: Update balena-yocto-scripts to v1.3.7
       hash: 2f4eb3d81fd5c37bbbcac34ffbb3845cfcfa2c60
       body: ''

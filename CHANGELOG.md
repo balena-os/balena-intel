@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.41.1+rev3
+## (2019-09-20)
+
+* Pass partitions UUID in cmdline when available [Andrei Gherzan]
+
 # v2.41.1+rev2
 ## (2019-09-16)
 
