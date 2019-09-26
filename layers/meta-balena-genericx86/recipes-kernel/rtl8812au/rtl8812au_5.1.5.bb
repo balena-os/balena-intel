@@ -9,7 +9,7 @@ SRC_URI = " \
 	file://0001-Use-modules_install-as-wanted-by-yocto.patch \
 "
 
-SRCREV = "edcd447de00568d963a32e47d68180c55ef89fb0"
+SRCREV = "30d47a0a3f43ccb19e8fd59fe93d74a955147bf2"
 
 S = "${WORKDIR}/git"
 
