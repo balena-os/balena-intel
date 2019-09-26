@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.41.1+rev4
+## (2019-09-24)
+
+* Enable HFS drives support [Florin Sarbu]
+
 # v2.41.1+rev3
 ## (2019-09-20)
 

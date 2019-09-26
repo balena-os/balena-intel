@@ -1,4 +1,16 @@
 - commits:
+    - subject: Enable HFS drives support
+      hash: 356c3b0dc4c2bbb1fd82e37fa6da083ee60fc65c
+      body: ''
+      footer:
+        Changelog-entry: Enable HFS drives support
+        changelog-entry: Enable HFS drives support
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.41.1+rev4
+  date: 2019-09-24T08:05:47.793Z
+- commits:
     - subject: Pass partitions UUID in cmdline when available
       hash: 5ac60cc6b3fed392bf1fe86017dfbc88356f9104
       body: |
