@@ -1,0 +1,154 @@
+From 4f4e7fe32969bf78223362436484a5d9f6dd47f7 Mon Sep 17 00:00:00 2001
+From: Alexandru Costache <alexandru@balena.io>
+Date: Tue, 8 Oct 2019 09:43:17 +0200
+Subject: [PATCH] Enhanced logging on connection activation
+
+Add temporary logging in the areas where a connection
+gets auto-activated, to investigate root cause for a
+bug that prevents wifi auto-activattion, and which is
+reproduced very very rarely.
+
+Upstream-status: Inappropriate [configuration]
+Signed-off-by: Alexandru Costache <alexandru@balena.io>
+---
+ src/nm-policy.c | 65 ++++++++++++++++++++++++++++++++++++++-----------
+ 1 file changed, 51 insertions(+), 14 deletions(-)
+
+diff --git a/src/nm-policy.c b/src/nm-policy.c
+index 559babe..dbe5a1e 100644
+--- a/src/nm-policy.c
++++ b/src/nm-policy.c
+@@ -1246,20 +1246,27 @@ auto_activate_device (NMPolicy *self,
+ 	nm_assert (NM_IS_DEVICE (device));
+ 
+ 	priv = NM_POLICY_GET_PRIVATE (self);
+-
++	if (device)
++                _LOGI (LOGD_DEVICE, ">>>> auto_activate_device(): %s", nm_device_get_iface(device));
+ 	// FIXME: if a device is already activating (or activated) with a connection
+ 	// but another connection now overrides the current one for that device,
+ 	// deactivate the device and activate the new connection instead of just
+ 	// bailing if the device is already active
+-	if (nm_device_get_act_request (device))
++	if (nm_device_get_act_request (device)) {
++                _LOGI (LOGD_DEVICE, ">>>> auto_activate_device(): %s - !nm_device_get_act_request (device) - leaving", nm_device_get_iface(device));
+ 		return;
++	}
+ 
+-	if (!nm_device_autoconnect_allowed (device))
++	if (!nm_device_autoconnect_allowed (device)) {
++                _LOGI (LOGD_DEVICE, ">>>> auto_activate_device(): %s - !nm_device_autoconnect_allowed (device) -  leaving", nm_device_get_iface(device));
+ 		return;
++	}
+ 
+ 	connections = nm_manager_get_activatable_connections (priv->manager, TRUE, TRUE, &len);
+-	if (!connections[0])
++	if (!connections[0]) {
++		_LOGI (LOGD_DEVICE, ">>>> auto_activate_device(): %s - activatable connections empty - leaving", nm_device_get_iface(device));
+ 		return;
++	}
+ 
+ 	/* Find the first connection that should be auto-activated */
+ 	best_connection = NULL;
+@@ -1269,32 +1276,50 @@ auto_activate_device (NMPolicy *self,
+ 		NMSettingConnection *s_con;
+ 		const char *permission;
+ 
+-		if (nm_settings_connection_autoconnect_is_blocked (candidate))
++		if (nm_settings_connection_autoconnect_is_blocked (candidate)) {
++                        _LOGI (LOGD_DEVICE, ">>>> auto_activate_device(): nm_settings_connection_autoconnect_is_blocked id: '%s' (%s) - move on",
++                               nm_settings_connection_get_id (candidate),
++                               nm_settings_connection_get_uuid (candidate));
+ 			continue;
++		}
+ 
+ 		cand_conn = nm_settings_connection_get_connection (candidate);
+ 
+ 		s_con = nm_connection_get_setting_connection (cand_conn);
+-		if (!nm_setting_connection_get_autoconnect (s_con))
++		if (!nm_setting_connection_get_autoconnect (s_con)) {
++                        _LOGI (LOGD_DEVICE, ">>>> auto_activate_device(): !nm_setting_connection_get_autoconnect - id: '%s' (%s) - move on",
++                               nm_settings_connection_get_id (candidate),
++                               nm_settings_connection_get_uuid (candidate));
+ 			continue;
++		}
+ 
+ 		permission = nm_utils_get_shared_wifi_permission (cand_conn);
+ 		if (   permission
+-		    && !nm_settings_connection_check_permission (candidate, permission))
++		    && !nm_settings_connection_check_permission (candidate, permission)) {
++                        _LOGI (LOGD_DEVICE, ">>>> auto_activate_device(): nm_utils_get_shared_wifi_permission - id: '%s' (%s) - permission: %s - move on",
++                               nm_settings_connection_get_id (candidate),
++                               nm_settings_connection_get_uuid (candidate),
++                               permission);
+ 			continue;
++		}
+ 
+ 		if (nm_device_can_auto_connect (device, candidate, &specific_object)) {
++			_LOGI (LOGD_DEVICE, ">>>> auto_activate_device(): nm_device_can_auto_connect '%s' (%s) - will be set as BEST connection",
++                               nm_settings_connection_get_id (candidate),
++                               nm_settings_connection_get_uuid (candidate));
+ 			best_connection = candidate;
+ 			break;
+ 		}
+ 	}
+ 
+-	if (!best_connection)
++	if (!best_connection) {
++                _LOGI (LOGD_DEVICE, ">>>> auto_activate_device(): best connection NOT set for '%s' - leaving", nm_device_get_iface(device));
+ 		return;
++	}
+ 
+ 	_LOGI (LOGD_DEVICE, "auto-activating connection '%s' (%s)",
+-	       nm_settings_connection_get_id (best_connection),
+-	       nm_settings_connection_get_uuid (best_connection));
++               nm_settings_connection_get_id (best_connection),
++               nm_settings_connection_get_uuid (best_connection));
+ 
+ 	subject = nm_auth_subject_new_internal ();
+ 	ac = nm_manager_activate_connection (priv->manager,
+@@ -1338,6 +1363,8 @@ auto_activate_device_cb (gpointer user_data)
+ 	g_assert (NM_IS_POLICY (data->policy));
+ 	g_assert (NM_IS_DEVICE (data->device));
+ 
++	_LOGI (LOGD_DEVICE, ">>>> auto_activate_device_cb - '%s'", nm_device_get_iface(data->device));
++
+ 	data->autoactivate_id = 0;
+ 	auto_activate_device (data->policy, data->device);
+ 	activate_data_free (data);
+@@ -1527,18 +1554,28 @@ schedule_activate_check (NMPolicy *self, NMDevice *device)
+ 	NMActiveConnection *ac;
+ 	const CList *tmp_list;
+ 
+-	if (nm_manager_get_state (priv->manager) == NM_STATE_ASLEEP)
++        _LOGI (LOGD_DEVICE, ">>>> schedule_activate_check - '%s'", nm_device_get_iface(device));
++
++	if (nm_manager_get_state (priv->manager) == NM_STATE_ASLEEP) {
++                _LOGI (LOGD_DEVICE, ">>>> schedule_activate_check - '%s' state is NM_STATE_ASLEEP - leaving", nm_device_get_iface(device));
+ 		return;
++	}
+ 
+-	if (!nm_device_autoconnect_allowed (device))
++	if (!nm_device_autoconnect_allowed (device)) {
++                _LOGI (LOGD_DEVICE, ">>>> schedule_activate_check - '%s' autoconnect NOT allowed - leaving", nm_device_get_iface(device));
+ 		return;
++	}
+ 
+-	if (find_pending_activation (self, device))
++	if (find_pending_activation (self, device)) {
++		_LOGI (LOGD_DEVICE, ">>>> schedule_activate_check - '%s' found PENDING ACTIVATION - leaving", nm_device_get_iface(device));
+ 		return;
++	}
+ 
+ 	nm_manager_for_each_active_connection (priv->manager, ac, tmp_list) {
+-		if (nm_active_connection_get_device (ac) == device)
++		if (nm_active_connection_get_device (ac) == device) {
++			_LOGI (LOGD_DEVICE, ">>>> schedule_activate_check - '%s' existent ACTIVE CONNECTION on device - leaving", nm_device_get_iface(device));
+ 			return;
++		}
+ 	}
+ 
+ 	nm_device_add_pending_action (device, NM_PENDING_ACTION_AUTOACTIVATE, TRUE);
+-- 
+2.17.1
+
