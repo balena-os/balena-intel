@@ -59,6 +59,11 @@ FILES_${PN}-ath10k-qca6174= " \
     ${nonarch_base_libdir}/firmware/ath10k/QCA6174/hw3.0/firmware-6.bin \
 "
 
+PACKAGES =+ "${PN}-broadcom_43xx"
+FILES_${PN}-broadcom_43xx= " \
+    ${nonarch_base_libdir}/firmware/b43/ucode15.fw \
+"
+
 PACKAGES =+ "${PN}-i915-kbl"
 FILES_${PN}-i915-kbl = " \
     ${nonarch_base_libdir}/firmware/i915/kbl_dmc_ver1_01.bin \

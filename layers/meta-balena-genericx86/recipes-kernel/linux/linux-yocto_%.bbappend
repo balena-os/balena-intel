@@ -145,6 +145,16 @@ RESIN_CONFIGS[rtl_wifi]=" \
     CONFIG_RTL8192CU=m \
 "
 
+# Enable WiFi adapters that use Broadcom 43xx chipset
+RESIN_CONFIGS_append = " broadcom_wifi"
+RESIN_CONFIGS[broadcom_wifi]=" \
+    CONFIG_B43=m \
+    CONFIG_B43_PHY_G=y \
+    CONFIG_B43_PHY_N=y \
+    CONFIG_B43_PHY_LP=y \
+    CONFIG_B43_PHY_HT=y \
+"
+
 # Add overlayfs module in the rootfs (some user containers need this even though we do not yet switch from aufs to overlay2 as balena storage driver)
 RESIN_CONFIGS_append = " overlayfs"
 RESIN_CONFIGS[overlayfs] = " \
