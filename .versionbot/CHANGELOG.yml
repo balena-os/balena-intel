@@ -1,4 +1,19 @@
 - commits:
+    - subject: Enable Broadcom 43xx wifi drivers
+      hash: dd3be84ce0982cea36c713d73ea303bdab7fa141
+      body: |
+        Kernel config and firmware.
+      footer:
+        Changelog-entry: Enable Broadcom 43xx wifi drivers
+        changelog-entry: Enable Broadcom 43xx wifi drivers
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Gergely Imreh <gergely@balena.io>
+        signed-off-by: Gergely Imreh <gergely@balena.io>
+      author: Gergely Imreh
+  version: 2.44.0+rev2
+  date: 2019-10-16T10:37:46.013Z
+- commits:
     - subject: Update meta-balena from v2.43.0 to v2.44.0
       hash: af7bda4f32ef97fba30991c7ec75bcfc6a63a893
       body: |

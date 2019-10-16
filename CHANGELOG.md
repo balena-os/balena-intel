@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.44.0+rev2
+## (2019-10-16)
+
+* Enable Broadcom 43xx wifi drivers [Gergely Imreh]
+
 # v2.44.0+rev1
 ## (2019-10-03)
 
