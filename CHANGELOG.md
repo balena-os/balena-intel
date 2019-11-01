@@ -1,6 +1,24 @@
 Change log
 -----------
 
+# v2.45.0+rev1
+## (2019-11-01)
+
+* Update balena-yocto-scripts to v1.4.0 [Florin Sarbu]
+
+<details>
+<summary> Update meta-balena from v2.44.0 to v2.45.0 [Florin Sarbu] </summary>
+
+> ## meta-balena-2.45.0
+> ### (2019-10-30)
+> 
+> * Increase persistent journal size to 32M [Will Boyce]
+> * Move persistent logs from state to data partition [Will Boyce]
+> * Add wpa-supplicant recipe and update to v2.9 [Will Boyce]
+> * Improve robustness by making variou services restart if they stop for some reason [Zubair Lutfullah Kakakhel]
+> * Build net/dummy as module [Alexandru Costache]
+</details>
+
 # v2.44.0+rev1
 ## (2019-10-03)
 
