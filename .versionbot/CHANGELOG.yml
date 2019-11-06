@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add support for Microsoft Surface Go
+      hash: a62987186802bf78e8d697a0de6cb7a4364bdb0a
+      body: ''
+      footer:
+        Changelog-entry: Add support for Microsoft Surface Go
+        changelog-entry: Add support for Microsoft Surface Go
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.45.0+rev2
+  date: 2019-11-06T13:19:47.771Z
+- commits:
     - subject: Update balena-yocto-scripts to v1.4.0
       hash: b07c2f010e6669b9e71a4f8c7ff57311795455a7
       body: ''

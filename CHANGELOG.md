@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.45.0+rev2
+## (2019-11-06)
+
+* Add support for Microsoft Surface Go [Florin Sarbu]
+
 # v2.45.0+rev1
 ## (2019-11-01)
 
