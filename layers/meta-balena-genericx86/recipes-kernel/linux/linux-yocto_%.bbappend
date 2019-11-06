@@ -151,6 +151,10 @@ RESIN_CONFIGS[overlayfs] = " \
     CONFIG_OVERLAY_FS=m \
 "
 
+# keep overlay as built-in for the Microsoft Surface machines as those are using overlay instead of aufs
+RESIN_CONFIGS_remove_surface-pro-6 = "overlayfs"
+RESIN_CONFIGS_remove_surface-go = "overlayfs"
+
 # Add CAN support (requested by customer)
 RESIN_CONFIGS_append = " enable_can"
 RESIN_CONFIGS[enable_can] = " \
@@ -263,13 +267,16 @@ RESIN_CONFIGS[mmc_realtek_pci] = " \
     CONFIG_MMC_REALTEK_PCI=m \
 "
 
-# enable touchscreen on the Microsoft Surface Pro 6
-RESIN_CONFIGS_append_surface-pro-6 = " touchscreen_sp6"
-RESIN_CONFIGS[touchscreen_sp6] = " \
+# enable touchscreen driver for the Microsoft Surface Pro 6
+RESIN_CONFIGS_append_surface-pro-6 = " ipts_touchscreen_sp6"
+RESIN_CONFIGS[ipts_touchscreen_sp6] = " \
     CONFIG_INTEL_IPTS=m \
 "
+
 # the following are not compile deps but rather runtime deps
-RESIN_CONFIGS_DEPS[touchscreen_sp6] = " \
+RESIN_CONFIGS_append_surface-pro-6 = " touchscreen_surfaces"
+RESIN_CONFIGS_append_surface-go = " touchscreen_surfaces"
+RESIN_CONFIGS_DEPS[touchscreen_surfaces] = " \
     CONFIG_INTEL_MEI=m \
     CONFIG_INTEL_MEI_ME=m \
     CONFIG_HID_MULTITOUCH=m \
@@ -332,4 +339,16 @@ RESIN_CONFIGS_append_genericx86-64 = " apple_hfs"
 RESIN_CONFIGS[apple_hfs] = " \
     CONFIG_HFS_FS=m \
     CONFIG_HFSPLUS_FS=m \
+"
+
+# enable Intel Low Power Subsystem support in PCI mode in order to have the Designware I2C chip functioning on the Microsoft Surface Go
+RESIN_CONFIGS_append_surface-go = " mfd_lpss_pci"
+RESIN_CONFIGS[mfd_lpss_pci] = " \
+    CONFIG_MFD_INTEL_LPSS_PCI=m \
+"
+
+# required to get the i2c touchscreen working on the Microsoft Surface Go
+RESIN_CONFIGS_append_surface-go = " i2c_hid"
+RESIN_CONFIGS[i2c_hid] = " \
+    CONFIG_I2C_HID=m \
 "
