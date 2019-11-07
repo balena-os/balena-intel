@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2019.10.0
+## (2019-11-04)
+
+* Declare ESR next
+
 # v2.44.0+rev1
 ## (2019-10-03)
 
@@ -10,7 +15,7 @@ Change log
 
 > ## meta-balena-2.44.0
 > ### (2019-10-03)
-> 
+>
 > * Make uboot dev images autoboot delay build time configurable. Default is no delay [Zubair Lutfullah Kakakhel]
 > * Reduce systemd logging level from info to notice [Zubair Lutfullah Kakakhel]
 > * resin-supervisor: Expose container ID via env variable [Roman Mazur]
@@ -40,13 +45,13 @@ Change log
 
 > ## meta-balena-2.43.0
 > ### (2019-09-13)
-> 
+>
 > * Update NetworkManager to 1.20.2 [Andrei Gherzan]
 > * Update ModemManager to 1.10.6 [Andrei Gherzan]
 
 > ## meta-balena-2.42.0
 > ### (2019-09-13)
-> 
+>
 > * A small fix in initramfs when /dev/console is invalid due to whatever reason [Zubair Lutfullah Kakakhel]
 > * Add automated testing for external kernel module header tarballs [Zubair Lutfullah Kakakhel]
 > * Make sure correct utsrelease.h is packaged [Zubair Lutfullah Kakakhel]
@@ -77,7 +82,7 @@ Change log
 
 > ## meta-balena-2.41.1
 > ### (2019-09-03)
-> 
+>
 > * Update ModemManager to version 1.10.4 [Florin Sarbu]
 > * Fix for some innocous systemd tmpfile warnings /var/run -> /run ones [Zubair Lutfullah Kakakhel]
 > * Fix for rollbacks where the inactive partition mount was unavailable when altboot triggered [Zubair Lutfullah Kakakhel]
@@ -103,7 +108,7 @@ Change log
 
 > ## meta-balena-2.41.0
 > ### (2019-08-22)
-> 
+>
 > * Fix a hang in initramfs for warrior production images [Zubair Lutfullah Kakakhel]
 > * Update balena-engine to 18.09.8 [Robert Günzler]
 > * Avoid overlayfs mounts in poky's volatile-binds [Andrei Gherzan]
@@ -120,7 +125,7 @@ Change log
 
 > ## meta-balena-2.40.0
 > ### (2019-08-14)
-> 
+>
 > * Update balena-supervisor to v10.2.2 [Cameron Diver]
 > * Workaround for a cornercase bug in PersistentLogging where journalctl filled the state partition. Vacuum the journal on boot. [Zubair Lutfullah Kakakhel]
 </details>
@@ -144,7 +149,7 @@ Change log
 
 > ## meta-balena-2.39.0
 > ### (2019-07-31)
-> 
+>
 > * usb-modeswitch-data: Switch Huawei E3372 12d1:1f01 to mbim mode [Alexandru Costache]
 > * Fix rollback altboots to prevent good reboots by supervisor triggering rollback. [Zubair Lutfullah Kakakhel]
 > * Devices using u-boot. Remove any BOOTDELAY for production images. Add a 2 seconds delay for development images [Zubair Lutfullah Kakakhel]
@@ -200,7 +205,7 @@ Change log
 
 > ## meta-balena-2.38.3
 > ### (2019-07-10)
-> 
+>
 > * resin-proxy-config: fix up incorrect bash subshell command [Matthew McGinn]
 </details>
 
@@ -229,11 +234,11 @@ Change log
 
 > ## meta-balena-2.38.2
 > ### (2019-06-27)
-> 
+>
 > * Update to kernel-modules-headers v0.0.20 to fix missing target modpost binary on kernel 5.0.3 [Florin Sarbu]
-> 
+>
 > * Update to kernel-modules-headers v0.0.19 to fix target objtool compile issue on kernel 5.0.3 [Florin Sarbu]
-> 
+>
 </details>
 
 # v2.38.1+rev2
