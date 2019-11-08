@@ -352,3 +352,12 @@ RESIN_CONFIGS_append_surface-go = " i2c_hid"
 RESIN_CONFIGS[i2c_hid] = " \
     CONFIG_I2C_HID=m \
 "
+
+# Experiment with Android modules
+RESIN_CONFIGS_append_genericx86-64 = " android"
+RESIN_CONFIGS[android] = " \
+    CONFIG_ANDROID=y \
+    CONFIG_STAGING=y \
+    CONFIG_ANDROID_BINDER_IPC=y \
+    CONFIG_ASHMEM=y \
+"
