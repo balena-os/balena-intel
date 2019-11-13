@@ -1,4 +1,25 @@
 - commits:
+    - subject: >-
+        Update poky to latest warrior branch
+        (b021992106c6b5ba02b825afa7dcc422b135b59b)
+      hash: bf5e695e24f2d1dff873fec161512bdde7416907
+      body: |
+        We add the latest warrior branch in order to include a fix for
+        reboot or shutdown delay due to a systemd service misconfiguration.
+        (the commit that fixes this is 95632e679df13fd5a45725e3752c49986ed2fe73)
+      footer:
+        Changelog-entry: >-
+          Update poky to latest warrior branch
+          (b021992106c6b5ba02b825afa7dcc422b135b59b)
+        changelog-entry: >-
+          Update poky to latest warrior branch
+          (b021992106c6b5ba02b825afa7dcc422b135b59b)
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.45.0+rev3
+  date: 2019-11-13T10:16:24.194Z
+- commits:
     - subject: Add support for Microsoft Surface Go
       hash: a62987186802bf78e8d697a0de6cb7a4364bdb0a
       body: ''
