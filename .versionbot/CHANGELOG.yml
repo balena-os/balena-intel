@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update balena-yocto-scripts to v1.5.2
+      hash: 14ef652ad29bdad7152201409d90b43062f09f69
+      body: ''
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to v1.5.2
+        changelog-entry: Update balena-yocto-scripts to v1.5.2
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.45.0+rev4
+  date: 2019-11-19T09:27:55.822Z
+- commits:
     - subject: >-
         Update poky to latest warrior branch
         (b021992106c6b5ba02b825afa7dcc422b135b59b)
