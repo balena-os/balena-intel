@@ -1,4 +1,31 @@
 - commits:
+    - subject: Update balena yocto scripts to 1.5.2
+      hash: ff750eaf480d81f8cc3fd9dbd2891ebc0e0eb403
+      body: ''
+      footer:
+        Changelog-entry: Update balena yocto scripts to 1.5.2
+        changelog-entry: Update balena yocto scripts to 1.5.2
+        Change-type: patch
+        change-type: patch
+        Backport-to: current
+        backport-to: current
+        Signed-off-by: Giovanni Garufi giovanni@balena.io
+        signed-off-by: Giovanni Garufi giovanni@balena.io
+      author: Giovanni Garufi
+    - subject: Update balena-yocto-scripts to 1.5.0
+      hash: 9f7582febf463dc6b5fcba80ccc7dc66ade326d7
+      body: ''
+      footer:
+        Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+        signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: Update balena-yocto-scripts to 1.5.0
+        changelog-entry: Update balena-yocto-scripts to 1.5.0
+      author: Zubair Lutfullah Kakakhel
+  version: 2019.07.1
+  date: 2019-12-04T16:33:35.125Z
+- commits:
     - subject: Enable USB Winchiphead CH341 Single Port Serial Driver
       hash: 63cbd8b2a1a4d958161c9d623cfd759a41978f62
       body: ''
