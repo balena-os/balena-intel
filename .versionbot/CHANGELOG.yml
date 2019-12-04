@@ -1,4 +1,20 @@
 - commits:
+    - subject: Update balena yocto scripts to 1.5.2
+      hash: e4bdcd6a6382e5062fbe709c03ac828f272b8790
+      body: ''
+      footer:
+        Changelog-entry: Update balena yocto scripts to 1.5.2
+        changelog-entry: Update balena yocto scripts to 1.5.2
+        Change-type: patch
+        change-type: patch
+        Backport-to: next
+        backport-to: next
+        Signed-off-by: Giovanni Garufi giovanni@balena.io
+        signed-off-by: Giovanni Garufi giovanni@balena.io
+      author: Giovanni Garufi
+  version: 2019.10.2
+  date: 2019-12-04T16:36:07.686Z
+- commits:
     - subject: Update balena yocto scripts to 1.5.0
       hash: cec922aa04d9b03396a455b5d7253a404ec5d77d
       body: ''
