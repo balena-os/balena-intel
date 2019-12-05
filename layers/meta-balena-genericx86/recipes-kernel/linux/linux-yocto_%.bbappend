@@ -352,3 +352,9 @@ RESIN_CONFIGS_append_surface-go = " i2c_hid"
 RESIN_CONFIGS[i2c_hid] = " \
     CONFIG_I2C_HID=m \
 "
+
+# requested by customer
+RESIN_CONFIGS_append_genericx86-64 = " ixgbe"
+RESIN_CONFIGS[ixgbe] = " \
+    CONFIG_IXGBE=m \
+"
