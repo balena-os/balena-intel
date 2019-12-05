@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.45.1+rev2
+## (2019-12-05)
+
+* Enable the ixgbe driver for the genericx86-64 machine [Florin Sarbu]
+
 # v2.45.1+rev1
 ## (2019-11-24)
 
