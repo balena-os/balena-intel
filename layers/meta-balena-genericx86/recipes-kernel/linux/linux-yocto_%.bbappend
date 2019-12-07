@@ -1,6 +1,6 @@
 inherit kernel-resin
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
+FILESEXTRAPATHS_prepend := "${THISDIR}/files:${THISDIR}/${MACHINE}:"
 
 SRC_URI += " \
     file://0001-Add-support-for-Quectel-EC20-modem.patch \
@@ -10,6 +10,10 @@ SRC_URI += " \
 "
 SRC_URI_append_surface-pro-6 = " \
     file://0003-ipts.patch \
+"
+
+SRC_URI_append_genericx86-64-ext = " \
+    file://defconfig \
 "
 
 do_kernel_configme[depends] += "virtual/${TARGET_PREFIX}binutils:do_populate_sysroot"
@@ -371,3 +375,11 @@ RESIN_CONFIGS_append_genericx86-64 = " i40e"
 RESIN_CONFIGS[i40e] = " \
     CONFIG_I40E=m \
 "
+
+#
+# Do not include debugging info in kernel and modules
+#
+RESIN_CONFIGS_append_genericx86-64-ext = " no-debug-info"
+RESIN_CONFIGS[no-debug-info] ?= " \
+    CONFIG_DEBUG_INFO=n \
+    "
