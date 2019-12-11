@@ -1,4 +1,27 @@
 - commits:
+    - subject: >-
+        Update poky to latest warrior branch
+        (b021992106c6b5ba02b825afa7dcc422b135b59b)
+      hash: 3845cb7df2eb3e78df1f2d32006ca1be3965ffeb
+      body: |
+        We add the latest warrior branch in order to include a fix for
+        reboot or shutdown delay due to a systemd service misconfiguration.
+        (the commit that fixes this is 95632e679df13fd5a45725e3752c49986ed2fe73)
+      footer:
+        Backport-to: next
+        backport-to: next
+        Changelog-entry: >-
+          Update poky to latest warrior branch
+          (b021992106c6b5ba02b825afa7dcc422b135b59b)
+        changelog-entry: >-
+          Update poky to latest warrior branch
+          (b021992106c6b5ba02b825afa7dcc422b135b59b)
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2019.10.3
+  date: 2019-12-11T06:13:47.778Z
+- commits:
     - subject: Update balena yocto scripts to 1.5.2
       hash: e4bdcd6a6382e5062fbe709c03ac828f272b8790
       body: ''

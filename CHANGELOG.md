@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2019.10.3
+## (2019-12-11)
+
+* Update poky to latest warrior branch (b021992106c6b5ba02b825afa7dcc422b135b59b) [Florin Sarbu]
+
 # v2019.10.2
 ## (2019-12-04)
 
