@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.45.1+rev3
+## (2019-12-13)
+
+* Enable the xillybus pcie driver for the genericx86-64 machine [Florin Sarbu]
+
 # v2.45.1+rev2
 ## (2019-12-05)
 

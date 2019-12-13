@@ -1,4 +1,16 @@
 - commits:
+    - subject: Enable the xillybus pcie driver for the genericx86-64 machine
+      hash: 22506b8025d3c3d2e024e88f30bcace1083f7cc3
+      body: ''
+      footer:
+        Changelog-entry: Enable the xillybus pcie driver for the genericx86-64 machine
+        changelog-entry: Enable the xillybus pcie driver for the genericx86-64 machine
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.45.1+rev3
+  date: 2019-12-13T13:54:27.558Z
+- commits:
     - subject: Enable the ixgbe driver for the genericx86-64 machine
       hash: 5d311561dc9f5fa401156a879e4afc65c7f314ba
       body: ''
