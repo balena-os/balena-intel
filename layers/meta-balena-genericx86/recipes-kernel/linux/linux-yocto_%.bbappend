@@ -358,3 +358,10 @@ RESIN_CONFIGS_append_genericx86-64 = " ixgbe"
 RESIN_CONFIGS[ixgbe] = " \
     CONFIG_IXGBE=m \
 "
+
+# requested by customer
+RESIN_CONFIGS_append_genericx86-64 = " xillybus"
+RESIN_CONFIGS[xillybus] = " \
+    CONFIG_XILLYBUS=m \
+    CONFIG_XILLYBUS_PCIE=m \
+"
