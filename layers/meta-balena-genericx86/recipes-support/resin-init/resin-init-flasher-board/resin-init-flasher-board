@@ -32,7 +32,7 @@ for d in $INTERNAL_DEVICE_KERNEL; do
         echo "[resin-init-flasher-board] $d is our install media, skip it..."
         continue
     fi
-    if [ -b "/dev/$d" ]; then
+    if fdisk -l | grep -q "$d"; then
         internal_dev=$d
         break
     fi
