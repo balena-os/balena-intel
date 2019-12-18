@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.45.1+rev4
+## (2019-12-18)
+
+* Tweak how the flasher asserts that internal media is valid for being installed UEFI grub on [Florin Sarbu]
+
 # v2.45.1+rev3
 ## (2019-12-13)
 

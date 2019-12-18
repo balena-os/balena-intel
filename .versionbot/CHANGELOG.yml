@@ -1,4 +1,28 @@
 - commits:
+    - subject: >-
+        Tweak how the flasher asserts that internal media is valid for being
+        installed UEFI grub on
+      hash: 62db8c419bbff0f0ae80385777df9e7e1fb44ceb
+      body: |
+        When installing UEFI grub, it is better to use fdisk to check that
+        an internal media is a suitable block device rather than using
+        the shell internal block testing feature. This is because there
+        is at least a case when the kernel lists an ASMT 2115 controller
+        as /dev/sda but that is not an actual drive so it cannot be
+        written to and the flashing procedure will error out.
+      footer:
+        Changelog-entry: >-
+          Tweak how the flasher asserts that internal media is valid for being
+          installed UEFI grub on
+        changelog-entry: >-
+          Tweak how the flasher asserts that internal media is valid for being
+          installed UEFI grub on
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.45.1+rev4
+  date: 2019-12-18T09:56:56.544Z
+- commits:
     - subject: Enable the xillybus pcie driver for the genericx86-64 machine
       hash: 22506b8025d3c3d2e024e88f30bcace1083f7cc3
       body: ''
