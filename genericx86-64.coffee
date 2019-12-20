@@ -35,9 +35,9 @@ module.exports =
 	].concat(postProvisioningInstructions)
 
 	gettingStartedLink:
-		windows: 'http://docs.resin.io/nuc/nodejs/getting-started/#adding-your-first-device'
-		osx: 'http://docs.resin.io/nuc/nodejs/getting-started/#adding-your-first-device'
-		linux: 'http://docs.resin.io/nuc/nodejs/getting-started/#adding-your-first-device'
+		windows: 'https://www.balena.io/docs/learn/getting-started/intel-nuc/nodejs/'
+		osx: 'https://www.balena.io/docs/learn/getting-started/intel-nuc/nodejs/'
+		linux: 'https://www.balena.io/docs/learn/getting-started/intel-nuc/nodejs/'
 
 	yocto:
 		machine: 'genericx86-64'
