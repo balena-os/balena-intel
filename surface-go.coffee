@@ -18,7 +18,7 @@ module.exports =
 	slug: 'surface-go'
 	name: 'Microsoft Surface Go'
 	arch: 'amd64'
-	state: 'experimental'
+	state: 'new'
 
 	stateInstructions:
 		postProvisioning: postProvisioningInstructions
