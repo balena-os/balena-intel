@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.46.0+rev2
+## (2020-01-22)
+
+* Remove the usb-modeswitch patch that fixes crashes on 64 bits architectures [Florin Sarbu]
+
 # v2.46.0+rev1
 ## (2019-12-23)
 
