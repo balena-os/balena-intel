@@ -1,4 +1,18 @@
 - commits:
+    - subject: Change the state to 'new' in the coffee files
+      hash: c48837cdf074fcd395cf10a2219cdcd1c6996e4a
+      body: |
+        Change the state field to 'new'
+        instead of 'experimental'
+      footer:
+        Changelog-entry: Change the state to 'new' in the coffee files
+        changelog-entry: Change the state to 'new' in the coffee files
+        Signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+        signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+      author: Vicentiu Galanopulo
+  version: 2.46.0+rev4
+  date: 2020-01-28T15:21:41.545Z
+- commits:
     - subject: Enable the i40e kernel driver for the genericx86-64 machine
       hash: eff0ee17468274960b321b38acf7a1cc9042c614
       body: |
