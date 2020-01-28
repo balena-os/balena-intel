@@ -1,4 +1,21 @@
 - commits:
+    - subject: Add linux-firmware-iwlwifi-3168 to support wifi adapters for older NUCs
+      hash: 15903c9ddcdb470639712e3b2ac129ab357eb3b7
+      body: |
+        This is added to support wifi adapters for older NUCs
+      footer:
+        Changelog-entry: >-
+          Add linux-firmware-iwlwifi-3168 to support wifi adapters for older
+          NUCs
+        changelog-entry: >-
+          Add linux-firmware-iwlwifi-3168 to support wifi adapters for older
+          NUCs
+        Signed-off-by: Pagan Gazzard <page@balena.io>
+        signed-off-by: Pagan Gazzard <page@balena.io>
+      author: Pagan Gazzard
+  version: 2.46.0+rev5
+  date: 2020-01-28T20:47:42.479Z
+- commits:
     - subject: Change the state to 'new' in the coffee files
       hash: c48837cdf074fcd395cf10a2219cdcd1c6996e4a
       body: |

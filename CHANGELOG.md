@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.46.0+rev5
+## (2020-01-28)
+
+* Add linux-firmware-iwlwifi-3168 to support wifi adapters for older NUCs [Pagan Gazzard]
+
 # v2.46.0+rev4
 ## (2020-01-28)
 
