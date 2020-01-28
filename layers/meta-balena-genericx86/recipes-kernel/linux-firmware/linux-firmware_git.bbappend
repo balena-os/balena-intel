@@ -73,6 +73,11 @@ FILES_${PN}-ipts-v102 = " \
     ${nonarch_base_libdir}/firmware/intel/ipts/* \
 "
 
+PACKAGES =+ "${PN}-iwlwifi-3168"
+FILES_${PN}-iwlwifi-3168 = " \
+    ${nonarch_base_libdir}/firmware/iwlwifi-3168-* \
+"
+
 do_install_append() {
     install -d ${D}${nonarch_base_libdir}/firmware/brcm/
     install -m 0644 ${WORKDIR}/raspbian-nf/brcm/brcmfmac43455-sdio.txt ${D}${nonarch_base_libdir}/firmware/brcm/

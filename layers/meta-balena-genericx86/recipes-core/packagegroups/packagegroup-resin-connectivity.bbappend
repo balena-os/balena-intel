@@ -6,6 +6,7 @@ CONNECTIVITY_FIRMWARES =+ " \
 	linux-firmware-ibt-18-16-1 \
 	linux-firmware-ibt-hw-37-7 \
 	linux-firmware-ibt-hw-37-8 \
+	linux-firmware-iwlwifi-3168 \
 	linux-firmware-iwlwifi-9000 \
 	linux-firmware-pcie8897 \
 	linux-firmware-rtl8723 \
