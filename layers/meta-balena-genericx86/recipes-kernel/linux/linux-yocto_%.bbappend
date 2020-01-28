@@ -365,3 +365,9 @@ RESIN_CONFIGS[xillybus] = " \
     CONFIG_XILLYBUS=m \
     CONFIG_XILLYBUS_PCIE=m \
 "
+
+# requested by customer
+RESIN_CONFIGS_append_genericx86-64 = " i40e"
+RESIN_CONFIGS[i40e] = " \
+    CONFIG_I40E=m \
+"
