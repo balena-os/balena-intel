@@ -18,7 +18,7 @@ module.exports =
 	slug: 'surface-pro-6'
 	name: 'Microsoft Surface 6'
 	arch: 'amd64'
-	state: 'experimental'
+	state: 'new'
 
 	stateInstructions:
 		postProvisioning: postProvisioningInstructions
