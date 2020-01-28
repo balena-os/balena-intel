@@ -1,4 +1,17 @@
 - commits:
+    - subject: Enable the i40e kernel driver for the genericx86-64 machine
+      hash: eff0ee17468274960b321b38acf7a1cc9042c614
+      body: |
+        Requested by customer for the genericx86-64 machine
+      footer:
+        Changelog-entry: Enable the i40e kernel driver for the genericx86-64 machine
+        changelog-entry: Enable the i40e kernel driver for the genericx86-64 machine
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.46.0+rev3
+  date: 2020-01-28T15:09:27.122Z
+- commits:
     - subject: >-
         Remove the usb-modeswitch patch that fixes crashes on 64 bits
         architectures

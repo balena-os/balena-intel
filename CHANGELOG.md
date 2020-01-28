@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.46.0+rev3
+## (2020-01-28)
+
+* Enable the i40e kernel driver for the genericx86-64 machine [Florin Sarbu]
+
 # v2.46.0+rev2
 ## (2020-01-22)
 
