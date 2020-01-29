@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update links to getting started guide from resin.io to balena.io
+      hash: 338fdb3441412b278839178ec638df3ff325cbde
+      body: ''
+      footer:
+        Changelog-entry: Update links to getting started guide from resin.io to balena.io
+        changelog-entry: Update links to getting started guide from resin.io to balena.io
+        Signed-off-by: Gareth Davies <gareth@balena.io>
+        signed-off-by: Gareth Davies <gareth@balena.io>
+      author: Gareth Davies
+  version: 2.46.0+rev6
+  date: 2020-01-29T11:46:09.328Z
+- commits:
     - subject: Add linux-firmware-iwlwifi-3168 to support wifi adapters for older NUCs
       hash: 15903c9ddcdb470639712e3b2ac129ab357eb3b7
       body: |
