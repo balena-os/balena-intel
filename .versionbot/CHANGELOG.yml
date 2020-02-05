@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update meta-rust to include 1.36
+      hash: 3924c76d6dd4466b3d8cc6be7d9b02e36d8ac606
+      body: ''
+      footer:
+        Changelog-entry: Update meta-rust to include 1.36
+        changelog-entry: Update meta-rust to include 1.36
+        Signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+        signed-off-by: Zubair Lutfullah Kakakhel <zubair@balena.io>
+      author: Zubair Lutfullah Kakakhel
+  version: 2.47.0+rev2
+  date: 2020-02-04T14:43:16.021Z
+- commits:
     - subject: Update meta-balena from v2.46.0 to v2.47.0
       hash: 24d906307185a93888bb7f9c935f882133596817
       body: |
