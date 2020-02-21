@@ -78,6 +78,13 @@ FILES_${PN}-iwlwifi-3168 = " \
     ${nonarch_base_libdir}/firmware/iwlwifi-3168-* \
 "
 
+PACKAGES =+ "${PN}-iwlwifi-9260"
+FILES_${PN}-iwlwifi-9260 = " \
+    ${nonarch_base_libdir}/firmware/iwlwifi-9260-* \
+    "
+LICENSE_${PN}-iwlwifi-9260      = "Firmware-iwlwifi_firmware"
+RDEPENDS_${PN}-iwlwifi-9260      = "${PN}-iwlwifi-license"
+
 do_install_append() {
     install -d ${D}${nonarch_base_libdir}/firmware/brcm/
     install -m 0644 ${WORKDIR}/raspbian-nf/brcm/brcmfmac43455-sdio.txt ${D}${nonarch_base_libdir}/firmware/brcm/
