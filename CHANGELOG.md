@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v2.47.1+rev1
+## (2020-02-21)
+
+* Update balena-yocto-scripts to v1.5.4 [Vicentiu Galanopulo]
+* Update meta-balena from 2.47.0 to 2.47.1 [Vicentiu Galanopulo]
+
 # v2.47.0+rev3
 ## (2020-02-10)
 

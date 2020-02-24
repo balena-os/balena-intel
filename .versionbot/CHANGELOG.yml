@@ -1,4 +1,26 @@
 - commits:
+    - subject: Update balena-yocto-scripts to v1.5.4
+      hash: af63441056031d9457b66c4eb7dd05b85d94c6f4
+      body: ''
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to v1.5.4
+        changelog-entry: Update balena-yocto-scripts to v1.5.4
+        Signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+        signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+      author: Vicentiu Galanopulo
+    - subject: Update meta-balena from 2.47.0 to 2.47.1
+      hash: 52d113de4f92254fdc53059002ac8764e2e26c96
+      body: |
+        Update meta-balena from to 2.47.0 to 2.47.1
+      footer:
+        Changelog-entry: Update meta-balena from 2.47.0 to 2.47.1
+        changelog-entry: Update meta-balena from 2.47.0 to 2.47.1
+        Signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+        signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+      author: Vicentiu Galanopulo
+  version: 2.47.1+rev1
+  date: 2020-02-21T16:42:15.464Z
+- commits:
     - subject: Update meta-rust to include 1.36
       hash: 5dbc1f4201d3930db300f9754db801b7009ad31f
       body: ''
