@@ -4,10 +4,11 @@ default=boot
 insmod ext2
 insmod test
 insmod loadenv
+insmod regexp
+insmod probe
 timeout=@@TIMEOUT@@
 resin_root_part=2
 upgrade_available=0
-grub_cmdline=""
 
 load_env
 
@@ -22,52 +23,44 @@ if [ ${upgrade_available} = 1 ] ; then
  fi
 fi
 
-# Append to grub_cmdline the UUID value for all the OS partitions. These UUIDs
-# are stored on the boot partition (/os_fs_uuids.txt). This file contains a
-# line for each partition UUID. For example: "uuid_boot=FFFF-FFFF".
-# Also, the assumed label to kernel parameter mapping is:
-#   resin-boot -> uuid_boot
-#   resin_rootA -> uuid_roota
-#   resin_rootB -> uuid_rootb
-#   resin_state -> uuid_state
-#   resin_data -> uuid_data
-search --set=boot --label resin-boot
-source (${boot})/os_fs_uuids.txt
-if [ x${uuid_boot} != x ]; then
- # If one is available we assume all the rest are as well.
- grub_cmdline="${grub_cmdline} uuid_boot=${uuid_boot}"
- grub_cmdline="${grub_cmdline} uuid_roota=${uuid_roota}"
- grub_cmdline="${grub_cmdline} uuid_rootb=${uuid_rootb}"
- grub_cmdline="${grub_cmdline} uuid_state=${uuid_state}"
- grub_cmdline="${grub_cmdline} uuid_data=${uuid_data}"
-fi
+function get_root_uuid {
+ # Extract drive and partition type from boot drive in grub format
+ regexp -s 1:bdrive -s 2:pscheme '^(hd.*),(msdos|gpt).*' $root
+ # Parse boot drive partitions looking for specific label
+ for part in 1 2 3 4 5 6 7 8 9 10; do
+  probe --set rlabel --label (${bdrive},${pscheme}${part})
+  # On label match, extract filesystem UUID and set this partition as new root
+  if test $rlabel == "$1"; then
+   probe --set root_uuid --fs-uuid (${bdrive},${pscheme}${part})
+   search --set root --fs-uuid ${root_uuid}
+   return
+  fi
+ done
+}
 
 menuentry 'boot'{
 if [ ${bootcount} = 2 ] ; then
  if [ ${resin_root_part} = 2 ] ; then
-  search --set=root --label resin-rootB
-  linux /boot/bzImage root=LABEL=resin-rootB @@KERNEL_CMDLINE@@ ${grub_cmdline}
+  get_root_uuid "resin-rootB"
  else
-  search --set=root --label resin-rootA
-  linux /boot/bzImage root=LABEL=resin-rootA @@KERNEL_CMDLINE@@ ${grub_cmdline}
+  get_root_uuid "resin-rootA"
  fi
 else
  if [ ${resin_root_part} = 2 ] ; then
-  search --set=root --label resin-rootA
-  linux /boot/bzImage root=LABEL=resin-rootA @@KERNEL_CMDLINE@@ ${grub_cmdline}
+  get_root_uuid "resin-rootA"
  else
-  search --set=root --label resin-rootB
-  linux /boot/bzImage root=LABEL=resin-rootB @@KERNEL_CMDLINE@@ ${grub_cmdline}
+  get_root_uuid "resin-rootB"
  fi
 fi
+linux /boot/bzImage root=UUID=${root_uuid} @@KERNEL_CMDLINE@@
 }
 
 menuentry 'manualfallbackA' {
-search --set=root --label resin-rootA
-linux /boot/bzImage root=LABEL=resin-rootA @@KERNEL_CMDLINE@@ ${grub_cmdline}
+  get_root_uuid "resin-rootA"
+  linux /boot/bzImage root=UUID=${root_uuid} @@KERNEL_CMDLINE@@
 }
 
 menuentry 'manualfallbackB' {
-search --set=root --label resin-rootB
-linux /boot/bzImage root=LABEL=resin-rootB @@KERNEL_CMDLINE@@ ${grub_cmdline}
+  get_root_uuid "resin-rootB"
+  linux /boot/bzImage root=UUID=${root_uuid} @@KERNEL_CMDLINE@@
 }
