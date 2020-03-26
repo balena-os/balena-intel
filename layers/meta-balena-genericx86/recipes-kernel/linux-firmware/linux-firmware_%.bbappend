@@ -28,35 +28,8 @@ SRC_URI_append = " \
 SRCREV_raspbian-nf = "86e88fbf0345da49555d0ec34c80b4fbae7d0cd3"
 SRCREV_FORMAT = "default+raspbian-nf"
 
-PACKAGES =+ "${PN}-rtl8723b-bt"
-
-FILES_${PN}-rtl8723b-bt = " \
-    /lib/firmware/rtl_bt/rtl8723b_fw.bin \
-    "
-
-PACKAGES =+ "${PN}-ralink-nic"
-
-FILES_${PN}-ralink-nic = " \
-    /lib/firmware/rtl_nic/rtl8168g-2.fw \
-"
-
 FILES_${PN}-bcm43455 = " \
   ${nonarch_base_libdir}/firmware/brcm/brcmfmac43455-sdio.* \
-"
-
-PACKAGES =+ "${PN}-ibt-18-16-1"
-
-FILES_${PN}-ibt-18-16-1  = " \
-    ${nonarch_base_libdir}/firmware/intel/ibt-18-16-1.sfi \
-    ${nonarch_base_libdir}/firmware/intel/ibt-18-16-1.ddc \
-"
-
-PACKAGES =+ "${PN}-ath10k-qca6174"
-
-FILES_${PN}-ath10k-qca6174= " \
-    ${nonarch_base_libdir}/firmware/ath10k/QCA6174/hw3.0/board-2.bin \
-    ${nonarch_base_libdir}/firmware/ath10k/QCA6174/hw3.0/board.bin \
-    ${nonarch_base_libdir}/firmware/ath10k/QCA6174/hw3.0/firmware-6.bin \
 "
 
 PACKAGES =+ "${PN}-i915-kbl"
@@ -72,18 +45,6 @@ PACKAGES =+ "${PN}-ipts-v102"
 FILES_${PN}-ipts-v102 = " \
     ${nonarch_base_libdir}/firmware/intel/ipts/* \
 "
-
-PACKAGES =+ "${PN}-iwlwifi-3168"
-FILES_${PN}-iwlwifi-3168 = " \
-    ${nonarch_base_libdir}/firmware/iwlwifi-3168-* \
-"
-
-PACKAGES =+ "${PN}-iwlwifi-9260"
-FILES_${PN}-iwlwifi-9260 = " \
-    ${nonarch_base_libdir}/firmware/iwlwifi-9260-* \
-    "
-LICENSE_${PN}-iwlwifi-9260      = "Firmware-iwlwifi_firmware"
-RDEPENDS_${PN}-iwlwifi-9260      = "${PN}-iwlwifi-license"
 
 do_install_append() {
     install -d ${D}${nonarch_base_libdir}/firmware/brcm/
