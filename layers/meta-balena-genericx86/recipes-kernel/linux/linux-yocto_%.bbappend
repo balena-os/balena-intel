@@ -139,6 +139,14 @@ RESIN_CONFIGS[usb_audio]=" \
     CONFIG_SND_USB_AUDIO=m \
 "
 
+# Enable KVM virtualization support
+RESIN_CONFIGS_append = " kvm"
+RESIN_CONFIGS[kvm] = " \
+    CONFIG_KVM=m \
+    CONFIG_KVM_INTEL=m \
+    CONFIG_KVM_AMD=m \
+"
+
 # Enable WiFi adapters that use Realtek chipset (like Edimax EW-7811Un)
 RESIN_CONFIGS_append = " rtl_wifi"
 RESIN_CONFIGS[rtl_wifi]=" \
