@@ -1,4 +1,16 @@
 - commits:
+    - subject: Add firmware for Intel wifi chipset on NUC 10th gen
+      hash: 4c4360ed4842cb82eebd8a537fccb8ef575d1831
+      body: ''
+      footer:
+        Changelog-entry: Add firmware for Intel wifi chipset on NUC 10th gen
+        changelog-entry: Add firmware for Intel wifi chipset on NUC 10th gen
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.48.0+rev3
+  date: 2020-04-15T13:21:40.649Z
+- commits:
     - subject: Add genericx86-64-ext device type
       hash: cd04475ffc9ff0c8c9261ab0339eae31b00f19cd
       body: |

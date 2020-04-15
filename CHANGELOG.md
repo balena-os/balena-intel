@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.48.0+rev3
+## (2020-04-15)
+
+* Add firmware for Intel wifi chipset on NUC 10th gen [Florin Sarbu]
+
 # v2.48.0+rev2
 ## (2020-04-15)
 
