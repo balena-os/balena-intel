@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.48.0+rev2
+## (2020-04-15)
+
+* Add genericx86-64-ext device type [Alex Gonzalez]
+
 # v2.48.0+rev1
 ## (2020-03-26)
 

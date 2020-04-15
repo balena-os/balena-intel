@@ -1,4 +1,20 @@
 - commits:
+    - subject: Add genericx86-64-ext device type
+      hash: cd04475ffc9ff0c8c9261ab0339eae31b00f19cd
+      body: |
+        This new device type is based on the genericx86-64 machine family but
+        extends it to support a wider range of peripherals.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: Add genericx86-64-ext device type
+        changelog-entry: Add genericx86-64-ext device type
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+  version: 2.48.0+rev2
+  date: 2020-04-15T12:32:21.259Z
+- commits:
     - subject: >-
         Make the linux-firmware integration bbappend apply to all recipe
         versions
