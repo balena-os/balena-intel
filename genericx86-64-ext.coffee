@@ -3,7 +3,7 @@ deviceTypesCommon = require '@resin.io/device-types/common'
 
 GENERIC_FLASH = '''
 	Please make sure you do not have any other USB keys inserted.
-	Power up the <%= TYPE_NAME %>. Make sure you have a keyboard connected.
+	Power up the hardware. Make sure you have a keyboard connected.
 	Press the F10 key (may differ on some platforms) while BIOS is loading in order to enter the boot menu.
 	Next, select the name of your USB key.
 '''
