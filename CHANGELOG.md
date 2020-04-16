@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.48.0+rev4
+## (2020-04-16)
+
+* Reword flashing instructions for the Generic x86_64 machine [Florin Sarbu]
+
 # v2.48.0+rev3
 ## (2020-04-15)
 

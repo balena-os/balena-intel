@@ -1,4 +1,16 @@
 - commits:
+    - subject: Reword flashing instructions for the Generic x86_64 machine
+      hash: ec0eff5cc8ecee8e5472847e16276678c62e63b8
+      body: ''
+      footer:
+        Changelog-entry: Reword flashing instructions for the Generic x86_64 machine
+        changelog-entry: Reword flashing instructions for the Generic x86_64 machine
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.48.0+rev4
+  date: 2020-04-16T10:43:17.018Z
+- commits:
     - subject: Add firmware for Intel wifi chipset on NUC 10th gen
       hash: 4c4360ed4842cb82eebd8a537fccb8ef575d1831
       body: ''
