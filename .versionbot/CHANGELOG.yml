@@ -1,4 +1,20 @@
 - commits:
+    - subject: Extend resin-image to include all firmware
+      hash: 43d7f41ef9686703eeba33d73e58e0e0a64b0462
+      body: |
+        In order for this image to be as versatile as possible out of the box,
+        let's include all the linux firmware binaries.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: Extend resin-image to include all firmware
+        changelog-entry: Extend resin-image to include all firmware
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+  version: 2.48.0+rev5
+  date: 2020-04-16T14:53:41.767Z
+- commits:
     - subject: Reword flashing instructions for the Generic x86_64 machine
       hash: ec0eff5cc8ecee8e5472847e16276678c62e63b8
       body: ''

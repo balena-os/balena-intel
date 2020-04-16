@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.48.0+rev5
+## (2020-04-16)
+
+* Extend resin-image to include all firmware [Alex Gonzalez]
+
 # v2.48.0+rev4
 ## (2020-04-16)
 
