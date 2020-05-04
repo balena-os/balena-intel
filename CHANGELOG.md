@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.48.0+rev6
+## (2020-05-04)
+
+* Extend the number of built-in drivers in genericx86-64-ext device for flasher images to use [Alex Gonzalez]
+
 # v2.48.0+rev5
 ## (2020-04-16)
 

@@ -1,4 +1,26 @@
 - commits:
+    - subject: >-
+        Extend the number of built-in drivers in genericx86-64-ext device for
+        flasher images to use
+      hash: 8e3394fa699dd1eeb9a24fa7e1b610fcd1badfad
+      body: |
+        This commit extends the number of built-in drivers to enhance the
+        flasher image so that it can install into a wider variety of devices.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: >-
+          Extend the number of built-in drivers in genericx86-64-ext device for
+          flasher images to use
+        changelog-entry: >-
+          Extend the number of built-in drivers in genericx86-64-ext device for
+          flasher images to use
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+  version: 2.48.0+rev6
+  date: 2020-05-04T11:55:42.562Z
+- commits:
     - subject: Extend resin-image to include all firmware
       hash: 43d7f41ef9686703eeba33d73e58e0e0a64b0462
       body: |
