@@ -23,6 +23,7 @@ module.exports =
 	name: 'Generic x86_64'
 	arch: 'amd64'
 	state: 'new'
+	private: false
 
 	stateInstructions:
 		postProvisioning: postProvisioningInstructions

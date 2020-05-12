@@ -23,6 +23,7 @@ module.exports =
 	name: 'Intel NUC'
 	arch: 'amd64'
 	state: 'released'
+	private: false
 
 	stateInstructions:
 		postProvisioning: postProvisioningInstructions
