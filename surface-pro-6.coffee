@@ -19,6 +19,7 @@ module.exports =
 	name: 'Microsoft Surface 6'
 	arch: 'amd64'
 	state: 'new'
+	private: false
 
 	stateInstructions:
 		postProvisioning: postProvisioningInstructions
