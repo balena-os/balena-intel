@@ -1,4 +1,16 @@
 - commits:
+    - subject: Set private to false in .coffee files for the public device types
+      hash: e8ebd3fac7714e7ef20ac7915f4e7aa56d774c65
+      body: ''
+      footer:
+        Changelog-entry: Set private to false in .coffee files for the public device types
+        changelog-entry: Set private to false in .coffee files for the public device types
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.48.0+rev7
+  date: 2020-05-12T08:33:58.725Z
+- commits:
     - subject: >-
         Extend the number of built-in drivers in genericx86-64-ext device for
         flasher images to use
