@@ -13,6 +13,7 @@ SRC_URI_append_surface-pro-6 = " \
 "
 
 SRC_URI_append_genericx86-64-ext = " \
+    file://0001-ovl-fix-regression-caused-by-overlapping-layers-dete.patch \
     file://defconfig \
 "
 
