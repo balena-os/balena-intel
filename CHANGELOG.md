@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.48.0+rev8
+## (2020-05-13)
+
+* Backport the "ovl: fix regression caused by overlapping layers detection" patch for the genericx86-64-ext machine [Florin Sarbu]
+
 # v2.48.0+rev7
 ## (2020-05-12)
 

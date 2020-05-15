@@ -1,4 +1,23 @@
 - commits:
+    - subject: >-
+        Backport the "ovl: fix regression caused by overlapping layers
+        detection" patch for the genericx86-64-ext machine
+      hash: 655bd0691330982f41bc891752b7a0755be6bd32
+      body: |
+        We backport at this point only for the genericx86-64-ext machine
+      footer:
+        Changelog-entry: >-
+          Backport the "ovl: fix regression caused by overlapping layers
+          detection" patch for the genericx86-64-ext machine
+        changelog-entry: >-
+          Backport the "ovl: fix regression caused by overlapping layers
+          detection" patch for the genericx86-64-ext machine
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.48.0+rev8
+  date: 2020-05-13T09:20:23.386Z
+- commits:
     - subject: Set private to false in .coffee files for the public device types
       hash: e8ebd3fac7714e7ef20ac7915f4e7aa56d774c65
       body: ''
