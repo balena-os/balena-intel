@@ -14,6 +14,7 @@ RESIN_BOOT_PARTITION_FILES = " \
     grub-efi-bootx64.efi:/EFI/BOOT/bootx64.efi \
     grub:/grub/ \
     grub/i386-pc:/grub/i386-pc/ \
+    grub/x86_64-efi:/EFI/BOOT/x86_64-efi/ \
     grubenv:/grub/grubenv \
     grubenv:/EFI/BOOT/grubenv \
     "
