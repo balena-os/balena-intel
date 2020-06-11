@@ -1,6 +1,8 @@
 # Supported machines
 #MACHINE ?= "genericx86-64"
 #MACHINE ?= "genericx86-64-ext"
+#MACHINE ?= "smartcube-kbox-a150"
+#MACHINE ?= "smartcube-kbox-a250"
 #MACHINE ?= "surface-go"
 #MACHINE ?= "surface-pro-6"
 
