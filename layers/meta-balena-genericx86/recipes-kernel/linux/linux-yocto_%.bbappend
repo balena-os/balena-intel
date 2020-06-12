@@ -1,6 +1,6 @@
 inherit kernel-resin
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/files:${THISDIR}/${MACHINE}:"
+FILESEXTRAPATHS_prepend := "${THISDIR}/files:${THISDIR}/genericx86-64-ext:"
 
 SRC_URI += " \
     file://0001-Add-support-for-Quectel-EC20-modem.patch \
