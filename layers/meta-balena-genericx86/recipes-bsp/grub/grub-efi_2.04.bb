@@ -39,17 +39,25 @@ inherit deploy
 
 CACHED_CONFIGUREVARS += "ac_cv_path_HELP2MAN="
 EXTRA_OECONF += "--enable-efiemu=no"
+GRUB_BUILDIN ?= "boot linux ext2 fat serial part_msdos part_gpt normal \
+                 efi_gop iso9660 configfile search loadenv test"
+GRUB_BUILDIN += " gcry_sha512 gcry_rsa"
 
 do_mkimage() {
 	cd ${B}
+
+	if [ "x${SIGN_API}" = "x" ]; then
+		GRUB_PUBKEY_ARG="--pubkey "${B}/pubkey.gpg""
+	fi
+
 	# Search for the grub.cfg on the local boot media by using the
 	# built in cfg file provided via this recipe
 	grub-mkimage -c ../cfg -p ${EFIDIR} -d ./grub-core/ \
 	               -O ${GRUB_TARGET}-efi -o ./${GRUB_IMAGE_PREFIX}${GRUB_IMAGE} \
-	               ${GRUB_BUILDIN}
+	               ${GRUB_BUILDIN} ${GRUB_PUBKEY_ARG}
 }
 
-addtask mkimage before do_install after do_compile
+addtask mkimage before do_install after do_sign
 
 do_mkimage_class-native() {
 	:
@@ -58,6 +66,7 @@ do_mkimage_class-native() {
 do_install_append_class-target() {
 	install -d ${D}${EFI_FILES_PATH}
 	install -m 644 ${B}/${GRUB_IMAGE_PREFIX}${GRUB_IMAGE} ${D}${EFI_FILES_PATH}/${GRUB_IMAGE}
+	find "${B}" -name "*.mod.sig" -exec install -m 0644 {} "${D}/${libdir}/grub/${GRUB_TARGET}-efi/" \;
 }
 
 do_install_class-native() {
@@ -82,9 +91,6 @@ do_install_append_aarch64() {
     rm -rf  ${D}/${prefix}/
 }
 
-GRUB_BUILDIN ?= "boot linux ext2 fat serial part_msdos part_gpt normal \
-                 efi_gop iso9660 configfile search loadenv test"
-
 do_deploy() {
 	install -m 644 ${B}/${GRUB_IMAGE_PREFIX}${GRUB_IMAGE} ${DEPLOYDIR}
 }
@@ -94,6 +100,29 @@ do_deploy_class-native() {
 }
 
 addtask deploy after do_install before do_build
+
+do_sign_efi() {
+	if [ "x${SIGN_API}" = "x" ]; then
+		return 0
+	fi
+	SIGN_EFI_KEY_ID="balenaos"
+
+	EFI_APP="${B}/${GRUB_IMAGE_PREFIX}${GRUB_IMAGE}"
+	REQUEST_FILE=$(mktemp)
+	RESPONSE_FILE=$(mktemp)
+	echo "{\"key_id\": \"${SIGN_EFI_KEY_ID}\", \"payload\": \"$(/usr/bin/base64 -w 0 ${EFI_APP})\"}" > "${REQUEST_FILE}"
+	/usr/bin/curl --fail "${SIGN_API}/secureboot/sign" -X POST -H "Content-Type: application/json" -d "@${REQUEST_FILE}" > "${RESPONSE_FILE}"
+	/usr/bin/jq -r .signed < "${RESPONSE_FILE}" | /usr/bin/base64 -d > "${EFI_APP}.signed"
+	rm -f "${REQUEST_FILE}" "${RESPONSE_FILE}"
+
+	mv "${EFI_APP}.signed" "${EFI_APP}"
+}
+
+do_sign_efi_class-native() {
+	:
+}
+
+addtask sign_efi after do_mkimage before do_install
 
 FILES_${PN} = "${libdir}/grub/${GRUB_TARGET}-efi \
                ${datadir}/grub \

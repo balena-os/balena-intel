@@ -65,6 +65,42 @@ do_configure_prepend() {
 	cd ${B}
 }
 
+do_sign_class-target() {
+    if [ "x${SIGN_API}" = "x" ]; then
+        return 0
+    fi
+    SIGN_GRUB_KEY_ID="66EDD781D72CE409CDE823392244F835254BB920"
+
+    # Get public key for mkimage
+    RESPONSE_FILE=$(mktemp)
+    PUBKEY_FILE="${B}/pubkey.gpg"
+    /usr/bin/curl --fail "${SIGN_API}/gpg/key/${SIGN_GRUB_KEY_ID}" > "${RESPONSE_FILE}"
+    /usr/bin/jq -r ".key" < "${RESPONSE_FILE}" | gpg --dearmor > "${PUBKEY_FILE}"
+    rm -f "${RESPONSE_FILE}"
+
+    # Sign grub modules
+    TO_SIGN=$(mktemp)
+    find "${B}/grub-core/" -name "*.mod" -type f > "${TO_SIGN}"
+
+    for FILE_TO_SIGN in $(cat "${TO_SIGN}")
+    do
+        REQUEST_FILE=$(mktemp)
+        RESPONSE_FILE=$(mktemp)
+        echo "{\"key_id\": \"${SIGN_GRUB_KEY_ID}\", \"payload\": \"$(/usr/bin/base64 -w 0 ${FILE_TO_SIGN})\"}" > "${REQUEST_FILE}"
+        /usr/bin/curl --fail "${SIGN_API}/gpg/sign" -X POST -H "Content-Type: application/json" -d "@${REQUEST_FILE}" > "${RESPONSE_FILE}"
+        /usr/bin/jq -r .signature < "${RESPONSE_FILE}" | /usr/bin/base64 -d > "${FILE_TO_SIGN}.sig"
+        rm -f "${REQUEST_FILE}" "${RESPONSE_FILE}"
+    done
+
+    rm -f "${TO_SIGN}"
+}
+
+do_sign() {
+    :
+}
+
 RDEPENDS_${PN}_class-native = ""
 
 BBCLASSEXTEND = "native"
+
+addtask sign before do_install after do_compile

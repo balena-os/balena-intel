@@ -29,5 +29,9 @@ do_install_append () {
         {} +
 }
 
+do_install_append_class-target() {
+    find "${B}" -name "*.mod.sig" -exec install -m 0644 {} "${D}/${libdir}/grub/${GRUB_TARGET}/" \;
+}
+
 INSANE_SKIP_${PN} = "arch"
 INSANE_SKIP_${PN}-dbg = "arch"
