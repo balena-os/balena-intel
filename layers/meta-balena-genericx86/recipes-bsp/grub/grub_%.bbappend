@@ -32,6 +32,10 @@ do_deploy() {
     :
 }
 
+do_install_append() {
+    rm -rf ${D}/boot
+}
+
 BBCLASSEXTEND = "native"
 
 addtask do_deploy before do_package after do_install
