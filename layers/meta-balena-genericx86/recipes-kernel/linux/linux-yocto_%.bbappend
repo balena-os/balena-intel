@@ -1,6 +1,6 @@
 inherit kernel-resin
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/files:${THISDIR}/${MACHINE}:"
+FILESEXTRAPATHS_prepend := "${THISDIR}/files:${THISDIR}/genericx86-64-ext:"
 
 SRC_URI += " \
     file://0001-Add-support-for-Quectel-EC20-modem.patch \
@@ -20,6 +20,8 @@ SRC_URI_append_genericx86-64-ext = " \
 do_kernel_configme[depends] += "virtual/${TARGET_PREFIX}binutils:do_populate_sysroot"
 do_kernel_configme[depends] += "virtual/${TARGET_PREFIX}gcc:do_populate_sysroot"
 do_kernel_configme[depends] += "bc-native:do_populate_sysroot bison-native:do_populate_sysroot"
+
+COMPATIBLE_MACHINE_smartcube-kbox-a250 = "smartcube-kbox-a250"
 
 #
 # EHCI drivers
