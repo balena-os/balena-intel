@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v2.51.1+rev2
+## (2020-06-19)
+
+* Add the smartcube-kbox-a250 machine [Florin Sarbu]
+* Add the smartcube-kbox-a150 machine [Florin Sarbu]
+
 # v2.51.1+rev1
 ## (2020-06-05)
 

@@ -1,4 +1,26 @@
 - commits:
+    - subject: Add the smartcube-kbox-a250 machine
+      hash: dd67129347ff2728026d9f6b49d674406f52c1f0
+      body: ''
+      footer:
+        Changelog-entry: Add the smartcube-kbox-a250 machine
+        changelog-entry: Add the smartcube-kbox-a250 machine
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+    - subject: Add the smartcube-kbox-a150 machine
+      hash: 70ce349b3b05ffbdc86561431e6bf97eeea7b1a1
+      body: |
+        This is a new machine that will be using the realtime kernel
+      footer:
+        Changelog-entry: Add the smartcube-kbox-a150 machine
+        changelog-entry: Add the smartcube-kbox-a150 machine
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.51.1+rev2
+  date: 2020-06-19T09:09:11.877Z
+- commits:
     - subject: Update meta-balena from v2.50.1 to v2.51.1
       hash: 706bd6779fb782cc1f6ff8c4160510e55a1b7fdb
       body: |
