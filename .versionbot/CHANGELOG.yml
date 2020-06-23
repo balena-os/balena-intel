@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update balena-yocto-scripts to v1.8.0
+      hash: 9a6d2f618eccb7c9a00ad1322f99b4db72613e29
+      body: ''
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to v1.8.0
+        changelog-entry: Update balena-yocto-scripts to v1.8.0
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.51.1+rev3
+  date: 2020-06-23T16:19:11.007Z
+- commits:
     - subject: Add the smartcube-kbox-a250 machine
       hash: dd67129347ff2728026d9f6b49d674406f52c1f0
       body: ''
