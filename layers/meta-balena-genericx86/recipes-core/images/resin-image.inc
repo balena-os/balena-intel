@@ -17,6 +17,8 @@ RESIN_BOOT_PARTITION_FILES = " \
     grub/x86_64-efi:/EFI/BOOT/x86_64-efi/ \
     grubenv:/grub/grubenv \
     grubenv:/EFI/BOOT/grubenv \
+    grub_extraenv:/grub/grub_extraenv \
+    grub_extraenv:/EFI/BOOT/grub_extraenv \
     "
 
 write_mbr() {
