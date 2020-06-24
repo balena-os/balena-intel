@@ -1,6 +1,34 @@
 Change log
 -----------
 
+# v2.51.5+rev1
+## (2020-06-24)
+
+
+<details>
+<summary> Update meta-balena from v2.51.1 to v2.51.5 [Florin Sarbu] </summary>
+
+> ## meta-balena-2.51.5
+> ### (2020-06-18)
+> 
+> * Set chrony default servers as pools [Matthew McGinn]
+
+> ## meta-balena-2.51.4
+> ### (2020-06-15)
+> 
+> * Generate nested changelogs for balena-engine [Robert Günzler]
+
+> ## meta-balena-2.51.3
+> ### (2020-06-10)
+> 
+> * Revert allowing local resin-supervisor image updates [Alex Gonzalez]
+
+> ## meta-balena-2.51.2
+> ### (2020-06-08)
+> 
+> * Disable u-boot console, silence u-boot in production builds [Florin Sarbu]
+</details>
+
 # v2.51.1+rev4
 ## (2020-06-24)
 

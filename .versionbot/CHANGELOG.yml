@@ -1,4 +1,98 @@
 - commits:
+    - subject: Update meta-balena from v2.51.1 to v2.51.5
+      hash: 97ce0084243d10255f04dc7405db30bd04c86c02
+      body: |
+        Update meta-balena from 2.51.1 to 2.51.5
+      footer:
+        Changelog-entry: Update meta-balena from v2.51.1 to v2.51.5
+        changelog-entry: Update meta-balena from v2.51.1 to v2.51.5
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested:
+        - commits:
+            - subject: Set chrony default servers as pools
+              hash: 881e217ac1b1818237afb20312fd593259f44e2a
+              body: >
+                the `maxsources` directive is simply to maintain the current
+                behavior of
+
+                resolving four servers for synchronization. as noted in chrony's
+                docs:
+
+
+                > When a pool source is unreachable, marked as a falseticker, or
+                has a distance larger than the limit set by the maxdistance
+                directive, chronyd will try to replace the source with a newly
+                resolved address from the pool.
+              footer:
+                Connects-to: '#1852'
+                connects-to: '#1852'
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Set chrony default servers as pools
+                changelog-entry: Set chrony default servers as pools
+                Signed-off-by: Matthew McGinn <matthew@balena.io>
+                signed-off-by: Matthew McGinn <matthew@balena.io>
+              author: Matthew McGinn
+          version: meta-balena-2.51.5
+          date: 2020-06-18T14:02:47.372Z
+        - commits:
+            - subject: Generate nested changelogs for balena-engine
+              hash: 16b4760bfe6958bacf67b00100ac5f8fc37fe6bd
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Robert Günzler <robertg@balena.io>
+                signed-off-by: Robert Günzler <robertg@balena.io>
+              author: Robert Günzler
+          version: meta-balena-2.51.4
+          date: 2020-06-15T15:27:55.173Z
+        - commits:
+            - subject: Revert allowing local resin-supervisor image updates
+              hash: 1f689dbd57faf558dedf245462ed7c869a1aeb1a
+              body: >
+                The change this commit reverts allowed to update with a locally
+
+                available image - but it also has the side effect of restarting
+                the
+
+                supervisor even if no update is required and that has
+                unintentional
+
+                consequences as
+                https://github.com/balena-io/balena-supervisor/issues/1358
+
+
+                This commit reverts 646e4ae809375f4abf35c55cd580e2c62a8812e2
+              footer:
+                Changelog-entry: Revert allowing local resin-supervisor image updates
+                changelog-entry: Revert allowing local resin-supervisor image updates
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+          version: meta-balena-2.51.3
+          date: 2020-06-10T10:22:46.347Z
+        - commits:
+            - subject: 'Disable u-boot console, silence u-boot in production builds'
+              hash: 908590c49f7f4f89bfd1c2f8fdcaf8a0f3f3eceb
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: 'Disable u-boot console, silence u-boot in production builds'
+                changelog-entry: 'Disable u-boot console, silence u-boot in production builds'
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Florin Sarbu
+          version: meta-balena-2.51.2
+          date: 2020-06-08T15:34:26.850Z
+  version: 2.51.5+rev1
+  date: 2020-06-24T14:36:40.734Z
+- commits:
     - subject: >-
         Apply the overlay regression patch for all kernels and machines except
         for the Microsoft Surface Pro 6
