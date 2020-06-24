@@ -6,11 +6,13 @@ insmod test
 insmod loadenv
 insmod regexp
 insmod probe
+insmod configfile
 timeout=@@TIMEOUT@@
 resin_root_part=2
 upgrade_available=0
 
 load_env
+source /grub/grub_extraenv
 
 if [ ${upgrade_available} = 1 ] ; then
  if [ ${bootcount} = 1 ] ; then
@@ -52,15 +54,15 @@ else
   get_root_uuid "resin-rootB"
  fi
 fi
-linux /boot/bzImage root=UUID=${root_uuid} @@KERNEL_CMDLINE@@
+linux /boot/bzImage root=UUID=${root_uuid} @@KERNEL_CMDLINE@@ ${extra_os_cmdline}
 }
 
 menuentry 'manualfallbackA' {
   get_root_uuid "resin-rootA"
-  linux /boot/bzImage root=UUID=${root_uuid} @@KERNEL_CMDLINE@@
+  linux /boot/bzImage root=UUID=${root_uuid} @@KERNEL_CMDLINE@@ ${extra_os_cmdline}
 }
 
 menuentry 'manualfallbackB' {
   get_root_uuid "resin-rootB"
-  linux /boot/bzImage root=UUID=${root_uuid} @@KERNEL_CMDLINE@@
+  linux /boot/bzImage root=UUID=${root_uuid} @@KERNEL_CMDLINE@@ ${extra_os_cmdline}
 }
