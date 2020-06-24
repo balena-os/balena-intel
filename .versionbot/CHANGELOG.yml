@@ -1,4 +1,24 @@
 - commits:
+    - subject: >-
+        Apply the overlay regression patch for all kernels and machines except
+        for the Microsoft Surface Pro 6
+      hash: 275f2369d909b62e6acdd8416c4e89bebb4eb957
+      body: |
+        Except for the Surface Pro 6 which is on an older kernel which did not
+        have the regression
+      footer:
+        Changelog-entry: >-
+          Apply the overlay regression patch for all kernels and machines except
+          for the Microsoft Surface Pro 6
+        changelog-entry: >-
+          Apply the overlay regression patch for all kernels and machines except
+          for the Microsoft Surface Pro 6
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.51.1+rev4
+  date: 2020-06-24T10:11:12.166Z
+- commits:
     - subject: Update balena-yocto-scripts to v1.8.0
       hash: 9a6d2f618eccb7c9a00ad1322f99b4db72613e29
       body: ''

@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.51.1+rev4
+## (2020-06-24)
+
+* Apply the overlay regression patch for all kernels and machines except for the Microsoft Surface Pro 6 [Florin Sarbu]
+
 # v2.51.1+rev3
 ## (2020-06-23)
 
