@@ -7,13 +7,15 @@ SRC_URI += " \
     file://0002-Revert-random-fix-crng_ready-test.patch \
     file://0007-BUGFIX-iwlwifi-mvm-Allow-multicast-~ta-frames-only-when-associated.patch \
     file://0008-BUGFIX-iwlwifi-mvm-Allow-multicast-~ta-frames-only-when-authorized.patch \
+    file://0001-ovl-fix-regression-caused-by-overlapping-layers-dete.patch \
 "
 SRC_URI_append_surface-pro-6 = " \
     file://0003-ipts.patch \
 "
+# SP6 is still on a kernel older than 5.2 so no need for the overlay regression fix patch
+SRC_URI_remove_surface-pro-6 = "file://0001-ovl-fix-regression-caused-by-overlapping-layers-dete.patch"
 
 SRC_URI_append_genericx86-64-ext = " \
-    file://0001-ovl-fix-regression-caused-by-overlapping-layers-dete.patch \
     file://defconfig \
 "
 
