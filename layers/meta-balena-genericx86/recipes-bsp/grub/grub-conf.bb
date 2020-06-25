@@ -32,6 +32,7 @@ do_deploy() {
     fi
 
     install -m 644 ${WORKDIR}/grubenv ${DEPLOYDIR}/grubenv
+    touch ${DEPLOYDIR}/grub_extraenv
 
 }
 
