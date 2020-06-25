@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.51.1+rev5
+## (2020-06-25)
+
+* grub: Add extra_os_cmdline support [Alexandru Costache]
+
 # v2.51.1+rev4
 ## (2020-06-24)
 

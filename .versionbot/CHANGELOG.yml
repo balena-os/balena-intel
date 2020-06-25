@@ -1,4 +1,18 @@
 - commits:
+    - subject: 'grub: Add extra_os_cmdline support'
+      hash: 315071b5e0d98d7dd776a8b662ee8c0f73595e18
+      body: |
+        This variable can be added by the supervisor to
+        /grub/grub_extraenv file, inside the boot partition.
+      footer:
+        Changelog-entry: 'grub: Add extra_os_cmdline support'
+        changelog-entry: 'grub: Add extra_os_cmdline support'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+  version: 2.51.1+rev5
+  date: 2020-06-25T05:22:41.802Z
+- commits:
     - subject: >-
         Apply the overlay regression patch for all kernels and machines except
         for the Microsoft Surface Pro 6
