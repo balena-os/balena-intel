@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.51.6+rev2
+## (2020-06-29)
+
+* Enable CONFIG_PREEMPT_RT_FULL kernel config in linux-yocto-rt [Florin Sarbu]
+
 # v2.51.6+rev1
 ## (2020-06-26)
 

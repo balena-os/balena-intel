@@ -1,4 +1,16 @@
 - commits:
+    - subject: Enable CONFIG_PREEMPT_RT_FULL kernel config in linux-yocto-rt
+      hash: fbc4c933262d5d5e32d9f595ddf5d2868f5ea38e
+      body: ''
+      footer:
+        Changelog-entry: Enable CONFIG_PREEMPT_RT_FULL kernel config in linux-yocto-rt
+        changelog-entry: Enable CONFIG_PREEMPT_RT_FULL kernel config in linux-yocto-rt
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.51.6+rev2
+  date: 2020-06-29T11:05:20.900Z
+- commits:
     - subject: Update meta-balena from v2.51.1 to v2.51.6
       hash: fee334d1985cf69e1f25bac717d658420022a0da
       body: |
