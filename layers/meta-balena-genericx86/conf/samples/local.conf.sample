@@ -6,6 +6,8 @@
 #MACHINE ?= "surface-go"
 #MACHINE ?= "surface-pro-6"
 
+BALENA_STORAGE_smartcube-kbox-a150 = "overlay2"
+BALENA_STORAGE_smartcube-kbox-a250 = "overlay2"
 BALENA_STORAGE_surface-pro-6 = "overlay2"
 BALENA_STORAGE_surface-go = "overlay2"
 BALENA_STORAGE_genericx86-64-ext = "overlay2"
