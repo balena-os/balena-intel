@@ -1,6 +1,25 @@
 Change log
 -----------
 
+# v2.51.8+rev1
+## (2020-07-01)
+
+* Update to grub 2.04 taken from Poky dunfell-23.0.1 [Florin Sarbu]
+
+<details>
+<summary> Update meta-balena from v2.51.6 to v2.51.8 [Florin Sarbu] </summary>
+
+> ## meta-balena-2.51.8
+> ### (2020-06-30)
+> 
+> * resin-ntp-config: merge 'burst' command with 'add server' line [Mark Corbin]
+
+> ## meta-balena-2.51.7
+> ### (2020-06-25)
+> 
+> * resin-image: Install extra_uEnv.txt in boot partition [Alexandru Costache]
+</details>
+
 # v2.51.6+rev2
 ## (2020-06-29)
 

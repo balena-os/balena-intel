@@ -1,4 +1,82 @@
 - commits:
+    - subject: Update to grub 2.04 taken from Poky dunfell-23.0.1
+      hash: e3030b4db17bfa36d543538b5e83a43e877525d1
+      body: |
+        Until we support dunfell-23.0.1 we need to use a newer grub version 2.04
+        needed for example by Dell Latitude 7220 Rugged Extreme Tablet.
+      footer:
+        Changelog-entry: Update to grub 2.04 taken from Poky dunfell-23.0.1
+        changelog-entry: Update to grub 2.04 taken from Poky dunfell-23.0.1
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+    - subject: Update meta-balena from v2.51.6 to v2.51.8
+      hash: 2e7064af73e4f2ebe751e94cb296f85367c5382f
+      body: |
+        Update meta-balena from 2.51.6 to 2.51.8
+      footer:
+        Changelog-entry: Update meta-balena from v2.51.6 to v2.51.8
+        changelog-entry: Update meta-balena from v2.51.6 to v2.51.8
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested:
+        - commits:
+            - subject: 'resin-ntp-config: merge ''burst'' command with ''add server'' line'
+              hash: 034ff61a58f30a980514157412c0455b52ddf744
+              body: >
+                When the user supplies an additional NTP server source which is
+                a
+
+                pool URL the 'burst' command may fail. This occurs when the pool
+
+                URL resolves to a different IP addresses for the 'add server'
+                and
+
+                'burst' commands.
+
+
+                To avoid this issue we can combine the burst functionality into
+                the
+
+                'add server' command by using the 'iburst' option. Although this
+
+                option is not documented by the chronyc man page it has been
+                present
+
+                since v1.25 released in 2011.
+
+
+                This fix has been tested via the balenaOS (2.51.1+rev1) command
+                line
+
+                running on a RPi3.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Connects-to: '#1903'
+                connects-to: '#1903'
+                Signed-off-by: Mark Corbin <mark@balena.io>
+                signed-off-by: Mark Corbin <mark@balena.io>
+              author: Mark Corbin
+          version: meta-balena-2.51.8
+          date: 2020-06-30T11:03:07.814Z
+        - commits:
+            - subject: 'resin-image: Install extra_uEnv.txt in boot partition'
+              hash: e323d312f518d1ad50382a72182cb3bcb2afbd1a
+              body: |
+                Do so only for devices that use u-boot.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+          version: meta-balena-2.51.7
+          date: 2020-06-25T11:34:26.632Z
+  version: 2.51.8+rev1
+  date: 2020-07-01T13:29:40.556Z
+- commits:
     - subject: Enable CONFIG_PREEMPT_RT_FULL kernel config in linux-yocto-rt
       hash: fbc4c933262d5d5e32d9f595ddf5d2868f5ea38e
       body: ''
