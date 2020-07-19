@@ -1,6 +1,36 @@
 Change log
 -----------
 
+# v2.53.2+rev1
+## (2020-07-16)
+
+
+<details>
+<summary> Update meta-balena from v2.52.7 to v2.53.2 [Florin Sarbu] </summary>
+
+> ## meta-balena-2.53.2
+> ### (2020-07-16)
+> 
+> * Add LZ4 support config for older kernels [Alexandru Costache]
+> 
+> ## meta-balena-2.53.1
+> ### (2020-07-14)
+> 
+> * Remove unnecessary config.json keys [Pagan Gazzard]
+> 
+> ## meta-balena-2.53.0
+> ### (2020-07-14)
+> 
+> * resin-supervisor: Create required directories before launch [Alex Gonzalez]
+> * Rebrand custom resin logos [Alex Gonzalez]
+> * plymouth: Remove patch that sets plymouth resin theme [Alex Gonzalez]
+> * docker-disk: Update dind container to v19.03.10 [Michal Toman]
+> * docker-disk: Update to still supported dind container [Gergely Imreh]
+> * Use udev for setting up wlan power management [Michal Toman]
+> * Use --mount instead of --volume for bind mounts to the supervisor container. [Robert Günzler]
+> 
+</details>
+
 # v2.52.7+rev1
 ## (2020-07-13)
 
