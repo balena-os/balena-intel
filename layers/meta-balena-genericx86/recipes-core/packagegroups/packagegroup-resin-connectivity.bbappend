@@ -19,6 +19,7 @@ CONNECTIVITY_FIRMWARES =+ " \
 
 CONNECTIVITY_FIRMWARES_append_surface-go = " \
 	linux-firmware-i915-kbl \
+	linux-firmware-iwlwifi-cc-a0 \
 "
 
 CONNECTIVITY_FIRMWARES_append_surface-pro-6 = " \
