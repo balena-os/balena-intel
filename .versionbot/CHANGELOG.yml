@@ -1,4 +1,66 @@
 - commits:
+    - subject: Update meta-balena from v2.54.1 to v2.54.2
+      hash: a699b37523d60729b54c825a3daee9d50050bd22
+      body: |
+        Update meta-balena from 2.54.1 to 2.54.2
+      footer:
+        Changelog-entry: Update meta-balena from v2.54.1 to v2.54.2
+        changelog-entry: Update meta-balena from v2.54.1 to v2.54.2
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested:
+        - commits:
+            - subject: 'balena-supervisor: Update to v11.12.4'
+              hash: 99d9a4df967535d77f3918d696845ade57aa198e
+              body: |
+                Update balena-supervisor from v11.12.2 to v11.12.4
+              footer:
+                Change-type: patch
+                change-type: patch
+                Backport-to: next
+                backport-to: next
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested:
+                - commits:
+                    - subject: >-
+                        bug: Firewall not blocking supervisor access from
+                        outside the device
+                      hash: 5aecd94e243ee55cffbb9aa47e7adfc437401de3
+                      body: ''
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Rich Bayliss <rich@balena.io>
+                        signed-off-by: Rich Bayliss <rich@balena.io>
+                      author: Rich Bayliss
+                      nested: []
+                  version: balena-supervisor-11.12.4
+                  date: 2020-08-12T12:45:26.689Z
+                - commits:
+                    - subject: 'bug: Allow DNS through firewall for local containers'
+                      hash: e9b536a889542588e2f79247ed7937c709fdf3d2
+                      body: >
+                        We provide a local DNS server for containers to use and
+                        this
+
+                        was not allowed through the firewall when enabled.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Rich Bayliss <rich@balena.io>
+                        signed-off-by: Rich Bayliss <rich@balena.io>
+                      author: Rich Bayliss
+                      nested: []
+                  version: balena-supervisor-11.12.3
+                  date: 2020-08-11T14:19:40.945Z
+          version: meta-balena-2.54.2
+          date: 2020-08-12T17:01:50.068Z
+  version: 2.54.2+rev1
+  date: 2020-08-14T09:19:04.880Z
+- commits:
     - subject: Update meta-balena from v2.53.11 to v2.54.1
       hash: 400683939493f67815ee6df198cf25aff814d8b8
       body: |

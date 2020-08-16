@@ -1,6 +1,35 @@
 Change log
 -----------
 
+# v2.54.2+rev1
+## (2020-08-14)
+
+
+<details>
+<summary> Update meta-balena from v2.54.1 to v2.54.2 [Florin Sarbu] </summary>
+
+> ## meta-balena-2.54.2
+> ### (2020-08-12)
+> 
+> 
+> <details>
+> <summary> balena-supervisor: Update to v11.12.4 [Alex Gonzalez] </summary>
+> 
+>> ### balena-supervisor-11.12.4
+>> #### (2020-08-12)
+>> 
+>> * bug: Firewall not blocking supervisor access from outside the device [Rich Bayliss]
+>> 
+>> ### balena-supervisor-11.12.3
+>> #### (2020-08-11)
+>> 
+>> * bug: Allow DNS through firewall for local containers [Rich Bayliss]
+>> 
+> </details>
+> 
+> 
+</details>
+
 # v2.54.1+rev1
 ## (2020-08-09)
 
