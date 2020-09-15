@@ -1,4 +1,28 @@
 - commits:
+    - subject: Update meta-balena from v2.50.4 to v2.50.10
+      hash: 3702035511a14bf5852c9660ef898f180b60331b
+      body: |
+        Update meta-balena from 2.50.4 to 2.50.10
+      footer:
+        Changelog-entry: Update meta-balena from v2.50.4 to v2.50.10
+        changelog-entry: Update meta-balena from v2.50.4 to v2.50.10
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+    - subject: Update balena-yocto-scripts to v1.8.1
+      hash: af797b7b963e97229bf641224e897cb253971fa0
+      body: ''
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to v1.8.1
+        changelog-entry: Update balena-yocto-scripts to v1.8.1
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 2020.07.1
+  date: 2020-09-15T13:31:30.627Z
+- commits:
     - subject: Update balena-yocto-scripts to v1.7.2
       hash: d1519e71a6bfb3e64f7bed67d50e3e48f491a0d9
       body: ''
