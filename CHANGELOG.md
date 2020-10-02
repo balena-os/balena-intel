@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.58.3+rev2
+## (2020-10-02)
+
+* Update linux-yocto to version 5.4.49 [Florin Sarbu]
+
 # v2.58.3+rev1
 ## (2020-09-24)
 
