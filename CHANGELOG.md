@@ -1,6 +1,20 @@
 Change log
 -----------
 
+# v2.58.4+rev1
+## (2020-10-07)
+
+
+<details>
+<summary> Update meta-balena from v2.58.3 to v2.58.4 [Florin Sarbu] </summary>
+
+> ## meta-balena-2.58.4
+> ### (2020-10-05)
+> 
+> * docker-disk: Allow expanding data filesystem on 2TB disks [Alexandru Costache]
+> 
+</details>
+
 # v2.58.3+rev1
 ## (2020-09-24)
 

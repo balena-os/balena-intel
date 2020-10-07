@@ -1,4 +1,33 @@
 - commits:
+    - subject: Update meta-balena from v2.58.3 to v2.58.4
+      hash: b576aebc587f4bfc2217560be7abbf39b9ad472f
+      body: |
+        Update meta-balena from 2.58.3 to 2.58.4
+      footer:
+        Changelog-entry: Update meta-balena from v2.58.3 to v2.58.4
+        changelog-entry: Update meta-balena from v2.58.3 to v2.58.4
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested:
+        - commits:
+            - subject: 'docker-disk: Allow expanding data filesystem on 2TB disks'
+              hash: 62b3763b44dcd9397f964d0812b7292885b04f66
+              body: |
+                Switch to 4k block size for the resin-data filesystem
+                so it can be expanded to sizes greater than 1023GiB.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+          version: meta-balena-2.58.4
+          date: 2020-10-05T12:38:50.221Z
+  version: 2.58.4+rev1
+  date: 2020-10-07T10:52:05.048Z
+- commits:
     - subject: Update meta-balena from v2.58.0 to v2.58.3
       hash: 65fe4b813df60ae81e2b9c10a8305ee6e22fe280
       body: |
