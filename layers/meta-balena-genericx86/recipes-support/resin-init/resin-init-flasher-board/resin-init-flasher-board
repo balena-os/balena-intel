@@ -4,7 +4,12 @@ set -e
 
 FLASHER_CONF_FILE=/etc/resin-init-flasher.conf
 INTERNAL_DEVICE_BOOT_PART_MOUNTPOINT=/tmp/internal_boot
-CURRENT_ROOT=$(findmnt --noheadings --canonicalize --output SOURCE / | xargs lsblk -no pkname)
+if [ "$networkflasher" = "true" ]
+then
+    CURRENT_ROOT="initrd"
+else
+    CURRENT_ROOT=$(findmnt --noheadings --canonicalize --output SOURCE / | xargs lsblk -no pkname)
+fi
 
 # source the flasher configuration file
 if [ -f $FLASHER_CONF_FILE ]; then
