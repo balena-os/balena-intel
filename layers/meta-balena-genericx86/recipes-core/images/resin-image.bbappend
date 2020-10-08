@@ -127,4 +127,5 @@ IMAGE_INSTALL_append_genericx86-64-ext =" \
     linux-firmware-qcom-adreno-a530       \
 "
 
+IMAGE_ROOTFS_SIZE_genericx86-64 = "1024000"
 IMAGE_ROOTFS_SIZE_genericx86-64-ext = "1024000"
