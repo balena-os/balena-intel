@@ -1,6 +1,25 @@
 Change log
 -----------
 
+# v2.58.6+rev1
+## (2020-10-23)
+
+
+<details>
+<summary> Update meta-balena from v2.58.4 to v2.58.6 [Florin Sarbu] </summary>
+
+> ## meta-balena-2.58.6
+> ### (2020-10-15)
+> 
+> * readme: DCHP -> DHCP [Matthew McGinn]
+> 
+> ## meta-balena-2.58.5
+> ### (2020-10-13)
+> 
+> * bootfiles: blacklist proper grub configuration backend [Matthew McGinn]
+> 
+</details>
+
 # v2.58.4+rev1
 ## (2020-10-07)
 

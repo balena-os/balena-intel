@@ -1,4 +1,46 @@
 - commits:
+    - subject: Update meta-balena from v2.58.4 to v2.58.6
+      hash: 0c19722d3f5d398cec523ad2ba3b84a4cd9c747c
+      body: |
+        Update meta-balena from 2.58.4 to 2.58.6
+      footer:
+        Changelog-entry: Update meta-balena from v2.58.4 to v2.58.6
+        changelog-entry: Update meta-balena from v2.58.4 to v2.58.6
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested:
+        - commits:
+            - subject: 'readme: DCHP -> DHCP'
+              hash: 9694909d8eb0dea7f775eeb5a92546f00b381909
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Matthew McGinn <matthew@balena.io>
+                signed-off-by: Matthew McGinn <matthew@balena.io>
+              author: Matthew McGinn
+              nested: []
+          version: meta-balena-2.58.6
+          date: 2020-10-15T13:43:08.320Z
+        - commits:
+            - subject: 'bootfiles: blacklist proper grub configuration backend'
+              hash: 1362d9916b0b7b414b9d920296021379e34f00be
+              body: ''
+              footer:
+                Connects-to: '#2022'
+                connects-to: '#2022'
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Matthew McGinn <matthew@balena.io>
+                signed-off-by: Matthew McGinn <matthew@balena.io>
+              author: Matthew McGinn
+              nested: []
+          version: meta-balena-2.58.5
+          date: 2020-10-13T14:20:39.972Z
+  version: 2.58.6+rev1
+  date: 2020-10-23T06:36:05.174Z
+- commits:
     - subject: Update meta-balena from v2.58.3 to v2.58.4
       hash: b576aebc587f4bfc2217560be7abbf39b9ad472f
       body: |
