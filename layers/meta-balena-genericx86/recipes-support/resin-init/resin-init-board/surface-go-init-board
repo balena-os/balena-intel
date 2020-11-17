@@ -1,0 +1,9 @@
+cdc_ncm_rx_max=$(find /sys/devices/ | grep usb | grep wwp0s | grep cdc_ncm | grep rx_max | head -n 1)
+cdc_ncm_tx_max=$(find /sys/devices/ | grep usb | grep wwp0s | grep cdc_ncm | grep tx_max | head -n 1)
+
+# By default tx and rx max values are 16384
+if [[ -f ${cdc_ncm_rx_max} && -f ${cdc_ncm_tx_max} ]]; then
+    echo 16383 | tee ${cdc_ncm_rx_max} ${cdc_ncm_tx_max}
+    echo 16384 | tee ${cdc_ncm_rx_max} ${cdc_ncm_tx_max}
+fi
+
