@@ -1,4 +1,21 @@
 - commits:
+    - subject: 'resin-init-board: Add Surface Go LTE modem initialization'
+      hash: 42fb9cb1271b39470d154025cc8fcb94804cdff2
+      body: |
+        This adds the steps for initializing the LTE modem
+        on the Surface Go tablet. By default rx_max and tx_max
+        are 16384, however this sequence is needed to bring
+        up the modem.
+      footer:
+        Changelog-entry: 'resin-init-board: Add Surface Go LTE modem initialization'
+        changelog-entry: 'resin-init-board: Add Surface Go LTE modem initialization'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 2.58.6+rev2
+  date: 2020-11-17T09:08:31.175Z
+- commits:
     - subject: Update meta-balena from v2.58.4 to v2.58.6
       hash: 0c19722d3f5d398cec523ad2ba3b84a4cd9c747c
       body: |

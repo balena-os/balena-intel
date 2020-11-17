@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.58.6+rev2
+## (2020-11-17)
+
+* resin-init-board: Add Surface Go LTE modem initialization [Alexandru Costache]
+
 # v2.58.6+rev1
 ## (2020-10-23)
 
