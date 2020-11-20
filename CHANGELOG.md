@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.58.6+rev3
+## (2020-11-20)
+
+* Publish both raw and flasher images as artifacts [Michal Toman]
+
 # v2.58.6+rev2
 ## (2020-11-17)
 

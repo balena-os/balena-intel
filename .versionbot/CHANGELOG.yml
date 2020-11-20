@@ -1,4 +1,19 @@
 - commits:
+    - subject: Publish both raw and flasher images as artifacts
+      hash: 70f69e1cb6c9286484de5d9f88e05dcf237dc35a
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+        Changelog-entry: Publish both raw and flasher images as artifacts
+        changelog-entry: Publish both raw and flasher images as artifacts
+        Signed-off-by: Michal Toman <michalt@balena.io>
+        signed-off-by: Michal Toman <michalt@balena.io>
+      author: Michal Toman
+      nested: []
+  version: 2.58.6+rev3
+  date: 2020-11-20T15:50:54.954Z
+- commits:
     - subject: 'resin-init-board: Add Surface Go LTE modem initialization'
       hash: 42fb9cb1271b39470d154025cc8fcb94804cdff2
       body: |
