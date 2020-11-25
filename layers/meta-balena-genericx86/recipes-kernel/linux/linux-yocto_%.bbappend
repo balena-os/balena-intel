@@ -185,17 +185,6 @@ RESIN_CONFIGS[rtl_wifi]=" \
     CONFIG_RTL8192CU=m \
 "
 
-# Add overlayfs module in the rootfs (some user containers need this even though we do not yet switch from aufs to overlay2 as balena storage driver)
-RESIN_CONFIGS_append = " overlayfs"
-RESIN_CONFIGS[overlayfs] = " \
-    CONFIG_OVERLAY_FS=m \
-"
-
-# keep overlay as built-in for the following machines as they are using overlay instead of aufs
-RESIN_CONFIGS_remove_surface-pro-6 = "overlayfs"
-RESIN_CONFIGS_remove_surface-go = "overlayfs"
-RESIN_CONFIGS_remove_genericx86-64-ext = "overlayfs"
-
 # Add CAN support (requested by customer)
 RESIN_CONFIGS_append = " enable_can"
 RESIN_CONFIGS[enable_can] = " \
