@@ -1,0 +1,36 @@
+From 61fe894d9ee9397fbcac570b9f9404159234925a Mon Sep 17 00:00:00 2001
+From: Li Wang <li.wang@windriver.com>
+Date: Tue, 15 Dec 2009 11:03:47 +0800
+Subject: [PATCH 24/82] Resolve jiffies wrapping about arp
+
+When jiffies wraps, it must be larger than the value of "updated".
+The solution will enhance the condition of "time_after".
+
+Signed-off-by: Li Wang <li.wang@windriver.com>
+---
+ net/ipv4/arp.c | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+
+diff --git a/net/ipv4/arp.c b/net/ipv4/arp.c
+index 687971d83b4e..09ed488cb9ff 100644
+--- a/net/ipv4/arp.c
++++ b/net/ipv4/arp.c
+@@ -895,7 +895,14 @@ static int arp_process(struct net *net, struct sock *sk, struct sk_buff *skb)
+ 		   agents are active. Taking the first reply prevents
+ 		   arp trashing and chooses the fastest router.
+ 		 */
+-		override = time_after(jiffies,
++		/*
++		 * If n->updated is after jiffies, then the clock has wrapped and
++		 * we are *well* past the locktime, so set the override flag
++		 */
++		if (time_after(n->updated, jiffies))
++			override = 1;
++		else
++			override = time_after(jiffies,
+ 				      n->updated +
+ 				      NEIGH_VAR(n->parms, LOCKTIME)) ||
+ 			   is_garp;
+-- 
+2.17.1
+

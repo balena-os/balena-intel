@@ -1,0 +1,78 @@
+From 979d9e2aa418647678fd51817b4adf1d3d0c8c89 Mon Sep 17 00:00:00 2001
+From: Richard Purdie <richard.purdie@linuxfoundation.org>
+Date: Tue, 22 Aug 2017 09:50:50 +0100
+Subject: [PATCH 29/82] linux-yocto: Handle /bin/awk issues
+
+Standardise on /usr/bin/awk, else kernel-devsrc depends on /bin/awk which
+the system doesn't provide and core-image-sato-sdk (which depends on
+kernel-devsrc) will fail to build.
+
+Signed-off-by: Richard Purdie <richard.purdie@linuxfoundation.org>
+Signed-off-by: Bruce Ashfield <bruce.ashfield@windriver.com>
+Signed-off-by: Bruce Ashfield <bruce.ashfield@gmail.com>
+---
+ arch/arm/tools/gen-mach-types                                   | 2 +-
+ arch/sh/tools/gen-mach-types                                    | 2 +-
+ arch/x86/tools/gen-insn-attr-x86.awk                            | 2 +-
+ tools/arch/x86/tools/gen-insn-attr-x86.awk                      | 2 +-
+ tools/perf/arch/x86/tests/gen-insn-x86-dat.awk                  | 2 +-
+ .../selftests/rcutorture/formal/srcu-cbmc/modify_srcu.awk       | 0
+ 6 files changed, 5 insertions(+), 5 deletions(-)
+ mode change 100755 => 100644 tools/testing/selftests/rcutorture/formal/srcu-cbmc/modify_srcu.awk
+
+diff --git a/arch/arm/tools/gen-mach-types b/arch/arm/tools/gen-mach-types
+index cbe1c33bb871..cb2b69f2a39d 100644
+--- a/arch/arm/tools/gen-mach-types
++++ b/arch/arm/tools/gen-mach-types
+@@ -1,4 +1,4 @@
+-#!/bin/awk
++#!/usr/bin/awk
+ # SPDX-License-Identifier: GPL-2.0
+ #
+ # Awk script to generate include/generated/mach-types.h
+diff --git a/arch/sh/tools/gen-mach-types b/arch/sh/tools/gen-mach-types
+index 6d7c2d8eaf55..2a4a42a6d70c 100644
+--- a/arch/sh/tools/gen-mach-types
++++ b/arch/sh/tools/gen-mach-types
+@@ -1,4 +1,4 @@
+-#!/bin/awk
++#!/usr/bin/awk
+ # SPDX-License-Identifier: GPL-2.0
+ #
+ # Awk script to generate include/generated/machtypes.h
+diff --git a/arch/x86/tools/gen-insn-attr-x86.awk b/arch/x86/tools/gen-insn-attr-x86.awk
+index a42015b305f4..1c2832e9f77d 100644
+--- a/arch/x86/tools/gen-insn-attr-x86.awk
++++ b/arch/x86/tools/gen-insn-attr-x86.awk
+@@ -1,4 +1,4 @@
+-#!/bin/awk -f
++#!/usr/bin/awk -f
+ # SPDX-License-Identifier: GPL-2.0
+ # gen-insn-attr-x86.awk: Instruction attribute table generator
+ # Written by Masami Hiramatsu <mhiramat@redhat.com>
+diff --git a/tools/arch/x86/tools/gen-insn-attr-x86.awk b/tools/arch/x86/tools/gen-insn-attr-x86.awk
+index a42015b305f4..1c2832e9f77d 100644
+--- a/tools/arch/x86/tools/gen-insn-attr-x86.awk
++++ b/tools/arch/x86/tools/gen-insn-attr-x86.awk
+@@ -1,4 +1,4 @@
+-#!/bin/awk -f
++#!/usr/bin/awk -f
+ # SPDX-License-Identifier: GPL-2.0
+ # gen-insn-attr-x86.awk: Instruction attribute table generator
+ # Written by Masami Hiramatsu <mhiramat@redhat.com>
+diff --git a/tools/perf/arch/x86/tests/gen-insn-x86-dat.awk b/tools/perf/arch/x86/tests/gen-insn-x86-dat.awk
+index 1a29f6379bde..6285ff7158a5 100644
+--- a/tools/perf/arch/x86/tests/gen-insn-x86-dat.awk
++++ b/tools/perf/arch/x86/tests/gen-insn-x86-dat.awk
+@@ -1,4 +1,4 @@
+-#!/bin/awk -f
++#!/usr/bin/awk -f
+ # SPDX-License-Identifier: GPL-2.0-only
+ # gen-insn-x86-dat.awk: script to convert data for the insn-x86 test
+ # Copyright (c) 2015, Intel Corporation.
+diff --git a/tools/testing/selftests/rcutorture/formal/srcu-cbmc/modify_srcu.awk b/tools/testing/selftests/rcutorture/formal/srcu-cbmc/modify_srcu.awk
+old mode 100755
+new mode 100644
+-- 
+2.17.1
+

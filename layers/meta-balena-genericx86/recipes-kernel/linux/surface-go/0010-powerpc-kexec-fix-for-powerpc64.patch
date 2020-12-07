@@ -1,0 +1,30 @@
+From b1ee7f32f5b35b20a16625a738737e24f1f87fe6 Mon Sep 17 00:00:00 2001
+From: Benjamin Walsh <benjamin.walsh@windriver.com>
+Date: Mon, 9 Feb 2009 14:25:47 -0500
+Subject: [PATCH 10/82] powerpc: kexec fix for powerpc64
+
+slbia instruction invalidates the SLB, but there was a hang on the first
+instruction that caused an SLB miss exception. Doing a full sync after
+the slbia causes the SLB to be in a consistent state for the handling of
+the SLB exception.
+
+Signed-off by: Benjamin Walsh <benjamin.walsh@windriver.com>
+---
+ arch/powerpc/mm/book3s64/slb.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/arch/powerpc/mm/book3s64/slb.c b/arch/powerpc/mm/book3s64/slb.c
+index 156c38f89511..e7ebc845f786 100644
+--- a/arch/powerpc/mm/book3s64/slb.c
++++ b/arch/powerpc/mm/book3s64/slb.c
+@@ -598,6 +598,7 @@ void slb_initialize(void)
+ 	asm volatile("isync":::"memory");
+ 	asm volatile("slbmte  %0,%0"::"r" (0) : "memory");
+ 	asm volatile("isync; slbia; isync":::"memory");
++	mb();
+ 	create_shadowed_slbe(PAGE_OFFSET, mmu_kernel_ssize, lflags, LINEAR_INDEX);
+ 
+ 	/*
+-- 
+2.17.1
+

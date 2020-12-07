@@ -1,0 +1,52 @@
+From 013e55121c5ea38370d13384598eefc22096b787 Mon Sep 17 00:00:00 2001
+From: Bruce Ashfield <bruce.ashfield@windriver.com>
+Date: Thu, 8 Apr 2010 23:44:21 -0700
+Subject: [PATCH 22/82] check console device file on fs when booting
+
+If a root filesystem is generated as non-root, one of
+the tell tale signs is /dev/console not being a character
+file. To save a whole class of questions, let's just test
+for the condition and let the user know.
+
+Signed-off-by: Richard Laroque <rlarocqu@windriver.com>
+Signed-off-by: Bruce Ashfield <bruce.ashfield@windriver.com>
+---
+ init/main.c | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+
+diff --git a/init/main.c b/init/main.c
+index e214cdd18c28..bf27d2045ea3 100644
+--- a/init/main.c
++++ b/init/main.c
+@@ -1463,6 +1463,18 @@ static int __ref kernel_init(void *unused)
+ 
+ void console_on_rootfs(void)
+ {
++#ifndef CONFIG_BLK_DEV_INITRD
++       /*
++        * Use /dev/console to infer if the rootfs is setup properly.
++        * In case of initrd or initramfs /dev/console might be instantiated
++        * later by /init so don't do this check for CONFIG_BLK_DEV_INITRD
++        */
++	if (vfs_lstat((char __user *) "/dev/console", (struct kstat __user *) &console_stat)
++			|| !S_ISCHR(console_stat.mode)) {
++		panic("/dev/console is missing or not a character device!\nPlease ensure your rootfs is properly configured\n");
++	}
++#endif
++
+ 	/* Open the /dev/console as stdin, this should never fail */
+ 	if (ksys_open((const char __user *) "/dev/console", O_RDWR, 0) < 0)
+ 		pr_err("Warning: unable to open an initial console.\n");
+@@ -1474,6 +1486,9 @@ void console_on_rootfs(void)
+ 
+ static noinline void __init kernel_init_freeable(void)
+ {
++#ifndef CONFIG_BLK_DEV_INITRD
++	struct kstat console_stat;
++#endif
+ 	/*
+ 	 * Wait until kthreadd is all set-up.
+ 	 */
+-- 
+2.17.1
+

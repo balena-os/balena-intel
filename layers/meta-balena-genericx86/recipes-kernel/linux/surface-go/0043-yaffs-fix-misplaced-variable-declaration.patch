@@ -1,0 +1,40 @@
+From c1c151fb2cf0a1a0f6491f68f32662b822563b67 Mon Sep 17 00:00:00 2001
+From: Paul Gortmaker <paul.gortmaker@windriver.com>
+Date: Thu, 30 Apr 2020 12:59:46 -0400
+Subject: [PATCH 43/82] yaffs: fix misplaced variable declaration
+
+A variable declaration landed one function higher than intended,
+leading to an unused variable warning for configurations with
+YAFFS_USE_DIR_ITERATE=y and a build failure for configurations
+with the same being unset.
+
+Fixes: "yaffs: Fix build failure by handling inode i_version with proper atomic API"
+Signed-off-by: Paul Gortmaker <paul.gortmaker@windriver.com>
+Signed-off-by: Bruce Ashfield <bruce.ashfield@gmail.com>
+---
+ fs/yaffs2/yaffs_vfs.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/fs/yaffs2/yaffs_vfs.c b/fs/yaffs2/yaffs_vfs.c
+index 598ecd57a0ed..3ffdc0129637 100644
+--- a/fs/yaffs2/yaffs_vfs.c
++++ b/fs/yaffs2/yaffs_vfs.c
+@@ -1826,7 +1826,6 @@ static int yaffs_iterate(struct file *f, struct dir_context *dc)
+ 	int ret_val = 0;
+ 
+ 	char name[YAFFS_MAX_NAME_LENGTH + 1];
+-	u64 i_version;
+ 
+ 	obj = yaffs_dentry_to_obj(Y_GET_DENTRY(f));
+ 	dev = obj->my_dev;
+@@ -1898,6 +1897,7 @@ static int yaffs_readdir(struct file *f, void *dirent, filldir_t filldir)
+ 	unsigned long offset, curoffs;
+ 	struct yaffs_obj *l;
+ 	int ret_val = 0;
++	u64 i_version;
+ 
+ 	char name[YAFFS_MAX_NAME_LENGTH + 1];
+ 
+-- 
+2.17.1
+

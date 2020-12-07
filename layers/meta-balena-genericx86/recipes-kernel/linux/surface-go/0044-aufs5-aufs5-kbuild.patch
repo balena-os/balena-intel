@@ -1,0 +1,35 @@
+From 0489b86a2b7eab45e7c29c5298c51d4496312b2d Mon Sep 17 00:00:00 2001
+From: Bruce Ashfield <bruce.ashfield@gmail.com>
+Date: Fri, 7 Aug 2020 09:50:46 -0400
+Subject: [PATCH 44/82] aufs5: aufs5-kbuild
+
+Signed-off-by: Bruce Ashfield <bruce.ashfield@gmail.com>
+---
+ fs/Kconfig  | 1 +
+ fs/Makefile | 1 +
+ 2 files changed, 2 insertions(+)
+
+diff --git a/fs/Kconfig b/fs/Kconfig
+index 9b3541abc8e2..a92216bcbefb 100644
+--- a/fs/Kconfig
++++ b/fs/Kconfig
+@@ -268,6 +268,7 @@ source "fs/sysv/Kconfig"
+ source "fs/ufs/Kconfig"
+ source "fs/erofs/Kconfig"
+ source "fs/vboxsf/Kconfig"
++source "fs/aufs/Kconfig"
+ 
+ endif # MISC_FILESYSTEMS
+ 
+diff --git a/fs/Makefile b/fs/Makefile
+index 38989852d3b8..a6e8da55723e 100644
+--- a/fs/Makefile
++++ b/fs/Makefile
+@@ -137,3 +137,4 @@ obj-$(CONFIG_EROFS_FS)		+= erofs/
+ obj-$(CONFIG_VBOXSF_FS)		+= vboxsf/
+ obj-$(CONFIG_ZONEFS_FS)		+= zonefs/
+ obj-$(CONFIG_YAFFS_FS)		+= yaffs2/
++obj-$(CONFIG_AUFS_FS)           += aufs/
+-- 
+2.17.1
+

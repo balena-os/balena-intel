@@ -1,0 +1,28 @@
+From 81e8eaa9db36d46c07dca6252a53851174c3aa46 Mon Sep 17 00:00:00 2001
+From: Khem Raj <raj.khem@gmail.com>
+Date: Thu, 5 Jan 2012 11:42:35 -0800
+Subject: [PATCH 26/82] compiler.h: Undef before redefining __attribute_const__
+
+This is required to avoid warnings like
+util/include/linux/compiler.h:8:0: error: "__attribute_const__" redefined [-Werror]
+
+Signed-off-by: Khem Raj <raj.khem@gmail.com>
+---
+ tools/include/linux/compiler.h | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/tools/include/linux/compiler.h b/tools/include/linux/compiler.h
+index 9f9002734e19..6cf3ce891f5c 100644
+--- a/tools/include/linux/compiler.h
++++ b/tools/include/linux/compiler.h
+@@ -67,6 +67,7 @@
+ #define __always_inline	inline
+ #endif
+ 
++#undef __user
+ #define __user
+ #define __rcu
+ #define __read_mostly
+-- 
+2.17.1
+

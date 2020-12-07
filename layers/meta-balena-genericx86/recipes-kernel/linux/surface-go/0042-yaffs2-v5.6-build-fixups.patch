@@ -1,0 +1,50 @@
+From f8335a282de555260b12429b81c5ee3794e6ff05 Mon Sep 17 00:00:00 2001
+From: Bruce Ashfield <bruce.ashfield@gmail.com>
+Date: Mon, 16 Mar 2020 23:20:57 -0400
+Subject: [PATCH 42/82] yaffs2: v5.6 build fixups
+
+Signed-off-by: Bruce Ashfield <bruce.ashfield@gmail.com>
+---
+ fs/yaffs2/yaffs_vfs.c | 17 ++++++++---------
+ 1 file changed, 8 insertions(+), 9 deletions(-)
+
+diff --git a/fs/yaffs2/yaffs_vfs.c b/fs/yaffs2/yaffs_vfs.c
+index 4fbd0a42ff3d..598ecd57a0ed 100644
+--- a/fs/yaffs2/yaffs_vfs.c
++++ b/fs/yaffs2/yaffs_vfs.c
+@@ -2059,11 +2059,11 @@ static void yaffs_fill_inode_from_obj(struct inode *inode,
+ #if (LINUX_VERSION_CODE > KERNEL_VERSION(2, 5, 0))
+ 
+ 		inode->i_rdev = old_decode_dev(obj->yst_rdev);
+-		inode->i_atime.tv_sec = (time_t) (obj->yst_atime);
++		inode->i_atime.tv_sec = (time64_t) (obj->yst_atime);
+ 		inode->i_atime.tv_nsec = 0;
+-		inode->i_mtime.tv_sec = (time_t) obj->yst_mtime;
++		inode->i_mtime.tv_sec = (time64_t) obj->yst_mtime;
+ 		inode->i_mtime.tv_nsec = 0;
+-		inode->i_ctime.tv_sec = (time_t) obj->yst_ctime;
++		inode->i_ctime.tv_sec = (time64_t) obj->yst_ctime;
+ 		inode->i_ctime.tv_nsec = 0;
+ #else
+ 		inode->i_rdev = obj->yst_rdev;
+@@ -3692,12 +3692,11 @@ static int yaffs_proc_open(struct inode *inode, struct file *file)
+ 	return single_open(file, yaffs_proc_show, NULL);
+ }
+ 
+-static struct file_operations procfs_ops = {
+-	.owner = THIS_MODULE,
+-	.open  = yaffs_proc_open,
+-	.read  = seq_read,
+-	.write = yaffs_proc_write,
+-	.release = single_release,
++static struct proc_ops procfs_ops = {
++	.proc_open  = yaffs_proc_open,
++	.proc_read  = seq_read,
++	.proc_write = yaffs_proc_write,
++	.proc_release = single_release,
+ };
+ 
+ static int yaffs_procfs_init(void)
+-- 
+2.17.1
+

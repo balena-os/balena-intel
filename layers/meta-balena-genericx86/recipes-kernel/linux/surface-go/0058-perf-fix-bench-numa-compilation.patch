@@ -1,0 +1,46 @@
+From 58f4fe3142462fdabf5c9583c7fbe58aaf222e22 Mon Sep 17 00:00:00 2001
+From: Riccardo Magliocchetti <riccardo.magliocchetti@gmail.com>
+Date: Thu, 17 Oct 2013 15:11:25 -0700
+Subject: [PATCH 58/82] perf: fix bench numa compilation
+
+Taken from: https://lkml.org/lkml/2013/6/20/80
+
+Fix the following errors on gcc 4.8.1 / x86:
+
+bench/numa.c: In function worker_thread:
+bench/numa.c:1113:20: error: comparison between signed and unsigned integer expressions [-Werror=sign-compare]
+    if (diff.tv_sec >= g->p.nr_secs) {
+                    ^
+bench/numa.c:1161:6: error: format %lx expects argument of type long unsigned int, but argument 5 has type u64 [-Werror=format=]
+      process_nr, thread_nr, runtime_ns_max / bytes_done, val);
+      ^
+Signed-off-by: Riccardo Magliocchetti <riccardo.magliocchetti@gmail.com>
+Signed-off-by: Yang Shi <yang.shi@windriver.com>
+---
+ tools/perf/bench/numa.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/tools/perf/bench/numa.c b/tools/perf/bench/numa.c
+index 5797253b9700..1aa2bad26fc7 100644
+--- a/tools/perf/bench/numa.c
++++ b/tools/perf/bench/numa.c
+@@ -24,6 +24,7 @@
+ #include <string.h>
+ #include <unistd.h>
+ #include <sys/mman.h>
++#include <inttypes.h>
+ #include <sys/time.h>
+ #include <sys/resource.h>
+ #include <sys/wait.h>
+@@ -1193,7 +1194,7 @@ static void *worker_thread(void *__tdata)
+ 		/* Check whether our max runtime timed out: */
+ 		if (g->p.nr_secs) {
+ 			timersub(&stop, &start0, &diff);
+-			if ((u32)diff.tv_sec >= g->p.nr_secs) {
++			if ((u32)diff.tv_sec >= (long int)g->p.nr_secs) {
+ 				g->stop_work = true;
+ 				break;
+ 			}
+-- 
+2.17.1
+

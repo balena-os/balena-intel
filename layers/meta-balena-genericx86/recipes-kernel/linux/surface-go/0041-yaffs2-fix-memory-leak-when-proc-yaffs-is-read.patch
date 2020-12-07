@@ -1,0 +1,38 @@
+From 6cbc32693c54e7dc849b119ce9bd039ba830d3c3 Mon Sep 17 00:00:00 2001
+From: Charles Manning <cdhmanning@gmail.com>
+Date: Mon, 16 Mar 2020 16:52:51 +0800
+Subject: [PATCH 41/82] yaffs2: fix memory leak when /proc/yaffs is read
+
+commit  27f18203551940abf35826a66978daf1b8124c6b from
+git://www.aleph1.co.uk/yaffs2
+
+Thanks to Jisheng Zhang <Jisheng.Zhang@synaptics.com> for supplying this patch
+
+There is a kernel memory leak observed when the proc file /proc/yaffs
+is read. This reason is that in yaffs_proc_open, single_open is called
+and the respective release function is not called during release.
+
+Fix with correct release function - single_release().
+
+Signed-off-by: Jisheng Zhang <Jisheng.Zhang@synaptics.com>
+Signed-off-by: Quanyang Wang <quanyang.wang@windriver.com>
+Signed-off-by: Bruce Ashfield <bruce.ashfield@gmail.com>
+---
+ fs/yaffs2/yaffs_vfs.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/fs/yaffs2/yaffs_vfs.c b/fs/yaffs2/yaffs_vfs.c
+index d3f89e07401b..4fbd0a42ff3d 100644
+--- a/fs/yaffs2/yaffs_vfs.c
++++ b/fs/yaffs2/yaffs_vfs.c
+@@ -3697,6 +3697,7 @@ static struct file_operations procfs_ops = {
+ 	.open  = yaffs_proc_open,
+ 	.read  = seq_read,
+ 	.write = yaffs_proc_write,
++	.release = single_release,
+ };
+ 
+ static int yaffs_procfs_init(void)
+-- 
+2.17.1
+

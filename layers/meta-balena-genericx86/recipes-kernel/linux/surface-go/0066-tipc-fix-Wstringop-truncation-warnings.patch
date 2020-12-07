@@ -1,0 +1,38 @@
+From b7446162672b19f1092cbcf94a6b387c4e57ba0b Mon Sep 17 00:00:00 2001
+From: Wenlin Kang <wenlin.kang@windriver.com>
+Date: Sun, 15 Nov 2020 18:58:09 -0800
+Subject: [PATCH 66/82] tipc: fix -Wstringop-truncation warnings
+
+Replace strncpy() with strscpy(), fixes the following warning:
+
+In function 'bearer_name_validate',
+    inlined from 'tipc_enable_bearer' at net/tipc/bearer.c:246:7:
+net/tipc/bearer.c:143:2: warning: 'strncpy' specified bound 32 equals destination size [-Wstringop-truncation]
+  strncpy(name_copy, name, TIPC_MAX_BEARER_NAME);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Signed-off-by: Wenlin Kang <wenlin.kang@windriver.com>
+Signed-off-by: Bruce Ashfield <bruce.ashfield@gmail.com>
+---
+ net/tipc/bearer.c | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+diff --git a/net/tipc/bearer.c b/net/tipc/bearer.c
+index e366ec9a7e4d..c5896730e393 100644
+--- a/net/tipc/bearer.c
++++ b/net/tipc/bearer.c
+@@ -139,10 +139,7 @@ static int bearer_name_validate(const char *name,
+ 	u32 if_len;
+ 
+ 	/* copy bearer name & ensure length is OK */
+-	name_copy[TIPC_MAX_BEARER_NAME - 1] = 0;
+-	/* need above in case non-Posix strncpy() doesn't pad with nulls */
+-	strncpy(name_copy, name, TIPC_MAX_BEARER_NAME);
+-	if (name_copy[TIPC_MAX_BEARER_NAME - 1] != 0)
++	if (strscpy(name_copy, name, TIPC_MAX_BEARER_NAME) < 0)
+ 		return 0;
+ 
+ 	/* ensure all component parts of bearer name are present */
+-- 
+2.17.1
+

@@ -1,15 +1,18 @@
 inherit kernel-resin
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/files:${THISDIR}/genericx86-64-ext:"
+FILESEXTRAPATHS_prepend := "${THISDIR}/files:${THISDIR}/genericx86-64-ext:${THISDIR}/surface-go:"
 
 SRC_URI += " \
     file://0001-Add-support-for-Quectel-EC20-modem.patch \
     file://0002-Revert-random-fix-crng_ready-test.patch \
+"
+
+# Rest of the machines that are on kernel 5.8.18
+# already have these patches
+SRC_URI_append_surface-pro-6 = " \
     file://0007-BUGFIX-iwlwifi-mvm-Allow-multicast-~ta-frames-only-when-associated.patch \
     file://0008-BUGFIX-iwlwifi-mvm-Allow-multicast-~ta-frames-only-when-authorized.patch \
     file://0001-ovl-fix-regression-caused-by-overlapping-layers-dete.patch \
-"
-SRC_URI_append_surface-pro-6 = " \
     file://0003-ipts.patch \
 "
 # SP6 is still on a kernel older than 5.2 so no need for the overlay regression fix patch
@@ -24,6 +27,31 @@ do_kernel_configme[depends] += "virtual/${TARGET_PREFIX}gcc:do_populate_sysroot"
 do_kernel_configme[depends] += "bc-native:do_populate_sysroot bison-native:do_populate_sysroot"
 
 COMPATIBLE_MACHINE_smartcube-kbox-a250 = "smartcube-kbox-a250"
+
+RESIN_CONFIGS_append_surface-go = " sgo2_camera"
+RESIN_CONFIGS[sgo2_camera] = " \
+    CONFIG_MEMSTICK=m \
+    CONFIG_MEMSTICK_REALTEK_PCI=m \
+    CONFIG_PINCTRL_INTEL=y \
+    CONFIG_V4L2_FWNODE=m \
+    CONFIG_PINCTRL_SUNRISEPOINT=y \
+    CONFIG_MEDIA_PCI_SUPPORT=y \
+    CONFIG_VIDEO_IPU3_CIO2=m \
+    CONFIG_CIO2_BRIDGE=y \
+    CONFIG_VIDEOBUF2_DMA_SG=m \
+    CONFIG_VIDEO_OV5693=m \
+    CONFIG_STAGING_MEDIA=y \
+    CONFIG_VIDEO_IPU3_IMGU=m \
+    CONFIG_IOMMU_IOVA=m \
+    CONFIG_ARCH_HAS_COPY_MC=y \
+    CONFIG_PMIC_OPREGION=y \
+    CONFIG_TPS68470_PMIC_OPREGION=y \
+    CONFIG_REGMAP_I2C=y \
+    CONFIG_I2C_DESIGNWARE_CORE=y \
+    CONFIG_GPIO_TPS68470=y \
+    CONFIG_MFD_CORE=y \
+    CONFIG_MFD_TPS68470=y \
+"
 
 #
 # EHCI drivers
@@ -340,8 +368,8 @@ RESIN_CONFIGS[ch341] = " \
 
 RESIN_CONFIGS_append_genericx86-64 = " i2c_designware"
 RESIN_CONFIGS[i2c_designware] = " \
-    CONFIG_I2C_DESIGNWARE_PLATFORM=m \
-    CONFIG_I2C_DESIGNWARE_PCI=m \
+    CONFIG_I2C_DESIGNWARE_PLATFORM=y \
+    CONFIG_I2C_DESIGNWARE_PCI=y \
 "
 
 # requested by user for mounting HFS drives
@@ -389,3 +417,89 @@ RESIN_CONFIGS_append_genericx86-64-ext = " no-debug-info"
 RESIN_CONFIGS[no-debug-info] ?= " \
     CONFIG_DEBUG_INFO=n \
     "
+
+# We get these patches from https://github.com/libcamera-org/linux/tree/surface/v5.8.18-yocto
+SRC_URI_append_surface-go = " \
+    file://0001-ARM-LPAE-Invalidate-the-TLB-for-module-addresses-dur.patch \
+    file://0002-arm-ARM-EABI-socketcall.patch \
+    file://0003-vexpress-Pass-LOADADDR-to-Makefile.patch \
+    file://0004-arm-Makefile-Fix-systemtap.patch \
+    file://0005-malta-uhci-quirks-make-allowance-for-slow-4k-e-c.patch \
+    file://0006-4kc-cache-tlb-hazard-tlbp-cache-coherency.patch \
+    file://0007-mips-Kconfig-add-QEMUMIPS64-option.patch \
+    file://0008-mips-vdso-fix-jalr-t9-crash-in-vdso-code.patch \
+    file://0009-powerpc-Add-unwind-information-for-SPE-registers-of-.patch \
+    file://0010-powerpc-kexec-fix-for-powerpc64.patch \
+    file://0011-powerpc-add-crtsavres.o-to-archprepare-for-kbuild.patch \
+    file://0012-powerpc-Disable-attribute-alias-warnings-from-gcc8.patch \
+    file://0013-powerpc-ptrace-Disable-array-bounds-warning-with-gcc.patch \
+    file://0014-crtsavres-fixups-for-5.4.patch \
+    file://0015-Revert-platform-x86-wmi-Destroy-on-cleanup-rather-th.patch \
+    file://0016-arm-serialize-build-targets.patch \
+    file://0017-powerpc-serialize-image-targets.patch \
+    file://0018-kbuild-exclude-meta-directory-from-distclean-process.patch \
+    file://0019-modpost-mask-trivial-warnings.patch \
+    file://0020-menuconfig-mconf-cfg-Allow-specification-of-ncurses-.patch \
+    file://0021-mount_root-clarify-error-messages-for-when-no-rootfs.patch \
+    file://0022-check-console-device-file-on-fs-when-booting.patch \
+    file://0023-nfs-Allow-default-io-size-to-be-configured.patch \
+    file://0024-Resolve-jiffies-wrapping-about-arp.patch \
+    file://0025-vmware-include-jiffies.h.patch \
+    file://0026-compiler.h-Undef-before-redefining-__attribute_const.patch \
+    file://0027-uvesafb-print-error-message-when-task-timeout-occurs.patch \
+    file://0028-uvesafb-provide-option-to-specify-timeout-for-task-c.patch \
+    file://0029-linux-yocto-Handle-bin-awk-issues.patch \
+    file://0030-arm64-perf-fix-backtrace-for-AAPCS-with-FP-enabled.patch \
+    file://0031-initramfs-allow-an-optional-wrapper-script-around-in.patch \
+    file://0032-yaffs2-import-git-revision-b4ce1bb-jan-2020.patch \
+    file://0033-yaffs2-adjust-to-proper-location-of-MS_RDONLY.patch \
+    file://0034-fs-yaffs2-replace-CURRENT_TIME-by-other-appropriate-.patch \
+    file://0035-Yaffs-check-oob-size-before-auto-selecting-Yaffs1.patch \
+    file://0036-yaffs-Avoid-setting-any-ACL-releated-xattr.patch \
+    file://0037-yaffs2-fix-memory-leak-in-mount-umount.patch \
+    file://0038-yaffs-Fix-build-failure-by-handling-inode-i_version-.patch \
+    file://0039-yaffs-repair-yaffs_get_mtd_device.patch \
+    file://0040-yaffs-add-strict-check-when-call-yaffs_internal_read.patch \
+    file://0041-yaffs2-fix-memory-leak-when-proc-yaffs-is-read.patch \
+    file://0042-yaffs2-v5.6-build-fixups.patch \
+    file://0043-yaffs-fix-misplaced-variable-declaration.patch \
+    file://0044-aufs5-aufs5-kbuild.patch \
+    file://0045-aufs5-aufs5-base.patch \
+    file://0046-aufs5-aufs5-mmap.patch \
+    file://0047-aufs5-aufs5-standalone.patch \
+    file://0048-aufs5-core.patch \
+    file://0049-FAT-Add-CONFIG_VFAT_FS_NO_DUALNAMES-option.patch \
+    file://0050-FAT-Add-CONFIG_VFAT_NO_CREATE_WITH_LONGNAMES-option.patch \
+    file://0051-FAT-Added-FAT_NO_83NAME.patch \
+    file://0052-fat-don-t-use-obsolete-random32-call-in-namei_vfat.patch \
+    file://0053-perf-force-include-of-stdbool.h.patch \
+    file://0054-perf-add-libperl-not-found-warning.patch \
+    file://0055-perf-change-root-to-prefix-for-python-install.patch \
+    file://0056-perf-add-sgidefs.h-to-for-mips-builds.patch \
+    file://0057-perf-add-SLANG_INC-for-slang.h.patch \
+    file://0058-perf-fix-bench-numa-compilation.patch \
+    file://0059-perf-mips64-Convert-__u64-to-unsigned-long-long.patch \
+    file://0060-perf-x86-32-explicitly-include-errno.h.patch \
+    file://0061-perf-perf-can-not-parser-the-backtrace-of-app-in-the.patch \
+    file://0062-defconfigs-drop-obselete-options.patch \
+    file://0063-arm64-perf-Fix-wrong-cast-that-may-cause-wrong-trunc.patch \
+    file://0064-perf-Alias-SYS_futex-with-SYS_futex_time64-on-32-bit.patch \
+    file://0065-ext4-fix-Wstringop-truncation-warnings.patch \
+    file://0066-tipc-fix-Wstringop-truncation-warnings.patch \
+    file://0067-media-device-property-Add-a-function-to-test-is-a-fw.patch \
+    file://0068-media-v4l2-async-Pass-notifier-pointer-to-match-func.patch \
+    file://0069-property-Add-support-to-fwnode_graph_get_endpoint_by.patch \
+    file://0070-property-Return-true-in-fwnode_device_is_available-f.patch \
+    file://0071-software_node-Fix-failure-to-put-and-get-references-.patch \
+    file://0072-software_node-Enforce-parent-before-child-ordering-o.patch \
+    file://0073-software_node-Alter-software_node_unregister_nodes-t.patch \
+    file://0074-software_node-amend-software_node_unregister_node_gr.patch \
+    file://0075-software_node-Add-support-for-fwnode_graph-family-of.patch \
+    file://0076-lib-test_printf.c-Use-helper-function-to-unwind-arra.patch \
+    file://0077-ipu3-cio2-Add-T-entry-to-MAINTAINERS.patch \
+    file://0078-ipu3-cio2-Rename-ipu3-cio2.c-to-allow-module-to-be-b.patch \
+    file://0079-media-v4l2-core-v4l2-async-Check-possible-match-in-m.patch \
+    file://0080-acpi-Add-acpi_dev_get_next_match_dev-and-macro-to-it.patch \
+    file://0081-ipu3-cio2-Add-functionality-allowing-software_node-c.patch \
+    file://0082-ov5693-camera-sensor-driver.patch \
+"

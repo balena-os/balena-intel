@@ -1,0 +1,146 @@
+From cc2610a95f42625a562952d31731adbbd0761538 Mon Sep 17 00:00:00 2001
+From: Quanyang Wang <quanyang.wang@windriver.com>
+Date: Tue, 3 Dec 2019 17:01:18 +0800
+Subject: [PATCH 40/82] yaffs: add strict check when call
+ yaffs_internal_read_super
+
+When kernel booting, mount_block_root will be called to judge
+the filesystem type of root device. Then .mount function in file_system_type
+structure will do the check operation. But yaffs filesystem has a
+relaxed examination because as a filesystem for NAND Flash, it doesn't
+examinate whether the root device is the MTD NAND device. This results
+that yaffs filesystem will do mount operation even though the root device
+is a MMC card with a btrfs filesystem, and will crash kernel after
+mounting failed. The crash log is as below:
+
+md: Waiting for all devices to be available before autodetect
+md: If you don't use raid, use raid=noautodetect
+md: Autodetecting RAID arrays.
+md: autorun ...
+md: ... autorun DONE.
+yaffs: dev is 187695107 name is "mmcblk0p3" rw
+yaffs: passed flags ""
+yaffs: dev is 187695107 name is "mmcblk0p3" rw
+yaffs: passed flags ""
+------------[ cut here ]------------
+kernel BUG at fs/yaffs2/yaffs_getblockinfo.h:30!
+Internal error: Oops - BUG: 0 [#1] PREEMPT SMP
+Modules linked in:
+CPU: 3 PID: 1 Comm: swapper/0 Not tainted 5.2.24-yocto-standard+ #250
+Hardware name: ZynqMP ZCU102 Rev1.0 (DT)
+pstate: 80000005 (Nzcv daif -PAN -UAO)
+pc : yaffs_rd_chunk_tags_nand+0xf0/0x110
+lr : yaffs_rd_chunk_tags_nand+0x108/0x110
+sp : ffffff801003b770
+x29: ffffff801003b770 x28: ffffffc876fe8000
+x27: 00000000000c0000 x26: 0000000000000000
+x25: 00000000ffffffe1 x24: 0000000000010000
+x23: 0000000000000000 x22: ffffff8011228000
+x21: 000000000000005f x20: ffffff801003b890
+x19: ffffffc876fe8000 x18: ffffffffffffffff
+x17: 0000000000000000 x16: 0000000000000000
+x15: ffffff80112285c8 x14: ffffff801137d228
+x13: ffffff801137ce74 x12: ffffff8011246000
+x11: 0000000000000000 x10: ffffff801137c000
+x9 : 0000000000000000 x8 : 0000000000000007
+x7 : 000000000000015c x6 : ffffff801137c490
+x5 : 0000000000000000 x4 : 0000000000000000
+x3 : 00000000ffffffff x2 : 50c80792e0663400
+x1 : 0000000000000000 x0 : 0000000000000037
+Call trace:
+ yaffs_rd_chunk_tags_nand+0xf0/0x110
+ yaffs_summary_read+0x10c/0x2e0
+ yaffs2_scan_backwards+0x28c/0xf58
+ yaffs_guts_initialise+0x71c/0x7a0
+ yaffs_internal_read_super.isra.20+0x4ec/0x838
+ yaffs2_internal_read_super_mtd+0x2c/0x48
+ mount_bdev+0x1a4/0x1e0
+ yaffs2_mount+0x44/0x58
+ legacy_get_tree+0x34/0x60
+ vfs_get_tree+0x34/0x120
+ do_mount+0x708/0x980
+ ksys_mount+0x9c/0x110
+ mount_block_root+0x128/0x29c
+ mount_root+0x148/0x17c
+ prepare_namespace+0x178/0x1c0
+ kernel_init_freeable+0x370/0x390
+ kernel_init+0x18/0x110
+ ret_from_fork+0x10/0x1c
+Code: d65f03c0 f00069c0 b9440400 37f00060 (d4210000)
+---[ end trace 68aa0995bdf59f76 ]---
+BUG: sleeping function called from invalid context at ./include/linux/percpu-rwsem.h:34
+in_atomic(): 1, irqs_disabled(): 128, pid: 1, name: swapper/0
+Preemption disabled at:
+[<ffffff80100a4598>] debug_exception_enter+0x30/0x40
+CPU: 3 PID: 1 Comm: swapper/0 Tainted: G      D           5.2.24-yocto-standard+ #250
+Hardware name: ZynqMP ZCU102 Rev1.0 (DT)
+Call trace:
+ dump_backtrace+0x0/0x148
+ show_stack+0x24/0x30
+ dump_stack+0x98/0xbc
+ ___might_sleep+0x130/0x188
+ __might_sleep+0x58/0x90
+ exit_signals+0x44/0x258
+ do_exit+0xb4/0xa38
+ die+0x1bc/0x1e0
+ bug_handler+0x48/0x98
+ call_break_hook+0x7c/0xa8
+ brk_handler+0x28/0x68
+ do_debug_exception+0xc4/0x188
+ el1_dbg+0x18/0x8c
+ yaffs_rd_chunk_tags_nand+0xf0/0x110
+ yaffs_summary_read+0x10c/0x2e0
+ yaffs2_scan_backwards+0x28c/0xf58
+ yaffs_guts_initialise+0x71c/0x7a0
+ yaffs_internal_read_super.isra.20+0x4ec/0x838
+ yaffs2_internal_read_super_mtd+0x2c/0x48
+ mount_bdev+0x1a4/0x1e0
+ yaffs2_mount+0x44/0x58
+ legacy_get_tree+0x34/0x60
+ vfs_get_tree+0x34/0x120
+ do_mount+0x708/0x980
+ ksys_mount+0x9c/0x110
+ mount_block_root+0x128/0x29c
+ mount_root+0x148/0x17c
+ prepare_namespace+0x178/0x1c0
+ kernel_init_freeable+0x370/0x390
+ kernel_init+0x18/0x110
+ ret_from_fork+0x10/0x1c
+note: swapper/0[1] exited with preempt_count 1
+Kernel panic - not syncing: Attempted to kill init! exitcode=0x0000000b
+SMP: stopping secondary CPUs
+Kernel Offset: disabled
+CPU features: 0x0002,20002004
+Memory Limit: none
+---[ end Kernel panic - not syncing: Attempted to kill init! exitcode=0x0000000b ]---
+
+Use yaffs_get_mtd_device to add strict check.
+
+Signed-off-by: Quanyang Wang <quanyang.wang@windriver.com>
+Signed-off-by: Bruce Ashfield <bruce.ashfield@gmail.com>
+---
+ fs/yaffs2/yaffs_vfs.c | 7 ++-----
+ 1 file changed, 2 insertions(+), 5 deletions(-)
+
+diff --git a/fs/yaffs2/yaffs_vfs.c b/fs/yaffs2/yaffs_vfs.c
+index 1ddc85b3200d..d3f89e07401b 100644
+--- a/fs/yaffs2/yaffs_vfs.c
++++ b/fs/yaffs2/yaffs_vfs.c
+@@ -2960,12 +2960,9 @@ static struct super_block *yaffs_internal_read_super(int yaffs_version,
+ 		MAJOR(sb->s_dev), MINOR(sb->s_dev),
+ 		yaffs_devname(sb, devname_buf));
+ 
+-	/* Get the device */
+-	mtd = get_mtd_device(NULL, MINOR(sb->s_dev));
++
++	mtd = yaffs_get_mtd_device(sb->s_dev);
+ 	if (IS_ERR(mtd)) {
+-		yaffs_trace(YAFFS_TRACE_ALWAYS,
+-			"yaffs: MTD device %u either not valid or unavailable",
+-			MINOR(sb->s_dev));
+ 		return NULL;
+ 	}
+ 
+-- 
+2.17.1
+

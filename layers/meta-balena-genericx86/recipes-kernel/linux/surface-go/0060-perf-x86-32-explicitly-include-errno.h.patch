@@ -1,0 +1,38 @@
+From 5e065477c48da3576106edd26336c47813e94386 Mon Sep 17 00:00:00 2001
+From: Bruce Ashfield <bruce.ashfield@windriver.com>
+Date: Mon, 21 Aug 2017 13:52:53 -0400
+Subject: [PATCH 60/82] perf: x86-32: explicitly include <errno.h>
+
+The 32bit x86 perf build does not find the system definitions of error
+return values, hence we end up with:
+
+| In file included from util/libunwind/x86_32.c:32:0:
+| util/libunwind/../../arch/x86/util/unwind-libunwind.c: In function 'libunwind__x86_reg_id':
+| util/libunwind/../../arch/x86/util/unwind-libunwind.c:109:11: error: 'EINVAL' undeclared (first use in this function); did you mean 'UNW_EINVAL'?
+|    return -EINVAL;
+|            ^~~~~~
+|            UNW_EINVAL
+
+By explicitly including errno.h, we can fix this build without impacting
+other architectures.
+
+Signed-off-by: Bruce Ashfield <bruce.ashfield@windriver.com>
+---
+ tools/perf/util/libunwind/x86_32.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/tools/perf/util/libunwind/x86_32.c b/tools/perf/util/libunwind/x86_32.c
+index 21c216c40a3b..420c690a3c54 100644
+--- a/tools/perf/util/libunwind/x86_32.c
++++ b/tools/perf/util/libunwind/x86_32.c
+@@ -21,6 +21,7 @@
+ #define LIBUNWIND__ARCH_REG_IP PERF_REG_X86_IP
+ #define LIBUNWIND__ARCH_REG_SP PERF_REG_X86_SP
+ 
++#include <errno.h>
+ #include "unwind.h"
+ #include "libunwind-x86.h"
+ #include <../../../../arch/x86/include/uapi/asm/perf_regs.h>
+-- 
+2.17.1
+

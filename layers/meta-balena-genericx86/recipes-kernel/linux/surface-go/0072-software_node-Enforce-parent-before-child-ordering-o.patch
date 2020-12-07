@@ -1,0 +1,48 @@
+From 7d401c0cb66fc01124933bb2fbcf27246e1d8ee7 Mon Sep 17 00:00:00 2001
+From: Daniel Scally <djrscally@gmail.com>
+Date: Sun, 25 Oct 2020 22:49:08 +0000
+Subject: [PATCH 72/82] software_node: Enforce parent before child ordering of
+ nodes array for software_node_register_nodes()
+
+Registering software_nodes with the .parent member set to point to a
+currently unregistered software_node has the potential for problems,
+so enforce parent -> child ordering in arrays passed to this function.
+
+Suggested-by: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
+---
+ drivers/base/swnode.c | 15 +++++++++++----
+ 1 file changed, 11 insertions(+), 4 deletions(-)
+
+diff --git a/drivers/base/swnode.c b/drivers/base/swnode.c
+index 54a56723bcdd..80471de5646a 100644
+--- a/drivers/base/swnode.c
++++ b/drivers/base/swnode.c
+@@ -700,14 +700,21 @@ int software_node_register_nodes(const struct software_node *nodes)
+ 	int i;
+ 
+ 	for (i = 0; nodes[i].name; i++) {
++		if (nodes[i].parent)
++			if (!software_node_to_swnode(nodes[i].parent)) {
++				ret = -EINVAL;
++				goto err_unregister_nodes;
++			}
++
+ 		ret = software_node_register(&nodes[i]);
+-		if (ret) {
+-			software_node_unregister_nodes(nodes);
+-			return ret;
+-		}
++		if (ret)
++			goto err_unregister_nodes;
+ 	}
+ 
+ 	return 0;
++err_unregister_nodes:
++	software_node_unregister_nodes(nodes);
++	return ret;
+ }
+ EXPORT_SYMBOL_GPL(software_node_register_nodes);
+ 
+-- 
+2.17.1
+

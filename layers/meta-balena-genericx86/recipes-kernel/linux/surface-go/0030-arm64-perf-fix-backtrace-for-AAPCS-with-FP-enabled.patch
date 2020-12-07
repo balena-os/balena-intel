@@ -1,0 +1,93 @@
+From 284e3162f1b8e2308074662be3e5d6197771db2e Mon Sep 17 00:00:00 2001
+From: Fang Jia <fang.jia@windriver.com>
+Date: Fri, 28 Dec 2018 16:28:34 +0800
+Subject: [PATCH 30/82] arm64/perf: fix backtrace for AAPCS with FP enabled
+
+This change is for arm64 platform compat mode.
+The change for arm32 platform has been included in this commit "perf: fix
+backtrace for AAPCS with FP enabled".
+
+This change replaces code designed for the obsolete ARM APCS ABI, which
+causes failures of the perf backtrace logic unless the gcc option
+-mapcs-frame is used to build all binaries on the platform.  This
+obsolete gcc option forces the compiler to include the stack pointer
+along with the frame pointer and link register in the stack frame
+for each funciton call. The current AAPCS ABI document, doesn't
+explicitly describe the frame structure when the gcc frame pointer
+option, -fno-omit-frame-pointer, is enabled. However, with this option
+enabled, examination of the emitted prologue instructions shows that
+1) R11 is used as the frame pointer,
+2) only the R11 and LR are saved onto the stack, not the stack pointer,
+3) after this prologue setup, the frame pointer, R11 points to the
+saved location of LR on the stack.
+
+The use of unsigned int arithmetic in the commit is required since
+the gcc emitted pointer arithmetic uses 8-byte pointer sizes, which are
+incorrect addresses for the 4-byte stack address size.
+
+Signed-off-by: Fang Jia <fang.jia@windriver.com>
+Reviewed-by: Jiwei Sun <jiwei.sun@windriver.com>
+Signed-off-by: De Huo <de.huo@windriver.com>
+---
+ arch/arm64/kernel/perf_callchain.c | 25 +++++++++++++++----------
+ 1 file changed, 15 insertions(+), 10 deletions(-)
+
+diff --git a/arch/arm64/kernel/perf_callchain.c b/arch/arm64/kernel/perf_callchain.c
+index b0e03e052dd1..1be96e3631ea 100644
+--- a/arch/arm64/kernel/perf_callchain.c
++++ b/arch/arm64/kernel/perf_callchain.c
+@@ -54,16 +54,22 @@ user_backtrace(struct frame_tail __user *tail,
+ 
+ #ifdef CONFIG_COMPAT
+ /*
+- * The registers we're interested in are at the end of the variable
+- * length saved register structure. The fp points at the end of this
+- * structure so the address of this struct is:
+- * (struct compat_frame_tail *)(xxx->fp)-1
++ * The AAPCS ABI, the most current replacing the obsolete APCS ABI,
++ * does not specifically describe the stack frame with respect to the
++ * frame pointer.  However, the examination of emitted prologue
++ * instructions for ARM implies that with -fno-omit-framepointer,
++ * register R11 is used as the frame pointer register and saved on the
++ * stack, with LR.
+  *
+- * This code has been adapted from the ARM OProfile support.
++ * After the prolog, the FP points to the location of the saved LR and
++ * FP+4 points to the previous frames FP as shown below:
++ *  Stack Hi Mem
++ *  (Value of FP)+4  Saved FP for caller
++ *  (Value of FP)    LR set by caller
++ *  Stack Lo Mem
+  */
+ struct compat_frame_tail {
+ 	compat_uptr_t	fp; /* a (struct compat_frame_tail *) in compat mode */
+-	u32		sp;
+ 	u32		lr;
+ } __attribute__((packed));
+ 
+@@ -91,11 +97,10 @@ compat_user_backtrace(struct compat_frame_tail __user *tail,
+ 	 * Frame pointers should strictly progress back up the stack
+ 	 * (towards higher addresses).
+ 	 */
+-	if (tail + 1 >= (struct compat_frame_tail __user *)
+-			compat_ptr(buftail.fp))
++	if ((u32)tail + 4 >= buftail.fp)
+ 		return NULL;
+ 
+-	return (struct compat_frame_tail __user *)compat_ptr(buftail.fp) - 1;
++	return (struct compat_frame_tail __user *)(buftail.fp - 4);
+ }
+ #endif /* CONFIG_COMPAT */
+ 
+@@ -123,7 +128,7 @@ void perf_callchain_user(struct perf_callchain_entry_ctx *entry,
+ 		/* AARCH32 compat mode */
+ 		struct compat_frame_tail __user *tail;
+ 
+-		tail = (struct compat_frame_tail __user *)regs->compat_fp - 1;
++		tail = (struct compat_frame_tail __user *)(regs->compat_fp - 4);
+ 
+ 		while ((entry->nr < entry->max_stack) &&
+ 			tail && !((unsigned long)tail & 0x3))
+-- 
+2.17.1
+

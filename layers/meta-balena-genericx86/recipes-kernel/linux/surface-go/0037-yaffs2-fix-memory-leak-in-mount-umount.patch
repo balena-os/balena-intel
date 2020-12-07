@@ -1,0 +1,49 @@
+From e44b2ec1f33f3889542ca3893453dbd695b98f78 Mon Sep 17 00:00:00 2001
+From: czou <cao.zou@windriver.com>
+Date: Mon, 13 Jul 2015 09:48:03 +0800
+Subject: [PATCH 37/82] yaffs2: fix memory leak in mount/umount
+
+when using yaffs2 filesystem, after umounting, yaffs_put_super
+function doesn't free the context_os memory, it is malloced in
+yaffs_internal_read_super.
+
+unreferenced object 0xd9103980 (size 64):
+  comm "mount", pid 5694, jiffies 159571 (age 45.150s)
+  hex dump (first 32 bytes):
+    80 39 10 d9 80 39 10 d9 00 b0 83 dc 00 b0 07 d9 .9...9..........
+    00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ................
+  backtrace:
+    [<c0131b20>] kmem_cache_alloc_trace+0x188/0x350
+    [<c0386720>] yaffs_internal_read_super.isra.18+0x1d0/0x7e4
+    [<c0386d58>] yaffs2_internal_read_super_mtd+0x24/0x34
+    [<c0147110>] mount_bdev+0x178/0x1a0
+    [<c03835c8>] yaffs2_mount+0x28/0x30
+    [<c0147a74>] mount_fs+0x54/0x194
+    [<c01620e0>] vfs_kern_mount+0x58/0xf0
+    [<c0164b18>] do_mount+0x210/0xa48
+    [<c01656a4>] SyS_mount+0x94/0xc8
+    [<c000ec80>] ret_fast_syscall+0x0/0x30
+    [<ffffffff>] 0xffffffff
+
+Signed-off-by: czou <cao.zou@windriver.com>
+---
+ fs/yaffs2/yaffs_vfs.c | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/fs/yaffs2/yaffs_vfs.c b/fs/yaffs2/yaffs_vfs.c
+index 611ef43d9825..b0e3fd977c4a 100644
+--- a/fs/yaffs2/yaffs_vfs.c
++++ b/fs/yaffs2/yaffs_vfs.c
+@@ -2380,6 +2380,9 @@ static void yaffs_put_super(struct super_block *sb)
+ 		yaffs_dev_to_lc(dev)->spare_buffer = NULL;
+ 	}
+ 
++	if (dev->os_context)
++		kfree(dev->os_context);
++
+ 	kfree(dev);
+ 
+ 	yaffs_put_mtd_device(mtd);
+-- 
+2.17.1
+

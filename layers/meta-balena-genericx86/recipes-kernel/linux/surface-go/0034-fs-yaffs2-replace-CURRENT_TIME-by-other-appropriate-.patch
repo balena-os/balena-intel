@@ -1,0 +1,59 @@
+From d7490a01dff4ec9aabfe621c59891083e9821ccc Mon Sep 17 00:00:00 2001
+From: Kevin Hao <kexin.hao@windriver.com>
+Date: Fri, 25 Aug 2017 14:58:34 +0800
+Subject: [PATCH 34/82] fs: yaffs2: replace CURRENT_TIME by other appropriate
+ apis
+
+The macro CURRENT_TIME has already been deleted by commit bfe1c566453a
+("time: delete CURRENT_TIME_SEC and CURRENT_TIME"). So we need to
+replace all the uses of CURRENT_TIME by current_time() for filesystem
+times, and ktime_get_* function for others.
+
+Signed-off-by: Kevin Hao <kexin.hao@windriver.com>
+Signed-off-by: Bruce Ashfield <bruce.ashfield@windriver.com>
+---
+ fs/yaffs2/yaffs_vfs.c | 4 ++--
+ fs/yaffs2/yportenv.h  | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/fs/yaffs2/yaffs_vfs.c b/fs/yaffs2/yaffs_vfs.c
+index 34cdc58339a8..c1c80f7a33a0 100644
+--- a/fs/yaffs2/yaffs_vfs.c
++++ b/fs/yaffs2/yaffs_vfs.c
+@@ -268,7 +268,7 @@ MODULE_PARM(yaffs_gc_control, "i");
+ 
+ #if (LINUX_VERSION_CODE < KERNEL_VERSION(4,12,0))
+ #define update_dir_time(dir) do {\
+-		(dir)->i_ctime = (dir)->i_mtime = CURRENT_TIME; \
++		(dir)->i_ctime = (dir)->i_mtime = current_time(dir); \
+ 	} while (0)
+ #elif (LINUX_VERSION_CODE < KERNEL_VERSION(4,18,0))
+ #define update_dir_time(dir) do {\
+@@ -276,7 +276,7 @@ MODULE_PARM(yaffs_gc_control, "i");
+ 	} while (0)
+ #else
+ #define update_dir_time(dir) do {\
+-		(dir)->i_ctime = (dir)->i_mtime = current_kernel_time64(); \
++		(dir)->i_ctime = (dir)->i_mtime = current_time(dir); \
+ 	} while (0)
+ #endif
+ 
+diff --git a/fs/yaffs2/yportenv.h b/fs/yaffs2/yportenv.h
+index 68c239c07435..0185985cc8fc 100644
+--- a/fs/yaffs2/yportenv.h
++++ b/fs/yaffs2/yportenv.h
+@@ -62,9 +62,9 @@
+ 
+ #if (LINUX_VERSION_CODE > KERNEL_VERSION(2, 5, 0))
+ #if (LINUX_VERSION_CODE < KERNEL_VERSION(4,12,0))
+-#define Y_CURRENT_TIME CURRENT_TIME.tv_sec
++#define Y_CURRENT_TIME ktime_get_real_seconds()
+ #else
+-#define Y_CURRENT_TIME current_kernel_time().tv_sec
++#define Y_CURRENT_TIME ktime_get_real_seconds()
+ #endif
+ #define Y_TIME_CONVERT(x) (x).tv_sec
+ #else
+-- 
+2.17.1
+

@@ -1,0 +1,40 @@
+From c835a546f1ab3c4265670405980b87eaa713cd14 Mon Sep 17 00:00:00 2001
+From: Daniel Scally <djrscally@gmail.com>
+Date: Wed, 21 Oct 2020 22:25:03 +0100
+Subject: [PATCH 74/82] software_node: amend
+ software_node_unregister_node_group() to perform unregistration of array in
+ reverse order to be consistent with software_node_unregister_nodes()
+
+To maintain consistency with software_node_unregister_nodes(), reverse
+the order in which the software_node_unregister_node_group() function
+unregisters nodes.
+
+Suggested-by: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
+---
+ drivers/base/swnode.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+diff --git a/drivers/base/swnode.c b/drivers/base/swnode.c
+index a7d4684574a5..bf84ddfba845 100644
+--- a/drivers/base/swnode.c
++++ b/drivers/base/swnode.c
+@@ -783,11 +783,11 @@ void software_node_unregister_node_group(const struct software_node **node_group
+ 	if (!node_group)
+ 		return;
+ 
+-	for (i = 0; node_group[i]; i++) {
+-		swnode = software_node_to_swnode(node_group[i]);
+-		if (swnode)
+-			fwnode_remove_software_node(&swnode->fwnode);
+-	}
++	while (node_group[i]->name)
++		i++;
++
++	while (i--)
++		software_node_unregister(node_group[i]);
+ }
+ EXPORT_SYMBOL_GPL(software_node_unregister_node_group);
+ 
+-- 
+2.17.1
+

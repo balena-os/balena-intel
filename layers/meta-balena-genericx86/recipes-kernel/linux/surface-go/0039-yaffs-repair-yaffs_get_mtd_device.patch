@@ -1,0 +1,52 @@
+From 885504c1de29da1cc2ba656aa4488ae0a85c8827 Mon Sep 17 00:00:00 2001
+From: Quanyang Wang <quanyang.wang@windriver.com>
+Date: Tue, 3 Dec 2019 17:01:17 +0800
+Subject: [PATCH 39/82] yaffs: repair yaffs_get_mtd_device
+
+The function yaffs_get_mtd_device use wrong function to retrieve
+mtd_info structure (using yaffs_get_mtd_device itself will cause
+dead loop).
+
+Use get_mtd_device to do this.
+
+Signed-off-by: Quanyang Wang <quanyang.wang@windriver.com>
+Signed-off-by: Bruce Ashfield <bruce.ashfield@gmail.com>
+---
+ fs/yaffs2/yaffs_mtdif.c | 12 ++++++++++--
+ 1 file changed, 10 insertions(+), 2 deletions(-)
+
+diff --git a/fs/yaffs2/yaffs_mtdif.c b/fs/yaffs2/yaffs_mtdif.c
+index 2d34b017d08e..ecc53f6814b6 100644
+--- a/fs/yaffs2/yaffs_mtdif.c
++++ b/fs/yaffs2/yaffs_mtdif.c
+@@ -256,17 +256,25 @@ struct mtd_info * yaffs_get_mtd_device(dev_t sdev)
+ {
+ 	struct mtd_info *mtd;
+ 
+-	mtd = yaffs_get_mtd_device(sdev);
+-
+ 	/* Check it's an mtd device..... */
+ 	if (MAJOR(sdev) != MTD_BLOCK_MAJOR)
+ 		return NULL;	/* This isn't an mtd device */
+ 
++	/* Get the device */
++	mtd = get_mtd_device(NULL, MINOR(sdev));
++	if (IS_ERR_OR_NULL(mtd)) {
++		yaffs_trace(YAFFS_TRACE_ALWAYS,
++			"yaffs: MTD device %u either not valid or unavailable",
++			MINOR(sdev));
++		return NULL;
++	}
++
+ 	/* Check it's NAND */
+ 	if (mtd->type != MTD_NANDFLASH) {
+ 		yaffs_trace(YAFFS_TRACE_ALWAYS,
+ 			"yaffs: MTD device is not NAND it's type %d",
+ 			mtd->type);
++		put_mtd_device(mtd);
+ 		return NULL;
+ 	}
+ 
+-- 
+2.17.1
+

@@ -1,0 +1,50 @@
+From 0248cc0fb2dd34833536d4bbe5ef0b2d12cdff46 Mon Sep 17 00:00:00 2001
+From: Liang Li <liang.li@windriver.com>
+Date: Wed, 22 Aug 2012 16:04:50 +0800
+Subject: [PATCH 57/82] perf: add SLANG_INC for slang.h
+
+CFLAGS was previously hard coded to contain "-I/usr/include/slang" to
+work with hosts that have "/usr/include/slang/slang.h" as well as hosts
+that have "/usr/include/slang.h". This path can cause compile warnings
+like:
+
+cc1: warning: '/usr/include/slang' doesn't exists.
+
+or
+
+cc1: warning: include location "/usr/include/slang" is unsafe for
+cross-compilation [-Wpoison-system-directories]
+
+Then in some cases warnings become errors if WERROR is enabled hence
+build errors.
+
+To fix this issue, we can use -idirafter to downgrade the priority of the
+default hard coded path. We can also make the slang include directory
+a variable, to allow the user to specify SLANG_INC and set their own
+include location. And add a '=' prefix to indicate better
+compatibility with sysroot/cross compile cases.
+
+Signed-off-by: Liang Li <liang.li@windriver.com>
+Signed-off-by: Tom Zanussi <tom.zanussi@linux.intel.com>
+---
+ tools/perf/Makefile.config | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/tools/perf/Makefile.config b/tools/perf/Makefile.config
+index aee882a93237..c64de16b9769 100644
+--- a/tools/perf/Makefile.config
++++ b/tools/perf/Makefile.config
+@@ -709,7 +709,9 @@ ifndef NO_SLANG
+     endif
+   endif
+   ifndef NO_SLANG
+-    # Fedora has /usr/include/slang/slang.h, but ubuntu /usr/include/slang.h
++    # Some releases like Fedora have /usr/include/slang/slang.h instead of /usr/include/slang.h
++    SLANG_INC ?= -idirafter =/usr/include/slang
++    CFLAGS += $(SLANG_INC)
+     CFLAGS += -DHAVE_SLANG_SUPPORT
+     EXTLIBS += -lslang
+     $(call detected,CONFIG_SLANG)
+-- 
+2.17.1
+

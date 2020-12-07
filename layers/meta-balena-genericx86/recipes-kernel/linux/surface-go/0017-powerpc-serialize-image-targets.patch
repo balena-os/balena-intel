@@ -1,0 +1,31 @@
+From ffa570b50a3726ac36ff9a8336aca4a050d35d72 Mon Sep 17 00:00:00 2001
+From: Bruce Ashfield <bruce.ashfield@windriver.com>
+Date: Tue, 10 Jun 2008 21:58:45 -0400
+Subject: [PATCH 17/82] powerpc: serialize image targets
+
+The image targets need to trigger after we've build all their
+dependencies. To do this we add .NOTPARALLEL and  ensure that
+the image targets are not built in parallel.
+
+Signed-off-by: Bruce Ashfield <bruce.ashfield@windriver.com>
+---
+ arch/powerpc/Makefile | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/arch/powerpc/Makefile b/arch/powerpc/Makefile
+index 059ccf161359..03c32b1a57f8 100644
+--- a/arch/powerpc/Makefile
++++ b/arch/powerpc/Makefile
+@@ -290,6 +290,9 @@ PHONY += $(BOOT_TARGETS1) $(BOOT_TARGETS2)
+ 
+ boot := arch/$(ARCH)/boot
+ 
++# These targets cannot be built in parallel
++.NOTPARALLEL: $(BOOT_TARGETS)
++
+ $(BOOT_TARGETS1): vmlinux
+ 	$(Q)$(MAKE) $(build)=$(boot) $(patsubst %,$(boot)/%,$@)
+ $(BOOT_TARGETS2): vmlinux
+-- 
+2.17.1
+

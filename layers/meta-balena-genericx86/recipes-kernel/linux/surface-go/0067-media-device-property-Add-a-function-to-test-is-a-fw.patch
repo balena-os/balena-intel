@@ -1,0 +1,45 @@
+From 99da8c2204e26968c75b801aa998112e27696b1c Mon Sep 17 00:00:00 2001
+From: Laurent Pinchart <laurent.pinchart+renesas@ideasonboard.com>
+Date: Wed, 1 Jul 2020 08:21:37 +0200
+Subject: [PATCH 67/82] media: device property: Add a function to test is a
+ fwnode is a graph endpoint
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Drivers may need to test if a fwnode is a graph endpoint. To avoid
+hand-written solutions that wouldn't work for all fwnode types, add a
+new fwnode_graph_is_endpoint() function for this purpose. We don't need
+to wire it up to different backends for OF and ACPI for now, as the
+implementation can simply be based on checkout the presence of a
+remote-endpoint property.
+
+Signed-off-by: Laurent Pinchart <laurent.pinchart+renesas@ideasonboard.com>
+Reviewed-by: Niklas Söderlund <niklas.soderlund+renesas@ragnatech.se>
+Reviewed-by: Lad Prabhakar <prabhakar.mahadev-lad.rj@bp.renesas.com>
+Reviewed-by: Kieran Bingham <kieran.bingham+renesas@ideasonboard.com>
+Signed-off-by: Sakari Ailus <sakari.ailus@linux.intel.com>
+Signed-off-by: Mauro Carvalho Chehab <mchehab+huawei@kernel.org>
+---
+ include/linux/property.h | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/include/linux/property.h b/include/linux/property.h
+index 10d03572f52e..9f805c442819 100644
+--- a/include/linux/property.h
++++ b/include/linux/property.h
+@@ -389,6 +389,11 @@ struct fwnode_handle *
+ fwnode_graph_get_remote_node(const struct fwnode_handle *fwnode, u32 port,
+ 			     u32 endpoint);
+ 
++static inline bool fwnode_graph_is_endpoint(struct fwnode_handle *fwnode)
++{
++	return fwnode_property_present(fwnode, "remote-endpoint");
++}
++
+ /*
+  * Fwnode lookup flags
+  *
+-- 
+2.17.1
+
