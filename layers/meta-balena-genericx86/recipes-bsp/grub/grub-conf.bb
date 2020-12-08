@@ -12,14 +12,16 @@ inherit deploy nopackages
 
 INHIBIT_DEFAULT_DEPS = "1"
 
+MACHINE_SPECIFIC_EXTRA_CMDLINE_surface-go = "acpi_enforce_resources=lax "
+
 do_configure[noexec] = '1'
 do_compile() {
     sed -e 's/@@TIMEOUT@@/3/' \
-        -e 's/@@KERNEL_CMDLINE@@/rootwait intel_idle.max_cstate=1/' \
+        -e 's/@@KERNEL_CMDLINE@@/rootwait intel_idle.max_cstate=1 ${MACHINE_SPECIFIC_EXTRA_CMDLINE}/' \
         "${WORKDIR}/grub.cfg_internal_template" > "${B}/grub.cfg_internal-dev"
 
     sed -e 's/@@TIMEOUT@@/3/' \
-        -e 's/@@KERNEL_CMDLINE@@/rootwait quiet loglevel=0 splash udev.log-priority=3 vt.global_cursor_default=0 intel_idle.max_cstate=1/' \
+        -e 's/@@KERNEL_CMDLINE@@/rootwait quiet loglevel=0 splash udev.log-priority=3 vt.global_cursor_default=0 intel_idle.max_cstate=1 ${MACHINE_SPECIFIC_EXTRA_CMDLINE}/' \
         "${WORKDIR}/grub.cfg_internal_template" > "${B}/grub.cfg_internal-prod"
 }
 do_install[noexec] = '1'
