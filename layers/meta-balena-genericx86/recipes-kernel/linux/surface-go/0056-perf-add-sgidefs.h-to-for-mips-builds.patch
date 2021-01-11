@@ -1,0 +1,47 @@
+From feadb76b9806a026f577e9030fd45458a9eec33b Mon Sep 17 00:00:00 2001
+From: Tom Zanussi <tom.zanussi@intel.com>
+Date: Tue, 10 Jul 2012 09:37:56 -0500
+Subject: [PATCH 56/82] perf: add sgidefs.h to for mips builds
+
+Allow Python.h to find the definitions it needs on mips i.e. get rid
+of the error: "_ABIN32" is not defined.
+
+Signed-off-by: Tom Zanussi <tom.zanussi@intel.com>
+---
+ tools/perf/scripts/python/Perf-Trace-Util/Context.c    | 4 ++++
+ tools/perf/util/scripting-engines/trace-event-python.c | 4 ++++
+ 2 files changed, 8 insertions(+)
+
+diff --git a/tools/perf/scripts/python/Perf-Trace-Util/Context.c b/tools/perf/scripts/python/Perf-Trace-Util/Context.c
+index 0b7096847991..9a50a7b6b56d 100644
+--- a/tools/perf/scripts/python/Perf-Trace-Util/Context.c
++++ b/tools/perf/scripts/python/Perf-Trace-Util/Context.c
+@@ -5,6 +5,10 @@
+  * Copyright (C) 2010 Tom Zanussi <tzanussi@gmail.com>
+  */
+ 
++#ifdef __mips__
++#include <sgidefs.h>
++#endif
++
+ #include <Python.h>
+ #include "../../../util/trace-event.h"
+ 
+diff --git a/tools/perf/util/scripting-engines/trace-event-python.c b/tools/perf/util/scripting-engines/trace-event-python.c
+index 739516fdf6e3..da28e69a2a25 100644
+--- a/tools/perf/util/scripting-engines/trace-event-python.c
++++ b/tools/perf/util/scripting-engines/trace-event-python.c
+@@ -19,6 +19,10 @@
+  *
+  */
+ 
++#ifdef __mips__
++#include <sgidefs.h>
++#endif
++
+ #include <Python.h>
+ 
+ #include <inttypes.h>
+-- 
+2.17.1
+

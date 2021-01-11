@@ -1,0 +1,32 @@
+From 60f2f7a8269adfe1a67e46ac9f5b51077935bbc6 Mon Sep 17 00:00:00 2001
+From: Khem Raj <raj.khem@gmail.com>
+Date: Fri, 4 May 2018 09:46:42 -0700
+Subject: [PATCH 12/82] powerpc: Disable attribute-alias warnings from gcc8
+
+Fixes
+alias between functions of incompatible types warnings
+which are new with gcc8
+
+Signed-off-by: Khem Raj <raj.khem@gmail.com>
+Signed-off-by: Bruce Ashfield <bruce.ashfield@windriver.com>
+---
+ arch/powerpc/kernel/Makefile | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/arch/powerpc/kernel/Makefile b/arch/powerpc/kernel/Makefile
+index 244542ae2a91..ba3834506042 100644
+--- a/arch/powerpc/kernel/Makefile
++++ b/arch/powerpc/kernel/Makefile
+@@ -4,7 +4,8 @@
+ #
+ 
+ ifdef CONFIG_PPC64
+-CFLAGS_prom_init.o	+= $(NO_MINIMAL_TOC)
++CFLAGS_prom_init.o	+= $(NO_MINIMAL_TOC) $(call cc-disable-warning, attribute-alias)
++CFLAGS_syscalls.o	+= $(call cc-disable-warning, attribute-alias)
+ endif
+ ifdef CONFIG_PPC32
+ CFLAGS_prom_init.o      += -fPIC
+-- 
+2.17.1
+

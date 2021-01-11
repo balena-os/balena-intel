@@ -46,6 +46,13 @@ FILES_${PN}-ipts-v102 = " \
     ${nonarch_base_libdir}/firmware/intel/ipts/* \
 "
 
+PACKAGES =+ "${PN}-ipu3-firmware"
+FILES_${PN}-ipu3-firmware = " \
+    ${nonarch_base_libdir}/firmware/intel/ipu3-fw.bin \
+    ${nonarch_base_libdir}/firmware/intel/irci_irci_ecr-master_20161208_0213_20170112_1500.bin \
+    ${nonarch_base_libdir}/firmware/LICENSE.ipu3_firmware \
+"
+
 do_install_append() {
     install -d ${D}${nonarch_base_libdir}/firmware/brcm/
     install -m 0644 ${WORKDIR}/raspbian-nf/brcm/brcmfmac43455-sdio.txt ${D}${nonarch_base_libdir}/firmware/brcm/

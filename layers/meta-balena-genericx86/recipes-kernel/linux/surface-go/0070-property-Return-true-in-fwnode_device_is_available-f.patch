@@ -1,0 +1,39 @@
+From 5434ddb0a2c3e0a73b451cd4cbf11d1ba0918f7e Mon Sep 17 00:00:00 2001
+From: Daniel Scally <djrscally@gmail.com>
+Date: Sat, 24 Oct 2020 22:42:28 +0100
+Subject: [PATCH 70/82] property: Return true in fwnode_device_is_available for
+ node types that do not implement this operation
+
+Some types of fwnode_handle do not implement the device_is_available()
+check, such as those created by software_nodes. There isn't really a
+meaningful way to check for the availability of a device that doesn't
+actually exist, so if the check isn't implemented just assume that the
+"device" is present.
+
+Suggested-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
+---
+ drivers/base/property.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/drivers/base/property.c b/drivers/base/property.c
+index fe9d2a58571f..e326e1947636 100644
+--- a/drivers/base/property.c
++++ b/drivers/base/property.c
+@@ -785,9 +785,14 @@ EXPORT_SYMBOL_GPL(fwnode_handle_put);
+ /**
+  * fwnode_device_is_available - check if a device is available for use
+  * @fwnode: Pointer to the fwnode of the device.
++ *
++ * For fwnode node types that don't implement the .device_is_available()
++ * operation, this function returns true.
+  */
+ bool fwnode_device_is_available(const struct fwnode_handle *fwnode)
+ {
++	if (!fwnode_has_op(fwnode, device_is_available))
++		return true;
+ 	return fwnode_call_bool_op(fwnode, device_is_available);
+ }
+ EXPORT_SYMBOL_GPL(fwnode_device_is_available);
+-- 
+2.17.1
+

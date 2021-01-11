@@ -1,0 +1,32 @@
+From 22a3d145ad3a7e33e98ff4c5faa9def66f4fd8d9 Mon Sep 17 00:00:00 2001
+From: Daniel Scally <djrscally@gmail.com>
+Date: Sat, 10 Oct 2020 23:07:22 +0100
+Subject: [PATCH 76/82] lib/test_printf.c: Use helper function to unwind array
+ of software_nodes
+
+Use the software_node_unregister_nodes() helper function to unwind this
+array in a cleaner way.
+
+Suggested-by: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
+---
+ lib/test_printf.c | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+diff --git a/lib/test_printf.c b/lib/test_printf.c
+index 7ac87f18a10f..7d60f24240a4 100644
+--- a/lib/test_printf.c
++++ b/lib/test_printf.c
+@@ -644,9 +644,7 @@ static void __init fwnode_pointer(void)
+ 	test(second_name, "%pfwP", software_node_fwnode(&softnodes[1]));
+ 	test(third_name, "%pfwP", software_node_fwnode(&softnodes[2]));
+ 
+-	software_node_unregister(&softnodes[2]);
+-	software_node_unregister(&softnodes[1]);
+-	software_node_unregister(&softnodes[0]);
++	software_node_unregister_nodes(softnodes);
+ }
+ 
+ static void __init
+-- 
+2.17.1
+

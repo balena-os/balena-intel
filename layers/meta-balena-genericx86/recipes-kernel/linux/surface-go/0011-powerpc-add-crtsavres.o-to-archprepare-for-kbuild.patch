@@ -1,0 +1,38 @@
+From d6945dc7a65d079e2620690be2886fbbf5ddca19 Mon Sep 17 00:00:00 2001
+From: Bruce Ashfield <bruce.ashfield@windriver.com>
+Date: Sun, 15 Feb 2009 16:57:14 -0500
+Subject: [PATCH 11/82] powerpc: add crtsavres.o to archprepare for kbuild
+
+upstream commit da3de6df33f5f42ff9dc40093fbc884f524c9a49 adds
+a dependency to all kernel modules to crtsavres. This
+ensures that out-of-line register saves/restores work when
+CONFIG_CC_OPTIMIZE_FOR_SIZE is enabled.
+
+What it didn't do was ensure that it was built when
+modules_prepare was run and hence out of tree powerpc kernel
+modules can't properly link.
+
+The fix is to add crtsavres.o to the archprepare rule in
+the arch/powerpc/Makefile
+
+Signed-off-by: Bruce Ashfield <bruce.ashfield@windriver.com>
+---
+ arch/powerpc/Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/arch/powerpc/Makefile b/arch/powerpc/Makefile
+index f310c32e88a4..495831988017 100644
+--- a/arch/powerpc/Makefile
++++ b/arch/powerpc/Makefile
+@@ -418,7 +418,7 @@ endif
+ archclean:
+ 	$(Q)$(MAKE) $(clean)=$(boot)
+ 
+-archprepare: checkbin
++archprepare: checkbin arch/powerpc/lib/crtsavres.o
+ 
+ archheaders:
+ 	$(Q)$(MAKE) $(build)=arch/powerpc/kernel/syscalls all
+-- 
+2.17.1
+

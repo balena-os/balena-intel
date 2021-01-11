@@ -1,0 +1,27 @@
+From b1a84e1c3abaf28f38431ee1d693a6f134a847aa Mon Sep 17 00:00:00 2001
+From: Bruce Ashfield <bruce.ashfield@gmail.com>
+Date: Tue, 15 Oct 2019 22:55:17 -0400
+Subject: [PATCH 14/82] crtsavres: fixups for 5.4+
+
+Signed-off-by: Bruce Ashfield <bruce.ashfield@gmail.com>
+---
+ arch/powerpc/Makefile | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/arch/powerpc/Makefile b/arch/powerpc/Makefile
+index 495831988017..059ccf161359 100644
+--- a/arch/powerpc/Makefile
++++ b/arch/powerpc/Makefile
+@@ -418,6 +418,9 @@ endif
+ archclean:
+ 	$(Q)$(MAKE) $(clean)=$(boot)
+ 
++arch/powerpc/lib/crtsavres.o: arch/powerpc/lib/crtsavres.S
++	$(Q)$(MAKE) $(build)=arch/powerpc/lib arch/powerpc/lib/crtsavres.o
++
+ archprepare: checkbin arch/powerpc/lib/crtsavres.o
+ 
+ archheaders:
+-- 
+2.17.1
+

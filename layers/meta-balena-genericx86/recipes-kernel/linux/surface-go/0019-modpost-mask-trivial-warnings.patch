@@ -1,0 +1,50 @@
+From eaef311922df14292efd3d530bc97631a2c3fe96 Mon Sep 17 00:00:00 2001
+From: Paul Gortmaker <paul.gortmaker@windriver.com>
+Date: Sun, 25 Jan 2009 17:58:09 -0500
+Subject: [PATCH 19/82] modpost: mask trivial warnings
+
+Newer HOSTCC will complain about various stdio fcns because
+they are now declared with "warn_unused_return", or because
+some initializers aren't filled out with values -- trivially
+assign values so we aren't overwhelmed with these warnings
+once the kernel build kicks off.
+
+Signed-off-by: Paul Gortmaker <paul.gortmaker@windriver.com>
+---
+ scripts/mod/modpost.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/scripts/mod/modpost.c b/scripts/mod/modpost.c
+index 69341b36f271..40332eb85307 100644
+--- a/scripts/mod/modpost.c
++++ b/scripts/mod/modpost.c
+@@ -1995,7 +1995,7 @@ static void read_symbols(const char *modname)
+ 	char *license;
+ 	char *namespace;
+ 	struct module *mod;
+-	struct elf_info info = { };
++	struct elf_info info = { .hdr = NULL };
+ 	Elf_Sym *sym;
+ 
+ 	if (!parse_elf(&info, modname))
+@@ -2496,7 +2496,7 @@ static int dump_sym(struct symbol *sym)
+ 
+ static void write_dump(const char *fname)
+ {
+-	struct buffer buf = { };
++	struct buffer buf = { NULL, 0, 0 };
+ 	struct symbol *symbol;
+ 	const char *namespace;
+ 	int n;
+@@ -2550,7 +2550,7 @@ struct dump_list {
+ int main(int argc, char **argv)
+ {
+ 	struct module *mod;
+-	struct buffer buf = { };
++	struct buffer buf = { NULL, 0, 0 };
+ 	char *missing_namespace_deps = NULL;
+ 	char *dump_write = NULL, *files_source = NULL;
+ 	int opt;
+-- 
+2.17.1
+

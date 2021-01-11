@@ -1,0 +1,90 @@
+From 0278b8d0d198cdaf68a59bcbd40a41c78680bcc6 Mon Sep 17 00:00:00 2001
+From: Bruce Ashfield <bruce.ashfield@gmail.com>
+Date: Tue, 7 Jan 2020 03:34:12 +0000
+Subject: [PATCH 07/82] mips: Kconfig: add QEMUMIPS64 option
+
+In 5.4+ mips has switched to using the generic VDSO implementation, in
+particular the following commits are the bulk of the changes:
+
+   932bb934ed4d mips: compat: vdso: Use legacy syscalls as fallback
+   cdab7e2c73d5 mips: vdso: Fix flip/flop vdso building bug
+   b4c0f7fa5308 mips: vdso: Fix source path
+   1f66c45db330 mips: Add clock_gettime64 entry point
+   abed3d826f2f mips: Add clock_getres entry point
+   6393e6064486 mips: fix vdso32 build, again
+   24640f233b46 mips: Add support for generic vDSO
+   8919975b6171 MIPS: VDSO: Fix build for binutils < 2.25
+   90800281e761 MIPS: VDSO: Remove unused gettimeofday.c
+
+There is a (currently) unknown interaction between qemumips64, the
+mti_malta64 platform, glibc and VDSO that causes a segfault when
+gettimeofday is called during boot. It appears that the VDSO
+configuration of the gic address is incorrect, and hence when
+read_gic_count() is called during do_hres() initialization, the
+page is not properly mapped and a segfault is triggered.
+
+If we avoid reading the gic, and let the vdso syscall fallbacks
+be enabled, we are find for boot. The most flexible way to avoid
+these reads is to make the two malta clocksources not be selected
+when we are booting under qemumips64. This allows other platforms
+to not be impacted.
+
+Once a root cause of this bad mapping is found, we can drop the
+new CONFIG_QEMUMIPS64 option and behaviour will revert to using
+the git automatically.
+
+Signed-off-by: Bruce Ashfield <bruce.ashfield@gmail.com>
+---
+ arch/mips/Kconfig | 12 ++++++++----
+ 1 file changed, 8 insertions(+), 4 deletions(-)
+
+diff --git a/arch/mips/Kconfig b/arch/mips/Kconfig
+index daa24f1e1483..bfc3cf9aafb4 100644
+--- a/arch/mips/Kconfig
++++ b/arch/mips/Kconfig
+@@ -94,6 +94,10 @@ config MIPS
+ config MIPS_FIXUP_BIGPHYS_ADDR
+ 	bool
+ 
++config QEMUMIPS64
++	bool "Enable for qemumips64 specific configurations"
++        default n
++
+ menu "Machine selection"
+ 
+ choice
+@@ -105,17 +109,17 @@ config MIPS_GENERIC
+ 	select BOOT_RAW
+ 	select BUILTIN_DTB
+ 	select CEVT_R4K
+-	select CLKSRC_MIPS_GIC
+ 	select COMMON_CLK
+ 	select CPU_MIPSR2_IRQ_EI
+ 	select CPU_MIPSR2_IRQ_VI
+-	select CSRC_R4K
+ 	select DMA_PERDEV_COHERENT
+ 	select HAVE_PCI
+ 	select IRQ_MIPS_CPU
+ 	select MIPS_AUTO_PFN_OFFSET
+ 	select MIPS_CPU_SCACHE
+ 	select MIPS_GIC
++	select CLKSRC_MIPS_GIC if !QEMUMIPS64
++	select CSRC_R4K if !QEMUMIPS64
+ 	select MIPS_L1_CACHE_SHIFT_7
+ 	select NO_EXCEPT_FILL
+ 	select PCI_DRIVERS_GENERIC
+@@ -524,9 +528,9 @@ config MIPS_MALTA
+ 	select BOOT_RAW
+ 	select BUILTIN_DTB
+ 	select CEVT_R4K
+-	select CLKSRC_MIPS_GIC
++	select CLKSRC_MIPS_GIC if !QEMUMIPS64
++	select CSRC_R4K if !QEMUMIPS64
+ 	select COMMON_CLK
+-	select CSRC_R4K
+ 	select DMA_MAYBE_COHERENT
+ 	select GENERIC_ISA_DMA
+ 	select HAVE_PCSPKR_PLATFORM
+-- 
+2.17.1
+

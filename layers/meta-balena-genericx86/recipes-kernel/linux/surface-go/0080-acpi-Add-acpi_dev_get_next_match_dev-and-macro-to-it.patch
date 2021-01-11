@@ -1,0 +1,105 @@
+From 72f1c323fce1e583f7b526130d14d002ccc8d609 Mon Sep 17 00:00:00 2001
+From: Dan Scally <djrscally@gmail.com>
+Date: Sun, 15 Nov 2020 08:15:34 +0000
+Subject: [PATCH 80/82] acpi: Add acpi_dev_get_next_match_dev() and macro to
+ iterate through acpi_devices matching a given _HID
+
+To ensure we handle situations in which multiple sensors of the same
+model (and therefore _HID) are present in a system, we need to be able
+to iterate over devices matching a known _HID but unknown _UID and _HRV
+ - add acpi_dev_get_next_match_dev() to accomodate that possibility and
+change acpi_dev_get_first_match_dev() to simply call the new function
+with a NULL starting point. Add an iterator macro for convenience.
+
+Suggested-by: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
+---
+ drivers/acpi/utils.c    | 30 ++++++++++++++++++++++++++----
+ include/acpi/acpi_bus.h |  7 +++++++
+ 2 files changed, 33 insertions(+), 4 deletions(-)
+
+diff --git a/drivers/acpi/utils.c b/drivers/acpi/utils.c
+index 838b719ec7ce..3d8370a40011 100644
+--- a/drivers/acpi/utils.c
++++ b/drivers/acpi/utils.c
+@@ -847,12 +847,13 @@ bool acpi_dev_present(const char *hid, const char *uid, s64 hrv)
+ EXPORT_SYMBOL(acpi_dev_present);
+ 
+ /**
+- * acpi_dev_get_first_match_dev - Return the first match of ACPI device
++ * acpi_dev_get_next_match_dev - Return the next match of ACPI device
++ * @adev: Pointer to the previous acpi_device matching this hid, uid and hrv
+  * @hid: Hardware ID of the device.
+  * @uid: Unique ID of the device, pass NULL to not check _UID
+  * @hrv: Hardware Revision of the device, pass -1 to not check _HRV
+  *
+- * Return the first match of ACPI device if a matching device was present
++ * Return the next match of ACPI device if another matching device was present
+  * at the moment of invocation, or NULL otherwise.
+  *
+  * The caller is responsible to call put_device() on the returned device.
+@@ -860,8 +861,9 @@ EXPORT_SYMBOL(acpi_dev_present);
+  * See additional information in acpi_dev_present() as well.
+  */
+ struct acpi_device *
+-acpi_dev_get_first_match_dev(const char *hid, const char *uid, s64 hrv)
++acpi_dev_get_next_match_dev(struct acpi_device *adev, const char *hid, const char *uid, s64 hrv)
+ {
++	struct device *start = adev ? &adev->dev : NULL;
+ 	struct acpi_dev_match_info match = {};
+ 	struct device *dev;
+ 
+@@ -869,9 +871,29 @@ acpi_dev_get_first_match_dev(const char *hid, const char *uid, s64 hrv)
+ 	match.uid = uid;
+ 	match.hrv = hrv;
+ 
+-	dev = bus_find_device(&acpi_bus_type, NULL, &match, acpi_dev_match_cb);
++	dev = bus_find_device(&acpi_bus_type, start, &match, acpi_dev_match_cb);
+ 	return dev ? to_acpi_device(dev) : NULL;
+ }
++EXPORT_SYMBOL(acpi_dev_get_next_match_dev);
++
++/**
++ * acpi_dev_get_first_match_dev - Return the first match of ACPI device
++ * @hid: Hardware ID of the device.
++ * @uid: Unique ID of the device, pass NULL to not check _UID
++ * @hrv: Hardware Revision of the device, pass -1 to not check _HRV
++ *
++ * Return the first match of ACPI device if a matching device was present
++ * at the moment of invocation, or NULL otherwise.
++ *
++ * The caller is responsible to call put_device() on the returned device.
++ *
++ * See additional information in acpi_dev_present() as well.
++ */
++struct acpi_device *
++acpi_dev_get_first_match_dev(const char *hid, const char *uid, s64 hrv)
++{
++	return acpi_dev_get_next_match_dev(NULL, hid, uid, hrv);
++}
+ EXPORT_SYMBOL(acpi_dev_get_first_match_dev);
+ 
+ /*
+diff --git a/include/acpi/acpi_bus.h b/include/acpi/acpi_bus.h
+index 5afb6ceb284f..93f31b47c86a 100644
+--- a/include/acpi/acpi_bus.h
++++ b/include/acpi/acpi_bus.h
+@@ -683,9 +683,16 @@ static inline bool acpi_device_can_poweroff(struct acpi_device *adev)
+ 
+ bool acpi_dev_hid_uid_match(struct acpi_device *adev, const char *hid2, const char *uid2);
+ 
++struct acpi_device *
++acpi_dev_get_next_match_dev(struct acpi_device *adev, const char *hid, const char *uid, s64 hrv);
+ struct acpi_device *
+ acpi_dev_get_first_match_dev(const char *hid, const char *uid, s64 hrv);
+ 
++#define for_each_acpi_dev_match(adev, hid, uid, hrv)			\
++   for (adev = acpi_dev_get_first_match_dev(hid, uid, hrv);		\
++        adev;								\
++        adev = acpi_dev_get_next_match_dev(adev, hid, uid, hrv))
++
+ static inline void acpi_dev_put(struct acpi_device *adev)
+ {
+ 	put_device(&adev->dev);
+-- 
+2.17.1
+

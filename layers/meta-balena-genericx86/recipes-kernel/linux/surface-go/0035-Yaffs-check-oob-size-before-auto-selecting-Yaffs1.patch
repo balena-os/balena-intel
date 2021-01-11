@@ -1,0 +1,46 @@
+From 90dfd0ab2cd0b02e2b46fa8502f24d10d098a61c Mon Sep 17 00:00:00 2001
+From: Jiang Lu <lu.jiang@windriver.com>
+Date: Fri, 13 Dec 2013 11:18:18 +0800
+Subject: [PATCH 35/82] Yaffs:check oob size before auto selecting Yaffs1
+
+Yaffs will select Yaffs1 for deives with 512 byte writing size.
+Moreover, it will enable inband_tags automatically for devices with
+small oob.
+However, Yaffs1 can not work with inband_tags. So move the
+oob size checking before auto selecting Yaffs1.
+
+Signed-off-by: Jiang Lu <lu.jiang@windriver.com>
+---
+ fs/yaffs2/yaffs_vfs.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+diff --git a/fs/yaffs2/yaffs_vfs.c b/fs/yaffs2/yaffs_vfs.c
+index c1c80f7a33a0..f4c5ba95d51d 100644
+--- a/fs/yaffs2/yaffs_vfs.c
++++ b/fs/yaffs2/yaffs_vfs.c
+@@ -2963,17 +2963,17 @@ static struct super_block *yaffs_internal_read_super(int yaffs_version,
+ 		yaffs_version = 2;
+ 	}
+ 
++	if (mtd->oobavail < sizeof(struct yaffs_packed_tags2) ||
++	    options.inband_tags)
++		inband_tags = 1;
++
+ 	/* Added NCB 26/5/2006 for completeness */
+-	if (yaffs_version == 2 && !options.inband_tags
++	if (yaffs_version == 2 && !inband_tags
+ 	    && WRITE_SIZE(mtd) == 512) {
+ 		yaffs_trace(YAFFS_TRACE_ALWAYS, "auto selecting yaffs1");
+ 		yaffs_version = 1;
+ 	}
+ 
+-	if (mtd->oobavail < sizeof(struct yaffs_packed_tags2) ||
+-	    options.inband_tags)
+-		inband_tags = 1;
+-
+ 	if(yaffs_verify_mtd(mtd, yaffs_version, inband_tags) < 0)
+ 		return NULL;
+ 
+-- 
+2.17.1
+

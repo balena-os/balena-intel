@@ -1,0 +1,29 @@
+From 717435a70022a89bd67393f35f4c0d44281d1f82 Mon Sep 17 00:00:00 2001
+From: Bruce Ashfield <bruce.ashfield@windriver.com>
+Date: Thu, 19 Aug 2010 11:24:45 -0400
+Subject: [PATCH 53/82] perf: force include of <stdbool.h>
+
+Large parts of perf use bool variables and assignments.
+Rather than depending on transient includes, we force it
+by including <stdbool.h> directly in perf.h
+
+Signed-off-by: Bruce Ashfield <bruce.ashfield@windriver.com>
+---
+ tools/perf/perf.h | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/tools/perf/perf.h b/tools/perf/perf.h
+index 74014033df60..3031e2850000 100644
+--- a/tools/perf/perf.h
++++ b/tools/perf/perf.h
+@@ -1,5 +1,7 @@
+ /* SPDX-License-Identifier: GPL-2.0 */
+ #ifndef _PERF_PERF_H
++#include <stdbool.h>
++
+ #define _PERF_PERF_H
+ 
+ #include <stdbool.h>
+-- 
+2.17.1
+

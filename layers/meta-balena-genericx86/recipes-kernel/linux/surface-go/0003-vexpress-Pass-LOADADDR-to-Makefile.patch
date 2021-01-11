@@ -1,0 +1,34 @@
+From d3a13bc1c465db5096819ed887d6d14d81efc8fe Mon Sep 17 00:00:00 2001
+From: Yang Shi <yang.shi@windriver.com>
+Date: Tue, 15 Jul 2014 21:19:34 -0700
+Subject: [PATCH 03/82] vexpress: Pass LOADADDR to Makefile
+
+Due to upstream commit 938f94cde74b33d6d3580c6fe65ebe918a770ae2
+("ARM: 7656/1: uImage: Error out on build of multiplatform without LOADADDR"),
+vexpress BSP need LOADADDR for making uImage, so pass LOADADDR in the Makefile
+for vexpress.
+
+Signed-off-by: Yang Shi <yang.shi@windriver.com>
+Signed-off-by: Bruce Ashfield <bruce.ashfield@windriver.com>
+---
+ arch/arm/boot/Makefile | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/arch/arm/boot/Makefile b/arch/arm/boot/Makefile
+index 0b3cd7a33a26..67608510fad3 100644
+--- a/arch/arm/boot/Makefile
++++ b/arch/arm/boot/Makefile
+@@ -68,6 +68,10 @@ $(obj)/zImage:	$(obj)/compressed/vmlinux FORCE
+ 
+ endif
+ 
++ifeq ($(CONFIG_ARCH_VEXPRESS), y)
++LOADADDR=0x04080000
++endif
++
+ ifneq ($(LOADADDR),)
+   UIMAGE_LOADADDR=$(LOADADDR)
+ else
+-- 
+2.17.1
+

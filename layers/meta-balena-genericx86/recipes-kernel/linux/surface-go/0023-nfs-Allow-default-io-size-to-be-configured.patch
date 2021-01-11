@@ -1,0 +1,55 @@
+From 6614c29d246c243d90210e78d2c5f3072900f579 Mon Sep 17 00:00:00 2001
+From: Jim Somerville <Jim.Somerville@windriver.com>
+Date: Thu, 8 Apr 2010 23:44:22 -0700
+Subject: [PATCH 23/82] nfs: Allow default io size to be configured.
+
+Some boards need a smaller size here for
+performance reasons, so let's make the value
+configurable for those boards.
+
+Signed-off-by: Jim Somerville <Jim.Somerville@windriver.com>
+---
+ fs/nfs/Kconfig          | 13 +++++++++++++
+ include/linux/nfs_xdr.h |  2 +-
+ 2 files changed, 14 insertions(+), 1 deletion(-)
+
+diff --git a/fs/nfs/Kconfig b/fs/nfs/Kconfig
+index 88e1763e02f3..80f39072acf4 100644
+--- a/fs/nfs/Kconfig
++++ b/fs/nfs/Kconfig
+@@ -40,6 +40,19 @@ config NFS_V2
+ 
+ 	  If unsure, say Y.
+ 
++config NFS_DEF_FILE_IO_SIZE
++	int "Default size for NFS I/O read and write at runtime"
++	depends on NFS_FS
++	default "4096"
++	help
++	  To change the default rsize and wsize supported by the NFS client,
++	  adjust NFS_DEF_FILE_IO_SIZE.  64KB is a typical maximum, but some
++	  servers can support a megabyte or more.  The default is left at 4096
++	  bytes, which is reasonable for NFS over UDP, however, for some
++	  systems, setting a smaller value like 1024 can work around
++	  limitations in the driver or hardware and result in overall
++	  improved performance.
++
+ config NFS_V3
+ 	tristate "NFS client support for NFS version 3"
+ 	depends on NFS_FS
+diff --git a/include/linux/nfs_xdr.h b/include/linux/nfs_xdr.h
+index 5fd0a9ef425f..c8fc941e5059 100644
+--- a/include/linux/nfs_xdr.h
++++ b/include/linux/nfs_xdr.h
+@@ -12,7 +12,7 @@
+  * reasonable for NFS over UDP.
+  */
+ #define NFS_MAX_FILE_IO_SIZE	(1048576U)
+-#define NFS_DEF_FILE_IO_SIZE	(4096U)
++#define NFS_DEF_FILE_IO_SIZE	CONFIG_NFS_DEF_FILE_IO_SIZE
+ #define NFS_MIN_FILE_IO_SIZE	(1024U)
+ 
+ struct nfs4_string {
+-- 
+2.17.1
+

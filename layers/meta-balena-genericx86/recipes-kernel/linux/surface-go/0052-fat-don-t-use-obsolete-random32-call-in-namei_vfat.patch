@@ -1,0 +1,51 @@
+From 03ac84007ed4f5b43afd55dc779e5539630c3177 Mon Sep 17 00:00:00 2001
+From: Paul Gortmaker <paul.gortmaker@windriver.com>
+Date: Sat, 27 Sep 2014 12:01:21 -0400
+Subject: [PATCH 52/82] fat: don't use obsolete random32 call in namei_vfat
+
+Introduced in commit 16b6ba6d7f6b0e8a2baeb14b128df0bb0a0a5680
+("FAT: Add CONFIG_VFAT_FS_NO_DUALNAMES option"), the use of
+random32 is no longer allowed.
+
+The compatibility wrappers have been removed, so we have to
+align the additions from this older patch to match upstream
+commit 496f2f93b1cc286f5a4f4f9acdc1e5314978683f ("random32: rename
+random32 to prandom")  which does:
+
+    This renames all random32 functions to have 'prandom_' prefix as follows:
+
+      void prandom_seed(u32 seed);      /* rename from srandom32() */
+      u32 prandom_u32(void);            /* rename from random32() */
+
+    [...]
+
+Signed-off-by: Paul Gortmaker <paul.gortmaker@windriver.com>
+---
+ fs/fat/namei_vfat.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/fs/fat/namei_vfat.c b/fs/fat/namei_vfat.c
+index 126c4a8dc5b4..1b3647143181 100644
+--- a/fs/fat/namei_vfat.c
++++ b/fs/fat/namei_vfat.c
+@@ -616,7 +616,7 @@ static void vfat_build_dummy_83_buffer(struct inode *dir, char *msdos_name,
+ 				     0x1B, 0x1C, 0x1D, 0x1E, 0x1F, 0x22, 0x2a,
+ 				     0x3a, 0x3c, 0x3e, 0x3f, 0x5b, 0x5d, 0x7c };
+ 	int i, tilde_pos, slash_pos;
+-	u32 rand_num = random32();
++	u32 rand_num = prandom_u32();
+ 
+ 	/* We need a '~' in the prefix to make Win98 happy. */
+ 	tilde_pos = rand_num % 8;
+@@ -651,7 +651,7 @@ static void vfat_build_dummy_83_buffer(struct inode *dir, char *msdos_name,
+ 				invalidchar[rand_num % sizeof(invalidchar)];
+ 			rand_num /= sizeof(invalidchar);
+ 			if (rand_num < sizeof(invalidchar))
+-				rand_num = random32();
++				rand_num = prandom_u32();
+ 		}
+ 	}
+ }
+-- 
+2.17.1
+

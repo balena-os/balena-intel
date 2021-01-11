@@ -1,0 +1,50 @@
+From 79e41a9e795e766e378e01a5ba4925ca011b4949 Mon Sep 17 00:00:00 2001
+From: Victor Kamensky <kamensky@cisco.com>
+Date: Fri, 31 Jan 2020 09:39:44 -0800
+Subject: [PATCH 08/82] mips: vdso: fix 'jalr $t9' crash in vdso code
+
+Observed that when kernel is built with Yocto mips64-poky-linux-gcc,
+and mips64-poky-linux-gnun32-gcc toolchain, resuling vdso contains
+'jalr $t9' instructions in its code and since in vdso case nobody
+sets GOT table code crashes when instruction reached. On other hand
+observed that when kernel is built mips-poky-linux-gcc toolchain, the
+same 'jalr $t9' instruction are replaced with PC relative function
+calls using 'bal' instructions.
+
+The difference boils down to -mrelax-pic-calls and -mexplicit-relocs
+gcc options that gets different default values depending on gcc
+target triplets and corresponding binutils. -mrelax-pic-calls got
+enabled by default only in mips-poky-linux-gcc case. MIPS binuitls
+ld relies on R_MIPS_JALR relocation to convert 'jalr $t9' into 'bal'
+and such relocation is generated only if -mrelax-pic-calls option
+is on.
+
+Solution call out -mrelax-pic-calls and -mexplicit-relocs options
+explicitely while compiling MIPS vdso code. That would get correct
+and consitent between different toolchains behavior.
+
+Reported-by: Bruce Ashfield <bruce.ashfield@gmail.com>
+Signed-off-by: Victor Kamensky <kamensky@cisco.com>
+Signed-off-by: Bruce Ashfield <bruce.ashfield@gmail.com>
+---
+ arch/mips/vdso/Makefile | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/arch/mips/vdso/Makefile b/arch/mips/vdso/Makefile
+index 2e64c7600eea..377dc6e7ef1c 100644
+--- a/arch/mips/vdso/Makefile
++++ b/arch/mips/vdso/Makefile
+@@ -36,7 +36,9 @@ cflags-vdso := $(ccflags-vdso) \
+ 	-mrelax-pic-calls $(call cc-option, -mexplicit-relocs) \
+ 	-fno-stack-protector -fno-jump-tables -DDISABLE_BRANCH_PROFILING \
+ 	$(call cc-option, -fno-asynchronous-unwind-tables) \
+-	$(call cc-option, -fno-stack-protector)
++	$(call cc-option, -fno-stack-protector) \
++	$(call cc-option, -mrelax-pic-calls) \
++	$(call cc-option, -mexplicit-relocs)
+ aflags-vdso := $(ccflags-vdso) \
+ 	-D__ASSEMBLY__ -Wa,-gdwarf-2
+ 
+-- 
+2.17.1
+

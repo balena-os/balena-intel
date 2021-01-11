@@ -1,0 +1,56 @@
+From cb477761141b8f7af0a3680c86e747b6ba9cb23d Mon Sep 17 00:00:00 2001
+From: Paul Gortmaker <paul.gortmaker@windriver.com>
+Date: Thu, 26 Nov 2009 07:32:09 -0800
+Subject: [PATCH 21/82] mount_root: clarify error messages for when no rootfs
+ found
+
+To an end user who doesn't really know linux that well, a
+message like:
+
+  Kernel panic - not syncing: VFS: Unable to mount root fs on unknown-block(0,0)
+
+may just look like cryptic computer speak indicating some
+deep and complex problem, instead of the reality that they
+have a simple local configuration problem.  Ideally it would
+be nice to not use the misleading "panic" at all, but since
+various panic notifiers are historically expecting to be
+called when there is no valid rootfs, we can't change that.
+
+So instead, this tries to make it 100% clear to folks of
+any background that it is an end user configuration issue.
+
+Signed-off-by: Paul Gortmaker <paul.gortmaker@windriver.com>
+Signed-off-by: Darren Hart <dvhart@linux.intel.com>
+---
+ init/do_mounts.c | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+diff --git a/init/do_mounts.c b/init/do_mounts.c
+index 29d326b6c29d..882307e6dd90 100644
+--- a/init/do_mounts.c
++++ b/init/do_mounts.c
+@@ -458,7 +458,9 @@ void __init mount_block_root(char *name, int flags)
+ 		printk("DEBUG_BLOCK_EXT_DEVT is enabled, you need to specify "
+ 		       "explicit textual name for \"root=\" boot option.\n");
+ #endif
+-		panic("VFS: Unable to mount root fs on %s", b);
++		printk(KERN_EMERG "VFS: Unable to mount root fs on %s\n", b);
++		printk(KERN_EMERG "User configuration error - no valid root filesystem found\n");
++		panic("Invalid configuration from end user prevents continuing");
+ 	}
+ 	if (!(flags & SB_RDONLY)) {
+ 		flags |= SB_RDONLY;
+@@ -471,7 +473,9 @@ void __init mount_block_root(char *name, int flags)
+ 	for (p = fs_names; *p; p += strlen(p)+1)
+ 		printk(" %s", p);
+ 	printk("\n");
+-	panic("VFS: Unable to mount root fs on %s", b);
++	printk(KERN_EMERG "VFS: Unable to mount root fs on %s\n", b);
++	printk(KERN_EMERG "User configuration error - no valid root filesystem found\n");
++	panic("Invalid configuration from end user prevents continuing");
+ out:
+ 	put_page(page);
+ }
+-- 
+2.17.1
+

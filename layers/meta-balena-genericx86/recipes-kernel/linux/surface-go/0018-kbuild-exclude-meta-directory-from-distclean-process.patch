@@ -1,0 +1,31 @@
+From d30d76a55f214d89311ceb3afc9a1902d811c96b Mon Sep 17 00:00:00 2001
+From: Bruce Ashfield <bruce.ashfield@windriver.com>
+Date: Thu, 19 Jun 2008 11:03:07 -0400
+Subject: [PATCH 18/82] kbuild: exclude meta directory from distclean
+ processing
+
+The meta directory has some files (notably files of size 0) that are
+removed by Kbuild's distclean processing. Add wrs to the exclude
+list to prevent recursion into wrs.
+
+Signed-off-by: Bruce Ashfield <bruce.ashfield@windriver.com>
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index 33c45a0cd858..b80cb9097402 100644
+--- a/Makefile
++++ b/Makefile
+@@ -525,7 +525,7 @@ export KBUILD_AFLAGS_KERNEL KBUILD_CFLAGS_KERNEL
+ # Files to ignore in find ... statements
+ 
+ export RCS_FIND_IGNORE := \( -name SCCS -o -name BitKeeper -o -name .svn -o    \
+-			  -name CVS -o -name .pc -o -name .hg -o -name .git \) \
++			  -name CVS -o -name .pc -o -name .hg -o -name .git -o -name meta \) \
+ 			  -prune -o
+ export RCS_TAR_IGNORE := --exclude SCCS --exclude BitKeeper --exclude .svn \
+ 			 --exclude CVS --exclude .pc --exclude .hg --exclude .git
+-- 
+2.17.1
+

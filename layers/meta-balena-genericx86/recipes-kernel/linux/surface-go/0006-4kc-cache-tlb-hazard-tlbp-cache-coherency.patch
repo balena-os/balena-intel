@@ -1,0 +1,45 @@
+From f0ac72b14272e30b74e9357f7750b7ce7de60aae Mon Sep 17 00:00:00 2001
+From: Weixing Shi <weixing.shi@windriver.com>
+Date: Mon, 12 Apr 2010 14:59:38 +0800
+Subject: [PATCH 06/82] 4kc cache tlb hazard: tlbp cache coherency
+
+Add a no-op before tlbp, to avoid DMA cache coherency issues that cause
+data loss seen on unmount.
+
+Signed-off-by: <weixing.shi@windriver.com> Weixing Shi
+Signed-off-by: <james.perkins@windriver.com> James Perkins
+---
+ arch/mips/mm/tlbex.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/arch/mips/mm/tlbex.c b/arch/mips/mm/tlbex.c
+index 14f8ba93367f..f0a341c30b89 100644
+--- a/arch/mips/mm/tlbex.c
++++ b/arch/mips/mm/tlbex.c
+@@ -485,6 +485,7 @@ static void __maybe_unused build_tlb_probe_entry(u32 **p)
+ 	case CPU_R4700:
+ 	case CPU_R5000:
+ 	case CPU_NEVADA:
++	case CPU_4KC:
+ 		uasm_i_nop(p);
+ 		uasm_i_tlbp(p);
+ 		break;
+@@ -533,6 +534,7 @@ void build_tlb_write_entry(u32 **p, struct uasm_label **l,
+ 
+ 	case CPU_R4600:
+ 	case CPU_R4700:
++	case CPU_4KC:
+ 		uasm_i_nop(p);
+ 		tlbw(p);
+ 		uasm_i_nop(p);
+@@ -557,7 +559,6 @@ void build_tlb_write_entry(u32 **p, struct uasm_label **l,
+ 	case CPU_R12000:
+ 	case CPU_R14000:
+ 	case CPU_R16000:
+-	case CPU_4KC:
+ 	case CPU_4KEC:
+ 	case CPU_M14KC:
+ 	case CPU_M14KEC:
+-- 
+2.17.1
+

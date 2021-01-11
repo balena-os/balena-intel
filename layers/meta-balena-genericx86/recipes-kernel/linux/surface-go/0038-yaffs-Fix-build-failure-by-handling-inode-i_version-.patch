@@ -1,0 +1,53 @@
+From 84582407b842fd163ae81ce331124bb2f0f05a6b Mon Sep 17 00:00:00 2001
+From: He Zhe <zhe.he@windriver.com>
+Date: Tue, 19 Jun 2018 00:58:17 -0700
+Subject: [PATCH 38/82] yaffs: Fix build failure by handling inode i_version
+ with proper atomic API
+
+i_version in struct inode has changed to atomic64_t in mainline kernel.
+This patch handles i_version with proper atomic API.
+
+Signed-off-by: He Zhe <zhe.he@windriver.com>
+Signed-off-by: Bruce Ashfield <bruce.ashfield@windriver.com>
+---
+ fs/yaffs2/yaffs_vfs.c | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+diff --git a/fs/yaffs2/yaffs_vfs.c b/fs/yaffs2/yaffs_vfs.c
+index b0e3fd977c4a..1ddc85b3200d 100644
+--- a/fs/yaffs2/yaffs_vfs.c
++++ b/fs/yaffs2/yaffs_vfs.c
+@@ -1669,7 +1669,7 @@ static int yaffs_unlink(struct inode *dir, struct dentry *dentry)
+ #if (LINUX_VERSION_CODE >= KERNEL_VERSION(4, 16, 0))
+ 		inode_inc_iversion(dir);
+ #else
+-		dir->i_version++;
++		atomic64_inc(&dir->i_version);
+ #endif
+ 		yaffs_gross_unlock(dev);
+ 		update_dir_time(dir);
+@@ -1826,6 +1826,7 @@ static int yaffs_iterate(struct file *f, struct dir_context *dc)
+ 	int ret_val = 0;
+ 
+ 	char name[YAFFS_MAX_NAME_LENGTH + 1];
++	u64 i_version;
+ 
+ 	obj = yaffs_dentry_to_obj(Y_GET_DENTRY(f));
+ 	dev = obj->my_dev;
+@@ -1951,10 +1952,11 @@ static int yaffs_readdir(struct file *f, void *dirent, filldir_t filldir)
+ 
+ 	/* If the directory has changed since the open or last call to
+ 	   readdir, rewind to after the 2 canned entries. */
+-	if (f->f_version != inode->i_version) {
++	i_version = atomic64_read(&inode->i_version);
++	if (f->f_version != i_version) {
+ 		offset = 2;
+ 		f->f_pos = offset;
+-		f->f_version = inode->i_version;
++		f->f_version = i_version;
+ 	}
+ 
+ 	while (sc->next_return) {
+-- 
+2.17.1
+

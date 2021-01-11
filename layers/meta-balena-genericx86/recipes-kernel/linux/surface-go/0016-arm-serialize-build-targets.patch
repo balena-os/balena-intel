@@ -1,0 +1,31 @@
+From b97cb4d0bc7ae788b155507b255853e4f16c14d7 Mon Sep 17 00:00:00 2001
+From: Bruce Ashfield <bruce.ashfield@windriver.com>
+Date: Tue, 10 Jun 2008 21:58:35 -0400
+Subject: [PATCH 16/82] arm: serialize build targets
+
+The image targets need to trigger after we've build all their
+dependencies. To do this we add .NOTPARALLEL and  ensure that
+the image targets are not built in parallel.
+
+Signed-off-by: Bruce Ashfield <bruce.ashfield@windriver.com>
+---
+ arch/arm/Makefile | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/arch/arm/Makefile b/arch/arm/Makefile
+index 8215f0783bbe..928218cf22db 100644
+--- a/arch/arm/Makefile
++++ b/arch/arm/Makefile
+@@ -339,6 +339,9 @@ PHONY += bzImage $(BOOT_TARGETS) $(INSTALL_TARGETS)
+ bootpImage uImage: zImage
+ zImage: Image
+ 
++# These targets cannot be built in parallel
++.NOTPARALLEL: $(BOOT_TARGETS)
++
+ $(BOOT_TARGETS): vmlinux
+ 	$(Q)$(MAKE) $(build)=$(boot) MACHINE=$(MACHINE) $(boot)/$@
+ 	@$(kecho) '  Kernel: $(boot)/$@ is ready'
+-- 
+2.17.1
+

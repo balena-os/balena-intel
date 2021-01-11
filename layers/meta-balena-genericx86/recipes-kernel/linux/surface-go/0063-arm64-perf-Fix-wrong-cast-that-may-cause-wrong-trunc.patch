@@ -1,0 +1,44 @@
+From e303bd5af52b84872ebfd35b7ad418f16ff0bd05 Mon Sep 17 00:00:00 2001
+From: He Zhe <zhe.he@windriver.com>
+Date: Fri, 21 Aug 2020 00:52:50 +0800
+Subject: [PATCH 63/82] arm64/perf: Fix wrong cast that may cause wrong
+ truncation
+
+tail is a pointer while buftail.fp is a u32.
+
+arch/arm64/kernel/perf_callchain.c:100:6: warning: cast from pointer to
+integer of different size [-Wpointer-to-int-cast]
+  100 |  if ((u32)tail + 4 >= buftail.fp)
+      |      ^
+arch/arm64/kernel/perf_callchain.c:103:9: warning: cast to pointer from
+integer of different size [-Wint-to-pointer-cast]{noformat}
+  103 |  return (struct compat_frame_tail __user *)(buftail.fp - 4);
+      |         ^
+
+Fixes: 8818670c17d2 ("arm64/perf: fix backtrace for AAPCS with FP enabled")
+Signed-off-by: He Zhe <zhe.he@windriver.com>
+Signed-off-by: Bruce Ashfield <bruce.ashfield@gmail.com>
+---
+ arch/arm64/kernel/perf_callchain.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/arch/arm64/kernel/perf_callchain.c b/arch/arm64/kernel/perf_callchain.c
+index 1be96e3631ea..a4b0864c4e32 100644
+--- a/arch/arm64/kernel/perf_callchain.c
++++ b/arch/arm64/kernel/perf_callchain.c
+@@ -97,10 +97,10 @@ compat_user_backtrace(struct compat_frame_tail __user *tail,
+ 	 * Frame pointers should strictly progress back up the stack
+ 	 * (towards higher addresses).
+ 	 */
+-	if ((u32)tail + 4 >= buftail.fp)
++	if ((u64)tail + 4 >= (u64)buftail.fp)
+ 		return NULL;
+ 
+-	return (struct compat_frame_tail __user *)(buftail.fp - 4);
++	return (struct compat_frame_tail __user *)((u64)buftail.fp - 4);
+ }
+ #endif /* CONFIG_COMPAT */
+ 
+-- 
+2.17.1
+
