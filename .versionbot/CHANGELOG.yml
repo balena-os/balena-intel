@@ -1,4 +1,1561 @@
 - commits:
+    - subject: Update meta-balena from v2.58.6 to v2.66.1
+      hash: a29f0dafc17bc4f6c4be7a5bbbcb2af207ead462
+      body: |
+        Update meta-balena from 2.58.6 to 2.66.1
+      footer:
+        Changelog-entry: Update meta-balena from v2.58.6 to v2.66.1
+        changelog-entry: Update meta-balena from v2.58.6 to v2.66.1
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested:
+        - commits:
+            - subject: 'kernel-devsrc: use upstream recipe starting with dunfell'
+              hash: 1300a223f5b58dd4584b62e87df41ec72f783961
+              body: |
+                Remove the kernel-devsrc package from meta-balena and
+                use the one from the upstream Poky project instead.
+
+                Initially I hoped thud and warrior could also use the respective
+                upstreams but I see several differences between the meta-balena
+                version and the upstreams so I updated those compat layers
+                as well.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: 'gen_mod_headers: add missing arch headers to tools'
+              hash: 5485f1fbc901a04eedbcc3b72cc95fdfb2d03665
+              body: >
+                Upstream changes to the kernel have switched to a shared x86
+
+                insn decoder required by tools/objtool so we must add those
+
+                include and lib components to our target dir.
+
+
+                https://lore.kernel.org/lkml/20190830201021.utzjr6cs5hoxygyi@treble/T/
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: meta-balena-2.66.1
+          date: 2021-01-04T13:06:56.017Z
+        - commits:
+            - subject: 'chrony: bump to version 4.0'
+              hash: 67e8632a8a6c82dcf382b0204af40b79dd1a279a
+              body: |
+                Update chrony from version 3.4 to version 4.0.
+
+                The new version has enhancements and new features that will
+                help to improve time synchronisation, including:
+
+                - the ability to add server pools via scripts using chronyc.
+                - support for dynamic NTP source files that can be reloaded
+                  as necessary (useful for DHCP and config.json sources).
+                - source name options for improved handling of pool addresses.
+                - repeat 'iburst' when a source is changed from offline to
+                  online state.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: 'chrony: bump to version 4.0'
+                changelog-entry: 'chrony: bump to version 4.0'
+                Signed-off-by: Mark Corbin <mark@balena.io>
+                signed-off-by: Mark Corbin <mark@balena.io>
+              author: Mark Corbin
+              nested: []
+          version: meta-balena-2.66.0
+          date: 2020-12-18T11:02:16.858Z
+        - commits:
+            - subject: 'u-boot: Add required configuration for BalenaOS environment'
+              hash: 401345c86a3a017dc548a94c7afa3977d547fc21
+              body: >
+                The BalenaOS u-boot environment patch requires u-boot to support
+                importing
+
+                and exporting of the environment as well as the fsuuid command.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.65.1
+          date: 2020-12-17T10:39:35.947Z
+        - commits:
+            - subject: Update balena-supervisor from v12.1.1 to v12.2.11
+              hash: 0f301c4bba35737149c6489b4cd6716506496372
+              body: ''
+              footer:
+                Changelog-entry: Update balena-supervisor from v12.1.1 to v12.2.11
+                changelog-entry: Update balena-supervisor from v12.1.1 to v12.2.11
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Miguel Casqueira <miguel@balena.io>
+                signed-off-by: Miguel Casqueira <miguel@balena.io>
+              author: Miguel Casqueira
+              nested: []
+          version: meta-balena-2.65.0
+          date: 2020-12-14T22:04:19.165Z
+        - commits:
+            - subject: Add IPV6 multicast routing capability
+              hash: 510bb7a7107f538f56c35a87a7426e7c12a3cdb3
+              body: >
+                Add IPV6 multicast routing capability to the default
+                configuration.
+
+
+                Fixes #2051
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Add IPV6 multicast routing capability
+                changelog-entry: Add IPV6 multicast routing capability
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.64.4
+          date: 2020-12-14T12:36:30.487Z
+        - commits:
+            - subject: 'Revert "resin-data.mount: Remove default dependencies"'
+              hash: 0101e6289b2a05ab688db43f73772ebfeeb97c53
+              body: >
+                This reverts commit dc6cfa2e90b29b0fdcfc05c1b85e2196de4f950b.
+
+
+                Once the core problem with the resin-data mount has been fixed
+                this
+
+                commit is no longer needed.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: 'hostapp-update-hooks: Add supervisor database fix'
+              hash: f3e7e164cf095218c1f92f2afecdd186cbbdfadd
+              body: >
+                When adding hostapp extension support to mobynit, in:
+
+                https://github.com/balena-os/meta-balena/commit/6be3f1153d56c1c0c21e6d84db7be70be96bcd10
+
+
+                the supervisor database was relocated by mistake. On this
+                version the database
+
+                returns to its original place, and these hooks copy the old
+                database to the
+
+                new location to avoid data loss.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: 'resin-supervisor: Make sure the database directory exists'
+              hash: d070fe38a3b2a91fcc7c07d716fa90fdd3e9d078
+              body: >
+                If this directory is removed by mistake, the supervisor will not
+                be
+
+                able to start.
+
+
+                This commit checks the directory existence and creates it if
+                required
+
+                independently of whether the supervisor container is present.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: Correct the data partition mountpoint
+              hash: 36dca74acc9e7db23b8980fff735360332927125
+              body: |
+                Correct the mount point for the resin-data directory.
+
+                Fixes https://github.com/balena-os/meta-balena/issues/2070
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Correct the data partition mountpoint
+                changelog-entry: Correct the data partition mountpoint
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.64.3
+          date: 2020-12-11T07:52:52.415Z
+        - commits:
+            - subject: >-
+                meta-balena-common: kernel-resin: enable task-accounting by
+                default
+              hash: d308c67666e612fad7e6bb7ac88d5bec2bfd8f9e
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+            - subject: 'meta-balena-common: kernel-resin: create task-accounting config'
+              hash: ea3c787c5ad31af758844a0242a9d9baf1a47135
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: meta-balena-2.64.2
+          date: 2020-12-10T10:19:16.893Z
+        - commits:
+            - subject: Update codeowners
+              hash: d18fc8cdfab02a4c5016b29eca23b4f1f73c7e9b
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.64.1
+          date: 2020-12-09T08:47:40.115Z
+        - commits:
+            - subject: 'rust: remove merged fix for TUNE_FEATURES parsing'
+              hash: 9a4ea159051825461007cff90c7c370ce74d7680
+              body: >
+                https://github.com/meta-rust/meta-rust/issues/240
+
+                https://github.com/meta-rust/meta-rust/pull/242
+
+
+                The fix for TUNE_FEATURES parsing has been merged in meta-rust
+                master
+
+                and should be present when they fork for dunfell.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: 'systemd: update patches to avoid fuzzy matching'
+              hash: 03d64e57466c66acd710b089c4ae8d777f963554
+              body: >
+                The content applied by the patches has not changed, just the
+                context
+
+                in order to properly inject changes without fuzzy matching since
+                the source
+
+                files have changed upstream.
+
+
+                `devtool modify systemd`
+
+                `devtool finish --force-patch-refresh systemd
+                ../layers/meta-balena/meta-balena-dunfell/`
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: 'systemd: add missing udev rules'
+              hash: 02b48c9523ff5ed36cc2cfd94225ea4234649371
+              body: >
+                https://github.com/balena-os/poky/commit/e3cd4e584239c207e3c82bdf5d7216d26fd28fc7
+
+
+                add missing udev rules since systemd began including rules
+                explicitly
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: 'systemd: avoid conflicts with timeinit package'
+              hash: 97d14daa8f1bc8887883fd56c1512bdd51b2e351
+              body: |
+                Both systemd and timeinit attempt to install time-set.target so
+                we will remove the systemd version during install.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: 'dropbear: prevent conflicts with openssh'
+              hash: 169c1652e46e3a31d4f96bb98cbcf8240f3453ca
+              body: >
+                [https://github.com/balena-os/poky/commit/d365948ebd76625f82ef04e77d35bcfeced42fec]
+
+
+                Dropbear is still required to migrate keys. Avoid the upstream
+                conflict with openssh.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: 'networkmanager: add bash requirement'
+              hash: 9d380ec203a80afc15b4c902c36da7c25300515d
+              body: |
+                99dhcp_ntp in networkmanager requires bash
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: 'networkmanager: remove deprecated bluetooth inherit'
+              hash: 1993db9f3027936119248bd193e350456ba035bc
+              body: >
+                In poky dunfell and newer the bluetooth class has been
+                deprecated.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: >-
+                meta-balena-common: replace distro_features_check with
+                features_check
+              hash: c907611d66aa4d2ff27f9940178cbcdbc2273459
+              body: >
+                Replace distro_features_check that was deprecated upstream in
+                dunfell.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: 'avahi: remove example services'
+              hash: 317c7a6404195e78a21c76e43f8743a47cf542d1
+              body: >
+                In dunfell the example ssh service files don't exist so avoid
+                failing
+
+                during do_install for services that we don't use anyway.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: 'u-boot: disable u-boot-initial-env'
+              hash: 9346f58cdd73924aec4279861ff43611c125ab5d
+              body: >
+                https://github.com/balena-os/poky/commit/d7b8ae3faa9344f2ada22e0402066c2fff5958c6
+
+
+                We have no use for u-boot-initial-env and enabling it would
+                require
+
+                additional changes in do_compile to match the commit linked
+                above.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: 'dnsmasq: fix build after y2038 changes in glib'
+              hash: fca86497476cf3d275ae3d4f8274d51b6b96a9b8
+              body: >
+                SIOCGSTAMP is defined in linux/sockios.h, not asm/sockios.h
+
+                http://thekelleys.org.uk/gitweb/?p=dnsmasq.git;a=commit;h=3052ce208acf602f0163166dcefb7330d537cedb
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: 'bluez5: replace experimental flag patch with service conf'
+              hash: 8d5a67522eda56acb583c5ab26f6144fef7038a1
+              body: >
+                In dunfell, rather than patching the bluetooth.service.in file,
+
+                we will just override the ExecStart value via
+                bluetooth.conf.systemd
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: 'mtools: remove initialize-direntry patch'
+              hash: c35b98165cc698188b978c34c7fb20f58a4c83e1
+              body: >
+                Remove initialize-direntry.patch that has been fixed in mtools
+                4.0.23
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: 'meta-balena-dunfell: dunfell compatibility layer support'
+              hash: e8c34101f13d0327ac278207c8d7d500214f5f6f
+              body: >
+                Create meta-balena-dunfell layer base by copying
+                meta-balena-warrior
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: 'meta-balena-dunfell: dunfell compatibility layer support'
+                changelog-entry: 'meta-balena-dunfell: dunfell compatibility layer support'
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: meta-balena-2.64.0
+          date: 2020-12-07T16:42:10.390Z
+        - commits:
+            - subject: >-
+                start-resin-supervisor: fix directory creation for 'balena
+                start'
+              hash: ce9e4f211a2356a866edee5ca3dbada3faa27689
+              body: >
+                Ensure that the /var/log/supervisor-log directory exists prior
+                to
+
+                running 'balena start --attach resin_supervisor' as well as
+
+                'runSupervisor'.
+
+
+                Updates to the 'start-resin-supervisor' script in v2.62.1
+                removed
+
+                the check for updates to the REGISTRY_ENDPOINT variable.
+                Previously
+
+                this had been detected as changing every time the script was run
+
+                due to a comparison between 'null' and ''. This resulted in the
+
+                'start-resin-supervisor' script always running through the
+
+                'runSupervisor' path. With this variable check removed, and no
+                config
+
+                updates being detected, the script was trying to run
+
+                'balena start --attach resin_supervisor' and failing due to the
+
+                absence of the /var/log/supervisor-log directory. To fix this
+                problem we
+
+                unconditionally test for and create this directory (if
+                necessary) so
+
+                that it is available regardless of the path taken through the
+                script.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Connects-to: '#2064'
+                connects-to: '#2064'
+                Changelog-entry: >-
+                  start-resin-supervisor: fix directory creation for 'balena
+                  start'
+                changelog-entry: >-
+                  start-resin-supervisor: fix directory creation for 'balena
+                  start'
+                Signed-off-by: Mark Corbin <mark@balena.io>
+                signed-off-by: Mark Corbin <mark@balena.io>
+              author: Mark Corbin
+              nested: []
+          version: meta-balena-2.63.1
+          date: 2020-12-04T17:24:10.321Z
+        - commits:
+            - subject: 'zram-swap-init: adjust default to lesser of 50%/4GB'
+              hash: 155af3386029a0e76b74ee60d58c32ba72073a82
+              body: >
+                Copied from Fedora zram defaults [0]. This may be adjusted later
+                after
+
+                doing our own profiling.
+
+
+                [0]
+                https://fedoraproject.org/wiki/Changes/SwapOnZRAM#Default_zram_device_configuration:
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: meta-balena-2.63.0
+          date: 2020-11-30T21:37:10.077Z
+        - commits:
+            - subject: 'chrony: use a non-privileged UDP source port'
+              hash: 447449808ef08577712db43b1042599ad4d7d23c
+              body: >
+                Change the chrony UDP source port from 123 (privileged) to
+
+                1234 (non-privileged).
+
+
+                Previous issues with Phicomm routers had required the use of a
+                fixed
+
+                UDP source port, so port 123 was chosen as this is used by both
+                ntpd
+
+                and ntpdate. However recent testing has shown that using a
+                privileged
+
+                port such as 123 can cause issues on other networks. By changing
+                the
+
+                port to be non-privileged (i.e. 1234) we can satisfy both
+                network
+
+                requirements.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Connects-to: '#2000'
+                connects-to: '#2000'
+                Changelog-entry: 'chrony: use a non-privileged UDP source port'
+                changelog-entry: 'chrony: use a non-privileged UDP source port'
+                Signed-off-by: Mark Corbin <mark@balena.io>
+                signed-off-by: Mark Corbin <mark@balena.io>
+              author: Mark Corbin
+              nested: []
+          version: meta-balena-2.62.2
+          date: 2020-11-25T13:53:40.649Z
+        - commits:
+            - subject: 'supervisor: remove old/unnecessary balenaRootCA references'
+              hash: 65c7c232082185ddecbedca579327f6c80686bc5
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Matthew McGinn <matthew@balena.io>
+                signed-off-by: Matthew McGinn <matthew@balena.io>
+              author: Matthew McGinn
+              nested: []
+          version: meta-balena-2.62.1
+          date: 2020-11-19T20:26:12.667Z
+        - commits:
+            - subject: 'systemd/timeinit: improve RTC handling at boot'
+              hash: 1c1374f3c8b5914b7e645f8068ebafc8b4cbbe3a
+              body: >
+                The handling of the RTC at boot time has been improved as
+                follows:
+
+
+                1) A 'timeinit-rtc.sh' script has been added to improve logging
+                of
+                   system time updates from the RTC and to prevent system time
+                   being set when RTC time is behind system time. If RTC time is
+                   found to be behind system time a warning is issued regarding
+                   potential RTC battery failure.
+
+                2) The 'timeinit-rtc.service' has been added to the new systemd
+                   'time-set.target'. This allows for better control and
+                   co-ordination between the various time source services.
+
+                3) Systemd dependencies have been updated to ensure that the
+                   RTC is the final time service before the 'time-set.target'
+                   is reached.
+
+                The 'timeinit-buildtime.sh' script has been updated to use the
+
+                new support functions provided by the 'os-helpers-time' script.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Connects-to: '#2048'
+                connects-to: '#2048'
+                Changelog-entry: 'systemd/timeinit: improve RTC handling at boot'
+                changelog-entry: 'systemd/timeinit: improve RTC handling at boot'
+                Signed-off-by: Mark Corbin <mark@balena.io>
+                signed-off-by: Mark Corbin <mark@balena.io>
+              author: Mark Corbin
+              nested: []
+            - subject: 'os-helpers: add support functions for system date/time'
+              hash: 66d4d61b4e00f9da99de041d262a1f7b4bf70d37
+              body: |
+                Add helper functions for manipulating system date/time.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Mark Corbin <mark@balena.io>
+                signed-off-by: Mark Corbin <mark@balena.io>
+              author: Mark Corbin
+              nested: []
+          version: meta-balena-2.62.0
+          date: 2020-11-13T10:26:52.111Z
+        - commits:
+            - subject: 'modemmanager: add u-blox-modeswitch scripts'
+              hash: a30ab44f40f1c059e64075c567fc388800d960a4
+              body: >
+                Add the u-blox-modeswitch scripts to modemmanager. The scripts
+                are
+
+                generic and therefore it makes sense to provide them as part of
+
+                meta-balena instead of balena-raspberrypi.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Connects-to: '#510 (in balena-raspberrypi)'
+                connects-to: '#510 (in balena-raspberrypi)'
+                Signed-off-by: Mark Corbin <mark@balena.io>
+                signed-off-by: Mark Corbin <mark@balena.io>
+              author: Mark Corbin
+              nested: []
+          version: meta-balena-2.61.3
+          date: 2020-11-05T17:05:16.519Z
+        - commits:
+            - subject: Check the API for configuration changes once a day
+              hash: 19f6942a9864c6393a36af36aea21d685ddb9819
+              body: ''
+              footer:
+                Connects-to: '#2018'
+                connects-to: '#2018'
+                Changelog-entry: Check the API for configuration changes once a day
+                changelog-entry: Check the API for configuration changes once a day
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-2.61.2
+          date: 2020-11-05T14:41:20.617Z
+        - commits:
+            - subject: Enable kernel user space probes support
+              hash: 8af9bc8fbc58096d986d8db7df81a0c9505dc420
+              body: >
+                This is needed to make use of eBPF and all the debugging and
+                extra
+
+                features it brings.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Enable kernel user space probes support
+                changelog-entry: Enable kernel user space probes support
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.61.1
+          date: 2020-11-04T21:12:06.448Z
+        - commits:
+            - subject: Update balena-supervisor from v11.14.0 to v12.1.1
+              hash: fd41103bc0538f53ac37bfb2ce6203f712090bc7
+              body: |
+                Update balena-supervisor from v11.14.0 to v12.1.1
+              footer:
+                Changelog-entry: Update balena-supervisor from v11.14.0 to v12.1.1
+                changelog-entry: Update balena-supervisor from v11.14.0 to v12.1.1
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Cameron Diver <cameron@balena.io>
+                signed-off-by: Cameron Diver <cameron@balena.io>
+              author: Cameron Diver
+              nested:
+                - commits:
+                    - subject: Use root mount point to find device-type.json
+                      hash: 9d19a457017b1f696579f57569ec4cfadab3b385
+                      body: ''
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Cameron Diver <cameron@balena.io>
+                        signed-off-by: Cameron Diver <cameron@balena.io>
+                      author: Cameron Diver
+                      nested: []
+                  version: balena-supervisor-12.1.1
+                  date: 2020-10-28T13:03:20.901Z
+                - commits:
+                    - subject: Change log source from docker to journalctl
+                      hash: 2c83864f22b01e7196f6ed321c96f6cb9f40593b
+                      body: ''
+                      footer:
+                        Change-type: minor
+                        change-type: minor
+                        Signed-off-by: Thomas Manning <thomasm@balena.io>
+                        signed-off-by: Thomas Manning <thomasm@balena.io>
+                      author: Thomas Manning
+                      nested: []
+                  version: balena-supervisor-12.1.0
+                  date: 2020-10-28T06:12:20.363Z
+                - commits:
+                    - subject: Change source of deviceType to device-type.json
+                      hash: f5183df35677f091f1374c3f6e86706b141471f3
+                      body: |
+                        The source of truth for the device-type should be
+                        device-type.json instead of config.json
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Felipe Lalanne <felipe@balena.io>
+                        signed-off-by: Felipe Lalanne <felipe@balena.io>
+                        Connects-to: '#1472'
+                        connects-to: '#1472'
+                      author: Felipe Lalanne
+                      nested: []
+                  version: balena-supervisor-12.0.9
+                  date: 2020-10-27T12:43:11.383Z
+                - commits:
+                    - subject: >-
+                        Fixed evaluating if updates are needed to reach target
+                        state
+                      hash: 77333f1e110070f17f4bf95c1554075c94a35d63
+                      body: ''
+                      footer:
+                        Closes: '#1476'
+                        closes: '#1476'
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Miguel Casqueira <miguel@balena.io>
+                        signed-off-by: Miguel Casqueira <miguel@balena.io>
+                      author: Miguel Casqueira
+                      nested: []
+                  version: balena-supervisor-12.0.8
+                  date: 2020-10-26T18:56:16.649Z
+                - commits:
+                    - subject: Improved log message when networks do not match
+                      hash: edf23871d9a057b9bae8837f3ee39d7401247514
+                      body: ''
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Miguel Casqueira <miguel@balena.io>
+                        signed-off-by: Miguel Casqueira <miguel@balena.io>
+                      author: Miguel Casqueira
+                      nested: []
+                  version: balena-supervisor-12.0.7
+                  date: 2020-10-19T16:04:51.506Z
+                - commits:
+                    - subject: >-
+                        Fixes check allowing preloading in local (unmanaged)
+                        mode
+                      hash: 0fd9b6376251c73f2adfd37ec80d2145178683d6
+                      body: |
+                        * adds apiEndpoint empty string check
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: ab77
+                      nested: []
+                    - subject: Handle delete of multiple images with same dockerImageId
+                      hash: 4795c336d055862706be42ebb544caef93d55e35
+                      body: >
+                        A docker-compose.yml with the following structure
+
+
+                        ```
+
+                        version: '2.1'
+
+                        services:
+                          app_1:
+                            build: ./noisy-1
+                            image: noisy1
+                          app_2:
+                            build: ./noisy-1
+                            image: noisy1
+                          app_3:
+                            build: ./noisy-1
+                            image: noisy1
+                        ```
+
+
+                        Will lead to the supervisor creating multiple image
+                        database entries
+
+                        with the same dockerId (this is because of how the
+                        engine handles this
+
+                        particular case). This case is not handled by the
+                        removal process
+
+                        leading to image pile up and increased disk usage.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Felipe Lalanne <felipe@balena.io>
+                        signed-off-by: Felipe Lalanne <felipe@balena.io>
+                        Connects-to: '#1434'
+                        connects-to: '#1434'
+                      author: Felipe Lalanne
+                      nested: []
+                  version: balena-supervisor-12.0.6
+                  date: 2020-10-16T22:32:07.462Z
+                - commits:
+                    - subject: Improve calculation for used system memory
+                      hash: dd5f62227a0b0d2024db924e7028c9fec8b2b1d9
+                      body: >
+                        The memory information reported by the supervisor
+                        currently
+
+                        estimates the value of used memory as `MemTotal -
+                        MemFree`.
+
+                        However, linux systems will try to cache and buffer as
+                        much
+
+                        memory as possible, which will affect the output of
+                        `MemFree`
+
+                        (from /proc/meminfo) and in consequence the memory usage
+                        seen
+
+                        by the user on the dashboard, which will appear much
+                        greater than
+
+                        it is.
+
+
+                        The correct calculation should be `MemTotal - MemFree -
+                        Buffers - Cached`,
+
+                        which the calculation performed by `htop` and the `free`
+                        commands.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Felipe Lalanne <felipe@balena.io>
+                        signed-off-by: Felipe Lalanne <felipe@balena.io>
+                        Connects-to: '#1471'
+                        connects-to: '#1471'
+                      author: Felipe Lalanne
+                      nested: []
+                  version: balena-supervisor-12.0.5
+                  date: 2020-10-14T16:19:41.551Z
+                - commits:
+                    - subject: Don't require an existing supervisor container to sync
+                      hash: 629b410e10fb6590806d546ff94101951ec6c9a2
+                      body: ''
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Cameron Diver <cameron@balena.io>
+                        signed-off-by: Cameron Diver <cameron@balena.io>
+                      author: Cameron Diver
+                      nested: []
+                  version: balena-supervisor-12.0.4
+                  date: 2020-10-13T09:49:51.370Z
+                - commits:
+                    - subject: Refactor system information filtering
+                      hash: a2ceb5c93189704beaf8b4f5c8b71c46d8e2a966
+                      body: ''
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Cameron Diver <cameron@balena.io>
+                        signed-off-by: Cameron Diver <cameron@balena.io>
+                      author: Cameron Diver
+                      nested: []
+                    - subject: 'tests: Clean up and consistify naming scheme'
+                      hash: 9e0c99e797fa379c66b7312b40a17d9d31f5ce79
+                      body: ''
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Cameron Diver <cameron@balena.io>
+                        signed-off-by: Cameron Diver <cameron@balena.io>
+                      author: Cameron Diver
+                      nested: []
+                  version: balena-supervisor-12.0.3
+                  date: 2020-10-12T14:46:39.730Z
+                - commits:
+                    - subject: Attempt a state report once every maxReportFrequency
+                      hash: 0e3c0263922043b9d53a7eb3545622106f10100c
+                      body: >
+                        With the addition of the system information feature (CPU
+                        temp) etc if
+
+                        there wasn't any changes in the docker or config state
+                        of the device,
+
+                        updates in system information would not be sent to the
+                        API. Now we
+
+                        attempt to send data once every maxReportFrequency
+                        (although this does
+
+                        not mean that we will be sending data that often, we
+                        still only send the
+
+                        delta, if one exists)
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Closes: '#1481'
+                        closes: '#1481'
+                        Signed-off-by: Cameron Diver <cameron@balena.io>
+                        signed-off-by: Cameron Diver <cameron@balena.io>
+                      author: Cameron Diver
+                      nested: []
+                    - subject: >-
+                        Remove superfluous current state reporting code from
+                        api-binder
+                      hash: 975129188a9fcb11a081f7ba75a1b8b973499a21
+                      body: ''
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Cameron Diver <cameron@balena.io>
+                        signed-off-by: Cameron Diver <cameron@balena.io>
+                      author: Cameron Diver
+                      nested: []
+                  version: balena-supervisor-12.0.2
+                  date: 2020-10-12T10:55:40.890Z
+                - commits:
+                    - subject: Add features label `io.balena.features.journal-logs`
+                      hash: 1eeff698aca56558fa09832b9bcb02c99e275dbe
+                      body: ''
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Thomas Manning <thomasm@balena.io>
+                        signed-off-by: Thomas Manning <thomasm@balena.io>
+                      author: Thomas Manning
+                      nested: []
+                  version: balena-supervisor-12.0.1
+                  date: 2020-10-12T05:41:14.895Z
+                - commits:
+                    - subject: 'version: drop SUPERVISOR_VERSION env var'
+                      hash: 8e65466f2d8540918b1fa8d8af88d0c21fcbf7f8
+                      body: >
+                        In order to make supervisor upgrades more transparent,
+                        lets move away
+
+                        from this env var since it requires a container restart
+                        any time the supervisor
+
+                        is upgraded. We should ultimately move towards providing
+                        the supervisors
+
+                        set of capabilities, but that can come later
+                      footer:
+                        Connects-to: '#1447'
+                        connects-to: '#1447'
+                        Change-type: major
+                        change-type: major
+                        Signed-off-by: Matthew McGinn <matthew@balena.io>
+                        signed-off-by: Matthew McGinn <matthew@balena.io>
+                      author: Matthew McGinn
+                      nested: []
+                  version: balena-supervisor-12.0.0
+                  date: 2020-09-29T15:25:15.693Z
+                - commits:
+                    - subject: Fix supervisor deadlock during migration
+                      hash: adffde932ec28b114a5821b9ae332a42bb330be2
+                      body: >
+                        Due to the singleton work, when performing migration
+                        M00005 and there
+
+                        are apps with services created in the database, a
+                        deadlock occurs
+
+                        during database initialization due to a circular
+
+                        dependency for generating scoped keys.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Felipe Lalanne <felipe@balena.io>
+                        signed-off-by: Felipe Lalanne <felipe@balena.io>
+                        Connects-to: '#1468'
+                        connects-to: '#1468'
+                      author: Felipe Lalanne
+                      nested: []
+                  version: balena-supervisor-11.14.8
+                  date: 2020-09-29T03:00:51.902Z
+                - commits:
+                    - subject: Correctly evaluate if scheduledApply.delay is not set
+                      hash: 90981a00bed100e1496dc71bf0631bc0ab04ffa7
+                      body: ''
+                      footer:
+                        Closes: '#1428'
+                        closes: '#1428'
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Miguel Casqueira <miguel@balena.io>
+                        signed-off-by: Miguel Casqueira <miguel@balena.io>
+                      author: Miguel Casqueira
+                      nested: []
+                  version: balena-supervisor-11.14.7
+                  date: 2020-09-25T17:16:42.247Z
+                - commits:
+                    - subject: Fix config checks for ConfigFS backend
+                      hash: a5f3002e708c949b6de3c8ba495b2a89c13214fc
+                      body: >
+                        When trying to apply SSDT overlays in Up Board, the
+                        supervisor currently
+
+                        gets stuck in a loop trying to apply target state. See
+                        #1465
+
+
+                        This was due to a bug in parsing the configuration,
+                        which lead to
+
+                        the method bootConfigChangeRequired returning true when
+                        no change was
+
+                        needed.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Felipe Lalanne <felipe@balena.io>
+                        signed-off-by: Felipe Lalanne <felipe@balena.io>
+                        Connects-to: '#1465'
+                        connects-to: '#1465'
+                      author: Felipe Lalanne
+                      nested: []
+                  version: balena-supervisor-11.14.6
+                  date: 2020-09-24T19:51:09.936Z
+                - commits:
+                    - subject: 'mixpanel: superisor_version -> supervisor_version'
+                      hash: eebadebb53af68d9b63c948e59c1c78fb38302aa
+                      body: ''
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Matthew McGinn <matthew@balena.io>
+                        signed-off-by: Matthew McGinn <matthew@balena.io>
+                      author: Matthew McGinn
+                      nested: []
+                  version: balena-supervisor-11.14.5
+                  date: 2020-09-24T14:47:47.663Z
+                - commits:
+                    - subject: 'api: Implement scoped Supervisor API keys'
+                      hash: c08de8701e49f417d2fc5849d237b9ed69b438e2
+                      body: >
+                        Each service, when requesting access to the Supervisor
+                        API, will
+
+                        now get an individual key which can be scoped to
+                        specific resources.
+
+                        In this iteration the default scope will be to the
+                        application that
+
+                        the service belongs to.
+
+
+                        We also have a `global` scope which is used by the cloud
+                        API when in
+
+                        managed mode.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Rich Bayliss <rich@balena.io>
+                        signed-off-by: Rich Bayliss <rich@balena.io>
+                      author: Rich Bayliss
+                      nested: []
+                  version: balena-supervisor-11.14.4
+                  date: 2020-09-18T13:02:39.469Z
+                - commits:
+                    - subject: >-
+                        Clarify docs for toggling update lock override from
+                        dashboard
+                      hash: 1b51db06c118ab4c60296f394e854436584c6437
+                      body: ''
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Miguel Casqueira <miguel@balena.io>
+                        signed-off-by: Miguel Casqueira <miguel@balena.io>
+                      author: M. Casqueira
+                      nested: []
+                  version: balena-supervisor-11.14.3
+                  date: 2020-09-17T22:25:21.020Z
+                - commits:
+                    - subject: Refactor extra_uEnv backend to match with more devices
+                      hash: 07e644d0b69f412fb14aeaba17914b9eacd6477f
+                      body: ''
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Miguel Casqueira <miguel@balena.io>
+                        signed-off-by: Miguel Casqueira <miguel@balena.io>
+                      author: Miguel Casqueira
+                      nested: []
+                  version: balena-supervisor-11.14.2
+                  date: 2020-09-15T18:25:31.240Z
+                - commits:
+                    - subject: 'application-manager: Convert to a singleton'
+                      hash: 96c68166a1e1d9b400fca84d33910d526009ecfd
+                      body: ''
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Cameron Diver <cameron@balena.io>
+                        signed-off-by: Cameron Diver <cameron@balena.io>
+                      author: Rich Bayliss
+                      nested: []
+                    - subject: 'device-state: Convert to a singleton'
+                      hash: e3864915bcf3b8c2865f3c14d2ad85023218db3c
+                      body: ''
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Cameron Diver <cameron@balena.io>
+                        signed-off-by: Cameron Diver <cameron@balena.io>
+                      author: Rich Bayliss
+                      nested: []
+                    - subject: 'api-binder: Convert to a singleton'
+                      hash: d50f7791e1f89750a35791c1ea3bd4a7472da9a1
+                      body: ''
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Cameron Diver <cameron@balena.io>
+                        signed-off-by: Cameron Diver <cameron@balena.io>
+                      author: Rich Bayliss
+                      nested: []
+                  version: balena-supervisor-11.14.1
+                  date: 2020-09-14T10:26:09.557Z
+          version: meta-balena-2.61.0
+          date: 2020-11-04T13:01:10.938Z
+        - commits:
+            - subject: 'chrony: set the source UDP port for NTP requests to 123'
+              hash: 6b95bd55f12054d996a412e7a6bc202e518b4e29
+              body: >
+                By default chrony uses a random UDP source port for each NTP
+                request.
+
+                This can cause problems with particular routers/firewalls
+                (issues have
+
+                been reported for the Phicomm KE 2P).
+
+
+                The chrony `acquisitionport` configuration setting has been
+                added
+
+                to the chrony.conf file to change the UDP source port for NTP
+                requests
+
+                to 123 (this is the same as the default source port used by both
+
+                ntpdate and ntpd).
+              footer:
+                Change-type: patch
+                change-type: patch
+                Connects-to: '#2000'
+                connects-to: '#2000'
+                Signed-off-by: Mark Corbin <mark@balena.io>
+                signed-off-by: Mark Corbin <mark@balena.io>
+              author: Mark Corbin
+              nested: []
+          version: meta-balena-2.60.1
+          date: 2020-10-30T11:34:35.642Z
+        - commits:
+            - subject: 'chrony: don''t restore time from drift file or RTC'
+              hash: 5a4842786f365c9d167f29fd310427b4f0bb61b6
+              body: >
+                Drop the '-s' command line parameter from chronyd as:
+
+                a) restoring time from the drift file is no longer necessary due
+                to
+
+                the fake-hwclock service, and
+
+                b) restoring time from the RTC is already covered by the
+                timeinit-rtc
+
+                service.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Mark Corbin <mark@balena.io>
+                signed-off-by: Mark Corbin <mark@balena.io>
+              author: Mark Corbin
+              nested: []
+            - subject: >-
+                systemd/timeinit: add fake.hwclock to maintain system time over
+                reboots
+              hash: 96c2c495819ba6175261a5179e1cdb4673552e6c
+              body: >
+                In order to produce sensible timestamps for journald log
+                messages:
+
+                a) the system time needs to be maintained correctly over a
+                reboot, and
+
+                b) the system time needs to be set before journald is started.
+
+
+                Currently the system time is maintained over reboots on systems
+
+                without an RTC using the last modified time of the chrony drift
+                file.
+
+                However there are a couple of issues with this approach:
+
+
+                a) /var/lib/chrony/ is not mounted early enough in the boot
+                process
+
+                to be available for setting the time before journald is started.
+
+                b) there is an issue with the current systemd dependencies that
+                result
+
+                in the last modified time of the drift file not being updated
+                when the
+
+                system is shutdown or rebooted (see #1995).
+
+
+                The Debian fake-hwclock service (as used by Raspberry Pi OS) has
+                been
+
+                added to overcome these issues.
+
+
+                The fake-hwclock service will save and restore the system time
+                from
+
+                the fake-hwclock.data file (in /etc/fake-hwclock/). The system
+                time
+
+                is loaded from this file at boot and saved to it on shutdown. An
+
+                additional timer service has been added to update the file on an
+
+                hourly basis to cater for unexpected shutdown scenarios, e.g.
+                power
+
+                failure.
+
+
+                The timeinit-timestamp service has improved logging and has been
+
+                renamed to timeinit-buildtime for clarity.
+
+
+                A new time-set.target has been added as per upstream systemd and
+
+                the fake-hwclock and timeinit-buildtime services have been added
+
+                to it.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Connects-to: '#1367 #1919'
+                connects-to: '#1367 #1919'
+                Signed-off-by: Mark Corbin <mark@balena.io>
+                signed-off-by: Mark Corbin <mark@balena.io>
+              author: Mark Corbin
+              nested: []
+            - subject: 'resin-mounts: add bind mount service for /etc/fake-hwclock'
+              hash: 394aa52f77ec222e6fda856a92cd499bd464fa07
+              body: >
+                Add a persistent r/w location (root-overlay/etc/fake-hwclock/)
+                to
+
+                the resin-state partition for storage of the fake-hwclock.data
+                file.
+
+                This file is used by the fake-hwclock service to load the system
+
+                time at boot and save the system time on shutdown.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Mark Corbin <mark@balena.io>
+                signed-off-by: Mark Corbin <mark@balena.io>
+              author: Mark Corbin
+              nested: []
+          version: meta-balena-2.60.0
+          date: 2020-10-29T14:25:50.275Z
+        - commits:
+            - subject: Add host extensions support
+              hash: 1d33429f0bc925bc97b4b7820aeb812eac9098d2
+              body: >
+                Add a new section that described the host extensions
+                functionality.
+
+
+                Fixes #1984
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Add host extensions support
+                changelog-entry: Add host extensions support
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: 'packagegroup-resin: Add hostapp extensions update script'
+              hash: a03e5c9eed5105c5af85c79df29546ec641d873c
+              body: >
+                This commit adds the update-hostapp-extensions utility. It can
+                be run
+
+                with:
+
+                 systemd-run update-hostapp-extensions -r
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: 'hostapp-extensions-update: Add host extensions update script'
+              hash: 0fe293eb118913e667b52b2f6df032227719efc8
+              body: >
+                This script triggers an installation or update of the hostapp
+                extensions
+
+                in the system.
+
+
+                The list of hostapp extensions to install can either be passed
+                to the
+
+                script or it will use the ones set in config.json or
+                hostapp-extensions.conf
+
+                in that order.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: 'resin-vars: Parse the HOSTEXT_IMAGES variable from config.json'
+              hash: 761f517f955f829e12b2c7f0a0f88830ded39e13
+              body: >
+                This variable allows the hostapp extensions updater script to
+                update the
+
+                hostapp extensions in the system.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: 'docker-disk: Add the host extension images to the data partition'
+              hash: cd44a94cf1646828832070417a2deb9236b0f5ee
+              body: >
+                Host extension images contain extra content that is overlayed
+                over the
+
+                root filesystem at boot.
+
+
+                This commits adds the default host extensions to the data
+                partition
+
+                image, stores their repository tags in the /etc directory, and
+                creates
+
+                the containers so that mobynit can mount the container
+                filesystems on
+
+                boot.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: 'docker-disk: Generalize hostapp platform variable'
+              hash: 416544bd9c7b7e9080857dc0258668f388a55aa7
+              body: >
+                Rename HELLO_PLATFORM to HOSTAPP_PLATFORM so it can be used with
+                any
+
+                app type.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: 'initrdscripts: Busybox switch_root does not support -c argument'
+              hash: a62a8189825de9dbcf52dbb3116d213fc7ceb84f
+              body: >
+                Calling busybox switch_root in this way has always been
+                complaining but
+
+                the error log did not get to the console.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: >-
+                resin-filesystem-expand: Omit fs check and resize if partition
+                is mounted
+              hash: d70fbd050e5a1f7c695782b99187d583103111e0
+              body: >
+                Now that the data partition will be mounted from the initramfs
+                for host
+
+                extensions support, this script will only run if something went
+                wrong.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: 'initrdscripts: Expand the resin-data filesystem'
+              hash: 00cad826c157ac2d5c13137fb1023f1eb7570c58
+              body: >
+                As the resin-data partition will be mounted in the initramfs,
+                its
+
+                filesystem needs to be expanded before that.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: 'initrdscripts: Add resin-data to fs UUID generation'
+              hash: d2794dd2d559ca0c55a4cbab9ae5ef3c01ebdcf3
+              body: >
+                The resin-data partition will be mounted in the initramfs for
+                the host
+
+                extension support so the UUID generation needs to happen before
+                that.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: 'resin-data.mount: Remove default dependencies'
+              hash: dc6cfa2e90b29b0fdcfc05c1b85e2196de4f950b
+              body: >
+                With the data partition being mounted in the initramfs to
+                support host
+
+                extensions, the runtime systemd-udev no longer sees the
+                resin-data mount
+
+                event and this mount is blocked.
+
+
+                This is resolved by not adding the default dependency on the
+                block device.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: 'packagegroup-resin: Add independent mobynit package to image'
+              hash: 08e15adb2f21c330b9c92cef527e23770a6fe521
+              body: |
+                The mobynit tool also needs to be in resin-image.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: 'balena-engine: Do not build mobynit'
+              hash: 29844ed3bd936c581e20b72df133a2b6ed498512
+              body: |
+                The mobynit package has now been moved to an independent recipe.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: 'mobynit: Fix source directory'
+              hash: e6dc1b20c45ffdbcc33f82b2ef78f46715317b06
+              body: |
+                The Go class in mobynit predates Go modules support.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: 'mobynit: Separate recipe from balena-engine'
+              hash: 6be3f1153d56c1c0c21e6d84db7be70be96bcd10
+              body: >
+                This commit adds a new recipe to build mobynit independently
+                from balena-engine.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.59.0
+          date: 2020-10-27T12:04:22.881Z
+  version: 2.66.1+rev1
+  date: 2021-01-05T08:19:29.854Z
+- commits:
     - subject: 'resin-init-board: Add Surface Go LTE modem initialization'
       hash: 42fb9cb1271b39470d154025cc8fcb94804cdff2
       body: |
