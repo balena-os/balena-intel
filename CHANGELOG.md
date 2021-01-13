@@ -1,6 +1,32 @@
 Change log
 -----------
 
+# v2.67.0+rev1
+## (2021-01-13)
+
+
+<details>
+<summary> Update meta-balena from v2.66.1 to v2.67.0 [Florin Sarbu] </summary>
+
+> ## meta-balena-2.67.0
+> ### (2021-01-12)
+> 
+> * Update balena-supervisor from v12.2.11 to v12.3.0 [Felipe Lalanne]
+> 
+> ## meta-balena-2.66.3
+> ### (2021-01-12)
+> 
+> * Respect custom CA in supervisor [Michal Toman]
+> 
+> ## meta-balena-2.66.2
+> ### (2021-01-11)
+> 
+> * README: Rename resin-logo to balena-logo. [Alex Gonzalez]
+> 
+</details>
+
+* Update balena-yocto-scripts to v1.9.0 [Florin Sarbu]
+
 # v2.66.1+rev1
 ## (2021-01-05)
 

@@ -1,4 +1,85 @@
 - commits:
+    - subject: Update meta-balena from v2.66.1 to v2.67.0
+      hash: b0d8f3d7ce098c0ef265f35118a86435d1892c02
+      body: |
+        Update meta-balena from 2.66.1 to 2.67.0
+      footer:
+        Changelog-entry: Update meta-balena from v2.66.1 to v2.67.0
+        changelog-entry: Update meta-balena from v2.66.1 to v2.67.0
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested:
+        - commits:
+            - subject: Update balena-supervisor from v12.2.11 to v12.3.0
+              hash: fc41d16085b331d032a3666fc25af7c43eee5369
+              body: ''
+              footer:
+                Changelog-entry: Update balena-supervisor from v12.2.11 to v12.3.0
+                changelog-entry: Update balena-supervisor from v12.2.11 to v12.3.0
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Felipe Lalanne <felipe@balena.io>
+                signed-off-by: Felipe Lalanne <felipe@balena.io>
+              author: Felipe Lalanne
+              nested: []
+          version: meta-balena-2.67.0
+          date: 2021-01-12T13:41:49.881Z
+        - commits:
+            - subject: Respect custom CA in supervisor
+              hash: 4cf82392c78d804a18737de80dcfa6f8f34d0494
+              body: >
+                This is necessary because node has its own built-in CA bundle
+                and ignores
+
+                the system-wide bundle. Bind-mount the system-wide bundle to the
+                supervisor
+
+                container as well to keep the previous behavior. Make it
+                read-only though,
+
+                any modifications should be performed by the host OS.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Respect custom CA in supervisor
+                changelog-entry: Respect custom CA in supervisor
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-2.66.3
+          date: 2021-01-12T09:38:46.408Z
+        - commits:
+            - subject: 'README: Rename resin-logo to balena-logo.'
+              hash: 47a7a0ab9a99ea45b4fcf4e684d973088328eca9
+              body: >
+                The file rename happened in v2.51 but the README has not been
+                updated
+
+                accordingly.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.66.2
+          date: 2021-01-11T17:30:40.806Z
+    - subject: Update balena-yocto-scripts to v1.9.0
+      hash: 456b44fbd71996db4b222e087b6fa46bfaf33173
+      body: ''
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to v1.9.0
+        changelog-entry: Update balena-yocto-scripts to v1.9.0
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 2.67.0+rev1
+  date: 2021-01-13T10:01:04.957Z
+- commits:
     - subject: Update meta-balena from v2.58.6 to v2.66.1
       hash: a29f0dafc17bc4f6c4be7a5bbbcb2af207ead462
       body: |
