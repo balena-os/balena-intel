@@ -1,7 +1,7 @@
 From 3aa79228d4254d0b3660825701bc76f550ac2e6f Mon Sep 17 00:00:00 2001
 From: Richard Purdie <richard.purdie@linuxfoundation.org>
 Date: Sun, 10 Mar 2019 06:43:15 +0000
-Subject: [PATCH 04/82] arm/Makefile: Fix systemtap
+Subject: [PATCH 004/103] arm/Makefile: Fix systemtap
 
 Currently systemtap fails to operate correctly on armv7 systems such as beaglebone and
 soon, qemuarm.

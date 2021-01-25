@@ -1,7 +1,7 @@
 From b97cb4d0bc7ae788b155507b255853e4f16c14d7 Mon Sep 17 00:00:00 2001
 From: Bruce Ashfield <bruce.ashfield@windriver.com>
 Date: Tue, 10 Jun 2008 21:58:35 -0400
-Subject: [PATCH 16/82] arm: serialize build targets
+Subject: [PATCH 016/103] arm: serialize build targets
 
 The image targets need to trigger after we've build all their
 dependencies. To do this we add .NOTPARALLEL and  ensure that

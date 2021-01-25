@@ -1,7 +1,7 @@
 From 61fe894d9ee9397fbcac570b9f9404159234925a Mon Sep 17 00:00:00 2001
 From: Li Wang <li.wang@windriver.com>
 Date: Tue, 15 Dec 2009 11:03:47 +0800
-Subject: [PATCH 24/82] Resolve jiffies wrapping about arp
+Subject: [PATCH 024/103] Resolve jiffies wrapping about arp
 
 When jiffies wraps, it must be larger than the value of "updated".
 The solution will enhance the condition of "time_after".

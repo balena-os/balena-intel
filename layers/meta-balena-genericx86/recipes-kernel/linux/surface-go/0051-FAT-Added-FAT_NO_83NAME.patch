@@ -1,7 +1,7 @@
 From 90624bc095b38648e207d7a072bd0f2beaf1a0a5 Mon Sep 17 00:00:00 2001
 From: Andrew Tridgell <tridge@samba.org>
 Date: Thu, 16 Jul 2009 12:47:15 +1000
-Subject: [PATCH 51/82] FAT: Added FAT_NO_83NAME
+Subject: [PATCH 051/103] FAT: Added FAT_NO_83NAME
 
 This patch adds a new flag field 'FAT_NO_83NAME' for FAT files. When
 this flag is set on an 8.3 FAT entry, both the MSDOS and VFAT

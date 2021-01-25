@@ -1,0 +1,57 @@
+From 8962fcdaca06db21e58f8e07503753c87b79407f Mon Sep 17 00:00:00 2001
+From: Daniel Scally <djrscally@gmail.com>
+Date: Wed, 2 Dec 2020 16:41:42 +0000
+Subject: [PATCH 095/103] i2c: i2c-core-acpi: Add i2c_acpi_dev_name()
+
+We want to refer to an i2c device by name before it has been
+created by the kernel; add a function that constructs the name
+from the acpi device instead.
+
+Signed-off-by: Daniel Scally <djrscally@gmail.com>
+---
+ drivers/i2c/i2c-core-acpi.c | 16 ++++++++++++++++
+ include/linux/i2c.h         |  1 +
+ 2 files changed, 17 insertions(+)
+
+diff --git a/drivers/i2c/i2c-core-acpi.c b/drivers/i2c/i2c-core-acpi.c
+index bbf8dd491d24..04a30607fe6a 100644
+--- a/drivers/i2c/i2c-core-acpi.c
++++ b/drivers/i2c/i2c-core-acpi.c
+@@ -507,6 +507,22 @@ struct i2c_client *i2c_acpi_new_device(struct device *dev, int index,
+ }
+ EXPORT_SYMBOL_GPL(i2c_acpi_new_device);
+ 
++/**
++ * i2c_acpi_dev_name - Construct i2c device name for devs sourced from ACPI
++ * @adev:     ACPI device to construct the name for
++ *
++ * Constructs the name of an i2c device matching the format used by
++ * i2c_dev_set_name() to allow users to refer to an i2c device by name even
++ * before they have been instantiated.
++ * 
++ * The caller is responsible for freeing the returned pointer.
++ */
++char *i2c_acpi_dev_name(struct acpi_device *adev)
++{
++	return kasprintf(GFP_KERNEL, I2C_DEV_NAME_FORMAT, acpi_dev_name(adev));
++}
++EXPORT_SYMBOL_GPL(i2c_acpi_dev_name);
++
+ #ifdef CONFIG_ACPI_I2C_OPREGION
+ static int acpi_gsb_i2c_read_bytes(struct i2c_client *client,
+ 		u8 cmd, u8 *data, u8 data_len)
+diff --git a/include/linux/i2c.h b/include/linux/i2c.h
+index 0deed9821e0e..aa0964174c65 100644
+--- a/include/linux/i2c.h
++++ b/include/linux/i2c.h
+@@ -990,6 +990,7 @@ bool i2c_acpi_get_i2c_resource(struct acpi_resource *ares,
+ u32 i2c_acpi_find_bus_speed(struct device *dev);
+ struct i2c_client *i2c_acpi_new_device(struct device *dev, int index,
+ 				       struct i2c_board_info *info);
++char *i2c_acpi_dev_name(struct acpi_device *adev);
+ struct i2c_adapter *i2c_acpi_find_adapter_by_handle(acpi_handle handle);
+ #else
+ static inline bool i2c_acpi_get_i2c_resource(struct acpi_resource *ares,
+-- 
+2.17.1
+

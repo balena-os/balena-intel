@@ -1,7 +1,7 @@
-From 0daf846c91bf5482e386505689281592dbd0795c Mon Sep 17 00:00:00 2001
+From b8fc04b4cbd5fc5eecbbb1bbbe6fada2a32df5fb Mon Sep 17 00:00:00 2001
 From: Laurent Pinchart <laurent.pinchart+renesas@ideasonboard.com>
 Date: Wed, 1 Jul 2020 08:21:39 +0200
-Subject: [PATCH 68/82] media: v4l2-async: Pass notifier pointer to match
+Subject: [PATCH 068/103] media: v4l2-async: Pass notifier pointer to match
  functions
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8

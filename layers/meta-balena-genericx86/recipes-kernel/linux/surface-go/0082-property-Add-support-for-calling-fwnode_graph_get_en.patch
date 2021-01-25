@@ -1,0 +1,42 @@
+From c45a20eb772310885eae6f0f4cf4208fc7802ab5 Mon Sep 17 00:00:00 2001
+From: Daniel Scally <djrscally@gmail.com>
+Date: Sat, 21 Nov 2020 22:06:38 +0000
+Subject: [PATCH 082/103] property: Add support for calling
+ fwnode_graph_get_endpoint_by_id() for fwnode->secondary
+
+This function is used to find fwnode endpoints against a device. In
+some instances those endpoints are software nodes which are children of
+fwnode->secondary. Add support to fwnode_graph_get_endpoint_by_id() to
+find those endpoints by recursively calling itself passing the ptr to
+fwnode->secondary in the event no endpoint is found for the primary.
+
+Reviewed-by: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
+Reviewed-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
+Signed-off-by: Daniel Scally <djrscally@gmail.com>
+---
+ drivers/base/property.c | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+
+diff --git a/drivers/base/property.c b/drivers/base/property.c
+index 691c5a0cad92..9770aaec98b2 100644
+--- a/drivers/base/property.c
++++ b/drivers/base/property.c
+@@ -1163,7 +1163,14 @@ fwnode_graph_get_endpoint_by_id(const struct fwnode_handle *fwnode,
+ 		best_ep_id = fwnode_ep.id;
+ 	}
+ 
+-	return best_ep;
++	if (best_ep)
++		return best_ep;
++
++	if (fwnode && !IS_ERR_OR_NULL(fwnode->secondary))
++		return fwnode_graph_get_endpoint_by_id(fwnode->secondary, port,
++						       endpoint, flags);
++
++	return NULL;
+ }
+ EXPORT_SYMBOL_GPL(fwnode_graph_get_endpoint_by_id);
+ 
+-- 
+2.17.1
+

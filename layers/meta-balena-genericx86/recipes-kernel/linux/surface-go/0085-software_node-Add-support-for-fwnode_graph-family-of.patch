@@ -1,10 +1,8 @@
-From 4fb1dc9e210a543ffdb29e36026b7a09f4f50a54 Mon Sep 17 00:00:00 2001
+From ae1a220732333c325238c4a495467417d5ee30a2 Mon Sep 17 00:00:00 2001
 From: Heikki Krogerus <heikki.krogerus@linux.intel.com>
 Date: Tue, 15 Sep 2020 15:47:46 +0100
-Subject: [PATCH 75/82] software_node: Add support for fwnode_graph*() family
+Subject: [PATCH 085/103] software_node: Add support for fwnode_graph*() family
  of functions
-
-From: Heikki Krogerus <heikki.krogerus@linux.intel.com>
 
 This implements the remaining .graph_* callbacks in the
 fwnode operations vector for the software nodes. That makes
@@ -14,7 +12,7 @@ when software nodes are used.
 The implementation tries to mimic the "OF graph" as much as
 possible, but there is no support for the "reg" device
 property. The ports will need to have the index in their
-name which starts with "port" (for example "port0", "port1",
+name which starts with "port@" (for example "port@0", "port@1",
 ...) and endpoints will use the index of the software node
 that is given to them during creation. The port nodes can
 also be grouped under a specially named "ports" subnode,
@@ -22,15 +20,19 @@ just like in DT, if necessary.
 
 The remote-endpoints are reference properties under the
 endpoint nodes that are named "remote-endpoint".
+
+Signed-off-by: Heikki Krogerus <heikki.krogerus@linux.intel.com>
+Co-developed-by: Daniel Scally <djrscally@gmail.com>
+Signed-off-by: Daniel Scally <djrscally@gmail.com>
 ---
- drivers/base/swnode.c | 118 +++++++++++++++++++++++++++++++++++++++++-
- 1 file changed, 117 insertions(+), 1 deletion(-)
+ drivers/base/swnode.c | 110 +++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 109 insertions(+), 1 deletion(-)
 
 diff --git a/drivers/base/swnode.c b/drivers/base/swnode.c
-index bf84ddfba845..b0390cb6866e 100644
+index 46ecd334a799..626081f491bd 100644
 --- a/drivers/base/swnode.c
 +++ b/drivers/base/swnode.c
-@@ -540,6 +540,118 @@ software_node_get_reference_args(const struct fwnode_handle *fwnode,
+@@ -540,6 +540,110 @@ software_node_get_reference_args(const struct fwnode_handle *fwnode,
  	return 0;
  }
  
@@ -55,7 +57,6 @@ index bf84ddfba845..b0390cb6866e 100644
 +{
 +	struct swnode *swnode = to_swnode(fwnode);
 +	struct fwnode_handle *old = endpoint;
-+	struct fwnode_handle *parent_of_old;
 +	struct fwnode_handle *parent;
 +	struct fwnode_handle *port;
 +
@@ -74,23 +75,16 @@ index bf84ddfba845..b0390cb6866e 100644
 +	}
 +
 +	for (; port; port = swnode_graph_find_next_port(parent, port)) {
-+		if (old) {
-+			parent_of_old = software_node_get_parent(old);
-+
-+			if (parent_of_old != port)
-+				old = NULL;
-+
-+			fwnode_handle_put(parent_of_old);
++		endpoint = software_node_get_next_child(port, old);
++		if (endpoint) {
++			fwnode_handle_put(port);
++			break;
 +		}
 +
-+		endpoint = software_node_get_next_child(port, old);
-+		if (endpoint)
-+			break;
-+
-+		fwnode_handle_put(port);
++		/* No more endpoints for that port, so stop passing old */
++		old = NULL;
 +	}
 +
-+	fwnode_handle_put(port);
 +	fwnode_handle_put(parent);
 +
 +	return endpoint;
@@ -136,7 +130,7 @@ index bf84ddfba845..b0390cb6866e 100644
 +	struct swnode *swnode = to_swnode(fwnode);
 +	int ret;
 +
-+	ret = kstrtou32(swnode->parent->node->name + 4, 10, &endpoint->port);
++	ret = kstrtou32(swnode->parent->node->name + 5, 10, &endpoint->port);
 +	if (ret)
 +		return ret;
 +
@@ -149,7 +143,7 @@ index bf84ddfba845..b0390cb6866e 100644
  static const struct fwnode_operations software_node_ops = {
  	.get = software_node_get,
  	.put = software_node_put,
-@@ -551,7 +663,11 @@ static const struct fwnode_operations software_node_ops = {
+@@ -551,7 +655,11 @@ static const struct fwnode_operations software_node_ops = {
  	.get_parent = software_node_get_parent,
  	.get_next_child_node = software_node_get_next_child,
  	.get_named_child_node = software_node_get_named_child_node,

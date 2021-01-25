@@ -1,7 +1,7 @@
 From cc2610a95f42625a562952d31731adbbd0761538 Mon Sep 17 00:00:00 2001
 From: Quanyang Wang <quanyang.wang@windriver.com>
 Date: Tue, 3 Dec 2019 17:01:18 +0800
-Subject: [PATCH 40/82] yaffs: add strict check when call
+Subject: [PATCH 040/103] yaffs: add strict check when call
  yaffs_internal_read_super
 
 When kernel booting, mount_block_root will be called to judge

@@ -1,7 +1,7 @@
 From 84582407b842fd163ae81ce331124bb2f0f05a6b Mon Sep 17 00:00:00 2001
 From: He Zhe <zhe.he@windriver.com>
 Date: Tue, 19 Jun 2018 00:58:17 -0700
-Subject: [PATCH 38/82] yaffs: Fix build failure by handling inode i_version
+Subject: [PATCH 038/103] yaffs: Fix build failure by handling inode i_version
  with proper atomic API
 
 i_version in struct inode has changed to atomic64_t in mainline kernel.

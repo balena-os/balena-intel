@@ -1,0 +1,46 @@
+From 387e1fc904b840531eb2a5265c9b5d9be2a0159f Mon Sep 17 00:00:00 2001
+From: Daniel Scally <djrscally@gmail.com>
+Date: Sat, 10 Oct 2020 23:42:09 +0100
+Subject: [PATCH 080/103] software_node: Fix failure to put() and get()
+ references to children in software_node_get_next_child()
+
+The software_node_get_next_child() function currently does not hold
+references to the child software_node that it finds or put the ref that
+is held against the old child - fix that.
+
+Fixes: 59abd83672f7 ("drivers: base: Introducing software nodes to the firmware node framework")
+Reviewed-by: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
+Reviewed-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
+Signed-off-by: Daniel Scally <djrscally@gmail.com>
+---
+ drivers/base/swnode.c | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+diff --git a/drivers/base/swnode.c b/drivers/base/swnode.c
+index e5eb27375416..cc675627fbaa 100644
+--- a/drivers/base/swnode.c
++++ b/drivers/base/swnode.c
+@@ -443,14 +443,18 @@ software_node_get_next_child(const struct fwnode_handle *fwnode,
+ 	struct swnode *c = to_swnode(child);
+ 
+ 	if (!p || list_empty(&p->children) ||
+-	    (c && list_is_last(&c->entry, &p->children)))
++	    (c && list_is_last(&c->entry, &p->children))) {
++		fwnode_handle_put(child);
+ 		return NULL;
++	}
+ 
+ 	if (c)
+ 		c = list_next_entry(c, entry);
+ 	else
+ 		c = list_first_entry(&p->children, struct swnode, entry);
+-	return &c->fwnode;
++
++	fwnode_handle_put(child);
++	return fwnode_handle_get(&c->fwnode);
+ }
+ 
+ static struct fwnode_handle *
+-- 
+2.17.1
+

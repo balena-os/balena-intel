@@ -1,0 +1,54 @@
+From 1ccbc07cfd2c5d749c4c8040f8f7261224fbf316 Mon Sep 17 00:00:00 2001
+From: Sakari Ailus <sakari.ailus@linux.intel.com>
+Date: Tue, 13 Oct 2020 14:12:02 +0200
+Subject: [PATCH 077/103] media: ipu3-cio2: Check receved the size against
+ payload size, not buffer size
+
+Compare the received size of the payload size, not the allocated size of
+the buffer that is page aligned. This way also images that aren't aligned
+to page size are not warned about.
+
+Also wrap a line over 80 characters.
+
+Suggested-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
+Signed-off-by: Sakari Ailus <sakari.ailus@linux.intel.com>
+Reviewed-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
+Tested-by: Jean-Michel Hautbois <jeanmichel.hautbois@gmail.com>
+Signed-off-by: Mauro Carvalho Chehab <mchehab+huawei@kernel.org>
+---
+ drivers/media/pci/intel/ipu3/ipu3-cio2.c | 12 +++++++-----
+ 1 file changed, 7 insertions(+), 5 deletions(-)
+
+diff --git a/drivers/media/pci/intel/ipu3/ipu3-cio2.c b/drivers/media/pci/intel/ipu3/ipu3-cio2.c
+index 7c580d683cc0..a4f29b2ac977 100644
+--- a/drivers/media/pci/intel/ipu3/ipu3-cio2.c
++++ b/drivers/media/pci/intel/ipu3/ipu3-cio2.c
+@@ -564,7 +564,9 @@ static void cio2_buffer_done(struct cio2_device *cio2, unsigned int dma_chan)
+ 
+ 		b = q->bufs[q->bufs_first];
+ 		if (b) {
+-			unsigned int bytes = entry[1].second_entry.num_of_bytes;
++			unsigned int received = entry[1].second_entry.num_of_bytes;
++			unsigned long payload =
++				vb2_get_plane_payload(&b->vbb.vb2_buf, 0);
+ 
+ 			q->bufs[q->bufs_first] = NULL;
+ 			atomic_dec(&q->bufs_queued);
+@@ -574,10 +576,10 @@ static void cio2_buffer_done(struct cio2_device *cio2, unsigned int dma_chan)
+ 			b->vbb.vb2_buf.timestamp = ns;
+ 			b->vbb.field = V4L2_FIELD_NONE;
+ 			b->vbb.sequence = atomic_read(&q->frame_sequence);
+-			if (b->vbb.vb2_buf.planes[0].length != bytes)
+-				dev_warn(dev, "buffer length is %d received %d\n",
+-					 b->vbb.vb2_buf.planes[0].length,
+-					 bytes);
++			if (payload != received)
++				dev_warn(dev,
++					 "payload length is %lu, received %u\n",
++					 payload, received);
+ 			vb2_buffer_done(&b->vbb.vb2_buf, VB2_BUF_STATE_DONE);
+ 		}
+ 		atomic_inc(&q->frame_sequence);
+-- 
+2.17.1
+

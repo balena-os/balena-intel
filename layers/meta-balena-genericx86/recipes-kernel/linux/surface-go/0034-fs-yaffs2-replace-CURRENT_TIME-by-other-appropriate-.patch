@@ -1,7 +1,7 @@
 From d7490a01dff4ec9aabfe621c59891083e9821ccc Mon Sep 17 00:00:00 2001
 From: Kevin Hao <kexin.hao@windriver.com>
 Date: Fri, 25 Aug 2017 14:58:34 +0800
-Subject: [PATCH 34/82] fs: yaffs2: replace CURRENT_TIME by other appropriate
+Subject: [PATCH 034/103] fs: yaffs2: replace CURRENT_TIME by other appropriate
  apis
 
 The macro CURRENT_TIME has already been deleted by commit bfe1c566453a

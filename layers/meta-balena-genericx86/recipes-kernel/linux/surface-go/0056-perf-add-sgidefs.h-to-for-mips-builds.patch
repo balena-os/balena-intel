@@ -1,7 +1,7 @@
 From feadb76b9806a026f577e9030fd45458a9eec33b Mon Sep 17 00:00:00 2001
 From: Tom Zanussi <tom.zanussi@intel.com>
 Date: Tue, 10 Jul 2012 09:37:56 -0500
-Subject: [PATCH 56/82] perf: add sgidefs.h to for mips builds
+Subject: [PATCH 056/103] perf: add sgidefs.h to for mips builds
 
 Allow Python.h to find the definitions it needs on mips i.e. get rid
 of the error: "_ABIN32" is not defined.

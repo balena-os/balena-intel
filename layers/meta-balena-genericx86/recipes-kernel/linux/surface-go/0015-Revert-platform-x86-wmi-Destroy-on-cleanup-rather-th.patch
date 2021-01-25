@@ -1,7 +1,7 @@
 From e94f8f3f74faf9ad9154a3eca38dd689b53162c1 Mon Sep 17 00:00:00 2001
 From: Yongxin Liu <yongxin.liu@windriver.com>
 Date: Wed, 27 Nov 2019 16:46:58 +0800
-Subject: [PATCH 15/82] Revert "platform/x86: wmi: Destroy on cleanup rather
+Subject: [PATCH 015/103] Revert "platform/x86: wmi: Destroy on cleanup rather
  than unregister"
 
 This reverts commit 7b11e8989618581bc0226ad313264cdc05d48d86.

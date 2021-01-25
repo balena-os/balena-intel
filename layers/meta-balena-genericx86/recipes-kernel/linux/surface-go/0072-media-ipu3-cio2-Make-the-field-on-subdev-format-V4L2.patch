@@ -1,0 +1,35 @@
+From 965162d9c9d05807619b9b40c2f93f407fb73b3f Mon Sep 17 00:00:00 2001
+From: Sakari Ailus <sakari.ailus@linux.intel.com>
+Date: Fri, 9 Oct 2020 15:56:05 +0200
+Subject: [PATCH 072/103] media: ipu3-cio2: Make the field on subdev format
+ V4L2_FIELD_NONE
+
+The ipu3-cio2 doesn't make use of the field and this is reflected in V4L2
+buffers as well as the try format. Do this in active format, too.
+
+Fixes: c2a6a07afe4a ("media: intel-ipu3: cio2: add new MIPI-CSI2 driver")
+Signed-off-by: Sakari Ailus <sakari.ailus@linux.intel.com>
+Reviewed-by: Bingbu Cao <bingbu.cao@intel.com>
+Reviewed-by: Andy Shevchenko <andy.shevchenko@gmail.com>
+Reviewed-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
+Cc: stable@vger.kernel.org # v4.16 and up
+Signed-off-by: Mauro Carvalho Chehab <mchehab+huawei@kernel.org>
+---
+ drivers/media/pci/intel/ipu3/ipu3-cio2.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/drivers/media/pci/intel/ipu3/ipu3-cio2.c b/drivers/media/pci/intel/ipu3/ipu3-cio2.c
+index 59bc3e30a9d9..9b1335847ad2 100644
+--- a/drivers/media/pci/intel/ipu3/ipu3-cio2.c
++++ b/drivers/media/pci/intel/ipu3/ipu3-cio2.c
+@@ -1296,6 +1296,7 @@ static int cio2_subdev_set_fmt(struct v4l2_subdev *sd,
+ 	fmt->format.width = min_t(u32, fmt->format.width, CIO2_IMAGE_MAX_WIDTH);
+ 	fmt->format.height = min_t(u32, fmt->format.height,
+ 				   CIO2_IMAGE_MAX_LENGTH);
++	fmt->format.field = V4L2_FIELD_NONE;
+ 
+ 	mutex_lock(&q->subdev_lock);
+ 	*mbus = fmt->format;
+-- 
+2.17.1
+

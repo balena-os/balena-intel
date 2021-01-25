@@ -1,7 +1,7 @@
 From b1ee7f32f5b35b20a16625a738737e24f1f87fe6 Mon Sep 17 00:00:00 2001
 From: Benjamin Walsh <benjamin.walsh@windriver.com>
 Date: Mon, 9 Feb 2009 14:25:47 -0500
-Subject: [PATCH 10/82] powerpc: kexec fix for powerpc64
+Subject: [PATCH 010/103] powerpc: kexec fix for powerpc64
 
 slbia instruction invalidates the SLB, but there was a hang on the first
 instruction that caused an SLB miss exception. Doing a full sync after

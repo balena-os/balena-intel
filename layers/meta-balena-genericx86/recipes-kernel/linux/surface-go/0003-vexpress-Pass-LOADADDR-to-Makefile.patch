@@ -1,7 +1,7 @@
 From d3a13bc1c465db5096819ed887d6d14d81efc8fe Mon Sep 17 00:00:00 2001
 From: Yang Shi <yang.shi@windriver.com>
 Date: Tue, 15 Jul 2014 21:19:34 -0700
-Subject: [PATCH 03/82] vexpress: Pass LOADADDR to Makefile
+Subject: [PATCH 003/103] vexpress: Pass LOADADDR to Makefile
 
 Due to upstream commit 938f94cde74b33d6d3580c6fe65ebe918a770ae2
 ("ARM: 7656/1: uImage: Error out on build of multiplatform without LOADADDR"),

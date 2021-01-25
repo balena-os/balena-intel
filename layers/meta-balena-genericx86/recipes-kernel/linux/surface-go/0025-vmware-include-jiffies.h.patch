@@ -1,7 +1,7 @@
 From 9fa451512c518e1478ef7901f1b57d0c20187cb6 Mon Sep 17 00:00:00 2001
 From: Bruce Ashfield <bruce.ashfield@windriver.com>
 Date: Thu, 19 Aug 2010 13:57:50 -0400
-Subject: [PATCH 25/82] vmware: include jiffies.h
+Subject: [PATCH 025/103] vmware: include jiffies.h
 
 Signed-off-by: Bruce Ashfield <bruce.ashfield@windriver.com>
 ---

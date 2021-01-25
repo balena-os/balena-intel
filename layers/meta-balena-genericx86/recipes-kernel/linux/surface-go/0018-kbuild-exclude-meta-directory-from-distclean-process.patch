@@ -1,7 +1,7 @@
 From d30d76a55f214d89311ceb3afc9a1902d811c96b Mon Sep 17 00:00:00 2001
 From: Bruce Ashfield <bruce.ashfield@windriver.com>
 Date: Thu, 19 Jun 2008 11:03:07 -0400
-Subject: [PATCH 18/82] kbuild: exclude meta directory from distclean
+Subject: [PATCH 018/103] kbuild: exclude meta directory from distclean
  processing
 
 The meta directory has some files (notably files of size 0) that are

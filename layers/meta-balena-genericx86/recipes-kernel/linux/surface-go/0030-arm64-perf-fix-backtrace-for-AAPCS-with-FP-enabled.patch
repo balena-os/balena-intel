@@ -1,7 +1,7 @@
 From 284e3162f1b8e2308074662be3e5d6197771db2e Mon Sep 17 00:00:00 2001
 From: Fang Jia <fang.jia@windriver.com>
 Date: Fri, 28 Dec 2018 16:28:34 +0800
-Subject: [PATCH 30/82] arm64/perf: fix backtrace for AAPCS with FP enabled
+Subject: [PATCH 030/103] arm64/perf: fix backtrace for AAPCS with FP enabled
 
 This change is for arm64 platform compat mode.
 The change for arm32 platform has been included in this commit "perf: fix

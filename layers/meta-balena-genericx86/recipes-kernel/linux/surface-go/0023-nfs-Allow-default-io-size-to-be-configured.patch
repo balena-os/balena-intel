@@ -1,7 +1,7 @@
 From 6614c29d246c243d90210e78d2c5f3072900f579 Mon Sep 17 00:00:00 2001
 From: Jim Somerville <Jim.Somerville@windriver.com>
 Date: Thu, 8 Apr 2010 23:44:22 -0700
-Subject: [PATCH 23/82] nfs: Allow default io size to be configured.
+Subject: [PATCH 023/103] nfs: Allow default io size to be configured.
 
 Some boards need a smaller size here for
 performance reasons, so let's make the value

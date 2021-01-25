@@ -51,6 +51,9 @@ RESIN_CONFIGS[sgo2_camera] = " \
     CONFIG_GPIO_TPS68470=y \
     CONFIG_MFD_CORE=y \
     CONFIG_MFD_TPS68470=y \
+    CONFIG_REGULATOR=y \
+    CONFIG_REGULATOR_GPIO=y \
+    CONFIG_INTEL_SKL_INT3472=y \
 "
 
 #
@@ -488,18 +491,39 @@ SRC_URI_append_surface-go = " \
     file://0066-tipc-fix-Wstringop-truncation-warnings.patch \
     file://0067-media-device-property-Add-a-function-to-test-is-a-fw.patch \
     file://0068-media-v4l2-async-Pass-notifier-pointer-to-match-func.patch \
-    file://0069-property-Add-support-to-fwnode_graph_get_endpoint_by.patch \
-    file://0070-property-Return-true-in-fwnode_device_is_available-f.patch \
-    file://0071-software_node-Fix-failure-to-put-and-get-references-.patch \
-    file://0072-software_node-Enforce-parent-before-child-ordering-o.patch \
-    file://0073-software_node-Alter-software_node_unregister_nodes-t.patch \
-    file://0074-software_node-amend-software_node_unregister_node_gr.patch \
-    file://0075-software_node-Add-support-for-fwnode_graph-family-of.patch \
-    file://0076-lib-test_printf.c-Use-helper-function-to-unwind-arra.patch \
-    file://0077-ipu3-cio2-Add-T-entry-to-MAINTAINERS.patch \
-    file://0078-ipu3-cio2-Rename-ipu3-cio2.c-to-allow-module-to-be-b.patch \
-    file://0079-media-v4l2-core-v4l2-async-Check-possible-match-in-m.patch \
-    file://0080-acpi-Add-acpi_dev_get_next_match_dev-and-macro-to-it.patch \
-    file://0081-ipu3-cio2-Add-functionality-allowing-software_node-c.patch \
-    file://0082-ov5693-camera-sensor-driver.patch \
+    file://0069-media-ipu3-cio2-Return-actual-subdev-format.patch \
+    file://0070-media-ipu3-cio2-Serialise-access-to-pad-format.patch \
+    file://0071-media-ipu3-cio2-Validate-mbus-format-in-setting-subd.patch \
+    file://0072-media-ipu3-cio2-Make-the-field-on-subdev-format-V4L2.patch \
+    file://0073-media-ipu3-cio2-Use-unsigned-values-where-appropriat.patch \
+    file://0074-media-ipu3-cio2-Remove-explicit-type-from-frame-size.patch \
+    file://0075-media-ipu3-cio2-Rename-CIO2_IMAGE_MAX_LENGTH-as-CIO2.patch \
+    file://0076-media-ipu3-cio2-Remove-traces-of-returned-buffers.patch \
+    file://0077-media-ipu3-cio2-Check-receved-the-size-against-paylo.patch \
+    file://0078-PCI-ACPI-Fix-up-ACPI-companion-lookup-for-device-0-o.patch \
+    file://0079-Revert-ACPI-resources-Use-AE_CTRL_TERMINATE-to-termi.patch \
+    file://0080-software_node-Fix-failure-to-put-and-get-references-.patch \
+    file://0081-property-Return-true-in-fwnode_device_is_available-f.patch \
+    file://0082-property-Add-support-for-calling-fwnode_graph_get_en.patch \
+    file://0083-software_node-Enforce-parent-before-child-ordering-o.patch \
+    file://0084-software_node-unregister-software_nodes-in-reverse-o.patch \
+    file://0085-software_node-Add-support-for-fwnode_graph-family-of.patch \
+    file://0086-lib-test_printf.c-Use-helper-function-to-unwind-arra.patch \
+    file://0087-ipu3-cio2-Add-T-entry-to-MAINTAINERS.patch \
+    file://0088-ipu3-cio2-Rename-ipu3-cio2.c-to-allow-module-to-be-b.patch \
+    file://0089-media-v4l2-core-v4l2-async-Check-possible-match-in-m.patch \
+    file://0090-acpi-Add-acpi_dev_get_next_match_dev-and-macro-to-it.patch \
+    file://0091-ipu3-cio2-Add-functionality-allowing-software_node-c.patch \
+    file://0092-acpi-utils-move-acpi_lpss_dep-to-utils.patch \
+    file://0093-acpi-utils-Add-function-to-fetch-dependent-acpi_devi.patch \
+    file://0094-i2c-i2c-core-base-Use-format-macro-in-i2c_dev_set_na.patch \
+    file://0095-i2c-i2c-core-acpi-Add-i2c_acpi_dev_name.patch \
+    file://0096-gpio-gpiolib-acpi-Export-acpi_get_gpiod.patch \
+    file://0097-platform-x86-Add-intel_skl_int3472-driver.patch \
+    file://0098-mfd-Remove-tps68470-MFD-driver.patch \
+    file://0099-regulator-Introduce-tps68470-regulator-driver.patch \
+    file://0100-clk-Introduce-clk-tps68470-driver.patch \
+    file://0101-media-i2c-Add-support-for-the-OV5693-image-sensor.patch \
+    file://0102-media-i2c-Add-reset-pin-toggling-to-ov5693.patch \
+    file://0103-media-i2c-Fix-misnamed-variable-in-power_down-for-ov.patch \
 "

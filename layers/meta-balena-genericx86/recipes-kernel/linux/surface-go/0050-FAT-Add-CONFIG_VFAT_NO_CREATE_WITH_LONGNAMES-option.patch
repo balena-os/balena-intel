@@ -1,7 +1,7 @@
 From b5bc727b7aaa5010da63f8f052dd87fb842311ec Mon Sep 17 00:00:00 2001
 From: Andrew Tridgell <tridge@samba.org>
 Date: Wed, 15 Jul 2009 10:14:59 +1000
-Subject: [PATCH 50/82] FAT: Add CONFIG_VFAT_NO_CREATE_WITH_LONGNAMES option
+Subject: [PATCH 050/103] FAT: Add CONFIG_VFAT_NO_CREATE_WITH_LONGNAMES option
 
 When this option is enabled this will refuse to create new files with
 long names. Accessing existing files with long names will continue to

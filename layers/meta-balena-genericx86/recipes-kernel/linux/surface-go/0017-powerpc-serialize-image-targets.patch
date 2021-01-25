@@ -1,7 +1,7 @@
 From ffa570b50a3726ac36ff9a8336aca4a050d35d72 Mon Sep 17 00:00:00 2001
 From: Bruce Ashfield <bruce.ashfield@windriver.com>
 Date: Tue, 10 Jun 2008 21:58:45 -0400
-Subject: [PATCH 17/82] powerpc: serialize image targets
+Subject: [PATCH 017/103] powerpc: serialize image targets
 
 The image targets need to trigger after we've build all their
 dependencies. To do this we add .NOTPARALLEL and  ensure that

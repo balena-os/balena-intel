@@ -1,7 +1,7 @@
 From cb477761141b8f7af0a3680c86e747b6ba9cb23d Mon Sep 17 00:00:00 2001
 From: Paul Gortmaker <paul.gortmaker@windriver.com>
 Date: Thu, 26 Nov 2009 07:32:09 -0800
-Subject: [PATCH 21/82] mount_root: clarify error messages for when no rootfs
+Subject: [PATCH 021/103] mount_root: clarify error messages for when no rootfs
  found
 
 To an end user who doesn't really know linux that well, a

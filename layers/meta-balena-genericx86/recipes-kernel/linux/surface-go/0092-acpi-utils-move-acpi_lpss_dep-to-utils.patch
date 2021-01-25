@@ -1,0 +1,101 @@
+From be28b7ccfc9256422760f684f975565dff887747 Mon Sep 17 00:00:00 2001
+From: Daniel Scally <djrscally@gmail.com>
+Date: Wed, 2 Dec 2020 12:38:10 +0000
+Subject: [PATCH 092/103] acpi: utils: move acpi_lpss_dep() to utils
+
+I need to be able to identify devices which declare themselves to be
+dependent on other devices through _DEP; add this function to utils.c
+and export it to the rest of the ACPI layer.
+
+Signed-off-by: Daniel Scally <djrscally@gmail.com>
+---
+ drivers/acpi/acpi_lpss.c | 24 ------------------------
+ drivers/acpi/internal.h  |  1 +
+ drivers/acpi/utils.c     | 24 ++++++++++++++++++++++++
+ 3 files changed, 25 insertions(+), 24 deletions(-)
+
+diff --git a/drivers/acpi/acpi_lpss.c b/drivers/acpi/acpi_lpss.c
+index 5e2bfbcf526f..3789616586ba 100644
+--- a/drivers/acpi/acpi_lpss.c
++++ b/drivers/acpi/acpi_lpss.c
+@@ -536,30 +536,6 @@ static struct device *acpi_lpss_find_device(const char *hid, const char *uid)
+ 	return bus_find_device(&pci_bus_type, NULL, &data, match_hid_uid);
+ }
+ 
+-static bool acpi_lpss_dep(struct acpi_device *adev, acpi_handle handle)
+-{
+-	struct acpi_handle_list dep_devices;
+-	acpi_status status;
+-	int i;
+-
+-	if (!acpi_has_method(adev->handle, "_DEP"))
+-		return false;
+-
+-	status = acpi_evaluate_reference(adev->handle, "_DEP", NULL,
+-					 &dep_devices);
+-	if (ACPI_FAILURE(status)) {
+-		dev_dbg(&adev->dev, "Failed to evaluate _DEP.\n");
+-		return false;
+-	}
+-
+-	for (i = 0; i < dep_devices.count; i++) {
+-		if (dep_devices.handles[i] == handle)
+-			return true;
+-	}
+-
+-	return false;
+-}
+-
+ static void acpi_lpss_link_consumer(struct device *dev1,
+ 				    const struct lpss_device_links *link)
+ {
+diff --git a/drivers/acpi/internal.h b/drivers/acpi/internal.h
+index 43411a7457cd..005b119346f9 100644
+--- a/drivers/acpi/internal.h
++++ b/drivers/acpi/internal.h
+@@ -79,6 +79,7 @@ static inline void acpi_lpss_init(void) {}
+ #endif
+ 
+ void acpi_apd_init(void);
++bool acpi_lpss_dep(struct acpi_device *adev, acpi_handle handle);
+ 
+ acpi_status acpi_hotplug_schedule(struct acpi_device *adev, u32 src);
+ bool acpi_queue_hotplug_work(struct work_struct *work);
+diff --git a/drivers/acpi/utils.c b/drivers/acpi/utils.c
+index 3d8370a40011..871bf463118b 100644
+--- a/drivers/acpi/utils.c
++++ b/drivers/acpi/utils.c
+@@ -811,6 +811,30 @@ static int acpi_dev_match_cb(struct device *dev, const void *data)
+ 	return hrv == match->hrv;
+ }
+ 
++bool acpi_lpss_dep(struct acpi_device *adev, acpi_handle handle)
++{
++	struct acpi_handle_list dep_devices;
++	acpi_status status;
++	int i;
++
++	if (!acpi_has_method(adev->handle, "_DEP"))
++		return false;
++
++	status = acpi_evaluate_reference(adev->handle, "_DEP", NULL,
++					 &dep_devices);
++	if (ACPI_FAILURE(status)) {
++		dev_dbg(&adev->dev, "Failed to evaluate _DEP.\n");
++		return false;
++	}
++
++	for (i = 0; i < dep_devices.count; i++) {
++		if (dep_devices.handles[i] == handle)
++			return true;
++	}
++
++	return false;
++}
++
+ /**
+  * acpi_dev_present - Detect that a given ACPI device is present
+  * @hid: Hardware ID of the device.
+-- 
+2.17.1
+

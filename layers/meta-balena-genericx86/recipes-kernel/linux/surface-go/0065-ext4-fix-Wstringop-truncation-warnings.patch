@@ -1,7 +1,7 @@
 From a126e8282c732cec63c35fa4b335009c0bc5195b Mon Sep 17 00:00:00 2001
 From: Wenlin Kang <wenlin.kang@windriver.com>
 Date: Sun, 15 Nov 2020 18:58:08 -0800
-Subject: [PATCH 65/82] ext4: fix -Wstringop-truncation warnings
+Subject: [PATCH 065/103] ext4: fix -Wstringop-truncation warnings
 
 The strncpy() function may create a unterminated string,
 use strscpy_pad() instead.

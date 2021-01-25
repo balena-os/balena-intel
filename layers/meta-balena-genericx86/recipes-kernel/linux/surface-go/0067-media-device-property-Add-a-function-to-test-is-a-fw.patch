@@ -1,7 +1,7 @@
 From 99da8c2204e26968c75b801aa998112e27696b1c Mon Sep 17 00:00:00 2001
 From: Laurent Pinchart <laurent.pinchart+renesas@ideasonboard.com>
 Date: Wed, 1 Jul 2020 08:21:37 +0200
-Subject: [PATCH 67/82] media: device property: Add a function to test is a
+Subject: [PATCH 067/103] media: device property: Add a function to test is a
  fwnode is a graph endpoint
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8

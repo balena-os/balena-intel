@@ -1,7 +1,7 @@
 From 03ac84007ed4f5b43afd55dc779e5539630c3177 Mon Sep 17 00:00:00 2001
 From: Paul Gortmaker <paul.gortmaker@windriver.com>
 Date: Sat, 27 Sep 2014 12:01:21 -0400
-Subject: [PATCH 52/82] fat: don't use obsolete random32 call in namei_vfat
+Subject: [PATCH 052/103] fat: don't use obsolete random32 call in namei_vfat
 
 Introduced in commit 16b6ba6d7f6b0e8a2baeb14b128df0bb0a0a5680
 ("FAT: Add CONFIG_VFAT_FS_NO_DUALNAMES option"), the use of

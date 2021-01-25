@@ -1,0 +1,68 @@
+From 1744ed8ed0f24c22ec72bf1b01080467dc5bcd96 Mon Sep 17 00:00:00 2001
+From: Daniel Scally <djrscally@gmail.com>
+Date: Mon, 16 Nov 2020 21:38:49 +0000
+Subject: [PATCH 094/103] i2c: i2c-core-base: Use format macro in
+ i2c_dev_set_name()
+
+Some places in the kernel allow users to map resources to a device
+using device name (for example, gpiod_lookup_table). Currently
+this involves waiting for the i2c_client to have been registered so we
+can use dev_name(&client->dev). We want to add a function to allow users
+to refer to an i2c device by name before it has been instantiated, so
+create a macro for the format that's accessible outside the i2c layer
+and use it in i2c_dev_set_name()
+
+Suggested-by: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
+Signed-off-by: Daniel Scally <djrscally@gmail.com>
+---
+ drivers/i2c/i2c-core-base.c | 4 ++--
+ include/linux/i2c.h         | 7 +++++++
+ 2 files changed, 9 insertions(+), 2 deletions(-)
+
+diff --git a/drivers/i2c/i2c-core-base.c b/drivers/i2c/i2c-core-base.c
+index 7031393c7480..b0642e1cefe4 100644
+--- a/drivers/i2c/i2c-core-base.c
++++ b/drivers/i2c/i2c-core-base.c
+@@ -683,12 +683,12 @@ static void i2c_dev_set_name(struct i2c_adapter *adap,
+ 	struct acpi_device *adev = ACPI_COMPANION(&client->dev);
+ 
+ 	if (info && info->dev_name) {
+-		dev_set_name(&client->dev, "i2c-%s", info->dev_name);
++		dev_set_name(&client->dev, I2C_DEV_NAME_FORMAT, info->dev_name);
+ 		return;
+ 	}
+ 
+ 	if (adev) {
+-		dev_set_name(&client->dev, "i2c-%s", acpi_dev_name(adev));
++		dev_set_name(&client->dev, I2C_DEV_NAME_FORMAT, acpi_dev_name(adev));
+ 		return;
+ 	}
+ 
+diff --git a/include/linux/i2c.h b/include/linux/i2c.h
+index 4e7714c88f95..0deed9821e0e 100644
+--- a/include/linux/i2c.h
++++ b/include/linux/i2c.h
+@@ -39,6 +39,9 @@ enum i2c_slave_event;
+ typedef int (*i2c_slave_cb_t)(struct i2c_client *client,
+ 			      enum i2c_slave_event event, u8 *val);
+ 
++/* I2C Device Name Format - to maintain consistency outside the i2c layer */
++#define I2C_DEV_NAME_FORMAT		"i2c-%s"
++
+ /* I2C Frequency Modes */
+ #define I2C_MAX_STANDARD_MODE_FREQ	100000
+ #define I2C_MAX_FAST_MODE_FREQ		400000
+@@ -1003,6 +1006,10 @@ static inline struct i2c_client *i2c_acpi_new_device(struct device *dev,
+ {
+ 	return ERR_PTR(-ENODEV);
+ }
++static inline char *i2c_acpi_dev_name(struct acpi_device *adev)
++{
++	return NULL;
++}
+ static inline struct i2c_adapter *i2c_acpi_find_adapter_by_handle(acpi_handle handle)
+ {
+ 	return NULL;
+-- 
+2.17.1
+

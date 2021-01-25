@@ -1,7 +1,7 @@
 From da95338155ae2f56003876bb98c8d297fc7bb759 Mon Sep 17 00:00:00 2001
 From: Jianxun Zhang <jianxun.zhang@linux.intel.com>
 Date: Thu, 25 Aug 2016 15:30:55 -0700
-Subject: [PATCH 28/82] uvesafb: provide option to specify timeout for task
+Subject: [PATCH 028/103] uvesafb: provide option to specify timeout for task
  completion
 
 We try to make this change a generic extension, but it is

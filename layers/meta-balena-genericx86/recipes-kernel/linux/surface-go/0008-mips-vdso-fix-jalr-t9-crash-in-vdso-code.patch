@@ -1,7 +1,7 @@
 From 79e41a9e795e766e378e01a5ba4925ca011b4949 Mon Sep 17 00:00:00 2001
 From: Victor Kamensky <kamensky@cisco.com>
 Date: Fri, 31 Jan 2020 09:39:44 -0800
-Subject: [PATCH 08/82] mips: vdso: fix 'jalr $t9' crash in vdso code
+Subject: [PATCH 008/103] mips: vdso: fix 'jalr $t9' crash in vdso code
 
 Observed that when kernel is built with Yocto mips64-poky-linux-gcc,
 and mips64-poky-linux-gnun32-gcc toolchain, resuling vdso contains

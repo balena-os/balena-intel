@@ -1,7 +1,7 @@
 From 2afe08dc1a1557cdff2c104e238aa79653b44b30 Mon Sep 17 00:00:00 2001
 From: Mark Asselstine <mark.asselstine@windriver.com>
 Date: Tue, 15 Jul 2008 15:49:27 -0400
-Subject: [PATCH 02/82] arm: ARM EABI socketcall
+Subject: [PATCH 002/103] arm: ARM EABI socketcall
 
 This patch make that the sys_socketcall system call is available when
 EABI is used. The reason is that the user-space applications in both

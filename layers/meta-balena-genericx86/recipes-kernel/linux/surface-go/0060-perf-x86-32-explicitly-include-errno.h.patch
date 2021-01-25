@@ -1,7 +1,7 @@
 From 5e065477c48da3576106edd26336c47813e94386 Mon Sep 17 00:00:00 2001
 From: Bruce Ashfield <bruce.ashfield@windriver.com>
 Date: Mon, 21 Aug 2017 13:52:53 -0400
-Subject: [PATCH 60/82] perf: x86-32: explicitly include <errno.h>
+Subject: [PATCH 060/103] perf: x86-32: explicitly include <errno.h>
 
 The 32bit x86 perf build does not find the system definitions of error
 return values, hence we end up with:

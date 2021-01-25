@@ -1,7 +1,8 @@
 From 81e8eaa9db36d46c07dca6252a53851174c3aa46 Mon Sep 17 00:00:00 2001
 From: Khem Raj <raj.khem@gmail.com>
 Date: Thu, 5 Jan 2012 11:42:35 -0800
-Subject: [PATCH 26/82] compiler.h: Undef before redefining __attribute_const__
+Subject: [PATCH 026/103] compiler.h: Undef before redefining
+ __attribute_const__
 
 This is required to avoid warnings like
 util/include/linux/compiler.h:8:0: error: "__attribute_const__" redefined [-Werror]
