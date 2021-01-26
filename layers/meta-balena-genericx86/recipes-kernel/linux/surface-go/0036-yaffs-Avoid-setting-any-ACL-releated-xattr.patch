@@ -1,7 +1,7 @@
 From 81cc740144cfac2650676cc2eb8a01cd7c54b688 Mon Sep 17 00:00:00 2001
 From: Zhang Xiao <xiao.zhang@windriver.com>
 Date: Wed, 27 Aug 2014 13:34:15 +0800
-Subject: [PATCH 36/82] yaffs: Avoid setting any ACL releated xattr
+Subject: [PATCH 036/103] yaffs: Avoid setting any ACL releated xattr
 
 YAFFS doesn't sopport ACL yet, it must refuse any related settings.
 

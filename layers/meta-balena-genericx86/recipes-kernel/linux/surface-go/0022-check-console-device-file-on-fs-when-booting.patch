@@ -1,7 +1,7 @@
 From 013e55121c5ea38370d13384598eefc22096b787 Mon Sep 17 00:00:00 2001
 From: Bruce Ashfield <bruce.ashfield@windriver.com>
 Date: Thu, 8 Apr 2010 23:44:21 -0700
-Subject: [PATCH 22/82] check console device file on fs when booting
+Subject: [PATCH 022/103] check console device file on fs when booting
 
 If a root filesystem is generated as non-root, one of
 the tell tale signs is /dev/console not being a character

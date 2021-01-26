@@ -1,10 +1,14 @@
-From 9d7dbb8279374a49aaba1eafa4c034e4d54636cf Mon Sep 17 00:00:00 2001
+From 339ccb526f7bd806eb333bae03834c59fddb469a Mon Sep 17 00:00:00 2001
 From: Daniel Scally <djrscally@gmail.com>
 Date: Sat, 10 Oct 2020 23:11:36 +0100
-Subject: [PATCH 77/82] ipu3-cio2: Add T: entry to MAINTAINERS
+Subject: [PATCH 087/103] ipu3-cio2: Add T: entry to MAINTAINERS
 
 Development for the ipu3-cio2 driver is taking place in media_tree, but
 there's no T: entry in MAINTAINERS to denote that - rectify that oversight
+
+Reviewed-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
+Reviewed-by: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
+Signed-off-by: Daniel Scally <djrscally@gmail.com>
 ---
  MAINTAINERS | 1 +
  1 file changed, 1 insertion(+)

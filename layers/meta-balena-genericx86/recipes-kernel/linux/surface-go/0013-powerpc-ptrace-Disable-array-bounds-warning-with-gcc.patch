@@ -1,7 +1,8 @@
 From f92fb52f2f5d536af0871b4252bdd2779440db93 Mon Sep 17 00:00:00 2001
 From: Khem Raj <raj.khem@gmail.com>
 Date: Fri, 4 May 2018 09:50:05 -0700
-Subject: [PATCH 13/82] powerpc/ptrace: Disable array-bounds warning with gcc8
+Subject: [PATCH 013/103] powerpc/ptrace: Disable array-bounds warning with
+ gcc8
 
 This masks the new gcc8 warning
 include/linux/regset.h:270:4: error: 'memcpy' offset [-527, -529] is out of the bounds [0, 16] of object 'vrsave' with type 'union <anonymous>'

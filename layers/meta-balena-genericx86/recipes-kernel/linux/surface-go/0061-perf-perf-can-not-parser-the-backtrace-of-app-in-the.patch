@@ -1,7 +1,7 @@
 From 2b0daf9d98c15636f8e606f4d2c2a7d81629c78e Mon Sep 17 00:00:00 2001
 From: Jiping Ma <jiping.ma2@windriver.com>
 Date: Thu, 30 Apr 2020 09:35:06 +0800
-Subject: [PATCH 61/82] perf: perf can not parser the backtrace of app in the
+Subject: [PATCH 061/103] perf: perf can not parser the backtrace of app in the
  32bit system and 64bit kernel.
 
 Record PC value from regs[15], it should be regs[32], which cause perf

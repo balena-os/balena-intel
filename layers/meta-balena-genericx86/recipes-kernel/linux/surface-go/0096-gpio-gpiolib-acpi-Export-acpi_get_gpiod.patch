@@ -1,0 +1,63 @@
+From b067577cf14f59bac0bfd200bc438995e58d4ecc Mon Sep 17 00:00:00 2001
+From: Daniel Scally <djrscally@gmail.com>
+Date: Mon, 16 Nov 2020 00:16:56 +0000
+Subject: [PATCH 096/103] gpio: gpiolib-acpi: Export acpi_get_gpiod()
+
+I need to be able to translate GPIO resources in an acpi_device's _CRS
+into gpio_descs. Those are represented in _CRS as a pathname to a GPIO
+device plus the pin's index number: this function is perfect for that
+purpose.
+
+Signed-off-by: Daniel Scally <djrscally@gmail.com>
+---
+ drivers/gpio/gpiolib-acpi.c | 3 ++-
+ include/linux/acpi.h        | 5 +++++
+ 2 files changed, 7 insertions(+), 1 deletion(-)
+
+diff --git a/drivers/gpio/gpiolib-acpi.c b/drivers/gpio/gpiolib-acpi.c
+index 9276051663da..2d39bbd9269d 100644
+--- a/drivers/gpio/gpiolib-acpi.c
++++ b/drivers/gpio/gpiolib-acpi.c
+@@ -111,7 +111,7 @@ static int acpi_gpiochip_find(struct gpio_chip *gc, void *data)
+  * controller does not have GPIO chip registered at the moment. This is to
+  * support probe deferral.
+  */
+-static struct gpio_desc *acpi_get_gpiod(char *path, int pin)
++struct gpio_desc *acpi_get_gpiod(char *path, int pin)
+ {
+ 	struct gpio_chip *chip;
+ 	acpi_handle handle;
+@@ -127,6 +127,7 @@ static struct gpio_desc *acpi_get_gpiod(char *path, int pin)
+ 
+ 	return gpiochip_get_desc(chip, pin);
+ }
++EXPORT_SYMBOL_GPL(acpi_get_gpiod);
+ 
+ static irqreturn_t acpi_gpio_irq_handler(int irq, void *data)
+ {
+diff --git a/include/linux/acpi.h b/include/linux/acpi.h
+index d661cd0ee64d..f7c2ba61633b 100644
+--- a/include/linux/acpi.h
++++ b/include/linux/acpi.h
+@@ -1059,6 +1059,7 @@ void __acpi_handle_debug(struct _ddebug *descriptor, acpi_handle handle, const c
+ bool acpi_gpio_get_irq_resource(struct acpi_resource *ares,
+ 				struct acpi_resource_gpio **agpio);
+ int acpi_dev_gpio_irq_get(struct acpi_device *adev, int index);
++struct gpio_desc *acpi_get_gpiod(char *path, int pin);
+ #else
+ static inline bool acpi_gpio_get_irq_resource(struct acpi_resource *ares,
+ 					      struct acpi_resource_gpio **agpio)
+@@ -1069,6 +1070,10 @@ static inline int acpi_dev_gpio_irq_get(struct acpi_device *adev, int index)
+ {
+ 	return -ENXIO;
+ }
++struct gpio_desc *acpi_get_gpiod(char *path, int pin)
++{
++	return NULL;
++}
+ #endif
+ 
+ /* Device properties */
+-- 
+2.17.1
+

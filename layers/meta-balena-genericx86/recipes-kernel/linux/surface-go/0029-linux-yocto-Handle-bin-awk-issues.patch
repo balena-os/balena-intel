@@ -1,7 +1,7 @@
 From 979d9e2aa418647678fd51817b4adf1d3d0c8c89 Mon Sep 17 00:00:00 2001
 From: Richard Purdie <richard.purdie@linuxfoundation.org>
 Date: Tue, 22 Aug 2017 09:50:50 +0100
-Subject: [PATCH 29/82] linux-yocto: Handle /bin/awk issues
+Subject: [PATCH 029/103] linux-yocto: Handle /bin/awk issues
 
 Standardise on /usr/bin/awk, else kernel-devsrc depends on /bin/awk which
 the system doesn't provide and core-image-sato-sdk (which depends on

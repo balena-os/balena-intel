@@ -1,7 +1,7 @@
 From 0248cc0fb2dd34833536d4bbe5ef0b2d12cdff46 Mon Sep 17 00:00:00 2001
 From: Liang Li <liang.li@windriver.com>
 Date: Wed, 22 Aug 2012 16:04:50 +0800
-Subject: [PATCH 57/82] perf: add SLANG_INC for slang.h
+Subject: [PATCH 057/103] perf: add SLANG_INC for slang.h
 
 CFLAGS was previously hard coded to contain "-I/usr/include/slang" to
 work with hosts that have "/usr/include/slang/slang.h" as well as hosts

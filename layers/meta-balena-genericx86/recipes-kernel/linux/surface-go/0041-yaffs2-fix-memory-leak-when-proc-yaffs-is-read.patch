@@ -1,7 +1,7 @@
 From 6cbc32693c54e7dc849b119ce9bd039ba830d3c3 Mon Sep 17 00:00:00 2001
 From: Charles Manning <cdhmanning@gmail.com>
 Date: Mon, 16 Mar 2020 16:52:51 +0800
-Subject: [PATCH 41/82] yaffs2: fix memory leak when /proc/yaffs is read
+Subject: [PATCH 041/103] yaffs2: fix memory leak when /proc/yaffs is read
 
 commit  27f18203551940abf35826a66978daf1b8124c6b from
 git://www.aleph1.co.uk/yaffs2

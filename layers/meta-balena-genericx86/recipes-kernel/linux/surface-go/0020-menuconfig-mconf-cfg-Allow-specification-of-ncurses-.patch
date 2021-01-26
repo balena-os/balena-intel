@@ -1,7 +1,7 @@
 From 49eb2691093713ff407b87d25de19fa229177754 Mon Sep 17 00:00:00 2001
 From: Bruce Ashfield <bruce.ashfield@windriver.com>
 Date: Mon, 2 Jul 2018 23:10:28 -0400
-Subject: [PATCH 20/82] menuconfig,mconf-cfg: Allow specification of ncurses
+Subject: [PATCH 020/103] menuconfig,mconf-cfg: Allow specification of ncurses
  location
 
 In some cross build environments such as the Yocto Project build

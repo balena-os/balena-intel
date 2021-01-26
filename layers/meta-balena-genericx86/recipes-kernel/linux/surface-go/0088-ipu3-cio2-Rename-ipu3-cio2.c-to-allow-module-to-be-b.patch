@@ -1,13 +1,16 @@
-From 7401f2fced8a9977d91bd087ae9d1e9bb7a9b8c0 Mon Sep 17 00:00:00 2001
+From f9737f222f886ef2a2191b2f884acc0f7cde7a87 Mon Sep 17 00:00:00 2001
 From: Daniel Scally <djrscally@gmail.com>
 Date: Sat, 10 Oct 2020 22:47:21 +0100
-Subject: [PATCH 78/82] ipu3-cio2: Rename ipu3-cio2.c to allow module to be
+Subject: [PATCH 088/103] ipu3-cio2: Rename ipu3-cio2.c to allow module to be
  built from multiple source files retaining ipu3-cio2 name
 
 ipu3-cio2 driver needs extending with multiple files; rename the main
 source file and specify the renamed file in Makefile to accommodate that.
 
 Suggested-by: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
+Reviewed-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
+Reviewed-by: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
+Signed-off-by: Daniel Scally <djrscally@gmail.com>
 ---
  drivers/media/pci/intel/ipu3/Makefile                          | 2 ++
  drivers/media/pci/intel/ipu3/{ipu3-cio2.c => ipu3-cio2-main.c} | 0

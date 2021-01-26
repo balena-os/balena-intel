@@ -1,7 +1,7 @@
 From 395bdc8854dd3f0d2433f3a61fb96fe73b61919c Mon Sep 17 00:00:00 2001
 From: Tom Zanussi <tom.zanussi@intel.com>
 Date: Tue, 3 Jul 2012 13:07:22 -0500
-Subject: [PATCH 54/82] perf: add 'libperl not found' warning
+Subject: [PATCH 054/103] perf: add 'libperl not found' warning
 
 If libperl isn't found, display a message to that effect along with
 some hints on how to fix it.

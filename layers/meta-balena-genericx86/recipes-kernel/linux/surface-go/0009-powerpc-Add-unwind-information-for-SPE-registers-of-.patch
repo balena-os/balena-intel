@@ -1,7 +1,7 @@
 From ffed4552873815ba6eb7478a41ab81aca04ff056 Mon Sep 17 00:00:00 2001
 From: Liming Wang <liming.wang@windriver.com>
 Date: Fri, 19 Dec 2008 11:16:39 +0800
-Subject: [PATCH 09/82] powerpc: Add unwind information for SPE registers of
+Subject: [PATCH 009/103] powerpc: Add unwind information for SPE registers of
  E500 core
 
 SPE registers use the high part bit0~bit31 of E500 GPR0~GPR31.

@@ -1,7 +1,7 @@
 From 9e745216a54d32671014002fa93d6fc35e2afc50 Mon Sep 17 00:00:00 2001
 From: Andrew Tridgell <tridge@samba.org>
 Date: Tue, 21 Jul 2009 09:59:29 +1000
-Subject: [PATCH 49/82] FAT: Add CONFIG_VFAT_FS_NO_DUALNAMES option
+Subject: [PATCH 049/103] FAT: Add CONFIG_VFAT_FS_NO_DUALNAMES option
 
 This patch adds a new config option VFAT_FS_NO_DUALNAMES. When
 VFAT_FS_NO_DUALNAMES is enabled, VFAT will never create a file with

@@ -1,7 +1,7 @@
 From e7756401dc4785730e744e5d363d1bdf90787e17 Mon Sep 17 00:00:00 2001
 From: Bruce Ashfield <bruce.ashfield@gmail.com>
 Date: Tue, 14 Jan 2020 13:53:11 -0500
-Subject: [PATCH 33/82] yaffs2: adjust to proper location of MS_RDONLY
+Subject: [PATCH 033/103] yaffs2: adjust to proper location of MS_RDONLY
 
 Signed-off-by: Bruce Ashfield <bruce.ashfield@gmail.com>
 ---

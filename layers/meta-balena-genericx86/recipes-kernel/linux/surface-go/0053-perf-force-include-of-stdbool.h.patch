@@ -1,7 +1,7 @@
 From 717435a70022a89bd67393f35f4c0d44281d1f82 Mon Sep 17 00:00:00 2001
 From: Bruce Ashfield <bruce.ashfield@windriver.com>
 Date: Thu, 19 Aug 2010 11:24:45 -0400
-Subject: [PATCH 53/82] perf: force include of <stdbool.h>
+Subject: [PATCH 053/103] perf: force include of <stdbool.h>
 
 Large parts of perf use bool variables and assignments.
 Rather than depending on transient includes, we force it

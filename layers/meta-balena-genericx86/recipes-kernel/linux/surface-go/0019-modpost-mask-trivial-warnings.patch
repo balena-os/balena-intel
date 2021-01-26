@@ -1,7 +1,7 @@
 From eaef311922df14292efd3d530bc97631a2c3fe96 Mon Sep 17 00:00:00 2001
 From: Paul Gortmaker <paul.gortmaker@windriver.com>
 Date: Sun, 25 Jan 2009 17:58:09 -0500
-Subject: [PATCH 19/82] modpost: mask trivial warnings
+Subject: [PATCH 019/103] modpost: mask trivial warnings
 
 Newer HOSTCC will complain about various stdio fcns because
 they are now declared with "warn_unused_return", or because

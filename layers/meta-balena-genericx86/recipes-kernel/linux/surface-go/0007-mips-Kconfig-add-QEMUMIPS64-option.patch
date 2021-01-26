@@ -1,7 +1,7 @@
 From 0278b8d0d198cdaf68a59bcbd40a41c78680bcc6 Mon Sep 17 00:00:00 2001
 From: Bruce Ashfield <bruce.ashfield@gmail.com>
 Date: Tue, 7 Jan 2020 03:34:12 +0000
-Subject: [PATCH 07/82] mips: Kconfig: add QEMUMIPS64 option
+Subject: [PATCH 007/103] mips: Kconfig: add QEMUMIPS64 option
 
 In 5.4+ mips has switched to using the generic VDSO implementation, in
 particular the following commits are the bulk of the changes:

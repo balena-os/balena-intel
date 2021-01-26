@@ -1,7 +1,7 @@
 From 542ca1f46b7115bf8a50782f84489705526f3566 Mon Sep 17 00:00:00 2001
 From: Khem Raj <raj.khem@gmail.com>
 Date: Mon, 16 Nov 2020 11:07:17 -0800
-Subject: [PATCH 64/82] perf: Alias SYS_futex with SYS_futex_time64 on 32-bit
+Subject: [PATCH 064/103] perf: Alias SYS_futex with SYS_futex_time64 on 32-bit
  arches with 64bit time_t
 
 glibc does not define SYS_futex for 32bit architectures using 64bit

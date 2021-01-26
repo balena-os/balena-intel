@@ -1,7 +1,7 @@
 From 4a7902512777afd6dcb4100ce865b5591f928e2d Mon Sep 17 00:00:00 2001
 From: Bruce Ashfield <bruce.ashfield@gmail.com>
 Date: Mon, 10 Aug 2020 22:40:22 -0400
-Subject: [PATCH 62/82] defconfigs: drop obselete options
+Subject: [PATCH 062/103] defconfigs: drop obselete options
 
 Remove the following options from the various defconfigs, since
 they are no longer valid, and will be reported as such by the

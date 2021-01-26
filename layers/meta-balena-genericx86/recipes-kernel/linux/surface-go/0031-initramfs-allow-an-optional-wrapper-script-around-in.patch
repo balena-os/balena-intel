@@ -1,7 +1,7 @@
 From 669ada497f5386ff97d45d2269217422f04cca5e Mon Sep 17 00:00:00 2001
 From: Bruce Ashfield <bruce.ashfield@windriver.com>
 Date: Mon, 8 Oct 2018 13:33:11 -0400
-Subject: [PATCH 31/82] initramfs: allow an optional wrapper script around
+Subject: [PATCH 031/103] initramfs: allow an optional wrapper script around
  initramfs generation
 
 It is sometimes useful to have a secondary script call the

@@ -1,7 +1,7 @@
 From 77e23fc94ab4c97f1de34d6b05fa3b874d5ced4e Mon Sep 17 00:00:00 2001
 From: Yang Shi <yang.shi@windriver.com>
 Date: Fri, 25 Oct 2013 12:17:50 -0700
-Subject: [PATCH 59/82] perf: mips64: Convert __u64 to unsigned long long
+Subject: [PATCH 059/103] perf: mips64: Convert __u64 to unsigned long long
 
 On MIPS64, "__u64" is "unsigned long" type, so the "%llu" specifier will cause
 build error on MIPS64.

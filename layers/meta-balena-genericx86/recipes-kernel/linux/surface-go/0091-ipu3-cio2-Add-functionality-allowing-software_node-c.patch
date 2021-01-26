@@ -1,7 +1,7 @@
-From 4d5e1fad7c485edce9c903704e1598eff7cd4fb8 Mon Sep 17 00:00:00 2001
+From 9d68cfa569803d7b2b30cd8991cd9721a9ca94e6 Mon Sep 17 00:00:00 2001
 From: Daniel Scally <djrscally@gmail.com>
 Date: Wed, 21 Oct 2020 21:53:44 +0100
-Subject: [PATCH 81/82] ipu3-cio2: Add functionality allowing software_node
+Subject: [PATCH 091/103] ipu3-cio2: Add functionality allowing software_node
  connections to sensors on platforms designed for Windows
 
 Currently on platforms designed for Windows, connections between CIO2 and
@@ -10,15 +10,16 @@ driver to compensate by building software_node connections, parsing the
 connection properties from the sensor's SSDB buffer.
 
 Suggested-by: Jordan Hand <jorhand@linux.microsoft.com>
+Signed-off-by: Daniel Scally <djrscally@gmail.com>
 ---
  MAINTAINERS                                   |   3 +-
  drivers/media/pci/intel/ipu3/Kconfig          |  18 ++
  drivers/media/pci/intel/ipu3/Makefile         |   1 +
- drivers/media/pci/intel/ipu3/cio2-bridge.c    | 254 ++++++++++++++++++
- drivers/media/pci/intel/ipu3/cio2-bridge.h    |  87 ++++++
- drivers/media/pci/intel/ipu3/ipu3-cio2-main.c |  24 +-
- drivers/media/pci/intel/ipu3/ipu3-cio2.h      |  10 +
- 7 files changed, 394 insertions(+), 3 deletions(-)
+ drivers/media/pci/intel/ipu3/cio2-bridge.c    | 257 ++++++++++++++++++
+ drivers/media/pci/intel/ipu3/cio2-bridge.h    | 107 ++++++++
+ drivers/media/pci/intel/ipu3/ipu3-cio2-main.c |  34 +++
+ drivers/media/pci/intel/ipu3/ipu3-cio2.h      |   6 +
+ 7 files changed, 425 insertions(+), 1 deletion(-)
  create mode 100644 drivers/media/pci/intel/ipu3/cio2-bridge.c
  create mode 100644 drivers/media/pci/intel/ipu3/cio2-bridge.h
 
@@ -37,7 +38,7 @@ index e3f42b14e1ab..6111255c1bdc 100644
  S:	Maintained
  T:	git git://linuxtv.org/media_tree.git
 diff --git a/drivers/media/pci/intel/ipu3/Kconfig b/drivers/media/pci/intel/ipu3/Kconfig
-index 82d7f17e6a02..2b3350d042be 100644
+index 82d7f17e6a02..dcf5c4b74673 100644
 --- a/drivers/media/pci/intel/ipu3/Kconfig
 +++ b/drivers/media/pci/intel/ipu3/Kconfig
 @@ -16,3 +16,21 @@ config VIDEO_IPU3_CIO2
@@ -57,7 +58,7 @@ index 82d7f17e6a02..2b3350d042be 100644
 +	  Say Y here if your device is a detachable / hybrid laptop that comes
 +	  with Windows installed by the OEM, for example:
 +
-+	  	- Microsoft Surface models (except Surface Pro 3)
++		- Microsoft Surface models (except Surface Pro 3)
 +		- The Lenovo Miix line (for example the 510, 520, 710 and 720)
 +		- Dell 7285
 +
@@ -73,42 +74,35 @@ index 429d516452e4..933777e6ea8a 100644
 +ipu3-cio2-$(CONFIG_CIO2_BRIDGE) += cio2-bridge.o
 diff --git a/drivers/media/pci/intel/ipu3/cio2-bridge.c b/drivers/media/pci/intel/ipu3/cio2-bridge.c
 new file mode 100644
-index 000000000000..21de71199cb6
+index 000000000000..1aaaceeb874d
 --- /dev/null
 +++ b/drivers/media/pci/intel/ipu3/cio2-bridge.c
-@@ -0,0 +1,254 @@
+@@ -0,0 +1,257 @@
 +// SPDX-License-Identifier: GPL-2.0
 +/* Author: Dan Scally <djrscally@gmail.com> */
++
 +#include <linux/acpi.h>
 +#include <linux/device.h>
-+#include <linux/i2c.h>
-+#include <linux/kernel.h>
-+#include <linux/module.h>
 +#include <linux/pci.h>
 +#include <linux/property.h>
-+#include <media/v4l2-subdev.h>
 +
-+// fix me ===================
-+#include <media/v4l2-device.h>
-+#include <media/videobuf2-dma-sg.h>
-+// ==========================
-+
-+#include "ipu3-cio2.h"
 +#include "cio2-bridge.h"
 +
 +/*
 + * Extend this array with ACPI Hardware ID's of devices known to be working.
 + * Do not add a HID for a sensor that is not actually supported.
 + */
-+static const char * const cio2_supported_devices[] = {
++static const char * const cio2_supported_sensors[] = {
 +	"INT33BE",
 +	"OVTI2680",
 +};
 +
-+static const struct software_node cio2_hid_node = { CIO2_HID };
-+
-+static const char * const cio2_port_names[] = {
-+	"port0", "port1", "port2", "port3",
++static const struct cio2_property_names prop_names = {
++	.clock_frequency = "clock-frequency",
++	.rotation = "rotation",
++	.bus_type = "bus-type",
++	.data_lanes = "data-lanes",
++	.remote_endpoint = "remote-endpoint",
 +};
 +
 +static int cio2_bridge_read_acpi_buffer(struct acpi_device *adev, char *id,
@@ -151,44 +145,63 @@ index 000000000000..21de71199cb6
 +
 +static void cio2_bridge_create_fwnode_properties(struct cio2_sensor *sensor)
 +{
-+        u32 data_lanes[4] = {1,2,3,4};
++	unsigned int i;
 +
-+        /*
-+         * Can't use PROPERTY_ENTRY_REF because it creates a new variable to
-+         * point to, which doesn't survive the function.
-+         */
-+        sensor->local_ref[0] = (struct software_node_ref_args){
-+                .node = &sensor->swnodes[SWNODE_CIO2_ENDPOINT]
-+                };
-+        sensor->remote_ref[0] = (struct software_node_ref_args){
-+                .node = &sensor->swnodes[SWNODE_SENSOR_ENDPOINT]
-+                };
++	sensor->prop_names = prop_names;
 +
-+	sensor->dev_properties[0] = PROPERTY_ENTRY_U32("clock-frequency", sensor->ssdb.mclkspeed);
-+	sensor->dev_properties[1] = PROPERTY_ENTRY_U8("rotation", sensor->ssdb.degree);
++	for (i = 0; i < 4; i++)
++		sensor->data_lanes[i] = i + 1;
 +
-+	sensor->ep_properties[0] = PROPERTY_ENTRY_U32("bus-type", 5);
-+	sensor->ep_properties[1] = PROPERTY_ENTRY_U32_ARRAY_LEN("data-lanes", data_lanes, sensor->ssdb.lanes);
-+	sensor->ep_properties[2] = PROPERTY_ENTRY_REF_ARRAY("remote-endpoint", sensor->local_ref);
++	/*
++	 * Can't use PROPERTY_ENTRY_REF because it creates a new variable to
++	 * point to, which doesn't survive the function.
++	 */
++	sensor->local_ref[0].node = &sensor->swnodes[SWNODE_CIO2_ENDPOINT];
++	sensor->remote_ref[0].node = &sensor->swnodes[SWNODE_SENSOR_ENDPOINT];
 +
-+	sensor->cio2_properties[0] = PROPERTY_ENTRY_U32_ARRAY_LEN("data-lanes", data_lanes, sensor->ssdb.lanes);
-+	sensor->cio2_properties[1] = PROPERTY_ENTRY_REF_ARRAY("remote-endpoint", sensor->remote_ref);
++	sensor->dev_properties[0] = PROPERTY_ENTRY_U32(sensor->prop_names.clock_frequency,
++						       sensor->ssdb.mclkspeed);
++	sensor->dev_properties[1] = PROPERTY_ENTRY_U8(sensor->prop_names.rotation,
++						      sensor->ssdb.degree);
++
++	sensor->ep_properties[0] = PROPERTY_ENTRY_U32(sensor->prop_names.bus_type, 5);
++	sensor->ep_properties[1] = PROPERTY_ENTRY_U32_ARRAY_LEN(sensor->prop_names.data_lanes,
++								sensor->data_lanes,
++								sensor->ssdb.lanes);
++	sensor->ep_properties[2] = PROPERTY_ENTRY_REF_ARRAY(sensor->prop_names.remote_endpoint,
++							    sensor->local_ref);
++
++	sensor->cio2_properties[0] = PROPERTY_ENTRY_U32_ARRAY_LEN(sensor->prop_names.data_lanes,
++								  sensor->data_lanes,
++								  sensor->ssdb.lanes);
++	sensor->cio2_properties[1] = PROPERTY_ENTRY_REF_ARRAY(sensor->prop_names.remote_endpoint,
++							      sensor->remote_ref);
 +}
 +
-+static void cio2_bridge_create_connection_swnodes(struct cio2_sensor *sensor)
++static void cio2_bridge_init_swnode_names(struct cio2_sensor *sensor)
++{
++	snprintf(sensor->node_names.remote_port, 7, "port@%u", sensor->ssdb.link);
++	strcpy(sensor->node_names.port, "port@0");
++	strcpy(sensor->node_names.endpoint, "endpoint@0");
++}
++
++static void cio2_bridge_create_connection_swnodes(struct cio2_bridge *bridge,
++						  struct cio2_sensor *sensor)
 +{
 +	struct software_node *nodes = sensor->swnodes;
 +
++	cio2_bridge_init_swnode_names(sensor);
++
 +	nodes[SWNODE_SENSOR_HID] = NODE_SENSOR(sensor->name,
 +					       sensor->dev_properties);
-+	nodes[SWNODE_SENSOR_PORT] = NODE_PORT("port0",
++	nodes[SWNODE_SENSOR_PORT] = NODE_PORT(sensor->node_names.port,
 +					      &nodes[SWNODE_SENSOR_HID]);
-+	nodes[SWNODE_SENSOR_ENDPOINT] = NODE_ENDPOINT("endpoint0",
++	nodes[SWNODE_SENSOR_ENDPOINT] = NODE_ENDPOINT(sensor->node_names.endpoint,
 +						      &nodes[SWNODE_SENSOR_PORT],
 +						      sensor->ep_properties);
-+	nodes[SWNODE_CIO2_PORT] = NODE_PORT(cio2_port_names[sensor->ssdb.link],
-+					    &cio2_hid_node);
-+	nodes[SWNODE_CIO2_ENDPOINT] = NODE_ENDPOINT("endpoint0",
++	nodes[SWNODE_CIO2_PORT] = NODE_PORT(sensor->node_names.remote_port,
++					    &bridge->cio2_hid_node);
++	nodes[SWNODE_CIO2_ENDPOINT] = NODE_ENDPOINT(sensor->node_names.endpoint,
 +						    &nodes[SWNODE_CIO2_PORT],
 +						    sensor->cio2_properties);
 +}
@@ -210,31 +223,42 @@ index 000000000000..21de71199cb6
 +	struct fwnode_handle *fwnode;
 +	struct cio2_sensor *sensor;
 +	struct acpi_device *adev;
-+        unsigned int i;
++	unsigned int i;
 +	int ret = 0;
 +
-+	for (i = 0; i < ARRAY_SIZE(cio2_supported_devices); i++) {
-+		const char *this_device = cio2_supported_devices[i];
++	for (i = 0; i < ARRAY_SIZE(cio2_supported_sensors); i++) {
++		const char *hid = cio2_supported_sensors[i];
 +
-+		for_each_acpi_dev_match(adev, this_device, NULL, -1) {
-+			if (!adev || !(adev->status.present && adev->status.enabled))
-+				return 0;
++		for_each_acpi_dev_match(adev, hid, NULL, -1) {
++
++			if (bridge->n_sensors >= CIO2_NUM_PORTS) {
++				pr_warn("cio2-bridge: Exceeded num CIO2 ports\n");
++				/* overflow i so outer loop ceases */
++				i = ARRAY_SIZE(cio2_supported_sensors);
++				break;
++			}
++
++			if (!adev->status.enabled)
++				continue;
 +
 +			sensor = &bridge->sensors[bridge->n_sensors];
 +			sensor->adev = adev;
-+                        strscpy(sensor->name, this_device, sizeof(sensor->name));
++			strscpy(sensor->name, hid, sizeof(sensor->name));
 +
-+			ret = cio2_bridge_read_acpi_buffer(adev, "SSDB", &sensor->ssdb, sizeof(sensor->ssdb));
++			ret = cio2_bridge_read_acpi_buffer(adev, "SSDB",
++							   &sensor->ssdb,
++							   sizeof(sensor->ssdb));
 +			if (ret < 0)
 +				goto err_put_adev;
 +
 +			if (sensor->ssdb.lanes > 4) {
-+				dev_err(&adev->dev, "Number of lanes in SSDB is invalid\n");
++				dev_err(&adev->dev,
++					"Number of lanes in SSDB is invalid\n");
 +				goto err_put_adev;
 +			}
 +
 +			cio2_bridge_create_fwnode_properties(sensor);
-+			cio2_bridge_create_connection_swnodes(sensor);
++			cio2_bridge_create_connection_swnodes(bridge, sensor);
 +
 +			ret = software_node_register_nodes(sensor->swnodes);
 +			if (ret)
@@ -248,7 +272,8 @@ index 000000000000..21de71199cb6
 +
 +			adev->fwnode.secondary = fwnode;
 +
-+			dev_info(bridge->cio2_dev, "Found supported sensor %s\n", acpi_dev_name(adev));
++			pr_info("cio2-bridge: Found supported sensor %s\n",
++				acpi_dev_name(adev));
 +
 +			bridge->n_sensors++;
 +		}
@@ -259,41 +284,38 @@ index 000000000000..21de71199cb6
 +err_free_swnodes:
 +	software_node_unregister_nodes(sensor->swnodes);
 +err_put_adev:
-+        acpi_dev_put(sensor->adev);
++	acpi_dev_put(sensor->adev);
 +
 +	return ret;
 +}
 +
-+struct cio2_bridge *cio2_bridge_init(struct pci_dev *cio2)
++int cio2_bridge_init(struct pci_dev *cio2)
 +{
-+	struct device *dev = &cio2->dev;	
++	struct device *dev = &cio2->dev;
 +	struct fwnode_handle *fwnode;
-+        struct cio2_bridge *bridge;
++	struct cio2_bridge *bridge;
 +	int ret;
 +
-+        bridge = kzalloc(sizeof(*bridge), GFP_KERNEL);
-+        if (!bridge)
-+                return ERR_PTR(-ENOMEM);
++	bridge = kzalloc(sizeof(*bridge), GFP_KERNEL);
++	if (!bridge)
++		return -ENOMEM;
 +
-+	pci_dev_get(cio2);
-+	bridge->cio2_dev = dev;
++	strscpy(bridge->cio2_node_name, CIO2_HID, sizeof(bridge->cio2_node_name));
++	bridge->cio2_hid_node.name = bridge->cio2_node_name;
 +
-+	ret = software_node_register(&cio2_hid_node);
++	ret = software_node_register(&bridge->cio2_hid_node);
 +	if (ret < 0) {
 +		dev_err(dev, "Failed to register the CIO2 HID node\n");
-+		goto err_put_cio2;    
++		goto err_free_bridge;
 +	}
 +
 +	ret = cio2_bridge_connect_sensors(bridge);
-+	if (ret)
-+		goto err_unregister_cio2;
-+
-+	if (bridge->n_sensors == 0)
++	if (ret || bridge->n_sensors == 0)
 +		goto err_unregister_cio2;
 +
 +	dev_info(dev, "Connected %d cameras\n", bridge->n_sensors);
 +
-+	fwnode = software_node_fwnode(&cio2_hid_node);
++	fwnode = software_node_fwnode(&bridge->cio2_hid_node);
 +	if (!fwnode) {
 +		dev_err(dev, "Error getting fwnode from cio2 software_node\n");
 +		ret = -ENODEV;
@@ -302,42 +324,24 @@ index 000000000000..21de71199cb6
 +
 +	set_secondary_fwnode(dev, fwnode);
 +
-+	return bridge;
++	return 0;
 +
 +err_unregister_sensors:
 +	cio2_bridge_unregister_sensors(bridge);
 +err_unregister_cio2:
-+	software_node_unregister(&cio2_hid_node);
-+err_put_cio2:
-+	pci_dev_put(cio2);
++	software_node_unregister(&bridge->cio2_hid_node);
++err_free_bridge:
++	kfree(bridge);
 +
-+        kfree(bridge);
-+	return ERR_PTR(ret);
-+}
-+
-+void cio2_bridge_clean(struct cio2_device *cio2)
-+{
-+	/*
-+	 * On some platforms, the cio2 device's fwnode is initially null until
-+	 * set by cio2_bridge_init(). We need to reset it to null, otherwise
-+	 * removing and inserting the module will cause issues.
-+	 */
-+
-+	if (is_software_node(dev_fwnode(&cio2->pci_dev->dev)))
-+		cio2->pci_dev->dev.fwnode = NULL;
-+
-+	pci_dev_put(cio2->pci_dev);
-+	cio2_bridge_unregister_sensors(cio2->bridge);
-+        kfree(cio2->bridge);
-+	software_node_unregister(&cio2_hid_node);
++	return ret;
 +}
 diff --git a/drivers/media/pci/intel/ipu3/cio2-bridge.h b/drivers/media/pci/intel/ipu3/cio2-bridge.h
 new file mode 100644
-index 000000000000..4294db058047
+index 000000000000..28ee15348ef9
 --- /dev/null
 +++ b/drivers/media/pci/intel/ipu3/cio2-bridge.h
-@@ -0,0 +1,87 @@
-+// SPDX-License-Identifier: GPL-2.0
+@@ -0,0 +1,107 @@
++/* SPDX-License-Identifier: GPL-2.0 */
 +/* Author: Dan Scally <djrscally@gmail.com> */
 +#ifndef __CIO2_BRIDGE_H
 +#define __CIO2_BRIDGE_H
@@ -345,7 +349,7 @@ index 000000000000..4294db058047
 +#include <linux/property.h>
 +
 +#define CIO2_HID				"INT343E"
-+#define CIO2_PCI_ID				0x9d32
++#define CIO2_NUM_PORTS				4
 +
 +#define NODE_SENSOR(_HID, _PROPS)		\
 +	((const struct software_node) {		\
@@ -367,32 +371,32 @@ index 000000000000..4294db058047
 +	})
 +
 +enum cio2_sensor_swnodes {
-+        SWNODE_SENSOR_HID,
-+        SWNODE_SENSOR_PORT,
-+        SWNODE_SENSOR_ENDPOINT,
-+        SWNODE_CIO2_PORT,
-+        SWNODE_CIO2_ENDPOINT,
-+        NR_OF_SENSOR_SWNODES
++	SWNODE_SENSOR_HID,
++	SWNODE_SENSOR_PORT,
++	SWNODE_SENSOR_ENDPOINT,
++	SWNODE_CIO2_PORT,
++	SWNODE_CIO2_ENDPOINT,
++	NR_OF_SENSOR_SWNODES
 +};
 +
 +/* Data representation as it is in ACPI SSDB buffer */
 +struct cio2_sensor_ssdb {
-+	u8 version;
-+	u8 sku;
-+	u8 guid_csi2[16];
-+	u8 devfunction;
-+	u8 bus;
-+	u32 dphylinkenfuses;
-+	u32 clockdiv;
-+	u8 link;
-+	u8 lanes;
-+	u32 csiparams[10];
-+	u32 maxlanespeed;
-+	u8 sensorcalibfileidx;
-+	u8 sensorcalibfileidxInMBZ[3];
-+	u8 romtype;
-+	u8 vcmtype;
-+	u8 platforminfo;
++	u8 version;				/* 0000 */
++	u8 sku;					/* 0001 */
++	u8 guid_csi2[16];			/* 0002 */
++	u8 devfunction;				/* 0003 */
++	u8 bus;					/* 0004 */
++	u32 dphylinkenfuses;			/* 0005 */
++	u32 clockdiv;				/* 0009 */
++	u8 link;				/* 0013 */
++	u8 lanes;				/* 0014 */
++	u32 csiparams[10];			/* 0015 */
++	u32 maxlanespeed;			/* 0019 */
++	u8 sensorcalibfileidx;			/* 0023 */
++	u8 sensorcalibfileidxInMBZ[3];		/* 0024 */
++	u8 romtype;				/* 0025 */
++	u8 vcmtype;				/* 0026 */
++	u8 platforminfo;			/* 0027 */
 +	u8 platformsubinfo;
 +	u8 flash;
 +	u8 privacyled;
@@ -403,51 +407,83 @@ index 000000000000..4294db058047
 +	u8 reserved1[3];
 +	u8 mclkport;
 +	u8 reserved2[13];
-+} __packed__;
++} __packed;
++
++struct cio2_property_names {
++	char clock_frequency[16];
++	char rotation[9];
++	char bus_type[9];
++	char data_lanes[11];
++	char remote_endpoint[16];
++};
++
++struct cio2_node_names {
++	char port[7];
++	char endpoint[11];
++	char remote_port[7];
++};
 +
 +struct cio2_sensor {
 +	char name[ACPI_ID_LEN];
 +	struct acpi_device *adev;
++
 +	struct software_node swnodes[6];
++	struct cio2_node_names node_names;
++
++	u32 data_lanes[4];
++	struct cio2_sensor_ssdb ssdb;
++	struct cio2_property_names prop_names;
 +	struct property_entry ep_properties[4];
 +	struct property_entry dev_properties[3];
 +	struct property_entry cio2_properties[3];
-+        struct software_node_ref_args local_ref[1];
-+        struct software_node_ref_args remote_ref[1];
-+	struct cio2_sensor_ssdb ssdb;
++	struct software_node_ref_args local_ref[1];
++	struct software_node_ref_args remote_ref[1];
 +};
 +
 +struct cio2_bridge {
-+	struct device *cio2_dev;
++	char cio2_node_name[ACPI_ID_LEN];
++	struct software_node cio2_hid_node;
 +	unsigned int n_sensors;
 +	struct cio2_sensor sensors[CIO2_NUM_PORTS];
 +};
 +
 +#endif
 diff --git a/drivers/media/pci/intel/ipu3/ipu3-cio2-main.c b/drivers/media/pci/intel/ipu3/ipu3-cio2-main.c
-index 92f5eadf2c99..98312bdcd113 100644
+index a4f29b2ac977..51145430bc33 100644
 --- a/drivers/media/pci/intel/ipu3/ipu3-cio2-main.c
 +++ b/drivers/media/pci/intel/ipu3/ipu3-cio2-main.c
-@@ -1488,8 +1488,8 @@ static int cio2_parse_firmware(struct cio2_device *cio2)
- 		struct fwnode_handle *ep;
+@@ -1726,6 +1726,22 @@ static void cio2_queues_exit(struct cio2_device *cio2)
+ 		cio2_queue_exit(cio2, &cio2->queue[i]);
+ }
  
- 		ep = fwnode_graph_get_endpoint_by_id(
--			dev_fwnode(&cio2->pci_dev->dev), i, 0,
--			FWNODE_GRAPH_ENDPOINT_NEXT);
-+                        dev_fwnode(&cio2->pci_dev->dev), i, 0,
-+                        FWNODE_GRAPH_ENDPOINT_NEXT);
++static bool cio2_check_fwnode_graph(struct fwnode_handle *fwnode)
++{
++	struct fwnode_handle *endpoint;
++
++	if (IS_ERR_OR_NULL(fwnode))
++		return false;
++
++	endpoint = fwnode_graph_get_next_endpoint(fwnode, NULL);
++	if (endpoint) {
++		fwnode_handle_put(endpoint);
++		return true;
++	}
++
++	return cio2_check_fwnode_graph(fwnode->secondary);
++}
++
+ /**************** PCI interface ****************/
  
- 		if (!ep)
- 			continue;
-@@ -1742,6 +1742,7 @@ static int cio2_pci_config_setup(struct pci_dev *dev)
+ static int cio2_pci_config_setup(struct pci_dev *dev)
+@@ -1749,6 +1765,7 @@ static int cio2_pci_config_setup(struct pci_dev *dev)
  static int cio2_pci_probe(struct pci_dev *pci_dev,
  			  const struct pci_device_id *id)
  {
-+	struct fwnode_handle *endpoint;
++	struct fwnode_handle *fwnode = dev_fwnode(&pci_dev->dev);
  	struct cio2_device *cio2;
  	void __iomem *const *iomap;
  	int r;
-@@ -1751,6 +1752,21 @@ static int cio2_pci_probe(struct pci_dev *pci_dev,
+@@ -1758,6 +1775,23 @@ static int cio2_pci_probe(struct pci_dev *pci_dev,
  		return -ENOMEM;
  	cio2->pci_dev = pci_dev;
  
@@ -456,55 +492,33 @@ index 92f5eadf2c99..98312bdcd113 100644
 +	 * if the device has no endpoints then we can try to build those as
 +	 * software_nodes parsed from SSDB.
 +	 */
-+
-+	endpoint = fwnode_graph_get_next_endpoint(dev_fwnode(&pci_dev->dev), NULL);
-+	if (!endpoint) {
-+		cio2->bridge = cio2_bridge_init(pci_dev);
-+		if (IS_ERR_OR_NULL(cio2->bridge))
-+                        return PTR_ERR(cio2->bridge);
-+	} else {
-+                fwnode_handle_put(endpoint);
-+        }
++	if (!cio2_check_fwnode_graph(fwnode)) {
++		if (fwnode && !IS_ERR_OR_NULL(fwnode->secondary)) {
++			dev_err(&pci_dev->dev,
++				"fwnode graph has no endpoints connected\n");
++			return -ENOTCONN;
++		} else {
++			r = cio2_bridge_init(pci_dev);
++			if (r)
++				return r;
++		}
++	}
 +
  	r = pcim_enable_device(pci_dev);
  	if (r) {
  		dev_err(&pci_dev->dev, "failed to enable device (%d)\n", r);
-@@ -1855,8 +1871,12 @@ static int cio2_pci_probe(struct pci_dev *pci_dev,
- 
- static void cio2_pci_remove(struct pci_dev *pci_dev)
- {
-+	struct fwnode_handle *fwnode = dev_fwnode(&pci_dev->dev);
- 	struct cio2_device *cio2 = pci_get_drvdata(pci_dev);
- 
-+	if (is_software_node(fwnode) || is_software_node(fwnode->secondary))
-+		cio2_bridge_clean(cio2);
-+
- 	media_device_unregister(&cio2->media_dev);
- 	v4l2_async_notifier_unregister(&cio2->notifier);
- 	v4l2_async_notifier_cleanup(&cio2->notifier);
 diff --git a/drivers/media/pci/intel/ipu3/ipu3-cio2.h b/drivers/media/pci/intel/ipu3/ipu3-cio2.h
-index 7caab9b8c2b9..5add6e1409cd 100644
+index 9dcaf0c0434f..d7a6c809b71a 100644
 --- a/drivers/media/pci/intel/ipu3/ipu3-cio2.h
 +++ b/drivers/media/pci/intel/ipu3/ipu3-cio2.h
-@@ -375,6 +375,8 @@ struct cio2_device {
- 	u32 *dummy_lop;
- 	/* DMA handle of dummy_lop */
- 	dma_addr_t dummy_lop_bus_addr;
-+
-+        struct cio2_bridge *bridge;
- };
- 
- /**************** Virtual channel ****************/
-@@ -434,4 +436,12 @@ static inline struct cio2_queue *vb2q_to_cio2_queue(struct vb2_queue *vq)
+@@ -435,4 +435,10 @@ static inline struct cio2_queue *vb2q_to_cio2_queue(struct vb2_queue *vq)
  	return container_of(vq, struct cio2_queue, vbq);
  }
  
 +#if IS_ENABLED(CONFIG_CIO2_BRIDGE)
-+struct cio2_bridge *cio2_bridge_init(struct pci_dev *cio2);
-+void cio2_bridge_clean(struct cio2_device *cio2);
++int cio2_bridge_init(struct pci_dev *cio2);
 +#else
-+struct cio2_bridge *cio2_bridge_init(struct pci_dev *cio2) { return NULL; }
-+void cio2_bridge_clean(struct cio2_device *cio2) { }
++int cio2_bridge_init(struct pci_dev *cio2) { return 0; }
 +#endif
 +
  #endif

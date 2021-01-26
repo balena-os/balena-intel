@@ -1,0 +1,56 @@
+From d81763f9c7c71cb8d6b96a6294a4b9d6a6d98d4d Mon Sep 17 00:00:00 2001
+From: Daniel Scally <djrscally@gmail.com>
+Date: Wed, 21 Oct 2020 22:25:03 +0100
+Subject: [PATCH 084/103] software_node: unregister software_nodes in reverse
+ order
+
+To maintain consistency with software_node_unregister_nodes(), reverse
+the order in which the software_node_unregister_node_group() function
+unregisters nodes.
+
+Reviewed-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
+Suggested-by: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
+Signed-off-by: Daniel Scally <djrscally@gmail.com>
+---
+ drivers/base/swnode.c | 18 ++++++++++--------
+ 1 file changed, 10 insertions(+), 8 deletions(-)
+
+diff --git a/drivers/base/swnode.c b/drivers/base/swnode.c
+index c533bd3fe790..46ecd334a799 100644
+--- a/drivers/base/swnode.c
++++ b/drivers/base/swnode.c
+@@ -778,21 +778,23 @@ EXPORT_SYMBOL_GPL(software_node_register_node_group);
+  * software_node_unregister_node_group - Unregister a group of software nodes
+  * @node_group: NULL terminated array of software node pointers to be unregistered
+  *
+- * Unregister multiple software nodes at once.
++ * Unregister multiple software nodes at once. The array will be unwound in
++ * reverse order (I.E. last entry first) and thus if any member of the array
++ * has its .parent member set then they should appear later in the array such
++ * that they are unregistered first.
+  */
+ void software_node_unregister_node_group(const struct software_node **node_group)
+ {
+-	struct swnode *swnode;
+-	unsigned int i;
++	unsigned int i = 0;
+ 
+ 	if (!node_group)
+ 		return;
+ 
+-	for (i = 0; node_group[i]; i++) {
+-		swnode = software_node_to_swnode(node_group[i]);
+-		if (swnode)
+-			fwnode_remove_software_node(&swnode->fwnode);
+-	}
++	while (node_group[i]->name)
++		i++;
++
++	while (i--)
++		software_node_unregister(node_group[i]);
+ }
+ EXPORT_SYMBOL_GPL(software_node_unregister_node_group);
+ 
+-- 
+2.17.1
+

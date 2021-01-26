@@ -1,7 +1,7 @@
 From e303bd5af52b84872ebfd35b7ad418f16ff0bd05 Mon Sep 17 00:00:00 2001
 From: He Zhe <zhe.he@windriver.com>
 Date: Fri, 21 Aug 2020 00:52:50 +0800
-Subject: [PATCH 63/82] arm64/perf: Fix wrong cast that may cause wrong
+Subject: [PATCH 063/103] arm64/perf: Fix wrong cast that may cause wrong
  truncation
 
 tail is a pointer while buftail.fp is a u32.

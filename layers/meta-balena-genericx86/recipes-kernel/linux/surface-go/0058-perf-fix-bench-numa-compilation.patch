@@ -1,7 +1,7 @@
 From 58f4fe3142462fdabf5c9583c7fbe58aaf222e22 Mon Sep 17 00:00:00 2001
 From: Riccardo Magliocchetti <riccardo.magliocchetti@gmail.com>
 Date: Thu, 17 Oct 2013 15:11:25 -0700
-Subject: [PATCH 58/82] perf: fix bench numa compilation
+Subject: [PATCH 058/103] perf: fix bench numa compilation
 
 Taken from: https://lkml.org/lkml/2013/6/20/80
 

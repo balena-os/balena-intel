@@ -1,7 +1,7 @@
 From f8335a282de555260b12429b81c5ee3794e6ff05 Mon Sep 17 00:00:00 2001
 From: Bruce Ashfield <bruce.ashfield@gmail.com>
 Date: Mon, 16 Mar 2020 23:20:57 -0400
-Subject: [PATCH 42/82] yaffs2: v5.6 build fixups
+Subject: [PATCH 042/103] yaffs2: v5.6 build fixups
 
 Signed-off-by: Bruce Ashfield <bruce.ashfield@gmail.com>
 ---

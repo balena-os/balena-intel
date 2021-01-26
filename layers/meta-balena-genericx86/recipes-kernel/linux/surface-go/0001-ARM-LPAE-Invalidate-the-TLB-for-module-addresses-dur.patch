@@ -1,7 +1,7 @@
 From f151130ca86beb03f3de7649c107c2d7b6f28eb3 Mon Sep 17 00:00:00 2001
 From: Catalin Marinas <catalin.marinas@arm.com>
 Date: Thu, 23 Feb 2012 17:16:41 +0000
-Subject: [PATCH 01/82] ARM: LPAE: Invalidate the TLB for module addresses
+Subject: [PATCH 001/103] ARM: LPAE: Invalidate the TLB for module addresses
  during translation fault
 
 commit cf9b5a26876adb266aa1ba8a0b08669389a2e301 in repository:

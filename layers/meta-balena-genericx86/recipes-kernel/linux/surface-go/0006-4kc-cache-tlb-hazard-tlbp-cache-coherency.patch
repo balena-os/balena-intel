@@ -1,7 +1,7 @@
 From f0ac72b14272e30b74e9357f7750b7ce7de60aae Mon Sep 17 00:00:00 2001
 From: Weixing Shi <weixing.shi@windriver.com>
 Date: Mon, 12 Apr 2010 14:59:38 +0800
-Subject: [PATCH 06/82] 4kc cache tlb hazard: tlbp cache coherency
+Subject: [PATCH 006/103] 4kc cache tlb hazard: tlbp cache coherency
 
 Add a no-op before tlbp, to avoid DMA cache coherency issues that cause
 data loss seen on unmount.

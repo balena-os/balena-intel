@@ -1,7 +1,7 @@
 From 6228be52d2b387797c0cf15f1f35b6993de75e1e Mon Sep 17 00:00:00 2001
 From: Weixing Shi <weixing.shil@windriver.com>
 Date: Mon, 12 Apr 2010 14:58:03 +0800
-Subject: [PATCH 05/82] malta uhci quirks: make allowance for slow 4k(e)c
+Subject: [PATCH 005/103] malta uhci quirks: make allowance for slow 4k(e)c
 
 This works around an unexpected IRQ #255 seen during initial USB host
 mass storage device initialization and access.
