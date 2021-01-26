@@ -1,6 +1,30 @@
 Change log
 -----------
 
+# v2.67.3+rev1
+## (2021-01-25)
+
+
+<details>
+<summary> Update meta-balena from v2.67.0 to v2.67.3 [Alexandru Costache] </summary>
+
+> ## meta-balena-2.67.3
+> ### (2021-01-15)
+> 
+> * kernel-headers-test: Install python dependency [Alexandru Costache]
+> 
+> ## meta-balena-2.67.2
+> ### (2021-01-14)
+> 
+> * Fix pppd timeout when launched by NetworkManager [Zahari Petkov]
+> 
+> ## meta-balena-2.67.1
+> ### (2021-01-13)
+> 
+> * resin-device-register: Fix post provisioning state not reported [Alexandru Costache]
+> 
+</details>
+
 # v2.67.0+rev1
 ## (2021-01-13)
 

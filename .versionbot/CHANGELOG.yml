@@ -1,4 +1,105 @@
 - commits:
+    - subject: Update meta-balena from v2.67.0 to v2.67.3
+      hash: 6a0aa5f595eb1cd3adf4f06e3a8d9379aea249b0
+      body: |
+        Update meta-balena from 2.67.0 to 2.67.3
+      footer:
+        Changelog-entry: Update meta-balena from v2.67.0 to v2.67.3
+        changelog-entry: Update meta-balena from v2.67.0 to v2.67.3
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested:
+        - commits:
+            - subject: 'kernel-headers-test: Install python dependency'
+              hash: 6b648fa36bb8f7b2f90799a9c331210e34d3c438
+              body: |
+                Some makefiles for the kernel modules build, like for
+                instance the one in the kernel for the lec-px30 machine,
+                want python to be available in the environment. Let's add
+                it to the build dependencies.
+              footer:
+                Change-type: Patch
+                change-type: Patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+          version: meta-balena-2.67.3
+          date: 2021-01-15T11:10:16.824Z
+        - commits:
+            - subject: Fix pppd timeout when launched by NetworkManager
+              hash: e86c83e9be007bbedf5bad8bb961931c4f4f649c
+              body: >
+                Fixes #1846
+
+
+                UART modems (RaspberryPi HATs) are not working currently under
+
+                balenaOS as NetworkManager times out while attempting to
+                establish
+
+                ppp connection. This is not a balenaOS specific issue.
+
+
+                This commits adds a `connect ""` declaration to
+                `/etc/ppp/options`
+
+                to workaround this as the NULL default value causes the timeout.
+
+
+                The connect option specifies an external script to establish the
+
+                physical link. When using NetworkManager/ModemManager it is
+
+                ModemManager that establishes the physical link before passing
+                it
+
+                to NetworkManager. Thus `connect` should be empty.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Fix pppd timeout when launched by NetworkManager
+                changelog-entry: Fix pppd timeout when launched by NetworkManager
+                Signed-off-by: Zahari Petkov <zahari@balena.io>
+                signed-off-by: Zahari Petkov <zahari@balena.io>
+              author: Zahari Petkov
+              nested: []
+          version: meta-balena-2.67.2
+          date: 2021-01-14T12:39:10.901Z
+        - commits:
+            - subject: 'resin-device-register: Fix post provisioning state not reported'
+              hash: 62016c3931c08cbc4c4bdb1e4069c6f9d9533b04
+              body: >
+                Starting with dee971c0dbeb6e8363f3e321af582e99627626e9, flasher
+
+                images, which don't contain a supervisor version, try to
+                register
+
+                in the API using the parameter supervisor_version='null'.
+
+
+                However, the API expects this parameter to be unset completely
+                if
+
+                there's no version to be reported during registration, otherwise
+
+                the call fails and the device doesn't show up in dashboard
+                during
+
+                flashing or report the post-provisioning state.
+              footer:
+                Change-type: Patch
+                change-type: Patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+          version: meta-balena-2.67.1
+          date: 2021-01-13T14:55:01.572Z
+  version: 2.67.3+rev1
+  date: 2021-01-25T17:06:25.831Z
+- commits:
     - subject: Update meta-balena from v2.66.1 to v2.67.0
       hash: b0d8f3d7ce098c0ef265f35118a86435d1892c02
       body: |
