@@ -19,7 +19,6 @@ module.exports =
 	name: 'Microsoft Surface 6'
 	arch: 'amd64'
 	state: 'new'
-	private: false
 
 	stateInstructions:
 		postProvisioning: postProvisioningInstructions
@@ -40,7 +39,7 @@ module.exports =
 		machine: 'surface-pro-6'
 		image: 'resin-image-flasher'
 		fstype: 'resinos-img'
-		version: 'yocto-warrior'
+		version: 'yocto-dunfell'
 		deployArtifact: 'resin-image-flasher-surface-pro-6.resinos-img'
 		compressed: true
 

@@ -23,7 +23,6 @@ module.exports =
 	name: 'Intel NUC'
 	arch: 'amd64'
 	state: 'released'
-	private: false
 
 	stateInstructions:
 		postProvisioning: postProvisioningInstructions
@@ -44,7 +43,7 @@ module.exports =
 		machine: 'genericx86-64'
 		image: 'resin-image-flasher'
 		fstype: 'resinos-img'
-		version: 'yocto-warrior'
+		version: 'yocto-dunfell'
 		deployArtifact: 'resin-image-flasher-genericx86-64.resinos-img'
 		compressed: true
 
