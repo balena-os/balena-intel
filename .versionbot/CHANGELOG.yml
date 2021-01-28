@@ -1,4 +1,67 @@
 - commits:
+    - subject: Update meta-openembedded to latest dunfell
+      hash: c5f3ee53ac72badc8a3bd35bb1ef6daa5eb28e08
+      body: ''
+      footer:
+        Changelog-entry: Update meta-openembedded to latest dunfell
+        changelog-entry: Update meta-openembedded to latest dunfell
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+    - subject: Update poky to dunfell-23.0.5
+      hash: 1fa7df88c505cb921465bee2c4eec4f4fec3d8a2
+      body: ''
+      footer:
+        Changelog-entry: Update poky to dunfell-23.0.5
+        changelog-entry: Update poky to dunfell-23.0.5
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+    - subject: Use kernel 5.8.18 on the genericx86-64 machine
+      hash: 477f4a726e60689ad1d934224d21238ea1dd4a61
+      body: |
+        We now have updated to a newer meta-balena which references updated aufs
+        kernel patches to kernel 5.8 so we can also switch the genericx86-64
+        machine to the newer 5.8.18 kernel.
+      footer:
+        Changelog-entry: Use kernel 5.8.18 on the genericx86-64 machine
+        changelog-entry: Use kernel 5.8.18 on the genericx86-64 machine
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+    - subject: Update meta-balena from v2.67.3 to v2.67.4
+      hash: 3c8a40cf3751a0a3b6e46a71500f35b979a9abfb
+      body: |
+        Update meta-balena from 2.67.3 to 2.67.4
+      footer:
+        Changelog-entry: Update meta-balena from v2.67.3 to v2.67.4
+        changelog-entry: Update meta-balena from v2.67.3 to v2.67.4
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested:
+        - commits:
+            - subject: Update aufs4 and aufs5 kernel patches
+              hash: 62231bee3dd12698522130b224371ff82a3de567
+              body: |
+                We update to the newest patch revisions from upstream
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Update aufs4 and aufs5 kernel patches
+                changelog-entry: Update aufs4 and aufs5 kernel patches
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-2.67.4
+          date: 2021-01-27T11:08:07.030Z
+  version: 2.67.4+rev1
+  date: 2021-01-28T09:31:43.281Z
+- commits:
     - subject: Update meta-balena from v2.67.0 to v2.67.3
       hash: 6a0aa5f595eb1cd3adf4f06e3a8d9379aea249b0
       body: |

@@ -1,6 +1,23 @@
 Change log
 -----------
 
+# v2.67.4+rev1
+## (2021-01-28)
+
+* Update meta-openembedded to latest dunfell [Florin Sarbu]
+* Update poky to dunfell-23.0.5 [Florin Sarbu]
+* Use kernel 5.8.18 on the genericx86-64 machine [Florin Sarbu]
+
+<details>
+<summary> Update meta-balena from v2.67.3 to v2.67.4 [Florin Sarbu] </summary>
+
+> ## meta-balena-2.67.4
+> ### (2021-01-27)
+> 
+> * Update aufs4 and aufs5 kernel patches [Florin Sarbu]
+> 
+</details>
+
 # v2.67.3+rev1
 ## (2021-01-25)
 
