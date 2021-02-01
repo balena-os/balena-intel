@@ -1,5 +1,4 @@
 CONNECTIVITY_FIRMWARES =+ " \
-	linux-firmware-ath10k-qca6174 \
 	linux-firmware-bcm43455 \
 	linux-firmware-ibt-11-5 \
 	linux-firmware-ibt-12-16 \
@@ -10,7 +9,6 @@ CONNECTIVITY_FIRMWARES =+ " \
 	linux-firmware-iwlwifi-9000 \
 	linux-firmware-iwlwifi-9260 \
 	linux-firmware-iwlwifi-qu-b0-hr-b0 \
-	linux-firmware-pcie8897 \
 	linux-firmware-rtl8723 \
 	linux-firmware-rtl8821 \
 	linux-firmware-rtl8723b-bt \
@@ -18,6 +16,7 @@ CONNECTIVITY_FIRMWARES =+ " \
 	"
 
 CONNECTIVITY_FIRMWARES_append_surface-go = " \
+	linux-firmware-ath10k-qca6174 \
 	linux-firmware-i915-kbl \
 	linux-firmware-iwlwifi-cc-a0 \
 "
@@ -25,6 +24,7 @@ CONNECTIVITY_FIRMWARES_append_surface-go = " \
 CONNECTIVITY_FIRMWARES_append_surface-pro-6 = " \
 	linux-firmware-i915-kbl \
 	linux-firmware-ipts-v102 \
+	linux-firmware-pcie8897 \
 "
 
 CONNECTIVITY_FIRMWARES_remove = "linux-firmware-wl12xx"
@@ -75,3 +75,7 @@ CONNECTIVITY_MODULES =+ " \
 "
 
 CONNECTIVITY_MODULES_remove_surface-go = "rtl8812au"
+
+# we need to clean-up rootfs space so let's remove some unused firmware
+CONNECTIVITY_FIRMWARES_remove = "linux-firmware-wl18xx"
+CONNECTIVITY_FIRMWARES_remove = "linux-firmware-wlcommon"
