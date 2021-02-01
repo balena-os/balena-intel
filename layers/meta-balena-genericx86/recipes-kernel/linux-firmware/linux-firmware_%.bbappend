@@ -74,3 +74,27 @@ do_install_append() {
 		    ${WORKDIR}/vendor_kernel.bin \
 		    ${D}${nonarch_base_libdir}/firmware/intel/ipts/
 }
+
+IWLWIFI_FW_TOCLEAN += " \
+    1000 \
+    3160 \
+    3168 \
+    5000 \
+    6000g2a \
+    6000g2b \
+    6050 \
+    9000-pu-b0-jf-b0 \
+    9260-th-b0-jf-b0 \
+"
+
+IWLWIFI_FW_MIN_API[1000] = "5"
+IWLWIFI_FW_MIN_API[3160] = "17"
+IWLWIFI_FW_MIN_API[3168] = "29"
+IWLWIFI_FW_MIN_API[5000] = "5"
+IWLWIFI_FW_MIN_API[6000g2a] = "6"
+IWLWIFI_FW_MIN_API[6000g2b] = "6"
+IWLWIFI_FW_MIN_API[6050] = "5"
+IWLWIFI_FW_MIN_API[8000C] = "36"
+IWLWIFI_FW_MIN_API[8265] = "36"
+IWLWIFI_FW_MIN_API[9000-pu-b0-jf-b0] = "46"
+IWLWIFI_FW_MIN_API[9260-th-b0-jf-b0] = "46"
