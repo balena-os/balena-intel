@@ -51,15 +51,10 @@ CONNECTIVITY_FIRMWARES_remove_surface-go = " \
     linux-firmware-rtl8192su \
     linux-firmware-bcm43143 \
     linux-firmware-iwlwifi-135-6 \
-    linux-firmware-iwlwifi-3160-7 \
-    linux-firmware-iwlwifi-3160-8 \
-    linux-firmware-iwlwifi-3160-9 \
+    linux-firmware-iwlwifi-3160 \
     linux-firmware-iwlwifi-6000-4 \
-    linux-firmware-iwlwifi-6000g2a-5 \
     linux-firmware-iwlwifi-6000g2a-6 \
-    linux-firmware-iwlwifi-6000g2b-5 \
     linux-firmware-iwlwifi-6000g2b-6 \
-    linux-firmware-iwlwifi-6050-4 \
     linux-firmware-iwlwifi-6050-5 \
     linux-firmware-iwlwifi-7260 \
     linux-firmware-iwlwifi-7265 \
@@ -68,6 +63,16 @@ CONNECTIVITY_FIRMWARES_remove_surface-go = " \
     linux-firmware-iwlwifi-8265 \
     linux-firmware-rtl8188eu \
     linux-firmware-wl18xx \
+"
+
+# these are now just empty packages so let's remove them to avoid a build error
+CONNECTIVITY_FIRMWARES_remove = " \
+    linux-firmware-iwlwifi-3160-7 \
+    linux-firmware-iwlwifi-3160-8 \
+    linux-firmware-iwlwifi-3160-9 \
+    linux-firmware-iwlwifi-6000g2a-5 \
+    linux-firmware-iwlwifi-6000g2b-5 \
+    linux-firmware-iwlwifi-6050-4 \
 "
 
 CONNECTIVITY_MODULES =+ " \
