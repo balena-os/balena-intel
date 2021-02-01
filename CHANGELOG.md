@@ -1,6 +1,45 @@
 Change log
 -----------
 
+# v2.68.1+rev1
+## (2021-02-01)
+
+* Remove older iwiwifi firmware [Florin Sarbu]
+* Remove extra wifi firmware to shrink rootfs size so host OS update can work [Florin Sarbu]
+* Update meta-openembedded to latest dunfell [Florin Sarbu]
+* Update poky to dunfell-23.0.5 [Florin Sarbu]
+* Use kernel 5.8.18 on the genericx86-64 machine [Florin Sarbu]
+
+<details>
+<summary> Update meta-balena from v2.67.3 to v2.68.1 [Florin Sarbu] </summary>
+
+> ## meta-balena-2.68.1
+> ### (2021-01-29)
+> 
+> * Fix task ordering for the iwlwifi_firmware_clean task [Florin Sarbu]
+> 
+> ## meta-balena-2.68.0
+> ### (2021-01-29)
+> 
+> * Update NetworkManager to 1.28.0 [Zahari Petkov]
+> 
+> ## meta-balena-2.67.6
+> ### (2021-01-28)
+> 
+> * docs: mention balenaRootCA as a config.json parameter [Matthew McGinn]
+> 
+> ## meta-balena-2.67.5
+> ### (2021-01-27)
+> 
+> * replace busybox ps with procps [klutchell] [Kyle Harding]
+> 
+> ## meta-balena-2.67.4
+> ### (2021-01-27)
+> 
+> * Update aufs4 and aufs5 kernel patches [Florin Sarbu]
+> 
+</details>
+
 # v2.67.3+rev1
 ## (2021-01-25)
 

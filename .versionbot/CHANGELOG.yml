@@ -1,4 +1,248 @@
 - commits:
+    - subject: Remove older iwiwifi firmware
+      hash: 35e3ac04581aee0f5f1ce2c21c227f3316fe4cfe
+      body: |
+        We have updated to kernel version 5.8.18 so let's only keep the maximum
+        firmware version that is supported by the iwlwifi driver from this
+        kernel version.
+      footer:
+        Changelog-entry: Remove older iwiwifi firmware
+        changelog-entry: Remove older iwiwifi firmware
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+    - subject: >-
+        Remove extra wifi firmware to shrink rootfs size so host OS update can
+        work
+      hash: f31f49f72ced821ac8b7fa0b6d9ae7f8bd336af6
+      body: |
+        At this point we are with the rootfs at the max size. So until the
+        hostapp extensions work is done, let's remove some space here by
+        removing some extra wifi firmware which we do not use so that host OS
+        update can work.
+      footer:
+        Changelog-entry: >-
+          Remove extra wifi firmware to shrink rootfs size so host OS update can
+          work
+        changelog-entry: >-
+          Remove extra wifi firmware to shrink rootfs size so host OS update can
+          work
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+    - subject: Update meta-openembedded to latest dunfell
+      hash: 2afc43a86f93a292b299ef87a8d48b3ba15684bd
+      body: ''
+      footer:
+        Changelog-entry: Update meta-openembedded to latest dunfell
+        changelog-entry: Update meta-openembedded to latest dunfell
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+    - subject: Update poky to dunfell-23.0.5
+      hash: 2969dac799bd9695320af30598c37b5e24c61b76
+      body: ''
+      footer:
+        Changelog-entry: Update poky to dunfell-23.0.5
+        changelog-entry: Update poky to dunfell-23.0.5
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+    - subject: Use kernel 5.8.18 on the genericx86-64 machine
+      hash: 7d6873a3cc1f3a836548a458f22febec2f0c7f9c
+      body: |
+        We now have updated to a newer meta-balena which references updated aufs
+        kernel patches to kernel 5.8 so we can also switch the genericx86-64
+        machine to the newer 5.8.18 kernel.
+      footer:
+        Changelog-entry: Use kernel 5.8.18 on the genericx86-64 machine
+        changelog-entry: Use kernel 5.8.18 on the genericx86-64 machine
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+    - subject: Update meta-balena from v2.67.3 to v2.68.1
+      hash: dbee67d05a41e96d9db62392597ce4a15a2b7216
+      body: |
+        Update meta-balena from 2.67.3 to 2.68.1
+      footer:
+        Changelog-entry: Update meta-balena from v2.67.3 to v2.68.1
+        changelog-entry: Update meta-balena from v2.67.3 to v2.68.1
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested:
+        - commits:
+            - subject: Fix task ordering for the iwlwifi_firmware_clean task
+              hash: 5d039b111a964e21a637a5c7806aea6bb510a43e
+              body: >
+                We need to make sure the firmware cleanup function runs before
+
+                do_populate_sysroot otherwise do_populate_sysroot will race with
+                it and
+
+                will fail complaining about the missing firmware that
+
+                iwlwifi_firmware_clean had just deleted at the same time.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Fix task ordering for the iwlwifi_firmware_clean task
+                changelog-entry: Fix task ordering for the iwlwifi_firmware_clean task
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-2.68.1
+          date: 2021-01-29T13:02:49.703Z
+        - commits:
+            - subject: Update NetworkManager to 1.28.0
+              hash: 20e9c276f8d79b6051066e24b159c8bd9ffe3bc2
+              body: >
+                Fixes #2075
+
+
+                Needed were a number of various changes to make the package
+                compile properly:
+
+
+                Removed is
+                0001-wwan-Set-MTU-based-on-what-ModemManager-exposes.patch that
+                is now
+
+                included upstream.
+
+
+                Our patch for removing HTTPS connectivity checking warning is
+                reworked for ease of
+
+                maintainance. It now keeps the log entry, but changes it to
+                debug level.
+
+
+                Fixed are UPSTREAM_CHECK_* definitions as they referenced a
+                wrong version number.
+
+
+                The following additional configuration options were
+                added/removed:
+
+
+                *. Introspection is disabled through
+                `--enable-introspection=no`. Other services do
+
+                not depend on it, so it is safe to remove it. A related patch is
+                no longer needed
+
+                0002-Do-not-create-settings-settings-property-documentati.patch
+
+
+                *. A new option for using firewalld zone for shared mode is
+                disabled as we do not
+
+                use firewalld.
+
+
+                *. The polkit agent option no longer is available, so
+                `--enable-polkit-agent` and
+
+                `--disable-polkit-agent` are no longer defined.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Changelog-entry: Update NetworkManager to 1.28.0
+                changelog-entry: Update NetworkManager to 1.28.0
+                Signed-off-by: Zahari Petkov <zahari@balena.io>
+                signed-off-by: Zahari Petkov <zahari@balena.io>
+              author: Zahari Petkov
+              nested: []
+          version: meta-balena-2.68.0
+          date: 2021-01-29T09:45:01.458Z
+        - commits:
+            - subject: 'docs: mention balenaRootCA as a config.json parameter'
+              hash: d0be88530c630d68f8582dce99442c6d94ba5455
+              body: ''
+              footer:
+                Connects-to: 'https://github.com/balena-os/meta-balena/issues/2011'
+                connects-to: 'https://github.com/balena-os/meta-balena/issues/2011'
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Matthew McGinn <matthew@balena.io>
+                signed-off-by: Matthew McGinn <matthew@balena.io>
+              author: Matthew McGinn
+              nested: []
+          version: meta-balena-2.67.6
+          date: 2021-01-28T17:45:30.693Z
+        - commits:
+            - subject: 'replace busybox ps with procps [klutchell]'
+              hash: 00556af37cf241e2b95d9b719f1ab58cc9bbddb6
+              body: >
+                Replace busybox ps link with ps.procps without installing
+
+                any other procps packages. This will avoid regression and bloat
+
+                from swapping existing busybox links with procps variants.
+
+
+                By using procps as docker expects we can properly handle ps args
+
+                such as -e and -o to format output. Busybox is only capable of
+                this
+
+                when compiled in "desktop" mode.
+
+
+                This upstream commit to poky has already split the ps binary
+                into
+
+                a separate procps package:
+
+
+                -
+                https://git.yoctoproject.org/cgit/cgit.cgi/poky/commit/?id=507a47a4e5077d5f8f76d9629be6b871dfd8eb90
+
+
+                So for now we can copy this recipe at the commit above into
+                compat branches
+
+                and use that version until we pick up a branch newer than
+                gatesgarth.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Connects-to: 'https://github.com/balena-os/balena-engine/issues/236'
+                connects-to: 'https://github.com/balena-os/balena-engine/issues/236'
+                Changelog-entry: 'replace busybox ps with procps [klutchell]'
+                changelog-entry: 'replace busybox ps with procps [klutchell]'
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: meta-balena-2.67.5
+          date: 2021-01-27T18:47:18.617Z
+        - commits:
+            - subject: Update aufs4 and aufs5 kernel patches
+              hash: 62231bee3dd12698522130b224371ff82a3de567
+              body: |
+                We update to the newest patch revisions from upstream
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Update aufs4 and aufs5 kernel patches
+                changelog-entry: Update aufs4 and aufs5 kernel patches
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-2.67.4
+          date: 2021-01-27T11:08:07.030Z
+  version: 2.68.1+rev1
+  date: 2021-02-01T16:27:57.343Z
+- commits:
     - subject: Update meta-balena from v2.67.0 to v2.67.3
       hash: 6a0aa5f595eb1cd3adf4f06e3a8d9379aea249b0
       body: |
