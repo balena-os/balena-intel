@@ -86,20 +86,10 @@ IMAGE_INSTALL_append_genericx86-64-ext =" \
     linux-firmware-imx-sdma-imx7d         \
     linux-firmware-iwlwifi                \
     linux-firmware-iwlwifi-135-6          \
-    linux-firmware-iwlwifi-3160-7         \
-    linux-firmware-iwlwifi-3160-8         \
-    linux-firmware-iwlwifi-3160-9         \
-    linux-firmware-iwlwifi-3160-10        \
-    linux-firmware-iwlwifi-3160-12        \
-    linux-firmware-iwlwifi-3160-13        \
-    linux-firmware-iwlwifi-3160-16        \
-    linux-firmware-iwlwifi-3160-17        \
+    linux-firmware-iwlwifi-3160           \
     linux-firmware-iwlwifi-6000-4         \
-    linux-firmware-iwlwifi-6000g2a-5      \
     linux-firmware-iwlwifi-6000g2a-6      \
-    linux-firmware-iwlwifi-6000g2b-5      \
     linux-firmware-iwlwifi-6000g2b-6      \
-    linux-firmware-iwlwifi-6050-4         \
     linux-firmware-iwlwifi-6050-5         \
     linux-firmware-iwlwifi-7260           \
     linux-firmware-iwlwifi-7265           \
