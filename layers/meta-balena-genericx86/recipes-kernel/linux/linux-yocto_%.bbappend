@@ -22,6 +22,43 @@ SRC_URI_append_genericx86-64-ext = " \
     file://defconfig \
 "
 
+do_configure_append () {
+    mkdir -p certs
+    if [ "x${SIGN_API}" = "x" ]; then
+        return 0
+    fi
+    SIGN_KMOD_KEY_ID="balenaos"
+    RESPONSE_FILE=$(mktemp)
+    /usr/bin/curl --fail "${SIGN_API}/kmod/cert/${SIGN_KMOD_KEY_ID}" > "${RESPONSE_FILE}"
+    /usr/bin/jq -r .cert "${RESPONSE_FILE}" > certs/balenaos.crt
+    rm -f "${RESPONSE_FILE}"
+}
+
+do_sign () {
+    if [ "x${SIGN_API}" = "x" ]; then
+        return 0
+    fi
+    SIGN_GRUB_KEY_ID="66EDD781D72CE409CDE823392244F835254BB920"
+    TO_SIGN=$(mktemp)
+
+    # Sign kernel for grub
+    echo "${B}/${KERNEL_OUTPUT_DIR}/${KERNEL_IMAGETYPE}.initramfs" > "${TO_SIGN}"
+
+    for FILE_TO_SIGN in $(cat "${TO_SIGN}")
+    do
+        REQUEST_FILE=$(mktemp)
+        RESPONSE_FILE=$(mktemp)
+        echo "{\"key_id\": \"${SIGN_GRUB_KEY_ID}\", \"payload\": \"$(/usr/bin/base64 -w 0 ${FILE_TO_SIGN})\"}" > "${REQUEST_FILE}"
+        /usr/bin/curl --fail "${SIGN_API}/gpg/sign" -X POST -H "Content-Type: application/json" -d "@${REQUEST_FILE}" > "${RESPONSE_FILE}"
+        /usr/bin/jq -r .signature < "${RESPONSE_FILE}" | /usr/bin/base64 -d > "${FILE_TO_SIGN}.sig"
+        rm -f "${REQUEST_FILE}" "${RESPONSE_FILE}"
+    done
+
+    rm -f "${TO_SIGN}"
+}
+
+addtask sign before do_deploy after do_bundle_initramfs
+
 do_kernel_configme[depends] += "virtual/${TARGET_PREFIX}binutils:do_populate_sysroot"
 do_kernel_configme[depends] += "virtual/${TARGET_PREFIX}gcc:do_populate_sysroot"
 do_kernel_configme[depends] += "bc-native:do_populate_sysroot bison-native:do_populate_sysroot"
@@ -420,6 +457,18 @@ RESIN_CONFIGS_append_genericx86-64-ext = " no-debug-info"
 RESIN_CONFIGS[no-debug-info] ?= " \
     CONFIG_DEBUG_INFO=n \
     "
+
+#
+# Enable options needed for secure boot
+#
+RESIN_CONFIGS_append = " secureboot"
+RESIN_CONFIGS[secureboot] = " \
+    CONFIG_MODULE_SIG=y \
+    CONFIG_MODULE_SIG_ALL=y \
+    CONFIG_MODULE_SIG_FORCE=y \
+    CONFIG_MODULE_SIG_SHA512=y \
+    CONFIG_SYSTEM_TRUSTED_KEYS="certs/balenaos.crt" \
+"
 
 # We get these patches from https://github.com/libcamera-org/linux/tree/surface/v5.8.18-yocto
 SRC_URI_append_surface-go = " \
