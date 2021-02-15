@@ -111,7 +111,7 @@ do_sign_efi() {
 	REQUEST_FILE=$(mktemp)
 	RESPONSE_FILE=$(mktemp)
 	echo "{\"key_id\": \"${SIGN_EFI_KEY_ID}\", \"payload\": \"$(/usr/bin/base64 -w 0 ${EFI_APP})\"}" > "${REQUEST_FILE}"
-	/usr/bin/curl --fail "${SIGN_API}/secureboot/sign" -X POST -H "Content-Type: application/json" -d "@${REQUEST_FILE}" > "${RESPONSE_FILE}"
+	/usr/bin/curl --fail "${SIGN_API}/secureboot/sign" -X POST -H "Content-Type: application/json" -H "X-API-Key: ${SIGN_API_KEY}" -d "@${REQUEST_FILE}" > "${RESPONSE_FILE}"
 	/usr/bin/jq -r .signed < "${RESPONSE_FILE}" | /usr/bin/base64 -d > "${EFI_APP}.signed"
 	rm -f "${REQUEST_FILE}" "${RESPONSE_FILE}"
 

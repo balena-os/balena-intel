@@ -87,7 +87,7 @@ do_sign_class-target() {
         REQUEST_FILE=$(mktemp)
         RESPONSE_FILE=$(mktemp)
         echo "{\"key_id\": \"${SIGN_GRUB_KEY_ID}\", \"payload\": \"$(/usr/bin/base64 -w 0 ${FILE_TO_SIGN})\"}" > "${REQUEST_FILE}"
-        /usr/bin/curl --fail "${SIGN_API}/gpg/sign" -X POST -H "Content-Type: application/json" -d "@${REQUEST_FILE}" > "${RESPONSE_FILE}"
+        /usr/bin/curl --fail "${SIGN_API}/gpg/sign" -X POST -H "Content-Type: application/json" -H "X-API-Key: ${SIGN_API_KEY}" -d "@${REQUEST_FILE}" > "${RESPONSE_FILE}"
         /usr/bin/jq -r .signature < "${RESPONSE_FILE}" | /usr/bin/base64 -d > "${FILE_TO_SIGN}.sig"
         rm -f "${REQUEST_FILE}" "${RESPONSE_FILE}"
     done
