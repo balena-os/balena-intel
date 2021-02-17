@@ -1,6 +1,50 @@
 Change log
 -----------
 
+# v2.71.0+rev1
+## (2021-02-16)
+
+
+<details>
+<summary> Update meta-balena from v2.68.1 to v2.71.0 [Joseph Kogut] </summary>
+
+> ## meta-balena-2.71.0
+> ### (2021-02-15)
+> 
+> * meta-balena-common: add grub-efi support [Joseph Kogut]
+> 
+> ## meta-balena-2.70.2
+> ### (2021-02-12)
+> 
+> * Update PR template to specify test coverage in more detail [Alex Gonzalez]
+> * Update codeowners [Alex Gonzalez]
+> 
+> ## meta-balena-2.70.1
+> ### (2021-02-11)
+> 
+> * Add leviathan automated OS test suite [Vipul Gupta (@vipulgupta2048)]
+> 
+> ## meta-balena-2.70.0
+> ### (2021-02-11)
+> 
+> * systemd/timeinit: use systemd mount unit for /etc/fake-hwclock [Mark Corbin]
+> 
+> ## meta-balena-2.69.1
+> ### (2021-02-03)
+> 
+> * Update balena-supervisor from v12.3.0 to v12.3.5 [Miguel Casqueira]
+> 
+> ## meta-balena-2.69.0
+> ### (2021-02-01)
+> 
+> * openvpn: remove resin-ntp-config call from upscript.sh [Mark Corbin]
+> * resin-vars: trigger NTP config script on config.json changes [Mark Corbin]
+> * resin-ntp-config: update script and add systemd service [Mark Corbin]
+> * networkmanager: add improved dispatcher scripts for NTP handling [Mark Corbin]
+> * chrony: add sourcedir support and helper script [Mark Corbin]
+> 
+</details>
+
 # v2.68.1+rev1
 ## (2021-02-01)
 
