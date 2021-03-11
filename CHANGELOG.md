@@ -1,6 +1,34 @@
 Change log
 -----------
 
+# v2.72.0+rev1
+## (2021-03-11)
+
+* Rename resin image types to balena [Kyle Harding]
+
+<details>
+<summary> Update meta-balena from v2.71.7 to v2.72.0 [Kyle Harding] </summary>
+
+> ## meta-balena-2.72.0
+> ### (2021-03-10)
+> 
+> 
+> <details>
+> <summary> os-config: Update os-config from v1.1.4 to v1.2.0 [Kyle Harding] </summary>
+> 
+>> ### os-config-1.2.0
+>> #### (2021-02-23)
+>> 
+>> * os-config: rename flasher flag path [Kyle Harding]
+>> 
+> </details>
+> 
+> * Rename resin image types to balena [Kyle Harding]
+> 
+</details>
+
+* Update balena-yocto-scripts from v1.10.3 to v1.11.0 [Kyle Harding]
+
 # v2.71.7+rev1
 ## (2021-03-09)
 
