@@ -11,24 +11,24 @@ set -o errexit
 DURING_UPDATE=${DURING_UPDATE:-0}
 
 if [ "$DURING_UPDATE" = "1" ]; then
-	grub_cfg=$(find "$RESIN_BOOT_MOUNTPOINT" -name grub.cfg)
+	grub_cfg=$(find "$BALENA_BOOT_MOUNTPOINT" -name grub.cfg)
 	if  grep -q "search --set=root" "$grub_cfg" ; then
-		if [ -e "$RESIN_BOOT_MOUNTPOINT/vmlinuz" ]; then
+		if [ -e "$BALENA_BOOT_MOUNTPOINT/vmlinuz" ]; then
 			# Testing the destination sysroot bzImage is tricky. Lets check current root
 			# instead as all future roots will have the kernel in root partition in /boot
 			# This leaves the kernel lying around in boot partition until the next HUP
 			if [ -e "/boot/bzImage" ]; then
 				printf "[INFO] grub.cfg reads kernel from root partitions but found vmlinuz in boot \n"
-				printf "[INFO] removing $RESIN_BOOT_MOUNTPOINT/vmlinuz \n"
-				rm -f "$RESIN_BOOT_MOUNTPOINT/vmlinuz" || true
-				sync -f "$RESIN_BOOT_MOUNTPOINT"
+				printf "[INFO] removing $BALENA_BOOT_MOUNTPOINT/vmlinuz \n"
+				rm -f "$BALENA_BOOT_MOUNTPOINT/vmlinuz" || true
+				sync -f "$BALENA_BOOT_MOUNTPOINT"
 			fi
 		fi
 	fi
 
 	# make sure the bootstrap code (boot.img) is removed in case we are using EFI boot
 	if [ -d /sys/firmware/efi ] ; then
-		device="/dev/"$(findmnt --noheadings --canonicalize --output SOURCE "$RESIN_BOOT_MOUNTPOINT" | xargs lsblk -no pkname)
+		device="/dev/"$(findmnt --noheadings --canonicalize --output SOURCE "$BALENA_BOOT_MOUNTPOINT" | xargs lsblk -no pkname)
 		dd if=/dev/zero of=$device bs=446 count=1
 
 		# re-add the EFI entry for resinOS boot from internal media as some EFI firmwares are buggy and won't detect the old entry anymore

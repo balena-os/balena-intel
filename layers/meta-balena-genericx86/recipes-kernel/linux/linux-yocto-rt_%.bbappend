@@ -7,8 +7,8 @@ SRC_URI_append_smartcube-kbox-a150 = " \
     file://defconfig \
 "
 
-RESIN_CONFIGS_append = " preempt_rt"
-RESIN_CONFIGS[preempt_rt] = " \
+BALENA_CONFIGS_append = " preempt_rt"
+BALENA_CONFIGS[preempt_rt] = " \
     CONFIG_PREEMPT_RT_FULL=y \
 "
 

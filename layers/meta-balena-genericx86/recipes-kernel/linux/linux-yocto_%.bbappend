@@ -28,8 +28,8 @@ do_kernel_configme[depends] += "bc-native:do_populate_sysroot bison-native:do_po
 
 COMPATIBLE_MACHINE_smartcube-kbox-a250 = "smartcube-kbox-a250"
 
-RESIN_CONFIGS_append_surface-go = " sgo2_camera"
-RESIN_CONFIGS[sgo2_camera] = " \
+BALENA_CONFIGS_append_surface-go = " sgo2_camera"
+BALENA_CONFIGS[sgo2_camera] = " \
     CONFIG_MEMSTICK=m \
     CONFIG_MEMSTICK_REALTEK_PCI=m \
     CONFIG_PINCTRL_INTEL=y \
@@ -59,29 +59,29 @@ RESIN_CONFIGS[sgo2_camera] = " \
 #
 # EHCI drivers
 #
-RESIN_CONFIGS_append = " ehci"
-RESIN_CONFIGS[ehci] = " \
+BALENA_CONFIGS_append = " ehci"
+BALENA_CONFIGS[ehci] = " \
     CONFIG_USB_EHCI_HCD_PLATFORM=y \
     "
 
 #
 # Support for NVME block devices
 #
-RESIN_CONFIGS_append = " nvme"
-RESIN_CONFIGS[nvme] = " \
+BALENA_CONFIGS_append = " nvme"
+BALENA_CONFIGS[nvme] = " \
     CONFIG_BLK_DEV_NVME=y \
     "
 
 #
 # Support Intel wrieless LAN adapter
 #
-RESIN_CONFIGS_append = " iwlwifi"
-RESIN_CONFIGS_DEPS[iwlwifi] = " \
+BALENA_CONFIGS_append = " iwlwifi"
+BALENA_CONFIGS_DEPS[iwlwifi] = " \
     CONFIG_PCI=m \
     CONFIG_MAC80211=m \
     CONFIG_HAS_IOMEM=m \
     "
-RESIN_CONFIGS[iwlwifi] = " \
+BALENA_CONFIGS[iwlwifi] = " \
     CONFIG_IWLMVM=m \
     CONFIG_IWLDVM=m \
     CONFIG_IWLWIFI=m \
@@ -90,8 +90,8 @@ RESIN_CONFIGS[iwlwifi] = " \
 #
 # Support Intel NUC Bluetooth
 #
-RESIN_CONFIGS_append = " nuc_bluetooth"
-RESIN_CONFIGS[nuc_bluetooth] = " \
+BALENA_CONFIGS_append = " nuc_bluetooth"
+BALENA_CONFIGS[nuc_bluetooth] = " \
     CONFIG_BT_HCIUART=m \
     CONFIG_BT_HCIUART_INTEL=y \
     CONFIG_BT_HCIBTUSB=m \
@@ -100,16 +100,16 @@ RESIN_CONFIGS[nuc_bluetooth] = " \
 #
 # Support for DLM module
 #
-RESIN_CONFIGS_append = " dlm"
-RESIN_CONFIGS[dlm] = " \
+BALENA_CONFIGS_append = " dlm"
+BALENA_CONFIGS[dlm] = " \
     CONFIG_DLM=m \
     "
 
 #
 # Support for serial console and more than 4 serial ports
 #
-RESIN_CONFIGS_append = " serial_8250"
-RESIN_CONFIGS[serial_8250] = " \
+BALENA_CONFIGS_append = " serial_8250"
+BALENA_CONFIGS[serial_8250] = " \
     CONFIG_SERIAL_8250_CONSOLE=y \
     CONFIG_SERIAL_8250_NR_UARTS=32 \
     CONFIG_SERIAL_8250_RUNTIME_UARTS=32 \
@@ -118,54 +118,54 @@ RESIN_CONFIGS[serial_8250] = " \
 #
 # Support Intel(R) 82575/82576 PCI-Express Gigabit Ethernet
 #
-RESIN_CONFIGS_append = " igb"
-RESIN_CONFIGS_DEPS[igb] = " \
+BALENA_CONFIGS_append = " igb"
+BALENA_CONFIGS_DEPS[igb] = " \
     CONFIG_PCI=m \
     "
-RESIN_CONFIGS[igb] = " \
+BALENA_CONFIGS[igb] = " \
     CONFIG_IGB=m \
     "
 
 # Support for RTL8723BE and RTL8821AE based WiFi/BT cards
-RESIN_CONFIGS_append = " rtl8723be_rtl8821ae"
-RESIN_CONFIGS_DEPS[rtl8723be_rtl8821ae] = " \
+BALENA_CONFIGS_append = " rtl8723be_rtl8821ae"
+BALENA_CONFIGS_DEPS[rtl8723be_rtl8821ae] = " \
         CONFIG_RTL_CARDS=m \
 "
-RESIN_CONFIGS[rtl8723be_rtl8821ae] = " \
+BALENA_CONFIGS[rtl8723be_rtl8821ae] = " \
     CONFIG_RTL8723BE=m \
     CONFIG_RTL8821AE=m \
 "
 
 # Enable Intel Low Power Subsystem Support
 # (for detecting the eMMC on some Atom based Intel SoCs)
-RESIN_CONFIGS_append = " lpss"
-RESIN_CONFIGS[lpss] = " \
+BALENA_CONFIGS_append = " lpss"
+BALENA_CONFIGS[lpss] = " \
     CONFIG_X86_INTEL_LPSS=y \
 "
 
 # Enable vxlan support (requested by customer)
-RESIN_CONFIGS_append = " vxlan"
-RESIN_CONFIGS[vxlan] = " \
+BALENA_CONFIGS_append = " vxlan"
+BALENA_CONFIGS[vxlan] = " \
     CONFIG_VXLAN=m \
 "
 
 # enable audio over HDMI (requested by customer for the Intel Compute Stick)
-RESIN_CONFIGS_append = " hdmi_lpe_audio"
-RESIN_CONFIGS[hdmi_lpe_audio] = " \
+BALENA_CONFIGS_append = " hdmi_lpe_audio"
+BALENA_CONFIGS[hdmi_lpe_audio] = " \
     CONFIG_HDMI_LPE_AUDIO=m \
 "
 
-RESIN_CONFIGS_append = " quectel_ec20"
-RESIN_CONFIGS_DEPS[quectel_ec20] = "\
+BALENA_CONFIGS_append = " quectel_ec20"
+BALENA_CONFIGS_DEPS[quectel_ec20] = "\
     CONFIG_USB_SERIAL_OPTION=m \
     CONFIG_USB_SERIAL_WWAN=m \
 "
-RESIN_CONFIGS[quectel_ec20] ="\
+BALENA_CONFIGS[quectel_ec20] ="\
     CONFIG_USB_SERIAL_QUALCOMM=m \
 "
 
-RESIN_CONFIGS_append = " batman"
-RESIN_CONFIGS[batman] = "\
+BALENA_CONFIGS_append = " batman"
+BALENA_CONFIGS[batman] = "\
     CONFIG_BATMAN_ADV=m \
     CONFIG_BATMAN_ADV_DAT=y \
     CONFIG_BATMAN_ADV_MCAST=y \
@@ -174,164 +174,164 @@ RESIN_CONFIGS[batman] = "\
 "
 
 # Enable USB audio support
-RESIN_CONFIGS_append = " usb_audio"
-RESIN_CONFIGS[usb_audio]=" \
+BALENA_CONFIGS_append = " usb_audio"
+BALENA_CONFIGS[usb_audio]=" \
     CONFIG_SND_USB_AUDIO=m \
 "
 
 # Enable WiFi adapters that use Realtek chipset (like Edimax EW-7811Un)
-RESIN_CONFIGS_append = " rtl_wifi"
-RESIN_CONFIGS[rtl_wifi]=" \
+BALENA_CONFIGS_append = " rtl_wifi"
+BALENA_CONFIGS[rtl_wifi]=" \
     CONFIG_RTL8192CU=m \
 "
 
 # Add overlayfs module in the rootfs (some user containers need this even though we do not yet switch from aufs to overlay2 as balena storage driver)
-RESIN_CONFIGS_append = " overlayfs"
-RESIN_CONFIGS[overlayfs] = " \
+BALENA_CONFIGS_append = " overlayfs"
+BALENA_CONFIGS[overlayfs] = " \
     CONFIG_OVERLAY_FS=m \
 "
 
 # keep overlay as built-in for the following machines as they are using overlay instead of aufs
-RESIN_CONFIGS_remove_surface-pro-6 = "overlayfs"
-RESIN_CONFIGS_remove_surface-go = "overlayfs"
-RESIN_CONFIGS_remove_genericx86-64-ext = "overlayfs"
+BALENA_CONFIGS_remove_surface-pro-6 = "overlayfs"
+BALENA_CONFIGS_remove_surface-go = "overlayfs"
+BALENA_CONFIGS_remove_genericx86-64-ext = "overlayfs"
 
 # install aufs support even when BALENA_STORAGE is overlay2
-RESIN_CONFIGS_append_genericx86-64-ext = " aufs"
+BALENA_CONFIGS_append_genericx86-64-ext = " aufs"
 
 # Add CAN support (requested by customer)
-RESIN_CONFIGS_append = " enable_can"
-RESIN_CONFIGS[enable_can] = " \
+BALENA_CONFIGS_append = " enable_can"
+BALENA_CONFIGS[enable_can] = " \
     CONFIG_CAN=m \
     CONFIG_CAN_DEV=m \
     CONFIG_CAN_RAW=m \
     CONFIG_CAN_SLCAN=m \
 "
 
-RESIN_CONFIGS_append = " huawei_modems"
-RESIN_CONFIGS_DEPS[huawei_modems] = " \
+BALENA_CONFIGS_append = " huawei_modems"
+BALENA_CONFIGS_DEPS[huawei_modems] = " \
     CONFIG_USB_SERIAL_OPTION=m \
     CONFIG_USB_USBNET=m \
 "
-RESIN_CONFIGS[huawei_modems] ="\
+BALENA_CONFIGS[huawei_modems] ="\
     CONFIG_USB_NET_HUAWEI_CDC_NCM=m \
 "
 
-RESIN_CONFIGS_append = " rndis"
-RESIN_CONFIGS_DEPS[rndis] = " \
+BALENA_CONFIGS_append = " rndis"
+BALENA_CONFIGS_DEPS[rndis] = " \
     CONFIG_USB_SERIAL_OPTION=m \
     CONFIG_USB_USBNET=m \
 "
-RESIN_CONFIGS[rndis] ="\
+BALENA_CONFIGS[rndis] ="\
     CONFIG_USB_NET_RNDIS_HOST=m \
 "
 
 # requested by customer
-RESIN_CONFIGS_append = " netfilter_time"
-RESIN_CONFIGS[netfilter_time] = " \
+BALENA_CONFIGS_append = " netfilter_time"
+BALENA_CONFIGS[netfilter_time] = " \
     CONFIG_NETFILTER_XT_MATCH_TIME=m \
 "
 
 # requested by customer (support for Kontron PLD devices)
-RESIN_CONFIGS_append = " gpio_i2c_kempld"
-RESIN_CONFIGS_DEPS[gpio_i2c_kempld] = " \
+BALENA_CONFIGS_append = " gpio_i2c_kempld"
+BALENA_CONFIGS_DEPS[gpio_i2c_kempld] = " \
     CONFIG_GPIOLIB=y \
     CONFIG_I2C=y \
     CONFIG_HAS_IOMEM=y \
     CONFIG_MFD_KEMPLD=m \
 "
-RESIN_CONFIGS[gpio_i2c_kempld] = " \
+BALENA_CONFIGS[gpio_i2c_kempld] = " \
     CONFIG_GPIO_KEMPLD=m \
     CONFIG_I2C_KEMPLD=m \
 "
 
 # requested by customer
-RESIN_CONFIGS_append = " snd_dyn_minors"
-RESIN_CONFIGS[snd_dyn_minors] = " \
+BALENA_CONFIGS_append = " snd_dyn_minors"
+BALENA_CONFIGS[snd_dyn_minors] = " \
     CONFIG_SND_DYNAMIC_MINORS=y \
 "
 
 # requested by customer
-RESIN_CONFIGS_append = " tulip"
-RESIN_CONFIGS[tulip] = " \
+BALENA_CONFIGS_append = " tulip"
+BALENA_CONFIGS[tulip] = " \
     CONFIG_NET_TULIP=y \
     CONFIG_TULIP=m \
 "
 
 # requested by customer
-RESIN_CONFIGS_append = " hyperv_net"
-RESIN_CONFIGS_DEPS[hyperv_net] = " \
+BALENA_CONFIGS_append = " hyperv_net"
+BALENA_CONFIGS_DEPS[hyperv_net] = " \
     CONFIG_HYPERV=y \
     CONFIG_HYPERVISOR_GUEST=y \
 "
-RESIN_CONFIGS[hyperv_net] = " \
+BALENA_CONFIGS[hyperv_net] = " \
     CONFIG_HYPERV_NET=m \
 "
 
 # requested by user
-RESIN_CONFIGS_append = " temp_sensors"
-RESIN_CONFIGS[temp_sensors] = " \
+BALENA_CONFIGS_append = " temp_sensors"
+BALENA_CONFIGS[temp_sensors] = " \
     CONFIG_SENSORS_CORETEMP=m \
     CONFIG_SENSORS_NCT6775=m \
 "
 
 # requested by user
-RESIN_CONFIGS_append = " acpi_wmi"
-RESIN_CONFIGS[acpi_wmi] = " \
+BALENA_CONFIGS_append = " acpi_wmi"
+BALENA_CONFIGS[acpi_wmi] = " \
     CONFIG_ACPI_WMI=m \
 "
 
-RESIN_CONFIGS_append = " mwifiex_pcie"
-RESIN_CONFIGS[mwifiex_pcie] = " \
+BALENA_CONFIGS_append = " mwifiex_pcie"
+BALENA_CONFIGS[mwifiex_pcie] = " \
     CONFIG_MWIFIEX=m \
     CONFIG_MWIFIEX_PCIE=m \
 "
 
-RESIN_CONFIGS_append = " uinput"
-RESIN_CONFIGS_DEPS[uinput] = " \
+BALENA_CONFIGS_append = " uinput"
+BALENA_CONFIGS_DEPS[uinput] = " \
     CONFIG_INPUT_MISC=y \
 "
-RESIN_CONFIGS[uinput] = " \
+BALENA_CONFIGS[uinput] = " \
     CONFIG_INPUT_UINPUT=m \
 "
 
-RESIN_CONFIGS_append = " ath10k_pci"
-RESIN_CONFIGS_DEPS[ath10k_pci] = " \
+BALENA_CONFIGS_append = " ath10k_pci"
+BALENA_CONFIGS_DEPS[ath10k_pci] = " \
     CONFIG_ATH10K=m \
 "
-RESIN_CONFIGS[ath10k_pci] = " \
+BALENA_CONFIGS[ath10k_pci] = " \
     CONFIG_ATH10K_PCI=m \
 "
 
-RESIN_CONFIGS_append = " mmc_realtek_pci"
-RESIN_CONFIGS_DEPS[mmc_realtek_pci] = " \
+BALENA_CONFIGS_append = " mmc_realtek_pci"
+BALENA_CONFIGS_DEPS[mmc_realtek_pci] = " \
     CONFIG_MISC_RTSX_PCI=m \
 "
-RESIN_CONFIGS[mmc_realtek_pci] = " \
+BALENA_CONFIGS[mmc_realtek_pci] = " \
     CONFIG_MMC_REALTEK_PCI=m \
 "
 
 # enable touchscreen driver for the Microsoft Surface Pro 6
-RESIN_CONFIGS_append_surface-pro-6 = " ipts_touchscreen_sp6"
-RESIN_CONFIGS[ipts_touchscreen_sp6] = " \
+BALENA_CONFIGS_append_surface-pro-6 = " ipts_touchscreen_sp6"
+BALENA_CONFIGS[ipts_touchscreen_sp6] = " \
     CONFIG_INTEL_IPTS=m \
 "
 
 # the following are not compile deps but rather runtime deps
-RESIN_CONFIGS_append_surface-pro-6 = " touchscreen_surfaces"
-RESIN_CONFIGS_append_surface-go = " touchscreen_surfaces"
-RESIN_CONFIGS_DEPS[touchscreen_surfaces] = " \
+BALENA_CONFIGS_append_surface-pro-6 = " touchscreen_surfaces"
+BALENA_CONFIGS_append_surface-go = " touchscreen_surfaces"
+BALENA_CONFIGS_DEPS[touchscreen_surfaces] = " \
     CONFIG_INTEL_MEI=m \
     CONFIG_INTEL_MEI_ME=m \
     CONFIG_HID_MULTITOUCH=m \
 "
 
-RESIN_CONFIGS_append = " tpm"
-RESIN_CONFIGS_DEPS[tpm] = " \
+BALENA_CONFIGS_append = " tpm"
+BALENA_CONFIGS_DEPS[tpm] = " \
     CONFIG_HW_RANDOM_TPM=y \
     CONFIG_SECURITYFS=y \
 "
-RESIN_CONFIGS[tpm] = " \
+BALENA_CONFIGS[tpm] = " \
     CONFIG_TCG_TPM=m \
     CONFIG_TCG_TIS_CORE=m \
     CONFIG_TCG_TIS=m \
@@ -339,88 +339,88 @@ RESIN_CONFIGS[tpm] = " \
 "
 
 # enable the Intel TCO Watchdog
-RESIN_CONFIGS_append = " watchdog"
-RESIN_CONFIGS[watchdog] = " \
+BALENA_CONFIGS_append = " watchdog"
+BALENA_CONFIGS[watchdog] = " \
     CONFIG_ITCO_WDT=m \
 "
 
 # requested by user
-RESIN_CONFIGS_append_genericx86-64 = " ad5593r"
-RESIN_CONFIGS[ad5593r] = " \
+BALENA_CONFIGS_append_genericx86-64 = " ad5593r"
+BALENA_CONFIGS[ad5593r] = " \
     CONFIG_AD5593R=m \
 "
-RESIN_CONFIGS_DEPS[ad5593r] = " \
+BALENA_CONFIGS_DEPS[ad5593r] = " \
     CONFIG_IIO=m \
 "
 
 # set ATA_PIIX as built-in so we can boot legacy IDE mode without adding the ata_piix driver in the initramfs
 # (some boards do not support AHCI mode)
-RESIN_CONFIGS_append_genericx86-64 = " ata_piix"
-RESIN_CONFIGS[ata_piix] = " \
+BALENA_CONFIGS_append_genericx86-64 = " ata_piix"
+BALENA_CONFIGS[ata_piix] = " \
     CONFIG_ATA_PIIX=y \
 "
 
 # requested by customer
-RESIN_CONFIGS_append_genericx86-64 = " pinctrl_baytrail"
-RESIN_CONFIGS[pinctrl_baytrail] = " \
+BALENA_CONFIGS_append_genericx86-64 = " pinctrl_baytrail"
+BALENA_CONFIGS[pinctrl_baytrail] = " \
     CONFIG_PINCTRL_BAYTRAIL=y \
 "
 
 # requested by user (this module was previously available but apparently got removed when we updated to warrior and a new kernel)
-RESIN_CONFIGS_append_genericx86-64 = " ch341"
-RESIN_CONFIGS[ch341] = " \
+BALENA_CONFIGS_append_genericx86-64 = " ch341"
+BALENA_CONFIGS[ch341] = " \
     CONFIG_USB_SERIAL_CH341=m \
 "
 
-RESIN_CONFIGS_append_genericx86-64 = " i2c_designware"
-RESIN_CONFIGS[i2c_designware] = " \
+BALENA_CONFIGS_append_genericx86-64 = " i2c_designware"
+BALENA_CONFIGS[i2c_designware] = " \
     CONFIG_I2C_DESIGNWARE_PLATFORM=y \
     CONFIG_I2C_DESIGNWARE_PCI=y \
 "
 
 # requested by user for mounting HFS drives
-RESIN_CONFIGS_append_genericx86-64 = " apple_hfs"
-RESIN_CONFIGS[apple_hfs] = " \
+BALENA_CONFIGS_append_genericx86-64 = " apple_hfs"
+BALENA_CONFIGS[apple_hfs] = " \
     CONFIG_HFS_FS=m \
     CONFIG_HFSPLUS_FS=m \
 "
 
 # enable Intel Low Power Subsystem support in PCI mode in order to have the Designware I2C chip functioning on the Microsoft Surface Go
-RESIN_CONFIGS_append_surface-go = " mfd_lpss_pci"
-RESIN_CONFIGS[mfd_lpss_pci] = " \
+BALENA_CONFIGS_append_surface-go = " mfd_lpss_pci"
+BALENA_CONFIGS[mfd_lpss_pci] = " \
     CONFIG_MFD_INTEL_LPSS_PCI=m \
 "
 
 # required to get the i2c touchscreen working on the Microsoft Surface Go
-RESIN_CONFIGS_append_surface-go = " i2c_hid"
-RESIN_CONFIGS[i2c_hid] = " \
+BALENA_CONFIGS_append_surface-go = " i2c_hid"
+BALENA_CONFIGS[i2c_hid] = " \
     CONFIG_I2C_HID=m \
 "
 
 # requested by customer
-RESIN_CONFIGS_append_genericx86-64 = " ixgbe"
-RESIN_CONFIGS[ixgbe] = " \
+BALENA_CONFIGS_append_genericx86-64 = " ixgbe"
+BALENA_CONFIGS[ixgbe] = " \
     CONFIG_IXGBE=m \
 "
 
 # requested by customer
-RESIN_CONFIGS_append_genericx86-64 = " xillybus"
-RESIN_CONFIGS[xillybus] = " \
+BALENA_CONFIGS_append_genericx86-64 = " xillybus"
+BALENA_CONFIGS[xillybus] = " \
     CONFIG_XILLYBUS=m \
     CONFIG_XILLYBUS_PCIE=m \
 "
 
 # requested by customer
-RESIN_CONFIGS_append_genericx86-64 = " i40e"
-RESIN_CONFIGS[i40e] = " \
+BALENA_CONFIGS_append_genericx86-64 = " i40e"
+BALENA_CONFIGS[i40e] = " \
     CONFIG_I40E=m \
 "
 
 #
 # Do not include debugging info in kernel and modules
 #
-RESIN_CONFIGS_append_genericx86-64-ext = " no-debug-info"
-RESIN_CONFIGS[no-debug-info] ?= " \
+BALENA_CONFIGS_append_genericx86-64-ext = " no-debug-info"
+BALENA_CONFIGS[no-debug-info] ?= " \
     CONFIG_DEBUG_INFO=n \
     "
 
