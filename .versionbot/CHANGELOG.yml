@@ -1,4 +1,216 @@
 - commits:
+    - subject: Update meta-balena from v2.71.0 to v2.71.7
+      hash: 446a4f32b221e2ff4bba22112bd364041ba14c6f
+      body: |
+        Update meta-balena from 2.71.0 to 2.71.7
+      footer:
+        Changelog-entry: Update meta-balena from v2.71.0 to v2.71.7
+        changelog-entry: Update meta-balena from v2.71.0 to v2.71.7
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested:
+        - commits:
+            - subject: Apply aufs patches if aufs is present in kernel config
+              hash: 8094dc7a3a36cfc4f1c0da5be66dc666e29b7dbe
+              body: >
+                Allow installing and patching aufs even if BALENA_STORAGE is
+                overlay2
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Apply aufs patches if aufs is present in kernel config
+                changelog-entry: Apply aufs patches if aufs is present in kernel config
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: meta-balena-2.71.7
+          date: 2021-03-08T13:49:52.854Z
+        - commits:
+            - subject: 'grub-efi: build required modules into grub image'
+              hash: 5e1004d6753025166c40b11af117e008feb875f1
+              body: >
+                grub-efi requires modules to be installed in the boot partition,
+                and
+
+                resin-image installs them from ${DEPLOYDIR}.
+
+
+                A normal grub installation installs those modules to
+                ${PREFIX}/${libdir}
+
+                to allow grub tooling to install them at runtime, but we're
+                building the
+
+                image with GRUB baked in, so we don't need those in the sysroot.
+
+
+                The first iteration of this bbappend attempted to solve these
+
+                constraints by copying the modules from ${D}/${libdir}/grub/ to
+
+                ${DEPLOYDIR} in do_deploy(), then removing ${D}${prefix}. This
+                had the
+
+                unfortunate side effect of breaking the build in certain cases,
+                such as
+
+                clean builds or reexecuting do_deploy() without the other steps
+                of the
+
+                build.
+
+
+                Instead, remove the unwanted files in do_install(), and append
+                the
+
+                required modules to GRUB_BUILDIN to create a standalone grub
+                image
+
+                without any external modules at all.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: meta-balena-2.71.6
+          date: 2021-03-05T22:03:28.222Z
+        - commits:
+            - subject: >-
+                initrdscripts: always use by-uuid symlink looking for flasher
+                rootfs
+              hash: d16ad58f6efe76c9313226735de88648e54d2420
+              body: >
+                If the device with flasher rootfs is slow to bring up and rootfs
+                is defined
+
+                as UUID=xxx the waiting loop in rootfs initrd script would
+                assume UUIDs have
+
+                just been regenerated and wait for a by-state symlink instead.
+                This only works
+
+                for the OS - flasher does not use the dynamically generated
+                UUIDs
+
+                therefore we always want to use the by-uuid link for it.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-2.71.5
+          date: 2021-03-03T19:17:32.016Z
+        - commits:
+            - subject: Update OS test suite
+              hash: 6c82ffb23c05e334ae2157c8e6c0f3e197467d2f
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+                signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+              author: Vipul Gupta (@vipulgupta2048)
+              nested: []
+          version: meta-balena-2.71.4
+          date: 2021-03-01T11:03:02.277Z
+        - commits:
+            - subject: >-
+                balena: Make the healthcheck loading service part of
+                balena.service
+              hash: c26f2d203a87d1578d9d52d5bbd8b0b18869916e
+              body: >
+                This prevents issues with the health check when the image is
+                manually
+
+                removed.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Connects-to: 'https://github.com/balena-os/meta-balena/issues/2010'
+                connects-to: 'https://github.com/balena-os/meta-balena/issues/2010'
+                Signed-off-by: Robert Günzler <robertg@balena.io>
+                signed-off-by: Robert Günzler <robertg@balena.io>
+              author: Robert Günzler
+              nested: []
+          version: meta-balena-2.71.3
+          date: 2021-02-26T12:34:11.073Z
+        - commits:
+            - subject: 'dnsmasq: enable dbus support'
+              hash: 372980ca6aa6bd2793ac856c303c3b3ac4eeffdb
+              body: >
+                This config option is disabled by default in the upstream
+                package
+
+                so I'm including the change here as a separate commit.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: 'dnsmasq: update to 2.84 with dnspooq fix'
+              hash: 3afbe8dfbbaf9f73a09048e0350622535befa0a8
+              body: >
+                https://github.com/balena-os/meta-balena/issues/2099
+
+
+                Copy dnsmasq 2.84 recipe and files from this upstream patch:
+
+
+                http://cgit.openembedded.org/meta-openembedded/commit/meta-networking/recipes-support/dnsmasq?id=3e28a31bb479f292b9a052a3d2eee84c49319ee3
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: meta-balena-2.71.2
+          date: 2021-02-23T19:57:37.313Z
+        - commits:
+            - subject: 'recipes-bsp: grub: install only release modules'
+              hash: 78a8049218d8ce3a9172b7fca6fe00270544e7f1
+              body: >
+                GRUB builds modules with both debug and release variants, with
+                *.module
+
+                and *.mod extensions respectively.
+
+
+                Install only the release modules in do_deploy() to avoid
+                balooning the
+
+                size of the boot partition.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: meta-balena-2.71.1
+          date: 2021-02-23T17:59:51.133Z
+    - subject: Add support for aufs in addition to overlay2 for Generic x86-64
+      hash: e0a6725e9b34c42aa71f772b39eed780ff704909
+      body: |
+        Add support for aufs in addition to overlay2 for Generic x86-64
+      footer:
+        Changelog-entry: Add support for aufs in addition to overlay2 for Generic x86-64
+        changelog-entry: Add support for aufs in addition to overlay2 for Generic x86-64
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 2.71.7+rev1
+  date: 2021-03-09T11:25:30.538Z
+- commits:
     - subject: Update balena-yocto-scripts from v1.9.0 to v1.10.3
       hash: e522bfc321fd50acc50d2e73581cec31e9512cf9
       body: ''

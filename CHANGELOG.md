@@ -1,6 +1,53 @@
 Change log
 -----------
 
+# v2.71.7+rev1
+## (2021-03-09)
+
+
+<details>
+<summary> Update meta-balena from v2.71.0 to v2.71.7 [Kyle Harding] </summary>
+
+> ## meta-balena-2.71.7
+> ### (2021-03-08)
+> 
+> * Apply aufs patches if aufs is present in kernel config [Kyle Harding]
+> 
+> ## meta-balena-2.71.6
+> ### (2021-03-05)
+> 
+> * grub-efi: build required modules into grub image [Joseph Kogut]
+> 
+> ## meta-balena-2.71.5
+> ### (2021-03-03)
+> 
+> * initrdscripts: always use by-uuid symlink looking for flasher rootfs [Michal Toman]
+> 
+> ## meta-balena-2.71.4
+> ### (2021-03-01)
+> 
+> * Update OS test suite [Vipul Gupta (@vipulgupta2048)]
+> 
+> ## meta-balena-2.71.3
+> ### (2021-02-26)
+> 
+> * balena: Make the healthcheck loading service part of balena.service [Robert Günzler]
+> 
+> ## meta-balena-2.71.2
+> ### (2021-02-23)
+> 
+> * dnsmasq: enable dbus support [Kyle Harding]
+> * dnsmasq: update to 2.84 with dnspooq fix [Kyle Harding]
+> 
+> ## meta-balena-2.71.1
+> ### (2021-02-23)
+> 
+> * recipes-bsp: grub: install only release modules [Joseph Kogut]
+> 
+</details>
+
+* Add support for aufs in addition to overlay2 for Generic x86-64 [Kyle Harding]
+
 # v2.71.0+rev2
 ## (2021-03-04)
 
