@@ -37,10 +37,10 @@ module.exports =
 
 	yocto:
 		machine: 'surface-go'
-		image: 'resin-image-flasher'
-		fstype: 'resinos-img'
+		image: 'balena-image-flasher'
+		fstype: 'balenaos-img'
 		version: 'yocto-dunfell'
-		deployArtifact: 'resin-image-flasher-surface-go.resinos-img'
+		deployArtifact: 'balena-image-flasher-surface-go.balenaos-img'
 		compressed: true
 
 	configuration:

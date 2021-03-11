@@ -42,10 +42,10 @@ module.exports =
 
 	yocto:
 		machine: 'smartcube-kbox-a250'
-		image: 'resin-image-flasher'
-		fstype: 'resinos-img'
+		image: 'balena-image-flasher'
+		fstype: 'balenaos-img'
 		version: 'yocto-warrior'
-		deployArtifact: 'resin-image-flasher-smartcube-kbox-a250.resinos-img'
+		deployArtifact: 'balena-image-flasher-smartcube-kbox-a250.balenaos-img'
 		compressed: true
 
 	configuration:
