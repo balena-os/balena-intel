@@ -196,6 +196,9 @@ RESIN_CONFIGS_remove_surface-pro-6 = "overlayfs"
 RESIN_CONFIGS_remove_surface-go = "overlayfs"
 RESIN_CONFIGS_remove_genericx86-64-ext = "overlayfs"
 
+# install aufs support even when BALENA_STORAGE is overlay2
+RESIN_CONFIGS_append_genericx86-64-ext = " aufs"
+
 # Add CAN support (requested by customer)
 RESIN_CONFIGS_append = " enable_can"
 RESIN_CONFIGS[enable_can] = " \
