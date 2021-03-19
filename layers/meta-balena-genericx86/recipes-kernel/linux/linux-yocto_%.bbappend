@@ -526,7 +526,5 @@ SRC_URI_append_surface-go = " \
     file://0098-mfd-Remove-tps68470-MFD-driver.patch \
     file://0099-regulator-Introduce-tps68470-regulator-driver.patch \
     file://0100-clk-Introduce-clk-tps68470-driver.patch \
-    file://0101-media-i2c-Add-support-for-the-OV5693-image-sensor.patch \
-    file://0102-media-i2c-Add-reset-pin-toggling-to-ov5693.patch \
-    file://0103-media-i2c-Fix-misnamed-variable-in-power_down-for-ov.patch \
+    file://0101-media-i2c-Add-support-for-ov5693-sensor.patch \
 "
