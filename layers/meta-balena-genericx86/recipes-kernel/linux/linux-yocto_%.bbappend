@@ -5,6 +5,9 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/files:${THISDIR}/genericx86-64-ext:${THIS
 SRC_URI += " \
     file://0001-Add-support-for-Quectel-EC20-modem.patch \
     file://0002-Revert-random-fix-crng_ready-test.patch \
+    file://0001-efi-Add-an-EFI_SECURE_BOOT-flag-to-indicate-secure-b.patch \
+    file://0001-security-lockdown-expose-a-hook-to-lock-the-kernel-d.patch \
+    file://0001-efi-Lock-down-the-kernel-if-booted-in-secure-boot-mo.patch \
 "
 
 # Rest of the machines that are on kernel 5.8.18
@@ -464,10 +467,13 @@ BALENA_CONFIGS[no-debug-info] ?= " \
 #
 RESIN_CONFIGS_append = " secureboot"
 RESIN_CONFIGS[secureboot] = " \
+    CONFIG_LOCK_DOWN_IN_EFI_SECURE_BOOT=y \
     CONFIG_MODULE_SIG=y \
     CONFIG_MODULE_SIG_ALL=y \
     CONFIG_MODULE_SIG_FORCE=y \
     CONFIG_MODULE_SIG_SHA512=y \
+    CONFIG_SECURITY_LOCKDOWN_LSM=y \
+    CONFIG_SECURITY_LOCKDOWN_LSM_EARLY=y \
     CONFIG_SYSTEM_TRUSTED_KEYS="certs/balenaos.crt" \
 "
 

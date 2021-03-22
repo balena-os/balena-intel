@@ -1,5 +1,11 @@
 require grub-sign.inc
 
+FILESEXTRAPATHS_prepend := "${THISDIR}/grub-efi:"
+
+SRC_URI += " \
+    file://pass-secure-boot.patch \
+    "
+
 do_deploy_append_class-target() {
     if [ "x${SIGN_API}" != "x" ]; then
         find "${B}" -name "*.mod.sig" -exec install -m 0644 {} "${DEPLOYDIR}/grub/${GRUB_TARGET}-efi/" \;
