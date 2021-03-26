@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.73.1+rev2
+## (2021-03-26)
+
+* packagegroups: Install ibt-20-3 fw package on SGO2 [Alexandru Costache]
+
 # v2.73.1+rev1
 ## (2021-03-19)
 

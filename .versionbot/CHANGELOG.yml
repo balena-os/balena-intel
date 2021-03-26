@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'packagegroups: Install ibt-20-3 fw package on SGO2'
+      hash: d6b06dc2998a716388ac68967470d0bd7f668550
+      body: ''
+      footer:
+        Changelog-entry: 'packagegroups: Install ibt-20-3 fw package on SGO2'
+        changelog-entry: 'packagegroups: Install ibt-20-3 fw package on SGO2'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 2.73.1+rev2
+  date: 2021-03-26T11:42:20.997Z
+- commits:
     - subject: Update meta-balena from v2.72.0 to v2.73.1
       hash: 18bddc25a20dae7719e53d3aa54517ea93558a30
       body: |
