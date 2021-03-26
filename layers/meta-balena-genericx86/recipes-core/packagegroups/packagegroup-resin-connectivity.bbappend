@@ -19,6 +19,7 @@ CONNECTIVITY_FIRMWARES_append_surface-go = " \
 	linux-firmware-ath10k-qca6174 \
 	linux-firmware-i915-kbl \
 	linux-firmware-iwlwifi-cc-a0 \
+	linux-firmware-ibt-20-1-3 \
 "
 
 CONNECTIVITY_FIRMWARES_append_surface-pro-6 = " \
