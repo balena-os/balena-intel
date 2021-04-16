@@ -1,4 +1,19 @@
 - commits:
+    - subject: 'linux-yocto: Bring in new patches for SGO2'
+      hash: cebc30572b502262957e7cd126d8f6193bb31f8d
+      body: |
+        This brings in patches as of Apr 16 with
+        upstream HEAD revision d35c7a1
+      footer:
+        Changelog-entry: 'linux-yocto: Bring in new patches for SGO2'
+        changelog-entry: 'linux-yocto: Bring in new patches for SGO2'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 2.73.1+rev3
+  date: 2021-04-16T06:55:41.457Z
+- commits:
     - subject: 'packagegroups: Install ibt-20-3 fw package on SGO2'
       hash: d6b06dc2998a716388ac68967470d0bd7f668550
       body: ''

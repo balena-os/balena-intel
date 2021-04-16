@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.73.1+rev3
+## (2021-04-16)
+
+* linux-yocto: Bring in new patches for SGO2 [Alexandru Costache]
+
 # v2.73.1+rev2
 ## (2021-03-26)
 
