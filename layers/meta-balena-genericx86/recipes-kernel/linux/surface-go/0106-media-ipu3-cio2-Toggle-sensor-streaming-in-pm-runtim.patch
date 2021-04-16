@@ -1,0 +1,60 @@
+From a6a5ee933a8a2a1ce70560c16df09c49231c7393 Mon Sep 17 00:00:00 2001
+From: Daniel Scally <djrscally@gmail.com>
+Date: Mon, 5 Apr 2021 23:56:53 +0100
+Subject: [PATCH 6/8] media: ipu3-cio2: Toggle sensor streaming in pm runtime
+ ops
+
+The .suspend() and .resume() runtime_pm operations for the ipu3-cio2
+driver currently do not handle the sensor's stream. Setting .s_stream() on
+or off for the sensor subdev means that sensors will pause and resume the
+stream at the appropriate time even if their drivers don't implement those
+operations.
+
+Signed-off-by: Daniel Scally <djrscally@gmail.com>
+---
+ drivers/media/pci/intel/ipu3/ipu3-cio2-main.c | 15 ++++++++++++++-
+ 1 file changed, 14 insertions(+), 1 deletion(-)
+
+diff --git a/drivers/media/pci/intel/ipu3/ipu3-cio2-main.c b/drivers/media/pci/intel/ipu3/ipu3-cio2-main.c
+index bde24c2c869a..0cbfc99b12f4 100644
+--- a/drivers/media/pci/intel/ipu3/ipu3-cio2-main.c
++++ b/drivers/media/pci/intel/ipu3/ipu3-cio2-main.c
+@@ -2018,12 +2018,19 @@ static int __maybe_unused cio2_suspend(struct device *dev)
+ 	struct pci_dev *pci_dev = to_pci_dev(dev);
+ 	struct cio2_device *cio2 = pci_get_drvdata(pci_dev);
+ 	struct cio2_queue *q = cio2->cur_queue;
++	int r;
+ 
+ 	dev_dbg(dev, "cio2 suspend\n");
+ 	if (!cio2->streaming)
+ 		return 0;
+ 
+ 	/* Stop stream */
++	r = v4l2_subdev_call(q->sensor, video, s_stream, 0);
++	if (r) {
++		dev_err(dev, "failed to stop sensor streaming\n");
++		return r;
++	}
++
+ 	cio2_hw_exit(cio2, q);
+ 	synchronize_irq(pci_dev->irq);
+ 
+@@ -2058,8 +2065,14 @@ static int __maybe_unused cio2_resume(struct device *dev)
+ 	}
+ 
+ 	r = cio2_hw_init(cio2, q);
+-	if (r)
++	if (r) {
+ 		dev_err(dev, "fail to init cio2 hw\n");
++		return r;
++	}
++
++	r = v4l2_subdev_call(q->sensor, video, s_stream, 1);
++	if (r)
++		dev_err(dev, "fail to start sensor streaming\n");
+ 
+ 	return r;
+ }
+-- 
+2.17.1
+

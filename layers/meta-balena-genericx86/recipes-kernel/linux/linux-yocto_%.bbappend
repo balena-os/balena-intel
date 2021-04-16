@@ -526,5 +526,12 @@ SRC_URI_append_surface-go = " \
     file://0098-mfd-Remove-tps68470-MFD-driver.patch \
     file://0099-regulator-Introduce-tps68470-regulator-driver.patch \
     file://0100-clk-Introduce-clk-tps68470-driver.patch \
-    file://0101-media-i2c-Add-support-for-ov5693-sensor.patch \
+    file://0101-media-ipu3-cio2-Use-v4l2_get_link_freq-helper.patch \
+    file://0102-media-v4l-Add-a-helper-for-obtaining-the-link-freque.patch \
+    file://0103-media-v4l-common-Fix-naming-of-v4l2_get_link_rate.patch \
+    file://0104-media-ipu3-cio2-Fix-mbus_code-processing-in-cio2_sub.patch \
+    file://0105-ipu3-cio2-Fix-pixel-rate-derived-link-frequency.patch \
+    file://0106-media-ipu3-cio2-Toggle-sensor-streaming-in-pm-runtim.patch \
+    file://0107-media-i2c-Add-support-for-ov5693-sensor.patch \
+    file://0108-media-i2c-ov5693-add-delays-to-powerdown.patch \
 "

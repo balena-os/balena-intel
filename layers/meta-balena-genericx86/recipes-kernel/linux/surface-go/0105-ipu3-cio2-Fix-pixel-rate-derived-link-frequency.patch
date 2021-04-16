@@ -1,0 +1,33 @@
+From 4022dc44d6dc5560198c607c69c34867c919283d Mon Sep 17 00:00:00 2001
+From: Jean-Michel Hautbois <jeanmichel.hautbois@ideasonboard.com>
+Date: Fri, 26 Mar 2021 11:32:36 +0100
+Subject: [PATCH 5/8] ipu3-cio2: Fix pixel-rate derived link frequency
+
+The driver uses v4l2_get_link_freq() helper to obtain the link frequency
+using the LINK_FREQ but also the PIXEL_RATE control. The divisor for the
+pixel rate derived link frequency was wrong, missing the bus uses double
+data rate. Fix this.
+
+Reported-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
+Fixes: 4b6c129e87a3 ("media: ipu3-cio2: Use v4l2_get_link_freq helper")
+Signed-off-by: Sakari Ailus <sakari.ailus@linux.intel.com>
+---
+ drivers/media/pci/intel/ipu3/ipu3-cio2-main.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/drivers/media/pci/intel/ipu3/ipu3-cio2-main.c b/drivers/media/pci/intel/ipu3/ipu3-cio2-main.c
+index 1d11d6ab44ee..bde24c2c869a 100644
+--- a/drivers/media/pci/intel/ipu3/ipu3-cio2-main.c
++++ b/drivers/media/pci/intel/ipu3/ipu3-cio2-main.c
+@@ -306,7 +306,7 @@ static int cio2_csi2_calc_timing(struct cio2_device *cio2, struct cio2_queue *q,
+ 	if (!q->sensor)
+ 		return -ENODEV;
+ 
+-	freq = v4l2_get_link_freq(q->sensor->ctrl_handler, bpp, lanes);
++	freq = v4l2_get_link_freq(q->sensor->ctrl_handler, bpp, lanes * 2);
+ 	if (freq < 0) {
+ 		dev_err(dev, "error %lld, invalid link_freq\n", freq);
+ 		return freq;
+-- 
+2.17.1
+
