@@ -1,0 +1,43 @@
+From d35c7a14aa2d62e875aa52fd261022e8ae2a2c09 Mon Sep 17 00:00:00 2001
+From: Jean-Michel Hautbois <jeanmichel.hautbois@ideasonboard.com>
+Date: Thu, 15 Apr 2021 10:40:10 +0200
+Subject: [PATCH 8/8] media: i2c: ov5693: add delays to powerdown
+
+According to the OV5693 datasheet:
+"If the SCCB command to exit streaming is received while a frame of MIPI data
+is being output, then the sensor must wait to the MIPI frame end code before
+entering software standby mode."
+
+This needs to be fixed in a nice way, but this patch at least prevents
+very bad CRC errors on cio2 side.
+
+Signed-off-by: Daniel Scally <djrscally@gmail.com>
+Signed-off-by: Jean-Michel Hautbois <jeanmichel.hautbois@ideasonboard.com>
+---
+ drivers/media/i2c/ov5693.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/drivers/media/i2c/ov5693.c b/drivers/media/i2c/ov5693.c
+index da2ca99a7ad3..913cb32da156 100644
+--- a/drivers/media/i2c/ov5693.c
++++ b/drivers/media/i2c/ov5693.c
+@@ -852,12 +852,16 @@ static int ov5693_sensor_init(struct ov5693_device *ov5693)
+ 
+ static void ov5693_sensor_powerdown(struct ov5693_device *ov5693)
+ {
++	usleep_range(30000, 31000);
+ 	gpiod_set_value_cansleep(ov5693->reset, 1);
+ 	gpiod_set_value_cansleep(ov5693->powerdown, 1);
+ 
++	usleep_range(30000, 31000);
+ 	regulator_bulk_disable(OV5693_NUM_SUPPLIES, ov5693->supplies);
+ 
++	usleep_range(30000, 31000);
+ 	clk_disable_unprepare(ov5693->clk);
++	usleep_range(30000, 31000);
+ }
+ 
+ static int ov5693_sensor_powerup(struct ov5693_device *ov5693)
+-- 
+2.17.1
+
