@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.73.15+rev3
+## (2021-05-14)
+
+* Revert balena-yocto-scripts back to v1.11.0 [Kyle Harding]
+
 # v2.73.15+rev2
 ## (2021-05-14)
 

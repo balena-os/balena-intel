@@ -1,4 +1,18 @@
 - commits:
+    - subject: Revert balena-yocto-scripts back to v1.11.0
+      hash: 56afb9260dd38728e7f250f9e0ea7997b802da32
+      body: |
+        This reverts commit cafe6c9de073f0e565512b4ae3b18c005c568de1.
+      footer:
+        Changelog-entry: Revert balena-yocto-scripts back to v1.11.0
+        changelog-entry: Revert balena-yocto-scripts back to v1.11.0
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 2.73.15+rev3
+  date: 2021-05-14T21:23:46.974Z
+- commits:
     - subject: Update balena-yocto-scripts from v1.11.0 to v1.12.11
       hash: cafe6c9de073f0e565512b4ae3b18c005c568de1
       body: |
