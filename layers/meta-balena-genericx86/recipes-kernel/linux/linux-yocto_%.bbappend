@@ -185,12 +185,6 @@ BALENA_CONFIGS[rtl_wifi]=" \
     CONFIG_RTL8192CU=m \
 "
 
-# Add overlayfs module in the rootfs (some user containers need this even though we do not yet switch from aufs to overlay2 as balena storage driver)
-BALENA_CONFIGS_append = " overlayfs"
-BALENA_CONFIGS[overlayfs] = " \
-    CONFIG_OVERLAY_FS=m \
-"
-
 # keep overlay as built-in for the following machines as they are using overlay instead of aufs
 BALENA_CONFIGS_remove_surface-pro-6 = "overlayfs"
 BALENA_CONFIGS_remove_surface-go = "overlayfs"
