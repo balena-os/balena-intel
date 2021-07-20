@@ -1,6 +1,113 @@
 Change log
 -----------
 
+# v2.81.1+rev1
+## (2021-07-19)
+
+* Update balena-yocto-scripts from v1.11.0 to v1.14.7 [Alex Gonzalez]
+
+<details>
+<summary> Update meta-balena from v2.79.7 to v2.81.1 [Alex Gonzalez] </summary>
+
+> ## meta-balena-2.81.1
+> ### (2021-07-09)
+> 
+> * balena-engine: Restore previous systemd service settings [Kyle Harding]
+> 
+> ## meta-balena-2.81.0
+> ### (2021-07-06)
+> 
+> * recipes-core: add a 'network connectivity wait' service [Mark Corbin]
+> 
+> ## meta-balena-2.80.12
+> ### (2021-07-05)
+> 
+> * Remove CODEOWNERS [Michal Toman]
+> 
+> ## meta-balena-2.80.11
+> ### (2021-07-01)
+> 
+> * get journal logs at the end of the suite [rcooke-warwick]
+> 
+> ## meta-balena-2.80.10
+> ### (2021-06-24)
+> 
+> * hostapp-update-hooks: Migrate supervisor database [Kyle Harding]
+> * hostapp-update-hooks: Revert sv database path used by previous hooks [Kyle Harding]
+> 
+> ## meta-balena-2.80.9
+> ### (2021-06-21)
+> 
+> * balena-engine: refactor systemd service [Robert Günzler]
+> 
+> ## meta-balena-2.80.8
+> ### (2021-06-21)
+> 
+> * Update balena-supervisor from v12.8.7 to v12.8.8 [Florin Sarbu]
+> 
+> ## meta-balena-2.80.7
+> ### (2021-06-18)
+> 
+> * prevent failed teardown from making test hang [rcooke-warwick]
+> 
+> ## meta-balena-2.80.6
+> ### (2021-06-17)
+> 
+> * catch error if image path is corrupted [rcooke-warwick]
+> 
+> ## meta-balena-2.80.5
+> ### (2021-06-17)
+> 
+> * update-balena-supervisor: Improve obtaining the supervisor directory name [Alexandru Costache]
+> * Update balena-supervisor from v12.7.0 to v12.8.7 [Miguel Casqueira]
+> 
+> ## meta-balena-2.80.4
+> ### (2021-06-14)
+> 
+> * kernel-headers-test: simplify example module Makefile [Joseph Kogut]
+> 
+> ## meta-balena-2.80.3
+> ### (2021-06-10)
+> 
+> * Add oneshot service to migrate supervisor state config [Kyle Harding]
+> 
+> ## meta-balena-2.80.2
+> ### (2021-06-09)
+> 
+> * update-balena-supervisor: Refactor script to ensure target version is ran [Alexandru Costache]
+> 
+> ## meta-balena-2.80.1
+> ### (2021-06-07)
+> 
+> * bluez5: Disable PnP Device Information service [Zahari Petkov]
+> 
+> ## meta-balena-2.80.0
+> ### (2021-06-07)
+> 
+> * Revert Go 1.16 recipes [Joseph Kogut]
+> 
+> ## meta-balena-2.79.10
+> ### (2021-06-03)
+> 
+> * supervisor: Remove symlink to legacy resin sysconfig [Kyle Harding]
+> * hostapp-update-hooks: Migrate resin-supervisor to balena-supervisor [Kyle Harding]
+> * supervisor: Remove legacy resin supervisor container [Kyle Harding]
+> 
+> ## meta-balena-2.79.9
+> ### (2021-06-03)
+> 
+> * hostapp-update-hooks: Sync to disk when hook is done [Alex Gonzalez]
+> * extract-balena-ca: Sync changes to disk in case of power loss [Alex Gonzalez]
+> * resin-net-config: Make sure to sync changes to disk in case of power loss [Alex Gonzalez]
+> 
+> ## meta-balena-2.79.8
+> ### (2021-06-02)
+> 
+> * bluez: Set policy configuration to AutoEnable [Alex Gonzalez]
+> * bluez5: Replace executable path directory in unit file [Alex Gonzalez]
+> 
+</details>
+
 # v2.79.7+rev2
 ## (2021-07-15)
 
