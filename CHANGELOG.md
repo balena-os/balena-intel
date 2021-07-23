@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.81.1+rev2
+## (2021-07-23)
+
+* remove redundant bcm43455 firmware package [Joseph Kogut]
+
 # v2.81.1+rev1
 ## (2021-07-19)
 

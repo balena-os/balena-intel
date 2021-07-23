@@ -1,4 +1,20 @@
 - commits:
+    - subject: remove redundant bcm43455 firmware package
+      hash: 4afab488cb0a2f360dbd72c7962dad6177af7a95
+      body: |
+        This package already exists in linux-firmware_20190815.bb, and upstream.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: remove redundant bcm43455 firmware package
+        changelog-entry: remove redundant bcm43455 firmware package
+        Signed-off-by: Joseph Kogut <joseph@balena.io>
+        signed-off-by: Joseph Kogut <joseph@balena.io>
+      author: Joseph Kogut
+      nested: []
+  version: 2.81.1+rev2
+  date: 2021-07-23T20:18:43.738Z
+- commits:
     - subject: Update balena-yocto-scripts from v1.11.0 to v1.14.7
       hash: 6acface02b020a7e4f80281bc592be5521719769
       body: |
