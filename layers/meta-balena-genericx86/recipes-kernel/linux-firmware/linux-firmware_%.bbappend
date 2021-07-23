@@ -28,10 +28,6 @@ SRC_URI_append = " \
 SRCREV_raspbian-nf = "86e88fbf0345da49555d0ec34c80b4fbae7d0cd3"
 SRCREV_FORMAT = "default+raspbian-nf"
 
-FILES_${PN}-bcm43455 = " \
-  ${nonarch_base_libdir}/firmware/brcm/brcmfmac43455-sdio.* \
-"
-
 PACKAGES =+ "${PN}-ibt-20-1-3"
 FILES_${PN}-ibt-20-1-3  = " \
     ${nonarch_base_libdir}/firmware/intel/ibt-20-1-3.ddc \
