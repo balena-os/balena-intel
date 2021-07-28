@@ -1,4 +1,20 @@
 - commits:
+    - subject: Update balena-yocto-scripts from v1.14.7 to v1.14.8
+      hash: ad91a8bae00564214bb725b7ec36ff1afdf3cee5
+      body: |
+        Update balena-yocto-scripts from 1.14.7 to 1.14.8
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: Update balena-yocto-scripts from v1.14.7 to v1.14.8
+        changelog-entry: Update balena-yocto-scripts from v1.14.7 to v1.14.8
+        Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+        signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+      author: Vipul Gupta (@vipulgupta2048)
+      nested: []
+  version: 2.81.1+rev3
+  date: 2021-07-28T10:41:37.705Z
+- commits:
     - subject: remove redundant bcm43455 firmware package
       hash: 4afab488cb0a2f360dbd72c7962dad6177af7a95
       body: |
