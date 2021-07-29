@@ -3,12 +3,16 @@ CONNECTIVITY_FIRMWARES =+ " \
 	linux-firmware-ibt-11-5 \
 	linux-firmware-ibt-12-16 \
 	linux-firmware-ibt-18-16-1 \
+	linux-firmware-ibt-19-0-4 \
+	linux-firmware-ibt-20-1-3 \
 	linux-firmware-ibt-hw-37-7 \
 	linux-firmware-ibt-hw-37-8 \
 	linux-firmware-iwlwifi-3168 \
 	linux-firmware-iwlwifi-9000 \
 	linux-firmware-iwlwifi-9260 \
+	linux-firmware-iwlwifi-cc-a0 \
 	linux-firmware-iwlwifi-qu-b0-hr-b0 \
+	linux-firmware-iwlwifi-quz-a0-hr-b0 \
 	linux-firmware-rtl8723 \
 	linux-firmware-rtl8821 \
 	linux-firmware-rtl8723b-bt \
@@ -23,8 +27,6 @@ CONNECTIVITY_FIRMWARES:append:genericx86-64 = " \
 CONNECTIVITY_FIRMWARES:append:surface-go = " \
 	linux-firmware-ath10k-qca6174 \
 	linux-firmware-i915-kbl \
-	linux-firmware-iwlwifi-cc-a0 \
-	linux-firmware-ibt-20-1-3 \
 "
 
 CONNECTIVITY_FIRMWARES:append:surface-pro-6 = " \
@@ -40,6 +42,7 @@ CONNECTIVITY_FIRMWARES:remove_surface-go = " \
     linux-firmware-ibt-11-5 \
     linux-firmware-ibt-12-16 \
     linux-firmware-ibt-18-16-1 \
+    linux-firmware-ibt-19-0-4 \
     linux-firmware-ibt-hw-37-7 \
     linux-firmware-ibt-hw-37-8 \
     linux-firmware-iwlwifi-3168 \
