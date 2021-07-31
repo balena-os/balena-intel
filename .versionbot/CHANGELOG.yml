@@ -1,4 +1,19 @@
 - commits:
+    - subject: Add balena-yocto-scripts upstream source
+      hash: 271bfd8399089d6180903cb141db5c642252b55c
+      body: |
+        This allows to add nested changelogs from the balena-yocto-scripts
+        repository from version >= 1.14.1
+      footer:
+        Changelog-entry: Add balena-yocto-scripts upstream source
+        changelog-entry: Add balena-yocto-scripts upstream source
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 2.82.12+rev3
+  date: 2021-07-31T15:18:17.943Z
+- commits:
     - subject: Enable the igc driver for the Intel NUC 11 I225-LM Ethernet Controller
       hash: 5434d83a7a4777e73fc3c886a90421271d87a7d5
       body: |
