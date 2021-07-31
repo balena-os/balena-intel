@@ -418,6 +418,12 @@ BALENA_CONFIGS[no-debug-info] ?= " \
     CONFIG_DEBUG_INFO=n \
     "
 
+# eth controller on Intel NUC 11
+BALENA_CONFIGS_append_genericx86-64 = " igc"
+BALENA_CONFIGS[igc] = " \
+    CONFIG_IGC=m \
+"
+
 # We get these patches from https://github.com/libcamera-org/linux/tree/surface/v5.8.18-yocto
 SRC_URI_append_surface-go = " \
     file://0001-ARM-LPAE-Invalidate-the-TLB-for-module-addresses-dur.patch \
