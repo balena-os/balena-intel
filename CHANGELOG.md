@@ -1,6 +1,32 @@
 Change log
 -----------
 
+# v2.83.1+rev1
+## (2021-07-31)
+
+
+<details>
+<summary> Update meta-balena from v2.82.12 to v2.83.1 [Florin Sarbu] </summary>
+
+> ## meta-balena-2.83.1
+> ### (2021-07-31)
+> 
+> * linux-firmware: package i915 generations separately [Joseph Kogut]
+> 
+> ## meta-balena-2.83.0
+> ### (2021-07-29)
+> 
+> * Add support for rootfs on MD RAID1 [Michal Toman]
+> 
+> ## meta-balena-2.82.13
+> ### (2021-07-29)
+> 
+> * tests: Symlink /dev/null instead of copying bash to break services [Michal Toman]
+> 
+</details>
+
+* Remove linux-firmware-i915-kbl packaging [Joseph Kogut]
+
 # v2.82.12+rev3
 ## (2021-07-31)
 

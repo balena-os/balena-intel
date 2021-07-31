@@ -1,4 +1,85 @@
 - commits:
+    - subject: Update meta-balena from v2.82.12 to v2.83.1
+      hash: 97d9d2c352bb586ecad3779a5308d86e0f8a41dc
+      body: |
+        Update meta-balena from 2.82.12 to 2.83.1
+      footer:
+        Changelog-entry: Update meta-balena from v2.82.12 to v2.83.1
+        changelog-entry: Update meta-balena from v2.82.12 to v2.83.1
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested:
+        - commits:
+            - subject: 'linux-firmware: package i915 generations separately'
+              hash: e741dcf6f520765c3345c1e64cfc3f31f5b6a604
+              body: >
+                Package Intel graphics firmware generations separately, allowing
+                GPU
+
+                firmware to be installed for specific SoCs.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: meta-balena-2.83.1
+          date: 2021-07-31T15:24:38.031Z
+        - commits:
+            - subject: Add support for rootfs on MD RAID1
+              hash: bc1cb47f177b0d04a17c26b00b4ca99cf4638c33
+              body: |
+                This commit does two things:
+                - Build in necessary kernel modules
+                - Add the mdadm userspace utility to rootfs and initrd
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-2.83.0
+          date: 2021-07-29T14:10:41.247Z
+        - commits:
+            - subject: >-
+                tests: Symlink /dev/null instead of copying bash to break
+                services
+              hash: eea7514c705b43482dd3656d0c34bb2414c267ee
+              body: >
+                Triggered by a failue in the VPN test - the bash binary is
+                bigger than
+
+                the openvpn binary and on devices with limitted rootfs space the
+                copying
+
+                is not possible. Symlinking /dev/null will break the services as
+                well.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-2.82.13
+          date: 2021-07-29T07:32:26.577Z
+    - subject: Remove linux-firmware-i915-kbl packaging
+      hash: c8a7cef0e7ad182111ba5cca9a31f96533aca221
+      body: |
+        Package this instead in meta-balena, allowing other x86 DTs to use it.
+      footer:
+        Changelog-entry: Remove linux-firmware-i915-kbl packaging
+        changelog-entry: Remove linux-firmware-i915-kbl packaging
+        Signed-off-by: Joseph Kogut <joseph@balena.io>
+        signed-off-by: Joseph Kogut <joseph@balena.io>
+      author: Joseph Kogut
+      nested: []
+  version: 2.83.1+rev1
+  date: 2021-07-31T15:39:04.683Z
+- commits:
     - subject: Add balena-yocto-scripts upstream source
       hash: 271bfd8399089d6180903cb141db5c642252b55c
       body: |
