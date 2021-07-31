@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.82.12+rev2
+## (2021-07-31)
+
+* Enable the igc driver for the Intel NUC 11 I225-LM Ethernet Controller [Florin Sarbu]
+
 # v2.82.12+rev1
 ## (2021-07-28)
 

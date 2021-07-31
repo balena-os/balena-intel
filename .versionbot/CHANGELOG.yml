@@ -1,4 +1,19 @@
 - commits:
+    - subject: Enable the igc driver for the Intel NUC 11 I225-LM Ethernet Controller
+      hash: 5434d83a7a4777e73fc3c886a90421271d87a7d5
+      body: |
+        This driver is required for the I225-LM Ethernet Controller present on
+        the Intel NUC 11th generation.
+      footer:
+        Changelog-entry: Enable the igc driver for the Intel NUC 11 I225-LM Ethernet Controller
+        changelog-entry: Enable the igc driver for the Intel NUC 11 I225-LM Ethernet Controller
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 2.82.12+rev2
+  date: 2021-07-31T11:03:22.796Z
+- commits:
     - subject: Update meta-balena from v2.81.1 to v2.82.12
       hash: 1aa9619841d815d3b7f08973e4df11b9f7d40905
       body: |
