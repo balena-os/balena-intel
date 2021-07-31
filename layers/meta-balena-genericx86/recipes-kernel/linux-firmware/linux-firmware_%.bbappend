@@ -34,15 +34,6 @@ FILES_${PN}-ibt-20-1-3  = " \
     ${nonarch_base_libdir}/firmware/intel/ibt-20-1-3.sfi \
 "
 
-PACKAGES =+ "${PN}-i915-kbl"
-FILES_${PN}-i915-kbl = " \
-    ${nonarch_base_libdir}/firmware/i915/kbl_dmc_ver1_01.bin \
-    ${nonarch_base_libdir}/firmware/i915/kbl_dmc_ver1_04.bin \
-    ${nonarch_base_libdir}/firmware/i915/kbl_guc_ver9_14.bin \
-    ${nonarch_base_libdir}/firmware/i915/kbl_guc_ver9_39.bin \
-    ${nonarch_base_libdir}/firmware/i915/kbl_huc_ver02_00_1810.bin \
-"
-
 PACKAGES =+ "${PN}-ipts-v102"
 FILES_${PN}-ipts-v102 = " \
     ${nonarch_base_libdir}/firmware/intel/ipts/* \
