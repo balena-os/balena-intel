@@ -7,7 +7,7 @@ SRC_URI += " \
     file://0002-Revert-random-fix-crng_ready-test.patch \
 "
 
-# Rest of the machines that are on kernel 5.8.18
+# Rest of the machines that are on kernel 5.10.21
 # already have these patches
 SRC_URI_append_surface-pro-6 = " \
     file://0007-BUGFIX-iwlwifi-mvm-Allow-multicast-~ta-frames-only-when-associated.patch \
