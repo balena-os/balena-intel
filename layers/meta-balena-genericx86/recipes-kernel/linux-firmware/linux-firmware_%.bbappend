@@ -6,10 +6,7 @@ SRC_URI += " \
     file://SurfaceTouchServicingKernelMSHW0102.bin.sig \
     file://SurfaceTouchServicingSFTConfigMSHW0102.bin \
     file://SurfaceTouchServicingTouchBlobMSHW0102.bin \
-    file://board-2.bin \
-    file://board.bin \
     file://config.bin \
-    file://firmware-6.bin \
     file://iaPreciseTouchDescriptor.bin \
     file://intel_desc.bin \
     file://ipts_fw_config.bin \
@@ -55,9 +52,6 @@ FILES_${PN}-iwlwifi-quz-a0-hr-b0 = " \
 do_install_append() {
     install -d ${D}${nonarch_base_libdir}/firmware/brcm/
     install -m 0644 ${WORKDIR}/raspbian-nf/brcm/brcmfmac43455-sdio.txt ${D}${nonarch_base_libdir}/firmware/brcm/
-
-    install -d ${D}${nonarch_base_libdir}/firmware/ath10k/QCA6174/hw3.0/
-    install -m 0644 ${WORKDIR}/board-2.bin ${WORKDIR}/board.bin ${WORKDIR}/firmware-6.bin ${D}${nonarch_base_libdir}/firmware/ath10k/QCA6174/hw3.0/
 
     install -d ${D}${nonarch_base_libdir}/firmware/intel/ipts/
     install -m 0644 ${WORKDIR}/SurfaceTouchServicingDescriptorMSHW0102.bin \
