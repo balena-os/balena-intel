@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update linux-yocto to version 5.10.21
+      hash: e4edfddd2ddbd82511a6ba97c35ea1d0497e254e
+      body: |
+        This new version is taken from Poky hardknott-3.3.1
+      footer:
+        Changelog-entry: Update linux-yocto to version 5.10.21
+        changelog-entry: Update linux-yocto to version 5.10.21
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 2.83.1+rev2
+  date: 2021-08-03T06:26:32.346Z
+- commits:
     - subject: Update meta-balena from v2.82.12 to v2.83.1
       hash: 97d9d2c352bb586ecad3779a5308d86e0f8a41dc
       body: |

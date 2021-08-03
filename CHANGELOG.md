@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.83.1+rev2
+## (2021-08-03)
+
+* Update linux-yocto to version 5.10.21 [Florin Sarbu]
+
 # v2.83.1+rev1
 ## (2021-07-31)
 
