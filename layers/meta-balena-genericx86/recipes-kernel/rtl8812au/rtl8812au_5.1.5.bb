@@ -9,7 +9,7 @@ SRC_URI = " \
 	file://0001-Use-modules_install-as-wanted-by-yocto.patch \
 "
 
-SRCREV = "b29ed41df1c3e47f646dc06e0308ae6f06ae18ac"
+SRCREV = "b95e75064d6aa5b680049a3fe63b2131a3033e3e"
 S = "${WORKDIR}/git"
 
 EXTRA_OEMAKE_append = " KSRC=${STAGING_KERNEL_DIR}"
