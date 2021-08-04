@@ -14,6 +14,9 @@ CONNECTIVITY_FIRMWARES =+ " \
 	linux-firmware-rtl8723b-bt \
 	linux-firmware-ralink-nic \
 	"
+CONNECTIVITY_FIRMWARES_append_genericx86-64 = " \
+	linux-firmware-iwlwifi-quz-a0-hr-b0 \
+"
 
 CONNECTIVITY_FIRMWARES_append_surface-go = " \
 	linux-firmware-ath10k-qca6174 \
