@@ -46,6 +46,12 @@ FILES_${PN}-ipu3-firmware = " \
     ${nonarch_base_libdir}/firmware/LICENSE.ipu3_firmware \
 "
 
+PACKAGES =+ "${PN}-iwlwifi-quz-a0-hr-b0"
+
+FILES_${PN}-iwlwifi-quz-a0-hr-b0 = " \
+    ${nonarch_base_libdir}/firmware/iwlwifi-QuZ-a0-hr-b0-48.ucode \
+"
+
 do_install_append() {
     install -d ${D}${nonarch_base_libdir}/firmware/brcm/
     install -m 0644 ${WORKDIR}/raspbian-nf/brcm/brcmfmac43455-sdio.txt ${D}${nonarch_base_libdir}/firmware/brcm/
