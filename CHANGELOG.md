@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v2.83.1+rev3
+## (2021-08-04)
+
+* Install iwlwifi-quz-a0-hr-b0 fw package on Intel NUC [Florin Sarbu]
+* Package iwlwifi-QuZ-a0-hr-b0 firmware separately [Florin Sarbu]
+
 # v2.83.1+rev2
 ## (2021-08-03)
 
