@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.83.1+rev5
+## (2021-08-05)
+
+* Update genericx86-64-ext defconfig for 5.10 source [Alex Gonzalez]
+
 # v2.83.1+rev4
 ## (2021-08-05)
 
