@@ -15,6 +15,7 @@ CONNECTIVITY_FIRMWARES =+ " \
 	linux-firmware-ralink-nic \
 	"
 CONNECTIVITY_FIRMWARES_append_genericx86-64 = " \
+	linux-firmware-ibt-19-0-4 \
 	linux-firmware-iwlwifi-quz-a0-hr-b0 \
 "
 
