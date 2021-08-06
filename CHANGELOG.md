@@ -1,6 +1,13 @@
 Change log
 -----------
 
+# v2.83.1+rev7
+## (2021-08-06)
+
+* Add all linux-firmware to genericx86-64-ext [Alex Gonzalez]
+* Revert packaging ibt-19-0-4 separately [Alex Gonzalez]
+* Set preferred kernel version to 5.10 [Alex Gonzalez]
+
 # v2.83.1+rev6
 ## (2021-08-06)
 

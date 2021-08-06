@@ -1,4 +1,51 @@
 - commits:
+    - subject: Add all linux-firmware to genericx86-64-ext
+      hash: 41c3c658cec8d68e28036d44ffcd3387914ef92f
+      body: >
+        Instead of listing individual firmware files just add all of them so
+        that
+
+        we have the widest support available for this DT.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: Add all linux-firmware to genericx86-64-ext
+        changelog-entry: Add all linux-firmware to genericx86-64-ext
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: Revert packaging ibt-19-0-4 separately
+      hash: ef6b04247793c3509aaa9715adeca6b0ddf925a5
+      body: |
+        This is already packaged separately in meta-balena.
+
+        This reverts commit e48d7b77416f83d0e14db9f31ff86c6fd2b02389.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: Revert packaging ibt-19-0-4 separately
+        changelog-entry: Revert packaging ibt-19-0-4 separately
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: Set preferred kernel version to 5.10
+      hash: 1de77d5c270c5ebfe534ac79ab4e1cb974a51774
+      body: |
+        Set the preferred kernel version to the newest version available.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: Set preferred kernel version to 5.10
+        changelog-entry: Set preferred kernel version to 5.10
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 2.83.1+rev7
+  date: 2021-08-06T14:18:59.211Z
+- commits:
     - subject: Add ibt-19-0-4 to the Intel NUC OS image
       hash: 8882f699e3a97887f1caf58bb8ea8b7002bae1a5
       body: ''
