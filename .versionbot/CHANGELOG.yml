@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add ibt-19-0-4 to the Intel NUC OS image
+      hash: 8882f699e3a97887f1caf58bb8ea8b7002bae1a5
+      body: ''
+      footer:
+        Changelog-entry: Add ibt-19-0-4 to the Intel NUC OS image
+        changelog-entry: Add ibt-19-0-4 to the Intel NUC OS image
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 2.83.1+rev6
+  date: 2021-08-06T08:28:37.728Z
+- commits:
     - subject: Update genericx86-64-ext defconfig for 5.10 source
       hash: 856c2c126629fee7f2811bcdef4265aaf137b65e
       body: |

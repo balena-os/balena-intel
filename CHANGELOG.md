@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.83.1+rev6
+## (2021-08-06)
+
+* Add ibt-19-0-4 to the Intel NUC OS image [Florin Sarbu]
+
 # v2.83.1+rev5
 ## (2021-08-05)
 
