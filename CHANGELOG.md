@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.83.1+rev8
+## (2021-08-06)
+
+* Remove references to unused Smartcube device types [Florin Sarbu]
+
 # v2.83.1+rev7
 ## (2021-08-06)
 

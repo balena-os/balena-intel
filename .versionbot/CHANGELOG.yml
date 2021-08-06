@@ -1,4 +1,19 @@
 - commits:
+    - subject: Remove references to unused Smartcube device types
+      hash: b68df7c8aad8e1fda0adf3e3f014259ff9f26830
+      body: |
+        The customer that requested these device types never really used them so
+        let's remove all references to them from here.
+      footer:
+        Changelog-entry: Remove references to unused Smartcube device types
+        changelog-entry: Remove references to unused Smartcube device types
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 2.83.1+rev8
+  date: 2021-08-06T14:38:58.416Z
+- commits:
     - subject: Add all linux-firmware to genericx86-64-ext
       hash: 41c3c658cec8d68e28036d44ffcd3387914ef92f
       body: >
