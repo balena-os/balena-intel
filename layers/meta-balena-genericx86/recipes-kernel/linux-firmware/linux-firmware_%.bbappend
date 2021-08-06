@@ -34,12 +34,6 @@ FILES_${PN}-ibt-20-1-3  = " \
     ${nonarch_base_libdir}/firmware/intel/ibt-20-1-3.sfi \
 "
 
-PACKAGES =+ "${PN}-ibt-19-0-4"
-FILES_${PN}-ibt-19-0-4  = " \
-    ${nonarch_base_libdir}/firmware/intel/ibt-19-0-4.ddc \
-    ${nonarch_base_libdir}/firmware/intel/ibt-19-0-4.sfi \
-"
-
 PACKAGES =+ "${PN}-ipts-v102"
 FILES_${PN}-ipts-v102 = " \
     ${nonarch_base_libdir}/firmware/intel/ipts/* \
