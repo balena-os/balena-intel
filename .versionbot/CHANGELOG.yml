@@ -1,4 +1,24 @@
 - commits:
+    - subject: 'linux-firmware: use upstream for ath10k/QCA6174'
+      hash: 1ecd74cca4622da59c0d277f23fcf22cbcc1c18d
+      body: |
+        Upstream firmware is now compatible with the Surface Go, and the old
+        firmware is incompatible with other common devices. Default to the
+        upstream firmware to resolve these issues.
+
+        This reverts commit d50848e
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: 'linux-firmware: use upstream for ath10k/QCA6174'
+        changelog-entry: 'linux-firmware: use upstream for ath10k/QCA6174'
+        Signed-off-by: Joseph Kogut <joseph@balena.io>
+        signed-off-by: Joseph Kogut <joseph@balena.io>
+      author: Joseph Kogut
+      nested: []
+  version: 2.83.1+rev9
+  date: 2021-08-09T14:38:43.609Z
+- commits:
     - subject: Remove references to unused Smartcube device types
       hash: b68df7c8aad8e1fda0adf3e3f014259ff9f26830
       body: |

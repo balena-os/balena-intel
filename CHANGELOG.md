@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.83.1+rev9
+## (2021-08-09)
+
+* linux-firmware: use upstream for ath10k/QCA6174 [Joseph Kogut]
+
 # v2.83.1+rev8
 ## (2021-08-06)
 
