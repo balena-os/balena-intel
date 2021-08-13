@@ -13,6 +13,7 @@ CONNECTIVITY_FIRMWARES =+ " \
 	linux-firmware-rtl8821 \
 	linux-firmware-rtl8723b-bt \
 	linux-firmware-ralink-nic \
+	linux-firmware-ath10k-qca6174 \
 	"
 CONNECTIVITY_FIRMWARES_append_genericx86-64 = " \
 	linux-firmware-ibt-19-0-4 \
