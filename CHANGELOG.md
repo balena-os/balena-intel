@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.83.1+rev10
+## (2021-08-13)
+
+* linux-firmware: add ath10k-qca6174 to connectivity firmwares [Joseph Kogut]
+
 # v2.83.1+rev9
 ## (2021-08-09)
 

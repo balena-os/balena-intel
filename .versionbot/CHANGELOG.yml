@@ -1,4 +1,18 @@
 - commits:
+    - subject: 'linux-firmware: add ath10k-qca6174 to connectivity firmwares'
+      hash: 0f4b8f2f8ce4fbd9e505a3e6f69853f98fa6740f
+      body: |
+        This installs upstream firmware for the QCA6174 802.11ac adapter.
+      footer:
+        Changelog-entry: 'linux-firmware: add ath10k-qca6174 to connectivity firmwares'
+        changelog-entry: 'linux-firmware: add ath10k-qca6174 to connectivity firmwares'
+        Signed-off-by: Joseph Kogut <joseph@balena.io>
+        signed-off-by: Joseph Kogut <joseph@balena.io>
+      author: Joseph Kogut
+      nested: []
+  version: 2.83.1+rev10
+  date: 2021-08-13T09:04:08.476Z
+- commits:
     - subject: 'linux-firmware: use upstream for ath10k/QCA6174'
       hash: 1ecd74cca4622da59c0d277f23fcf22cbcc1c18d
       body: |
