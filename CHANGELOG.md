@@ -1,6 +1,47 @@
 Change log
 -----------
 
+# v2.83.7+rev1
+## (2021-08-16)
+
+
+<details>
+<summary> Update meta-balena from v2.83.1 to v2.83.7 [Alex Gonzalez] </summary>
+
+> ## meta-balena-2.83.7
+> ### (2021-08-14)
+> 
+> * grub: don't package or install bindir utils [Joseph Kogut]
+> 
+> ## meta-balena-2.83.6
+> ### (2021-08-13)
+> 
+> * balena-os-sysctl: disable user namespacing by default [Joseph Kogut]
+> * common: kernel-resin: enable user namespacing [Joseph Kogut]
+> 
+> ## meta-balena-2.83.5
+> ### (2021-08-13)
+> 
+> * resin-u-boot.bbclass: Make console silencing change more resilient [Florin Sarbu]
+> 
+> ## meta-balena-2.83.4
+> ### (2021-08-11)
+> 
+> * balena-os: pin linux-firmware to 20210511 from hardknott [Joseph Kogut]
+> * linux-firmware: upgrade 20190815 -> 20210511 [Joseph Kogut]
+> 
+> ## meta-balena-2.83.3
+> ### (2021-08-05)
+> 
+> * supervisor: Consolidate supervisor container removal [Kyle Harding]
+> 
+> ## meta-balena-2.83.2
+> ### (2021-08-05)
+> 
+> * tests: Fix insecure registry error [Robert Günzler]
+> 
+</details>
+
 # v2.83.1+rev10
 ## (2021-08-13)
 
