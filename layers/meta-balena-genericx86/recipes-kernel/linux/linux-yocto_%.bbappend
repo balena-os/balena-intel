@@ -1,4 +1,4 @@
-inherit kernel-balena
+inherit kernel-resin
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:${THISDIR}/genericx86-64-ext:${THISDIR}/surface-go:"
 
