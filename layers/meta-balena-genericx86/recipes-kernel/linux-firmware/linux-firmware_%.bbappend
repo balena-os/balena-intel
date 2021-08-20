@@ -14,6 +14,12 @@ SRC_URI += " \
     file://vendor_kernel.bin \
 "
 
+SRC_URI_append_surface-go = " \
+    file://board.bin \
+    file://board-2.bin \
+    file://firmware-6.bin \
+    "
+
 # Augments upstream linux-firmware with additional and updated images
 # from Raspbian:
 # https://github.com/RPi-Distro/firmware-nonfree
@@ -66,6 +72,16 @@ do_install_append() {
 		    ${WORKDIR}/vendor_desc.bin \
 		    ${WORKDIR}/vendor_kernel.bin \
 		    ${D}${nonarch_base_libdir}/firmware/intel/ipts/
+}
+
+# install broken firmware on Surface Go
+# https://bugs.launchpad.net/ubuntu/+source/linux-firmware/+bug/1804028
+do_install_append_surface-go() {
+    install -d ${D}${nonarch_base_libdir}/firmware/ath10k/QCA6174/hw3.0/
+    install -m 0644 ${WORKDIR}/board-2.bin \
+                    ${WORKDIR}/board.bin \
+                    ${WORKDIR}/firmware-6.bin \
+                    ${D}${nonarch_base_libdir}/firmware/ath10k/QCA6174/hw3.0/
 }
 
 IWLWIFI_FW_TOCLEAN += " \
