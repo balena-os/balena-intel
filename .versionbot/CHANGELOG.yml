@@ -1,4 +1,27 @@
 - commits:
+    - subject: 'surface-go: restore vendor firmware for qca6174'
+      hash: 2e8717ab847abf76b613ff4dbd34927fa2e132ba
+      body: |
+        It seems the Surface Go ships a variant of the QCA6174 wireless adapter
+        that doesn't work with the same firmware used upstream for this chipset
+        everywhere else. There's a vendor supplied firmware that works on the
+        Surface Go, but this device specific vendor firmware is incompatible
+        with other devices.
+
+        https://bugs.launchpad.net/ubuntu/+source/linux-firmware/+bug/1804028
+
+        Install this broken firmware only on the Surface Go to fix wireless, and
+        use upstream firmware in all other cases.
+      footer:
+        Changelog-entry: 'surface-go: restore vendor firmware for qca6174'
+        changelog-entry: 'surface-go: restore vendor firmware for qca6174'
+        Signed-off-by: Joseph Kogut <joseph@balena.io>
+        signed-off-by: Joseph Kogut <joseph@balena.io>
+      author: Joseph Kogut
+      nested: []
+  version: 2.83.1+rev11
+  date: 2021-08-20T16:09:17.226Z
+- commits:
     - subject: 'linux-firmware: add ath10k-qca6174 to connectivity firmwares'
       hash: 0f4b8f2f8ce4fbd9e505a3e6f69853f98fa6740f
       body: |

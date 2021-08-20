@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.83.1+rev11
+## (2021-08-20)
+
+* surface-go: restore vendor firmware for qca6174 [Joseph Kogut]
+
 # v2.83.1+rev10
 ## (2021-08-13)
 
