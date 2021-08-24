@@ -1,6 +1,22 @@
 Change log
 -----------
 
+# v2.83.1+rev11
+## (2021-08-24)
+
+
+<details>
+<summary> Update balena-yocto-scripts from v1.14.8 to v1.14.9 [Alex Gonzalez] </summary>
+
+> ## balena-yocto-scripts-1.14.9
+> ### (2021-08-20)
+> 
+> * balena-deploy: When deploying hostapp default to using slug as name [Alex Gonzalez]
+> * balena-api: Do not use balena_lib_resolve_aliases [Alex Gonzalez]
+> * balena_lib: Make resolve_aliases local so it is not globally used [Alex Gonzalez]
+> 
+</details>
+
 # v2.83.1+rev10
 ## (2021-08-13)
 
