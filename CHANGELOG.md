@@ -1,6 +1,85 @@
 Change log
 -----------
 
+# v2.83.11+rev1
+## (2021-08-25)
+
+* Enable firmware compression for genericx86-64-ext [Alex Gonzalez]
+* Use wildcards when selecting firmware files to package [Alex Gonzalez]
+* Replace kernel-resin for kernel-balena [Alex Gonzalez]
+
+<details>
+<summary> Update meta-balena from v2.83.1 to v2.83.11 [Alex Gonzalez] </summary>
+
+> ## meta-balena-2.83.11
+> ### (2021-08-24)
+> 
+> * linux-firmware: Use wildcards when selecting files to package [Alex Gonzalez]
+> * linux-firmware: Add firmware compression support [Alex Gonzalez]
+> * kernel-balena: Support firmware compression from kernel version 5.3 [Alex Gonzalez]
+> 
+> ## meta-balena-2.83.10
+> ### (2021-08-18)
+> 
+> * kernel-balena: Add function to conditionally configure based on version [Alex Gonzalez]
+> * kernel-balena: Split function to get kernel version from source [Alex Gonzalez]
+> * kernel-resin: Add as symlink to kernel-balena [Alex Gonzalez]
+> * kernel-balena: Replace and deprecate kernel-resin [Alex Gonzalez]
+> 
+> ## meta-balena-2.83.9
+> ### (2021-08-17)
+> 
+> * recipes-connectivity: improve NTP dispatcher script [Mark Corbin]
+> 
+> ## meta-balena-2.83.8
+> ### (2021-08-17)
+> 
+> 
+> <details>
+> <summary> Update balena-engine to v19.03.24 [Alex Gonzalez] </summary>
+> 
+>> ### balena-engine-19.03.24
+>> #### (2021-08-12)
+>> 
+>> * prevent slice oob access in concatReadSeekCloser [Martin Rauscher]
+>> 
+> </details>
+> 
+> 
+> ## meta-balena-2.83.7
+> ### (2021-08-14)
+> 
+> * grub: don't package or install bindir utils [Joseph Kogut]
+> 
+> ## meta-balena-2.83.6
+> ### (2021-08-13)
+> 
+> * balena-os-sysctl: disable user namespacing by default [Joseph Kogut]
+> * common: kernel-resin: enable user namespacing [Joseph Kogut]
+> 
+> ## meta-balena-2.83.5
+> ### (2021-08-13)
+> 
+> * resin-u-boot.bbclass: Make console silencing change more resilient [Florin Sarbu]
+> 
+> ## meta-balena-2.83.4
+> ### (2021-08-11)
+> 
+> * balena-os: pin linux-firmware to 20210511 from hardknott [Joseph Kogut]
+> * linux-firmware: upgrade 20190815 -> 20210511 [Joseph Kogut]
+> 
+> ## meta-balena-2.83.3
+> ### (2021-08-05)
+> 
+> * supervisor: Consolidate supervisor container removal [Kyle Harding]
+> 
+> ## meta-balena-2.83.2
+> ### (2021-08-05)
+> 
+> * tests: Fix insecure registry error [Robert Günzler]
+> 
+</details>
+
 # v2.83.1+rev11
 ## (2021-08-24)
 
