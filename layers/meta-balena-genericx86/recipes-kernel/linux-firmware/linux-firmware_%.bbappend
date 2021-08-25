@@ -27,8 +27,8 @@ SRCREV_FORMAT = "default+raspbian-nf"
 
 PACKAGES =+ "${PN}-ibt-20-1-3"
 FILES_${PN}-ibt-20-1-3  = " \
-    ${nonarch_base_libdir}/firmware/intel/ibt-20-1-3.ddc \
-    ${nonarch_base_libdir}/firmware/intel/ibt-20-1-3.sfi \
+    ${nonarch_base_libdir}/firmware/intel/ibt-20-1-3.ddc* \
+    ${nonarch_base_libdir}/firmware/intel/ibt-20-1-3.sfi* \
 "
 
 PACKAGES =+ "${PN}-ipts-v102"
@@ -38,15 +38,15 @@ FILES_${PN}-ipts-v102 = " \
 
 PACKAGES =+ "${PN}-ipu3-firmware"
 FILES_${PN}-ipu3-firmware = " \
-    ${nonarch_base_libdir}/firmware/intel/ipu3-fw.bin \
-    ${nonarch_base_libdir}/firmware/intel/irci_irci_ecr-master_20161208_0213_20170112_1500.bin \
-    ${nonarch_base_libdir}/firmware/LICENSE.ipu3_firmware \
+    ${nonarch_base_libdir}/firmware/intel/ipu3-fw.bin* \
+    ${nonarch_base_libdir}/firmware/intel/irci_irci_ecr-master_20161208_0213_20170112_1500.bin* \
+    ${nonarch_base_libdir}/firmware/LICENSE.ipu3_firmware* \
 "
 
 PACKAGES =+ "${PN}-iwlwifi-quz-a0-hr-b0"
 
 FILES_${PN}-iwlwifi-quz-a0-hr-b0 = " \
-    ${nonarch_base_libdir}/firmware/iwlwifi-QuZ-a0-hr-b0-48.ucode \
+    ${nonarch_base_libdir}/firmware/iwlwifi-QuZ-a0-hr-b0-48.ucode* \
 "
 
 do_install_append() {
