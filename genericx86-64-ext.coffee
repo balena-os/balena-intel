@@ -1,6 +1,7 @@
 deviceTypesCommon = require '@resin.io/device-types/common'
 { networkOptions, commonImg, instructions } = deviceTypesCommon
 
+DISABLE_SECURE_BOOT = 'Make sure Secure Boot is disabled in BIOS.'
 GENERIC_FLASH = '''
 	Please make sure you do not have any other USB keys inserted.
 	Power up the hardware. Make sure you have a keyboard connected.
@@ -31,6 +32,7 @@ module.exports =
 		instructions.ETCHER_USB
 		instructions.EJECT_USB
 		instructions.FLASHER_WARNING
+		DISABLE_SECURE_BOOT
 		GENERIC_FLASH
 	].concat(postProvisioningInstructions)
 

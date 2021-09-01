@@ -1,6 +1,7 @@
 deviceTypesCommon = require '@resin.io/device-types/common'
 { networkOptions, commonImg, instructions } = deviceTypesCommon
 
+DISABLE_SECURE_BOOT = 'Make sure Secure Boot is disabled in BIOS.'
 SURFACE_GO_FLASH = '''
 	Press and hold the Volume Down button and press the Power button. Release the Power button but keep pressing the Volume Down button until the windows logo disappears.
 '''
@@ -27,6 +28,7 @@ module.exports =
 		instructions.ETCHER_USB
 		instructions.EJECT_USB
 		instructions.FLASHER_WARNING
+		DISABLE_SECURE_BOOT
 		SURFACE_GO_FLASH
 	].concat(postProvisioningInstructions)
 
