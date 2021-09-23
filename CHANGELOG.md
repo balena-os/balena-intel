@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.83.18+rev2
+## (2021-09-23)
+
+* Move genericx86-64-ext device type to balena-generic repository [Michal Toman]
+
 # v2.83.18+rev1
 ## (2021-09-01)
 

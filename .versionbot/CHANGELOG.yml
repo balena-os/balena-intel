@@ -1,4 +1,18 @@
 - commits:
+    - subject: Move genericx86-64-ext device type to balena-generic repository
+      hash: 9354b1baf743576656d6ce112dbc8a4468822e02
+      body: |
+        This has been moved to balena-generic repository keeping the slug
+      footer:
+        Changelog-entry: Move genericx86-64-ext device type to balena-generic repository
+        changelog-entry: Move genericx86-64-ext device type to balena-generic repository
+        Signed-off-by: Michal Toman <michalt@balena.io>
+        signed-off-by: Michal Toman <michalt@balena.io>
+      author: Michal Toman
+      nested: []
+  version: 2.83.18+rev2
+  date: 2021-09-23T18:43:48.931Z
+- commits:
     - subject: Update meta-balena from v2.83.11 to v2.83.18
       hash: ac3e7b8d53ec32c6c32471bc981de58ae2437acd
       body: |
