@@ -1,6 +1,6 @@
 inherit kernel-balena
 
-FILESEXTRAPATHS_prepend := "${THISDIR}/files:${THISDIR}/genericx86-64-ext:${THISDIR}/surface-go:"
+FILESEXTRAPATHS_prepend := "${THISDIR}/files:${THISDIR}/surface-go:"
 
 SRC_URI += " \
     file://0001-Add-support-for-Quectel-EC20-modem.patch \
@@ -13,10 +13,6 @@ SRC_URI_append_surface-pro-6 = " \
     file://0003-ipts.patch \
     file://0007-BUGFIX-iwlwifi-mvm-Allow-multicast-~ta-frames-only-when-associated.patch \
     file://0008-BUGFIX-iwlwifi-mvm-Allow-multicast-~ta-frames-only-when-authorized.patch \
-"
-
-SRC_URI_append_genericx86-64-ext = " \
-    file://defconfig \
 "
 
 do_kernel_configme[depends] += "virtual/${TARGET_PREFIX}binutils:do_populate_sysroot"
@@ -183,10 +179,6 @@ BALENA_CONFIGS[rtl_wifi]=" \
 # keep overlay as built-in for the following machines as they are using overlay instead of aufs
 BALENA_CONFIGS_remove_surface-pro-6 = "overlayfs"
 BALENA_CONFIGS_remove_surface-go = "overlayfs"
-BALENA_CONFIGS_remove_genericx86-64-ext = "overlayfs"
-
-# install aufs support even when BALENA_STORAGE is overlay2
-BALENA_CONFIGS_append_genericx86-64-ext = " aufs"
 
 # Add CAN support (requested by customer)
 BALENA_CONFIGS_append = " enable_can"
@@ -404,14 +396,6 @@ BALENA_CONFIGS_append_genericx86-64 = " i40e"
 BALENA_CONFIGS[i40e] = " \
     CONFIG_I40E=m \
 "
-
-#
-# Do not include debugging info in kernel and modules
-#
-BALENA_CONFIGS_append_genericx86-64-ext = " no-debug-info"
-BALENA_CONFIGS[no-debug-info] ?= " \
-    CONFIG_DEBUG_INFO=n \
-    "
 
 # eth controller on Intel NUC 11
 BALENA_CONFIGS_append_genericx86-64 = " igc"
