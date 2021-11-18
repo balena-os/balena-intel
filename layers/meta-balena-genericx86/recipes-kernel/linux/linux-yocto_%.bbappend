@@ -5,6 +5,9 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/files:${THISDIR}/genericx86-64-ext:${THIS
 SRC_URI += " \
     file://0001-Add-support-for-Quectel-EC20-modem.patch \
     file://0002-Revert-random-fix-crng_ready-test.patch \
+    file://0001-efi-Add-an-EFI_SECURE_BOOT-flag-to-indicate-secure-b.patch \
+    file://0001-security-lockdown-expose-a-hook-to-lock-the-kernel-d.patch \
+    file://0001-efi-Lock-down-the-kernel-if-booted-in-secure-boot-mo.patch \
 "
 
 # Rest of the machines that are on kernel 5.10.21
@@ -321,10 +324,10 @@ BALENA_CONFIGS_DEPS[tpm] = " \
     CONFIG_SECURITYFS=y \
 "
 BALENA_CONFIGS[tpm] = " \
-    CONFIG_TCG_TPM=m \
-    CONFIG_TCG_TIS_CORE=m \
-    CONFIG_TCG_TIS=m \
-    CONFIG_TCG_CRB=m \
+    CONFIG_TCG_TPM=y \
+    CONFIG_TCG_TIS_CORE=y \
+    CONFIG_TCG_TIS=y \
+    CONFIG_TCG_CRB=y \
 "
 
 # enable the Intel TCO Watchdog
@@ -418,6 +421,19 @@ BALENA_CONFIGS_append_genericx86-64 = " igc"
 BALENA_CONFIGS[igc] = " \
     CONFIG_IGC=m \
 "
+
+BALENA_CONFIGS_append_genericx86-64-ext = " secureboot"
+BALENA_CONFIGS[secureboot] = " \
+    CONFIG_LOCK_DOWN_IN_EFI_SECURE_BOOT=y \
+    CONFIG_MODULE_SIG=y \
+    CONFIG_MODULE_SIG_ALL=y \
+    CONFIG_MODULE_SIG_FORCE=y \
+    CONFIG_MODULE_SIG_SHA512=y \
+    CONFIG_SECURITY_LOCKDOWN_LSM=y \
+    CONFIG_SECURITY_LOCKDOWN_LSM_EARLY=y \
+    CONFIG_SYSTEM_TRUSTED_KEYS="certs/balenaos.crt" \
+"
+
 
 # We get these patches from https://github.com/libcamera-org/linux/tree/surface/v5.8.18-yocto
 SRC_URI_append_surface-go = " \
@@ -530,3 +546,24 @@ SRC_URI_append_surface-go = " \
     file://0107-media-i2c-Add-support-for-ov5693-sensor.patch \
     file://0108-media-i2c-ov5693-add-delays-to-powerdown.patch \
 "
+
+do_configure_append () {
+    # TODO use the key from balena-keys
+    mkdir -p certs
+    if [ "${SIGN}" != "true" ]; then
+        return 0
+    fi
+
+    export CURL_CA_BUNDLE="${STAGING_DIR_NATIVE}/etc/ssl/certs/ca-certificates.crt"
+
+    RESPONSE_FILE=$(mktemp)
+    curl --fail "${SIGN_API}/kmod/cert/${SIGN_KMOD_KEY_ID}" > "${RESPONSE_FILE}"
+    jq -r .cert "${RESPONSE_FILE}" > certs/balenaos.crt
+    rm -f "${RESPONSE_FILE}"
+}
+
+do_deploy_append() {
+    if [ "${SIGN}" = "true" ]; then
+        install -m 0644 ${B}/${KERNEL_OUTPUT_DIR}/${KERNEL_IMAGETYPE}.initramfs.sig ${DEPLOYDIR}/${KERNEL_IMAGETYPE}.sig
+    fi
+}

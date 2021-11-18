@@ -31,3 +31,4 @@ write_mbr() {
 IMAGE_POSTPROCESS_COMMAND_append = " write_mbr; "
 
 IMAGE_INSTALL_append = " efibootmgr"
+IMAGE_INSTALL_append_genericx86-64-ext = " cryptsetup dosfstools e2fsprogs-mke2fs libtss2-tcti-device lvm2-udevrules tpm2-tools"

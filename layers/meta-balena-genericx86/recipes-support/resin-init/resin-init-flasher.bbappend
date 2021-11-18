@@ -9,3 +9,7 @@ INTERNAL_DEVICE_BOOTLOADER_CONFIG = "grub.cfg_internal"
 # (currently assuming this is on partition 1 of the internal media)
 INTERNAL_DEVICE_BOOTLOADER_CONFIG_PATH = "/EFI/BOOT/grub.cfg"
 INTERNAL_DEVICE_BOOTLOADER_LEGACY_CONFIG_PATH = "/grub/grub.cfg"
+
+do_install_append_genericx86-64-ext() {
+    echo "INTERNAL_DEVICE_BOOTLOADER_CONFIG_LUKS=grub.cfg_internal_luks" >> ${D}/${sysconfdir}/resin-init-flasher.conf
+}
