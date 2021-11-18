@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add support for secure boot and FDE to Generic x86_64
+      hash: 0de9a811a36628b5d35aa55610dd3ea128e53133
+      body: ''
+      footer:
+        Changelog-entry: Add support for secure boot and FDE to Generic x86_64
+        changelog-entry: Add support for secure boot and FDE to Generic x86_64
+        Signed-off-by: Michal Toman <michalt@balena.io>
+        signed-off-by: Michal Toman <michalt@balena.io>
+      author: Michal Toman
+      nested: []
+  version: 2.83.18+rev3
+  date: 2021-11-18T05:47:56.852Z
+- commits:
     - subject: Update balena-yocto-scripts from v1.14.9 to v1.15.8
       hash: 79b445abc28711678038f978ac6c3a62c75b8cfe
       body: |
