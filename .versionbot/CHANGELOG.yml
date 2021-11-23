@@ -1,4 +1,17 @@
 - commits:
+    - subject: Publish both flasher and raw images for Generic x86_64
+      hash: 43867e2502306a472e70fa70432a0abbd53f1058
+      body: ''
+      footer:
+        Changelog-entry: Publish both flasher and raw images for Generic x86_64
+        changelog-entry: Publish both flasher and raw images for Generic x86_64
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 2.83.18+rev3
+  date: 2021-11-23T13:23:58.140Z
+- commits:
     - subject: Update balena-yocto-scripts from v1.14.9 to v1.15.8
       hash: 79b445abc28711678038f978ac6c3a62c75b8cfe
       body: |

@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.83.18+rev3
+## (2021-11-23)
+
+* Publish both flasher and raw images for Generic x86_64 [Kyle Harding]
+
 # v2.83.18+rev2
 ## (2021-11-04)
 
