@@ -1,4 +1,17 @@
 - commits:
+    - subject: Revert "Publish both flasher and raw images for Generic x86_64"
+      hash: 098849780546c10f775c415f1af708e06857ae91
+      body: ''
+      footer:
+        Changelog-entry: Revert "Publish both flasher and raw images for Generic x86_64"
+        changelog-entry: Revert "Publish both flasher and raw images for Generic x86_64"
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 2.83.18+rev4
+  date: 2021-11-23T21:00:40.851Z
+- commits:
     - subject: Publish both flasher and raw images for Generic x86_64
       hash: 43867e2502306a472e70fa70432a0abbd53f1058
       body: ''
