@@ -321,10 +321,10 @@ BALENA_CONFIGS_DEPS[tpm] = " \
     CONFIG_SECURITYFS=y \
 "
 BALENA_CONFIGS[tpm] = " \
-    CONFIG_TCG_TPM=m \
-    CONFIG_TCG_TIS_CORE=m \
-    CONFIG_TCG_TIS=m \
-    CONFIG_TCG_CRB=m \
+    CONFIG_TCG_TPM=y \
+    CONFIG_TCG_TIS_CORE=y \
+    CONFIG_TCG_TIS=y \
+    CONFIG_TCG_CRB=y \
 "
 
 # enable the Intel TCO Watchdog
