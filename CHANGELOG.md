@@ -1,6 +1,20 @@
 Change log
 -----------
 
+# v2.87.26+rev2
+## (2021-11-29)
+
+
+<details>
+<summary> Update balena-yocto-scripts from 1.15.8 to 1.15.9 [Kyle Harding] </summary>
+
+> ## balena-yocto-scripts-1.15.9
+> ### (2021-11-26)
+> 
+> * Substitute the worker types for generic device slugs [Kyle Harding]
+> 
+</details>
+
 # v2.87.26+rev1
 ## (2021-11-25)
 
