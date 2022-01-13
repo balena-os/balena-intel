@@ -1,4 +1,784 @@
 - commits:
+    - subject: Update meta-balena from v2.87.26 to v2.88.19
+      hash: 7541eec78e34fe1d6387c4d7b0668fdc77477ec2
+      body: |
+        Update meta-balena from 2.87.26 to 2.88.19
+      footer:
+        Changelog-entry: Update meta-balena from v2.87.26 to v2.88.19
+        changelog-entry: Update meta-balena from v2.87.26 to v2.88.19
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested:
+        - commits:
+            - subject: 'os: tests: optimize fsck tests'
+              hash: 15100419eb9e1fb8c0e99d0a9e07a09b8c8d415f
+              body: >
+                Chain operations using Promise.then(), and run commands in
+                parallel
+
+                using Promise.map(). This reduces the time taken for fsck tests
+                to about
+
+                half.
+
+
+                - ok 1 - fsck.ext4 tests # time=152304.735ms
+
+                + ok 1 - fsck.ext4 tests # time=75104.016ms
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: meta-balena-2.88.19
+          date: 2022-01-12T19:19:10.768Z
+        - commits:
+            - subject: 'conf/distro: Prefer rust v1.36 for releases older than Honister'
+              hash: f4025980e13f291b9e9778a4e545cfea490f9fe5
+              body: |
+                Poky releases older than Honister should stick to rust v1.36
+                which has been used in balenaOS builds so far.
+
+                Newer ones should prefer v1.54, which is the latest rust
+                version to use the Honister syntax.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+          version: meta-balena-2.88.18
+          date: 2022-01-11T14:59:20.607Z
+        - commits:
+            - subject: 'recipes-core/coreutils: Use 64bit time symbols'
+              hash: 1c86b30cbad9eecb74185610d146a71f81f70857
+              body: >
+                We do this to avoid initial HUP failure that may
+
+                occur when updating a freshly provisioned device,
+
+                which has unitialized timestamps for files in the boot
+                partition,
+
+                to a newer release based on Honister with glibc-2.34.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+            - subject: >-
+                classes/image_types_balena: Preserve file modification times
+                with mcopy
+              hash: 7b5e1475838b2ba72ca31b82cfa41b32d47cfd02
+              body: |
+                We should preserve the file modification times when
+                copying them to the boot filesystem, otherwise these
+                timestamps will be incorrect, as they will be set to
+                random values, like for instance:
+
+                  Access: 1961-11-25 17:31:44.000000000 +0000
+                  Modify: 1961-11-25 17:31:44.000000000 +0000
+                  Change: 1961-11-25 17:31:44.000000000 +0000
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+          version: meta-balena-2.88.17
+          date: 2022-01-10T10:46:43.314Z
+        - commits:
+            - subject: 'balena-os.inc: Switch balena backend storage to overlay2'
+              hash: 90b2630937ecc3171fd925a9c679ab1b20c20a4c
+              body: >
+                Now that we have the aufs to overlay2 migrator in place, let's
+                switch
+
+                all our boards to overlay2.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-2.88.16
+          date: 2022-01-05T09:44:10.265Z
+        - commits:
+            - subject: 'initrdscripts: fsuuidinit: Generate resin-rootA last'
+              hash: 00d6ca48d32b2b1a111d400457b73be5cc36d6bf
+              body: >
+                As resin-rootA is used to decide whether to re-run the
+                generation, leave it
+
+                last. As it stands, if resin-rootA is regenerated by any other
+                fail, the
+
+                UUID generation is not retried.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: 'lvm2: Add rule to persist dm devices in udev database'
+              hash: de2ff622473f2f0bc03c05dbd15f1df8c88f734e
+              body: >
+                On transitioning from the initramfs to the rootfs, the udev
+                database is
+
+                cleanedup as the rules between initramfs and rootfs might defer.
+
+
+                However, dm devices are flagged not to be re-processed, so we
+                need to
+
+                set a sticky bit on them so they persist the cleanup.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: >-
+                initrdscript: Cleanup udev database before transitioning to
+                rootfs
+              hash: a72061cfe9ba48809ba87b0bc03e01a6bc53cff4
+              body: >
+                This is needed because the rules in the final rootfs might be
+
+                different than the one in the initramfs.
+
+
+                Devices that need to persist, like dm devices, need to be
+                flagged with
+
+                the `db_persist` option.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: 'initrdscripts: Use /run as bootparam_root storage'
+              hash: 449dee77f54d4185f98854bca9148a6f42620bc8
+              body: >
+                From v2.49, the hostapp-update utility creates the /run
+                directory in the
+
+                root filesystem, however when huping from previous versions /run
+                is not
+
+                there.
+
+
+                Commit bab3cd7f50022127bfef50fde9cd445b6b55a7b2 switches to use
+                /tmp
+
+                to store the new UUID for the root partition on first boot after
+
+                generating new UUIDs as this is backwards compatible.
+
+
+                However, this means that the udev database in the initramfs is
+                recreated
+
+                on the final system instead of reused. This becomes a problems
+                for DM
+
+                devices (used in luks based disk encryption), as they are not
+                re-processed
+
+                by udevd.
+
+
+                This change will use /run if available, so new releases that may
+                implement
+
+                disk encryption work, or /tmp if not so it still remains
+                backwards
+
+                compatible for HUP from older releases.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: 'lvm: Add lvm rules when secure boot is configured'
+              hash: d41eacad52fde90340c5f7eb4f9fb862aba364ef
+              body: |
+                This add udev rules to detect mapper devices.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: 'balena-keys: Fetch DER keys and decode from base64'
+              hash: 2538a1c621979f83385729be57b53faa640326d1
+              body: >
+                Some BIOS configuration, like TianoCore used in QEMU, needs DER
+                keys for
+
+                secure boot setup. Also, der, auth and esl keys are served
+                base64 encoded
+
+                and need to be decoded before they can be used.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.88.15
+          date: 2022-01-04T14:24:39.301Z
+        - commits:
+            - subject: Sync cached writes to disk when updating supervisor.conf
+              hash: cf51428b9daaf8325cafc850fb47e27a6a6bcb5d
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Miguel Casqueira <miguel@balena.io>
+                signed-off-by: Miguel Casqueira <miguel@balena.io>
+              author: Miguel Casqueira
+              nested: []
+          version: meta-balena-2.88.14
+          date: 2022-01-04T11:19:00.838Z
+        - commits:
+            - subject: 'hostapp-update-hooks: Handle developmentMode updates'
+              hash: adc76c0588a67705ae20a8c61517f549f2e8549e
+              body: >
+                When updating from a legacy development image which has no
+                developmentMode
+
+                set in config.json to an image configured with development mode,
+                the hooks
+
+                need to set developmentMode accordingly in config.json.
+
+
+                Updating to a development mode image from a production image
+                will not
+
+                set developmentMode.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.88.13
+          date: 2022-01-04T09:48:57.491Z
+        - commits:
+            - subject: 'systemd/timeinit: handle missing date field in HTTPS header'
+              hash: e11a421c24a9c4003e0d606ef681447e48b2823b
+              body: >
+                Update the timesync-https.sh script to handle the case where the
+                date
+
+                field is missing from the returned HTTPS header.
+
+
+                When the date field is not present the script will now exit with
+                a
+
+                warning rather than blocking indefinitely.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: 'systemd/timeinit: handle missing date field in HTTPS header'
+                changelog-entry: 'systemd/timeinit: handle missing date field in HTTPS header'
+                Signed-off-by: Mark Corbin <mark@balena.io>
+                signed-off-by: Mark Corbin <mark@balena.io>
+              author: Mark Corbin
+              nested: []
+          version: meta-balena-2.88.12
+          date: 2022-01-03T14:25:50.684Z
+        - commits:
+            - subject: >-
+                balena-supervisor: Update balena-supervisor to v12.11.16 Update
+                balena-supervisor from 12.11.0 to 12.11.16
+              hash: 00397eb39bde3aa313373ffa884ca24098781917
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Miguel Casqueira <miguel@balena.io>
+                signed-off-by: Miguel Casqueira <miguel@balena.io>
+              author: Miguel Casqueira
+              nested: []
+          version: meta-balena-2.88.11
+          date: 2021-12-22T04:08:44.540Z
+        - commits:
+            - subject: Update NetworkManager to 1.32.12
+              hash: a6313f12e2efe0a6aae8741e7e95ad437a247b3c
+              body: |
+                Closes #2437
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Update NetworkManager to 1.32.12
+                changelog-entry: Update NetworkManager to 1.32.12
+                Signed-off-by: Zahari Petkov <zahari@balena.io>
+                signed-off-by: Zahari Petkov <zahari@balena.io>
+              author: Zahari Petkov
+              nested: []
+          version: meta-balena-2.88.10
+          date: 2021-12-16T10:45:16.375Z
+        - commits:
+            - subject: 'u-boot: Move u-boot configs inclusion into resin-u-boot.bbclass'
+              hash: 27e67bb1021f1f2c4c1cdcbb657f09c19908eed4
+              body: |
+                Some BSPs name the u-boot such as u-boot-imx_2020 for example.
+                Because of that, our existing bbappend called u-boot_%.bbappend
+                will not match it and will fail to be applied.
+                This PR is a first pass at solving this by moving at least the
+                SRC_URI appending part from this bbappend and into the
+                resin-u-boot.bbclass instead. Further investigation is needed
+                to see if we can remove this bbappend altogether since we may
+                have all boards using Poky Warrior or newer, making this
+                u-boot bbappend obsolete.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-2.88.9
+          date: 2021-12-15T14:45:29.240Z
+        - commits:
+            - subject: 'patch: Add archiveLogs Teardown for HUP suite'
+              hash: 27abdfaab8ab0790020ebfce0fc64710c8efd609
+              body: ''
+              footer: {}
+              author: Vipul Gupta
+              nested: []
+          version: meta-balena-2.88.8
+          date: 2021-12-09T19:58:29.923Z
+        - commits:
+            - subject: 'tests: Ensure BDADDR is initialized'
+              hash: 7824025cb4722483a15cd95f7ee93207af2d8f8c
+              body: |
+                The CM4 IO-Board was the first device
+                which exhibited an issue in which
+                the MAC address was set to an
+                unprogrammed value AA:AA:AA...:AA.
+
+                We've addressed this in the device repo,
+                meanwhile it has been fixed in upstream
+                too, so let's check and catch this should
+                it happen again.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+          version: meta-balena-2.88.7
+          date: 2021-12-06T15:07:42.139Z
+        - commits:
+            - subject: 'docs: Fix links in Rollback documentation'
+              hash: 14399cfd115198b0913fb379760b9710c0710258
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: meta-balena-2.88.6
+          date: 2021-12-04T17:29:48.922Z
+        - commits:
+            - subject: >-
+                tests: os: fix unhandled exception when unwrapping non-flasher
+                image
+              hash: ce2d33ad875e83b1ed01a16225a9ca19563836dc
+              body: >
+                Handle ENOENT ErrnoException when attempting to unwrap
+                non-flasher image
+
+                in os/suite.js.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: meta-balena-2.88.5
+          date: 2021-12-04T12:25:35.702Z
+        - commits:
+            - subject: 'tests: Add basic checks for data loss during HUP'
+              hash: 160fba09251de9fc05b3b3ab7a45e6e4e6ca5586
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: >-
+                hostapp-update-hooks: Ensure data breadcrumb is present before
+                HUP
+              hash: 62b25ec26111003ef12bc16fe4890b5c327e6aba
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: meta-balena-2.88.4
+          date: 2021-12-03T18:33:53.449Z
+        - commits:
+            - subject: 'grub-conf: Delay grub boot in os development mode'
+              hash: 08b54c04b109341542ff1f2b82d00699369a8280
+              body: >
+                When using the compile time OS_DEVELOPMENT switch, delay the
+                boot so
+
+                the grub menu is displayed and it can be interacted with.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: 'grub-efi: Allow input/output in OS development mode'
+              hash: 7d450dddf397dc045779fa815b5003bd1b1ca7fa
+              body: |
+                When building with the compile-time OS_DEVELOPMENT switch allow
+                grub shell to work.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.88.3
+          date: 2021-12-02T17:44:27.982Z
+        - commits:
+            - subject: 'sign-efi.bbclass: Do not deploy the unused .signed symlink'
+              hash: 33c3e61eac60dff18a1bfe8e7a69cc31a8b16070
+              body: >
+                do_deploy:append replaces the original file with its signed
+                counterpart,
+
+                the signature just gets ignored for non secure boot setups. The
+                .signed
+
+                symlink was in place for backwards compatibility but nothing is
+                using it
+
+                anymore therefore we can safely remove it.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+            - subject: 'sign-gpg.bbclass: Only deploy the detached signature'
+              hash: 40ead6aefea6d4ab56c76ec0a968da9b23acc887
+              body: >
+                The original file should already be deployed, we only need to
+                add
+
+                the signature in do_deploy:append. Re-deploying actually causes
+
+                harm when chaining signatures, replacing a signed file with its
+
+                unsigned counterpart.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+            - subject: 'kernel-image-initramfs.bb: Ship kernel and matching signature'
+              hash: 73c254a9396dcf40ba421d70119400af7d4ef21f
+              body: >
+                This patch replaces the kernel being shipped with the one that
+                we eventually
+
+                sign for EFI - without signing the original file used would be
+                identical
+
+                but after applying signature, the signed version is the one we
+                want to ship.
+
+
+                It also fixes the file name for the detached signature, which
+                must match
+
+                the name of the associated file.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+            - subject: Make kexec work under kernel lockdown
+              hash: 3f7ab2a82b29cdb5ddbf2be6ae8b384a76be999e
+              body: |
+                - EFI sign bzImage first
+                - GPG sign the result
+                - Enable kexec signature check in the kernel
+                - Load EFI keys to the kernel keyring
+                - Use -s with kexec load command
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-2.88.2
+          date: 2021-12-02T12:47:16.559Z
+        - commits:
+            - subject: 'bluez5: Update to bluez 5.61 from poky honister'
+              hash: 1ce83ba3726b77d679818cc8f10e7092cd094328
+              body: |
+                This commit brings the bluez5 recipe from poky honnister.
+
+                The code originated from poky's honnister branch
+                @ 5f87fbf13bd35169a488ca564875974681aafd4f
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: meta-balena-2.88.1
+          date: 2021-12-02T10:41:20.034Z
+        - commits:
+            - subject: 'systemd/timeinit: add HTTPS time synchronisation service'
+              hash: 2bb18707557979ed6466f45602de4ecf5b386c57
+              body: >
+                Add a new timesync-https systemd service to synchronise the
+                system
+
+                time at boot using an HTTPS header. The service uses curl to
+                request
+
+                an HTTPS header from either $API_ENDPOINT/connectivity-check
+                (default)
+
+                or the URL defined by the os.network.connectivity.uri field in
+
+                config.json. The URL used *must* return HTTP code 204 (No
+                Content)
+
+                in response to a request so that we can determine that we have
+                full
+
+                network connectivity and are not operating behind a captive
+                portal.
+
+
+                The date field returned by a valid header is used to set the
+                current
+
+                system time. The date/time derived from the header is assumed to
+                be a
+
+                reasonable source of 'truth' such that it can be used to adjust
+                the
+
+                system time both backwards and forwards. This will compensate
+                for any
+
+                erroneous timestamps saved via fake-hwclock or any invalid data
+
+                read from an RTC.
+
+
+                The service will exit when a valid response has been received.
+                Poll
+
+                attempts will be made at an increasing interval starting at 2s
+                and
+
+                doubling up to a maximum of 64s. Polling will continue at the
+                maximum
+
+                interval until a valid response has been received.
+
+
+                This service will provide initial time synchronisation for
+                devices
+
+                where NTP ports have been blocked. For devices where NTP access
+                is
+
+                available it should ensure that any system 'time jump' is only a
+                few
+
+                seconds when NTP synchronisation is eventually achieved. It also
+
+                allows other services to start with a reasonably accurate time
+
+                without having to wait for the NTP synchronisation process to
+
+                complete.
+
+
+                Services that are ordered after the new time-sync-https-wait
+                target
+
+                can be sure that full network connectivity has been achieved and
+                that
+
+                time has been synchronised with an accuracy of a few seconds.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Connects-to: '#1337 #1776 #2044 #2139'
+                connects-to: '#1337 #1776 #2044 #2139'
+                Signed-off-by: Mark Corbin <mark@balena.io>
+                signed-off-by: Mark Corbin <mark@balena.io>
+              author: Mark Corbin
+              nested: []
+          version: meta-balena-2.88.0
+          date: 2021-12-01T15:06:07.577Z
+        - commits:
+            - subject: 'tests: Add BeagleBone Black u-boot overlay test'
+              hash: d52a1754ba1620773e1f7f124fe382aa73e869eb
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-2.87.32
+          date: 2021-12-01T08:51:25.213Z
+        - commits:
+            - subject: 'resin-update-state.rules: do not run for unnamed partitions'
+              hash: bc45916b90e60aa849a2b99903825bce98e36752
+              body: >
+                When udev runs resin_update_state_probe for a non-balena
+                partition
+
+                and ENV{ID_PART_ENTRY_NAME} is undefined it still gets expanded
+                to random
+
+                garbage accidentally lying at the eventual memory address. This
+                can create
+
+                a mess in /dev/disk/by-state e.g. when external devices are
+                connected.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+            - subject: 'resin_update_state_probe: do not skip device mapper devices'
+              hash: 4a8da59e5cbe2243518ed0591dc376e935a3175d
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-2.87.31
+          date: 2021-11-30T17:23:29.588Z
+        - commits:
+            - subject: 'tests: Add device specific RevPi Core 3 DIO module test'
+              hash: ffd31de2edf0358ede441aa001f5d32069ec8999
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+          version: meta-balena-2.87.30
+          date: 2021-11-30T15:30:47.078Z
+        - commits:
+            - subject: >-
+                common: image-balena: enable developmentMode when
+                OS_DEVELOPMENT=1
+              hash: 14b96077eb1899ebedce64610344989eaf4471cd
+              body: ''
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: meta-balena-2.87.29
+          date: 2021-11-29T14:22:50.702Z
+        - commits:
+            - subject: Add secure boot keys to the flasher boot partition
+              hash: e5e1c4446f26d028d1e5b6fbdaeb974d84d0a03f
+              body: |
+                Having the keys available in the flasher image allows to use the
+                flasher image as source to program the keys in the EFI.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Add secure boot keys to the flasher boot partition
+                changelog-entry: Add secure boot keys to the flasher boot partition
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.87.28
+          date: 2021-11-26T18:00:13.452Z
+        - commits:
+            - subject: 'balena-os: make sure PAM support is not configured'
+              hash: abb515f6a0bf5d274af873852ddd4e60cf4ee89e
+              body: >
+                BalenaOS does not use PAM but some vendor BSPs enable it and
+                misconfigure
+
+                the hostOS authentication.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.87.27
+          date: 2021-11-25T14:36:15.066Z
+  version: 2.88.19
+  date: 2022-01-13T10:09:57.784Z
+- commits:
     - subject: Update balena-yocto-scripts to v1.16.1
       hash: 0271533f653a0bbbe9453249483bde2c4d6599dd
       body: |
