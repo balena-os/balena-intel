@@ -1,4 +1,36 @@
 - commits:
+    - subject: Update balena-yocto-scripts to v1.16.3
+      hash: d354b98d4f76a3178a21e3a79aba9a48be183b5e
+      body: |
+        Update balena-yocto-scripts from v1.16.2 to v1.16.3
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: Update balena-yocto-scripts to v1.16.3
+        changelog-entry: Update balena-yocto-scripts to v1.16.3
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested:
+        - commits:
+            - subject: >-
+                balena-deploy-block: Check for existing tag only in specific
+                hostapp
+              hash: 8893fd94bc0cc31a7fa7af8a87af68a69fec908d
+              body: |
+                The same version tag can exist across different hostapps.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: balena-yocto-scripts-1.16.3
+          date: 2022-01-17T17:18:11.734Z
+  version: 2.88.19+rev2
+  date: 2022-01-17T18:00:38.290Z
+- commits:
     - subject: Update balena-yocto-scripts to v1.16.2
       hash: 244100fa22037c0a70717ee7ccecd69732deb9df
       body: |
