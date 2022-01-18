@@ -530,3 +530,10 @@ SRC_URI_append_surface-go = " \
     file://0107-media-i2c-Add-support-for-ov5693-sensor.patch \
     file://0108-media-i2c-ov5693-add-delays-to-powerdown.patch \
 "
+
+# This device type has been using the aufs storage driver,
+# and during a HUP the storage in the inactive sysroot will
+# still be aufs, so we need to include the aufs driver going
+# further for it, as per the internal thread:
+# https://www.flowdock.com/app/rulemotion/resin-devices/threads/K2TQiSUfNDqBT5Ih6cciNI2d9QJ
+BALENA_CONFIGS_append_genericx86-64 = " aufs"
