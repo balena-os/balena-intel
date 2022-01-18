@@ -1,6 +1,33 @@
 Change log
 -----------
 
+# v2.88.21
+## (2022-01-18)
+
+
+<details>
+<summary> Update meta-balena from v2.88.19 to v2.88.21 [Florin Sarbu] </summary>
+
+> ## meta-balena-2.88.21
+> ### (2022-01-17)
+> 
+> * tests: os: config-json: cleanup persistentLogging test [Joseph Kogut]
+> * tests: os: config-json: return promise from sshKeys test [Joseph Kogut]
+> * tests: os: config-json: cleanup dnsServers config test [Joseph Kogut]
+> * tests: os: config-json: cleanup ntpServer config test [Joseph Kogut]
+> * tests: os: config-json: cleanup hostname config test [Joseph Kogut]
+> * tests: os: create waitForServiceState helper [Joseph Kogut]
+> * tests: os: config-json: remove reboot from randomMacAddressScan test [Joseph Kogut]
+> * tests: os: config-json: remove reboot from connectivity test [Joseph Kogut]
+> * tests: os: config-json: remove reboot from udevRules test [Joseph Kogut]
+> 
+> ## meta-balena-2.88.20
+> ### (2022-01-17)
+> 
+> * chrony: fix mount service dependency for driftfile [Mark Corbin]
+> 
+</details>
+
 # v2.88.19+rev2
 ## (2022-01-17)
 
