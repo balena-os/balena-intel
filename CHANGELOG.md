@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.88.21+rev1
+## (2022-01-18)
+
+* Include the aufs kernel module for devices that have been using aufs prior to the overlayfs migration [Florin Sarbu]
+
 # v2.88.21
 ## (2022-01-18)
 
