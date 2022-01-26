@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'linux-yocto: Build rtl8822bu module'
+      hash: f08593045eae2ad557cc28a0fd9ea9ba2cbef3f5
+      body: ''
+      footer:
+        Changelog-entry: 'linux-yocto: Build rtl8822bu module'
+        changelog-entry: 'linux-yocto: Build rtl8822bu module'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 2.89.5+rev2
+  date: 2022-01-26T13:12:08.884Z
+- commits:
     - subject: 'rtl8812bu: Create recipe for yocto builds'
       hash: 2e1dae7bc683494bf52e5fab1c9d9d6417b98b7d
       body: ''
