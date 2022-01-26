@@ -1,4 +1,17 @@
 - commits:
+    - subject: 'rtl8812bu: Create recipe for yocto builds'
+      hash: 2e1dae7bc683494bf52e5fab1c9d9d6417b98b7d
+      body: ''
+      footer:
+        Changelog-entry: 'rtl8812bu: Create recipe for yocto builds'
+        changelog-entry: 'rtl8812bu: Create recipe for yocto builds'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 2.89.5+rev1
+  date: 2022-01-26T12:08:50.709Z
+- commits:
     - subject: Update meta-balena from v2.88.21 to v2.89.5
       hash: ddfb8009dd68038bd6c7b02b13415716138932d9
       body: |

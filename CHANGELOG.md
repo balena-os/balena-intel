@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.89.5+rev1
+## (2022-01-26)
+
+* rtl8812bu: Create recipe for yocto builds [Alexandru Costache]
+
 # v2.89.5
 ## (2022-01-26)
 
