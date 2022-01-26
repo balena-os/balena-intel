@@ -1,0 +1,33 @@
+From 8a4135d8544b73c3cffbdf3fbff22034f1cd5b5f Mon Sep 17 00:00:00 2001
+From: Alexandru Costache <alexandru@balena.io>
+Date: Wed, 26 Jan 2022 12:52:29 +0100
+Subject: [PATCH] Makefile: Fix yocto build
+
+Remove this unnecessary check which currently
+fails for the yocto build. We're using gcc 9
+and will no longer return to older versions.
+
+Upstream-status: Inappropriate [configuration]
+Signed-off-by: Alexandru Costache <alexandru@balena.io>
+---
+ Makefile | 3 ---
+ 1 file changed, 3 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index 9f05aea..08a9113 100644
+--- a/Makefile
++++ b/Makefile
+@@ -16,10 +16,7 @@ EXTRA_CFLAGS += -Wno-unused-function
+ EXTRA_CFLAGS += -Wno-unused
+ #EXTRA_CFLAGS += -Wno-uninitialized
+ 
+-GCC_VER_49 := $(shell echo `$(CC) -dumpversion | cut -f1-2 -d.` \>= 4.9 | bc )
+-ifeq ($(GCC_VER_49),1)
+ EXTRA_CFLAGS += -Wno-date-time	# Fix compile error && warning on gcc 4.9 and later
+-endif
+ 
+ EXTRA_CFLAGS += -I$(src)/include
+ 
+-- 
+2.17.1
+
