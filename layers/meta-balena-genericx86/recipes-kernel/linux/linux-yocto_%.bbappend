@@ -121,6 +121,11 @@ BALENA_CONFIGS[igb] = " \
     CONFIG_IGB=m \
     "
 
+BALENA_CONFIGS_append_genericx86-64 = " rtl8822bu "
+BALENA_CONFIGS[rtl8822bu] = " \
+        CONFIG_RTL8822BU=m \
+"
+
 # Support for RTL8723BE and RTL8821AE based WiFi/BT cards
 BALENA_CONFIGS_append = " rtl8723be_rtl8821ae"
 BALENA_CONFIGS_DEPS[rtl8723be_rtl8821ae] = " \
