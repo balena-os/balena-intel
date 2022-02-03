@@ -43,12 +43,16 @@ if [ "$DURING_UPDATE" = "1" ]; then
 			dd if=/dev/zero of="${device}" bs=446 count=1
 		fi
 
-		# re-add the EFI entry for resinOS boot from internal media as some EFI firmwares are buggy and won't detect the old entry anymore
-		# first remove existing resinOS entries so we won't have duplicates
-		printf "[INFO] Re-add EFI boot entry for starting resinOS from internal media.\n"
-		mount -t efivarfs efivarfs /sys/firmware/efi/efivars
-		duplicates=`efibootmgr | grep resinOS |sed 's/Boot*//g' | sed 's/* resinOS//g'`
-		for i in $duplicates; do efibootmgr -B -b $i; done
-		efibootmgr -c -d $device -p 1 -L "resinOS" -l "\EFI\BOOT\bootx64.efi"
+		if [ "${type}" != "crypt" ]; then
+			# re-add the EFI entry for resinOS boot from internal media as some EFI firmwares are buggy and won't detect the old entry anymore
+			# first remove existing resinOS entries so we won't have duplicates
+			# Do not do this on systems with LUKS-encrypted drives though, the boot order in this case is protected by PCR checksums.
+			# Touching it in any way would make the system unbootable.
+			printf "[INFO] Re-add EFI boot entry for starting resinOS from internal media.\n"
+			mount -t efivarfs efivarfs /sys/firmware/efi/efivars
+			duplicates=`efibootmgr | grep resinOS |sed 's/Boot*//g' | sed 's/* resinOS//g'`
+			for i in $duplicates; do efibootmgr -B -b $i; done
+			efibootmgr -c -d $device -p 1 -L "resinOS" -l "\EFI\BOOT\bootx64.efi"
+		fi
 	fi
 fi
