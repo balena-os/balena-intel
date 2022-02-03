@@ -7,6 +7,7 @@
 set -o errexit
 
 . /usr/sbin/balena-config-vars
+. /usr/libexec/os-helpers-fs
 
 DURING_UPDATE=${DURING_UPDATE:-0}
 
@@ -28,14 +29,19 @@ if [ "$DURING_UPDATE" = "1" ]; then
 
 	# make sure the bootstrap code (boot.img) is removed in case we are using EFI boot
 	if [ -d /sys/firmware/efi ] ; then
-		new_part=$(findmnt --noheadings --canonicalize --output SOURCE "$BALENA_BOOT_MOUNTPOINT")
-		type=$(lsblk -no TYPE "${new_part}")
+		boot_dev=$(findmnt --noheadings --canonicalize --output SOURCE "$BALENA_BOOT_MOUNTPOINT")
+		type=$(lsblk -no TYPE "${boot_dev}")
 		if [ "${type}" = "crypt" ]; then
-			device="/dev/$(lsblk -sJ "${new_part}" | jq -r '.blockdevices[].children[].name')"
+			boot_part="/dev/$(lsblk -sJ "${boot_dev}" | jq -r '.blockdevices[].children[].name')"
 		else
-			device="/dev/$(lsblk -sJ "${new_part}" | jq -r '.blockdevices[].name')"
+			boot_part="/dev/$(lsblk -sJ "${boot_dev}" | jq -r '.blockdevices[].name')"
 		fi
-		dd if=/dev/zero of="${device}" bs=446 count=1
+		device="/dev/$(lsblk "$boot_part" -dnlo PKNAME)"
+		pttype=$(get_part_table_type "${device}")
+
+		if [ "${pttype}" = "mbr" ]; then
+			dd if=/dev/zero of="${device}" bs=446 count=1
+		fi
 
 		# re-add the EFI entry for resinOS boot from internal media as some EFI firmwares are buggy and won't detect the old entry anymore
 		# first remove existing resinOS entries so we won't have duplicates
