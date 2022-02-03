@@ -4,6 +4,8 @@ SRC_URI:append:surface-go = " \
 			file://surface-go-init-board \
 "
 
+RDEPENDS:${PN} += " os-helpers-fs"
+
 # Adds LTE Modem initialization sequence for the Surface Go
 # See: https://github.com/jakeday/linux-surface/issues/306#issuecomment-518898603
 do_install:append:surface-go() {

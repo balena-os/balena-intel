@@ -2,10 +2,22 @@
 
 set -e
 
+. /usr/libexec/os-helpers-fs
+
 # make sure the bootstrap code (boot.img) is removed in case we are using EFI boot
 if [ -d /sys/firmware/efi ] ; then
-    device="/dev/"$(findmnt --noheadings --canonicalize --output SOURCE /mnt/boot/ | xargs lsblk -no pkname)
-    dd if=/dev/zero of=$device bs=446 count=1
+    boot_part=$(findmnt --noheadings --canonicalize --output SOURCE "/mnt/boot")
+    type=$(lsblk -no TYPE "${boot_part}")
+    if [ "${type}" = "crypt" ]; then
+        device="$(lsblk -sJ "${boot_part}" | jq -r '.blockdevices[].children[].name')"
+    else
+        device="$(lsblk -sJ "${boot_part}" | jq -r '.blockdevices[].name')"
+    fi
+    pttype=$(get_part_table_type "${device}")
+
+    if [ "$pttype" = "mbr" ]; then
+        dd if=/dev/zero of=/dev/$device bs=446 count=1
+    fi
 fi
 
 exit 0
