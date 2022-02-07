@@ -1,4 +1,41 @@
 - commits:
+    - subject: Update meta-balena from v2.89.14 to v2.89.15
+      hash: 164c477b38c5fddd5d7af92e91ceaf91ef157f70
+      body: |
+        Update meta-balena from 2.89.14 to 2.89.15
+      footer:
+        Changelog-entry: Update meta-balena from v2.89.14 to v2.89.15
+        changelog-entry: Update meta-balena from v2.89.14 to v2.89.15
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested:
+        - commits:
+            - subject: "resindataexpander: do not return after resizing the partition only"
+              hash: dfb9a2e0b30ac5bbfef24332487ef537b6a830b1
+              body: >
+                After moving the partition resizing code to execute on each
+                boot,
+
+                we made it unreachable on first boot. We must not exit the script
+
+                after resizing the partition only because that way the resizing
+
+                is only finished on 2nd boot.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-2.89.15
+          title: "'resindataexpander: do not return after resizing the partition only'"
+          date: 2022-02-07T10:54:58.341Z
+  version: 2.89.15
+  title: "'layers/meta-balena: Update to 2.89.15'"
+  date: 2022-02-07T13:11:13.174Z
+- commits:
     - subject: Update meta-balena from v2.89.5 to v2.89.14
       hash: 677a055769357825f019d471bf626444014905fc
       body: |
