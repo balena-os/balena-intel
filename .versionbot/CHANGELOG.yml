@@ -1,4 +1,35 @@
 - commits:
+    - subject: Update balena-yocto-scripts from v1.17.2 to v1.17.3
+      hash: 1dc81085266b5cf76390f259c1b81d6cd53cb936
+      body: |
+        Update balena-yocto-scripts from 1.17.2 to 1.17.3
+      footer:
+        Changelog-entry: Update balena-yocto-scripts from v1.17.2 to v1.17.3
+        changelog-entry: Update balena-yocto-scripts from v1.17.2 to v1.17.3
+        Change-type: patch
+        change-type: patch
+      author: Kyle Harding
+      nested:
+        - commits:
+            - subject: "jenkins_build: Use recurse-submodules when checking out meta-balena"
+              hash: 00fb29b9a7a00dc1209be497ef171736e6229954
+              body: >
+                If meta-balena has submodule updates we want to make sure to use
+                them.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.17.3
+          title: "'jenkins_build: Use recurse-submodules when checking out meta-balena'"
+          date: 2022-03-02T17:17:21.631Z
+  version: 2.89.15+rev2
+  title: "'balena-yocto-scripts: Update balena-yocto-scripts to v1.17.3'"
+  date: 2022-03-02T19:51:31.736Z
+- commits:
     - subject: Update balena-yocto-scripts to v1.17.2
       hash: acd46a1f5efe4398bd17135ab7706ac42f6325d6
       body: |

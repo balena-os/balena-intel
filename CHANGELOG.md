@@ -1,6 +1,20 @@
 Change log
 -----------
 
+# v2.89.15+rev2
+## (2022-03-02)
+
+
+<details>
+<summary> Update balena-yocto-scripts from v1.17.2 to v1.17.3 [Kyle Harding] </summary>
+
+> ## balena-yocto-scripts-1.17.3
+> ### (2022-03-02)
+> 
+> * jenkins_build: Use recurse-submodules when checking out meta-balena [Kyle Harding]
+> 
+</details>
+
 # v2.89.15+rev1
 ## (2022-02-28)
 
