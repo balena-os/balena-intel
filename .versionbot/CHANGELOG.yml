@@ -1,4 +1,38 @@
 - commits:
+    - subject: Update balena-yocto-scripts from v1.17.3 to v1.17.4
+      hash: 19151fffe1ebf8552d624666b602f6f9783ae468
+      body: |
+        Update balena-yocto-scripts from 1.17.3 to 1.17.4
+      footer:
+        Changelog-entry: Update balena-yocto-scripts from v1.17.3 to v1.17.4
+        changelog-entry: Update balena-yocto-scripts from v1.17.3 to v1.17.4
+        Change-type: patch
+        change-type: patch
+      author: Kyle Harding
+      nested:
+        - commits:
+            - subject: Init and update submodules when switching meta-balena branches
+              hash: 5162e7c9fa39498488303caab7d746456fc9abd4
+              body: >
+                If the submodule was recently added to meta-balena, the checkout
+
+                command will not initialize it without a separate submodule update
+
+                command.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.17.4
+          title: "'Init and update submodules when switching meta-balena branches'"
+          date: 2022-03-03T16:46:17.542Z
+  version: 2.89.15+rev3
+  title: "'balena-yocto-scripts: Update balena-yocto-scripts to v1.17.4'"
+  date: 2022-03-03T17:38:58.526Z
+- commits:
     - subject: Update balena-yocto-scripts from v1.17.2 to v1.17.3
       hash: 1dc81085266b5cf76390f259c1b81d6cd53cb936
       body: |

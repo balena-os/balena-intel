@@ -1,6 +1,20 @@
 Change log
 -----------
 
+# v2.89.15+rev3
+## (2022-03-03)
+
+
+<details>
+<summary> Update balena-yocto-scripts from v1.17.3 to v1.17.4 [Kyle Harding] </summary>
+
+> ## balena-yocto-scripts-1.17.4
+> ### (2022-03-03)
+> 
+> * Init and update submodules when switching meta-balena branches [Kyle Harding]
+> 
+</details>
+
 # v2.89.15+rev2
 ## (2022-03-02)
 
