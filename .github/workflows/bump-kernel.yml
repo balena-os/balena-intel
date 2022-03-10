@@ -1,0 +1,22 @@
+name: bump kernel
+
+on:
+  schedule:
+    - cron: "0 0 * * 1"
+  pull_request:
+    branches:
+      - "master"
+
+jobs:
+  fetch-externals:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: technote-space/create-pr-action@v2
+        with:
+         EXECUTE_COMMANDS: |
+           ./balena-yocto-scripts/automation/gh_actions_bump_kernel.sh
+         COMMIT_MESSAGE: 'patch: Update to latest stable kernel release'
+         PR_TITLE: 'patch: Update to latest stable kernel release'
+         PR_BRANCH_PREFIX: github-actions/
+         PR_BRANCH_NAME: 'bump-kernel-${PR_ID}'
