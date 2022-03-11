@@ -47,6 +47,7 @@ module.exports =
 		fstype: 'balenaos-img'
 		version: 'yocto-dunfell'
 		deployArtifact: 'balena-image-flasher-genericx86-64-ext.balenaos-img'
+		deployFlasherArtifact: 'balena-image-flasher-genericx86-64-ext.balenaos-img'
 		compressed: true
 
 	configuration:
