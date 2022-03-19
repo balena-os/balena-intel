@@ -9,7 +9,7 @@
 #TARGET_TAG ?= ""
 
 # Set this to 1 if development image is desired
-#DEVELOPMENT_IMAGE = "1"
+#OS_DEVELOPMENT = "1"
 
 # Set this to make build system generate resinhup bundles
 #RESINHUP ?= "yes"
