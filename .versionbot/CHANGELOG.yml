@@ -1,4 +1,39 @@
 - commits:
+    - subject: Update balena-yocto-scripts from v1.17.4 to v1.17.5
+      hash: c04cdaaa97325fcb8067af41fae6a4c1494d8980
+      body: |
+        Update balena-yocto-scripts from 1.17.4 to 1.17.5
+      footer:
+        Changelog-entry: Update balena-yocto-scripts from v1.17.4 to v1.17.5
+        changelog-entry: Update balena-yocto-scripts from v1.17.4 to v1.17.5
+        Change-type: patch
+        change-type: patch
+      author: Kyle Harding
+      nested:
+        - commits:
+            - subject: "balena-deploy: Avoid patching test suites config.js during deploy"
+              hash: 21c27cd41cda7ee7f5041752cca1f79280c51a7e
+              body: >
+                This will allow us to make changes to config.js in meta-balena
+                without
+
+                breaking the deploy steps. If additional changes are needed at runtime
+
+                the substitutions can be made by the leviathan Jenkins job.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.17.5
+          title: "'balena-deploy: Avoid patching test suites config.js during deploy'"
+          date: 2022-03-08T13:38:17.771Z
+  version: 2.95.1+rev1
+  title: "'Rename  flag to  '"
+  date: 2022-03-19T16:26:28.209Z
+- commits:
     - subject: Update meta-balena from v2.95.0 to v2.95.1
       hash: 59b1438459360b041ea5410dcd008571805da8c4
       body: |
