@@ -537,3 +537,9 @@ SRC_URI_append_surface-go = " \
 # further for it, as per the internal thread:
 # https://www.flowdock.com/app/rulemotion/resin-devices/threads/K2TQiSUfNDqBT5Ih6cciNI2d9QJ
 BALENA_CONFIGS_append_genericx86-64 = " aufs"
+
+# do not build hpwdt (this apparently causes boot issues for a customer; Ubuntu blacklists this for a while now: https://bugs.launchpad.net/ubuntu/+source/linux/+bug/1432837)
+BALENA_CONFIGS_append_genericx86-64-ext = " no-hpwdt"
+BALENA_CONFIGS[no-hpwdt] ?= " \
+    CONFIG_HP_WATCHDOG=n \
+"
