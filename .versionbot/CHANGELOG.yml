@@ -1,4 +1,165 @@
 - commits:
+    - subject: Update meta-balena from v2.95.1 to v2.95.5
+      hash: 922d21cdca03caa616ee39bed326d304f3e62f59
+      body: |
+        Update meta-balena from 2.95.1 to 2.95.5
+      footer:
+        Changelog-entry: Update meta-balena from v2.95.1 to v2.95.5
+        changelog-entry: Update meta-balena from v2.95.1 to v2.95.5
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested:
+        - commits:
+            - subject: "tests/kernel-overlap: Prevent test run failure on older kernels"
+              hash: 3d230a9d003988924b6c16720d554c9f48a05c16
+              body: >
+                The issue that this test is aimed at has been introduced in
+
+                kernel versions above 4.13. On older kernels like for instance
+
+                4.9, the test will not pass.
+
+
+                Let's run this test on kernel versions where the issue was present.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+          version: meta-balena-2.95.5
+          title: "'tests/kernel-overlap: Prevent test run failure on older kernels'"
+          date: 2022-03-21T15:04:59.766Z
+        - commits:
+            - subject: "tests/os: wait for osconfig service to be inactive"
+              hash: da59749c901057a55adaf990643fc235480156aa
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+          version: meta-balena-2.95.4
+          title: "'Fix dns test'"
+          date: 2022-03-17T17:38:43.827Z
+        - commits:
+            - subject: "balena-supervisor: Update balena-supervisor to v12.11.38 Ensure
+                preloaded applications are ran when no internet is available on
+                first run"
+              hash: 08058f8671704f7d925ed97c3202b3620570a95b
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: 20k-ultra <3946250+20k-ultra@users.noreply.github.com>
+                signed-off-by: 20k-ultra <3946250+20k-ultra@users.noreply.github.com>
+              author: 20k-ultra
+              nested: []
+          version: meta-balena-2.95.3
+          title: "'balena-supervisor: Update balena-supervisor to v12.11.38'"
+          date: 2022-03-15T23:32:43.991Z
+        - commits:
+            - subject: "kernel-balena: Disable building gcc plugins"
+              hash: bd8d2de9983f47e46ffa0e689be88c5b12e46617
+              body: >
+                Since
+                https://github.com/raspberrypi/linux/commit/1eee36a5520b5a89fb4d0d6af6f9cb0217a3164f
+
+                was merged and included in kernel versions after 5.10.84,
+
+                building the kernel-modules-headers fails due to various missing
+
+                headers from the gmp and mpc packages. This problem is visible
+
+                only after upgrading to a newer kernel, because until now the
+
+                gcc plugins kernel config was not enabled at all, due to the
+
+                failed check in the above mentioned patch.
+
+
+                Since we are not using the functions provided
+
+                by the gcc plugins anyway, we can disable this
+
+                config.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+          version: meta-balena-2.95.2
+          title: "'kernel-balena: Disable building of gcc plugins'"
+          date: 2022-03-11T17:26:05.533Z
+    - subject: Update balena-yocto-scripts from v1.17.5 to v1.17.8
+      hash: be41a5feac97efe26c4c59e0518abaf509471c88
+      body: |
+        Update balena-yocto-scripts from 1.17.5 to 1.17.8
+      footer:
+        Changelog-entry: Update balena-yocto-scripts from v1.17.5 to v1.17.8
+        changelog-entry: Update balena-yocto-scripts from v1.17.5 to v1.17.8
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested:
+        - commits:
+            - subject: "balena-deploy: s/resin-flasher/balena-flasher"
+              hash: abdae4c86ed213a64bb1fa7498f4837f53d95448
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: balena-yocto-scripts-1.17.8
+          title: "'balena-deploy: s/resin-flasher/balena-flasher'"
+          date: 2022-03-15T20:11:21.544Z
+        - commits:
+            - subject: "jenkins_generate_ami: surface preload app commit as variable"
+              hash: 7248b344198ba09a219ee227ffea4b6f0a4850d7
+              body: >
+                Surface the preloaded app commit as a variable that can be
+                overridden in
+
+                the build job. Default to "current" to maintain existing behavior when
+
+                the variable isn't set.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: balena-yocto-scripts-1.17.7
+          title: "'jenkins_generate_ami: surface preload app commit as variable'"
+          date: 2022-03-15T16:36:33.654Z
+        - commits:
+            - subject: "barys: Remove RESINHUP setting"
+              hash: 367f153009928f36de8edcd97a56d6f58b5d6773
+              body: |
+                This has now been removed from meta-balena.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: balena-yocto-scripts-1.17.6
+          title: "'barys: Remove RESINHUP setting'"
+          date: 2022-03-08T19:00:31.730Z
+  version: 2.95.5
+  date: 2022-03-24T08:58:24.074Z
+- commits:
     - subject: Update balena-yocto-scripts from v1.17.4 to v1.17.5
       hash: c04cdaaa97325fcb8067af41fae6a4c1494d8980
       body: |
