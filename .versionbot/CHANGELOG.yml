@@ -1,4 +1,138 @@
 - commits:
+    - subject: Update meta-balena from v2.95.5 to v2.95.8
+      hash: 59dcb59f07df5ccf9175b9d9c9d44d23dfac85fe
+      body: |
+        Update meta-balena from 2.95.5 to 2.95.8
+      footer:
+        Changelog-entry: Update meta-balena from v2.95.5 to v2.95.8
+        changelog-entry: Update meta-balena from v2.95.5 to v2.95.8
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested:
+        - commits:
+            - subject: "resindataexpander: Check and fix end GPT if necessary"
+              hash: 5d2435e17851f44f17cfba491b01f766d7930317
+              body: >
+                Under certain circumstances that we haven't reproduced,
+
+                it is reported that the alternate GPT may become corrupt,
+
+                preventing the device from booting.
+
+
+                Should this happen, we use sgdisk to check and recover the end gpt
+
+                from the main one.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+          version: meta-balena-2.95.8
+          title: "'Add gpt check'"
+          date: 2022-03-25T08:08:23.471Z
+        - commits:
+            - subject: "hostapp-update-hooks: Always update legacy development variants to
+                development mode"
+              hash: 8c7bd8d87d0db97851528f97c4853097c63273e4
+              body: >
+                A legacy development image will update to development mode
+                enabled
+
+                independently of whether the newOS is configured for development mode or
+
+                not. The only case when a hostapp has developmentMode set is when locally
+
+                building with `OS_DEVELOPMENT`.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.95.7
+          title: "'Always update legacy development variants to development mode'"
+          date: 2022-03-23T12:47:07.162Z
+        - commits:
+            - subject: "balena-supervisor: Use architecture instead of device type to query
+                API"
+              hash: 419e1eefe64b6e5ffc9ff370e50cd256a319ef2c
+              body: >
+                This caters for the use case of custom device types that are not
+
+                registered in balena-cloud but still need to fetch the supervisor from
+
+                balena-cloud's registry by querying the `supervisor_version` endpoint,
+
+                for example when using openBalena.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "update-balena-supervisor: Support passing command line image argument"
+              hash: 227fea72a17c00bcd7e8ee069414ccc006703072
+              body: >
+                For balena-cloud managed devices, the supervisor update data is
+                managed
+
+                by the API.
+
+
+                Providing the image name in the command line provides an update path
+
+                for unmanaged devices, manual updates on ESR devices (which currently
+
+                do not allow dashboard based updates) and openBalena use cases.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.95.6
+          title: "'Supervisor update enhacements'"
+          date: 2022-03-22T15:05:51.376Z
+    - subject: Update balena-yocto-scripts from v1.17.8 to v1.17.9
+      hash: 00fd9c784651c0cd46a9f9e6df74f15af8dea907
+      body: |
+        Update balena-yocto-scripts from 1.17.8 to 1.17.9
+      footer:
+        Changelog-entry: Update balena-yocto-scripts from v1.17.8 to v1.17.9
+        changelog-entry: Update balena-yocto-scripts from v1.17.8 to v1.17.9
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested:
+        - commits:
+            - subject: "automation: ami: make BALENA_PRELOAD_COMMIT optional"
+              hash: b365cb9ba359637a3a6a8451b8d83142bb167571
+              body: >
+                Remove BALENA_PRELOAD_COMMIT from required env vars, as we have
+                a
+
+                default if it's not specified.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: balena-yocto-scripts-1.17.9
+          title: "'automation: ami: make BALENA_PRELOAD_COMMIT optional'"
+          date: 2022-03-25T23:25:09.583Z
+  version: 2.95.8
+  title: "'Release v2.95.8'"
+  date: 2022-03-27T12:31:54.125Z
+- commits:
     - subject: Update meta-balena from v2.95.1 to v2.95.5
       hash: 922d21cdca03caa616ee39bed326d304f3e62f59
       body: |
