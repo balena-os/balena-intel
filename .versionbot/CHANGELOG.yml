@@ -1,4 +1,20 @@
 - commits:
+    - subject: Update balena-yocto-scripts to v1.17.10
+      hash: 378edead120113ee25ff6f527f7179a2a78219d8
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: Update balena-yocto-scripts to v1.17.10
+        changelog-entry: Update balena-yocto-scripts to v1.17.10
+        Signed-off-by: Anton Belodedenko <anton@balena.io>
+        signed-off-by: Anton Belodedenko <anton@balena.io>
+      author: ab77
+      nested: []
+  version: 2.95.8+rev1
+  title: "'balena-yocto-scripts: Update to v1.17.10'"
+  date: 2022-03-28T17:46:47.579Z
+- commits:
     - subject: Update meta-balena from v2.95.5 to v2.95.8
       hash: 59dcb59f07df5ccf9175b9d9c9d44d23dfac85fe
       body: |
