@@ -1,6 +1,20 @@
 Change log
 -----------
 
+# v2.95.9+rev3
+## (2022-03-29)
+
+
+<details>
+<summary> Update balena-yocto-scripts to v1.17.12 [ab77] </summary>
+
+> ## balena-yocto-scripts-1.17.12
+> ### (2022-03-29)
+> 
+> * Remove superfluous preload flag [ab77]
+> 
+</details>
+
 # v2.95.9+rev2
 ## (2022-03-29)
 
