@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v2.95.9
+## (2022-03-29)
+
+
+<details>
+<summary> Update meta-balena from v2.95.8 to v2.95.9 [Florin Sarbu] </summary>
+
+> ## meta-balena-2.95.9
+> ### (2022-03-28)
+> 
+> * tests: update leviathan to 2.0.4 [rcooke-warwick]
+> * tests: update config for new leviathan version [rcooke-warwick]
+> 
+</details>
+
 # v2.95.8+rev1
 ## (2022-03-28)
 

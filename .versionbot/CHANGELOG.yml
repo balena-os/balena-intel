@@ -1,4 +1,43 @@
 - commits:
+    - subject: Update meta-balena from v2.95.8 to v2.95.9
+      hash: ba018e9487cf1e39f569cfecce7e80538a9fd03e
+      body: |
+        Update meta-balena from 2.95.8 to 2.95.9
+      footer:
+        Changelog-entry: Update meta-balena from v2.95.8 to v2.95.9
+        changelog-entry: Update meta-balena from v2.95.8 to v2.95.9
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested:
+        - commits:
+            - subject: "tests: update leviathan to 2.0.4"
+              hash: b90c280d8f08497fcf2ca7b5329bdb7e7dc7c22a
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+            - subject: "tests: update config for new leviathan version"
+              hash: 788cacc8daadf487698e28e2ad308cc54f1d96b4
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+          version: meta-balena-2.95.9
+          title: "'tests: update config for new leviathan version'"
+          date: 2022-03-28T12:52:25.738Z
+  version: 2.95.9
+  title: "'layers/meta-balena: Update meta-balena to v2.95.9'"
+  date: 2022-03-29T05:36:43.340Z
+- commits:
     - subject: Update balena-yocto-scripts to v1.17.10
       hash: 378edead120113ee25ff6f527f7179a2a78219d8
       body: ""
