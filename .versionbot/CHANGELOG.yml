@@ -1,4 +1,45 @@
 - commits:
+    - subject: Update balena-yocto-scripts to v1.17.11
+      hash: bebe4c82dd93d27a7681095cb5d1fc375b3acabf
+      body: |
+        Update balena-yocto-scripts from v1.17.10 to v1.17.11
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: Update balena-yocto-scripts to v1.17.11
+        changelog-entry: Update balena-yocto-scripts to v1.17.11
+        Signed-off-by: Anton Belodedenko <anton@balena.io>
+        signed-off-by: Anton Belodedenko <anton@balena.io>
+      author: ab77
+      nested:
+        - commits:
+            - subject: Unattended preload operation
+              hash: 1fecbb4d000b1a403f192a63d5e2921ded56647c
+              body: >
+                * the CLI prompts for input during preload
+
+
+                Alternatively, the --pin-device-to-release flag may be used to pin only the
+
+                preloaded device to the selected release.
+
+
+                Would you like to disable automatic updates for this fleet now? No
+
+
+                * we do not want to set the suggested flag and we do not want to touch the fleet release policy for this use case
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: ab77
+              nested: []
+          version: balena-yocto-scripts-1.17.11
+          title: "'Unattended preload operation'"
+          date: 2022-03-29T14:36:18.054Z
+  version: 2.95.9+rev2
+  title: "'balena-yocto-scripts: Update to v1.17.11'"
+  date: 2022-03-29T14:51:20.854Z
+- commits:
     - subject: Specify full path in repo.yml upstreams
       hash: dafa7f0eb7444e7c01e70f17e496c38f46cba3e6
       body: |

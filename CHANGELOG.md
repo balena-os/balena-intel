@@ -1,6 +1,20 @@
 Change log
 -----------
 
+# v2.95.9+rev2
+## (2022-03-29)
+
+
+<details>
+<summary> Update balena-yocto-scripts to v1.17.11 [ab77] </summary>
+
+> ## balena-yocto-scripts-1.17.11
+> ### (2022-03-29)
+> 
+> * Unattended preload operation [ab77]
+> 
+</details>
+
 # v2.95.9+rev1
 ## (2022-03-29)
 
