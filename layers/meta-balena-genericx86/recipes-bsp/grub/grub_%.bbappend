@@ -1,13 +1,13 @@
-FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
-SRC_URI_append = " \
+SRC_URI:append = " \
     file://config \
     "
 
 inherit deploy
 
-DEPENDS_append_class-target = " grub-conf grub-native coreutils-native"
-RDEPENDS_${PN}_class-native = ""
+DEPENDS:append:class-target = " grub-conf grub-native coreutils-native"
+RDEPENDS:${PN}:class-native = ""
 
 MBR_IMAGE = "boot.img"
 GRUB_IMAGE = "core.img"
@@ -15,7 +15,7 @@ GRUB_TARGET = "i386-pc"
 
 GRUB_BUILDIN ?= "biosdisk part_msdos fat search linux"
 
-do_deploy_class-target() {
+do_deploy:class-target() {
     mkdir -p ${DEPLOYDIR}/grub/${GRUB_TARGET}
     install -m 644 ${D}/${libdir}/grub/${GRUB_TARGET}/boot.img ${DEPLOYDIR}/grub
 
