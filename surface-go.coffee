@@ -41,7 +41,7 @@ module.exports =
 		machine: 'surface-go'
 		image: 'balena-image-flasher'
 		fstype: 'balenaos-img'
-		version: 'yocto-dunfell'
+		version: 'yocto-honister'
 		deployArtifact: 'balena-image-flasher-surface-go.balenaos-img'
 		compressed: true
 
