@@ -15,27 +15,27 @@ CONNECTIVITY_FIRMWARES =+ " \
 	linux-firmware-ralink-nic \
 	linux-firmware-ath10k-qca6174 \
 	"
-CONNECTIVITY_FIRMWARES_append_genericx86-64 = " \
+CONNECTIVITY_FIRMWARES:append:genericx86-64 = " \
 	linux-firmware-ibt-19-0-4 \
 	linux-firmware-iwlwifi-quz-a0-hr-b0 \
 "
 
-CONNECTIVITY_FIRMWARES_append_surface-go = " \
+CONNECTIVITY_FIRMWARES:append:surface-go = " \
 	linux-firmware-ath10k-qca6174 \
 	linux-firmware-i915-kbl \
 	linux-firmware-iwlwifi-cc-a0 \
 	linux-firmware-ibt-20-1-3 \
 "
 
-CONNECTIVITY_FIRMWARES_append_surface-pro-6 = " \
+CONNECTIVITY_FIRMWARES:append:surface-pro-6 = " \
 	linux-firmware-i915-kbl \
 	linux-firmware-ipts-v102 \
 	linux-firmware-pcie8897 \
 "
 
-CONNECTIVITY_FIRMWARES_remove = "linux-firmware-wl12xx"
+CONNECTIVITY_FIRMWARES:remove = "linux-firmware-wl12xx"
 
-CONNECTIVITY_FIRMWARES_remove_surface-go = " \
+CONNECTIVITY_FIRMWARES:remove_surface-go = " \
     linux-firmware-bcm43455 \
     linux-firmware-ibt-11-5 \
     linux-firmware-ibt-12-16 \
@@ -72,7 +72,7 @@ CONNECTIVITY_FIRMWARES_remove_surface-go = " \
 "
 
 # these are now just empty packages so let's remove them to avoid a build error
-CONNECTIVITY_FIRMWARES_remove = " \
+CONNECTIVITY_FIRMWARES:remove = " \
     linux-firmware-iwlwifi-3160-7 \
     linux-firmware-iwlwifi-3160-8 \
     linux-firmware-iwlwifi-3160-9 \
@@ -86,8 +86,8 @@ CONNECTIVITY_MODULES =+ " \
 	rtl8812bu \
 "
 
-CONNECTIVITY_MODULES_remove_surface-go = "rtl8812au rtl8812bu"
+CONNECTIVITY_MODULES:remove_surface-go = "rtl8812au rtl8812bu"
 
 # we need to clean-up rootfs space so let's remove some unused firmware
-CONNECTIVITY_FIRMWARES_remove = "linux-firmware-wl18xx"
-CONNECTIVITY_FIRMWARES_remove = "linux-firmware-wlcommon"
+CONNECTIVITY_FIRMWARES:remove = "linux-firmware-wl18xx"
+CONNECTIVITY_FIRMWARES:remove = "linux-firmware-wlcommon"

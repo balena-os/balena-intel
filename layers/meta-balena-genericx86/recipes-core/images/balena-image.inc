@@ -2,7 +2,7 @@
 # Genericx86-64
 #
 
-IMAGE_FSTYPES_append = " balenaos-img"
+IMAGE_FSTYPES:append = " balenaos-img"
 
 # Do not support live USB stick
 NOISO = "1"
@@ -28,6 +28,6 @@ write_mbr() {
     dd if=${DEPLOY_DIR_IMAGE}/grub/core.img of=${BALENA_RAW_IMG} conv=notrunc bs=1 seek=512
 }
 
-IMAGE_POSTPROCESS_COMMAND_append = " write_mbr; "
+IMAGE_POSTPROCESS_COMMAND:append = " write_mbr; "
 
-IMAGE_INSTALL_append = " efibootmgr"
+IMAGE_INSTALL:append = " efibootmgr"
