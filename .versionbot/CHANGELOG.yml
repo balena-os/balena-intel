@@ -1,4 +1,34 @@
 - commits:
+    - subject: Update balena-yocto-scripts to v1.18.0
+      hash: 6683501054991072c2e921803c11b5c68d40b863
+      body: |
+        Update balena-yocto-scripts from v1.17.12 to v1.18.0
+      footer:
+        Change-type: minor
+        change-type: minor
+        Changelog-entry: Update balena-yocto-scripts to v1.18.0
+        changelog-entry: Update balena-yocto-scripts to v1.18.0
+        Signed-off-by: Anton Belodedenko <anton@balena.io>
+        signed-off-by: Anton Belodedenko <anton@balena.io>
+      author: ab77
+      nested:
+        - commits:
+            - subject: Bump balena-cli to v.Latest
+              hash: 6aec14bf20674e62822ba41f56ef2763c4036b6d
+              body: |
+                * remove SSH key injection
+              footer:
+                Change-type: minor
+                change-type: minor
+              author: ab77
+              nested: []
+          version: balena-yocto-scripts-1.18.0
+          title: "'Bump balena-cli to v.Latest'"
+          date: 2022-03-31T20:52:47.275Z
+  version: 2.95.12+rev1
+  title: "'balena-yocto-scripts: Update to v1.17.x'"
+  date: 2022-04-01T01:26:22.222Z
+- commits:
     - subject: Update layers/meta-balena to 8797487542bebf28f89bcb5251437f12c117dec7
       hash: ed5be5e15e4a7adc65f4e0d568bce2c052fa383e
       body: Update layers/meta-balena
