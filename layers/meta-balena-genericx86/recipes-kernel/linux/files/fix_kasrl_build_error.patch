@@ -1,0 +1,39 @@
+Subject: [PATCH] x86: Don't clare __force_order in kaslr_64.c
+Date: Fri, 24 Jan 2020 10:18:11 -0800	[thread overview]
+Message-ID: <20200124181811.4780-1-hjl.tools@gmail.com> (raw)
+
+GCC 10 changed the default to -fno-common, which leads to
+
+  LD      arch/x86/boot/compressed/vmlinux
+ld: arch/x86/boot/compressed/pgtable_64.o:(.bss+0x0): multiple definition of `__force_order'; arch/x86/boot/compressed/kaslr_64.o:(.bss+0x0): first defined here
+make[2]: *** [arch/x86/boot/compressed/Makefile:119: arch/x86/boot/compressed/vmlinux] Error 1
+
+Since __force_order is already provided in pgtable_64.c, there is no
+need to declare __force_order in kaslr_64.c.
+
+Signed-off-by: H.J. Lu <hjl.tools@gmail.com>
+Signed-off-by: Yu-cheng Yu <yu-cheng.yu@intel.com>
+
+Upstream-status: Backport
+Signed-off-by: Alexandru Costache <alexandru@balena.io
+---
+ arch/x86/boot/compressed/kaslr_64.c | 3 ---
+ 1 file changed, 3 deletions(-)
+
+diff --git a/arch/x86/boot/compressed/kaslr_64.c b/arch/x86/boot/compressed/kaslr_64.c
+index 748456c365f4..9557c5a15b91 100644
+--- a/arch/x86/boot/compressed/kaslr_64.c
++++ b/arch/x86/boot/compressed/kaslr_64.c
+@@ -29,9 +29,6 @@
+ #define __PAGE_OFFSET __PAGE_OFFSET_BASE
+ #include "../../mm/ident_map.c"
+ 
+-/* Used by pgtable.h asm code to force instruction serialization. */
+-unsigned long __force_order;
+-
+ /* Used to track our page table allocation area. */
+ struct alloc_pgt_data {
+ 	unsigned char *pgt_buf;
+-- 
+2.24.1
+

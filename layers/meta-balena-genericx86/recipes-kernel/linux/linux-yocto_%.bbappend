@@ -13,6 +13,7 @@ SRC_URI:append:surface-pro-6 = " \
     file://0003-ipts.patch \
     file://0007-BUGFIX-iwlwifi-mvm-Allow-multicast-~ta-frames-only-when-associated.patch \
     file://0008-BUGFIX-iwlwifi-mvm-Allow-multicast-~ta-frames-only-when-authorized.patch \
+    file://fix_kasrl_build_error.patch \
 "
 
 SRC_URI:append:genericx86-64-ext = " \
