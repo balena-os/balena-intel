@@ -9,7 +9,8 @@ SRC_URI = " \
 	file://0001-Use-modules_install-as-wanted-by-yocto.patch \
 "
 
-SRCREV = "b95e75064d6aa5b680049a3fe63b2131a3033e3e"
+# Latest head as of today, compatible with kernel 5.12
+SRCREV = "460ad2e6896381551f66f1d3991fed552323c38d"
 S = "${WORKDIR}/git"
 
 EXTRA_OEMAKE:append = " KSRC=${STAGING_KERNEL_DIR}"
