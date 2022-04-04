@@ -544,3 +544,10 @@ BALENA_CONFIGS:append:genericx86-64-ext = " no-hpwdt"
 BALENA_CONFIGS[no-hpwdt] ?= " \
     CONFIG_HP_WATCHDOG=n \
 "
+
+BALENA_CONFIGS:append:genericx86-64 = " optimize-size"
+BALENA_CONFIGS[optimize-size] = " \
+    CONFIG_CC_OPTIMIZE_FOR_SIZE=y \
+"
+
+BALENA_CONFIGS:remove:genericx86-64-ext = " optimize-size"
