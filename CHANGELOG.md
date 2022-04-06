@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v2.95.15
+## (2022-04-06)
+
+* Update meta-balena from v2.95.12 to v2.95.15 [Alexandru Costache]
+* Update poky to honister-3.4.3 [Florin Sarbu]
+
 # v2.95.14
 ## (2022-04-06)
 

@@ -1,4 +1,29 @@
 - commits:
+    - subject: Update meta-balena from v2.95.12 to v2.95.15
+      hash: 2d1959b04e86fa06b428857585bea0d4dc84f52f
+      body: |
+        Update meta-balena from 2.95.12 to 2.95.15
+      footer:
+        Changelog-entry: Update meta-balena from v2.95.12 to v2.95.15
+        changelog-entry: Update meta-balena from v2.95.12 to v2.95.15
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+    - subject: Update poky to honister-3.4.3
+      hash: d91e3912b0c57ff19d078a35089e3bae0ab8c904
+      body: ""
+      footer:
+        Changelog-entry: Update poky to honister-3.4.3
+        changelog-entry: Update poky to honister-3.4.3
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 2.95.15
+  title: "'Update to honister'"
+  date: 2022-04-06T17:57:10.491Z
+- commits:
     - subject: Update layers/meta-balena to e13a2dbf4bee982f03b709d25b172d670fb7f4f1
       hash: 90bc542fb3d776dbd6da695f7e32e363a9373197
       body: Update layers/meta-balena
