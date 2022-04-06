@@ -45,7 +45,7 @@ module.exports =
 		machine: 'genericx86-64-ext'
 		image: 'balena-image-flasher'
 		fstype: 'balenaos-img'
-		version: 'yocto-dunfell'
+		version: 'yocto-honister'
 		deployArtifact: 'balena-image-flasher-genericx86-64-ext.balenaos-img'
 		compressed: true
 

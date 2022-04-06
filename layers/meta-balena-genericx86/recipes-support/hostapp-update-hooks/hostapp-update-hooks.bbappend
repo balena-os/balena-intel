@@ -1,8 +1,8 @@
-FILESEXTRAPATHS_append := ":${THISDIR}/files"
+FILESEXTRAPATHS:append := ":${THISDIR}/files"
 
 HOSTAPP_HOOKS += " \
   99-resin-grub \
   999-resin-boot-cleaner \
   "
 
-RDEPENDS_${PN} += "util-linux-lsblk"
+RDEPENDS:${PN} += "util-linux-lsblk"

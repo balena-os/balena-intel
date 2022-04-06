@@ -1,4 +1,4 @@
-FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
 SRC_URI += " \
     file://SurfaceTouchServicingDescriptorMSHW0102.bin \
@@ -18,7 +18,7 @@ SRC_URI += " \
 # from Raspbian:
 # https://github.com/RPi-Distro/firmware-nonfree
 
-SRC_URI_append = " \
+SRC_URI:append = " \
     git://github.com/RPi-Distro/firmware-nonfree;destsuffix=raspbian-nf;name=raspbian-nf \
 "
 
@@ -26,18 +26,18 @@ SRCREV_raspbian-nf = "86e88fbf0345da49555d0ec34c80b4fbae7d0cd3"
 SRCREV_FORMAT = "default+raspbian-nf"
 
 PACKAGES =+ "${PN}-ibt-20-1-3"
-FILES_${PN}-ibt-20-1-3  = " \
+FILES:${PN}-ibt-20-1-3  = " \
     ${nonarch_base_libdir}/firmware/intel/ibt-20-1-3.ddc* \
     ${nonarch_base_libdir}/firmware/intel/ibt-20-1-3.sfi* \
 "
 
 PACKAGES =+ "${PN}-ipts-v102"
-FILES_${PN}-ipts-v102 = " \
+FILES:${PN}-ipts-v102 = " \
     ${nonarch_base_libdir}/firmware/intel/ipts/* \
 "
 
 PACKAGES =+ "${PN}-ipu3-firmware"
-FILES_${PN}-ipu3-firmware = " \
+FILES:${PN}-ipu3-firmware = " \
     ${nonarch_base_libdir}/firmware/intel/ipu3-fw.bin* \
     ${nonarch_base_libdir}/firmware/intel/irci_irci_ecr-master_20161208_0213_20170112_1500.bin* \
     ${nonarch_base_libdir}/firmware/LICENSE.ipu3_firmware* \
@@ -45,11 +45,11 @@ FILES_${PN}-ipu3-firmware = " \
 
 PACKAGES =+ "${PN}-iwlwifi-quz-a0-hr-b0"
 
-FILES_${PN}-iwlwifi-quz-a0-hr-b0 = " \
+FILES:${PN}-iwlwifi-quz-a0-hr-b0 = " \
     ${nonarch_base_libdir}/firmware/iwlwifi-QuZ-a0-hr-b0-48.ucode* \
 "
 
-do_install_append() {
+do_install:append() {
     install -d ${D}${nonarch_base_libdir}/firmware/brcm/
     install -m 0644 ${WORKDIR}/raspbian-nf/brcm/brcmfmac43455-sdio.txt ${D}${nonarch_base_libdir}/firmware/brcm/
 

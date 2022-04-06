@@ -5,7 +5,7 @@ LIC_FILES_CHKSUM = "file://Kconfig;md5=19ad8a52020550b4b0387225ae48ec9f"
 inherit module
 
 SRC_URI = " \
-	git://github.com/fastoe/RTL8812BU.git;protocol=https;branch=v5.6.1; \
+	git://github.com/cilynx/rtl88x2bu.git;protocol=https;branch=5.8.7.1_35809.20191129_COEX20191120-7777; \
 	file://0001-Use-modules_install-as-wanted-by-yocto.patch \
 	file://0002-Makefile-Fix-yocto-build.patch \
 "
@@ -16,7 +16,7 @@ SRC_URI = " \
 # of the driver is used for any particular release.
 # Otherwise a jenkins build triggered right after OS testing
 # could use a newer revision that has not been actually verified.
-SRCREV = "31ea94ea189dc4ee85b6e76141580ed5397da12b"
+SRCREV = "1751f39dcbc2ab101cb17a09052945613bb9b78c"
 S = "${WORKDIR}/git"
 
-EXTRA_OEMAKE_append = " KSRC=${STAGING_KERNEL_DIR}"
+EXTRA_OEMAKE:append = " KSRC=${STAGING_KERNEL_DIR}"
