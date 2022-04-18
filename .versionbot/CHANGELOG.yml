@@ -1,4 +1,21 @@
 - commits:
+    - subject: Move iwlwifi-quz-a0-hr-b0 firmware to meta-balena
+      hash: 8772e7f8bc8da85461893e359a61b79a1a0e3bae
+      body: |
+        This allows the package to be used by other device types.
+      footer:
+        Relates-to: balena-os/meta-balena#2239
+        relates-to: balena-os/meta-balena#2239
+        Changelog-entry: Move iwlwifi-quz-a0-hr-b0 firmware to meta-balena
+        changelog-entry: Move iwlwifi-quz-a0-hr-b0 firmware to meta-balena
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 2.95.15+rev2
+  title: "'linux-firmware: Move iwlwifi-quz-a0-hr-b0 to meta-balena'"
+  date: 2022-04-18T10:40:00.262Z
+- commits:
     - subject: Include firmware for AX200NGW and AX201NGW WiFi 6 adapters
       hash: 08a6db17e09f3a56243eb9aa6a2d6ca5c6633656
       body: |

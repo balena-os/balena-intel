@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.95.15+rev2
+## (2022-04-18)
+
+* Move iwlwifi-quz-a0-hr-b0 firmware to meta-balena [Alex Gonzalez]
+
 # v2.95.15+rev1
 ## (2022-04-12)
 
