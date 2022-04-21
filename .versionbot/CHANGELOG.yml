@@ -1,4 +1,21 @@
 - commits:
+    - subject: Remove redundant linux-firmware-iwlwifi-quz-a0-hr-b0
+      hash: 190fd1bc63c6d62da229612d6f2b18fa4f56e272
+      body: >
+        This is necessary to unwind a circular dependency moving the package to
+        meta-balena
+      footer:
+        Changelog-entry: Remove redundant linux-firmware-iwlwifi-quz-a0-hr-b0
+        changelog-entry: Remove redundant linux-firmware-iwlwifi-quz-a0-hr-b0
+        Signed-off-by: Michal Toman <michalt@balena.io>
+        signed-off-by: Michal Toman <michalt@balena.io>
+      author: Michal Toman
+      nested: []
+  version: 2.95.15+rev3
+  title: "'packagegroup-balena-connectivity: Remove redundant
+    linux-firmware-iwlwifi-quz-a0-hr-b0'"
+  date: 2022-04-21T11:45:30.243Z
+- commits:
     - subject: Move iwlwifi-quz-a0-hr-b0 firmware to meta-balena
       hash: 8772e7f8bc8da85461893e359a61b79a1a0e3bae
       body: |

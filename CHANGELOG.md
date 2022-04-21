@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.95.15+rev3
+## (2022-04-21)
+
+* Remove redundant linux-firmware-iwlwifi-quz-a0-hr-b0 [Michal Toman]
+
 # v2.95.15+rev2
 ## (2022-04-18)
 
