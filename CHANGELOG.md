@@ -1,6 +1,32 @@
 Change log
 -----------
 
+# v2.96.1
+## (2022-04-23)
+
+
+<details>
+<summary> Update layers/meta-balena to 0a58c6cdfc324e3fca540c48a119084669f99558 [Renovate Bot] </summary>
+
+> ## meta-balena-2.96.1
+> ### (2022-04-22)
+> 
+> * kernel-balena: Mention https protocol for github repository [Alexandru Costache]
+> 
+</details>
+
+* Update balena-yocto-scripts to 63e2b61fa462be4f68a2b7d8ca5084fd2d7d09b2 [Renovate Bot]
+
+<details>
+<summary> Update layers/meta-balena to b7490ca45f22591b1e6f7fddc1bf5853f373c125 [Renovate Bot] </summary>
+
+> ## meta-balena-2.96.1
+> ### (2022-04-22)
+> 
+> * kernel-balena: Mention https protocol for github repository [Alexandru Costache]
+> 
+</details>
+
 # v2.95.15+rev3
 ## (2022-04-21)
 
