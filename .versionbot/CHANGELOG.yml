@@ -1,4 +1,31 @@
 - commits:
+    - subject: Update layers/meta-balena to 54c754e97eb0ba3dcb4119908cc368e200c2f4ca
+      hash: cc95000ed52e26b453c443e405f849cc787823d7
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 54c754e97eb0ba3dcb4119908cc368e200c2f4ca
+        changelog-entry: Update layers/meta-balena to 54c754e97eb0ba3dcb4119908cc368e200c2f4ca
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: "tests/leviathan: Update leviathan to v2.2.4"
+              hash: 162c36be826eb3028a11fca2266407e8d2570d88
+              body: |
+                Update leviathan from 2.0.4 to 2.2.4
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: meta-balena-2.98.1
+          title: "'tests/leviathan: Update leviathan to v2.2.4'"
+          date: 2022-04-23T18:56:56.077Z
+  version: 2.98.1
+  title: "'Update layers/meta-balena digest to 54c754e'"
+  date: 2022-04-24T03:01:26.023Z
+- commits:
     - subject: Update layers/meta-balena to 5498ce099c7316a58d21c35d970292f1e2443d97
       hash: 8543d6b6e9a01c28689026e0c94be96c2b101612
       body: Update layers/meta-balena
