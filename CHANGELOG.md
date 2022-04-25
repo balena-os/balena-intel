@@ -1,6 +1,31 @@
 Change log
 -----------
 
+# v2.98.3
+## (2022-04-25)
+
+
+<details>
+<summary> Update layers/meta-balena to c71a9ac922091069e6fa736a07213685555ff21c [Renovate Bot] </summary>
+
+> ## meta-balena-2.98.3
+> ### (2022-04-25)
+> 
+> * Add renovate configuration [Kyle Harding]
+> 
+</details>
+
+
+<details>
+<summary> Update layers/meta-balena to b6b6fc6c137e42a4184d46432c23cd20a35edd6c [Renovate Bot] </summary>
+
+> ## meta-balena-2.98.3
+> ### (2022-04-25)
+> 
+> * Add renovate configuration [Kyle Harding]
+> 
+</details>
+
 # v2.98.1
 ## (2022-04-24)
 

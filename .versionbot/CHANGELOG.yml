@@ -1,4 +1,52 @@
 - commits:
+    - subject: Update layers/meta-balena to c71a9ac922091069e6fa736a07213685555ff21c
+      hash: 15ec5323c11276d41aeaf3be1af1dc3d99ec27df
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to c71a9ac922091069e6fa736a07213685555ff21c
+        changelog-entry: Update layers/meta-balena to c71a9ac922091069e6fa736a07213685555ff21c
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: Add renovate configuration
+              hash: 2537c8eed6f50399ce60b9f2ccc22336fb7cb86a
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: meta-balena-2.98.3
+          title: "'Add renovate configuration'"
+          date: 2022-04-25T18:07:21.534Z
+    - subject: Update layers/meta-balena to b6b6fc6c137e42a4184d46432c23cd20a35edd6c
+      hash: 184bafa21b31f827ed0bdcb2097195013db51992
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to b6b6fc6c137e42a4184d46432c23cd20a35edd6c
+        changelog-entry: Update layers/meta-balena to b6b6fc6c137e42a4184d46432c23cd20a35edd6c
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: Add renovate configuration
+              hash: 2537c8eed6f50399ce60b9f2ccc22336fb7cb86a
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: meta-balena-2.98.3
+          title: "'Add renovate configuration'"
+          date: 2022-04-25T18:07:21.534Z
+  version: 2.98.3
+  title: "'Update layers/meta-balena digest to c71a9ac'"
+  date: 2022-04-25T21:10:42.567Z
+- commits:
     - subject: Update layers/meta-balena to 54c754e97eb0ba3dcb4119908cc368e200c2f4ca
       hash: cc95000ed52e26b453c443e405f849cc787823d7
       body: Update layers/meta-balena
