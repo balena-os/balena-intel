@@ -1,4 +1,60 @@
 - commits:
+    - subject: Update layers/meta-balena to edda207aee705431cd02443bdfe8d6271228b96d
+      hash: 3e7711ecff95772188318513d51fb1dc1c1a07a0
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to edda207aee705431cd02443bdfe8d6271228b96d
+        changelog-entry: Update layers/meta-balena to edda207aee705431cd02443bdfe8d6271228b96d
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: "networkmanager: Use default DHCP timeout"
+              hash: 6175420731baa349c8d197151189462a23b2f460
+              body: >
+                This reverts 5047757 where we set the global DHCP timeout for
+                ipv4 to
+
+                infinity to mitigate problems with routers that do not respond to DHCP
+
+                requests in time.
+
+
+                This however causes issues on some routers, which after power cycle fail to
+
+                renew leases after they are expired.
+
+
+                The same ipv4.dhcp-timeout can be specified on per connection basis. Since
+
+                the case with lease renewal due to router power cycle is a more common case,
+
+                it is better to keep the global dhcp-timeout default unmodified. If the
+
+                setting needs adjustment then it can be overwritten in the particular
+
+                connection profile.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Zahari Petkov <zahari@balena.io>
+                signed-off-by: Zahari Petkov <zahari@balena.io>
+              author: Zahari Petkov
+              nested: []
+          version: meta-balena-2.98.5
+          title: "'networkmanager: Use default DHCP timeout'"
+          date: 2022-04-26T11:36:14.839Z
+    - subject: Update balena-yocto-scripts to 13da1d2fd4483ba9a2cf9d3d7146985bbd720c6b
+      hash: 002ab7df8299dc64e2502ea597046a99bd468611
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 13da1d2fd4483ba9a2cf9d3d7146985bbd720c6b
+        changelog-entry: Update balena-yocto-scripts to 13da1d2fd4483ba9a2cf9d3d7146985bbd720c6b
+      author: Renovate Bot
+      nested: []
+  version: 2.98.5
+  title: "'Update layers/meta-balena digest to edda207'"
+  date: 2022-04-26T16:21:37.941Z
+- commits:
     - subject: Update layers/meta-balena to 0d70942b143215aa0c350705d74a71a87d42870a
       hash: bf4a55e724f5b09273fe6338ad44690a72847c32
       body: Update layers/meta-balena
