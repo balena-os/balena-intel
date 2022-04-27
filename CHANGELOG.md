@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.98.5+rev1
+## (2022-04-26)
+
+* Add raw and flasher artifacts for genericx86-64-ext [Joseph Kogut]
+
 # v2.98.5
 ## (2022-04-26)
 

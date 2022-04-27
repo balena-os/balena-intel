@@ -1,4 +1,20 @@
 - commits:
+    - subject: Add raw and flasher artifacts for genericx86-64-ext
+      hash: 19b4344fd9d4488ca7487620ee48b948360585f9
+      body: |
+        Now that balena-yocto-scripts support uploading named artifacts, upload
+        raw and flasher images for genericx86-64-ext.
+      footer:
+        Changelog-entry: Add raw and flasher artifacts for genericx86-64-ext
+        changelog-entry: Add raw and flasher artifacts for genericx86-64-ext
+        Signed-off-by: Joseph Kogut <joseph@balena.io>
+        signed-off-by: Joseph Kogut <joseph@balena.io>
+      author: Joseph Kogut
+      nested: []
+  version: 2.98.5+rev1
+  title: "'genericx86-64-ext: add raw and flasher artifacts'"
+  date: 2022-04-26T21:58:48.659Z
+- commits:
     - subject: Update layers/meta-balena to edda207aee705431cd02443bdfe8d6271228b96d
       hash: 3e7711ecff95772188318513d51fb1dc1c1a07a0
       body: Update layers/meta-balena
