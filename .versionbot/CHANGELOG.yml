@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update layers/meta-balena to 87fb338552e3cfdfcb3500ed65940be897b99bbc
+      hash: 5dc8b86898088a4165ac06c57a37a3c04bbac618
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 87fb338552e3cfdfcb3500ed65940be897b99bbc
+        changelog-entry: Update layers/meta-balena to 87fb338552e3cfdfcb3500ed65940be897b99bbc
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: "tests/cloud: fix ssh test for testbot workers"
+              hash: 4d44bb297e015bfaef140d8c92d14de0e412be47
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+          version: meta-balena-2.98.8
+          title: "'tests/cloud: fix ssh test for testbot workers'"
+          date: 2022-04-28T09:09:48.983Z
+  version: 2.98.8
+  title: "'Update layers/meta-balena digest to 87fb338'"
+  date: 2022-04-28T12:20:18.117Z
+- commits:
     - subject: Update layers/meta-balena to 9431a0dcafd13d0218b875f40e7e642d042ae4aa
       hash: df827b18f6d787064b654879a64cffa78de1e1d4
       body: Update layers/meta-balena
