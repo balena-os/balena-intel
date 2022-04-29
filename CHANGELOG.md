@@ -1,6 +1,25 @@
 Change log
 -----------
 
+# v2.98.10
+## (2022-04-29)
+
+
+<details>
+<summary> Update layers/meta-balena to 45726c6e1009bd1988071131762c483193a5ef59 [Renovate Bot] </summary>
+
+> ## meta-balena-2.98.10
+> ### (2022-04-28)
+> 
+> * tests: bump leviathan to 2.13 [rcooke-warwick]
+> 
+> ## meta-balena-2.98.9
+> ### (2022-04-28)
+> 
+> * tests: bump leviathan to 2.2.11 [rcooke-warwick]
+> 
+</details>
+
 # v2.98.8
 ## (2022-04-28)
 
