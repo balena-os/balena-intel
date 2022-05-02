@@ -12,6 +12,8 @@ CONNECTIVITY_FIRMWARES =+ " \
 	linux-firmware-iwlwifi-9260 \
 	linux-firmware-iwlwifi-cc-a0 \
 	linux-firmware-iwlwifi-qu-b0-hr-b0 \
+	linux-firmware-iwlwifi-quz-a0-hr-b0 \
+	linux-firmware-iwlwifi-quz-a0-jf-b0 \
 	linux-firmware-rtl8723 \
 	linux-firmware-rtl8821 \
 	linux-firmware-rtl8723b-bt \
@@ -84,6 +86,8 @@ CONNECTIVITY_FIRMWARES:remove:surface-pro-6 = " \
     linux-firmware-iwlwifi-9000 \
     linux-firmware-iwlwifi-9260 \
     linux-firmware-iwlwifi-qu-b0-hr-b0 \
+    linux-firmware-iwlwifi-quz-a0-hr-b0 \
+    linux-firmware-iwlwifi-quz-a0-jf-b0 \
     linux-firmware-pcie8897 \
     linux-firmware-rtl8723 \
     linux-firmware-rtl8821 \
@@ -107,6 +111,11 @@ CONNECTIVITY_FIRMWARES:remove:surface-pro-6 = " \
     linux-firmware-iwlwifi-8265 \
     linux-firmware-rtl8188eu \
     linux-firmware-wl18xx \
+"
+
+CONNECTIVITY_FIRMWARES:remove_surface-pro-6 = " \
+    linux-firmware-iwlwifi-quz-a0-hr-b0 \
+    linux-firmware-iwlwifi-quz-a0-jf-b0 \
 "
 
 # these are now just empty packages so let's remove them to avoid a build error
