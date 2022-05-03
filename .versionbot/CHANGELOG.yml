@@ -1,4 +1,48 @@
 - commits:
+    - subject: Update layers/meta-balena to 0c96705ba26cda1062eff0b128eccb4f9388f9cc
+      hash: 7091ee3917e97d2e9ed6b9ec6082842ac72b5a19
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 0c96705ba26cda1062eff0b128eccb4f9388f9cc
+        changelog-entry: Update layers/meta-balena to 0c96705ba26cda1062eff0b128eccb4f9388f9cc
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: "tests/hup: Test hostapp-update from current release"
+              hash: 2f5b7fd58b11a69f10aea7b4391dba264e454f9b
+              body: |
+                After HUP from previous release to current under-test release
+                we should HUP again to ensure hostapp-update is sane in the
+                new release.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: meta-balena-2.98.12
+          title: "'Add \"HUP from this release\" test to ensure hostapp-update is
+            functional'"
+          date: 2022-05-02T13:38:42.232Z
+        - commits:
+            - subject: "tests: os: create swap test"
+              hash: cb19043d77a68e24e48a96acb2391938acd7cd71
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: meta-balena-2.98.11
+          title: "'tests: os: create swap test'"
+          date: 2022-04-29T19:55:50.927Z
+  version: 2.98.12
+  title: "'Update layers/meta-balena digest to 0c96705'"
+  date: 2022-05-03T16:19:31.930Z
+- commits:
     - subject: Update balena-yocto-scripts to fe688d2bfbb121401830ec804fa423619048a224
       hash: cb7d3e3a81a9a6255220338f918dc158bacec7a4
       body: Update balena-yocto-scripts
