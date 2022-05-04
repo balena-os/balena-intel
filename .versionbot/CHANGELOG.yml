@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update layers/meta-balena to 393f57d8695ff3d349370f730cabe31d927fc530
+      hash: d17ae82e643ab8f8eb55f389128a04cea65276b0
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 393f57d8695ff3d349370f730cabe31d927fc530
+        changelog-entry: Update layers/meta-balena to 393f57d8695ff3d349370f730cabe31d927fc530
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: "os: tests: optimize connectivity tests"
+              hash: fdfa61579dff1a1aaf3aea1318d16cb9f4fc3f50
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: meta-balena-2.98.13
+          title: "'os: tests: optimize connectivity tests'"
+          date: 2022-05-03T15:52:26.943Z
+  version: 2.98.13
+  title: "'Update layers/meta-balena digest to 393f57d'"
+  date: 2022-05-04T12:14:47.897Z
+- commits:
     - subject: Update layers/meta-balena to 0c96705ba26cda1062eff0b128eccb4f9388f9cc
       hash: 7091ee3917e97d2e9ed6b9ec6082842ac72b5a19
       body: Update layers/meta-balena
