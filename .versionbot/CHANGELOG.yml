@@ -1,4 +1,31 @@
 - commits:
+    - subject: Update layers/meta-balena to 23c6581bee55a61231cdc61e108418e743b7df3e
+      hash: 06d48aedd0226c62c039de7004df9265799a8ebd
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 23c6581bee55a61231cdc61e108418e743b7df3e
+        changelog-entry: Update layers/meta-balena to 23c6581bee55a61231cdc61e108418e743b7df3e
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: "renovate: Replace tests with tests/suites in default ignorePaths"
+              hash: c354fded7c56960b69ae9c0ede362e90e0d71a46
+              body: |
+                This way renovate can operate on tests/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: meta-balena-2.98.16
+          title: "'renovate: Replace tests with tests/suites in default ignorePaths'"
+          date: 2022-05-05T16:33:33.391Z
+  version: 2.98.16
+  title: "'Update layers/meta-balena digest to 23c6581'"
+  date: 2022-05-06T02:41:55.947Z
+- commits:
     - subject: Update layers/meta-balena to 9685efd5bf2ae5b12d307b2f879c51bd6dbab82e
       hash: 6045e19b98a100c83f10cefd29aafd7af91a336c
       body: Update layers/meta-balena
