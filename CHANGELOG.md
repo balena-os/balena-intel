@@ -1,6 +1,20 @@
 Change log
 -----------
 
+# v2.98.17
+## (2022-05-06)
+
+
+<details>
+<summary> Update layers/meta-balena to 42c71bfea112ba44e59488fe93284a583654622f [Renovate Bot] </summary>
+
+> ## meta-balena-2.98.17
+> ### (2022-05-06)
+> 
+> * renovate: Override default package rules to enable leviathan [Kyle Harding]
+> 
+</details>
+
 # v2.98.16
 ## (2022-05-06)
 

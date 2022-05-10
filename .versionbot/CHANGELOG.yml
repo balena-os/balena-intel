@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update layers/meta-balena to 42c71bfea112ba44e59488fe93284a583654622f
+      hash: ef465235a7e3d82020b219761efe36afc2c06b8c
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 42c71bfea112ba44e59488fe93284a583654622f
+        changelog-entry: Update layers/meta-balena to 42c71bfea112ba44e59488fe93284a583654622f
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: "renovate: Override default package rules to enable leviathan"
+              hash: a711a1f59bd241fc25fe04b086d1bf22b05441ee
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: meta-balena-2.98.17
+          title: "'renovate: Override default package rules to enable leviathan'"
+          date: 2022-05-06T13:07:35.911Z
+  version: 2.98.17
+  title: "'Update layers/meta-balena digest to 42c71bf'"
+  date: 2022-05-06T17:52:21.245Z
+- commits:
     - subject: Update layers/meta-balena to 23c6581bee55a61231cdc61e108418e743b7df3e
       hash: 06d48aedd0226c62c039de7004df9265799a8ebd
       body: Update layers/meta-balena
