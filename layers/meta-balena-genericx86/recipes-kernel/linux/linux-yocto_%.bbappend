@@ -2,6 +2,9 @@ inherit kernel-balena
 
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:${THISDIR}/genericx86-64-ext:${THISDIR}/surface-go:"
 
+LINUX_VERSION:genericx86 = "5.10.114"
+LINUX_VERSION:genericx86-64 = "5.10.114"
+
 SRC_URI += " \
     file://0001-Add-support-for-Quectel-EC20-modem.patch \
     file://0002-Revert-random-fix-crng_ready-test.patch \
