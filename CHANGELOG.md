@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.98.23+rev1
+## (2022-05-13)
+
+* Update linux kernel version to 5.10.114 [Kyle Harding]
+
 # v2.98.23
 ## (2022-05-13)
 

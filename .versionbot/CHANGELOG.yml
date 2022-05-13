@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update linux kernel version to 5.10.114
+      hash: f9a08d22c1d2a53e14b2d23ce917d88b4092cf1a
+      body: ""
+      footer:
+        Changelog-entry: Update linux kernel version to 5.10.114
+        changelog-entry: Update linux kernel version to 5.10.114
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 2.98.23+rev1
+  title: "'linux-yocto: Update linux version to 5.10.114'"
+  date: 2022-05-13T18:32:57.382Z
+- commits:
     - subject: Update layers/meta-balena to 5e9ec7690114640a5a7c3f6c94bb7e3ed37977ab
       hash: 5574b812b93bf142cd148014ae8bfb150bec9a29
       body: Update layers/meta-balena
