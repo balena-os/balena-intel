@@ -1,4 +1,72 @@
 - commits:
+    - subject: Update layers/meta-balena to 5399363b3758860b22ac93a4406d62de5d88b229
+      hash: 551c621924715f5f97b24727d19b7ac0c6d78e7e
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 5399363b3758860b22ac93a4406d62de5d88b229
+        changelog-entry: Update layers/meta-balena to 5399363b3758860b22ac93a4406d62de5d88b229
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: "balena-supervisor: Randomize the updater timer period"
+              hash: 5c402bc9a449c4f6d6cefe9aa44b7cdacb8ae4c8
+              body: |
+                To avoid fleets updating the supervisor at the same time,
+                distribute the timer adding a random time between 0 and 1 hour.
+
+                Fixes #2631
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.98.26
+          title: "'balena-supervisor: Randomize the updater timer period'"
+          date: 2022-05-17T16:20:39.324Z
+        - commits:
+            - subject: "patch: Get CDS doc ready for docs sync"
+              hash: f15dc2055e78af9966ac5166061e49bc401c6647
+              body: ""
+              footer: {}
+              author: Vipul Gupta
+              nested: []
+            - subject: "test: os-config: Use common code to wait for service state"
+              hash: 1ccf232c9f2676b0631d71870b2556cddfb69dd6
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.98.25
+          title: "'patch: Get CDS doc ready for docs sync'"
+          date: 2022-05-16T20:59:22.889Z
+        - commits:
+            - subject: "os-config: Randomize the timer period"
+              hash: 6a9a456869ac37367058ea56bbf24d33a2cf42f2
+              body: >
+                To avoid all devices fetching configuration settings at the same
+                time,
+
+                distribute the timer adding a random time between 0 and 6 hours.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.98.24
+          title: "'Randomize os-config timer service'"
+          date: 2022-05-15T17:05:46.782Z
+  version: 2.98.26
+  title: "'Update layers/meta-balena digest to 5399363'"
+  date: 2022-05-17T20:22:11.366Z
+- commits:
     - subject: Update layers/meta-balena to 5e9ec7690114640a5a7c3f6c94bb7e3ed37977ab
       hash: 5574b812b93bf142cd148014ae8bfb150bec9a29
       body: Update layers/meta-balena
