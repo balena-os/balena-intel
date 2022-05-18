@@ -1,4 +1,19 @@
 - commits:
+    - subject: Use kernel 5.14
+      hash: c89cdcbf7f25363be4117b4ed1077b2423dedc42
+      body: |
+        This is needed in order to use the GPU in newer Intel CPUs(Alder Lake).
+      footer:
+        Changelog-entry: Use kernel 5.14
+        changelog-entry: Use kernel 5.14
+        Signed-off-by: Dor Shahaf <dors@pixellot.tv>
+        signed-off-by: Dor Shahaf <dors@pixellot.tv>
+      author: Dor Shahaf
+      nested: []
+  version: 2.98.26+rev1
+  title: "'linux-yocto: Use kernel 5.14'"
+  date: 2022-05-18T15:04:55.777Z
+- commits:
     - subject: Update layers/meta-balena to 5399363b3758860b22ac93a4406d62de5d88b229
       hash: 551c621924715f5f97b24727d19b7ac0c6d78e7e
       body: Update layers/meta-balena
