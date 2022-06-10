@@ -35,7 +35,7 @@ CONNECTIVITY_FIRMWARES:append:surface-pro-6 = " \
 
 CONNECTIVITY_FIRMWARES:remove = "linux-firmware-wl12xx"
 
-CONNECTIVITY_FIRMWARES:remove_surface-go = " \
+CONNECTIVITY_FIRMWARES:remove:surface-go = " \
     linux-firmware-bcm43455 \
     linux-firmware-ibt-11-5 \
     linux-firmware-ibt-12-16 \
@@ -87,7 +87,7 @@ CONNECTIVITY_MODULES =+ " \
 	rtl8812bu \
 "
 
-CONNECTIVITY_MODULES:remove_surface-go = "rtl8812au rtl8812bu"
+CONNECTIVITY_MODULES:remove:surface-go = "rtl8812au rtl8812bu"
 
 # we need to clean-up rootfs space so let's remove some unused firmware
 CONNECTIVITY_FIRMWARES:remove = "linux-firmware-wl18xx"
