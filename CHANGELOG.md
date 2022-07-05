@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v2.99.27+rev1
+## (2022-07-04)
+
+* Remove unused wireless firmware files for the surface pro 6 [Alex Gonzalez]
+* Fix surface-go packagegroup-balena-connectivity syntax [Alex Gonzalez]
+
 # v2.99.27
 ## (2022-07-01)
 

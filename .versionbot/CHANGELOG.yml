@@ -1,4 +1,34 @@
 - commits:
+    - subject: Remove unused wireless firmware files for the surface pro 6
+      hash: fa308177340e9a5b933014f2742b2ebe9e15c14e
+      body: |
+        The rootfs size has reached its limit so reduce the same unused wireless
+        firmware from the surface-pro-6 as we do for the surface-go.
+
+        The surface pro 6 uses a Marvell W8897 chipset so these firmware filesa
+        are unused.
+      footer:
+        Changelog-entry: Remove unused wireless firmware files for the surface pro 6
+        changelog-entry: Remove unused wireless firmware files for the surface pro 6
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: Fix surface-go packagegroup-balena-connectivity syntax
+      hash: 4a0f3dbdc0b143b0262ebc3c04ed31dce83a7d82
+      body: |
+        The append syntax is incorrect for Honister or newer Yocto releases.
+      footer:
+        Changelog-entry: Fix surface-go packagegroup-balena-connectivity syntax
+        changelog-entry: Fix surface-go packagegroup-balena-connectivity syntax
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 2.99.27+rev1
+  title: "'Remove unused wireless firmware for the surface pro 6'"
+  date: 2022-07-04T19:59:19.843Z
+- commits:
     - subject: Update layers/meta-balena to d748c184c7348683378b4e8f0dbc2cfc014b65de
       hash: f42f925af870702a06f6bb4fe1a91b454e56de8a
       body: Update layers/meta-balena
