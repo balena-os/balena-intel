@@ -1,4 +1,22 @@
 - commits:
+    - subject: Add build and deploy workflow
+      hash: e31c0c161b78df1ac7d567600c11b52bfffd05bd
+      body: >
+        This workflow will launch a Jenkins build and draft deploy job when a
+        new
+
+        tag is made.
+      footer:
+        Changelog-entry: Add build and deploy workflow
+        changelog-entry: Add build and deploy workflow
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 2.99.27+rev2
+  title: "'workflows: Add build and deploy on release tag workflow'"
+  date: 2022-07-06T08:22:21.765Z
+- commits:
     - subject: Remove unused wireless firmware files for the surface pro 6
       hash: fa308177340e9a5b933014f2742b2ebe9e15c14e
       body: |
