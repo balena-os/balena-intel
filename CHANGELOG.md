@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v2.100.0+rev1
+## (2022-07-27)
+
+* Fix partition index detection for luks devices in hooks [Alex Gonzalez]
+* Fix finding files in EFI partition [Alex Gonzalez]
+
 # v2.100.0
 ## (2022-07-14)
 

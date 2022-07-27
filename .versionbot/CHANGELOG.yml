@@ -1,4 +1,38 @@
 - commits:
+    - subject: Fix partition index detection for luks devices in hooks
+      hash: 531df33978766e26ab88dc404f23a339cb26434d
+      body: >
+        When using LUKS encryption, the output of lsblk is:
+
+            sda                                             8:0    0    8G  0 disk
+          |-sda1                                          8:1    0   40M  0 part  /mnt/boot/EFI
+          |-sda2                                          8:2    0   42M  0 part
+          | `-luks-a91cd125-9e4c-45e6-b3f4-1e9b4ec9e5b9 250:0    0   40M  0 crypt /mnt/boot
+
+        This commit allows extracting the physical device (sdaN) whic is needed
+
+        to extract the partition index using sysfs both for luks or standard
+      footer:
+        Changelog-entry: Fix partition index detection for luks devices in hooks
+        changelog-entry: Fix partition index detection for luks devices in hooks
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+    - subject: Fix finding files in EFI partition
+      hash: 5cc82c9b0f97714b5fe5495a9106fae8955305ae
+      body: ""
+      footer:
+        Changelog-entry: Fix finding files in EFI partition
+        changelog-entry: Fix finding files in EFI partition
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 2.100.0+rev1
+  title: "'Make HUP work on LUKS-encrypted systems'"
+  date: 2022-07-27T06:25:32.464Z
+- commits:
     - subject: Update layers/meta-balena to d824f26f501ed881ae048c709f14792ee8d657ca
       hash: 6308d17ec58944e159f61d30887628a8db2f26e2
       body: Update layers/meta-balena
