@@ -1,4 +1,18 @@
 - commits:
+    - subject: Enable firmware compression for the surface go
+      hash: 1a9eebd91571ee87ac76340c76ff16bce75d8c18
+      body: ""
+      footer:
+        Changelog-entry: Enable firmware compression for the surface go
+        changelog-entry: Enable firmware compression for the surface go
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 2.100.0+rev2
+  title: "'surface-go: Enable firmware compression'"
+  date: 2022-08-03T15:27:35.689Z
+- commits:
     - subject: Remove final argument from build and deploy workflow
       hash: 91bf5968be4ad8c3afd13391d45b8768001254f5
       body: |

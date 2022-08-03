@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.100.0+rev2
+## (2022-08-03)
+
+* Enable firmware compression for the surface go [Alex Gonzalez]
+
 # v2.100.0+rev1
 ## (2022-08-02)
 
