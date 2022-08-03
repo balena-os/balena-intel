@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.100.0+rev2
+## (2022-08-03)
+
+* Enable linux-firmware compression for all Generic x86 based boards [Kyle Harding]
+
 # v2.100.0+rev1
 ## (2022-08-02)
 

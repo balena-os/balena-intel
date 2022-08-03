@@ -1,4 +1,18 @@
 - commits:
+    - subject: Enable linux-firmware compression for all Generic x86 based boards
+      hash: 2128c17b008e825bae58d52fd738f932afc5fb0f
+      body: ""
+      footer:
+        Changelog-entry: Enable linux-firmware compression for all Generic x86 based boards
+        changelog-entry: Enable linux-firmware compression for all Generic x86 based boards
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 2.100.0+rev2
+  title: "'meta-balena-genericx86:layer.conf: Enable firmware compression'"
+  date: 2022-08-03T15:15:10.826Z
+- commits:
     - subject: Remove final argument from build and deploy workflow
       hash: 91bf5968be4ad8c3afd13391d45b8768001254f5
       body: |
