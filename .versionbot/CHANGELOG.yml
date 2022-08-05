@@ -1,4 +1,22 @@
 - commits:
+    - subject: Qualify Generic x86_64 w/ (legacy MBR)
+      hash: 9bfa07db2cbd6debb176ec13c80dde9d41341522
+      body: |
+        As we're introducing another generic x86_64 device type with the slug
+        generic-amd64 that introduces GPT partitioning, add a qualifier to the
+        existing device type's long name that indicates that it's both legacy,
+        and uses MBR partitioning.
+      footer:
+        Changelog-entry: Qualify Generic x86_64 w/ (legacy MBR)
+        changelog-entry: Qualify Generic x86_64 w/ (legacy MBR)
+        Signed-off-by: Joseph Kogut <joseph@balena.io>
+        signed-off-by: Joseph Kogut <joseph@balena.io>
+      author: Joseph Kogut
+      nested: []
+  version: 2.100.0+rev2
+  title: "'genericx86-64-ext: qualify visible name w/ legacy MBR'"
+  date: 2022-08-04T23:01:21.316Z
+- commits:
     - subject: Remove final argument from build and deploy workflow
       hash: 91bf5968be4ad8c3afd13391d45b8768001254f5
       body: |

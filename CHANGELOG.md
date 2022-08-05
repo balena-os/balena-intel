@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.100.0+rev2
+## (2022-08-04)
+
+* Qualify Generic x86_64 w/ (legacy MBR) [Joseph Kogut]
+
 # v2.100.0+rev1
 ## (2022-08-02)
 
