@@ -21,7 +21,7 @@ module.exports =
 	version: 1
 	slug: 'genericx86-64-ext'
 	aliases: [ 'genericx86-64-ext' ]
-	name: 'Generic x86_64'
+	name: 'Generic x86_64 (legacy MBR)'
 	arch: 'amd64'
 	state: 'new'
 
