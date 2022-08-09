@@ -1,4 +1,21 @@
 - commits:
+    - subject: Add firmware compression for Intel NUC
+      hash: 003be502f54d49a48bfd47391655fc22c7cac77e
+      body: |
+        As the Surface Pro machine share the genericx86-64 machine
+        override we need to explicitly set firmware compression off for those
+        machines whose kernel version does not support it.
+      footer:
+        Changelog-entry: Add firmware compression for Intel NUC
+        changelog-entry: Add firmware compression for Intel NUC
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 2.100.0+rev3
+  title: "'Add firmware compression for Intel NUC and surface go'"
+  date: 2022-08-07T15:22:39.174Z
+- commits:
     - subject: Qualify Generic x86_64 w/ (legacy MBR)
       hash: 9bfa07db2cbd6debb176ec13c80dde9d41341522
       body: |

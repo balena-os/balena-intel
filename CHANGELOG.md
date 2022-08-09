@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.100.0+rev3
+## (2022-08-07)
+
+* Add firmware compression for Intel NUC [Alex Gonzalez]
+
 # v2.100.0+rev2
 ## (2022-08-04)
 
