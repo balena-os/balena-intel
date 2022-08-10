@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.100.0+rev4
+## (2022-08-09)
+
+* Include firmware for AC9462 and AX201NGW [Michal Toman]
+
 # v2.100.0+rev3
 ## (2022-08-07)
 

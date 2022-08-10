@@ -1,4 +1,23 @@
 - commits:
+    - subject: Include firmware for AC9462 and AX201NGW
+      hash: 0953b0328a69c19c42bff773fd972f1db1fb35be
+      body: >
+        These are used for AX201NGW and AC9462 respectively, available on 11th
+        gen NUCs
+
+        as well as standalone M.2 cards.
+      footer:
+        Changelog-entry: Include firmware for AC9462 and AX201NGW
+        changelog-entry: Include firmware for AC9462 and AX201NGW
+        Signed-off-by: Michal Toman <michalt@balena.io>
+        signed-off-by: Michal Toman <michalt@balena.io>
+      author: Michal Toman
+      nested: []
+  version: 2.100.0+rev4
+  title: "'balena-connectivity: Include iwlwifi-quz-a0-hr-b0 and
+    iwlwifi-quz-a0-jf-b0'"
+  date: 2022-08-09T15:50:46.847Z
+- commits:
     - subject: Add firmware compression for Intel NUC
       hash: 003be502f54d49a48bfd47391655fc22c7cac77e
       body: |
