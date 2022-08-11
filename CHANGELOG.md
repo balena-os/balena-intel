@@ -1,6 +1,81 @@
 Change log
 -----------
 
+# v2.100.0+rev5
+## (2022-08-11)
+
+
+<details>
+<summary> Update contracts to 91807ae538dccedb69877eed28ae6752287e2f21 [renovate[bot]] </summary>
+
+> ## contracts-2.0.11
+> ### (2022-08-10)
+> 
+> * generic-amd64: update logo to be vendor agnostic [Joseph Kogut]
+> 
+> ## contracts-2.0.10
+> ### (2022-08-10)
+> 
+> * generic-amd64: disable private [Joseph Kogut]
+> 
+> ## contracts-2.0.9
+> ### (2022-08-04)
+> 
+> * generic-amd64: match genericx86-64-ext connectivity [Joseph Kogut]
+> * generic-amd64: update name to include GPT qualifier [Joseph Kogut]
+> * genericx86-64-ext: update name to include MBR qualifier [Joseph Kogut]
+> 
+> ## contracts-2.0.8
+> ### (2022-08-03)
+> 
+> * Update dotnet contract to latest v6.x and v3.x [Trong Nghia Nguyen]
+> * Add node v18.7.0 [Trong Nghia Nguyen]
+> 
+> ## contracts-2.0.7
+> ### (2022-07-19)
+> 
+> * hw.device-type: fix tdpzu9 device name [Francois]
+> 
+> ## contracts-2.0.6
+> ### (2022-07-17)
+> 
+> * hw.device-type: Add correct tdpzu9 board [Florin Sarbu]
+> 
+> ## contracts-2.0.5
+> ### (2022-07-14)
+> 
+> * Add node v18.6.0 [Trong Nghia Nguyen]
+> * Add golang v1.8.4 and v1.17.12 [Trong Nghia Nguyen]
+> * Add node v18.5.0 v16.16.0 and v14.20.0 [Trong Nghia Nguyen]
+> * Remove Debian Stretch as it is EOL [Trong Nghia Nguyen]
+> 
+> ## contracts-2.0.4
+> ### (2022-06-21)
+> 
+> * Add libffi3.4 linked python binaries [Trong Nghia Nguyen]
+> 
+> ## contracts-2.0.3
+> ### (2022-06-13)
+> 
+> * Add Python v3.10.5 and v3.9.13 [Trong Nghia Nguyen]
+> * Add support for Alpine Linux 3.16 [Trong Nghia Nguyen]
+> * Add support for Ubuntu Jammy and Kinetic [Trong Nghia Nguyen]
+> 
+> ## contracts-2.0.2
+> ### (2022-06-05)
+> 
+> * sw.os - hw.device-type: Update Xavier NX SD and Xavier NX eMMC to 32.7.1 [Alexandru Costache]
+> 
+> ## contracts-2.0.1
+> ### (2022-06-03)
+> 
+> * Update QEMU to v7.0.0+balena1 [Trong Nghia Nguyen]
+> * Remove the wrapper shim that base images have around sh on first run [Trong Nghia Nguyen]
+> * Add golang v1.18.3 and v1.17.11 [Trong Nghia Nguyen]
+> * Add node v18.3.0 v17.9.1 and v16.15.1 [Trong Nghia Nguyen]
+> 
+</details>
+
 # v2.100.0+rev4
 ## (2022-08-09)
 
