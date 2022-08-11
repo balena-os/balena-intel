@@ -1,6 +1,20 @@
 Change log
 -----------
 
+# v2.101.3+rev1
+## (2022-08-11)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 09e4514953fed499a69c224b47969fd2c3fb7ab8 [renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.19.11
+> ### (2022-07-25)
+> 
+> * balena-api: On hostapp creation, set class to app [Alex Gonzalez]
+> 
+</details>
+
 # v2.101.3
 ## (2022-08-11)
 
