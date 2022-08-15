@@ -1,6 +1,47 @@
 Change log
 -----------
 
+# v2.101.5
+## (2022-08-15)
+
+
+<details>
+<summary> Update layers/meta-balena to 771593f49920c4ae0ef101d2328f03f033449a9e [renovate[bot]] </summary>
+
+> ## meta-balena-2.101.5
+> ### (2022-08-12)
+> 
+> * meta-balena-rust: Link to meta-rust [Alex Gonzalez]
+> 
+> ## meta-balena-2.101.4
+> ### (2022-08-08)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to c2c68d2 [renovate[bot]] </summary>
+> 
+>> ### leviathan-2.7.2
+>> #### (2022-08-05)
+>> 
+>> * exit with failure if suite doesn't start [rcooke-warwick]
+>> 
+>> ### leviathan-2.7.1
+>> #### (2022-08-02)
+>> 
+>> * Regenerate docs [Leandro Motta Barros]
+>> * Document proper worker config for QEMU workers [Leandro Motta Barros]
+>> * Fix a couple of typos in the docs [Leandro Motta Barros]
+>> 
+>> ### leviathan-2.7.0
+>> #### (2022-07-26)
+>> 
+>> * minor: Add Unstable tests debug feature [Vipul Gupta (@vipulgupta2048)]
+>> 
+> </details>
+> 
+> 
+</details>
+
 # v2.101.3+rev1
 ## (2022-08-11)
 

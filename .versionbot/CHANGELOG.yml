@@ -1,4 +1,111 @@
 - commits:
+    - subject: Update layers/meta-balena to 771593f49920c4ae0ef101d2328f03f033449a9e
+      hash: 671dc0eb71e2e62e6b69d7ed27e1efe49f99ac4c
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 771593f49920c4ae0ef101d2328f03f033449a9e
+        changelog-entry: Update layers/meta-balena to 771593f49920c4ae0ef101d2328f03f033449a9e
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: "meta-balena-rust: Link to meta-rust"
+              hash: 83bd38733af9063c5d29d90fc0695838e4b718d3
+              body: >
+                This is a temporary way that will allow to update the
+                bblayers.conf of
+
+                device type repositories to include meta-balena/meta-balena-rust while
+
+                still building.
+
+
+                This change will be reverted with the meta-balena-rust layer.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.101.5
+          title: "'meta-balena-rust: Link to meta-rust'"
+          date: 2022-08-12T08:01:52.474Z
+        - commits:
+            - subject: Update tests/leviathan digest to c2c68d2
+              hash: 769f708630e8bf5bc58ca97a05d24a62e9c8976b
+              body: Update tests/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: renovate[bot]
+              nested:
+                - commits:
+                    - subject: exit with failure if suite doesn't start
+                      hash: 1221cdfa4aaae98e9fadcc961adc574fc6d3ffba
+                      body: ""
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Ryan Cooke <ryan@balena.io>
+                        signed-off-by: Ryan Cooke <ryan@balena.io>
+                      author: rcooke-warwick
+                      nested: []
+                  version: leviathan-2.7.2
+                  title: "'core: exit with failure if suite doesn't start'"
+                  date: 2022-08-05T12:37:55.576Z
+                - commits:
+                    - subject: Regenerate docs
+                      hash: 603564525d93f41d3583f4a9d8f42edd5311827c
+                      body: ""
+                      footer:
+                        Signed-off-by: Leandro Motta Barros <leandro@balena.io>
+                        signed-off-by: Leandro Motta Barros <leandro@balena.io>
+                        Change-type: patch
+                        change-type: patch
+                      author: Leandro Motta Barros
+                      nested: []
+                    - subject: Document proper worker config for QEMU workers
+                      hash: 0165578f87d8b1eb4209f5f1c4f490a8e893c794
+                      body: ""
+                      footer:
+                        Signed-off-by: Leandro Motta Barros <leandro@balena.io>
+                        signed-off-by: Leandro Motta Barros <leandro@balena.io>
+                        Change-type: patch
+                        change-type: patch
+                      author: Leandro Motta Barros
+                      nested: []
+                    - subject: Fix a couple of typos in the docs
+                      hash: b2fa59745ed8ebc3c8d5346c78b26cfc70a061be
+                      body: ""
+                      footer:
+                        Signed-off-by: Leandro Motta Barros <leandro@balena.io>
+                        signed-off-by: Leandro Motta Barros <leandro@balena.io>
+                        Change-type: patch
+                        change-type: patch
+                      author: Leandro Motta Barros
+                      nested: []
+                  version: leviathan-2.7.1
+                  title: "'Document proper worker config for QEMU workers'"
+                  date: 2022-08-02T21:09:19.617Z
+                - commits:
+                    - subject: "minor: Add Unstable tests debug feature"
+                      hash: eb2c583f988056cacc93b761568549988d4f85eb
+                      body: ""
+                      footer:
+                        Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+                        signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+                      author: Vipul Gupta (@vipulgupta2048)
+                      nested: []
+                  version: leviathan-2.7.0
+                  title: "'Add unstable tests debug feature'"
+                  date: 2022-07-26T17:56:37.204Z
+          version: meta-balena-2.101.4
+          title: "'Update tests/leviathan digest to c2c68d2'"
+          date: 2022-08-08T11:54:12.550Z
+  version: 2.101.5
+  title: "'Update layers/meta-balena digest to 771593f'"
+  date: 2022-08-15T12:29:17.494Z
+- commits:
     - subject: Update balena-yocto-scripts to 09e4514953fed499a69c224b47969fd2c3fb7ab8
       hash: 0abfe6777df5080b0ec200e0a7493b0325facfe0
       body: Update balena-yocto-scripts
