@@ -1,6 +1,20 @@
 Change log
 -----------
 
+# v2.101.6
+## (2022-08-16)
+
+
+<details>
+<summary> Update layers/meta-balena to 7dfa6d2abc3795d47a8a6cdb30bc540ee110e7ee [renovate[bot]] </summary>
+
+> ## meta-balena-2.101.6
+> ### (2022-08-15)
+> 
+> * tests/cloud: fix ssh prod test for physical duts [rcooke-warwick]
+> 
+</details>
+
 # v2.101.5+rev1
 ## (2022-08-15)
 

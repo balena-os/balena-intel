@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update layers/meta-balena to 7dfa6d2abc3795d47a8a6cdb30bc540ee110e7ee
+      hash: cfe937394c9cac7d24d6329cbdac008b5cd8a85e
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 7dfa6d2abc3795d47a8a6cdb30bc540ee110e7ee
+        changelog-entry: Update layers/meta-balena to 7dfa6d2abc3795d47a8a6cdb30bc540ee110e7ee
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: "tests/cloud: fix ssh prod test for physical duts"
+              hash: abbb8233f803fd4216fe27bb8a9c28f96d30085e
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+          version: meta-balena-2.101.6
+          title: "'tests/cloud: fix ssh prod test for physical duts'"
+          date: 2022-08-15T12:33:41.204Z
+  version: 2.101.6
+  title: "'Update layers/meta-balena digest to 7dfa6d2'"
+  date: 2022-08-16T10:15:08.067Z
+- commits:
     - subject: Update balena-yocto-scripts to 99807501efffc8c5034c88361049650a02511a78
       hash: 0f5d1447b30b7822335c818faa827333ec114d01
       body: Update balena-yocto-scripts
