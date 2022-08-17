@@ -1,6 +1,22 @@
 Change log
 -----------
 
+# v2.101.7
+## (2022-08-17)
+
+
+<details>
+<summary> Update layers/meta-balena to 61b53fbb8b667de54707cc6aa94fd79674958856 [renovate[bot]] </summary>
+
+> ## meta-balena-2.101.7
+> ### (2022-08-17)
+> 
+> * Add automated tests for the Engine healthcheck [Leandro Motta Barros]
+> * Use a lightweight Engine healthcheck [Leandro Motta Barros]
+> * Make Engine watchdog termination graceful [Leandro Motta Barros]
+> 
+</details>
+
 # v2.101.6
 ## (2022-08-16)
 
