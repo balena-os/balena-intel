@@ -551,3 +551,9 @@ BALENA_CONFIGS[optimize-size] = " \
 "
 
 BALENA_CONFIGS:remove:genericx86-64-ext = " optimize-size"
+
+BALENA_CONFIGS:append = " i2c-dev"
+BALENA_CONFIGS[i2c-dev] = " \
+    CONFIG_I2C=y \
+    CONFIG_I2C_CHARDEV=m \
+    "
