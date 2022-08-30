@@ -1,4 +1,23 @@
 - commits:
+    - subject: Add I2C character device kernel module
+      hash: d1a05a0125bde044c3505ae8072932428c1ad421
+      body: |
+        This allows to use user space application to access and modify monitor
+        settings via the Virtual Control Panel and Monitor Control Command Set
+        accessible via I2C interfaces.
+
+        Fixes #545
+      footer:
+        Changelog-entry: Add I2C character device kernel module
+        changelog-entry: Add I2C character device kernel module
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 2.102.0+rev1
+  title: "'linux-yocto: Add I2C character device'"
+  date: 2022-08-29T08:35:26.097Z
+- commits:
     - subject: Update layers/meta-balena to 09dd67ef6a3abd1e9048bb39a2b9a02dc3af18c3
       hash: 7fb77f5c432119845a72a6e10a05090f0267e221
       body: Update layers/meta-balena

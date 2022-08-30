@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.102.0+rev1
+## (2022-08-29)
+
+* Add I2C character device kernel module [Alex Gonzalez]
+
 # v2.102.0
 ## (2022-08-26)
 
