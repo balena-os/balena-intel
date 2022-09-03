@@ -1,6 +1,36 @@
 Change log
 -----------
 
+# v2.102.4
+## (2022-09-03)
+
+
+<details>
+<summary> Update layers/meta-balena to 608994976c4d5d4f1f4558245f6abc375ac0c0c7 [renovate[bot]] </summary>
+
+> ## meta-balena-2.102.4
+> ### (Invalid date)
+> 
+> * udev: run resin-update-state after md assemble [Joseph Kogut]
+> * resin_update_state_probe: do not skip md devices [Joseph Kogut]
+> 
+> ## meta-balena-2.102.3
+> ### (Invalid date)
+> 
+> * renovate: Restore default commit body [Kyle Harding]
+> 
+> ## meta-balena-2.102.2
+> ### (2022-08-29)
+> 
+> * Renovate: Fix package rules for balena supervisor [Kyle Harding]
+> 
+> ## meta-balena-2.102.1
+> ### (2022-08-29)
+> 
+> * meta-balena-thud: initramfs: Fix building with latest meta-balena [Alex Gonzalez]
+> 
+</details>
+
 # v2.102.0+rev1
 ## (2022-08-29)
 
