@@ -1,4 +1,157 @@
 - commits:
+    - subject: Update layers/meta-balena to 6e63144eb5d665dc51958e0aa791256c48cc0522
+      hash: cf802170a1837926a5446c041b549fafe93566f9
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 6e63144eb5d665dc51958e0aa791256c48cc0522
+        changelog-entry: Update layers/meta-balena to 6e63144eb5d665dc51958e0aa791256c48cc0522
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: Update tests/leviathan digest to 7fe3c5f
+              hash: 501e9f0cd4a82b40451cca4eef244ad242565614
+              body: Update tests/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: renovate[bot]
+              nested:
+                - commits:
+                    - subject: "core: Copy all files/directories except those in dockerignore"
+                      hash: d65bfbb94cab3cbfa676f53b42b85969bde41e58
+                      body: >
+                        In some situations the contracts submodule may not exist
+                        so this
+
+                        will prevent the docker build from failing.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Kyle Harding <kyle@balena.io>
+                        signed-off-by: Kyle Harding <kyle@balena.io>
+                      author: Kyle Harding
+                      nested: []
+                    - subject: "core: Move contracts submodule back to original path"
+                      hash: ed4b658cb327c9133d223c3474bb9d882b8fcb36
+                      body: ""
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Kyle Harding <kyle@balena.io>
+                        signed-off-by: Kyle Harding <kyle@balena.io>
+                      author: Kyle Harding
+                      nested: []
+                  version: leviathan-2.8.4
+                  title: "'core: Move contracts submodule back to original path'"
+                  date: 2022-09-07T14:39:45.563Z
+                - commits:
+                    - subject: "patch: Migrate away from config package"
+                      hash: b04974e51ad26b2b6dfce52ea4897c51276989ef
+                      body: ""
+                      footer:
+                        Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+                        signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+                      author: Vipul Gupta (@vipulgupta2048)
+                      nested: []
+                  version: leviathan-2.8.3
+                  title: "'core: Migrate away from config package'"
+                  date: 2022-09-07T11:55:30.839Z
+                - commits:
+                    - subject: "worker: Pin to stable release 2.5.10 prior to md support"
+                      hash: 3b6ce13734e98e981492e01bc874c0a439cb1536
+                      body: |
+                        Software raid support is not backwards compatible so pin
+                        to a stable version of the worker prior to 2.6.0.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Kyle Harding <kyle@balena.io>
+                        signed-off-by: Kyle Harding <kyle@balena.io>
+                      author: Kyle Harding
+                      nested: []
+                  version: leviathan-2.8.2
+                  title: "'worker: Pin to stable release 2.5.10 prior to md support'"
+                  date: 2022-09-06T13:48:15.525Z
+                - commits:
+                    - subject: "patch: Fix contracts name"
+                      hash: 5f48a749c71bcc2e540a764f633dd823c3fcc35c
+                      body: ""
+                      footer:
+                        Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+                        signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+                      author: Vipul Gupta (@vipulgupta2048)
+                      nested: []
+                  version: leviathan-2.8.1
+                  title: "'patch: Fix contracts name'"
+                  date: 2022-09-03T23:38:43.521Z
+                - commits:
+                    - subject: "patch: Accept 429 HTTP codes using config file"
+                      hash: 846773a1aae8677f618660395515be4515a6b6d4
+                      body: ""
+                      footer:
+                        Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+                        signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+                      author: Vipul Gupta (@vipulgupta2048)
+                      nested: []
+                    - subject: "minor: Add support for Private Contracts"
+                      hash: 3259bc9e08dec07058a11ce189fc261c44479123
+                      body: ""
+                      footer:
+                        Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+                        signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+                      author: Vipul Gupta (@vipulgupta2048)
+                      nested: []
+                  version: leviathan-2.8.0
+                  title: "'minor: Add support for Private Contracts'"
+                  date: 2022-08-26T12:39:14.021Z
+                - commits:
+                    - subject: Fix "Declaration emit" error during `npm run docs`
+                      hash: 42c89019bd9d2f423ccf5141ef1b30ecad833868
+                      body: ""
+                      footer:
+                        Signed-off-by: Leandro Motta Barros <leandro@balena.io>
+                        signed-off-by: Leandro Motta Barros <leandro@balena.io>
+                        Change-type: patch
+                        change-type: patch
+                      author: Leandro Motta Barros
+                      nested: []
+                  version: leviathan-2.7.4
+                  title: |-
+                    'Fix "Declaration emit" error during 
+                    > leviathan@2.7.3 docs
+                    > npm --prefix core run docs
+
+
+                    > docs
+                    > rimraf ../docs/ && npx typedoc --tsconfig tsconfig.json'
+                  date: 2022-08-24T17:59:42.344Z
+          version: meta-balena-2.102.6
+          title: "'Update tests/leviathan digest to 7fe3c5f'"
+          date: 2022-09-07T17:51:24.028Z
+        - commits:
+            - subject: "patch: Add package-lock.json files for tests"
+              hash: 89ce7a08596ba0fd3402910f224c21de49201f9f
+              body: ""
+              footer:
+                Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+                signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+              author: Vipul Gupta (@vipulgupta2048)
+              nested: []
+          version: meta-balena-2.102.5
+          title: "'patch: Add package-lock.json files for tests'"
+          date: 2022-09-06T08:15:14.569Z
+    - subject: Update contracts to e7520599758cae5f507d7189a3415e95e2ff0309
+      hash: dc097e1af9f661a4b77c20c310dca6757687f60e
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to e7520599758cae5f507d7189a3415e95e2ff0309
+        changelog-entry: Update contracts to e7520599758cae5f507d7189a3415e95e2ff0309
+      author: renovate[bot]
+      nested: []
+  version: 2.102.6
+  title: "'Update layers/meta-balena digest to 6e63144'"
+  date: 2022-09-08T01:51:15.105Z
+- commits:
     - subject: Update layers/meta-balena to 608994976c4d5d4f1f4558245f6abc375ac0c0c7
       hash: 08301c6d38854f6b67b86bdaf7d7428c7614eaee
       body: Update layers/meta-balena
