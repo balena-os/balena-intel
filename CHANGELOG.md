@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v2.103.3
+## (2022-09-17)
+
+
+<details>
+<summary> Update layers/meta-balena to a17b3251407b74e424a6bcf7850783975c366cf0 [renovate[bot]] </summary>
+
+> ## meta-balena-2.103.3
+> ### (2022-09-15)
+> 
+> * resin-init-flasher: skip array members not matching a named array [Joseph Kogut]
+> * resin-init-flasher: support pattern matching of devices [Joseph Kogut]
+> 
+</details>
+
 # v2.103.2+rev1
 ## (2022-09-15)
 
