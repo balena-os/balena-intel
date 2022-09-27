@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.105.2+rev1
+## (2022-09-27)
+
+* Explicitly disable firmware compression on Surface Pro 6 [Michal Toman]
+
 # v2.105.2
 ## (2022-09-26)
 

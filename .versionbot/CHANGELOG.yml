@@ -1,4 +1,26 @@
 - commits:
+    - subject: Explicitly disable firmware compression on Surface Pro 6
+      hash: 3138250a075e772c9b811a2f54a6ab0772dde95e
+      body: >
+        The Surface Pro 6 is stuck with kernel 5.0 which does not support
+        firmware
+
+        compression. We want to make firmware compression opt-out rather than opt-in,
+
+        therefore it needs to be explicitly disabled for the device.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: Explicitly disable firmware compression on Surface Pro 6
+        changelog-entry: Explicitly disable firmware compression on Surface Pro 6
+        Signed-off-by: Michal Toman <michalt@balena.io>
+        signed-off-by: Michal Toman <michalt@balena.io>
+      author: Michal Toman
+      nested: []
+  version: 2.105.2+rev1
+  title: "'surface-pro-6.conf: Explicitly disable firmware compression'"
+  date: 2022-09-27T11:16:00.728Z
+- commits:
     - subject: Update layers/meta-balena to d17b08668a56aa67c7b55594c3c910e66fbd4baf
       hash: 18936e2a9a7190c1559a06517069fdcb49c2436d
       body: Update layers/meta-balena
