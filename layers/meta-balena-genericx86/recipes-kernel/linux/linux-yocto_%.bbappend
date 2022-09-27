@@ -4,7 +4,6 @@ FILESEXTRAPATHS:prepend := "${THISDIR}/files:${THISDIR}/genericx86-64-ext:${THIS
 
 SRC_URI += " \
     file://0001-Add-support-for-Quectel-EC20-modem.patch \
-    file://0002-Revert-random-fix-crng_ready-test.patch \
 "
 
 # Rest of the machines that are on kernel 5.10.21
