@@ -1,16 +1,16 @@
 SUMMARY = "Realtek 802.11n WLAN Adapter Linux driver"
 LICENSE = "GPLv2"
-LIC_FILES_CHKSUM = "file://Kconfig;md5=4b85004ff83dd932ff28f7f348fb2a28"
+LIC_FILES_CHKSUM = "file://Kconfig;md5=86b534dc42246c181a17debcd171f2fa"
+MODULES_INSTALL_TARGET = "modules"
 
 inherit module
 
 SRC_URI = " \
-	git://git@github.com/gordboy/rtl8812au-5.9.3.2.git;protocol=https;branch=main \
-	file://0001-Use-modules_install-as-wanted-by-yocto.patch \
+	git://git@github.com/morrownr/8812au-20210629.git;protocol=https;branch=main \
 "
 
-# Latest head as of today, compatible with kernel 5.12
-SRCREV = "460ad2e6896381551f66f1d3991fed552323c38d"
+# Latest head as of today, compatible with kernel 5.15
+SRCREV = "a8450b030a187b71d6be147d004715e6858e0ef9"
 S = "${WORKDIR}/git"
 
 EXTRA_OEMAKE:append = " KSRC=${STAGING_KERNEL_DIR}"
