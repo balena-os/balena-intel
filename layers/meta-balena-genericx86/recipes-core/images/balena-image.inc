@@ -30,4 +30,7 @@ write_mbr() {
 
 IMAGE_POSTPROCESS_COMMAND:append = " write_mbr; "
 
-IMAGE_INSTALL:append = " efibootmgr"
+IMAGE_INSTALL:append = " \
+	efibootmgr \
+	haveged \
+	"
