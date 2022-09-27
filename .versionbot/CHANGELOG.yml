@@ -1,4 +1,37 @@
 - commits:
+    - subject: Update contracts to 766eb7591fe2b2f2cbc36af68d58627057f38193
+      hash: 533a3202625f5884ab7a6c1d610b73b6c6ed35dc
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to 766eb7591fe2b2f2cbc36af68d58627057f38193
+        changelog-entry: Update contracts to 766eb7591fe2b2f2cbc36af68d58627057f38193
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: Add node v18.9.1, v16.17.1 and v14.20.1
+              hash: 3d17a04da87495bc26f6aaabb4e90baaa8f0a349
+              body: ""
+              footer:
+                change-type: patch
+                Signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+                signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+              author: Trong Nghia Nguyen
+            - subject: Add Golang v1.19.1 and v1.18.6
+              hash: 1f985fb82514dbeb8c9cddaa66efc8eb31ab9a30
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+                signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+              author: Trong Nghia Nguyen
+          version: contracts-2.0.17
+          title: "'Few base images updates'"
+          date: 2022-09-27T20:03:39.091Z
+  version: 2.105.2+rev2
+  title: "'Update contracts digest to 766eb75'"
+  date: 2022-09-27T22:11:57.017Z
+- commits:
     - subject: Explicitly disable firmware compression on Surface Pro 6
       hash: 3138250a075e772c9b811a2f54a6ab0772dde95e
       body: >
