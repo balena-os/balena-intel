@@ -1,0 +1,1 @@
+IMAGE_ROOTFS_MAXSIZE:genericx86-64-ext = "65536"
