@@ -1,4 +1,22 @@
 - commits:
+    - subject: use test branch to address merge commit identification problem
+      hash: daed0685124bf8c0fdd6d406cc24b7e53d885a78
+      body: >
+        The merge commit in this repository is not being correctly identified -
+        the
+
+        commit in this change attempts to solve that.
+      footer:
+        Changelog-entry: use test branch to address merge commit identification problem
+        changelog-entry: use test branch to address merge commit identification problem
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 2.105.2+rev3
+  title: "'github: build_and_deploy: use test branch'"
+  date: 2022-10-10T10:00:59.609Z
+- commits:
     - subject: Update contracts to 766eb7591fe2b2f2cbc36af68d58627057f38193
       hash: 533a3202625f5884ab7a6c1d610b73b6c6ed35dc
       body: Update contracts

@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.105.2+rev3
+## (2022-10-10)
+
+* use test branch to address merge commit identification problem [Alex Gonzalez]
+
 # v2.105.2+rev2
 ## (2022-09-27)
 
