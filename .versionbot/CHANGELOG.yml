@@ -1,4 +1,54 @@
 - commits:
+    - subject: Update contracts to 6f3ccc3060c64de164d6fd60a0bc65b2d8ceb5d3
+      hash: abb0462e50e2364fdaf57e00200bf1ebf72bf961
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to 6f3ccc3060c64de164d6fd60a0bc65b2d8ceb5d3
+        changelog-entry: Update contracts to 6f3ccc3060c64de164d6fd60a0bc65b2d8ceb5d3
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: Update dotnet 6.0 and 3.1 to latest version
+              hash: e6e9c6d41b73dbbf15ea777d7fb54761389c16d8
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+                signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+              author: Trong Nghia Nguyen
+            - subject: Add Python v3.10.7 v3.9.14 v3.8.14 and v3.7.14
+              hash: 238cdd69f9e48dd1b8192ec90dc9bca37a97f2a6
+              body: |
+                Update pip to v22.2.2
+                Update setuptools to v65.4.1
+                Update dbus-python to v1.3.2
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+                signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+              author: Trong Nghia Nguyen
+          version: contracts-2.0.19
+          title: ""
+          date: 2022-10-05T09:13:06.785Z
+        - commits:
+            - subject: Switch from balenaCI to flowzone
+              hash: 9e06ba17acf1c3333c6c2ef7f0ba6a7b7bf088f9
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+                signed-off-by: Trong Nghia Nguyen <nghiant2710@gmail.com>
+              author: Trong Nghia Nguyen
+          version: contracts-2.0.18
+          title: ""
+          date: 2022-10-05T09:07:08.310Z
+  version: 2.105.2+rev4
+  title: "'Update contracts digest to 6f3ccc3'"
+  date: 2022-10-10T15:20:28.754Z
+- commits:
     - subject: update build and deploy workflow to v0.0.11
       hash: cbb7f979e2c2367ac5f7a97da8e16c6c440a6977
       body: ""
