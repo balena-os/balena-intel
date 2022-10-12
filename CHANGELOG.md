@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.105.2+rev5
+## (2022-10-10)
+
+* update build and deploy github workflow to v0.0.12 [Alex Gonzalez]
+
 # v2.105.2+rev4
 ## (2022-10-10)
 

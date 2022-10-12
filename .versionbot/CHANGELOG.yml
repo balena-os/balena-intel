@@ -1,4 +1,18 @@
 - commits:
+    - subject: update build and deploy github workflow to v0.0.12
+      hash: 4e7e23f173c4f50a7e5024ad568ccd614862a6fa
+      body: ""
+      footer:
+        Changelog-entry: update build and deploy github workflow to v0.0.12
+        changelog-entry: update build and deploy github workflow to v0.0.12
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 2.105.2+rev5
+  title: "'github: build_and_deploy: update github workflow to v0.0.12'"
+  date: 2022-10-10T17:23:55.577Z
+- commits:
     - subject: Update contracts to 6f3ccc3060c64de164d6fd60a0bc65b2d8ceb5d3
       hash: abb0462e50e2364fdaf57e00200bf1ebf72bf961
       body: Update contracts
