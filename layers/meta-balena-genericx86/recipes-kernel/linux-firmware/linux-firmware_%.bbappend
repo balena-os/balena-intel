@@ -19,7 +19,7 @@ SRC_URI += " \
 # https://github.com/RPi-Distro/firmware-nonfree
 
 SRC_URI:append = " \
-    git://github.com/RPi-Distro/firmware-nonfree;destsuffix=raspbian-nf;name=raspbian-nf \
+    git://github.com/RPi-Distro/firmware-nonfree;destsuffix=raspbian-nf;protocol=https;name=raspbian-nf \
 "
 
 SRCREV_raspbian-nf = "86e88fbf0345da49555d0ec34c80b4fbae7d0cd3"
