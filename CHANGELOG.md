@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.105.10+rev1
+## (2022-10-13)
+
+* use https protocol for linux-firmware fetch [Alex Gonzalez]
+
 # v2.105.10
 ## (2022-10-12)
 

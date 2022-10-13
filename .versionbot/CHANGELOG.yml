@@ -1,4 +1,19 @@
 - commits:
+    - subject: use https protocol for linux-firmware fetch
+      hash: 8c07f950984fe7b3205ee6122ab500e3834c1d1b
+      body: |
+        The git protocol has now been deprecated by github.
+      footer:
+        Changelog-entry: use https protocol for linux-firmware fetch
+        changelog-entry: use https protocol for linux-firmware fetch
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 2.105.10+rev1
+  title: "'linux-firmware: Use https protocol on fetch'"
+  date: 2022-10-13T10:33:38.553Z
+- commits:
     - subject: Update layers/meta-balena to 0bc9280eb23161e5897260dc4555062789540b81
       hash: b2129ecfff781aedfb9f502faabf52eddf9424d1
       body: Update layers/meta-balena
