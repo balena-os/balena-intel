@@ -1,6 +1,83 @@
 Change log
 -----------
 
+# v2.105.10
+## (2022-10-12)
+
+
+<details>
+<summary> Update layers/meta-balena to 0bc9280eb23161e5897260dc4555062789540b81 [renovate[bot]] </summary>
+
+> ## meta-balena-2.105.10
+> ### (2022-10-12)
+> 
+> * classes: kernel-balena: improve aufs branch selection [Alex Gonzalez]
+> 
+> ## meta-balena-2.105.9
+> ### (2022-10-11)
+> 
+> * meta-balena-rust: Fix ABI for arm [Alex Gonzalez]
+> 
+> ## meta-balena-2.105.8
+> ### (2022-10-11)
+> 
+> * meta-balena-thud: Enable GOCACHE [Alex Gonzalez]
+> 
+> ## meta-balena-2.105.7
+> ### (2022-10-06)
+> 
+> * Update balena-os/balena-supervisor to v14.2.8 [renovate[bot]]
+> 
+> ## meta-balena-2.105.6
+> ### (2022-10-06)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 4482393 [renovate[bot]] </summary>
+> 
+>> ### leviathan-2.9.9
+>> #### (2022-10-05)
+>> 
+>> * Revert "worker: Pin to stable release 2.5.10 prior to md support" [Kyle Harding]
+>> 
+>> ### leviathan-2.9.8
+>> #### (2022-10-05)
+>> 
+>> * Switch to Flowzone for CI [Kyle Harding]
+>> * Remove leftover balena.yml file [Kyle Harding]
+>> 
+> </details>
+> 
+> 
+> ## meta-balena-2.105.5
+> ### (2022-10-01)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to a2079bd [renovate[bot]] </summary>
+> 
+>> ### leviathan-2.9.7
+>> #### (Invalid date)
+>> 
+>> * Splie interface name into config [rcooke-warwick]
+>> * core: Specify wireless interface name for the 243390 device type [Alexandru Costache]
+>> 
+> </details>
+> 
+> 
+> ## meta-balena-2.105.4
+> ### (2022-10-01)
+> 
+> * Update balena-os/balena-supervisor to v14.2.7 [renovate[bot]]
+> 
+> ## meta-balena-2.105.3
+> ### (Invalid date)
+> 
+> * flowzone: Run also for pull requests into ESR branches [Alex Gonzalez]
+> * Switch from balenaCI to flowzone [Pagan Gazzard]
+> 
+</details>
+
 # v2.105.2+rev5
 ## (2022-10-10)
 
