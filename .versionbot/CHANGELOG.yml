@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update to kirkstone-4.0.3
+      hash: 8bb5d8faa26d24cdc261b567ff787b8b5cf3e622
+      body: ""
+      footer:
+        Changelog-entry: Update to kirkstone-4.0.3
+        changelog-entry: Update to kirkstone-4.0.3
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 2.105.2+rev6
+  title: "'Kirkstone update'"
+  date: 2022-10-13T08:39:53.063Z
+- commits:
     - subject: update build and deploy github workflow to v0.0.12
       hash: 4e7e23f173c4f50a7e5024ad568ccd614862a6fa
       body: ""
