@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update to kirkstone-4.0.3
+      hash: 217e051061c185766607227b278280e1dce52b4b
+      body: ""
+      footer:
+        Changelog-entry: Update to kirkstone-4.0.3
+        changelog-entry: Update to kirkstone-4.0.3
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 2.105.10+rev1
+  title: "'Jakogut/kirkstone (rebased over kirkstone_update)'"
+  date: 2022-10-13T10:37:24.270Z
+- commits:
     - subject: Update layers/meta-balena to 0bc9280eb23161e5897260dc4555062789540b81
       hash: b2129ecfff781aedfb9f502faabf52eddf9424d1
       body: Update layers/meta-balena

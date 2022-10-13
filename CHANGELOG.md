@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.105.10+rev1
+## (2022-10-13)
+
+* Update to kirkstone-4.0.3 [Florin Sarbu]
+
 # v2.105.10
 ## (2022-10-12)
 
