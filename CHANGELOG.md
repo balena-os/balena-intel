@@ -1,6 +1,20 @@
 Change log
 -----------
 
+# v2.105.12
+## (2022-10-17)
+
+
+<details>
+<summary> Update layers/meta-balena to bfb53e361ce9a3205e9c468f7c83b614acb3c52e [renovate[bot]] </summary>
+
+> ## meta-balena-2.105.12
+> ### (2022-10-17)
+> 
+> * classes: kernel-balena: Allow aufs patching to use network [Alex Gonzalez]
+> 
+</details>
+
 # v2.105.11+rev1
 ## (2022-10-17)
 
