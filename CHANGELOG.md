@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v2.105.11+rev1
+## (2022-10-17)
+
+
+<details>
+<summary> Update contracts to f9e017074a7d7e26f5b56642fa86d2533f349f33 [renovate[bot]] </summary>
+
+> ## contracts-2.0.20
+> ### (2022-10-14)
+> 
+> * Add Golang v1.19.2 and v1.18.7 [Trong Nghia Nguyen]
+> * Add node v18.11.0 and v16.18.0 [Trong Nghia Nguyen]
+> 
+</details>
+
 # v2.105.11
 ## (2022-10-16)
 
