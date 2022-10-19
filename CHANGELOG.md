@@ -1,6 +1,30 @@
 Change log
 -----------
 
+# v2.105.15
+## (2022-10-19)
+
+
+<details>
+<summary> Update layers/meta-balena to ec41853b477877d096d2eff72db59668f58b684b [renovate[bot]] </summary>
+
+> ## meta-balena-2.105.15
+> ### (2022-10-19)
+> 
+> * Revert "chrony: update to version 4.1 to match kirkstone's version" [Alex Gonzalez]
+> 
+> ## meta-balena-2.105.14
+> ### (2022-10-18)
+> 
+> * patch: Enable RPi3-64 for Device tree tests [Vipul Gupta (@vipulgupta2048)]
+> 
+> ## meta-balena-2.105.13
+> ### (2022-10-18)
+> 
+> * ntp: Remove race condition from directory creation [Alex Gonzalez]
+> 
+</details>
+
 # v2.105.12+rev1
 ## (2022-10-19)
 
