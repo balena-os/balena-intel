@@ -1,4 +1,19 @@
 - commits:
+    - subject: use https protocol for linux-firmware fetch
+      hash: 0b93d86f5e7aead51948ccfddd0abbdeb4410117
+      body: |
+        The git protocol has now been deprecated by github.
+      footer:
+        Changelog-entry: use https protocol for linux-firmware fetch
+        changelog-entry: use https protocol for linux-firmware fetch
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 2.105.12+rev1
+  title: ""
+  date: 2022-10-19T17:00:53.894Z
+- commits:
     - subject: Update layers/meta-balena to bfb53e361ce9a3205e9c468f7c83b614acb3c52e
       hash: f2e1151dafafd602f01fb6fefd41b0325d2e350e
       body: Update layers/meta-balena
