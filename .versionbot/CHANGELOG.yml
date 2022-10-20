@@ -1,4 +1,40 @@
 - commits:
+    - subject: Update layers/meta-balena to 0c378990ffead64c9141e82f76299914c416436d
+      hash: 09cafdc5282bd09f58b76b66f0efb1cee56e790e
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 0c378990ffead64c9141e82f76299914c416436d
+        changelog-entry: Update layers/meta-balena to 0c378990ffead64c9141e82f76299914c416436d
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: "common: openvpn: remove resin.conf"
+              hash: ce288ba9138ab385370e2375a64ef8c185feb2c9
+              body: >
+                This config file hasn't been used since commit 2db88c2, which unified
+
+                how managed and unmanaged images operate. Since that commit, openvpn
+
+                starts up if the config file at /etc/openvpn/openvpn.conf is found, and
+
+                otherwise remains inactive. This file is populated by os-config.
+
+
+                Remove the old config to prevent misdirection and cleanup the layer.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: meta-balena-2.105.16
+          title: ""
+          date: 2022-10-20T02:12:40.759Z
+  version: 2.105.16
+  title: ""
+  date: 2022-10-20T11:00:03.292Z
+- commits:
     - subject: Update layers/meta-balena to ec41853b477877d096d2eff72db59668f58b684b
       hash: 3eeeb533b2bf6a8aa66bfab1c577838bd120ccc5
       body: Update layers/meta-balena

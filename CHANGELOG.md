@@ -1,6 +1,20 @@
 Change log
 -----------
 
+# v2.105.16
+## (2022-10-20)
+
+
+<details>
+<summary> Update layers/meta-balena to 0c378990ffead64c9141e82f76299914c416436d [renovate[bot]] </summary>
+
+> ## meta-balena-2.105.16
+> ### (2022-10-20)
+> 
+> * common: openvpn: remove resin.conf [Joseph Kogut]
+> 
+</details>
+
 # v2.105.15
 ## (2022-10-19)
 
