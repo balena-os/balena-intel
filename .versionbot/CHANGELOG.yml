@@ -1,4 +1,104 @@
 - commits:
+    - subject: Update layers/meta-balena to 6fe97ecc67ba4dc83fb5ff21d801e9062d4179d4
+      hash: 03f2726a7632a7d83afaaa6da15865a61f2620e4
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 6fe97ecc67ba4dc83fb5ff21d801e9062d4179d4
+        changelog-entry: Update layers/meta-balena to 6fe97ecc67ba4dc83fb5ff21d801e9062d4179d4
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: "meta-resin-sumo: libical: Fix build QA error"
+              hash: a34583a3f5cbac25502ac9ad62f0d0073eb96511
+              body: >
+                Address the following build error:
+
+                ```
+
+                ERROR: libical-2.0.0-r0 do_package: QA Issue: libical: Files/directories were installed but not shipped in any package:
+
+                /usr/lib/cmake
+
+                /usr/lib/cmake/LibIcal
+
+                /usr/lib/cmake/LibIcal/LibIcalTargets.cmake
+
+                /usr/lib/cmake/LibIcal/LibIcalConfig.cmake
+
+                /usr/lib/cmake/LibIcal/LibIcalConfigVersion.cmake
+
+                /usr/lib/cmake/LibIcal/LibIcalTargets-noconfig.cmake
+
+                ```
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.105.20
+          title: ""
+          date: 2022-10-26T14:42:10.358Z
+        - commits:
+            - subject: "meta-resin-sumo: keep tpm2-tools in 5.0"
+              hash: 6c0596989bd182f26da1255ccfa7a55e45a0194e
+              body: >
+                Newer versions fail on the configuration step with:
+
+                Requested 'libcrypto >= 1.1.0' but version of OpenSSL-libcrypto is 1.0.2o
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.105.19
+          title: ""
+          date: 2022-10-26T01:25:34.955Z
+        - commits:
+            - subject: Update tests/leviathan digest to f83df7d
+              hash: fb3a49ca995fb2553f1b635cdf06559a239f92ed
+              body: Update tests/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: renovate[bot]
+              nested:
+                - commits:
+                    - subject: "minor: Add @balena/leviathan-test-helpers package"
+                      hash: 47f061bef9a6bc73782599ad8ab0add43d10883b
+                      body: ""
+                      footer:
+                        Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+                        signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+                      author: Vipul Gupta (@vipulgupta2048)
+                      nested: []
+                  version: leviathan-2.10.0
+                  title: ""
+                  date: 2022-10-25T13:23:40.230Z
+          version: meta-balena-2.105.18
+          title: ""
+          date: 2022-10-25T16:35:47.720Z
+        - commits:
+            - subject: "tests: hup: reduce num. flashes and  hostapp sends"
+              hash: 51f558450d60776470f92341789e14eecc217a65
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+          version: meta-balena-2.105.17
+          title: ""
+          date: 2022-10-21T15:04:03.760Z
+  version: 2.105.20
+  title: ""
+  date: 2022-10-27T01:25:22.092Z
+- commits:
     - subject: Update layers/meta-balena to 0c378990ffead64c9141e82f76299914c416436d
       hash: 09cafdc5282bd09f58b76b66f0efb1cee56e790e
       body: Update layers/meta-balena

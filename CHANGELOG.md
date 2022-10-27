@@ -1,6 +1,45 @@
 Change log
 -----------
 
+# v2.105.20
+## (2022-10-27)
+
+
+<details>
+<summary> Update layers/meta-balena to 6fe97ecc67ba4dc83fb5ff21d801e9062d4179d4 [renovate[bot]] </summary>
+
+> ## meta-balena-2.105.20
+> ### (2022-10-26)
+> 
+> * meta-resin-sumo: libical: Fix build QA error [Alex Gonzalez]
+> 
+> ## meta-balena-2.105.19
+> ### (2022-10-26)
+> 
+> * meta-resin-sumo: keep tpm2-tools in 5.0 [Alex Gonzalez]
+> 
+> ## meta-balena-2.105.18
+> ### (2022-10-25)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to f83df7d [renovate[bot]] </summary>
+> 
+>> ### leviathan-2.10.0
+>> #### (2022-10-25)
+>> 
+>> * minor: Add @balena/leviathan-test-helpers package [Vipul Gupta (@vipulgupta2048)]
+>> 
+> </details>
+> 
+> 
+> ## meta-balena-2.105.17
+> ### (2022-10-21)
+> 
+> * tests: hup: reduce num. flashes and  hostapp sends [rcooke-warwick]
+> 
+</details>
+
 # v2.105.16
 ## (2022-10-20)
 
