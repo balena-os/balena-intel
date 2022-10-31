@@ -1,6 +1,20 @@
 Change log
 -----------
 
+# v2.105.22
+## (2022-10-31)
+
+
+<details>
+<summary> Update layers/meta-balena to 24deb5194be2c96b14f8bd4343555bf855f6ca06 [renovate[bot]] </summary>
+
+> ## meta-balena-2.105.22
+> ### (2022-11-01)
+> 
+> * Update Docs Link Updated the link in the docs to the device-type listings (on hub as SOT) [Ryan H]
+> 
+</details>
+
 # v2.105.21
 ## (2022-10-27)
 
