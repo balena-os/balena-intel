@@ -1,6 +1,25 @@
 Change log
 -----------
 
+# v2.105.24
+## (2022-11-03)
+
+
+<details>
+<summary> Update layers/meta-balena to 912634a99a4ae09855c2c517c620ec16f843dd95 [renovate[bot]] </summary>
+
+> ## meta-balena-2.105.24
+> ### (2022-11-03)
+> 
+> * Update balena-os/balena-supervisor to v14.2.18 [renovate[bot]]
+> 
+> ## meta-balena-2.105.23
+> ### (2022-11-01)
+> 
+> * tests: hup: handle exception when unwrapping non-flasher image [Joseph Kogut]
+> 
+</details>
+
 # v2.105.22+rev1
 ## (2022-11-02)
 
