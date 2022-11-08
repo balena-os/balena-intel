@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 7c5b9c44fbd4039c3387c8b74e8efae8fa9f37d6
+      hash: f0b895fd2e723d89bc7b35113a606f828014efcf
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 7c5b9c44fbd4039c3387c8b74e8efae8fa9f37d6
+        changelog-entry: Update balena-yocto-scripts to 7c5b9c44fbd4039c3387c8b74e8efae8fa9f37d6
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: "jenkins_build: Only deploy AMI after deploying a final release"
+              hash: cfa6879d11a98c112a2e16fd40b6443a7fa6a838
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: balena-yocto-scripts-1.19.13
+          title: "'jenkins_build: Only deploy AMI after deploying a final release'"
+          date: 2022-10-21T15:03:17.022Z
+  version: 2.105.29+rev1
+  title: ""
+  date: 2022-11-08T11:13:19.072Z
+- commits:
     - subject: Update layers/meta-balena to ba7bbfb01a96a2dea3d02f01ea37f8bb4b3cb0d8
       hash: 01334bc9723f7e4356b3112d5c8b77d8480eb19d
       body: Update layers/meta-balena
