@@ -1,4 +1,77 @@
 - commits:
+    - subject: Update layers/meta-balena to ba7bbfb01a96a2dea3d02f01ea37f8bb4b3cb0d8
+      hash: 01334bc9723f7e4356b3112d5c8b77d8480eb19d
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to ba7bbfb01a96a2dea3d02f01ea37f8bb4b3cb0d8
+        changelog-entry: Update layers/meta-balena to ba7bbfb01a96a2dea3d02f01ea37f8bb4b3cb0d8
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: "prepare-openvpn: do not use cached configuration"
+              hash: 021495a07f736c7a80497e18dea33e23ac63318b
+              body: >
+                This script needs to update the VPN authentication with the currently
+
+                configured keys so do not use cached values.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.105.29
+          title: ""
+          date: 2022-11-07T15:30:37.789Z
+        - commits:
+            - subject: "patch: Delete conf.js for test suites"
+              hash: 5e52f52aec4cd1ccd238dd0e6ee6dd68fdc1dc63
+              body: ""
+              footer:
+                Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+                signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+              author: Vipul Gupta (@vipulgupta2048)
+              nested: []
+          version: meta-balena-2.105.28
+          title: ""
+          date: 2022-11-06T11:05:01.690Z
+        - commits:
+            - subject: "wpa-supplicant: Sync with v2.10 from upstream"
+              hash: 5464be07070bbc4a06a4d432250dd70b2b2e1522
+              body: >
+                Synced from:
+
+                http://cgit.openembedded.org/openembedded-core/commit/meta/recipes-connectivity/wpa-supplicant?id=3a43c2a82881688d85238464db371f695e60b572
+
+
+                Closes #2838
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Zahari Petkov <zahari@balena.io>
+                signed-off-by: Zahari Petkov <zahari@balena.io>
+              author: Zahari Petkov
+              nested: []
+          version: meta-balena-2.105.27
+          title: ""
+          date: 2022-11-04T22:15:37.135Z
+        - commits:
+            - subject: "patch: Skip HUP suite if no releases found"
+              hash: 40a12706d64383f5b5f1f41cecc6331d1c2fcc79
+              body: ""
+              footer:
+                Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+                signed-off-by: Vipul Gupta (@vipulgupta2048) <vipul@balena.io>
+              author: Vipul Gupta (@vipulgupta2048)
+              nested: []
+          version: meta-balena-2.105.26
+          title: ""
+          date: 2022-11-04T10:56:57.967Z
+  version: 2.105.29
+  title: ""
+  date: 2022-11-08T03:12:02.360Z
+- commits:
     - subject: Update layers/meta-balena to 81cdced65f90570af857c9cf012775558003c1c5
       hash: 31efd1f15b7ba99c1a89d7cb2be471849ca7d301
       body: Update layers/meta-balena

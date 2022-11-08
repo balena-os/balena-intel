@@ -1,6 +1,35 @@
 Change log
 -----------
 
+# v2.105.29
+## (2022-11-08)
+
+
+<details>
+<summary> Update layers/meta-balena to ba7bbfb01a96a2dea3d02f01ea37f8bb4b3cb0d8 [renovate[bot]] </summary>
+
+> ## meta-balena-2.105.29
+> ### (2022-11-07)
+> 
+> * prepare-openvpn: do not use cached configuration [Alex Gonzalez]
+> 
+> ## meta-balena-2.105.28
+> ### (2022-11-06)
+> 
+> * patch: Delete conf.js for test suites [Vipul Gupta (@vipulgupta2048)]
+> 
+> ## meta-balena-2.105.27
+> ### (2022-11-04)
+> 
+> * wpa-supplicant: Sync with v2.10 from upstream [Zahari Petkov]
+> 
+> ## meta-balena-2.105.26
+> ### (2022-11-04)
+> 
+> * patch: Skip HUP suite if no releases found [Vipul Gupta (@vipulgupta2048)]
+> 
+</details>
+
 # v2.105.25
 ## (2022-11-04)
 
