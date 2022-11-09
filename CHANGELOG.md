@@ -1,6 +1,26 @@
 Change log
 -----------
 
+# v2.105.31+rev1
+## (2022-11-09)
+
+
+<details>
+<summary> Update contracts to b20827d63cbe7b1168f2b63b3bde216231e1b4ba [renovate[bot]] </summary>
+
+> ## contracts-2.0.28
+> ### (2022-11-09)
+> 
+> * Add node v18.12.1 [Trong Nghia Nguyen]
+> 
+> ## contracts-2.0.27
+> ### (2022-11-07)
+> 
+> * Add go v1.19.3 and v1.18.8 [Trong Nghia Nguyen]
+> * Add node v19.0.1 v16.18.1 and v14.21.1 [Trong Nghia Nguyen]
+> 
+</details>
+
 # v2.105.31
 ## (2022-11-09)
 
