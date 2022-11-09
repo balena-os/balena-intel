@@ -1,6 +1,25 @@
 Change log
 -----------
 
+# v2.105.31
+## (2022-11-09)
+
+
+<details>
+<summary> Update layers/meta-balena to 072a02ba1b9b2f5cb4f1a520c7d321e17dca1eb5 [renovate[bot]] </summary>
+
+> ## meta-balena-2.105.31
+> ### (2022-11-08)
+> 
+> * Add meta-balena-esr workflow [Alex Gonzalez]
+> 
+> ## meta-balena-2.105.30
+> ### (2022-11-08)
+> 
+> * tests: os: ensure by-state links are created [Joseph Kogut]
+> 
+</details>
+
 # v2.105.29+rev1
 ## (2022-11-08)
 
