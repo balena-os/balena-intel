@@ -1,4 +1,518 @@
 - commits:
+    - subject: Update layers/meta-balena to ce3b3d7d17723fd03a4df278c6baff10b29be22e
+      hash: afef9a27792d20559fe71934846115640719f71a
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to ce3b3d7d17723fd03a4df278c6baff10b29be22e
+        changelog-entry: Update layers/meta-balena to ce3b3d7d17723fd03a4df278c6baff10b29be22e
+      author: renovate[bot]
+      nested:
+        - commits:
+            - subject: Update tests/leviathan digest to bdf8eb2
+              hash: 443fd7c7a87d8d43f2f42b697ae975d9ebce5484
+              body: Update tests/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: renovate[bot]
+              nested:
+                - commits:
+                    - subject: add high level architecture overview
+                      hash: 49fcd08d9b7d8af9a3b1f33c6d758906bf4b63ec
+                      body: ""
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Ryan Cooke <ryan@balena.io>
+                        signed-off-by: Ryan Cooke <ryan@balena.io>
+                      author: rcooke-warwick
+                      nested: []
+                  version: leviathan-2.10.2
+                  title: ""
+                  date: 2022-11-23T15:38:40.661Z
+                - commits:
+                    - subject: Add conditions for Apple Silicon workstations
+                      hash: ff3d9fee035d2aa7a7c04e47dfbddb638c564878
+                      body: >
+                        Convert Darwin to lowercase and arm64 -> aarch64 as needed.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Kyle Harding <kyle@balena.io>
+                        signed-off-by: Kyle Harding <kyle@balena.io>
+                      author: Kyle Harding
+                      nested: []
+                  version: leviathan-2.10.1
+                  title: ""
+                  date: 2022-11-23T12:09:17.356Z
+          version: meta-balena-2.107.8
+          title: ""
+          date: 2022-11-24T00:10:11.885Z
+        - commits:
+            - subject: "tests: ssh-auth: rework local authentication with cloud keys to work
+                in testbots"
+              hash: f93065327126d39069e5d1d19a4c78b41e582b17
+              body: >
+                The tunnel to port 22222 used by testbots communicate between the core
+
+                container and the DUT does not allow to ssh as a non-root user.
+
+
+                Run ssh from the worker to test local SSH authentication with a cloud
+
+                user.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "ssh-auth: do not use a separate custom key"
+              hash: abf5936f0ada2d7af15c87a147e4416a403b3607
+              body: >
+                Given that testbot devices use a tunnel to specific ports to communicate
+
+                with the DUT that is established with the suite-generated keys, using
+
+                a different keypair for the ssh-auth test would require to tear down and
+
+                re-establish the tunnel.
+
+
+                It's easier to just use the existing key pair in the ssh-auth test.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: 'Revert "test: ssh-auth: fix test cases using custom keys"'
+              hash: b2450a9df2c1a773b807652bc37e6c92ccecef35
+              body: >
+                Using two set of keys, the one created by the suite to authenticate by
+
+                the proxy and a new custom key, is tricky as when running on testbot the
+
+                key is used to establish the tunnel between core and DUT.
+
+
+                Revert this change in preparation to removing the custom key and
+
+                modifying the tests to use a single key.
+
+
+                This reverts commit b24d92774a67cf0c0b83a29848bdcf6ed8a574db.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.107.7
+          title: ""
+          date: 2022-11-23T14:08:31.414Z
+        - commits:
+            - subject: Update balena-os/balena-supervisor to v14.4.4
+              hash: 6917f26494d1c68803508c8c5ff3d06e5fa0d99c
+              body: Update balena-supervisor
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: renovate[bot]
+              nested: []
+          version: meta-balena-2.107.6
+          title: ""
+          date: 2022-11-22T21:24:54.566Z
+        - commits:
+            - subject: Update balena-os/balena-supervisor to v14.4.2
+              hash: f5b649f4a2ad0192bad28f332ad45d35725e8d56
+              body: Update balena-supervisor
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: renovate[bot]
+              nested: []
+          version: meta-balena-2.107.5
+          title: ""
+          date: 2022-11-22T01:19:51.508Z
+        - commits:
+            - subject: Update balena-os/balena-supervisor to v14.4.1
+              hash: 3904c5734f5307cc6d225df7021dea61d8a014fd
+              body: Update balena-supervisor
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: renovate[bot]
+              nested: []
+          version: meta-balena-2.107.4
+          title: ""
+          date: 2022-11-19T22:54:21.548Z
+        - commits:
+            - subject: "kernel-balena: Kernel version check should include provided version"
+              hash: 42ec259c4d1c6e9a7c8171f21157562ed3a07cc9
+              body: >
+                When adding a kernel configuration conditional in a provided kernel
+
+                version, make the check include the provided kernel version as that is
+
+                the intuitive way to understand it.
+
+
+                The two places that use this function already used it in this way.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.107.3
+          title: ""
+          date: 2022-11-19T14:52:45.759Z
+        - commits:
+            - subject: "chronyd: allow service status notification socket access to all"
+              hash: ddf2c4ed50e812296ed5f9fe3ece48b1ce8a0107
+              body: >
+                chrony 4.2 introduces security hardening in the
+
+                service definition that removes the CAP_SYS_ADMIN permission, affecting
+
+                the way healthdog uses execve to become chronyd.
+
+
+                commit 83f96efdfd2d (examples: harden systemd services)
+
+
+                This commits works around it by allowing all members of the service's
+
+                control group to send notification messages.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "chrony: update to version 4.2"
+              hash: 6a923864e66d7a2a552f3977727caefda444045d
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.107.2
+          title: ""
+          date: 2022-11-18T19:49:48.786Z
+        - commits:
+            - subject: "docs: add RAID setup info"
+              hash: c1be8607aca2b4086230305689a0bc6ea77f5cc7
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: meta-balena-2.107.1
+          title: ""
+          date: 2022-11-17T22:46:30.954Z
+        - commits:
+            - subject: Update balena-os/balena-supervisor to v14.4.0
+              hash: ca6727af811b274e036b259e286316170292d401
+              body: Update balena-supervisor
+              footer:
+                Change-type: minor
+                change-type: minor
+              author: renovate[bot]
+              nested: []
+          version: meta-balena-2.107.0
+          title: ""
+          date: 2022-11-17T17:45:43.032Z
+        - commits:
+            - subject: "classes: kernel-balena: add wireguard module"
+              hash: a3491c4ba4161ca7b6e9c25e6e0beb33f0f67a04
+              body: >
+                Add the wireguard module by default so it is included in all device
+
+                types. This is a frequently requested by customers and will avoid having
+
+                to patch individual device repositories.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.106.8
+          title: ""
+          date: 2022-11-17T11:04:24.192Z
+        - commits:
+            - subject: "test: ssh-auth: fix test cases using custom keys"
+              hash: b24d92774a67cf0c0b83a29848bdcf6ed8a574db
+              body: >
+                There are two sets of keys used in this test, one stored in `/root/id`
+
+                which is created by the cloud suite to SSH via the proxy server, and
+
+                a custom key stored in `/root/test_id` used in some of the subtests.
+
+
+                Fix the test cases using the custom key to use the correct private key.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.106.7
+          title: ""
+          date: 2022-11-15T15:37:55.466Z
+        - commits:
+            - subject: Update balena-os/balena-supervisor to v14.3.3
+              hash: f2d3858900aa8a092331c38a590a63525fbb2a57
+              body: Update balena-supervisor
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: renovate[bot]
+              nested: []
+          version: meta-balena-2.106.6
+          title: ""
+          date: 2022-11-15T05:36:48.415Z
+        - commits:
+            - subject: "openvpn: fix a race condition that leaves system with no running
+                supervisor"
+              hash: fd788120e5915820e75240e548760fd107cc0580
+              body: >
+                The `os-config` application stops the supervisor before fetching openvpn
+
+                configuration and starting the `openvpn` service unit.
+
+
+                As the `openvpn` service units stops `os-config`, it might not get to
+
+                restart the supervisor.
+
+
+                This commit checks that `os-config` is not already active before
+
+                starting it.
+
+
+                Fixes #2855
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.106.5
+          title: ""
+          date: 2022-11-14T09:32:57.346Z
+        - commits:
+            - subject: "ssh-auth: setConfig: run synchronously"
+              hash: 5534839614a5221068d25fb703658b780d6c7463
+              body: >
+                Most tests expects a specific device configuration so having the setting
+
+                run asynchronously leads to unexpected failures.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "cloud: ssh-auth: use custom path for custom key"
+              hash: 6c83fd02383baf7b6932858a3e88ae207cbecc3b
+              body: >
+                Right now it overwrites the key created by the cloud suite to connect
+
+                to the proxy.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "balena-config-vars: Set permissions for cache file"
+              hash: 3406f9a45a5a97542972c442f1c8a8e3e80a7d37
+              body: >
+                The sshd daemon is configured to fetch keys from the API for local
+
+                user connections. The script that fetches the keys, cloud-public-sshkeys,
+
+                sources balena-config-vars and is run as an exclusive non-root user.
+
+
+                Let's set the correct permissions for this file to allow not to break
+
+                the above.
+
+
+                Also, add a test to check that the SSH authentication with user
+
+                registered keys does not break again.
+
+
+                Fixes #2785
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.106.4
+          title: ""
+          date: 2022-11-12T15:47:45.326Z
+        - commits:
+            - subject: "common: kernel-devsrc: fix pseudo abort"
+              hash: e5307d7c7459ac977914122edc11d9ae7222e54b
+              body: >
+                Yocto builds will abort due to inconsistencies between the pseudo
+
+                database and files modified outside of the pseudo context [0].
+
+
+                This will occasionally cause builds to fail in the do_deploy step of the
+
+                kernel-devsrc recipe. [1]
+
+
+                Fix this by not removing the kernel_source tarball in the do_deploy
+
+                step.
+
+
+                Fixes: https://github.com/balena-os/meta-balena/issues/2806
+
+
+                [0] https://wiki.yoctoproject.org/wiki/Pseudo_Abort
+
+                [1] https://github.com/balena-os/meta-balena/issues/2806
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: meta-balena-2.106.3
+          title: ""
+          date: 2022-11-11T08:21:56.144Z
+        - commits:
+            - subject: "flasher: minor formatting"
+              hash: b92ade134716ea122949a0d5adf7238f274acc96
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+            - subject: "flasher: fix detection and exclusion of installation media"
+              hash: 02ba95a7f2b3889443f8fc2857723898140ff05e
+              body: >
+                The old test no longer matches on full disk paths including /dev, which
+
+                can potentially result in the installation disk not being excluded from
+
+                the pool of installation targets.
+
+
+                Fix the comparison so that the installation disk will not be
+
+                overwritten.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+            - subject: "flasher: properly expand device_pattern globs"
+              hash: 1b8059cf553b99de9a854dbbc7d81d7c079fe2a5
+              body: >
+                Previously, globs such as 'md/balena{,_*}' and 'mmcblk?' weren't being
+
+                properly expanded, resulting in the old behavior of explicit lists of
+
+                disks continuing to work, but consolidated globs matching multiple disks
+
+                would not.
+
+
+                Fix glob expansion to enable this feature to work properly.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: meta-balena-2.106.2
+          title: ""
+          date: 2022-11-10T21:20:24.210Z
+        - commits:
+            - subject: "tests: cloud: use cloud ssh to avoid race cond"
+              hash: 970d504c2fec7f82d8a87b1203702cb4320fbe9b
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+          version: meta-balena-2.106.1
+          title: ""
+          date: 2022-11-10T17:19:31.839Z
+        - commits:
+            - subject: Update balena-os/balena-supervisor to v14.3.0
+              hash: 099700fd5247b20af5aec205f51e54c0a6c1fef3
+              body: Update balena-supervisor
+              footer:
+                Change-type: minor
+                change-type: minor
+              author: renovate[bot]
+              nested: []
+          version: meta-balena-2.106.0
+          title: ""
+          date: 2022-11-10T05:31:24.750Z
+        - commits:
+            - subject: Enable network access for tasks talking to the signing service
+              hash: ab1d75a0db11cde16d93cb7b3ebe734f61583e28
+              body: >
+                Since kirkstone tasks have network access disabled by default so we need
+
+                to enable it explicitly for tasks that talk to the signing service.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-2.105.32
+          title: ""
+          date: 2022-11-09T15:15:46.084Z
+  version: 2.107.8
+  title: ""
+  date: 2022-11-24T07:14:57.793Z
+- commits:
     - subject: Update contracts to b20827d63cbe7b1168f2b63b3bde216231e1b4ba
       hash: 046433f8a1fc2e1cb69684ec971eec881d1d2523
       body: Update contracts
