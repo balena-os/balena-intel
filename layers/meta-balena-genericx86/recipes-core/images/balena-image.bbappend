@@ -7,6 +7,7 @@ BALENA_BOOT_PARTITION_FILES:append = " \
 
 IMAGE_INSTALL:append:genericx86-64-ext =" \
     linux-firmware                        \
+    peak                                  \
 "
 
 IMAGE_ROOTFS_SIZE:genericx86-64-ext = "1024000"
