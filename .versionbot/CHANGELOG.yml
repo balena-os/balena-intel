@@ -1,4 +1,22 @@
 - commits:
+    - subject: Include peak CAN driver
+      hash: c01547cadcd959322b75247591383df78079b4aa
+      body: >
+        This is a 3rd party CAN driver, we want to include it in the generic
+        device types.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: Include peak CAN driver
+        changelog-entry: Include peak CAN driver
+        Signed-off-by: Michal Toman <michalt@balena.io>
+        signed-off-by: Michal Toman <michalt@balena.io>
+      author: Michal Toman
+      nested: []
+  version: 2.107.8+rev2
+  title: ""
+  date: 2022-11-29T17:18:43.582Z
+- commits:
     - subject: Update balena-yocto-scripts to 3fbd0884bd7d599664587d0ab25fea22d77323ba
       hash: cbc130851ad88be89ecf77815caca000bf0de34b
       body: Update balena-yocto-scripts
