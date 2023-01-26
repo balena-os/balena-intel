@@ -1,4 +1,20 @@
 - commits:
+    - subject: add meta-perl to bblayers.conf
+      hash: fd1141338ce8e9cc0a24587643e328bf0d73d471
+      body: |
+        Perl is required for building efitools used for
+        EFI boot entry configuration and secure boot,
+      footer:
+        Changelog-entry: add meta-perl to bblayers.conf
+        changelog-entry: add meta-perl to bblayers.conf
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 2.108.19+rev3
+  title: ""
+  date: 2023-01-26T16:10:00.653Z
+- commits:
     - subject: "linux-firmware: Pack and install NUC 12 AX211 iwlwifi firmware on
         genericx86-64-ext"
       hash: e1ffe648df6cc49b83fdc9759fb57946711b5f17
