@@ -1,4 +1,23 @@
 - commits:
+    - subject: "linux-firmware: Pack and install NUC 12 AX211 iwlwifi firmware on
+        genericx86-64-ext"
+      hash: e1ffe648df6cc49b83fdc9759fb57946711b5f17
+      body: >
+        ... for the genericx86-64-ext machine. See README inside commit for
+        details
+      footer:
+        Changelog-entry: "linux-firmware: Pack and install NUC 12 AX211 iwlwifi firmware
+          on genericx86-64-ext"
+        changelog-entry: "linux-firmware: Pack and install NUC 12 AX211 iwlwifi firmware
+          on genericx86-64-ext"
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 2.108.19+rev2
+  title: ""
+  date: 2023-01-26T06:51:05.229Z
+- commits:
     - subject: Add ESR workflow
       hash: 098e9181d0b055e2529b6c84a3e4c4ad1ef00689
       body: |

@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.108.19+rev2
+## (2023-01-26)
+
+* linux-firmware: Pack and install NUC 12 AX211 iwlwifi firmware on genericx86-64-ext [Alexandru Costache]
+
 # v2.108.19+rev1
 ## (2023-01-13)
 
