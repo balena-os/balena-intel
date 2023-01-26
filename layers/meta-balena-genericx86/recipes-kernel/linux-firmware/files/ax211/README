@@ -1,0 +1,14 @@
+These firmware files were obtained from:
+https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/?h=20230117
+
+Version TAG: 20230117
+
+They can be removed once linux-firmware is updated in meta-balena
+to a newer release. They have been included here due to root filesystem
+space constraints on other devices.
+
+License files are deployed by the firmware recipe.
+
+Internal discussion:
+- https://balena.zulipchat.com/#narrow/stream/345889-loop.2Fbalena-os/topic/iwlwifi.20cards/near/314072876
+- https://balena.zulipchat.com/#narrow/stream/360838-balena-os.2Fdevices/topic/Wifi.20on.20NUC.2012.3F/near/323161766

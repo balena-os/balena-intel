@@ -1,4 +1,4 @@
-FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/files:${THISDIR}/files/ax211:"
 
 SRC_URI += " \
     file://SurfaceTouchServicingDescriptorMSHW0102.bin \
@@ -22,21 +22,50 @@ SRC_URI:append = " \
     git://github.com/RPi-Distro/firmware-nonfree;destsuffix=raspbian-nf;protocol=https;name=raspbian-nf \
 "
 
+# NOTE: These files show be removed once linux-firmware is updated in meta-balena,
+# see README
+SRC_URI:append = " \
+    file://ibt-0040-0041.ddc \
+    file://ibt-0040-0041.sfi \
+    file://iwlwifi-so-a0-gf-a0-64.ucode \
+    file://iwlwifi-so-a0-gf-a0.pnvm \
+"
+
 SRCREV_raspbian-nf = "86e88fbf0345da49555d0ec34c80b4fbae7d0cd3"
 SRCREV_FORMAT = "default+raspbian-nf"
 
-PACKAGES =+ "${PN}-ibt-20-1-3"
+PACKAGES =+ " \
+    ${PN}-ibt-20-1-3 \
+    ${PN}-ipts-v102 \
+    ${PN}-ibt-40-41 \
+    ${PN}-iwlwifi-so-a0 \
+    ${PN}-ipu3-firmware \
+"
 FILES:${PN}-ibt-20-1-3  = " \
     ${nonarch_base_libdir}/firmware/intel/ibt-20-1-3.ddc* \
     ${nonarch_base_libdir}/firmware/intel/ibt-20-1-3.sfi* \
 "
 
-PACKAGES =+ "${PN}-ipts-v102"
 FILES:${PN}-ipts-v102 = " \
     ${nonarch_base_libdir}/firmware/intel/ipts/* \
 "
 
-PACKAGES =+ "${PN}-ipu3-firmware"
+FILES:${PN}-ibt-40-41  = " \
+    ${nonarch_base_libdir}/firmware/intel/ibt-0040-0041.ddc \
+    ${nonarch_base_libdir}/firmware/intel/ibt-0040-0041.sfi \
+"
+
+LICENSE:${PN}-ibt-40-41 = "Firmware-ibt_firmware"
+RDEPENDS:${PN}-ibt-40-41 = "${PN}-ibt-license"
+
+
+FILES:${PN}-iwlwifi-so-a0  = " \
+    ${nonarch_base_libdir}/firmware/iwlwifi-so-a0-gf-a0-64.ucode \
+    ${nonarch_base_libdir}/firmware/iwlwifi-so-a0-gf-a0.pnvm \
+"
+LICENSE:${PN}-iwlwifi-so-a0 = "Firmware-iwlwifi_firmware"
+RDEPENDS:${PN}-iwlwifi-so-a0 = "${PN}-iwlwifi-license"
+
 FILES:${PN}-ipu3-firmware = " \
     ${nonarch_base_libdir}/firmware/intel/ipu3-fw.bin* \
     ${nonarch_base_libdir}/firmware/intel/irci_irci_ecr-master_20161208_0213_20170112_1500.bin* \
@@ -60,6 +89,11 @@ do_install:append() {
 		    ${WORKDIR}/vendor_desc.bin \
 		    ${WORKDIR}/vendor_kernel.bin \
 		    ${D}${nonarch_base_libdir}/firmware/intel/ipts/
+
+    install -m 0644 ${WORKDIR}/ibt-0040-0041.ddc ${D}${nonarch_base_libdir}/firmware/intel/ibt-0040-0041.ddc
+    install -m 0644 ${WORKDIR}/ibt-0040-0041.sfi ${D}${nonarch_base_libdir}/firmware/intel/ibt-0040-0041.sfi
+    install -m 0644 ${WORKDIR}/iwlwifi-so-a0-gf-a0-64.ucode ${D}${nonarch_base_libdir}/firmware/iwlwifi-so-a0-gf-a0-64.ucode
+    install -m 0644 ${WORKDIR}/iwlwifi-so-a0-gf-a0.pnvm ${D}${nonarch_base_libdir}/firmware/iwlwifi-so-a0-gf-a0.pnvm
 }
 
 IWLWIFI_FW_TOCLEAN += " \
