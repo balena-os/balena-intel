@@ -1,6 +1,44 @@
 Change log
 -----------
 
+# v2.108.19+rev5
+## (2023-02-10)
+
+
+<details>
+<summary> Update contracts to 35f42232b2c24e9a43c4b0e171f9644b1b12a686 [Renovate Bot] </summary>
+
+> ## contracts-2.0.43
+> ### (2023-02-10)
+> 
+> * Add Fedora 37 (latest) and 38 [Trong Nghia Nguyen]
+> * Add Python v3.11.2 and v3.10.10 [Trong Nghia Nguyen]
+> 
+> ## contracts-2.0.42
+> ### (2023-02-06)
+> 
+> * Add golang v1.20 [Trong Nghia Nguyen]
+> * Add node v19.6.0 and v18.14.0 [Trong Nghia Nguyen]
+> 
+> ## contracts-2.0.41
+> ### (2023-02-01)
+> 
+> * Add support for latest dotnet releases v7 (7.0.102) and v6 (6.0.113) [Trong Nghia Nguyen]
+> * Add node v19.5.0 [Trong Nghia Nguyen]
+> 
+> ## contracts-2.0.40
+> ### (2023-01-18)
+> 
+> * Add golang v1.19.5 and v1.18.10 [Trong Nghia Nguyen]
+> 
+> ## contracts-2.0.39
+> ### (2023-01-12)
+> 
+> * hw.device-type: Add Radxa CM3 on Raspberry Pi Compute Module 4 IO Board [Florin Sarbu]
+> 
+
+</details>
+
 # v2.108.19+rev4
 ## (2023-02-09)
 
