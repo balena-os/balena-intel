@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v2.108.19+rev7
+## (2023-02-18)
+
+
+<details>
+<summary> Update contracts to 103037ca9624070c01ed388e8fd425bef609e924 [Renovate Bot] </summary>
+
+> ## contracts-2.0.45
+> ### (2023-02-18)
+> 
+> * Add node v19.6.1 v18.14.1 v16.19.1 and v14.21.3 [Trong Nghia Nguyen]
+> 
+
+</details>
+
 # v2.108.19+rev6
 ## (2023-02-16)
 
