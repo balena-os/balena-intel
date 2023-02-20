@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.108.19+rev8
+## (2023-02-20)
+
+* Increase initrd size to accomodate secure boot and FDE packages [Michal Toman]
+
 # v2.108.19+rev7
 ## (2023-02-18)
 
