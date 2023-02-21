@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.108.19+rev9
+## (2023-02-21)
+
+* move initramfs size increase to correct layer [Alex Gonzalez]
+
 # v2.108.19+rev8
 ## (2023-02-20)
 

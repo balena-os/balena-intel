@@ -1,4 +1,20 @@
 - commits:
+    - subject: move initramfs size increase to correct layer
+      hash: 20cc691dd5fa53f4aca0a7a77bf1a43b006af1fc
+      body: |
+        The IMAGE_ROOTFS_MAXSIZE increase for balena-image-initramfs has been
+        applied to an unused layer (it came from the balena-generic repository)
+      footer:
+        Changelog-entry: move initramfs size increase to correct layer
+        changelog-entry: move initramfs size increase to correct layer
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 2.108.19+rev9
+  title: ""
+  date: 2023-02-21T14:41:26.550Z
+- commits:
     - subject: Increase initrd size to accomodate secure boot and FDE packages
       hash: db46fb8ee310d158ff6ade9e9134070091aba83d
       body: |
