@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.108.19+rev10
+## (2023-02-21)
+
+* Update CI workflow to allow external contributions [Kyle Harding]
+
 # v2.108.19+rev9
 ## (2023-02-21)
 

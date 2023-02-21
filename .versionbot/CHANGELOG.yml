@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update CI workflow to allow external contributions
+      hash: 473586fa2328748071385c997c7582b7cbcb45dc
+      body: ""
+      footer:
+        Changelog-entry: Update CI workflow to allow external contributions
+        changelog-entry: Update CI workflow to allow external contributions
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 2.108.19+rev10
+  title: ""
+  date: 2023-02-21T16:18:14.440Z
+- commits:
     - subject: move initramfs size increase to correct layer
       hash: 20cc691dd5fa53f4aca0a7a77bf1a43b006af1fc
       body: |
