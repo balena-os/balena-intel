@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.108.19+rev11
+## (2023-02-22)
+
+* add efi and raid machine features to genericx86-64-ext [Alex Gonzalez]
+
 # v2.108.19+rev10
 ## (2023-02-21)
 

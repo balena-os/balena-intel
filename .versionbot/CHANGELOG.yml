@@ -1,4 +1,20 @@
 - commits:
+    - subject: add efi and raid machine features to genericx86-64-ext
+      hash: e64a072aa2edb897a3df49d703c77276d6ba2dc0
+      body: |
+        Newer versions of meta-balena use the efi and raid machine features to
+        add user space support.
+      footer:
+        Changelog-entry: add efi and raid machine features to genericx86-64-ext
+        changelog-entry: add efi and raid machine features to genericx86-64-ext
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 2.108.19+rev11
+  title: ""
+  date: 2023-02-22T17:36:33.103Z
+- commits:
     - subject: Update CI workflow to allow external contributions
       hash: 473586fa2328748071385c997c7582b7cbcb45dc
       body: ""
