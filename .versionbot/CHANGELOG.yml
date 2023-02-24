@@ -1,4 +1,28 @@
 - commits:
+    - subject: Add newer firmware for Kaby Lake GPUs
+      hash: 1f1b1e12c7466aa61604640c6e9834933d7cc11c
+      body: >
+        The proper fix would be to use upstream firmware in meta-balena but
+
+        that keeps getting delayed and there are people actually blocked by this.
+
+        This commit can be rolled back after the meta-balena PR is sorted out.
+
+
+        Fixes: #590
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: Add newer firmware for Kaby Lake GPUs
+        changelog-entry: Add newer firmware for Kaby Lake GPUs
+        Signed-off-by: Michal Toman <michalt@balena.io>
+        signed-off-by: Michal Toman <michalt@balena.io>
+      author: Michal Toman
+      nested: []
+  version: 2.108.19+rev12
+  title: ""
+  date: 2023-02-24T19:55:06.901Z
+- commits:
     - subject: add efi and raid machine features to genericx86-64-ext
       hash: e64a072aa2edb897a3df49d703c77276d6ba2dc0
       body: |

@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.108.19+rev12
+## (2023-02-24)
+
+* Add newer firmware for Kaby Lake GPUs [Michal Toman]
+
 # v2.108.19+rev11
 ## (2023-02-22)
 
