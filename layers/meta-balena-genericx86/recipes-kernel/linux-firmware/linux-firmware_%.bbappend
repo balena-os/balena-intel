@@ -29,6 +29,9 @@ SRC_URI:append = " \
     file://ibt-0040-0041.sfi \
     file://iwlwifi-so-a0-gf-a0-64.ucode \
     file://iwlwifi-so-a0-gf-a0.pnvm \
+    file://kbl_guc_62.0.0.bin \
+    file://kbl_guc_69.0.3.bin \
+    file://kbl_guc_70.1.1.bin \
 "
 
 SRCREV_raspbian-nf = "86e88fbf0345da49555d0ec34c80b4fbae7d0cd3"
@@ -40,6 +43,7 @@ PACKAGES =+ " \
     ${PN}-ibt-40-41 \
     ${PN}-iwlwifi-so-a0 \
     ${PN}-ipu3-firmware \
+    ${PN}-kbl-guc \
 "
 FILES:${PN}-ibt-20-1-3  = " \
     ${nonarch_base_libdir}/firmware/intel/ibt-20-1-3.ddc* \
@@ -72,6 +76,12 @@ FILES:${PN}-ipu3-firmware = " \
     ${nonarch_base_libdir}/firmware/LICENSE.ipu3_firmware* \
 "
 
+FILES:${PN}-kbl-guc = " \
+    ${nonarch_base_libdir}/firmware/i915/kbl_guc_62.0.0.bin* \
+    ${nonarch_base_libdir}/firmware/i915/kbl_guc_69.0.3.bin* \
+    ${nonarch_base_libdir}/firmware/i915/kbl_guc_70.1.1.bin* \
+"
+
 do_install:append() {
     install -d ${D}${nonarch_base_libdir}/firmware/brcm/
     install -m 0644 ${WORKDIR}/raspbian-nf/brcm/brcmfmac43455-sdio.txt ${D}${nonarch_base_libdir}/firmware/brcm/
@@ -94,6 +104,10 @@ do_install:append() {
     install -m 0644 ${WORKDIR}/ibt-0040-0041.sfi ${D}${nonarch_base_libdir}/firmware/intel/ibt-0040-0041.sfi
     install -m 0644 ${WORKDIR}/iwlwifi-so-a0-gf-a0-64.ucode ${D}${nonarch_base_libdir}/firmware/iwlwifi-so-a0-gf-a0-64.ucode
     install -m 0644 ${WORKDIR}/iwlwifi-so-a0-gf-a0.pnvm ${D}${nonarch_base_libdir}/firmware/iwlwifi-so-a0-gf-a0.pnvm
+
+    install -m 0644 ${WORKDIR}/kbl_guc_62.0.0.bin ${D}${nonarch_base_libdir}/firmware/i915/kbl_guc_62.0.0.bin
+    install -m 0644 ${WORKDIR}/kbl_guc_69.0.3.bin ${D}${nonarch_base_libdir}/firmware/i915/kbl_guc_69.0.3.bin
+    install -m 0644 ${WORKDIR}/kbl_guc_70.1.1.bin ${D}${nonarch_base_libdir}/firmware/i915/kbl_guc_70.1.1.bin
 }
 
 IWLWIFI_FW_TOCLEAN += " \
