@@ -20,12 +20,9 @@ if efibootmgr &>/dev/null ; then
     INSTALL_UEFI="yes"
 fi
 
-# Mount internal device boot partition
-mkdir -p $INTERNAL_DEVICE_BOOT_PART_MOUNTPOINT
-echo "[resin-init-flasher-board] Mounting internal device boot partition."
-if ! mount /dev/disk/by-label/resin-boot $INTERNAL_DEVICE_BOOT_PART_MOUNTPOINT; then
-    echo "[resin-init-flasher-board] Unable to mount boot partition"
-    exit 1
+# Internal device boot partition already mounted in flasher script
+if ! findmnt --noheadings -M "${INTERNAL_DEVICE_BOOT_PART_MOUNTPOINT}" > /dev/null 2>&1; then
+    fail "[resin-init-flasher-board] Boot partition not mounted"
 fi
 
 internal_dev=""
@@ -53,7 +50,6 @@ else
     rm -rf "$INTERNAL_DEVICE_BOOT_PART_MOUNTPOINT/grub"
 fi
 
-umount $INTERNAL_DEVICE_BOOT_PART_MOUNTPOINT
 sync
 
 [ -z $INSTALL_UEFI ] && exit 0
