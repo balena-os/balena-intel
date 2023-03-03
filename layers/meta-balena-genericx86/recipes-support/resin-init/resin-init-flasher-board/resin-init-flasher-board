@@ -11,12 +11,13 @@ CURRENT_ROOT=$(findmnt --noheadings --canonicalize --output SOURCE / | xargs lsb
 
 # source the flasher configuration file
 if [ -f $FLASHER_CONF_FILE ]; then
-    source $FLASHER_CONF_FILE
+    # shellcheck disable=SC1090
+    . $FLASHER_CONF_FILE
 else
     fail "No configuration for resin-init-flasher-board. Cannot configure bootloader. Exiting"
 fi
 
-if efibootmgr &>/dev/null ; then 
+if efibootmgr > /dev/null 2>&1; then
     INSTALL_UEFI="yes"
 fi
 
@@ -46,7 +47,7 @@ if [ -z $INSTALL_UEFI ]; then
     rm -rf "$INTERNAL_DEVICE_BOOT_PART_MOUNTPOINT/EFI"
 else
     info "[resin-init-flasher-board] UEFI installation."
-    dd if=/dev/zero of=/dev/$internal_dev bs=1 count=446
+    dd if=/dev/zero of="/dev/$internal_dev" bs=1 count=446
     rm -rf "$INTERNAL_DEVICE_BOOT_PART_MOUNTPOINT/grub"
 fi
 
@@ -56,10 +57,10 @@ sync
 
 # remove existing resinOS entries so we won't have duplicates
 if ! mount | grep efivarfs > /dev/null; then mount -t efivarfs efivarfs /sys/firmware/efi/efivars; fi
-duplicates=`efibootmgr | grep resinOS |sed 's/Boot*//g' | sed 's/* resinOS//g'`
-for i in $duplicates; do efibootmgr -B -b $i; done
+duplicates=$(efibootmgr | grep resinOS |sed 's/Boot*//g' | sed 's/* resinOS//g')
+for i in $duplicates; do efibootmgr -B -b "$i"; done
 
 info "Add UEFI boot entry for starting resinOS from internal media."
-efibootmgr -c -d /dev/$internal_dev -p 1 -L "resinOS" -l "\EFI\BOOT\bootx64.efi"
+efibootmgr -c -d "/dev/$internal_dev" -p 1 -L "resinOS" -l "\EFI\BOOT\bootx64.efi"
 
 exit 0
