@@ -2,6 +2,9 @@
 
 set -e
 
+# shellcheck disable=SC1091
+. /usr/libexec/os-helpers-logging
+
 FLASHER_CONF_FILE=/etc/resin-init-flasher.conf
 INTERNAL_DEVICE_BOOT_PART_MOUNTPOINT=/tmp/internal_boot
 CURRENT_ROOT=$(findmnt --noheadings --canonicalize --output SOURCE / | xargs lsblk -no pkname)
@@ -10,8 +13,7 @@ CURRENT_ROOT=$(findmnt --noheadings --canonicalize --output SOURCE / | xargs lsb
 if [ -f $FLASHER_CONF_FILE ]; then
     source $FLASHER_CONF_FILE
 else
-    echo "No configuration for resin-init-flasher-board. Cannot configure bootloader. Exiting"
-    exit 1
+    fail "No configuration for resin-init-flasher-board. Cannot configure bootloader. Exiting"
 fi
 
 if efibootmgr &>/dev/null ; then 
@@ -29,7 +31,7 @@ fi
 internal_dev=""
 for d in $INTERNAL_DEVICE_KERNEL; do
     if [ "$CURRENT_ROOT" = "$d" ]; then
-        echo "[resin-init-flasher-board] $d is our install media, skip it..."
+        info "[resin-init-flasher-board] $d is our install media, skip it..."
         continue
     fi
     if fdisk -l | grep -q "$d"; then
@@ -39,15 +41,14 @@ for d in $INTERNAL_DEVICE_KERNEL; do
 done
 
 if [ -z "$internal_dev" ]; then
-    echo "Failed to find internal device for which to configure the bootloader. Exiting"
-    exit 1
+    fail "Failed to find internal device for which to configure the bootloader. Exiting"
 fi
 
 if [ -z $INSTALL_UEFI ]; then
-    echo "[resin-init-flasher-board] non-UEFI installation."
+    info "[resin-init-flasher-board] non-UEFI installation."
     rm -rf "$INTERNAL_DEVICE_BOOT_PART_MOUNTPOINT/EFI"
 else
-    echo "[resin-init-flasher-board] UEFI installation."
+    info "[resin-init-flasher-board] UEFI installation."
     dd if=/dev/zero of=/dev/$internal_dev bs=1 count=446
     rm -rf "$INTERNAL_DEVICE_BOOT_PART_MOUNTPOINT/grub"
 fi
@@ -62,7 +63,7 @@ if ! mount | grep efivarfs > /dev/null; then mount -t efivarfs efivarfs /sys/fir
 duplicates=`efibootmgr | grep resinOS |sed 's/Boot*//g' | sed 's/* resinOS//g'`
 for i in $duplicates; do efibootmgr -B -b $i; done
 
-echo "Add UEFI boot entry for starting resinOS from internal media."
+info "Add UEFI boot entry for starting resinOS from internal media."
 efibootmgr -c -d /dev/$internal_dev -p 1 -L "resinOS" -l "\EFI\BOOT\bootx64.efi"
 
 exit 0
