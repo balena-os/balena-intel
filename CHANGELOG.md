@@ -1,6 +1,518 @@
 Change log
 -----------
 
+# v2.113.4
+## (2023-03-06)
+
+* fix linting warnings in resin-init-flasher-board [Alex Gonzalez]
+* assume boot partition is mounted in flasher script [Alex Gonzalez]
+* use logging helper in flasher board script [Alex Gonzalez]
+
+<details>
+<summary> Update layers/meta-balena to f5bcab2926c9cf709954ec6acf87b839abe7a489 [Renovate Bot] </summary>
+
+> ## meta-balena-2.113.4
+> ### (2023-03-03)
+> 
+> * balena-keys: do not ship certificates in DER format [Michal Toman]
+> 
+> ## meta-balena-2.113.3
+> ### (2023-03-02)
+> 
+> * balena-units-conf: launch os-config on config changes [Alex Gonzalez]
+> 
+> ## meta-balena-2.113.2
+> ### (2023-03-02)
+> 
+> * Refer to balenaEngine by its full name [Leandro Motta Barros]
+> 
+> ## meta-balena-2.113.1
+> ### (2023-02-28)
+> 
+> * os-helpers-fs: formatting and fixing lint warning [Alex Gonzalez]
+> * os-helpers-fs: fix check for media attached [Alex Gonzalez]
+> * initrdscripts: migrate: use du instead of wc to calculate byte sizes [Alex Gonzalez]
+> 
+> ## meta-balena-2.113.0
+> ### (2023-02-25)
+> 
+> * resin-init-flasher: use logging helper [Alex Gonzalez]
+> * resin-init-flasher: replace shutdown for reboot in case of migration [Alex Gonzalez]
+> * README: add installer section [Alex Gonzalez]
+> * initrdscripts: Add migration module [Alex Gonzalez]
+> * integration layers: use `android-tools` from Yocto Dunfell and before [Alex Gonzalez]
+> * resin-init-flasher: comply with recovery mode [Alex Gonzalez]
+> * initrdscritps: Move moving /run mountpoint from rootfs to migrate module [Alex Gonzalez]
+> * initrdscripts: add recovery module [Alex Gonzalez]
+> 
+> ## meta-balena-2.112.15
+> ### (2023-02-24)
+> 
+> * os-helpers-fs: add dependency on util-linux fdisk [Alex Gonzalez]
+> 
+> ## meta-balena-2.112.14
+> ### (2023-02-22)
+> 
+> * balena-config-vars: Remove dependency on fatrw [Alex Gonzalez]
+> * balena-config-vars: split in two packages [Alex Gonzalez]
+> * Add raid support based on machine features [Alex Gonzalez]
+> * packagegroup-resin: add resin-device-progress dependency [Alex Gonzalez]
+> * resin-init-flasher: remove device-register and device-progress dependencies [Alex Gonzalez]
+> * resin-init-flasher: reduce dependencies [Alex Gonzalez]
+> * os-helpers-fs: replace inform with info helper [Alex Gonzalez]
+> * resin-init-flasher: Build time check on INTERNAL_DEVICE_KERNEL only for flasher device types [Alex Gonzalez]
+> * resin-init-flasher: wait for the by-label links to be created [Alex Gonzalez]
+> 
+> ## meta-balena-2.112.13
+> ### (2023-02-22)
+> 
+> * recipes-bsp/u-boot: Disable saveenv shell command [Alexandru Costache]
+> * Update tests/leviathan digest to 771bac8 [Renovate Bot]
+> 
+> ## meta-balena-2.112.12
+> ### (2023-02-20)
+> 
+> * os-helpers-fs: get_internal_device() skip disks w/out media [Joseph Kogut]
+> 
+> ## meta-balena-2.112.11
+> ### (2023-02-20)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 84c2b96 [Renovate Bot] </summary>
+> 
+>> ### leviathan-2.22.0
+>> #### (2023-02-20)
+>> 
+>> * Update core/contracts digest to 93ba80c [Renovate Bot]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-2.112.10
+> ### (2023-02-20)
+> 
+> * tests: os: secureboot: skip if system is not locked down [Joseph Kogut]
+> 
+> ## meta-balena-2.112.9
+> ### (2023-02-20)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 8a7bdcc [Renovate Bot] </summary>
+> 
+>> ### leviathan-2.21.0
+>> #### (2023-02-20)
+>> 
+>> * Update core/contracts digest to 103037c [Renovate Bot]
+>> 
+>> ### leviathan-2.20.1
+>> #### (2023-02-20)
+>> 
+>> * client: throw errors instead of blanket handling [Joseph Kogut]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-2.112.8
+> ### (2023-02-17)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v14.9.1 [Renovate Bot] </summary>
+> 
+>> ### balena-supervisor-14.9.1
+>> #### (2023-02-15)
+>> 
+>> * Always lower case the cpu id to avoid bouncing between casing when reporting [Pagan Gazzard]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-2.112.7
+> ### (2023-02-16)
+> 
+> * renovate: Only consider github releases when bumping engine [Kyle Harding]
+> 
+> ## meta-balena-2.112.6
+> ### (2023-02-16)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 92cb71a [Renovate Bot] </summary>
+> 
+>> ### leviathan-2.20.0
+>> #### (2023-02-16)
+>> 
+>> * Update core/contracts digest to 9b8811f [Renovate Bot]
+>> 
+>> ### leviathan-2.19.2
+>> #### (2023-02-15)
+>> 
+>> * patch: Improve Getting Started instructions [Vipul Gupta (@vipulgupta2048)]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-2.112.5
+> ### (2023-02-16)
+> 
+> * grub: Add chain module to support multiboot [Alex Gonzalez]
+> 
+> ## meta-balena-2.112.4
+> ### (2023-02-15)
+> 
+> * Update backports with current 2.102.x [BalenaCI github workflow]
+> 
+> ## meta-balena-2.112.3
+> ### (2023-02-15)
+> 
+> * workflows: update-backports: remove skipping tests [Alex Gonzalez]
+> 
+> ## meta-balena-2.112.2
+> ### (2023-02-15)
+> 
+> * workflows: add update-backports [Alex Gonzalez]
+> 
+> ## meta-balena-2.112.1
+> ### (2023-02-15)
+> 
+> * Update aufs5 kernel patches for 5.10 versions [Florin Sarbu]
+> 
+> ## meta-balena-2.112.0
+> ### (2023-02-14)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v14.9.0 [Renovate Bot] </summary>
+> 
+>> ### balena-supervisor-14.9.0
+>> #### (2023-02-14)
+>> 
+>> * Find and remove duplicate networks [Felipe Lalanne]
+>> * Reference networks by Id instead of by name [Felipe Lalanne]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-2.111.4
+> ### (2023-02-14)
+> 
+> * tests: hup: fix flashing for tx2 [rcooke-warwick]
+> 
+> ## meta-balena-2.111.3
+> ### (2023-02-14)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 975e8ca [Renovate Bot] </summary>
+> 
+>> ### leviathan-2.19.1
+>> #### (2023-02-14)
+>> 
+>> * docker-compose: qemu: remove dep on swtpm [Joseph Kogut]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-2.111.2
+> ### (2023-02-13)
+> 
+> * docs: add section for sb/fde opt-in [Joseph Kogut]
+> 
+> ## meta-balena-2.111.1
+> ### (2023-02-13)
+> 
+> * resin-init-flasher: do not report progress if unprovisioned [Alex Gonzalez]
+> * resin-init-flasher: check splash configuration exists before copying [Alex Gonzalez]
+> * resin-init-flasher: Move configuration data definitions to config file [Alex Gonzalez]
+> 
+> ## meta-balena-2.111.0
+> ### (2023-02-11)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v14.8.0 [Renovate Bot] </summary>
+> 
+>> ### balena-supervisor-14.8.0
+>> #### (2023-02-10)
+>> 
+>> * Remove dependent devices content in codebase [Christina Ying Wang]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-2.110.4
+> ### (2023-02-10)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 589449d [Renovate Bot] </summary>
+> 
+>> ### leviathan-2.19.0
+>> #### (2023-02-10)
+>> 
+>> * Update core/contracts digest to 35f4223 [Renovate Bot]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-2.110.3
+> ### (2023-02-09)
+> 
+> * os-helpers: remove shebangs as these are not meant to be executed [Alex Gonzalez]
+> * resindataexpander: Fix formatting [Alex Gonzalez]
+> * resin-init-flasher: Extract code that resolved internal device [Alex Gonzalez]
+> * os-helpers-fs: Add shared code from resin-init-flasher [Alex Gonzalez]
+> * resin-init-flasher: remove unused variable [Alex Gonzalez]
+> * resin-init-flasher: Use the default for the external boot partition mount [Alex Gonzalez]
+> * resin-init-flasher: search for images to copy instead of hardcoding paths [Alex Gonzalez]
+> * resin-init-flasher: Do not  hardcode the path to the internal boot device [Alex Gonzalez]
+> * resin-init-flasher: remove systemd dependency [Alex Gonzalez]
+> * resin-init-flasher: Do not hardcode path to the raw image [Alex Gonzalez]
+> * initrdscript: prepare: expose path to initramfs logs [Alex Gonzalez]
+> * initrdscript: resindataexpander: skip for flasher images [Alex Gonzalez]
+> * docs: add initramfs overview [Alex Gonzalez]
+> 
+> ## meta-balena-2.110.2
+> ### (2023-02-07)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 4f63a2d [Renovate Bot] </summary>
+> 
+>> ### leviathan-2.18.1
+>> #### (2023-02-07)
+>> 
+>> * patch: Automate docs deployment with Flowzone [Vipul Gupta (@vipulgupta2048)]
+>> 
+>> ### leviathan-2.18.0
+>> #### (2023-02-07)
+>> 
+>> * Update core/contracts digest to 7797750 [Renovate Bot]
+>> 
+>> ### leviathan-2.17.6
+>> #### (2023-02-07)
+>> 
+>> * patch: Update client lockfile [Vipul Gupta (@vipulgupta2048)]
+>> * patch: Update core lockfile [Vipul Gupta (@vipulgupta2048)]
+>> 
+>> ### leviathan-2.17.5
+>> #### (2023-02-06)
+>> 
+>> * patch: Update core dependencies [Vipul Gupta (@vipulgupta2048)]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-2.110.1
+> ### (2023-02-07)
+> 
+> * renovate: Include to and from versions for supervisor and engine [Kyle Harding]
+> 
+> ## meta-balena-2.110.0
+> ### (2023-02-07)
+> 
+> * Update balena-supervisor to v14.7.1 [Renovate Bot]
+> 
+> ## meta-balena-2.109.2
+> ### (2023-02-07)
+> 
+> * efitools: backport patch to fix build failure [Joseph Kogut]
+> * efitools: fix cross-compilation on arm [Joseph Kogut]
+> * Only include EFI tools if the machine feature is defined [Alex Gonzalez]
+> 
+> ## meta-balena-2.109.1
+> ### (2023-02-06)
+> 
+> * resin-extra-udev-rules: Remove after all device types have been updated [Alex Gonzalez]
+> 
+> ## meta-balena-2.109.0
+> ### (2023-02-05)
+> 
+> * kernel-balena: Remove apparmor support [Alex Gonzalez]
+> 
+> ## meta-balena-2.108.39
+> ### (2023-02-03)
+> 
+> * flasher: handle user mode system w/out secure boot [Joseph Kogut]
+> * flasher: fix keys not enrolling with secure boot enabled [Joseph Kogut]
+> * flasher: fix secure boot setup with enrolled keys [Joseph Kogut]
+> 
+> ## meta-balena-2.108.38
+> ### (2023-02-03)
+> 
+> 
+> <details>
+> <summary> Update leviathan to v2.17.4 [Kyle Harding] </summary>
+> 
+>> ### leviathan-2.17.4
+>> #### (2023-01-28)
+>> 
+>> * patch: Upgrade client to v18 [Vipul Gupta (@vipulgupta2048)]
+>> 
+>> ### leviathan-2.17.3
+>> #### (2023-01-26)
+>> 
+>> * patch: Update client dependencies [Vipul Gupta (@vipulgupta2048)]
+>> 
+>> ### leviathan-2.17.2
+>> #### (2023-01-19)
+>> 
+>> * chore(deps): update alpine docker tag to v3.17.1 [renovate[bot]]
+>> 
+>> ### leviathan-2.17.1
+>> #### (2023-01-19)
+>> 
+>> * patch: Convert balenaCloudInteractor to JS [Vipul Gupta (@vipulgupta2048)]
+>> 
+>> ### leviathan-2.17.0
+>> #### (2023-01-19)
+>> 
+>> * chore(deps): update dependency json5 [security] [renovate[bot]]
+>> 
+>> ### leviathan-2.16.1
+>> #### (2023-01-19)
+>> 
+>> * split swtpm service into separate compose file [Joseph Kogut]
+>> 
+>> ### leviathan-2.16.0
+>> #### (2023-01-18)
+>> 
+>> * chore(deps): update core/contracts digest to 8392bb2 [renovate[bot]]
+>> 
+>> ### leviathan-2.15.1
+>> #### (2023-01-17)
+>> 
+>> * patch: Drop config NPM package [Vipul Gupta (@vipulgupta2048)]
+>> 
+>> ### leviathan-2.15.0
+>> #### (2023-01-14)
+>> 
+>> * chore(deps): update dependency ansi-regex [security] [renovate[bot]]
+>> 
+>> ### leviathan-2.14.9
+>> #### (2023-01-05)
+>> 
+>> * compose: qemu: add swtpm service [Joseph Kogut]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-2.108.37
+> ### (2023-02-02)
+> 
+> * Update balena-engine to v20.10.26 [Renovate Bot]
+> 
+> ## meta-balena-2.108.36
+> ### (2023-02-02)
+> 
+> * flasher: remove duplicate EFI boot entries [Joseph Kogut]
+> * flasher: create EFI boot entry [Joseph Kogut]
+> * common: os-helpers-fs: fix get_dev_path_from_label w/ luks [Joseph Kogut]
+> * flasher: make secure boot opt-in [Joseph Kogut]
+> * flasher: ensure image is signed before enrollment [Joseph Kogut]
+> * flasher: refactor secure boot block [Joseph Kogut]
+> 
+> ## meta-balena-2.108.35
+> ### (2023-02-01)
+> 
+> * renovate: Add regex manager for balena-engine [Kyle Harding]
+> 
+> ## meta-balena-2.108.34
+> ### (2023-02-01)
+> 
+> * docs: Add secure boot and disk encryption overview [Alex Gonzalez]
+> * hostapp-update-hooks: Fail if new keys are used [Alex Gonzalez]
+> * resin-init-flasher: In setupmode program new keys [Alex Gonzalez]
+> 
+> ## meta-balena-2.108.33
+> ### (2023-02-01)
+> 
+> * tests: os: skip persistent logging test for pi0 [rcooke-warwick]
+> 
+> ## meta-balena-2.108.32
+> ### (2023-02-01)
+> 
+> * efitools: Allow builds for ARM architecture [Alex Gonzalez]
+> 
+> ## meta-balena-2.108.31
+> ### (2023-02-01)
+> 
+> * rollback-health: bind-mount EFI partition when split from boot [Michal Toman]
+> 
+> ## meta-balena-2.108.30
+> ### (Invalid date)
+> 
+> * redsocks: Deploy README and sample configration file [Alexandru Costache]
+> * recipes-bsp/u-boot: Import extra uboot environment from scanned devices [Alexandru Costache]
+> 
+> ## meta-balena-2.108.29
+> ### (2023-01-28)
+> 
+> * bluez: Update to v5.66 [Alex Gonzalez]
+> 
+> ## meta-balena-2.108.28
+> ### (2023-01-26)
+> 
+> * patch: Update balenaOS docs title [Vipul Gupta (@vipulgupta2048)]
+> 
+> ## meta-balena-2.108.27
+> ### (2023-01-20)
+> 
+> * tests: os: fix tests that use glider on rpi0 [rcooke-warwick]
+> 
+> ## meta-balena-2.108.26
+> ### (2023-01-20)
+> 
+> * Enable back connectivity check in NetworkManager [Zahari Petkov]
+> 
+> ## meta-balena-2.108.25
+> ### (2023-01-18)
+> 
+> * tests: os: add basic SB/FDE tests [Joseph Kogut]
+> 
+> ## meta-balena-2.108.24
+> ### (2023-01-18)
+> 
+> * networkmanager: Make iptables wait for xtables.lock [Zahari Petkov]
+> 
+> ## meta-balena-2.108.23
+> ### (2023-01-16)
+> 
+> * balena-keys: rebuild if keys change [Alex Gonzalez]
+> * classes: sign-*: resign if keys change [Alex Gonzalez]
+> 
+> ## meta-balena-2.108.22
+> ### (2023-01-16)
+> 
+> * workflows: esr: use semver compatible versions [Alex Gonzalez]
+> 
+> ## meta-balena-2.108.21
+> ### (2023-01-14)
+> 
+> * efitools: Package lock down EFI image into its own package [Alex Gonzalez]
+> 
+> ## meta-balena-2.108.20
+> ### (2023-01-12)
+> 
+> * workflows: meta-balena-esr: Fix version calculation [Alex Gonzalez]
+> 
+
+</details>
+
+* trigger deploy builds on multi-digit revisions too [Alex Gonzalez]
+
 # v2.108.19+rev12
 ## (2023-02-24)
 
