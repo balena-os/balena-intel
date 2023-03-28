@@ -1,6 +1,41 @@
 Change log
 -----------
 
+# v2.113.31
+## (2023-03-28)
+
+
+<details>
+<summary> Update layers/meta-balena to c06fe0336f8582acf95c0615c48deafd4bed2731 [Renovate Bot] </summary>
+
+> ## meta-balena-2.113.31
+> ### (2023-03-28)
+> 
+> * Don't create core dumps in containers by default [Leandro Motta Barros]
+> * Make sure balenaEngine owns the container cgroups [Leandro Motta Barros]
+> 
+> ## meta-balena-2.113.30
+> ### (2023-03-27)
+> 
+> 
+> <details>
+> <summary> Update balena-engine to v20.10.33 [Renovate Bot] </summary>
+> 
+>> ### balena-engine-20.10.33
+>> #### (2023-03-27)
+>> 
+>> * Add integration tests for balena's "delta on load" [Leandro Motta Barros]
+>> * Simplify and improve delta error handling [Leandro Motta Barros]
+>> * Refactor the xfer portions of delta [Leandro Motta Barros]
+>> * Refactor the distribution portions of delta [Leandro Motta Barros]
+>> 
+> 
+> </details>
+> 
+> 
+
+</details>
+
 # v2.113.29+rev1
 ## (2023-03-27)
 
