@@ -1,6 +1,78 @@
 Change log
 -----------
 
+# v2.113.34
+## (2023-04-05)
+
+
+<details>
+<summary> Update layers/meta-balena to c2d483b3e07138f6b0f34cd2b32c916133a5929d [Renovate Bot] </summary>
+
+> ## meta-balena-2.113.34
+> ### (2023-04-04)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 5785e44 [Renovate Bot] </summary>
+> 
+>> ### leviathan-2.24.1
+>> #### (2023-04-04)
+>> 
+>> * Deprecate worker release env var (again) [Kyle Harding]
+>> 
+>> ### leviathan-2.24.0
+>> #### (2023-04-03)
+>> 
+>> * minor: Add Leviathan Test Helpers [Vipul Gupta (@vipulgupta2048)]
+>> 
+>> ### leviathan-2.23.6
+>> #### (2023-04-01)
+>> 
+>> * patch: Output final-result in the end [Vipul Gupta (@vipulgupta2048)]
+>> 
+>> ### leviathan-2.23.5
+>> #### (2023-04-01)
+>> 
+>> * update default worker version [rcooke-warwick]
+>> 
+>> ### leviathan-2.23.4
+>> #### (2023-03-29)
+>> 
+>> * swtpm: store state in tmpfs [Joseph Kogut]
+>> 
+>> ### leviathan-2.23.3
+>> #### (2023-03-29)
+>> 
+>> * Update core/contracts digest to fa51fae [Renovate Bot]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-2.113.33
+> ### (2023-03-28)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to e5dcbae [Renovate Bot] </summary>
+> 
+>> ### leviathan-2.23.2
+>> #### (2023-03-28)
+>> 
+>> * patch: Update path to balena-io/renovate-config [Kyle Harding]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-2.113.32
+> ### (2023-03-28)
+> 
+> * renovate: Inherit automerge settings from org [Kyle Harding]
+> 
+
+</details>
+
 # v2.113.31
 ## (2023-03-28)
 
