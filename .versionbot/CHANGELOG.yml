@@ -1,4 +1,115 @@
 - commits:
+    - subject: Update layers/meta-balena to 3f0e4743516442227387bb9fc55d97fdf7d57a12
+      hash: 559067afd880350d5ea204f7436c074a222c4327
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 3f0e4743516442227387bb9fc55d97fdf7d57a12
+        changelog-entry: Update layers/meta-balena to 3f0e4743516442227387bb9fc55d97fdf7d57a12
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: Update balena-supervisor to v14.10.1
+              hash: 0bb69e86e973bf449539a942dec3ac82660ed37a
+              body: |
+                Update balena-supervisor from 14.9.8 to 14.10.1
+              footer:
+                Change-type: minor
+                change-type: minor
+              author: Renovate Bot
+              nested:
+                - commits:
+                    - subject: Use dbus-send to get current boot block device instead of fdisk
+                      hash: 4ab8250c971e2f05d9dbf5870f9feb8dd298bdda
+                      body: ""
+                      footer:
+                        Closes: "#2150"
+                        closes: "#2150"
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Christina Ying Wang <christina@balena.io>
+                        signed-off-by: Christina Ying Wang <christina@balena.io>
+                      author: Christina Ying Wang
+                      nested: []
+                  version: balena-supervisor-14.10.1
+                  title: ""
+                  date: 2023-04-07T00:15:59.534Z
+                - commits:
+                    - subject: Mount boot partition into container on Supervisor start
+                      hash: 49ee1042a87ce0b101054e32b84afaa324a371de
+                      body: >
+                        As the Supervisor is a privileged container, it has access to host /dev,
+                        and therefore has access
+
+                        to boot, data, and state balenaOS partitions. This commit sets up the framework for the following:
+
+
+                        - Finds the /dev partition that corresponds to each partition based on partition label
+
+                        - Mounts the partitions into set mountpoints in the device
+
+                        - Removes reliance on env vars and mountpoints provided by host's start-balena-supervisor script
+
+                        - Simplifies host path querying by centralizing these queries through methods in lib/host-utils.ts
+
+
+                        This particular changes env vars for and mounts the boot partition.
+
+
+                        Since the Supervisor would no longer rely on container `run` arguments provided by a host script,
+
+                        this change moves Supervisor closer to being able to start itself (Supervisor-as-an-app).
+                      footer:
+                        Change-type: minor
+                        change-type: minor
+                        Signed-off-by: Christina Ying Wang <christina@balena.io>
+                        signed-off-by: Christina Ying Wang <christina@balena.io>
+                      author: Christina Ying Wang
+                      nested: []
+                  version: balena-supervisor-14.10.0
+                  title: ""
+                  date: 2023-03-28T19:13:49.886Z
+          version: meta-balena-2.114.0
+          title: ""
+          date: 2023-04-07T02:24:02.321Z
+        - commits:
+            - subject: Update balena-engine to v20.10.34
+              hash: 5400eacc4003ff9fdf7d9d6e8b60ffb96dde9d87
+              body: |
+                Update balena-engine from 20.10.33 to 20.10.34
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Renovate Bot
+              nested:
+                - commits:
+                    - subject: Update librsync-go to v0.8.5, circbuf to v0.1.3
+                      hash: a7c917a97048314e956d7264e97598465f88c1c7
+                      body: >
+                        Notable improvements these new versions bring:
+
+
+                        * Optimized code path for generating deltas with blocks that are
+                          power-of-two-sized.
+                        * Avoid allocating unbounded amounts of memory when the target differs
+                          completely from the source.
+                        * Several bugfixes in edge cases that shall not affect balenaEngine.
+                      footer:
+                        Signed-off-by: Leandro Motta Barros <leandro@balena.io>
+                        signed-off-by: Leandro Motta Barros <leandro@balena.io>
+                        Change-type: patch
+                        change-type: patch
+                      author: Leandro Motta Barros
+                      nested: []
+                  version: balena-engine-20.10.34
+                  title: ""
+                  date: 2023-04-05T13:06:06.674Z
+          version: meta-balena-2.113.35
+          title: ""
+          date: 2023-04-05T15:18:23.115Z
+  version: 2.114.0
+  title: ""
+  date: 2023-04-07T09:25:34.881Z
+- commits:
     - subject: Update layers/meta-balena to c2d483b3e07138f6b0f34cd2b32c916133a5929d
       hash: c8eddc2fb12a9868b959b727ae6a473d5bd58cac
       body: Update layers/meta-balena

@@ -1,6 +1,53 @@
 Change log
 -----------
 
+# v2.114.0
+## (2023-04-07)
+
+
+<details>
+<summary> Update layers/meta-balena to 3f0e4743516442227387bb9fc55d97fdf7d57a12 [Renovate Bot] </summary>
+
+> ## meta-balena-2.114.0
+> ### (2023-04-07)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v14.10.1 [Renovate Bot] </summary>
+> 
+>> ### balena-supervisor-14.10.1
+>> #### (2023-04-07)
+>> 
+>> * Use dbus-send to get current boot block device instead of fdisk [Christina Ying Wang]
+>> 
+>> ### balena-supervisor-14.10.0
+>> #### (2023-03-28)
+>> 
+>> * Mount boot partition into container on Supervisor start [Christina Ying Wang]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-2.113.35
+> ### (2023-04-05)
+> 
+> 
+> <details>
+> <summary> Update balena-engine to v20.10.34 [Renovate Bot] </summary>
+> 
+>> ### balena-engine-20.10.34
+>> #### (2023-04-05)
+>> 
+>> * Update librsync-go to v0.8.5, circbuf to v0.1.3 [Leandro Motta Barros]
+>> 
+> 
+> </details>
+> 
+> 
+
+</details>
+
 # v2.113.34
 ## (2023-04-05)
 
