@@ -1,4 +1,276 @@
 - commits:
+    - subject: Update layers/meta-balena to 1264f58c432b7d87523a59ff27e246c2d6a3f903
+      hash: 741a1c4195b2c0a6843f8a4cf09468f09a091465
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 1264f58c432b7d87523a59ff27e246c2d6a3f903
+        changelog-entry: Update layers/meta-balena to 1264f58c432b7d87523a59ff27e246c2d6a3f903
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: "initedscripts: recovery: do not use strings for timeout"
+              hash: c17da3802213251c69ba8a99ce6a8a63b358f022
+              body: >
+                Remove the `m` suffix to the timeout as they are supposed to be compared
+
+                as integer numbers.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "resin-init-flasher: limit boot device identification to booting disk"
+              hash: 5ee9a12075c3c0a11455ccb342ce4499916395be
+              body: >
+                The installer is to copy configuration files into the boot partition on
+
+                the installer disk - searching by label needs to be restriced to the
+
+                booting disk to avoid clashes if there are other disks with matching
+
+                labels present.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "resin-init-flasher: add verbose copy of migration log"
+              hash: 8fe29890b6e3c2caca1c603f1ecbe046d9cd1fc1
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "resin-init-flasher: fix EFI installation for multiple disks"
+              hash: 69459a964f62adbe4b9661b718994391c4a78363
+              body: >
+                Search for the installation disk on the same device the system is being
+
+                installed on. This avoids problems when there are more than one disk
+
+                with balena/resin labelling.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "initrdscripts: migrate: correctly identify boot device"
+              hash: 27fd9e05d16d60a7340a16abcda5e93fd1fdb199
+              body: >
+                The internal target device to program is not always the device the system
+
+                is booting from. Make sure the `flash-boot` partition search is done
+
+                on the booting device.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "distro: balena-os: update GRUB key id for signature"
+              hash: f4242aa560e869892a7289ac8523bed055feffe3
+              body: >
+                Update the default Grub key id so it matches the currently configured
+
+                key. This avoids having to configure this in the build jobs.
+
+
+                [skip ci]
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-2.114.4
+          title: ""
+          date: 2023-04-18T12:20:45.009Z
+        - commits:
+            - subject: Update balena-supervisor to v14.10.4
+              hash: 8dc882977526603790280a7550985df3bce4db09
+              body: |
+                Update balena-supervisor from 14.10.2 to 14.10.4
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Renovate Bot
+              nested:
+                - commits:
+                    - subject: Log uncaught promise exceptions on the app entry
+                      hash: 676464142690da2e36a810cb35e4ea4d0d751636
+                      body: >
+                        Node 15 [changed the way it treats unhandled promise
+                        rejections](https://github.com/nodejs/node/blob/main/doc/changelogs/CHANGELOG_V15.md#throw-on-unhandled-rejections---33021)
+                        from a warning to a throw.
+
+                        For this reason errors like a corrupt migration directory, that happens when trying to
+
+                        roll back to a previous supervisor version were no longer showing a
+
+                        message but dumping the full minimized code into the journal logs.
+
+
+                        This PR adds a catchall on app.ts to log the exception and throw an exit
+
+                        code of 1.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Felipe Lalanne
+                      nested: []
+                  version: balena-supervisor-14.10.4
+                  title: ""
+                  date: 2023-04-10T18:15:41.878Z
+                - commits:
+                    - subject: Fix assertion error in restart-service
+                      hash: b9e1464d96824f5332c71324d753d94ddbdecf90
+                      body: >
+                        From:
+                        https://github.com/balena-os/balena-supervisor/pull/2153/commits/c0b4fafe842115933b1da9b4d68e601a19c3e4eb
+
+                        Restart-service checks that both services have restarted in its test assertion, which is
+
+                        incorrect as restart-service should only restart one service.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Christina Ying Wang <christina@balena.io>
+                        signed-off-by: Christina Ying Wang <christina@balena.io>
+                      author: Christina Ying Wang
+                      nested: []
+                  version: balena-supervisor-14.10.3
+                  title: ""
+                  date: 2023-04-10T15:17:58.539Z
+          version: meta-balena-2.114.3
+          title: ""
+          date: 2023-04-12T13:45:48.569Z
+        - commits:
+            - subject: "tests: cloud: convert ssh tunneling to test"
+              hash: 248e90fc904bf6ebd5db30d9bb20b354292acf7f
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+            - subject: "tests: hup: convert ssh tunneling to test"
+              hash: 7e5651325fc5350a6380f0725149223c93e2e48c
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+            - subject: "tests: os: convert ssh tunneling to test"
+              hash: cbf245f22c4726a8a89038c683efe0f0ae1e3f3f
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+            - subject: "tests: cloud: check engine+sv ok in suite"
+              hash: 6a3f7954003491513fd4e32d9f6cff2866dad202
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+            - subject: "tests: os: check engine+sv ok in suite"
+              hash: 2d312e67a8d347083e3f036fcb488a4118b37f87
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+            - subject: "tests:cloud: convert initial SSH attempt into test"
+              hash: e14af621a3224979c5b50b36476a814ea4c5fbe1
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+            - subject: "tests: hup: convert initial SSH attempt into test"
+              hash: 6aa5127d328c798bc8d36f34fc96dba3dd845506
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+            - subject: "tests: os: convert initial SSH attempt into test"
+              hash: 42de079f6adc8e2bf8bd1aaf1b8e36e7dca0056c
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+          version: meta-balena-2.114.2
+          title: ""
+          date: 2023-04-12T08:58:35.753Z
+        - commits:
+            - subject: Update balena-supervisor to v14.10.2
+              hash: 822ccaddeb62a8cc732f6422566f1f3ec129c3a0
+              body: |
+                Update balena-supervisor from 14.10.1 to 14.10.2
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Renovate Bot
+              nested:
+                - commits:
+                    - subject: "backends: Add Jetson Orin NX custom device-tree support"
+                      hash: 6b67db98e54cd7756d7e31d9676d31ab305c4d56
+                      body: ""
+                      footer:
+                        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                        signed-off-by: Alexandru Costache <alexandru@balena.io>
+                        Change-type: patch
+                        change-type: patch
+                      author: Alexandru Costache
+                      nested: []
+                  version: balena-supervisor-14.10.2
+                  title: ""
+                  date: 2023-04-07T18:35:17.559Z
+          version: meta-balena-2.114.1
+          title: ""
+          date: 2023-04-07T21:27:08.879Z
+  version: 2.114.4
+  title: ""
+  date: 2023-04-18T19:10:39.021Z
+- commits:
     - subject: Update layers/meta-balena to 3f0e4743516442227387bb9fc55d97fdf7d57a12
       hash: 559067afd880350d5ea204f7436c074a222c4327
       body: Update layers/meta-balena

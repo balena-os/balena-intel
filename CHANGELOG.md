@@ -1,6 +1,75 @@
 Change log
 -----------
 
+# v2.114.4
+## (2023-04-18)
+
+
+<details>
+<summary> Update layers/meta-balena to 1264f58c432b7d87523a59ff27e246c2d6a3f903 [Renovate Bot] </summary>
+
+> ## meta-balena-2.114.4
+> ### (2023-04-18)
+> 
+> * initedscripts: recovery: do not use strings for timeout [Alex Gonzalez]
+> * resin-init-flasher: limit boot device identification to booting disk [Alex Gonzalez]
+> * resin-init-flasher: add verbose copy of migration log [Alex Gonzalez]
+> * resin-init-flasher: fix EFI installation for multiple disks [Alex Gonzalez]
+> * initrdscripts: migrate: correctly identify boot device [Alex Gonzalez]
+> * distro: balena-os: update GRUB key id for signature [Alex Gonzalez]
+> 
+> ## meta-balena-2.114.3
+> ### (2023-04-12)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v14.10.4 [Renovate Bot] </summary>
+> 
+>> ### balena-supervisor-14.10.4
+>> #### (2023-04-10)
+>> 
+>> * Log uncaught promise exceptions on the app entry [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-14.10.3
+>> #### (2023-04-10)
+>> 
+>> * Fix assertion error in restart-service [Christina Ying Wang]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-2.114.2
+> ### (2023-04-12)
+> 
+> * tests: cloud: convert ssh tunneling to test [rcooke-warwick]
+> * tests: hup: convert ssh tunneling to test [rcooke-warwick]
+> * tests: os: convert ssh tunneling to test [rcooke-warwick]
+> * tests: cloud: check engine+sv ok in suite [rcooke-warwick]
+> * tests: os: check engine+sv ok in suite [rcooke-warwick]
+> * tests:cloud: convert initial SSH attempt into test [rcooke-warwick]
+> * tests: hup: convert initial SSH attempt into test [rcooke-warwick]
+> * tests: os: convert initial SSH attempt into test [rcooke-warwick]
+> 
+> ## meta-balena-2.114.1
+> ### (2023-04-07)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v14.10.2 [Renovate Bot] </summary>
+> 
+>> ### balena-supervisor-14.10.2
+>> #### (2023-04-07)
+>> 
+>> * backends: Add Jetson Orin NX custom device-tree support [Alexandru Costache]
+>> 
+> 
+> </details>
+> 
+> 
+
+</details>
+
 # v2.114.0
 ## (2023-04-07)
 
