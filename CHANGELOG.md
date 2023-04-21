@@ -1,6 +1,49 @@
 Change log
 -----------
 
+# v2.114.7
+## (2023-04-21)
+
+
+<details>
+<summary> Update layers/meta-balena to f2637a0d4cf774ed903613dd058ff9db037ad23e [Renovate Bot] </summary>
+
+> ## meta-balena-2.114.7
+> ### (2023-04-20)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v14.10.6 [Renovate Bot] </summary>
+> 
+>> ### balena-supervisor-14.10.6
+>> #### (2023-04-20)
+>> 
+>> * Do not restart balena-hostname on rename [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-14.10.5
+>> #### (2023-04-13)
+>> 
+>> * Remove anonymous build volume from Dockerfile [Christina Ying Wang]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-2.114.6
+> ### (2023-04-20)
+> 
+> * Update db and dbx hashes during HUP when secure boot is enabled [Michal Toman]
+> * balena-db-hashes: ship both db and dbx updates [Michal Toman]
+> * Use hashes instead of certificates for secure boot image validation [Michal Toman]
+> 
+> ## meta-balena-2.114.5
+> ### (2023-04-19)
+> 
+> * Ship separate GRUB images for secure boot [Michal Toman]
+> 
+
+</details>
+
 # v2.114.4
 ## (2023-04-18)
 
