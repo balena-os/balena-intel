@@ -1,4 +1,61 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 34c8434ffcaeeeb14853082bbf2b4ecc5e0ec769
+      hash: fcfe6358236d1ae405b260a6ce0254716fdb9054
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 34c8434ffcaeeeb14853082bbf2b4ecc5e0ec769
+        changelog-entry: Update balena-yocto-scripts to 34c8434ffcaeeeb14853082bbf2b4ecc5e0ec769
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: "barys: fix removal of equals sign from argval"
+              hash: 8855ad4d31b45187e4007763b6bb084e08974807
+              body: >
+                When parsing additional variables to be passed to the bitbake build,
+
+                keys and values are split using equals as a delimiter. However, the
+
+                splitting process does not split only on the first occurrence, which
+
+                results in removing equals signs from the value as well. This is
+
+                problematic with base64 encoded strings, which are padded with equals
+
+                signs.
+
+
+                Split only on the first occurrence, leaving the value intact.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: balena-yocto-scripts-1.19.27
+          title: ""
+          date: 2023-04-21T22:08:39.297Z
+        - commits:
+            - subject: "balena-lib: Do not return error if no balena user token is available"
+              hash: e335e248305cda86ce55f934b2b3ba8202f17454
+              body: >
+                The balena API token is only required for private device access so don't
+
+                fail if there is not one available.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: balena-yocto-scripts-1.19.26
+          title: ""
+          date: 2023-04-12T15:18:36.631Z
+  version: 2.114.7+rev1
+  title: ""
+  date: 2023-04-22T03:23:33.270Z
+- commits:
     - subject: Update layers/meta-balena to f2637a0d4cf774ed903613dd058ff9db037ad23e
       hash: e24b66b09e0e2e4c0e3c9561dc96df5ac27557c2
       body: Update layers/meta-balena
