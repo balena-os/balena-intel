@@ -1,4 +1,68 @@
 - commits:
+    - subject: Update contracts to 777cd35ffb8bebb2a9d8a2ec6b88a45b2c937193
+      hash: 8bed7e9963b36e5c57a1e88950c7a693963748f5
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to 777cd35ffb8bebb2a9d8a2ec6b88a45b2c937193
+        changelog-entry: Update contracts to 777cd35ffb8bebb2a9d8a2ec6b88a45b2c937193
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: "debian/ubuntu jetson-orin-nx-xavier-nx-devkit: Add distro configs"
+              hash: ad9d69f447d9091f1ae2a582b02941472efb0539
+              body: |
+                The Orin NX modules uses L4T 35.2
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Alexandru Costache
+            - subject: "Orin NX: Update flashing steps"
+              hash: c7e77638474694870874afa17a453b727b3797d3
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+          version: contracts-2.0.57
+          title: ""
+          date: 2023-04-07T12:53:58.620Z
+        - commits:
+            - subject: "jetson-orin-nx-xavier-nx-devkit: Add contract for device type"
+              hash: ddae0174c36b0893d723308d948d72c276787ed5
+              body: |
+                The provisioning instructions are incomplete at this time, they
+                will be updated once the balenaOS integration is complete. The
+                device needs to be inspected in staging first.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+          version: contracts-2.0.56
+          title: ""
+          date: 2023-04-04T08:46:42.967Z
+        - commits:
+            - subject: "iot-gate-imx8plus: Update provisioning instructions"
+              hash: 25cbb9cb1c96a96367a1d35615f6b679e4a20df5
+              body: |
+                Bring in the latest updates from the coffee file
+                in the device repository.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru
+          version: contracts-2.0.55
+          title: ""
+          date: 2023-03-29T18:35:00.091Z
+  version: 2.114.7+rev2
+  title: ""
+  date: 2023-04-22T08:26:23.632Z
+- commits:
     - subject: Update balena-yocto-scripts to 34c8434ffcaeeeb14853082bbf2b4ecc5e0ec769
       hash: fcfe6358236d1ae405b260a6ce0254716fdb9054
       body: Update balena-yocto-scripts

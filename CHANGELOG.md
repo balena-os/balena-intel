@@ -1,6 +1,32 @@
 Change log
 -----------
 
+# v2.114.7+rev2
+## (2023-04-22)
+
+
+<details>
+<summary> Update contracts to 777cd35ffb8bebb2a9d8a2ec6b88a45b2c937193 [Renovate Bot] </summary>
+
+> ## contracts-2.0.57
+> ### (2023-04-07)
+> 
+> * debian/ubuntu jetson-orin-nx-xavier-nx-devkit: Add distro configs [Alexandru Costache]
+> * Orin NX: Update flashing steps [Alexandru Costache]
+> 
+> ## contracts-2.0.56
+> ### (2023-04-04)
+> 
+> * jetson-orin-nx-xavier-nx-devkit: Add contract for device type [Alexandru Costache]
+> 
+> ## contracts-2.0.55
+> ### (2023-03-29)
+> 
+> * iot-gate-imx8plus: Update provisioning instructions [Alexandru]
+> 
+
+</details>
+
 # v2.114.7+rev1
 ## (2023-04-22)
 
