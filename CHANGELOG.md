@@ -1,6 +1,76 @@
 Change log
 -----------
 
+# v2.114.12
+## (2023-04-26)
+
+
+<details>
+<summary> Update layers/meta-balena to 0396b07b2119b2c1a3cdf2bbd107e08de2110671 [Renovate Bot] </summary>
+
+> ## meta-balena-2.114.12
+> ### (2023-04-26)
+> 
+> * classes: kernel-balena: force recompilation if signing variables change [Alex Gonzalez]
+> * balena-keys: make tasks depends on signing variables [Alex Gonzalez]
+> * classes: sign: make signing task depends on signing variables [Alex Gonzalez]
+> 
+> ## meta-balena-2.114.11
+> ### (2023-04-24)
+> 
+> 
+> <details>
+> <summary> Update balena-engine to v20.10.35 [Renovate Bot] </summary>
+> 
+>> ### balena-engine-20.10.35
+>> #### (2023-04-24)
+>> 
+>> * Update libnetwork to fix port binding issue [Leandro Motta Barros]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-2.114.10
+> ### (2023-04-24)
+> 
+> * mkfs-hostapp-native: Update base image in Dockerfile [Alexandru Costache]
+> 
+> ## meta-balena-2.114.9
+> ### (2023-04-22)
+> 
+> * tests: os: configure to use installer's migrator [Alex Gonzalez]
+> * test: os: add installer migration test [Alex Gonzalez]
+> 
+> ## meta-balena-2.114.8
+> ### (2023-04-22)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v14.10.7 [Renovate Bot] </summary>
+> 
+>> ### balena-supervisor-14.10.7
+>> #### (2023-04-21)
+>> 
+>> * Remove safeStateClone function [Felipe Lalanne]
+>> * Get rid of targetVolatile in app manager [Felipe Lalanne]
+>> * Make pausingApply a private member of device-state [Felipe Lalanne]
+>> * Simplify doRestart and doPurge actions [Felipe Lalanne]
+>> * Fix network appUuid inference in local mode [Felipe Lalanne]
+>> * Get image name from DB when getting the app current state [Felipe Lalanne]
+>> * Improve net alias comparison to prevent unwanted restarts [Felipe Lalanne]
+>> * Exclude containerId from service network aliases [Felipe Lalanne]
+>> * Skip image delete when applying intermediate state [Felipe Lalanne]
+>> * Make local mode image management work as in cloud mode [Felipe Lalanne]
+>> * Remove ignoreImages argument from getRequiredSteps [Felipe Lalanne]
+>> 
+> 
+> </details>
+> 
+> 
+
+</details>
+
 # v2.114.7+rev2
 ## (2023-04-22)
 
