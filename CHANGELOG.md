@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v2.114.15
+## (2023-04-28)
+
+
+<details>
+<summary> Update layers/meta-balena to 6dea3e6c37f789704d95485ed1ddab2b63226111 [Renovate Bot] </summary>
+
+> ## meta-balena-2.114.15
+> ### (2023-04-28)
+> 
+> * patch: Add additional logs when logging in using balenaSDK [Vipul Gupta (@vipulgupta2048)]
+> 
+
+</details>
+
 # v2.114.14
 ## (2023-04-28)
 
