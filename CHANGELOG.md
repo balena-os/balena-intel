@@ -1,6 +1,43 @@
 Change log
 -----------
 
+# v2.114.18
+## (2023-05-03)
+
+
+<details>
+<summary> Update layers/meta-balena to 0d43fec5037b2b4be928647e9b626c62c794c6f0 [Renovate Bot] </summary>
+
+> ## meta-balena-2.114.18
+> ### (2023-05-03)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v14.10.10 [Renovate Bot] </summary>
+> 
+>> ### balena-supervisor-14.10.10
+>> #### (2023-05-03)
+>> 
+>> * mount-partitions.sh: Add support for encrypted partitions [Michal Toman]
+>> 
+>> ### balena-supervisor-14.10.9
+>> #### (2023-05-03)
+>> 
+>> * Run test supervisor under a different service name [Kyle Harding]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-2.114.17
+> ### (2023-05-03)
+> 
+> * test: append installer configuration instead of replacing it [Alex Gonzalez]
+> * test: os: use boolean for installer migration flag [Alex Gonzalez]
+> 
+
+</details>
+
 # v2.114.16
 ## (2023-05-03)
 
