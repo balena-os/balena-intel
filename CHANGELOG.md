@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v2.114.16
+## (2023-05-03)
+
+
+<details>
+<summary> Update layers/meta-balena to 43bf9f98db7de74bce36141f5e55c4dcffb7e060 [Renovate Bot] </summary>
+
+> ## meta-balena-2.114.16
+> ### (2023-05-02)
+> 
+> * initrdscripts: give the root device a chance to come up before cryptsetup [Michal Toman]
+> 
+
+</details>
+
 # v2.114.15+rev1
 ## (2023-04-28)
 

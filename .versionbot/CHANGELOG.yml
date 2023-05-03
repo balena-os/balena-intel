@@ -1,4 +1,52 @@
 - commits:
+    - subject: Update layers/meta-balena to 43bf9f98db7de74bce36141f5e55c4dcffb7e060
+      hash: f72465ce8e91ee2dd5a021cabd440f70a220966c
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 43bf9f98db7de74bce36141f5e55c4dcffb7e060
+        changelog-entry: Update layers/meta-balena to 43bf9f98db7de74bce36141f5e55c4dcffb7e060
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: "initrdscripts: give the root device a chance to come up before
+                cryptsetup"
+              hash: 23b87079d424fa52753949d46a89d872360ee4ff
+              body: >
+                At this moment if the cryptsetup initrd script executes before
+                the root
+
+                device comes up (e.g. when booting off a USB disk), it assumes
+
+                that encryption is not in place because it was not able to find
+
+                the EFI partition.
+
+
+                This patch adds a wait4file loop to the script that waits
+
+                for the /dev/disk/by-state directory. This is not tied to any particular
+
+                partition or device but since the directory does not exist by default
+
+                and is only created by a custom balenaOS udev rule, its existence
+
+                implies that the rule fired and a device with balenaOS partitions
+
+                is present in the system.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-2.114.16
+          title: ""
+          date: 2023-05-02T23:16:09.725Z
+  version: 2.114.16
+  title: ""
+  date: 2023-05-03T04:07:37.368Z
+- commits:
     - subject: Update contracts to 6c6ed28d459bc48102a69cdf0850d2eb4c778ce7
       hash: a0cff2eaf2daf6544483d98ecd451e686aa55a71
       body: Update contracts
