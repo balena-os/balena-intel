@@ -1,4 +1,46 @@
 - commits:
+    - subject: Update contracts to fd4af4e5694608cc0c87d9bff2a5b27b2c5f2f39
+      hash: e6e7e7a5444728d6c5c363e4f14d523b38c68c4a
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to fd4af4e5694608cc0c87d9bff2a5b27b2c5f2f39
+        changelog-entry: Update contracts to fd4af4e5694608cc0c87d9bff2a5b27b2c5f2f39
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: Fix LED support for ISG-503
+              hash: 8c779e12dbb16892528af17d8749cff1902146ad
+              body: >
+                The LED support was incorrectly changed in
+                https://github.com/balena-io/contracts/commit/4bb6eb1f732957e605f00e47b068199f14ff1765
+
+                Let's switch it back to unsupported. 
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+          version: contracts-2.0.60
+          title: ""
+          date: 2023-05-04T13:38:26.884Z
+        - commits:
+            - subject: "hw.device-type: Add revpi-connect-s"
+              hash: d81ef3d12565d9c0e81d776a6a156f22f6322728
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Obaid Chemkhi obaid.chemkhi@voltstorage.com
+                signed-off-by: Obaid Chemkhi obaid.chemkhi@voltstorage.com
+              author: Obaid Ch
+          version: contracts-2.0.59
+          title: ""
+          date: 2023-05-03T09:53:24.491Z
+  version: 2.114.18+rev1
+  title: ""
+  date: 2023-05-04T17:12:18.784Z
+- commits:
     - subject: Update layers/meta-balena to 0d43fec5037b2b4be928647e9b626c62c794c6f0
       hash: 928b7d281997602b82783b9b74c97bccaf76bfab
       body: Update layers/meta-balena

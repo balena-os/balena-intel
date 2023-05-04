@@ -1,6 +1,26 @@
 Change log
 -----------
 
+# v2.114.18+rev1
+## (2023-05-04)
+
+
+<details>
+<summary> Update contracts to fd4af4e5694608cc0c87d9bff2a5b27b2c5f2f39 [Renovate Bot] </summary>
+
+> ## contracts-2.0.60
+> ### (2023-05-04)
+> 
+> * Fix LED support for ISG-503 [Alexandru Costache]
+> 
+> ## contracts-2.0.59
+> ### (2023-05-03)
+> 
+> * hw.device-type: Add revpi-connect-s [Obaid Ch]
+> 
+
+</details>
+
 # v2.114.18
 ## (2023-05-03)
 
