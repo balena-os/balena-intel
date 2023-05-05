@@ -1,4 +1,42 @@
 - commits:
+    - subject: Update layers/meta-balena to 0f0fec2a68746d8616cc55a06cf636363786bdca
+      hash: 36c7e676f095730017d82ee6267af260233da814
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 0f0fec2a68746d8616cc55a06cf636363786bdca
+        changelog-entry: Update layers/meta-balena to 0f0fec2a68746d8616cc55a06cf636363786bdca
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: Update tests/leviathan digest to 256b844
+              hash: e9c98147c26054bff79cd5dee1638a3ba4c2d611
+              body: Update tests/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Renovate Bot
+              nested:
+                - commits:
+                    - subject: "suite: move installer configuration to balenaOS configuration section"
+                      hash: 342f30a9f5665ac70fcc648af28e6751c50c6ef5
+                      body: ""
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                        signed-off-by: Alex Gonzalez <alexg@balena.io>
+                      author: Alex Gonzalez
+                      nested: []
+                  version: leviathan-2.25.6
+                  title: ""
+                  date: 2023-05-04T10:24:35.420Z
+          version: meta-balena-2.114.21
+          title: ""
+          date: 2023-05-05T02:33:12.010Z
+  version: 2.114.21
+  title: ""
+  date: 2023-05-05T07:21:58.523Z
+- commits:
     - subject: Update layers/meta-balena to e2ce4a7a054624967941f4b96500b5bb79c36d1e
       hash: 63b8c8826351a0647e4b135fcf6ae8801f573336
       body: Update layers/meta-balena

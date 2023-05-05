@@ -1,6 +1,32 @@
 Change log
 -----------
 
+# v2.114.21
+## (2023-05-05)
+
+
+<details>
+<summary> Update layers/meta-balena to 0f0fec2a68746d8616cc55a06cf636363786bdca [Renovate Bot] </summary>
+
+> ## meta-balena-2.114.21
+> ### (2023-05-05)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 256b844 [Renovate Bot] </summary>
+> 
+>> ### leviathan-2.25.6
+>> #### (2023-05-04)
+>> 
+>> * suite: move installer configuration to balenaOS configuration section [Alex Gonzalez]
+>> 
+> 
+> </details>
+> 
+> 
+
+</details>
+
 # v2.114.20
 ## (2023-05-05)
 
