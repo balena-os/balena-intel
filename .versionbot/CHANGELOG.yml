@@ -1,4 +1,50 @@
 - commits:
+    - subject: Update layers/meta-balena to 39982e107a500e0ebdacfd0d5ae33576cf2e24b4
+      hash: 41570689044adce8108ad94384c03ab2f57f564e
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 39982e107a500e0ebdacfd0d5ae33576cf2e24b4
+        changelog-entry: Update layers/meta-balena to 39982e107a500e0ebdacfd0d5ae33576cf2e24b4
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: "tests: hup: enable boot-switch skip"
+              hash: f8f0b66b5a9d9f93c61f19f6998a57a7214ffe3a
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+            - subject: "tests: cloud: enable boot-switch skip Commit body"
+              hash: 9a724ff741b0ad0f873b031108535f3cf4e99b15
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+            - subject: "tests: os: enable boot-switch skip"
+              hash: 25094a479849cccf743c97f55f81a5c8dff17933
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+          version: meta-balena-2.114.25
+          title: ""
+          date: 2023-05-12T17:21:39.646Z
+  version: 2.114.25
+  title: ""
+  date: 2023-05-12T21:26:31.581Z
+- commits:
     - subject: Update balena-yocto-scripts to 57226ffa5abafc3001cb275ad6520895c938842a
       hash: ff9a2d27e0e69b36ff7d1c76a37cb694679844bc
       body: Update balena-yocto-scripts
