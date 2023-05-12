@@ -1,6 +1,23 @@
 Change log
 -----------
 
+# v2.114.24
+## (2023-05-12)
+
+
+<details>
+<summary> Update layers/meta-balena to d0b1a5a80c691e752dd5b396ce7da995507dd619 [Renovate Bot] </summary>
+
+> ## meta-balena-2.114.24
+> ### (2023-05-11)
+> 
+> * resin-init-flasher: add more comments around efi/boot partition split [Michal Toman]
+> * resin-init-flasher: reboot into signed flasher when provisioning secure boot [Michal Toman]
+> * resin-init-flasher: Fill db EFI variable from esl file instead of auth [Michal Toman]
+> 
+
+</details>
+
 # v2.114.23
 ## (2023-05-06)
 
