@@ -1,4 +1,106 @@
 - commits:
+    - subject: Update layers/meta-balena to e86e103292e67dda18ca243e46721e65cd89c577
+      hash: b4fe944d537df7686926b98028cba94d98dce585
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to e86e103292e67dda18ca243e46721e65cd89c577
+        changelog-entry: Update layers/meta-balena to e86e103292e67dda18ca243e46721e65cd89c577
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: Update balena-supervisor to v14.11.1
+              hash: 1222c7adec29b958dec4277ea5b716cad3f6a9b1
+              body: |
+                Update balena-supervisor from 14.10.10 to 14.11.1
+              footer:
+                Change-type: minor
+                change-type: minor
+              author: Renovate Bot
+              nested:
+                - commits:
+                    - subject: Fix `sw.arch` typo when testing contracts
+                      hash: 2758e190b28ea07d5b40daaa9e59434f2bfc28e9
+                      body: ""
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Felipe Lalanne
+                      nested: []
+                  version: balena-supervisor-14.11.1
+                  title: ""
+                  date: 2023-05-11T22:07:32.863Z
+                - commits:
+                    - subject: Add `arch.sw` to the valid container requirements
+                      hash: 8656bd62f705624a5cb02a0b0677888b21dd4627
+                      body: ""
+                      footer:
+                        Change-type: minor
+                        change-type: minor
+                      author: Felipe Lalanne
+                      nested: []
+                    - subject: Allow using slug to validate hw.device-type contract
+                      hash: f1f09e0e27b1b538d0ca806cd1bb167303d65779
+                      body: >
+                        This also adds the hw.device-type test case to the unit
+                        tests.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Felipe Lalanne
+                      nested: []
+                    - subject: Simplify and move lib/contract.spec.ts to tests/unit
+                      hash: a884a58b4cdbc9e06be01929138b4973e5e8ffd9
+                      body: >
+                        Improve contract tests to remove dependence on stubs and
+                        unnecessary
+
+                        system calls.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Felipe Lalanne
+                      nested: []
+                  version: balena-supervisor-14.11.0
+                  title: ""
+                  date: 2023-05-10T12:39:14.767Z
+                - commits:
+                    - subject: Add information about hdmi port 2 config vars
+                      hash: d5cc8238cbe7218d318cf1ce0375ab649a4495c6
+                      body: >
+                        Support for colon characters was added v14.6.0 which
+                        enabled
+
+                        configurations for HDMI port 2 (e.g on the RPi 4). These configurations
+
+                        are not documented anywhere else so this allows users to be able to
+
+                        better find the relevant information for working with HDMI.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Relates-to: "#2090"
+                        relates-to: "#2090"
+                      author: Felipe Lalanne
+                      nested: []
+                    - subject: Update table formatting on configurations.md
+                      hash: ba39cf539ef381f6cb80f81408f8e4571fd61179
+                      body: |
+                        For better readability on text editor
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Felipe Lalanne
+                      nested: []
+                  version: balena-supervisor-14.10.11
+                  title: ""
+                  date: 2023-05-08T20:35:26.833Z
+          version: meta-balena-2.115.0
+          title: ""
+          date: 2023-05-12T21:42:33.085Z
+  version: 2.115.0
+  title: ""
+  date: 2023-05-13T02:34:14.311Z
+- commits:
     - subject: Update layers/meta-balena to 39982e107a500e0ebdacfd0d5ae33576cf2e24b4
       hash: 41570689044adce8108ad94384c03ab2f57f564e
       body: Update layers/meta-balena

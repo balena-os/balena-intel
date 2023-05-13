@@ -1,6 +1,45 @@
 Change log
 -----------
 
+# v2.115.0
+## (2023-05-13)
+
+
+<details>
+<summary> Update layers/meta-balena to e86e103292e67dda18ca243e46721e65cd89c577 [Renovate Bot] </summary>
+
+> ## meta-balena-2.115.0
+> ### (2023-05-12)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v14.11.1 [Renovate Bot] </summary>
+> 
+>> ### balena-supervisor-14.11.1
+>> #### (2023-05-11)
+>> 
+>> * Fix `sw.arch` typo when testing contracts [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-14.11.0
+>> #### (2023-05-10)
+>> 
+>> * Add `arch.sw` to the valid container requirements [Felipe Lalanne]
+>> * Allow using slug to validate hw.device-type contract [Felipe Lalanne]
+>> * Simplify and move lib/contract.spec.ts to tests/unit [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-14.10.11
+>> #### (2023-05-08)
+>> 
+>> * Add information about hdmi port 2 config vars [Felipe Lalanne]
+>> * Update table formatting on configurations.md [Felipe Lalanne]
+>> 
+> 
+> </details>
+> 
+> 
+
+</details>
+
 # v2.114.25
 ## (2023-05-12)
 
