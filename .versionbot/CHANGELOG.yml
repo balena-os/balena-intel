@@ -1,4 +1,69 @@
 - commits:
+    - subject: Update balena-yocto-scripts to f2a164e0acaaa66795d5f31af248f1743dd0ffb7
+      hash: 55244c91ac85039f54b9a63416e465ab342a61e0
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to f2a164e0acaaa66795d5f31af248f1743dd0ffb7
+        changelog-entry: Update balena-yocto-scripts to f2a164e0acaaa66795d5f31af248f1743dd0ffb7
+      author: Renovate Bot
+      nested:
+        - commits:
+            - subject: "generate_ami: opt-in secure boot when using signed images"
+              hash: 7925369a76060ad9e2adb16856e78cd3ca09b02c
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "balena-generate-ami: comply with default AMI quotas"
+              hash: 27d34aa2a35b0bf6d7c1ffb563c1ad65d773e1fc
+              body: >
+                Comply with AWS public AMI quota, taking into account we have
+                two
+
+                architectures that publish AMI images and we need free slots for custom
+
+                version request.
+
+
+                Make the oldest public image back to private before publishing a new image.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: balena-yocto-scripts-1.19.30
+          title: ""
+          date: 2023-05-23T18:02:32.156Z
+        - commits:
+            - subject: "balena-deploy: add secureBoot feature into contract"
+              hash: 67e694d63918e9911de99f497c39d84dfef28df7
+              body: >
+                When building signed images, add the secureBoot feature flag
+                into the
+
+                OS contract. This is needed for other components to identify secureBoot
+
+                compatible software releases.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: balena-yocto-scripts-1.19.29
+          title: ""
+          date: 2023-05-19T11:42:58.818Z
+  version: 2.115.0+rev1
+  title: ""
+  date: 2023-05-23T21:05:48.341Z
+- commits:
     - subject: Update layers/meta-balena to e86e103292e67dda18ca243e46721e65cd89c577
       hash: b4fe944d537df7686926b98028cba94d98dce585
       body: Update layers/meta-balena
