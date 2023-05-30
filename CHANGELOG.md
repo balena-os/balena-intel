@@ -1,6 +1,34 @@
 Change log
 -----------
 
+# v2.115.3
+## (2023-05-30)
+
+
+<details>
+<summary> Update layers/meta-balena to 60cfd8a3761501274de5f189fd8d52dd75cfbe42 [Renovate Bot] </summary>
+
+> ## meta-balena-2.115.3
+> ### (2023-05-29)
+> 
+> * resin-init-flasher: check that commands exist before calling [Alex Gonzalez]
+> 
+> ## meta-balena-2.115.2
+> ### (2023-05-28)
+> 
+> * os-helpers: do not fail build if API tests fail [Alex Gonzalez]
+> 
+> ## meta-balena-2.115.1
+> ### (2023-05-17)
+> 
+> * tests: config: set both network options to false [rcooke-warwick]
+> * tests: hup: use contract to configure network [rcooke-warwick]
+> * tests: cloud: use contract to configure network [rcooke-warwick]
+> * tests: os: use contract to configure network [rcooke-warwick]
+> 
+
+</details>
+
 # v2.115.0+rev1
 ## (2023-05-23)
 
