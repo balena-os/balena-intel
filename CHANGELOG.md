@@ -1,6 +1,65 @@
 Change log
 -----------
 
+# v2.115.6
+## (2023-06-08)
+
+
+<details>
+<summary> Update layers/meta-balena to 92a2e312bc49b6c35402efc528b035a66d9969ef [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-2.115.6
+> ### (2023-06-08)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 62e4099 [Self-hosted Renovate Bot] </summary>
+> 
+>> ### leviathan-2.27.0
+>> #### (2023-05-29)
+>> 
+>> * Update alpine Docker tag to v3.18.0 [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.26.1
+>> #### (2023-05-29)
+>> 
+>> * Update core/contracts digest to fd4af4e [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.26.0
+>> #### (2023-05-29)
+>> 
+>> * Update balena-cli to v16.1.0 with arm64 binaries [Kyle Harding]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-2.115.5
+> ### (2023-06-08)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v14.11.2 [Self-hosted Renovate Bot] </summary>
+> 
+>> ### balena-supervisor-14.11.2
+>> #### (2023-06-05)
+>> 
+>> * Handle Engine-host race condition for "always" and "unless-stopped" restart policy [Christina Ying Wang]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-2.115.4
+> ### (2023-06-01)
+> 
+> * docs: Make secure boot docs more detailed [Michal Toman]
+> 
+
+</details>
+
+* Remove pull_request_target event run for ESR targets [Alex Gonzalez]
+
 # v2.115.3
 ## (2023-05-30)
 
