@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v2.115.6+rev2
+## (2023-06-09)
+
+
+<details>
+<summary> Update balena-yocto-scripts to e9f9ef5b729ac01f0b8efe0a16187fbb00d0bf54 [Self-hosted Renovate Bot] </summary>
+
+> ## balena-yocto-scripts-1.19.31
+> ### (2023-06-05)
+> 
+> * balena-deploy: add a compressed licenses tarball to the deploy artifacts [Alex Gonzalez]
+> 
+
+</details>
+
 # v2.115.6+rev1
 ## (2023-06-09)
 
