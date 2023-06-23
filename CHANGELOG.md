@@ -1,6 +1,90 @@
 Change log
 -----------
 
+# v2.115.12
+## (2023-06-23)
+
+
+<details>
+<summary> Update layers/meta-balena to f50614c3a4c7e6db317d4404368827508d8fce82 [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-2.115.12
+> ### (2023-06-23)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v14.11.7 [Self-hosted Renovate Bot] </summary>
+> 
+>> ### balena-supervisor-14.11.7
+>> #### (2023-06-19)
+>> 
+>> * Fix /v2/applications/state endpoint [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-14.11.6
+>> #### (2023-06-19)
+>> 
+>> * Add fail-safe to test the image architecture [Felipe Lalanne]
+>> * Use multi-arch in dockerfile [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-14.11.5
+>> #### (2023-06-19)
+>> 
+>> * Improve tests surrounding Engine-host race patch [Christina Ying Wang]
+>> 
+>> ### balena-supervisor-14.11.4
+>> #### (2023-06-19)
+>> 
+>> * Specify fs type when mounting partitions to prevent "Can't open blockdev" warnings [Christina Ying Wang]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-2.115.11
+> ### (2023-06-21)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 09eff9c [Self-hosted Renovate Bot] </summary>
+> 
+>> ### leviathan-2.27.6
+>> #### (2023-06-19)
+>> 
+>> * Update balena-os/leviathan-worker to v2.9.7 [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.27.5
+>> #### (2023-06-19)
+>> 
+>> * tests: only do serial file read with testbot [rcooke-warwick]
+>> * core: enable serial executeCommandinHostOS [rcooke-warwick]
+>> 
+>> ### leviathan-2.27.4
+>> #### (2023-06-16)
+>> 
+>> * Update alpine Docker tag to v3.18.2 [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.27.3
+>> #### (2023-06-16)
+>> 
+>> * Update core/contracts digest to c777910 [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.27.2
+>> #### (2023-06-16)
+>> 
+>> * patch: Revert "minor: Add Leviathan Test Helpers" [Vipul Gupta]
+>> 
+>> ### leviathan-2.27.1
+>> #### (2023-06-09)
+>> 
+>> * Update Pin dependencies [Self-hosted Renovate Bot]
+>> 
+> 
+> </details>
+> 
+> 
+
+</details>
+
 # v2.115.10
 ## (2023-06-21)
 
