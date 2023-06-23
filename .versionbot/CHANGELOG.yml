@@ -1,4 +1,32 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 91474e62b74d6390c285d1033b34f77092fe1824
+      hash: 7b572cc3e3bc159a4ba8327c39ce25a8d5762664
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 91474e62b74d6390c285d1033b34f77092fe1824
+        changelog-entry: Update balena-yocto-scripts to 91474e62b74d6390c285d1033b34f77092fe1824
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "balena-deploy: Newer meta-balena do not create a kernel_source
+                tarball"
+              hash: 62660e16161c559653dd2c32196ab94631753ce5
+              body: |
+                This artifact did not contain kernel sources since Yocto Thud.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: balena-yocto-scripts-1.19.32
+          title: ""
+          date: 2023-06-19T18:06:35.539Z
+  version: 2.115.12+rev1
+  title: ""
+  date: 2023-06-23T18:11:38.403Z
+- commits:
     - subject: Update layers/meta-balena to f50614c3a4c7e6db317d4404368827508d8fce82
       hash: 98149f040fb81130cee11651da0c0627ee7b7cc7
       body: Update layers/meta-balena
