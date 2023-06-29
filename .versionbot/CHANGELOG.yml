@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update contracts to 6e3d563f610303a24d0cbf43839919e451879899
+      hash: 34ad39d57db1ea9aa214ec63c7bee168f234bbe0
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to 6e3d563f610303a24d0cbf43839919e451879899
+        changelog-entry: Update contracts to 6e3d563f610303a24d0cbf43839919e451879899
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "sw.os+hw.device-type: Add ubuntu and debian distro configs for Orin
+                Nano"
+              hash: e0d622addd9484046c2f77c6745adbb0e166709b
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+          version: contracts-2.0.63
+          title: ""
+          date: 2023-06-29T14:15:50.808Z
+  version: 2.115.18+rev1
+  title: ""
+  date: 2023-06-29T18:27:55.897Z
+- commits:
     - subject: Update layers/meta-balena to c087c2dbcff4ed666bbad7901fe0f28794c99bc0
       hash: f8defb146ef1211af699220eae2bbd5fbe7d7e8e
       body: Update layers/meta-balena
