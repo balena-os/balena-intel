@@ -1,6 +1,52 @@
 Change log
 -----------
 
+# v3.0.12
+## (2023-07-16)
+
+
+<details>
+<summary> Update layers/meta-balena to 31843b108269c3147c8ae14b75ec533ea1b52ca5 [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-3.0.12
+> ### (2023-07-16)
+> 
+> * tests/os: skip boot switch during provisioning [Alexandru Costache]
+> 
+> ## meta-balena-3.0.11
+> ### (2023-07-14)
+> 
+> * .github/workflows: Replace GitHub PAT with ephemeral app tokens [Kyle Harding]
+> 
+> ## meta-balena-3.0.10
+> ### (2023-07-14)
+> 
+> * initrdscripts: make initramfs-module-cryptsetup pull libgcc in [Michal Toman]
+> 
+> ## meta-balena-3.0.9
+> ### (2023-07-13)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to b1581a2 [Self-hosted Renovate Bot] </summary>
+> 
+>> ### leviathan-2.28.6
+>> #### (2023-07-13)
+>> 
+>> * Update balena-os/leviathan-worker to v2.9.12 [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.28.5
+>> #### (2023-07-13)
+>> 
+>> * Update balena-os/leviathan-worker to v2.9.11 [Self-hosted Renovate Bot]
+>> 
+> 
+> </details>
+> 
+> 
+
+</details>
+
 # v3.0.8+rev1
 ## (2023-07-12)
 
