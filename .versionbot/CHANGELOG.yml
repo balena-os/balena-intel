@@ -1,4 +1,222 @@
 - commits:
+    - subject: Update layers/meta-balena to 76a64e46ebf953fba9e78aa7e60892113ccb9ad7
+      hash: e4fad45470a61db57eed51acab0dddf1ef1c1aa1
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 76a64e46ebf953fba9e78aa7e60892113ccb9ad7
+        changelog-entry: Update layers/meta-balena to 76a64e46ebf953fba9e78aa7e60892113ccb9ad7
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "linux-firmware: upgrade 20210511 -> 20230404"
+              hash: 6035e749c4bd989f7b8d23a5f48848af7d75efd8
+              body: ""
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+            - subject: "common: firmware: repackage iwlwifi-quz-a0-hr-b0"
+              hash: 1bf5489acc3e4c3696bccdae98ea95653ec0d8b7
+              body: |
+                Package all subversions of this firmware
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+            - subject: "common: firmware: repackage iwlwifi-cc-a0"
+              hash: 1336cb0802c8589439557afca0c28d2aee248e60
+              body: >
+                Repackage iwlwifi-cc-a0 to include all firmware versions shipped
+
+                upstream, rather than only an older version (48) that's no longer
+
+                shipped as of 20230404.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+            - subject: "compat: connectivity: drop deprecated iwlwifi files"
+              hash: daef22bbb706898721eee131872862a5e2d7709e
+              body: >
+                linux-firmware-20230404 no longer ships several older firmware
+                versions,
+
+                remove them.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+            - subject: "compat: install linux-firmware-iwlwifi-3160"
+              hash: 9442d98a51bb0ef62991bd4292717e2052cd39ef
+              body: >
+                Replace older versioned iwlwifi packages with
+
+                linux-firmware-iwlwifi-3160 package that includes all versions shipped
+
+                in linux-firmware.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: meta-balena-3.1.0
+          title: ""
+          date: 2023-07-25T21:09:07.177Z
+        - commits:
+            - subject: "balena-image: Install extra_uEnv for all boards that use u-boot"
+              hash: c9d665f0c2a0454a84d9890d56e4d93f57bf93ad
+              body: >
+                Some board BSPs may define UBOOT_MACHINE, others UBOOT_CONFIG,
+
+                let's make sure we include the extra_uEnv.txt file in the non-flasher
+
+                image for both cases.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+          version: meta-balena-3.0.17
+          title: ""
+          date: 2023-07-25T13:45:11.862Z
+        - commits:
+            - subject: "modemmanager: increase qmi port open timeout"
+              hash: d3358a33b29cf1c8404f2a0c266bbb2023235f84
+              body: |
+                The SIM7600G modem will fail to connect using
+                QMI and the default 45s timeout, nor will it work
+                with a 65s one. The value we found to work consistently
+                with this modem connected over pcie is 95s.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+            - subject: Update ModemManager to v1.20.6
+              hash: 0d629552a0caf3745e9e3738b3e74bbf802b020c
+              body: |
+                Also updated are the dependencies libqmi and libmbim.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Update ModemManager to v1.20.6
+                changelog-entry: Update ModemManager to v1.20.6
+                Signed-off-by: Zahari Petkov <zahari@balena.io>
+                signed-off-by: Zahari Petkov <zahari@balena.io>
+              author: Zahari Petkov
+              nested: []
+          version: meta-balena-3.0.16
+          title: ""
+          date: 2023-07-22T05:19:59.203Z
+        - commits:
+            - subject: "tests: cloud: sv-timer: account for conn. error"
+              hash: 11464aad53779c62199efb0b19f835835e332c72
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+            - subject: "tests: cloud: use local ssh for sv timer test"
+              hash: d7ece01f84ebec41fe094cf5dbf8175e043c38e3
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+            - subject: "tests: cloud: remove preload log check"
+              hash: 4d0a75a4dab16efe919ad040578b19bc7de19439
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+            - subject: "tests: allow for configurable BC env"
+              hash: be732d8955e661116477a8aca59697bec748f306
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+          version: meta-balena-3.0.15
+          title: ""
+          date: 2023-07-20T15:06:12.237Z
+        - commits:
+            - subject: Update balena-supervisor to v14.11.12
+              hash: dd6b9c93a5cfc4f4a04e190700284c79d4bd9f9a
+              body: |
+                Update balena-supervisor from 14.11.10 to 14.11.12
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Self-hosted Renovate Bot
+              nested:
+                - commits:
+                    - subject: "mount-partitions: do not hardcode partition types"
+                      hash: cc2ca84448e2a3894294c39b8078c050c0237b87
+                      body: >
+                        Query instead the device for its filesystem type before
+                        mounting.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                        signed-off-by: Alex Gonzalez <alexg@balena.io>
+                      author: Alex Gonzalez
+                      nested: []
+                  version: balena-supervisor-14.11.12
+                  title: ""
+                  date: 2023-07-19T07:55:53.054Z
+                - commits:
+                    - subject: "backends: Add Jetson Orin NANO custom device-tree support"
+                      hash: 512240c54490ccd0cb83c13f0c6e8cae43fe9a88
+                      body: ""
+                      footer:
+                        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                        signed-off-by: Alexandru Costache <alexandru@balena.io>
+                        Change-type: patch
+                        change-type: patch
+                      author: Alexandru Costache
+                      nested: []
+                  version: balena-supervisor-14.11.11
+                  title: ""
+                  date: 2023-07-12T08:35:23.009Z
+          version: meta-balena-3.0.14
+          title: ""
+          date: 2023-07-20T06:59:16.510Z
+  version: 3.1.0
+  title: ""
+  date: 2023-07-26T02:10:07.017Z
+- commits:
     - subject: Update layers/meta-balena to 8d432e761bf29b2f9f3f8f9f711b087f9133cfa6
       hash: ea4130e3134e4df758f4f4e9f388510d2276f10b
       body: Update layers/meta-balena
