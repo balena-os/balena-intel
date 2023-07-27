@@ -1,4 +1,45 @@
 - commits:
+    - subject: Update layers/meta-balena to 5dbd59262ff28b0036e2730d428499e134343c36
+      hash: 65d4d513825c62bbce19264f4453ca5d2006d308
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 5dbd59262ff28b0036e2730d428499e134343c36
+        changelog-entry: Update layers/meta-balena to 5dbd59262ff28b0036e2730d428499e134343c36
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "grub-conf: Do not hardcode the path for grub_extraenv"
+              hash: f7ec67bd53e0998c12bcbdcaccea99f1f6856bcf
+              body: >
+                At this moment grub.cfg sources /grub/grub_extraenv which works
+                fine
+
+                on MBR systems, however on EFI systems this does not work because GRUB
+
+                is installed in /EFI/BOOT/ rather than /grub/.
+
+
+                This patch replaces the hardcoded /grub with ${prefix} which should
+
+                expand to the appropriate directory regardless of the platform. It also
+
+                removes the loading of grub_extraenv from the secure boot variant
+
+                of the GRUB config since this would not load without a signature anyway.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-3.1.2
+          title: ""
+          date: 2023-07-27T15:15:34.234Z
+  version: 3.1.2
+  title: ""
+  date: 2023-07-27T20:16:40.493Z
+- commits:
     - subject: Update layers/meta-balena to ced059b1f06281129434311dddc8ddab3d65fb5b
       hash: 35e7f6462fcd3ea5c9edfa497cd66f25be7bb9f6
       body: Update layers/meta-balena

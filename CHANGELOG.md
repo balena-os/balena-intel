@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v3.1.2
+## (2023-07-27)
+
+
+<details>
+<summary> Update layers/meta-balena to 5dbd59262ff28b0036e2730d428499e134343c36 [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-3.1.2
+> ### (2023-07-27)
+> 
+> * grub-conf: Do not hardcode the path for grub_extraenv [Michal Toman]
+> 
+
+</details>
+
 # v3.1.1
 ## (2023-07-26)
 
