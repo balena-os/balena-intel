@@ -1,4 +1,115 @@
 - commits:
+    - subject: Update layers/meta-balena to 3ee7dc32110f9da60a088b5bd4bb39642d901bb5
+      hash: 42c510853218b7ee14b09cced05ea076de23cf44
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 3ee7dc32110f9da60a088b5bd4bb39642d901bb5
+        changelog-entry: Update layers/meta-balena to 3ee7dc32110f9da60a088b5bd4bb39642d901bb5
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "kernel-balena: remove mispelled config setting"
+              hash: c73973972067d5c1afeb133ed7868684c054a0d9
+              body: >
+                The kernel-balena class contains:
+
+                CONIFG_SECURITY=n
+
+
+                which is mispelled and not being applied. The commit where this was
+
+                introduced claims it's needed to completely disable the audit logs, and
+
+                also that the security framework is unused.
+
+
+                I disagree in that it's unused - the hostOS is not using any security
+
+                framework, but applications may, so luckily the security framework was
+
+                never disabled.
+
+
+                Removing this mispelled entry should have no functional effect. Whether
+
+                the audit subsystem is disabled will depend on the final kernel
+
+                configuration. Definitely we have not seen a need to disable it recently,
+
+                and we have not seen the kernel log flooded with messages.
+
+
+                I'd argue the disabling of the audit subsystem in meta-balena serves no
+
+                need but I also have no specific reason to remove it at the moment.
+
+
+                Fixes #2947
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-3.1.4
+          title: ""
+          date: 2023-07-30T14:26:53.310Z
+        - commits:
+            - subject: "resin-init-flasher: Install the dispatcher scripts to installation
+                media"
+              hash: 77d61290946ed69f348f05887334b28fc2aa0435
+              body: >
+                The flasher/installer image can be configured by the user and
+                that
+
+                configuration finishes up in the installed image. Add the dispatcher
+
+                scripts to this existing mechanim.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "balena-net-config: populate the dispatcher bind mount"
+              hash: 0d1798d8742f34d92fd0d98314d349ba4b5dc54a
+              body: >
+                On boot, the dispatcher script are copied from the boot
+                partition where
+
+                the user has configured them, to the bind mount used by the running
+
+                applications.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "resin-mounts: add dispatcher.d bind mount"
+              hash: 32abffb44d74fc0be6949ed6e893ee3476ffcf2e
+              body: >
+                This allows for user configuration of NetworkManager's
+                dispatcher
+
+                scripts.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-3.1.3
+          title: ""
+          date: 2023-07-28T11:36:17.599Z
+  version: 3.1.4
+  title: ""
+  date: 2023-07-30T19:28:59.873Z
+- commits:
     - subject: Update layers/meta-balena to 5dbd59262ff28b0036e2730d428499e134343c36
       hash: 65d4d513825c62bbce19264f4453ca5d2006d308
       body: Update layers/meta-balena
