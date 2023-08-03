@@ -1,4 +1,73 @@
 - commits:
+    - subject: Update layers/meta-balena to a84dc6fbc5967f67acf0d12f4fe5a9081a70cb63
+      hash: 79314034ac5b4d520a34628149c725d38a815a43
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to a84dc6fbc5967f67acf0d12f4fe5a9081a70cb63
+        changelog-entry: Update layers/meta-balena to a84dc6fbc5967f67acf0d12f4fe5a9081a70cb63
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "resin-init-flasher: Allow background device registration"
+              hash: 0b246409da5359741138a81b552fcc6bb3ecc24e
+              body: >
+                314047e and b5c5214 made flasher block until the
+                resin-device-register
+
+                service exits and made resin-device-register give up after 6 seconds
+
+                not to block infinitely when no network is available. This effectively
+
+                means that if the device fails to register within first 6 seconds,
+
+                it will never retry, flasher will not report status to the dashboard
+
+                and the device will only register on first boot.
+
+
+                This patch changes the logic back to resin-device-register trying
+
+                in the background in an infinite loop and moves the "give the device
+
+                a chance to register" delay to flasher itself. It also extends
+
+                the wait to openvpn as flasher already does that and wants VPN to run
+
+                to be debuggable - in case flashing fails, it would be possible
+
+                to SSH in via the VPN and look at the logs remotely.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-3.1.6
+          title: ""
+          date: 2023-08-02T08:37:52.265Z
+        - commits:
+            - subject: Reduce scope of app token used for backports and ESR
+              hash: 331589395a0dbbb16fc9d9491c5c43c2ca68c1fa
+              body: >
+                These permissions have already been removed from
+                flowzone-app[bot]
+
+                so they cannot be requested at runtime.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: meta-balena-3.1.5
+          title: ""
+          date: 2023-08-01T21:53:05.189Z
+  version: 3.1.6
+  title: ""
+  date: 2023-08-03T11:02:22.880Z
+- commits:
     - subject: Update contracts to bf0ec3d5a42dae4babeed8485030a0ca50f6fde3
       hash: 532241566c5aa760fe4d1e5c67062762509f4a87
       body: Update contracts
