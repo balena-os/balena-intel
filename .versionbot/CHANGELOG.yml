@@ -1,4 +1,42 @@
 - commits:
+    - subject: Update contracts to bd81b500fe74976567485afa39f6bbab3e60dd77
+      hash: 5b1c586ee3976ee7da5a60e4749d37e9b4d6ac41
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to bd81b500fe74976567485afa39f6bbab3e60dd77
+        changelog-entry: Update contracts to bd81b500fe74976567485afa39f6bbab3e60dd77
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: Fix conditional when installing libssl1.1
+              hash: 29e5a99050fb93fcea404fd48d2db029acf4acb3
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+          version: contracts-2.0.67
+          title: ""
+          date: 2023-08-03T20:27:02.315Z
+        - commits:
+            - subject: Fix a condition where /etc/nsswitch.conf exists and the build fails
+              hash: c8c521ae9fdb908fb37642154d5fbe73a2849985
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+          version: contracts-2.0.66
+          title: ""
+          date: 2023-08-03T20:04:14.870Z
+  version: 3.1.6+rev1
+  title: ""
+  date: 2023-08-04T02:44:56.494Z
+- commits:
     - subject: Update layers/meta-balena to a84dc6fbc5967f67acf0d12f4fe5a9081a70cb63
       hash: 79314034ac5b4d520a34628149c725d38a815a43
       body: Update layers/meta-balena
