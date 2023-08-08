@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update layers/meta-balena to a54f1b2a8253d564634789283980d54004201bdf
+      hash: 695ac375b4bcf19e4143dbd2eb7c41756a75ef6a
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to a54f1b2a8253d564634789283980d54004201bdf
+        changelog-entry: Update layers/meta-balena to a54f1b2a8253d564634789283980d54004201bdf
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "tests: os: eng. healthcheck: retry timeout change"
+              hash: 288ccf608306695c7a709ca682726e82282918f0
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+          version: meta-balena-3.1.7
+          title: ""
+          date: 2023-08-08T12:49:13.321Z
+  version: 3.1.7
+  title: ""
+  date: 2023-08-08T19:07:51.136Z
+- commits:
     - subject: Update balena-os/github-workflows to v0.0.21
       hash: 642f9873833e09bb4830398d33cda65a3a7b3d92
       body: Update balena-os/github-workflows
