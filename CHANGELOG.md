@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v3.1.7+rev1
+## (2023-08-09)
+
+* hostapp-update-hooks: Don't fail if efivars fs already mounted [Alexandru Costache]
+
 # v3.1.7
 ## (2023-08-08)
 
