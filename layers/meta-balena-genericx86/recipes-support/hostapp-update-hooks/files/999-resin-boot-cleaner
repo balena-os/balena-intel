@@ -34,7 +34,10 @@ if [ "$DURING_UPDATE" = "1" ]; then
 		# re-add the EFI entry for resinOS boot from internal media as some EFI firmwares are buggy and won't detect the old entry anymore
 		# first remove existing resinOS entries so we won't have duplicates
 		printf "[INFO] Re-add EFI boot entry for starting resinOS from internal media.\n"
-		mount -t efivarfs efivarfs /sys/firmware/efi/efivars
+		if [ -z "$(ls -A /sys/firmware/efi/efivars)" ]; then
+			# efivars not bind-mounted by hostapp-update script
+			mount -t efivarfs efivarfs /sys/firmware/efi/efivars || true
+		fi
 		duplicates=`efibootmgr | grep resinOS |sed 's/Boot*//g' | sed 's/* resinOS//g'`
 		for i in $duplicates; do efibootmgr -B -b $i; done
 		efibootmgr -c -d $device -p 1 -L "resinOS" -l "\EFI\BOOT\bootx64.efi"
