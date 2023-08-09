@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update layers/meta-balena to b64d73fcc51374ed90f2ede803b3efee13351d30
+      hash: 3f1c323031606ee7ab653b99bc19a6e65017cdbe
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to b64d73fcc51374ed90f2ede803b3efee13351d30
+        changelog-entry: Update layers/meta-balena to b64d73fcc51374ed90f2ede803b3efee13351d30
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "tests: hup: retry sending image if fails"
+              hash: 22466325860a1de70724c4bbbb45a8458d3cf8dd
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+          version: meta-balena-3.1.8
+          title: ""
+          date: 2023-08-09T13:34:42.388Z
+  version: 3.1.8
+  title: ""
+  date: 2023-08-09T23:22:28.509Z
+- commits:
     - subject: "hostapp-update-hooks: Don't fail if efivars fs already mounted"
       hash: 678232d1f4fb6652e10aed89c555ee57626353d7
       body: >
