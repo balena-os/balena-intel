@@ -1,4 +1,34 @@
 - commits:
+    - subject: Update layers/meta-balena to b7d25711fe3895125b92a0ff2852aa82f5c75cee
+      hash: 64b620c33ff8e5c81f5268bad5a8c6d763b746a7
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to b7d25711fe3895125b92a0ff2852aa82f5c75cee
+        changelog-entry: Update layers/meta-balena to b7d25711fe3895125b92a0ff2852aa82f5c75cee
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "tests: secureboot: add test for module signing"
+              hash: 20120b58d1d3ac5eba164862df7405b226efee92
+              body: >
+                Verify kernel lockdown prohibits loading of unsigned modules,
+                and still
+
+                loads modules with a signature that validates against a trusted key.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: meta-balena-3.1.9
+          title: ""
+          date: 2023-08-10T20:10:05.348Z
+  version: 3.1.9
+  title: ""
+  date: 2023-08-11T01:12:28.442Z
+- commits:
     - subject: Update build instructions in README
       hash: 38494b79792fc5b2e7940ca8cf776c71ceb35963
       body: |
