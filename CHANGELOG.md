@@ -1,6 +1,32 @@
 Change log
 -----------
 
+# v3.1.11
+## (2023-08-12)
+
+
+<details>
+<summary> Update layers/meta-balena to 096a3557f96faa00ae018d3aebc7e272949f9e9e [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-3.1.11
+> ### (2023-08-12)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v14.11.13 [Self-hosted Renovate Bot] </summary>
+> 
+>> ### balena-supervisor-14.11.13
+>> #### (2023-08-10)
+>> 
+>> * patch: Remove reference of override_lock variable [Vipul Gupta]
+>> 
+> 
+> </details>
+> 
+> 
+
+</details>
+
 # v3.1.10
 ## (2023-08-12)
 
