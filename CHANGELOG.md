@@ -1,6 +1,32 @@
 Change log
 -----------
 
+# v3.1.12
+## (2023-08-15)
+
+
+<details>
+<summary> Update layers/meta-balena to 07e9c06daa0b46154a241b448569c89ab307b6e7 [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-3.1.12
+> ### (2023-08-15)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v14.11.14 [Self-hosted Renovate Bot] </summary>
+> 
+>> ### balena-supervisor-14.11.14
+>> #### (2023-08-14)
+>> 
+>> * Update balena-io/deploy-to-balena-action to v0.28.0 [Self-hosted Renovate Bot]
+>> 
+> 
+> </details>
+> 
+> 
+
+</details>
+
 # v3.1.11
 ## (2023-08-12)
 
