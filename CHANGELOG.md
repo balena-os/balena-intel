@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v3.1.13
+## (2023-08-16)
+
+
+<details>
+<summary> Update layers/meta-balena to eeb57a87d32b9dafb4656a5a598a57da425892e4 [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-3.1.13
+> ### (2023-08-16)
+> 
+> * Integration layers: mobile-broadband-provider: fix fetch failure [Alex Gonzalez]
+> 
+
+</details>
+
 # v3.1.12+rev1
 ## (2023-08-15)
 
