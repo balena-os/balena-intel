@@ -1,4 +1,95 @@
 - commits:
+    - subject: Update layers/meta-balena to ec885550473b00b86e986f84bfd74f06a137fd24
+      hash: 1a2570efdbe05cb40e40845d5868052fd7cd7510
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to ec885550473b00b86e986f84bfd74f06a137fd24
+        changelog-entry: Update layers/meta-balena to ec885550473b00b86e986f84bfd74f06a137fd24
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "meta-balena-thud: adapt migrate module dependencies"
+              hash: 5ff9a0c1077ef3c2ff3ff2a2ba678944fb0073a2
+              body: >
+                On Thud, the util-linux recipe had still not split components
+                into
+
+                different packages.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-3.2.1
+          title: ""
+          date: 2023-08-17T14:35:32.390Z
+        - commits:
+            - subject: Update balena-supervisor to v14.12.0
+              hash: 4f2c41743c27ea27d6eaedd5b4516427d9157d10
+              body: |
+                Update balena-supervisor from 14.11.14 to 14.12.0
+              footer:
+                Change-type: minor
+                change-type: minor
+              author: Self-hosted Renovate Bot
+              nested:
+                - commits:
+                    - subject: Update README
+                      hash: c88d557aafc3088e4048a8cd9b9fc5fea8a45e01
+                      body: >
+                        Add the new dependency on RUST, reorganize the
+                        documentation
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Felipe Lalanne
+                      nested: []
+                    - subject: Replace node-dbus with @balena/systemd
+                      hash: 327dc31ef02caa365e5a0c03597ba18d121c32a3
+                      body: >
+                        The node-dbus module is unmaintained and a blocker for
+                        the update to
+
+                        Node 18. Switching to our own node bindings for systemd solves this
+
+                        issue
+                      footer:
+                        Relates-to: Shouqun/node-dbus#241
+                        relates-to: Shouqun/node-dbus#241
+                        Change-type: patch
+                        change-type: patch
+                      author: Felipe Lalanne
+                      nested: []
+                    - subject: Replace dbus test service with mock-systemd-bus
+                      hash: 8f17c30de68f62477a52dd16a268e1d003c666ea
+                      body: >
+                        This avoids unnecessary mocking and tests against the
+                        real systemd API
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Felipe Lalanne
+                      nested: []
+                    - subject: Update to nodejs 18
+                      hash: 2da691bcd5dd5ee8d8ee9460d93c895b73b4e2f4
+                      body: ""
+                      footer:
+                        Change-type: minor
+                        change-type: minor
+                      author: Pagan Gazzard
+                      nested: []
+                  version: balena-supervisor-14.12.0
+                  title: ""
+                  date: 2023-08-17T00:38:30.372Z
+          version: meta-balena-3.2.0
+          title: ""
+          date: 2023-08-17T04:33:51.281Z
+  version: 3.2.1
+  title: ""
+  date: 2023-08-17T19:38:04.756Z
+- commits:
     - subject: Update layers/meta-balena to eeb57a87d32b9dafb4656a5a598a57da425892e4
       hash: a5549b46db7ed9d1e3ec4e7be47d54dbb20c70c7
       body: Update layers/meta-balena
