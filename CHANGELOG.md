@@ -1,6 +1,23 @@
 Change log
 -----------
 
+# v3.2.2
+## (2023-08-18)
+
+
+<details>
+<summary> Update layers/meta-balena to ba317bb80bb108576d8421a81547bf9cfdad1faf [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-3.2.2
+> ### (2023-08-18)
+> 
+> * modemmanager: hold ModemManager 1.14.2 on Thud [Alex Gonzalez]
+> * meta-balena-thud: libqmi: Use v1.26.0 [Alex Gonzalez]
+> * meta-balena-thud: libmbim: use v 1.24.2 [Alex Gonzalez]
+> 
+
+</details>
+
 # v3.2.1
 ## (2023-08-17)
 
