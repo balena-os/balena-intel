@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v3.2.4
+## (2023-08-21)
+
+
+<details>
+<summary> Update layers/meta-balena to ab712a25ab4b9747037fc2a20f76e1d0b6f49e5e [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-3.2.4
+> ### (2023-08-21)
+> 
+> * tests: cloud: lockfile: change test order [rcooke-warwick]
+> 
+
+</details>
+
 # v3.2.3
 ## (2023-08-21)
 
