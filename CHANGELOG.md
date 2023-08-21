@@ -1,6 +1,42 @@
 Change log
 -----------
 
+# v3.2.3
+## (2023-08-21)
+
+
+<details>
+<summary> Update layers/meta-balena to ab4a4bdbce4c33a63a24f9d969f18711ddbfdc96 [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-3.2.3
+> ### (2023-08-21)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 26e6cea [Self-hosted Renovate Bot] </summary>
+> 
+>> ### leviathan-2.28.11
+>> #### (2023-08-18)
+>> 
+>> * improve autokit quickstart [rcooke-warwick]
+>> 
+>> ### leviathan-2.28.10
+>> #### (2023-08-18)
+>> 
+>> * patch: Update suites dependencies to latest [Vipul Gupta (@vipulgupta2048)]
+>> 
+>> ### leviathan-2.28.9
+>> #### (2023-08-18)
+>> 
+>> * patch: Add balenaCloud configurable environments to e2e [Vipul Gupta (@vipulgupta2048)]
+>> 
+> 
+> </details>
+> 
+> 
+
+</details>
+
 # v3.2.2
 ## (2023-08-18)
 
