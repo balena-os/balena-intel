@@ -1,4 +1,31 @@
 - commits:
+    - subject: Update layers/meta-balena to b65f4a096bfae592e7f02acf7dd0be2110c84ae9
+      hash: d0fc8828cb3498fc07caa8a7becf34733876721d
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to b65f4a096bfae592e7f02acf7dd0be2110c84ae9
+        changelog-entry: Update layers/meta-balena to b65f4a096bfae592e7f02acf7dd0be2110c84ae9
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "contributing-device-support.md: Clarify repo set-up in balenaOS org
+                for private device types"
+              hash: 2e4da2fdd63a1eb0328ffd12209d90a9fdeb6545
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-3.2.5
+          title: ""
+          date: 2023-08-22T15:55:05.868Z
+  version: 3.2.5
+  title: ""
+  date: 2023-08-23T01:02:40.866Z
+- commits:
     - subject: Update contracts to 10b9852d5826601854c35be13555647ca65bdb54
       hash: 9a0994c098178b909d84352bcabd22ff6d9d973b
       body: Update contracts
