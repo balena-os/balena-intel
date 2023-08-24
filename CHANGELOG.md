@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v3.2.7+rev1
+## (2023-08-24)
+
+
+<details>
+<summary> Update contracts to d61d9118688241409d15a3ba10e963f9a202e347 [Self-hosted Renovate Bot] </summary>
+
+> ## contracts-2.0.70
+> ### (2023-08-23)
+> 
+> * Add alpine 3.18 [Kyle Harding]
+> 
+
+</details>
+
 # v3.2.7
 ## (2023-08-24)
 
