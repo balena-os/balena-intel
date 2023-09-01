@@ -1,6 +1,104 @@
 Change log
 -----------
 
+# v3.2.10
+## (2023-09-01)
+
+
+<details>
+<summary> Update layers/meta-balena to cacbac0f5dc91de46ab61fcb1f517390dc4724ed [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-3.2.10
+> ### (2023-09-01)
+> 
+> * meta-resin-pyro: do not apply further modemmanager updates [Alex Gonzalez]
+> 
+> ## meta-balena-3.2.9
+> ### (2023-09-01)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to b353754 [Self-hosted Renovate Bot] </summary>
+> 
+>> ### leviathan-2.28.25
+>> #### (Invalid date)
+>> 
+>> * Update balena-os/leviathan-worker to v2.9.21 [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.28.24
+>> #### (Invalid date)
+>> 
+>> * Update balena-os/leviathan-worker to v2.9.20 [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.28.23
+>> #### (Invalid date)
+>> 
+>> * Update balena-os/leviathan-worker to v2.9.19 [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.28.22
+>> #### (Invalid date)
+>> 
+>> * add nocache flash to balena push [rcooke-warwick]
+>> 
+>> ### leviathan-2.28.21
+>> #### (Invalid date)
+>> 
+>> * patch: Update client dependencies [Vipul Gupta (@vipulgupta2048)]
+>> 
+>> ### leviathan-2.28.20
+>> #### (Invalid date)
+>> 
+>> * patch: Clarify env variables in Documentation [Vipul Gupta (@vipulgupta2048)]
+>> 
+>> ### leviathan-2.28.19
+>> #### (Invalid date)
+>> 
+>> * patch: Add .nojekyll file to docs [Vipul Gupta (@vipulgupta2048)]
+>> 
+>> ### leviathan-2.28.18
+>> #### (2023-08-29)
+>> 
+>> * patch: Resolve dead links in README [Vipul Gupta (@vipulgupta2048)]
+>> 
+>> ### leviathan-2.28.17
+>> #### (2023-08-29)
+>> 
+>> * Update core/contracts digest to ca46c34 [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.28.16
+>> #### (2023-08-25)
+>> 
+>> * Update core/contracts digest to d61d911 [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.28.15
+>> #### (2023-08-25)
+>> 
+>> * Update actions/checkout digest to f43a0e5 [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.28.14
+>> #### (2023-08-25)
+>> 
+>> * Remove custom automerge rules and use the inherited rules [Kyle Harding]
+>> 
+>> ### leviathan-2.28.13
+>> #### (2023-08-25)
+>> 
+>> * patch: Exit GH job if tests fails [Vipul Gupta (@vipulgupta2048)]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-3.2.8
+> ### (2023-08-24)
+> 
+> * meta-balena-warrior: modemmanager: use v 1.18.4 [Alex Gonzalez]
+> * meta-balena-warrior: libmqmi: use v 1.30.2 [Alex Gonzalez]
+> * meta-balena-warrior: libmbim: use v 1.26.2 [Alex Gonzalez]
+> 
+
+</details>
+
 # v3.2.7+rev1
 ## (2023-08-24)
 
