@@ -1,6 +1,111 @@
 Change log
 -----------
 
+# v4.0.8
+## (2023-09-15)
+
+
+<details>
+<summary> Update layers/meta-balena to 3282f57a59799111d7f68c13013f6324aa65c966 [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-4.0.8
+> ### (2023-09-15)
+> 
+> * Enable back ModemManager AT commands through D-Bus and	mmcli [Zahari Petkov]
+> 
+> ## meta-balena-4.0.7
+> ### (2023-09-14)
+> 
+> * Update tibdex/github-app-token action to v2 [Self-hosted Renovate Bot]
+> 
+> ## meta-balena-4.0.6
+> ### (2023-09-13)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v14.12.1 [Self-hosted Renovate Bot] </summary>
+> 
+>> ### balena-supervisor-14.12.1
+>> #### (2023-08-21)
+>> 
+>> * Bump sqlite3 to 5.1.6 [Felipe Lalanne]
+>> * Bump knex to v2.5.1 [Felipe Lalanne]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-4.0.5
+> ### (2023-09-13)
+> 
+> * tests: os: retry healthcheck disable [rcooke-warwick]
+> 
+> ## meta-balena-4.0.4
+> ### (2023-09-11)
+> 
+> * renovate updates patch only [ab77]
+> 
+> ## meta-balena-4.0.3
+> ### (2023-09-09)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 0acfe61 [Self-hosted Renovate Bot] </summary>
+> 
+>> ### leviathan-2.28.27
+>> #### (2023-09-06)
+>> 
+>> * Update actions/upload-artifact digest to a8a3f3a [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.28.26
+>> #### (2023-09-04)
+>> 
+>> * Update core/contracts digest to 518a1d4 [Self-hosted Renovate Bot]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-4.0.2
+> ### (2023-09-08)
+> 
+> 
+> <details>
+> <summary> Update balena-engine to v20.10.39 [Self-hosted Renovate Bot] </summary>
+> 
+>> ### balena-engine-20.10.39
+>> #### (Invalid date)
+>> 
+>> * Don't enable AppArmor if `apparmor_parser` is not present [Leandro Motta Barros]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-4.0.1
+> ### (2023-09-08)
+> 
+> * classes: sign: add a retry to the signing call [Alex Gonzalez]
+> 
+> ## meta-balena-4.0.0
+> ### (2023-09-06)
+> 
+> * Update actions/checkout action to v4 [Self-hosted Renovate Bot]
+> 
+> ## meta-balena-3.2.12
+> ### (2023-09-06)
+> 
+> * timesync-https: skip time sync if connectivity URI is null [Alex Gonzalez]
+> * README: update time in the OS section [Alex Gonzalez]
+> 
+> ## meta-balena-3.2.11
+> ### (2023-09-01)
+> 
+> * Update tibdex/github-app-token action to v1.8.2 [Self-hosted Renovate Bot]
+> 
+
+</details>
+
 # v3.2.10
 ## (2023-09-01)
 
