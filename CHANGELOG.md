@@ -1,6 +1,26 @@
 Change log
 -----------
 
+# v4.0.9+rev1
+## (2023-09-16)
+
+
+<details>
+<summary> Update contracts to 518a1d424f09a11dc1b60a16026bfe8ffe07ca78 [Self-hosted Renovate Bot] </summary>
+
+> ## contracts-2.0.72
+> ### (2023-09-04)
+> 
+> * raspberrypi4-unipi-neuron: Add new device type [Florin Sarbu]
+> 
+> ## contracts-2.0.71
+> ### (2023-08-29)
+> 
+> * Add the BeagleBone AI-64. [Lisandro Damián Nicanor Pérez Meyer]
+> 
+
+</details>
+
 # v4.0.9
 ## (2023-09-16)
 

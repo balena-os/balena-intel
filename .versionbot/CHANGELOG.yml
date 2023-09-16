@@ -1,4 +1,46 @@
 - commits:
+    - subject: Update contracts to 518a1d424f09a11dc1b60a16026bfe8ffe07ca78
+      hash: f71ae066bf209c2d94db8d06e5eae6109ac5e0f3
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to 518a1d424f09a11dc1b60a16026bfe8ffe07ca78
+        changelog-entry: Update contracts to 518a1d424f09a11dc1b60a16026bfe8ffe07ca78
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "raspberrypi4-unipi-neuron: Add new device type"
+              hash: e45a691e7773e85f5b3db9f0d9050e7f39a1b2e0
+              body: |
+                This was moved from private to public as agreed with the initial
+                customer.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+          version: contracts-2.0.72
+          title: ""
+          date: 2023-09-04T06:45:04.941Z
+        - commits:
+            - subject: Add the BeagleBone AI-64.
+              hash: 4296cf27d047c669da781c1c7b304bab5fa848fe
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Add the BeagleBone AI-64.
+                changelog-entry: Add the BeagleBone AI-64.
+                Signed-off-by: Lisandro Pérez Meyer <lperezmeyer@ics.com>
+                signed-off-by: Lisandro Pérez Meyer <lperezmeyer@ics.com>
+              author: Lisandro Damián Nicanor Pérez Meyer
+          version: contracts-2.0.71
+          title: ""
+          date: 2023-08-29T11:19:00.577Z
+  version: 4.0.9+rev1
+  title: ""
+  date: 2023-09-16T06:47:17.358Z
+- commits:
     - subject: Update layers/meta-balena to 8f952b7a5c8db38d6c674c2a0bef577c743ba2f0
       hash: ae445ac7543282a565267a17348230142cee4012
       body: Update layers/meta-balena
