@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update balena-yocto-scripts to c9f72aa9d032ab2281b918dab5970f18568a7644
+      hash: f4cac1378fe46e0bb7c968949190c4e93a5571e0
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to c9f72aa9d032ab2281b918dab5970f18568a7644
+        changelog-entry: Update balena-yocto-scripts to c9f72aa9d032ab2281b918dab5970f18568a7644
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: README.md ChangeType is needed for PR so add to README example
+              hash: 9f554545b218b3d00af08f1b6971605a1617ed22
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex J Lennon <ajlennon@dynamicdevices.co.uk>
+                signed-off-by: Alex J Lennon <ajlennon@dynamicdevices.co.uk>
+              author: Alex J Lennon
+              nested: []
+          version: balena-yocto-scripts-1.19.38
+          title: ""
+          date: 2023-10-11T06:39:29.551Z
+  version: 4.0.20+rev2
+  title: ""
+  date: 2023-10-11T10:09:31.586Z
+- commits:
     - subject: Update balena-yocto-scripts to 37a4aa0421848226b41dda508e5fc05fdcc01389
       hash: 9ca26016277ca886d719103b096a9563955535db
       body: Update balena-yocto-scripts
