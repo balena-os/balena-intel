@@ -1,6 +1,31 @@
 Change log
 -----------
 
+# v4.0.23
+## (2023-10-11)
+
+
+<details>
+<summary> Update layers/meta-balena to 2a57fb406f8ddf36f1e907c1b7c236fed64574be [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-4.0.23
+> ### (2023-10-10)
+> 
+> * os-helpers-fs: fix returning multiple matching devices [Joseph Kogut]
+> 
+> ## meta-balena-4.0.22
+> ### (2023-10-09)
+> 
+> * Update tibdex/github-app-token action to v2.1.0 [Self-hosted Renovate Bot]
+> 
+> ## meta-balena-4.0.21
+> ### (2023-10-09)
+> 
+> * Update backports with current 2.112.x [BalenaCI github workflow]
+> 
+
+</details>
+
 # v4.0.20+rev2
 ## (2023-10-11)
 
