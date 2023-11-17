@@ -1,6 +1,302 @@
 Change log
 -----------
 
+# v4.1.7
+## (2023-11-17)
+
+
+<details>
+<summary> Update layers/meta-balena to d40a0ca5875c474752cd94aae4e4fd9754b4781f [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-4.1.7
+> ### (2023-11-17)
+> 
+> * meta-balena-common: Move code from meta-balena-kirkstone [Florin Sarbu]
+> 
+> ## meta-balena-4.1.6
+> ### (2023-11-17)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 30c115d [Self-hosted Renovate Bot] </summary>
+> 
+>> ### leviathan-2.29.14
+>> #### (2023-11-15)
+>> 
+>> * patch: Add support for local autokit support [Vipul Gupta (@vipulgupta2048)]
+>> 
+>> ### leviathan-2.29.13
+>> #### (2023-11-13)
+>> 
+>> * Update Lock file maintenance [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.29.12
+>> #### (2023-11-13)
+>> 
+>> * Update balena-os/leviathan-worker to v2.9.25 [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.29.11
+>> #### (2023-11-13)
+>> 
+>> * Update Lock file maintenance [Self-hosted Renovate Bot]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-4.1.5
+> ### (2023-11-10)
+> 
+> * update-balena-supervisor: ensure target supervisor is running [Alex Gonzalez]
+> * update-balena-supervisor: use os-helpers logging [Alex Gonzalez]
+> * hostapp-update: surface logs to journal [Alex Gonzalez]
+> * hostapp-update-hooks: surface logs to journal [Alex Gonzalez]
+> * os-helpers-logging: skip logging to journal from a container [Alex Gonzalez]
+> 
+> ## meta-balena-4.1.4
+> ### (2023-11-10)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to af50e8d [Self-hosted Renovate Bot] </summary>
+> 
+>> ### leviathan-2.29.10
+>> #### (2023-11-08)
+>> 
+>> * core: remove request timeout on flashing [rcooke-warwick]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-4.1.3
+> ### (2023-11-06)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 2a64939 [Self-hosted Renovate Bot] </summary>
+> 
+>> ### leviathan-2.29.9
+>> #### (2023-11-06)
+>> 
+>> * Update Lock file maintenance [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.29.8
+>> #### (Invalid date)
+>> 
+>> * patch: Update Learn More docs content [Vipul Gupta (@vipulgupta2048)]
+>> 
+>> ### leviathan-2.29.7
+>> #### (Invalid date)
+>> 
+>> * Update Lock file maintenance [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.29.6
+>> #### (2023-10-26)
+>> 
+>> * Update core/contracts digest to 1091793 [Self-hosted Renovate Bot]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-4.1.2
+> ### (2023-11-01)
+> 
+> * flasher: remove user mode check after programming keys [Joseph Kogut]
+> * initrdscripts: unlock LUKS partitions only in user mode [Joseph Kogut]
+> * os-helpers: add secure boot helpers [Joseph Kogut]
+> 
+> ## meta-balena-4.1.1
+> ### (2023-10-25)
+> 
+> * plymouth: Remove --retain-splash flag from plymouth quit [Kyle Harding]
+> 
+> ## meta-balena-4.1.0
+> ### (2023-10-25)
+> 
+> * tests: add safe reboot checks [Alex Gonzalez]
+> * hostapp-update: move lock checking to helper function [Alex Gonzalez]
+> * os-helpers-logging: output script logging to journald [Alex Gonzalez]
+> * os-helpers: add safe_reboot function [Alex Gonzalez]
+> 
+> ## meta-balena-4.0.31
+> ### (2023-10-24)
+> 
+> * Revert "kernel-balena: Remove apparmor support" [Alex Gonzalez]
+> 
+> ## meta-balena-4.0.30
+> ### (2023-10-23)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 5a3ce72 [Self-hosted Renovate Bot] </summary>
+> 
+>> ### leviathan-2.29.5
+>> #### (2023-10-23)
+>> 
+>> * Update Lock file maintenance [Self-hosted Renovate Bot]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-4.0.29
+> ### (2023-10-23)
+> 
+> * resin-device-progress: Add status code check and error reporting [Alex Gonzalez]
+> 
+> ## meta-balena-4.0.28
+> ### (2023-10-20)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to cd38f4a [Self-hosted Renovate Bot] </summary>
+> 
+>> ### leviathan-2.29.4
+>> #### (2023-10-20)
+>> 
+>> * Update core/contracts digest to 42e712d [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.29.3
+>> #### (2023-10-19)
+>> 
+>> * Update core/contracts digest to 2d44c9c [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.29.2
+>> #### (2023-10-19)
+>> 
+>> * Update actions/checkout digest to b4ffde6 [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.29.1
+>> #### (2023-10-19)
+>> 
+>> * Update core/contracts digest to 97f176d [Self-hosted Renovate Bot]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-4.0.27
+> ### (2023-10-18)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v14.13.13 [Self-hosted Renovate Bot] </summary>
+> 
+>> ### balena-supervisor-14.13.13
+>> #### (2023-10-16)
+>> 
+>> * Switch some _.includes usage to native versions [Pagan Gazzard]
+>> * Switch _.assign usage to native versions [Pagan Gazzard]
+>> * Switch _.isNaN usage to native versions [Pagan Gazzard]
+>> * Switch _.isFunction usage to native versions [Pagan Gazzard]
+>> * Switch _.isUndefined usage to native versions [Pagan Gazzard]
+>> * Switch _.isNull usage to native versions [Pagan Gazzard]
+>> * Switch _.isNumber usage to native versions [Pagan Gazzard]
+>> * Switch _.isArray usage to native versions [Pagan Gazzard]
+>> * Switch _.isString usage to native versions [Pagan Gazzard]
+>> 
+>> ### balena-supervisor-14.13.12
+>> #### (2023-10-16)
+>> 
+>> * Revert "Do not expose ports from image if service network mode" [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-14.13.11
+>> #### (2023-10-16)
+>> 
+>> * Fix husky config for automatic linting on commit [Pagan Gazzard]
+>> 
+>> ### balena-supervisor-14.13.10
+>> #### (2023-10-16)
+>> 
+>> * Convert multiple bluebird uses to native promises [Pagan Gazzard]
+>> 
+>> ### balena-supervisor-14.13.9
+>> #### (2023-10-16)
+>> 
+>> * Do not expose ports from image if service network mode [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-14.13.8
+>> #### (2023-10-12)
+>> 
+>> * Move mdns-resolver to devDependencies [Felipe Lalanne]
+>> * Move got to devDependencies [Felipe Lalanne]
+>> * Move semver to dev-dependencies [Felipe Lalanne]
+>> * Move happy-eyeballs to dev-dependencies [Felipe Lalanne]
+>> * Move systeminformation to devDependencies [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-14.13.7
+>> #### (2023-10-12)
+>> 
+>> * Use mutation for adding service/image ids to logs to reduce allocations [Pagan Gazzard]
+>> * Keep the container lock for the entire duration of attaching logs [Pagan Gazzard]
+>> * Remove unnecessary async on handling journald stderr entries [Pagan Gazzard]
+>> * Avoid unnecessary work in systemd log row handling for invalid logs [Pagan Gazzard]
+>> 
+>> ### balena-supervisor-14.13.6
+>> #### (2023-10-11)
+>> 
+>> * Remove unused docker logs logging code [Pagan Gazzard]
+>> 
+>> ### balena-supervisor-14.13.5
+>> #### (2023-10-10)
+>> 
+>> * Revert os-release path to /mnt/root [Christina Ying Wang]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-4.0.26
+> ### (2023-10-17)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 62974d9 [Self-hosted Renovate Bot] </summary>
+> 
+>> ### leviathan-2.29.0
+>> #### (2023-10-16)
+>> 
+>> * minor: Add Zip Compression support [Vipul Gupta (@vipulgupta2048)]
+>> 
+>> ### leviathan-2.28.35
+>> #### (2023-10-16)
+>> 
+>> * client: enable searching multiple apps for worker [rcooke-warwick]
+>> 
+>> ### leviathan-2.28.34
+>> #### (2023-10-13)
+>> 
+>> * Update core/contracts digest to a06c0cc [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.28.33
+>> #### (2023-10-13)
+>> 
+>> * Update balena-os/leviathan-worker to v2.9.24 [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.28.32
+>> #### (2023-10-02)
+>> 
+>> * Update core/contracts digest to d68265e [Self-hosted Renovate Bot]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-4.0.25
+> ### (2023-10-11)
+> 
+> * Update Pin dependencies [Self-hosted Renovate Bot]
+> 
+> ## meta-balena-4.0.24
+> ### (2023-10-11)
+> 
+> * classes: image_types_balena: do not hardcode path to data image [Alex Gonzalez]
+> 
+
+</details>
+
 # v4.0.23+rev1
 ## (2023-11-17)
 
