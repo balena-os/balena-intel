@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v4.1.7+rev2
+## (2024-03-06)
+
+* pass input parameters to common esr workflow [Alex Gonzalez]
+
 # v4.1.7+rev1
 ## (2023-11-17)
 

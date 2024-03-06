@@ -1,4 +1,18 @@
 - commits:
+    - subject: pass input parameters to common esr workflow
+      hash: cc3b9e508df37f152e454de423bc60a226751221
+      body: ""
+      footer:
+        Changelog-entry: pass input parameters to common esr workflow
+        changelog-entry: pass input parameters to common esr workflow
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested: []
+  version: 4.1.7+rev2
+  title: ""
+  date: 2024-03-06T09:50:52.210Z
+- commits:
     - subject: Update layers/meta-openembedded to
         7da6cb848bc42b3e6bd5d2b37b52ba75510a6ca0
       hash: 2736e34dec101c9957b84453f0ad386ebb585b27
