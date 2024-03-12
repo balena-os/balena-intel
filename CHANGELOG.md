@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v2024.1.1
+## (2024-03-12)
+
+* 999-resin-boot-cleaner: Backport HUP fix for already mounted efivars directory [Alexandru]
+* Update meta-balena from v5.0.11 to v5.0.12 [Alex Gonzalez]
+
 # 2024.1.0
 ## (2024-01-02)
 
