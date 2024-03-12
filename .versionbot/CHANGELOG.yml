@@ -1,4 +1,405 @@
 - commits:
+    - subject: Update balena-yocto-scripts to v1.21.3
+      hash: 8f2c368e42baa4a858b8b7d2efd6092b686cc6eb
+      body: |
+        Update balena-yocto-scripts from v1.19.30 to v1.21.3
+      footer:
+        Change-type: patch
+        change-type: patch
+        Changelog-entry: Update balena-yocto-scripts to v1.21.3
+        changelog-entry: Update balena-yocto-scripts to v1.21.3
+        Signed-off-by: Alex Gonzalez <alexg@balena.io>
+        signed-off-by: Alex Gonzalez <alexg@balena.io>
+      author: Alex Gonzalez
+      nested:
+        - commits:
+            - subject: Enable S3 Server Side Encryption flags
+              hash: 93a2a37249c8262662934e4220c1009a8f22c51c
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.21.3
+          title: ""
+          date: 2024-02-11T13:57:42.525Z
+        - commits:
+            - subject: "automation/include: Pass helper image version"
+              hash: 2a8e25e0d0b46b3249c1c77b0c38219ebcdea1f0
+              body: >
+                This is needed by the balena-push-env helper image that needs
+                the
+
+                balena-yocto-scripts version but has no way of getting that info
+
+                otherwise.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: balena-yocto-scripts-1.21.2
+          title: ""
+          date: 2024-02-08T07:44:50.538Z
+        - commits:
+            - subject: "balena-deploy: Remove docker.io when pulling image"
+              hash: bd23b9ad59a1645bce79b0df5ef3879d10774a3a
+              body: |
+                This seems to cause docker images --format to fail
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru
+              nested: []
+          version: balena-yocto-scripts-1.21.1
+          title: ""
+          date: 2024-02-07T12:39:41.622Z
+        - commits:
+            - subject: Return image id after pulling helper images
+              hash: f2fb17399ede63ceaada8c8625a250747745d97a
+              body: |
+                Also refactor the pull helper image functions to
+                support a single repository with multiple variant tags.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: Build and publish helper images with Flowzone
+              hash: 8a15692852f38bfd5158b61b5870dffd8f758a64
+              body: |
+                Rather than build helper images on demand, we will
+                publish them to ghcr.io with every revision of this project.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.21.0
+          title: ""
+          date: 2024-02-02T18:52:51.154Z
+        - commits:
+            - subject: Remove unused block-build functions
+              hash: 130d7fb70f4a10755731e898e87610547fe44692
+              body: ""
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.20.0
+          title: ""
+          date: 2024-02-02T16:29:21.897Z
+        - commits:
+            - subject: "automation/balena-deploy: Pin to known working version of balena-img"
+              hash: 927310397896f35bd1921202e8b1f30ba3ef47d8
+              body: >
+                As per internal thread
+                https://balena.zulipchat.com/#narrow/stream/345890-balena-io/topic/Jenkins.20build.20failures/near/409602914
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+          version: balena-yocto-scripts-1.19.41
+          title: ""
+          date: 2023-12-22T16:01:59.872Z
+        - commits:
+            - subject: "Dockerfiles: update balenaCLI version to 17.2.2"
+              hash: 635816960ec1f836433a397a420292462bafd2c5
+              body: |
+                Update balenaCLI from 14.5.15 to 17.2.2 (current latest)
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "balena-deploy-block.sh: deploy licenses and changelog as release
+                assets"
+              hash: 173ab9a844e9c77f46bd5f022a62fc9100b83002
+              body: >
+                This will make it possible to surface these build artifacts to
+                users.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "balena-deploy: Add changelog to deployed artifacts"
+              hash: 2c55cdc09d5fb38a225b1b11c413de1d5206fb44
+              body: >
+                Deploying the changelog will allow to deploy it as a release
+                asset.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "balena-api: add release assets helper functions"
+              hash: bb9c5762ff424a9ae8df77d5dcebafa262fbe264
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: balena-yocto-scripts-1.19.40
+          title: ""
+          date: 2023-11-13T10:19:34.115Z
+        - commits:
+            - subject: "Dockerfile_yocto-build-env: Install rsync and uudecode host
+                dependencies"
+              hash: 20a981f81a47cf86c62efb57838baa4d45776560
+              body: |
+                These are required for the UCM-iMX9 build
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexnadru Costache <alexandru@balena.io>
+                signed-off-by: Alexnadru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+          version: balena-yocto-scripts-1.19.39
+          title: ""
+          date: 2023-10-20T13:47:52.543Z
+        - commits:
+            - subject: README.md ChangeType is needed for PR so add to README example
+              hash: 9f554545b218b3d00af08f1b6971605a1617ed22
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex J Lennon <ajlennon@dynamicdevices.co.uk>
+                signed-off-by: Alex J Lennon <ajlennon@dynamicdevices.co.uk>
+              author: Alex J Lennon
+              nested: []
+          version: balena-yocto-scripts-1.19.38
+          title: ""
+          date: 2023-10-11T06:39:29.551Z
+        - commits:
+            - subject: "Dockerfile_yocto-build-env: Add screen"
+              hash: 7ca8164eec0ba2903b5a463166fdb2d9370d3ba4
+              body: |
+                To enable us to use `bitbake -c devshell foo` in container
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex J Lennon <ajlennon@dynamicdevices.co.uk>
+                signed-off-by: Alex J Lennon <ajlennon@dynamicdevices.co.uk>
+              author: Alex J Lennon
+              nested: []
+          version: balena-yocto-scripts-1.19.37
+          title: ""
+          date: 2023-10-10T13:49:21.732Z
+        - commits:
+            - subject: "flowzone: allow external contributions"
+              hash: e44cdd1b12d22ffb6d93408e794defee812436c2
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: balena-yocto-scripts-1.19.36
+          title: ""
+          date: 2023-10-10T12:37:01.374Z
+        - commits:
+            - subject: "balena-deploy: fail if device type not found"
+              hash: 14896d0846e52ce45ed5b14e2b62cb965983c44a
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+            - subject: "balena-api: Dont assume private if can't get DT"
+              hash: ae7c2e15e7ce6ee3588e1026653f0e54ff7c39f8
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+          version: balena-yocto-scripts-1.19.35
+          title: ""
+          date: 2023-09-28T08:26:37.671Z
+        - commits:
+            - subject: Remove all traces of --skip-discontinued
+              hash: c0974ffb5f64818dcb5040d233348dd95c8e6c40
+              body: >
+                This option was removed in
+                https://github.com/balena-os/balena-yocto-scripts/pull/313
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Remove all traces of --skip-discontinued
+                changelog-entry: Remove all traces of --skip-discontinued
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+            - subject: "barys: Remove documenting the --skip-discontinued option"
+              hash: 0bd9144ebed207734e7eecb584306b74b25ed53d
+              body: >
+                This option was removed in
+                https://github.com/balena-os/balena-yocto-scripts/pull/313
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: balena-yocto-scripts-1.19.34
+          title: ""
+          date: 2023-07-12T07:04:24.994Z
+        - commits:
+            - subject: Update device-types package from v10.3.0 to v10.5.1
+              hash: 4bd1b5ed1298013cc2c4e766822b0e6869e83a47
+              body: |
+                Update device-types package from v10.3.0 to v10.5.1
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Update device-types package from v10.3.0 to v10.5.1
+                changelog-entry: Update device-types package from v10.3.0 to v10.5.1
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "barys: remove option to skip discontinued device types"
+              hash: a20413eac9cda4c5993841cdd771d904c0e8c0b5
+              body: |
+                A discontinued device type has the coffee file removed from the
+                documentation so there is no need for this argument.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "balena-lib: remove balena_lib_get_dt_state"
+              hash: 2bf60f21a4486859760168ecbf4b35af2eec88a1
+              body: >
+                There is no requirement in balenaCloud to inform about a device
+
+                deprecation. This allows to just remove the coffee file from the
+
+                device repository when a device is deprecated so there will be
+                no
+
+                more releases and no need for checks on a discontinued state.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "jenkins_build: remove discontinued device check"
+              hash: db359a88cf3ada613afef703a969e612b1706c2f
+              body: >
+                There is no requirement in balenaCloud to inform about a device
+
+                deprecation. This allows to just remove the coffee file from the
+
+                device repository when a device is deprecated so there will be
+                no
+
+                more releases and no need for checks on a discontinued state.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "balena-deploy: remove discontinued check"
+              hash: fe94d22851698916f576647b3a3ada3002b6e352
+              body: >
+                There is no requirement in balenaCloud to inform about a device
+
+                deprecation. This allows to just remove the coffee file from the
+
+                device repository when a device is deprecated so there will be
+                no
+
+                more releases and no need for checks on a discontinued state.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: balena-yocto-scripts-1.19.33
+          title: ""
+          date: 2023-07-10T15:29:53.674Z
+        - commits:
+            - subject: "balena-deploy: Newer meta-balena do not create a kernel_source
+                tarball"
+              hash: 62660e16161c559653dd2c32196ab94631753ce5
+              body: |
+                This artifact did not contain kernel sources since Yocto Thud.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: balena-yocto-scripts-1.19.32
+          title: ""
+          date: 2023-06-19T18:06:35.539Z
+        - commits:
+            - subject: "balena-deploy: add a compressed licenses tarball to the deploy
+                artifacts"
+              hash: 13ab5d114a679cca3a2df41230e4ad611e1c8292
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: balena-yocto-scripts-1.19.31
+          title: ""
+          date: 2023-06-05T15:07:23.610Z
+  version: 2024.1.2
+  title: ""
+  date: 2024-03-12T20:49:34.804Z
+- commits:
     - subject: "999-resin-boot-cleaner: Backport HUP fix for already mounted efivars
         directory"
       hash: 609fb8b0b47a78f60f24b299d1b7ca42bb1e09cc
