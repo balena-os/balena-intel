@@ -1,4 +1,176 @@
 - commits:
+    - subject: Update contracts to 8adfb6d81fb673d26e3ab7038b3ef2264c1d1fe7
+      hash: 9a988eeea01c71735a695c1b0578754b313faa14
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to 8adfb6d81fb673d26e3ab7038b3ef2264c1d1fe7
+        changelog-entry: Update contracts to 8adfb6d81fb673d26e3ab7038b3ef2264c1d1fe7
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "sw.os+hw.device-type: Update Jetson Orin distro configs for L4T 35.5.0
+                repositories"
+              hash: 12fb5f18b054878ded4124b555a725f7f446b902
+              body: >
+                All public Jetson Orin based device-types have just been updated
+                to L4T 35.5.0,
+
+                thus we need to update the base images to use the updated L4T
+                repositories.
+
+
+                We also add the distro configs for the upcoming Orin Nano 4GB
+                Seeed J3010
+
+                device-type.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+          version: contracts-2.0.105
+          title: ""
+          date: 2024-06-06T15:12:51.267Z
+        - commits:
+            - subject: "jetson-orin-nano-seeed-j3010: Specify RAM size for the Seeed J3010"
+              hash: f5bb495bf4b516a86465dccf54e6d142bcf18311
+              body: >
+                Mentioning that this is a 4GB RAM Orin Nano module in the name.
+
+                The carrier board appears to be very close to the Devkit, so
+                this
+
+                image may be used with other carrier boards if they are
+                compatible.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+            - subject: "jetson-orin-nano-seeed-j3010: add Seeed J3010 device-type"
+              hash: 8013a005a44d3ed7fa0e977714997e0b29cb84f4
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Suykov <alex.suykov@sirinsoftware.com>
+                signed-off-by: Alex Suykov <alex.suykov@sirinsoftware.com>
+              author: Alex Suykov
+          version: contracts-2.0.104
+          title: ""
+          date: 2024-06-02T04:39:00.781Z
+        - commits:
+            - subject: Remove Ubuntu Lunar 23.04 since it's EOL
+              hash: cac2042866f3e93d46b16a3e62cb65aeec43fac9
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                See: https://endoflife.date/ubuntu
+                see: https://endoflife.date/ubuntu
+              author: Thodoris Greasidis
+          version: contracts-2.0.103
+          title: ""
+          date: 2024-04-11T12:22:51.474Z
+        - commits:
+            - subject: Remove Fedora 36 since it's EOL
+              hash: 6c404c7f3e623650beb5c74ec0a4e31e9cac9c48
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                See: https://endoflife.date/fedora
+                see: https://endoflife.date/fedora
+              author: Thodoris Greasidis
+          version: contracts-2.0.102
+          title: ""
+          date: 2024-04-11T10:44:54.487Z
+        - commits:
+            - subject: Remove outdated jdk & jre 8
+              hash: 1d3d5c74c32119bfb816e411d0d6a992e642d659
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Thodoris Greasidis
+            - subject: Remove python 3.7.16 since it's in EOL
+              hash: 0bc11dc4a257a753fd4ad7b1aba999f0c23188f4
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Thodoris Greasidis
+            - subject: Remove node v14 & v16 since they are EOL
+              hash: 96055862f317b8b54896702d46361392bd1ccaca
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                See: https://balena.zulipchat.com/#narrow/stream/345890-balena-io/topic/base.20images/near/432359439
+                see: https://balena.zulipchat.com/#narrow/stream/345890-balena-io/topic/base.20images/near/432359439
+              author: Thodoris Greasidis
+          version: contracts-2.0.101
+          title: ""
+          date: 2024-04-10T09:26:36.966Z
+        - commits:
+            - subject: Add Advantech ECU1370 to hardware contract.
+              hash: 0dfe4758230bef9d6c97f533019aaba93cdc1520
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Lisandro Pérez Meyer <lpmeyer@ics.com>
+                signed-off-by: Lisandro Pérez Meyer <lpmeyer@ics.com>
+              author: Lisandro Pérez Meyer
+          version: contracts-2.0.100
+          title: ""
+          date: 2024-04-08T18:29:36.856Z
+        - commits:
+            - subject: Add node v20.12.0 for debian
+              hash: 69bd96b9757959ebbcdffb0e45e0811567929bb6
+              body: |
+                Planning to add alpine in a follow-up once
+                we get the jenkins job to work and will then
+                also mark 20.12.0 as the latest.
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Thodoris Greasidis
+          version: contracts-2.0.99
+          title: ""
+          date: 2024-04-07T23:28:45.593Z
+        - commits:
+            - subject: "hw.device-type: Add bluechiptechnology-db1"
+              hash: 16e6a9606a0eddf4cfcc9f3fa18d539096d64e16
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Chris Richardson <crichardson@bluechiptechnology.com>
+                signed-off-by: Chris Richardson <crichardson@bluechiptechnology.com>
+              author: crichardson
+          version: contracts-2.0.98
+          title: ""
+          date: 2024-03-26T12:30:34.277Z
+        - commits:
+            - subject: "hw.device-type: Add beagleplay device"
+              hash: 409c34db01a2bb6db66b82d8a1af2abed7f9f200
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Sidd-Gupta sidd.gupta@zylum.in
+                signed-off-by: Sidd-Gupta sidd.gupta@zylum.in
+              author: delhiryder
+          version: contracts-2.0.97
+          title: ""
+          date: 2024-03-21T07:50:18.202Z
+  version: 5.3.21+rev1
+  title: ""
+  date: 2024-06-18T16:09:36.050Z
+- commits:
     - subject: Update layers/meta-balena to cacc9bcb2b67a9f37654ca8500c96c833f741762
       hash: 7b838e41d8cd7e4c9a293386d420ec86c2ce8101
       body: Update layers/meta-balena
