@@ -1,6 +1,70 @@
 Change log
 -----------
 
+# v5.3.21+rev3
+## (2024-06-25)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 0164431c7032e80f145464e8cc7becfe8bb8597c [Self-hosted Renovate Bot] </summary>
+
+> ## balena-yocto-scripts-1.23.0
+> ### (2024-06-19)
+> 
+> * Dockerfiles: update balenaCLI version to 18.2.2 [Joseph Kogut]
+> * Dockerfile_yocto-build-env: bump base image to 22.04 [Joseph Kogut]
+> 
+> ## balena-yocto-scripts-1.22.4
+> ### (2024-06-14)
+> 
+> * Update job conditions to allow non-PR events for internal branches [Kyle Harding]
+> * Hardcode environment paths at the job level [Kyle Harding]
+> * Replace test inputs with a single JSON matrix input [Kyle Harding]
+> 
+> ## balena-yocto-scripts-1.22.3
+> ### (2024-06-13)
+> 
+> * jenkins_generate_ami: pass yocto scripts version as an env var to helper container [rcooke-warwick]
+> 
+> ## balena-yocto-scripts-1.22.2
+> ### (2024-06-12)
+> 
+> * Update the triggers on the example test workflow [Kyle Harding]
+> 
+> ## balena-yocto-scripts-1.22.1
+> ### (2024-06-07)
+> 
+> * Prevent duplicate workflow runs for multiple triggers [Kyle Harding]
+> * Add catchall job to yocto-build-deploy for merge requirements [Kyle Harding]
+> 
+> ## balena-yocto-scripts-1.22.0
+> ### (2024-06-06)
+> 
+> * Create workflow to build and deploy balenaOS [Kyle Harding]
+> 
+> ## balena-yocto-scripts-1.21.10
+> ### (2024-05-02)
+> 
+> * balena-deploy: deploy usbboot if available [Alex Gonzalez]
+> 
+> ## balena-yocto-scripts-1.21.9
+> ### (Invalid date)
+> 
+> * balena-lib: improve base tag detection [Alex Gonzalez]
+> 
+> ## balena-yocto-scripts-1.21.8
+> ### (2024-04-29)
+> 
+> * Support commit tags when extracting version tag from git [Kyle Harding]
+> 
+> ## balena-yocto-scripts-1.21.7
+> ### (2024-04-19)
+> 
+> * Add missing $select for release_asset.asset_key [Thodoris Greasidis]
+> 
+
+</details>
+
 # v5.3.21+rev2
 ## (2024-06-20)
 

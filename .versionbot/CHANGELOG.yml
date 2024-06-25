@@ -1,4 +1,246 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 0164431c7032e80f145464e8cc7becfe8bb8597c
+      hash: 6a75a05aa9c04f2ef5c7e426d814c9ccf4d38993
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 0164431c7032e80f145464e8cc7becfe8bb8597c
+        changelog-entry: Update balena-yocto-scripts to 0164431c7032e80f145464e8cc7becfe8bb8597c
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "Dockerfiles: update balenaCLI version to 18.2.2"
+              hash: cd6ff2606e5f7a251c6b03d4cfbea371d00a9db7
+              body: |
+                Update balena CLI from 17.2.2 to 18.2.2.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+            - subject: "Dockerfile_yocto-build-env: bump base image to 22.04"
+              hash: e027c512dbcf801a66a4bb4da15639ca67eedd2e
+              body: >
+                This brings a new Docker engine version which supports cgroup v2.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: balena-yocto-scripts-1.23.0
+          title: ""
+          date: 2024-06-19T15:20:58.274Z
+        - commits:
+            - subject: Update job conditions to allow non-PR events for internal branches
+              hash: 2d0f1029d7b5489feb7c98d749ff66c8faf2f1e7
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: Hardcode environment paths at the job level
+              hash: 5dc710c0cc5d8a1c0da97bbb9d39fdb51f5a4497
+              body: |
+                This is easier to read and less likely to break
+                with unexpected values.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: Replace test inputs with a single JSON matrix input
+              hash: 0d6cb8ac05fec8dd314f12e5335f847ef3f8ab78
+              body: |
+                This allows full control over which test conditions are
+                used for each test job without combinatorial explosion.
+
+                For example, different environments could be used for
+                specific test suites, or the cloud suite could be run
+                twice while the other suites run once.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.22.4
+          title: ""
+          date: 2024-06-14T15:57:11.418Z
+        - commits:
+            - subject: "jenkins_generate_ami: pass yocto scripts version as an env var to
+                helper container"
+              hash: af71169b93e855c8ecb378b5de3d4a1c12f44510
+              body: >
+                The ami deploys in jenkins fail at the moment because the
+                balena-lib.inc script fails to fetch the version of the yocto
+                scripts when running inside the helper image. Passing the
+                version to the helper image via an env var helps this
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+          version: balena-yocto-scripts-1.22.3
+          title: ""
+          date: 2024-06-13T19:04:31.350Z
+        - commits:
+            - subject: Update the triggers on the example test workflow
+              hash: 1f09e509e09a1a44b62772b9e197fe183c72744d
+              body: |
+                We do not need to run the workflow on close/merge, and we
+                can skip the manual workflow runs on this project as
+                each device type will have it's own workflow in the device
+                repos supporting manual triggers.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.22.2
+          title: ""
+          date: 2024-06-12T17:54:57.718Z
+        - commits:
+            - subject: Prevent duplicate workflow runs for multiple triggers
+              hash: e0132cfba86fcc05527dc4702d6841723752be38
+              body: |
+                This may need to be force merged.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: Add catchall job to yocto-build-deploy for merge requirements
+              hash: 6b023b572a35d18743cf4a5d36b9d2f7443fc744
+              body: |
+                This is a helper job to avoid having to mark all build/test
+                matrices as required, as this job will always run and return
+                success or failure.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.22.1
+          title: ""
+          date: 2024-06-07T13:45:18.699Z
+        - commits:
+            - subject: Create workflow to build and deploy balenaOS
+              hash: 5868caaa3b7bf506381c8d22f7b0b4035f7e2658
+              body: ""
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.22.0
+          title: ""
+          date: 2024-06-06T17:24:03.676Z
+        - commits:
+            - subject: "balena-deploy: deploy usbboot if available"
+              hash: a62a90bcf05fdccc9cdbaa9961d2db823bbeb9b5
+              body: |
+                This is where the RPI family deploys provisioning artifacts.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: balena-yocto-scripts-1.21.10
+          title: ""
+          date: 2024-05-02T09:18:16.451Z
+        - commits:
+            - subject: "balena-lib: improve base tag detection"
+              hash: 872bb3b1df920b026b524e041bf4f4f7c422cb2f
+              body: >
+                When a ESR release is deployed a tag with the base meta-balena
+                version
+
+                is created. This is used by the API to check for a valid OS
+                version
+
+                for updates.
+
+
+                The current mechanism to find the base version only provides an
+                ESR
+
+                version for the first commit after the branch has been created.
+
+
+                Using merge-base to find the common ancestor and `tag
+                --points-at` to
+
+                find the actual tag works for all commits after the branch is
+                created.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: balena-yocto-scripts-1.21.9
+          title: ""
+          date: 2024-04-30T14:17:29.958Z
+        - commits:
+            - subject: Support commit tags when extracting version tag from git
+              hash: 98fec51fae4721224e64cfec52480a5f17b8e271
+              body: >
+                Git describe does not include commit tags by default, and only
+                annotated tags are shown.
+
+
+                This behaviour was fine until a recent CI issue changed the
+                types of tags used to version the repositories.
+
+
+                This commit allows supporting of both types while the CI issue
+                is investigated.
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.21.8
+          title: ""
+          date: 2024-04-29T17:17:30.203Z
+        - commits:
+            - subject: Add missing $select for release_asset.asset_key
+              hash: 4f4f65c0b2cace726eccbea5d5ed8ed0f8302e54
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Thodoris Greasidis
+              nested: []
+          version: balena-yocto-scripts-1.21.7
+          title: ""
+          date: 2024-04-19T14:22:55.708Z
+  version: 5.3.21+rev3
+  title: ""
+  date: 2024-06-25T11:41:04.201Z
+- commits:
     - subject: Update layers/poky to e139e9d0ce343ba77a09601a976c92acd562c9df
       hash: 2870a3a4cde3dfd43ff6c41bdeea09c12f37172e
       body: Update layers/poky
