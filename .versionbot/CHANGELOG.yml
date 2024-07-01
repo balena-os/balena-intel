@@ -1,4 +1,103 @@
 - commits:
+    - subject: Update balena-yocto-scripts to a880342e40fe05d00a0f1cf2582a0699921152e0
+      hash: 11defdea1a6bda000ce85349c6365e03b22b437d
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to a880342e40fe05d00a0f1cf2582a0699921152e0
+        changelog-entry: Update balena-yocto-scripts to a880342e40fe05d00a0f1cf2582a0699921152e0
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: Simplify check for secure boot
+              hash: be189f7e2f6fb26f778f29e1f955a1cdd01bc8a4
+              body: >
+                We were previously introducing a variable that was essentially
+
+                replicating the contents of an input. This commit makes use of
+                the input
+
+                directly.
+
+
+                Incidentally, the previous code also had a small bug/typo, in
+                which we
+
+                mixed a test for string length with a test for string equality.
+              footer:
+                Signed-off-by: Leandro Motta Barros <leandro@balena.io>
+                signed-off-by: Leandro Motta Barros <leandro@balena.io>
+                Change-type: patch
+                change-type: patch
+              author: Leandro Motta Barros
+              nested: []
+          version: balena-yocto-scripts-1.24.1
+          title: ""
+          date: 2024-06-27T20:35:29.474Z
+        - commits:
+            - subject: Support runner selection in the test matrix
+              hash: d409cb0fbaa307a179973b60e5faff8cda6bc34b
+              body: >
+                Default to self-hosted X64 with KVM for now to align with
+                Jenkins but in the future
+
+                we should consider using GitHub hosted runners for the testbot
+                workers.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: Allow both combinatorial and include syntax for test_matrix
+              hash: 2bfc3a0d72830626366cf210f4fe9a0e649688c5
+              body: >
+                The include syntax allows full control over settings used
+
+                in each test job, but the combinatorial is simpler to write
+
+                for basic use cases.
+
+
+                Rather than force one, we can allow both and default to the
+                simple
+
+                syntax.
+
+
+                Marking as minor since the input syntax has changed, but isn't
+
+                currently used in production anywhere.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.24.0
+          title: ""
+          date: 2024-06-26T21:26:13.711Z
+        - commits:
+            - subject: Refactor secrets and variables to use environments
+              hash: c46eb9cfa4a272f00af4029c31e355477169802a
+              body: |
+                Reduce the required secrets and inputs required by
+                relying on vars and secrets set in each GitHub Environment.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.23.1
+          title: ""
+          date: 2024-06-26T12:43:22.833Z
+  version: 5.3.21+rev5
+  title: ""
+  date: 2024-07-01T07:59:55.723Z
+- commits:
     - subject: update git ref of 8812au driver
       hash: af56324caf24877534fd12c25a78a4d9c410e456
       body: >
