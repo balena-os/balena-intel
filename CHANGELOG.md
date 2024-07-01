@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v5.3.21+rev4
+## (2024-07-01)
+
+* update git ref of 8812au driver [rcooke-warwick]
+
 # v5.3.21+rev3
 ## (2024-06-25)
 

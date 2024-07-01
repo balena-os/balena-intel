@@ -1,4 +1,21 @@
 - commits:
+    - subject: update git ref of 8812au driver
+      hash: af56324caf24877534fd12c25a78a4d9c410e456
+      body: >
+        The git ref used for the Realtek 802.11n WLAN Adapter Linux driver was
+        deprecated, and to build successfully needed to be updated to an updated
+        ref
+      footer:
+        Changelog-entry: update git ref of 8812au driver
+        changelog-entry: update git ref of 8812au driver
+        Signed-off-by: Ryan Cooke <ryan@balena.io>
+        signed-off-by: Ryan Cooke <ryan@balena.io>
+      author: rcooke-warwick
+      nested: []
+  version: 5.3.21+rev4
+  title: ""
+  date: 2024-07-01T02:58:59.377Z
+- commits:
     - subject: Update balena-yocto-scripts to 0164431c7032e80f145464e8cc7becfe8bb8597c
       hash: 6a75a05aa9c04f2ef5c7e426d814c9ccf4d38993
       body: Update balena-yocto-scripts
