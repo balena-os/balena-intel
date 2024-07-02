@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v5.3.21+rev7
+## (2024-07-02)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 64c93852695af74dc1ddb355da0c8e2ff464638c [Self-hosted Renovate Bot] </summary>
+
+> ## balena-yocto-scripts-1.24.2
+> ### (2024-07-02)
+> 
+> * Fix quoting of $GITHUB_OUTPUT [Leandro Motta Barros]
+> 
+
+</details>
+
 # v5.3.21+rev6
 ## (2024-07-01)
 
