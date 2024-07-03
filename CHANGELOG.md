@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v5.3.21+rev9
+## (2024-07-03)
+
+
+<details>
+<summary> Update balena-yocto-scripts to da6fe23e89509549866b16cbc6ff404980a189c0 [Self-hosted Renovate Bot] </summary>
+
+> ## balena-yocto-scripts-1.24.3
+> ### (2024-07-02)
+> 
+> * patch: No upload to GH artifacts when PR is closed [Vipul Gupta (@vipulgupta2048)]
+> 
+
+</details>
+
 # v5.3.21+rev8
 ## (2024-07-02)
 

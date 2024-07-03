@@ -1,4 +1,37 @@
 - commits:
+    - subject: Update balena-yocto-scripts to da6fe23e89509549866b16cbc6ff404980a189c0
+      hash: 96d8f0b51cd89e1f7189363a7a491f23d41d2a6f
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to da6fe23e89509549866b16cbc6ff404980a189c0
+        changelog-entry: Update balena-yocto-scripts to da6fe23e89509549866b16cbc6ff404980a189c0
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: "patch: No upload to GH artifacts when PR is closed"
+              hash: cdee530e227972e251a2c7c06f4a3e97747419ca
+              body: >
+                Uploading artifacts to GH artifact storage when PR is merged
+
+                (closed event) is wasterful. Since they are only uploaded for
+                temporary
+
+                basis so it can be used for testing. Hence, the PR to stop doing
+                that
+
+                for closed PR event
+              footer:
+                Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipulgupta2048@gmail.com>
+                signed-off-by: Vipul Gupta (@vipulgupta2048) <vipulgupta2048@gmail.com>
+              author: Vipul Gupta (@vipulgupta2048)
+              nested: []
+          version: balena-yocto-scripts-1.24.3
+          title: ""
+          date: 2024-07-02T22:05:09.072Z
+  version: 5.3.21+rev9
+  title: ""
+  date: 2024-07-03T04:12:44.952Z
+- commits:
     - subject: Update layers/meta-openembedded to
         6ff0748a4741517519a281985fc3cd95dadb633e
       hash: ccd6a25fd58b0bc6e36bd6a2b477d54d72f0d2c4
