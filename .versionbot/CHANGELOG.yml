@@ -1,4 +1,268 @@
 - commits:
+    - subject: Update layers/meta-balena to 6d368bce75115252c2a9253aebd3444d19771595
+      hash: 63485a0ab8155be93c54073cec5f91a0d7084672
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 6d368bce75115252c2a9253aebd3444d19771595
+        changelog-entry: Update layers/meta-balena to 6d368bce75115252c2a9253aebd3444d19771595
+      author: Self-hosted Renovate Bot
+      nested:
+        - commits:
+            - subject: Update balena-supervisor to v16.4.1
+              hash: e7a2723b8a0d0707574605462c8be396a9321e13
+              body: |
+                Update balena-supervisor from 16.3.17 to 16.4.1
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Self-hosted Renovate Bot
+              nested:
+                - commits:
+                    - subject: Remove custom typings for docker-delta
+                      hash: 28706510da4f3f09a12c4db6250dfe8f2a12eaa3
+                      body: >
+                        This are no longer needed since docker-delta migrated to
+                        typescript in
+
+                        v4 and the custom typings were actually masking some
+                        bugs
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Felipe Lalanne
+                      nested: []
+                  version: balena-supervisor-16.4.1
+                  title: ""
+                  date: 2024-07-05T21:13:40.384Z
+                - commits:
+                    - subject: Refactor host-config to be its own module
+                      hash: 53f5641ef1cd2e5374f55a50a601fb80d4872511
+                      body: >
+                        The host-config module exposes the following interfaces:
+                        get,
+
+                        patch, and parse.
+
+
+                        `get` gets host configuration such as redsocks proxy
+                        configuration
+
+                        and hostname and returns it in an object of type
+                        HostConfiguration.
+
+
+                        `patch` takes an object of type HostConfiguration or
+                        LegacyHostConfiguration
+
+                        and updates the hostname and redsocks proxy
+                        configuration, optionally
+
+                        forcing the patch through update locks.
+
+
+                        `parse` takes a user input of unknown type and parses it
+                        into type
+
+                        HostConfiguration or LegacyHostConfiguration for
+                        patching, erroring if
+
+                        parse was unsuccessful.
+
+
+                        LegacyHostConfiguration is a looser typing of the user
+                        input which does
+
+                        not validate values of the five known proxy fields of
+                        type, ip, port,
+
+                        username, and password. We should stop supporting it in
+                        the next
+
+                        major Supervisor API release.
+                      footer:
+                        Change-type: minor
+                        change-type: minor
+                        Signed-off-by: Christina Ying Wang <christina@balena.io>
+                        signed-off-by: Christina Ying Wang <christina@balena.io>
+                      author: Christina Ying Wang
+                      nested: []
+                    - subject: Add HostConfig.parse method
+                      hash: be986a62a5835116d58903fac9ffcf5c7d1fd0e1
+                      body: >
+                        Parses input from PATCH /v1/device/host-config into
+                        either
+
+                        type HostConfiguration, or if LegacyHostConfiguration if
+
+                        input is of an acceptable shape (for backwards
+                        compatibility).
+
+
+                        Once input has been determined to be of type
+                        HostConfiguration,
+
+                        we can easily extract ProxyConfig from the object for
+                        patching,
+
+                        stringifying, and writing to redsocks.conf.
+                      footer:
+                        Change-type: minor
+                        change-type: minor
+                        Signed-off-by: Christina Ying Wang <christina@balena.io>
+                        signed-off-by: Christina Ying Wang <christina@balena.io>
+                      author: Christina Ying Wang
+                      nested: []
+                  version: balena-supervisor-16.4.0
+                  title: ""
+                  date: 2024-07-04T20:25:36.036Z
+          version: meta-balena-5.3.25
+          title: ""
+          date: 2024-07-06T02:24:59.802Z
+        - commits:
+            - subject: "workflows: fix linter errors"
+              hash: cd2e5faba65a6598952999953fcd4eb64520ac3a
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-5.3.24
+          title: ""
+          date: 2024-07-04T17:12:37.404Z
+        - commits:
+            - subject: Update balena-supervisor to v16.3.17
+              hash: 521d51db1023846cf95e40a9f2b0a514ec8aea6d
+              body: |
+                Update balena-supervisor from 16.3.15 to 16.3.17
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Self-hosted Renovate Bot
+              nested:
+                - commits:
+                    - subject: Fix engine deadlock on network+service change
+                      hash: ede27b63cecc2a9ae3139a905d9c6ab32418a72b
+                      body: >
+                        This fixes a regression on the supervisor state engine
+                        computation
+
+                        (added on v16.2.0) when
+
+                        the target state removes a network at the same time that
+                        a service
+
+                        referencing that network is changed. Example going from
+
+
+                        ```
+
+                        services:
+                           one:
+                              image: alpine: 3.18
+                              networks: ['balena']
+
+                        networks:
+                           balena:
+                        ```
+
+
+                        to
+
+
+                        ```
+
+                        services:
+                           one:
+                              image: alpine: latest
+                        ```
+
+
+                        Would never reach the target state as killing the
+                        service in order to
+
+                        remove the network is prioritized, but one of the
+                        invariants in the target state calculation is
+
+                        to not kill any services until all images have been
+                        downloaded. These
+
+                        two instructions were in contradiction leading to a
+                        deadlock.
+
+
+                        The fix involves only adding removal steps for services
+                        depending on a
+
+                        changing network or volume if the service container is
+                        not being removed
+
+                        already.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Felipe Lalanne
+                      nested: []
+                  version: balena-supervisor-16.3.17
+                  title: ""
+                  date: 2024-06-25T01:03:26.734Z
+                - commits:
+                    - subject: Update balena-io/deploy-to-balena-action action to v2.0.72
+                      hash: 170733422a7a8fb2e58482508fe74dc2fcb282a5
+                      body: >
+                        Update balena-io/deploy-to-balena-action from 2.0.71 to
+                        2.0.72
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Self-hosted Renovate Bot
+                      nested: []
+                  version: balena-supervisor-16.3.16
+                  title: ""
+                  date: 2024-06-17T01:56:08.257Z
+          version: meta-balena-5.3.23
+          title: ""
+          date: 2024-07-02T14:03:58.762Z
+        - commits:
+            - subject: "initrdscripts: make the kexec script fail hard in unexpected states"
+              hash: 0b6199dddbb52e963d7b6e5feb5771f2b61a0f35
+              body: >
+                At this moment the kexec initrd script is skipped when
+                ROOTFS_DIR
+
+                is not defined or if the new rootfs is mounted, but does not
+                contain
+
+                a kernel image in the expected place. This is undesirable as we
+
+                assume this is the last script executed by the balena
+                bootloader.
+
+
+                This patch makes the kexec script always execute in the balena
+
+                bootloader and makes it fail hard in unexpected states, which
+                means
+
+                the script is always an exit point for the balena bootloader,
+
+                whether the actual kexec call succeeds or not.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-5.3.22
+          title: ""
+          date: 2024-07-01T15:01:00.393Z
+  version: 5.3.25
+  title: ""
+  date: 2024-07-06T08:18:35.606Z
+- commits:
     - subject: Update balena-yocto-scripts to 32b15f1729158dec8046b9861da37062c68ff292
       hash: c8d3c09914c6f52bba7b2e2e0590c90ff903be0d
       body: Update balena-yocto-scripts

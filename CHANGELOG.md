@@ -1,6 +1,69 @@
 Change log
 -----------
 
+# v5.3.25
+## (2024-07-06)
+
+
+<details>
+<summary> Update layers/meta-balena to 6d368bce75115252c2a9253aebd3444d19771595 [Self-hosted Renovate Bot] </summary>
+
+> ## meta-balena-5.3.25
+> ### (2024-07-06)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v16.4.1 [Self-hosted Renovate Bot] </summary>
+> 
+>> ### balena-supervisor-16.4.1
+>> #### (2024-07-05)
+>> 
+>> * Remove custom typings for docker-delta [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-16.4.0
+>> #### (2024-07-04)
+>> 
+>> * Refactor host-config to be its own module [Christina Ying Wang]
+>> * Add HostConfig.parse method [Christina Ying Wang]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-5.3.24
+> ### (2024-07-04)
+> 
+> * workflows: fix linter errors [Alex Gonzalez]
+> 
+> ## meta-balena-5.3.23
+> ### (2024-07-02)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v16.3.17 [Self-hosted Renovate Bot] </summary>
+> 
+>> ### balena-supervisor-16.3.17
+>> #### (2024-06-25)
+>> 
+>> * Fix engine deadlock on network+service change [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-16.3.16
+>> #### (2024-06-17)
+>> 
+>> * Update balena-io/deploy-to-balena-action action to v2.0.72 [Self-hosted Renovate Bot]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-5.3.22
+> ### (2024-07-01)
+> 
+> * initrdscripts: make the kexec script fail hard in unexpected states [Michal Toman]
+> 
+
+</details>
+
 # v5.3.21+rev10
 ## (2024-07-04)
 
