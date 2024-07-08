@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v5.3.25+rev2
+## (2024-07-08)
+
+* balena-image-initramfs: Remove migrate module for Intel NUC [Alexandru]
+
 # v5.3.25+rev1
 ## (2024-07-06)
 

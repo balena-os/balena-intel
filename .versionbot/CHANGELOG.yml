@@ -1,4 +1,24 @@
 - commits:
+    - subject: "balena-image-initramfs: Remove migrate module for Intel NUC"
+      hash: 33801e4a0462b1766b6ed0913bf48b868527f771
+      body: |
+        because this device-type is not a target for migration and
+        is running out of space for the rust update.
+
+        We do keep the module for the genericx86-64-ext because it
+        extends the genericx86-64 yocto machine and has not run out
+        of space.
+      footer:
+        Changelog-entry: "balena-image-initramfs: Remove migrate module for Intel NUC"
+        changelog-entry: "balena-image-initramfs: Remove migrate module for Intel NUC"
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru
+      nested: []
+  version: 5.3.25+rev2
+  title: ""
+  date: 2024-07-08T10:26:48.932Z
+- commits:
     - subject: Update balena-yocto-scripts to 3b4142ba334b6b1c767a6755c2742c980d2e6b16
       hash: f792cc8329d252640ff250ea05edf1e03d9ac2b2
       body: Update balena-yocto-scripts
