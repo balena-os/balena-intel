@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v5.3.25+rev3
+## (2024-07-09)
+
+* Add GHA build and deploy workflows [rcooke-warwick]
+
 # v5.3.25+rev2
 ## (2024-07-08)
 

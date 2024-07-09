@@ -1,4 +1,18 @@
 - commits:
+    - subject: Add GHA build and deploy workflows
+      hash: ecd760f6eccc2b4efec9a815e53a8345b4e9684e
+      body: ""
+      footer:
+        Changelog-entry: Add GHA build and deploy workflows
+        changelog-entry: Add GHA build and deploy workflows
+        Signed-off-by: Ryan Cooke <ryan@balena.io>
+        signed-off-by: Ryan Cooke <ryan@balena.io>
+      author: rcooke-warwick
+      nested: []
+  version: 5.3.25+rev3
+  title: ""
+  date: 2024-07-09T18:31:28.574Z
+- commits:
     - subject: "balena-image-initramfs: Remove migrate module for Intel NUC"
       hash: 33801e4a0462b1766b6ed0913bf48b868527f771
       body: |
