@@ -28,7 +28,7 @@ jobs:
     if: (github.event.pull_request.head.repo.full_name == github.repository) == (github.event_name == 'pull_request')
     secrets: inherit
     with:
-      machine: genericx86-64-ext
+      machine: test-private
       # Needed for testing - defaults to production
       environment: balena-staging.com
       # Use qemu workers for testing
