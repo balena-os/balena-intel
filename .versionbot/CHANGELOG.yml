@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update layers/poky to be9285cbd9c959e1c712971b6dd753a971717c79
+      hash: be94657aeb268b6244056ec98d90ba8d5dd1187c
+      body: Update layers/poky
+      footer:
+        Changelog-entry: Update layers/poky to be9285cbd9c959e1c712971b6dd753a971717c79
+        changelog-entry: Update layers/poky to be9285cbd9c959e1c712971b6dd753a971717c79
+      author: Self-hosted Renovate Bot
+      nested: []
+  version: 5.3.25+rev4
+  title: ""
+  date: 2024-07-12T10:41:57.839Z
+- commits:
     - subject: Add GHA build and deploy workflows
       hash: ecd760f6eccc2b4efec9a815e53a8345b4e9684e
       body: ""
