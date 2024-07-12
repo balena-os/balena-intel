@@ -1,6 +1,7 @@
 # Supported machines
 #MACHINE ?= "genericx86-64"
 #MACHINE ?= "genericx86-64-ext"
+#MACHINE ?= "test-private"
 #MACHINE ?= "surface-go"
 #MACHINE ?= "surface-pro-6"
 
