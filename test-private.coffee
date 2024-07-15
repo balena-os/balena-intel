@@ -42,7 +42,7 @@ module.exports =
 		linux: 'https://www.balena.io/docs/learn/getting-started/intel-nuc/nodejs/'
 
 	yocto:
-		machine: 'genericx86-64-ext'
+		machine: 'test-private'
 		image: 'balena-image-flasher'
 		fstype: 'balenaos-img'
 		version: 'yocto-honister'
