@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update layers/poky to 6bd3969d32730538608e680653e032e66958fe84
+      hash: c1a90616a088c456bdd370291795739388cb1bee
+      body: Update layers/poky
+      footer:
+        Changelog-entry: Update layers/poky to 6bd3969d32730538608e680653e032e66958fe84
+        changelog-entry: Update layers/poky to 6bd3969d32730538608e680653e032e66958fe84
+      author: Self-hosted Renovate Bot
+      nested: []
+  version: 5.3.25+rev5
+  title: ""
+  date: 2024-07-16T13:12:29.014Z
+- commits:
     - subject: Update layers/poky to be9285cbd9c959e1c712971b6dd753a971717c79
       hash: be94657aeb268b6244056ec98d90ba8d5dd1187c
       body: Update layers/poky
