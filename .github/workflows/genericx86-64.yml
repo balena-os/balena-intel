@@ -1,31 +1,42 @@
 name: Generic x86_64 (legacy MBR)
 
 on:
-  # With these triggers the Yocto jobs will run
-  # in parallel with the Flowzone jobs, which is fine for now
-  # and allows us to better control what we want to test and when.
-  # It is expected that Flowzone could fail, but yocto jobs will run.
+  # https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#onpushbranchestagsbranches-ignoretags-ignore
+  # https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#filter-pattern-cheat-sheet
   pull_request:
     branches:
-      - "main"
-      - "master"
+      - main
+      - master
+      # ESR branches glob pattern
+      - v20[0-9][0-9].[0-1]?[1470].[0-9]+
   pull_request_target:
     branches:
-      - "main"
-      - "master"
+      - main
+      - master
+      # ESR branches glob pattern
+      - v20[0-9][0-9].[0-1]?[1470].[0-9]+
   push:
     tags:
+      # Semver tags glob pattern (includes ESR in format v20YY.MM.PATCH)
       - v[0-9]+.[0-9]+.[0-9]+\+?r?e?v?*
-      - v20[0-9][0-9].[0-1]?[1470].[0-9]+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    inputs:
+      force-finalize:
+        description: Force finalize of the build (implicitly enables hostapp and S3 deployments)
+        required: false
+        type: boolean
+        default: false
+      deploy-environment:
+        description: Environment to use for build and deploy
+        required: false
+        type: string
+        default: balena-staging.com
 
 jobs:
   yocto:
     name: Yocto
-    # FIXME: This workflow has dependencies on scripts in the balena-yocto-scripts repository
-    # which is pinned separately as a submodule in the device repo. Expect some drift but try to retain compatibility.
-    uses: balena-os/balena-yocto-scripts/.github/workflows/yocto-build-deploy.yml@v1.25.3
+    uses: balena-os/balena-yocto-scripts/.github/workflows/yocto-build-deploy.yml@v1.25.24
     # Prevent duplicate workflow executions for pull_request (PR) and pull_request_target (PRT) events.
     # Both PR and PRT will be triggered for the same pull request, whether it is internal or from a fork.
     # This condition will prevent the workflow from running twice for the same pull request while
@@ -34,8 +45,6 @@ jobs:
     secrets: inherit
     with:
       machine: genericx86-64-ext
-      # Needed for testing - defaults to production
-      environment: balena-staging.com
       # Use qemu workers for testing
       test_matrix: >
         {
@@ -44,3 +53,7 @@ jobs:
           "worker_type": ["qemu"],
           "runs_on": [["self-hosted", "X64", "kvm"]]
         }
+      # Allow manual workflow runs to force finalize without checking previous test runs
+      # force-finalize: ${{ inputs.force-finalize || false }}
+      # Default to balena-staging.com for workflow dispatch, but balena-cloud.com for other events
+      deploy-environment: ${{ inputs.deploy-environment || 'balena-staging.com' }}
