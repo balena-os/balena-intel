@@ -34,8 +34,6 @@ jobs:
     secrets: inherit
     with:
       machine: genericx86-64-ext
-      # Needed for testing - defaults to production
-      environment: balena-staging.com
       # Use qemu workers for testing
       test_matrix: >
         {

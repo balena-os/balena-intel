@@ -34,8 +34,6 @@ jobs:
     secrets: inherit
     with:
       machine: genericx86-64
-      # Needed for testing - defaults to production
-      environment: balena-staging.com
       # Use autokit workers for testing and run on free hosted runners
       test_matrix: >
         {
