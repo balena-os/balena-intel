@@ -16,6 +16,7 @@ on:
   push:
     tags:
       - v[0-9]+.[0-9]+.[0-9]+\+?r?e?v?*
+      # Enable this tag matcher for ESR devices
       - v20[0-9][0-9].[0-1]?[1470].[0-9]+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
