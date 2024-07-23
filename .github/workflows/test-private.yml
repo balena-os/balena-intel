@@ -31,6 +31,7 @@ jobs:
       machine: test-private
       # Needed for testing - defaults to production
       environment: balena-staging.com
+      deploy-hostapp: true #needed for testing deploy
       # Use qemu workers for testing
       test_matrix: >
         {
