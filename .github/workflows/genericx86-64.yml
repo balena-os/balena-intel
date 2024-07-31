@@ -26,7 +26,27 @@ on:
       - v[0-9]+.[0-9]+.[0-9]+\+?r?e?v?*
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-    
+    inputs:
+      deploy-s3:
+        description: Deploy artifacts to S3?
+        required: false
+        type: boolean
+        default: true
+      deploy-hostapp:
+        description: Deploy hostApp to balenaCloud?
+        required: false
+        type: boolean
+        default: true
+      deploy-esr:
+        description: Deploy as an ESR release?
+        required: false
+        type: boolean
+        default: false
+      os-dev:
+        description: Enable OS development features
+        required: false
+        type: boolean
+        default: false
 
 jobs:
   yocto:
@@ -48,3 +68,8 @@ jobs:
           "worker_type": ["qemu"],
           "runs_on": [["self-hosted", "X64", "kvm"]]
         }
+      # Keep these undefined for push/pull_request events to use workflow defaults
+      deploy-s3: ${{ inputs.deploy-s3 }}
+      deploy-hostapp: ${{ inputs.deploy-hostapp }}
+      deploy-esr: ${{ inputs.deploy-esr }}
+      os-dev: ${{ inputs.os-dev }}
