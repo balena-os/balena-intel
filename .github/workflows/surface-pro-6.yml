@@ -16,42 +16,27 @@ on:
       # ESR branches glob pattern
       # - v20[0-9][0-9].[0-1]?[1470].[0-9]+
   push:
-    branches:
-      - main
-      - master
-      # ESR branches glob pattern
-      # - v20[0-9][0-9].[0-1]?[1470].[0-9]+
     tags:
       # Semver tags glob pattern (includes ESR in format v20YY.MM.PATCH)
       - v[0-9]+.[0-9]+.[0-9]+\+?r?e?v?*
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
     inputs:
-      deploy-s3:
-        description: Deploy artifacts to S3?
-        required: false
-        type: boolean
-        default: true
-      deploy-hostapp:
-        description: Deploy hostApp to balenaCloud?
-        required: false
-        type: boolean
-        default: true
-      deploy-esr:
-        description: Deploy as an ESR release?
+      force-finalize:
+        description: Force finalize of the build (implicitly enables hostapp and S3 deployments)
         required: false
         type: boolean
         default: false
-      os-dev:
-        description: Enable OS development features
+      deploy-environment:
+        description: Environment to use for build and deploy
         required: false
-        type: boolean
-        default: false
+        type: string
+        default: balena-staging.com
 
 jobs:
   yocto:
     name: Yocto
-    uses: balena-os/balena-yocto-scripts/.github/workflows/yocto-build-deploy.yml@7b65acc0280a2239d7f8fcfd7260151d97b6f3d5 # v1.25.9
+    uses: balena-os/balena-yocto-scripts/.github/workflows/yocto-build-deploy.yml@v1.25.16
     # Prevent duplicate workflow executions for pull_request (PR) and pull_request_target (PRT) events.
     # Both PR and PRT will be triggered for the same pull request, whether it is internal or from a fork.
     # This condition will prevent the workflow from running twice for the same pull request while
@@ -60,8 +45,7 @@ jobs:
     secrets: inherit
     with:
       machine: surface-pro-6
-      # Keep these undefined for push/pull_request events to use workflow defaults
-      deploy-s3: ${{ inputs.deploy-s3 }}
-      deploy-hostapp: ${{ inputs.deploy-hostapp }}
-      deploy-esr: ${{ inputs.deploy-esr }}
-      os-dev: ${{ inputs.os-dev }}
+      # Allow manual workflow runs to force finalize without checking previous test runs
+      # force-finalize: ${{ inputs.force-finalize || false }}
+      # Default to balena-staging.com for workflow dispatch, but balena-cloud.com for other events
+      # deploy-environment: ${{ inputs.deploy-environment || 'balena-cloud.com' }}
