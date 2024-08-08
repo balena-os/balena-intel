@@ -1,4 +1,99 @@
 - commits:
+    - subject: Update contracts to bb77690aa0498f1060b64bebc183aea4fafb57e7
+      hash: bab88f508ba345a7e2fca3ac2c01a52a8161e751
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to bb77690aa0498f1060b64bebc183aea4fafb57e7
+        changelog-entry: Update contracts to bb77690aa0498f1060b64bebc183aea4fafb57e7
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "patch: Add versionList to OpenJDK"
+              hash: a06af4e592ce4ce552e9d055a07eb1964cbbdb2d
+              body: ""
+              footer:
+                Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipulgupta2048@gmail.com>
+                signed-off-by: Vipul Gupta (@vipulgupta2048) <vipulgupta2048@gmail.com>
+              author: Vipul Gupta (@vipulgupta2048)
+          version: contracts-2.0.111
+          title: ""
+          date: 2024-08-08T14:50:47.699Z
+        - commits:
+            - subject: Add CompuLab iotdin-imx8p to harware contract.
+              hash: 2b0148ba2c6b34d8f74a5b2afe9405419f81e7ab
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Valentin Raevsky <valentin@compulab.co.il>
+                signed-off-by: Valentin Raevsky <valentin@compulab.co.il>
+              author: Valentin Raevsky
+          version: contracts-2.0.110
+          title: ""
+          date: 2024-08-07T13:28:36.285Z
+        - commits:
+            - subject: "hw.device-type: Update provisioning instructions for AGX Orin 64GB"
+              hash: f8d665f044ea2e39a100fb865ffd5f8a8f4ae65f
+              body: >
+                The AGX Orin 64GB should be provisioned on the eMMC by default
+                as per the internal thread
+                https://balena.zulipchat.com/#narrow/stream/346009-aspect.2Fcustomer-success/topic/Get.20feedback.20on.20draft.20balenaOS.20with.20L4T.2036.2E3.20for.20Jetson.20Orin/near/455889690
+
+
+                We thus update the provisioning instructions accordingly
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru
+          version: contracts-2.0.109
+          title: ""
+          date: 2024-08-06T08:44:06.923Z
+        - commits:
+            - subject: "hw.device-type: Add new device-type Jetson AGX Orin 64GB Devkit"
+              hash: b329046af8d6427955627231ba0d332d23dc0f87
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+          version: contracts-2.0.108
+          title: ""
+          date: 2024-07-25T08:53:00.318Z
+        - commits:
+            - subject: "beagleplay: Fix provisioning instructions"
+              hash: 996350221bcc6ff73d83239af7ffd96653d36a2c
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru
+          version: contracts-2.0.107
+          title: ""
+          date: 2024-07-15T10:43:40.476Z
+        - commits:
+            - subject: "hw.device-type: Disable bluetooth until this feature is officially
+                supported"
+              hash: bc3746dd50d63824e3069cd0098227d47e9f22ed
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Sidd-Gupta sidd.gupta@zylum.in
+                signed-off-by: Sidd-Gupta sidd.gupta@zylum.in
+              author: delhiryder
+          version: contracts-2.0.106
+          title: ""
+          date: 2024-07-12T09:11:52.729Z
+  version: 5.3.25+rev6
+  title: ""
+  date: 2024-08-08T20:28:26.693Z
+- commits:
     - subject: Update layers/poky to 6bd3969d32730538608e680653e032e66958fe84
       hash: c1a90616a088c456bdd370291795739388cb1bee
       body: Update layers/poky
