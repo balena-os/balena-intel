@@ -556,3 +556,9 @@ BALENA_CONFIGS[i2c-dev] = " \
     CONFIG_I2C=y \
     CONFIG_I2C_CHARDEV=m \
     "
+
+# requested by customer
+BALENA_CONFIGS:append = " pinctrl_broxton"
+BALENA_CONFIGS[pinctrl_broxton] = " \
+    CONFIG_PINCTRL_BROXTON=y \
+"
