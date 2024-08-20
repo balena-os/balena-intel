@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v5.3.25+rev9
+## (2024-08-20)
+
+* Enable PINCTRL_BROXTON support in the kernel [Memory Wu]
+
 # v5.3.25+rev8
 ## (2024-08-12)
 

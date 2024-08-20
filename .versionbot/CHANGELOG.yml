@@ -1,4 +1,18 @@
 - commits:
+    - subject: Enable PINCTRL_BROXTON support in the kernel
+      hash: e5ebda4c8c9dcf77ec17a4dc6e542c9fd009a089
+      body: ""
+      footer:
+        Changelog-entry: Enable PINCTRL_BROXTON support in the kernel
+        changelog-entry: Enable PINCTRL_BROXTON support in the kernel
+        Signed-off-by: Memory Wu <memory.wu@maxmine.com.au>
+        signed-off-by: Memory Wu <memory.wu@maxmine.com.au>
+      author: Memory Wu
+      nested: []
+  version: 5.3.25+rev9
+  title: ""
+  date: 2024-08-20T14:14:28.009Z
+- commits:
     - subject: Update balena-yocto-scripts to 8450f5dfee536fe1cc26fda70916875857a7106f
       hash: 6e675275faf28b97540462722dc1c02df24955c5
       body: Update balena-yocto-scripts
