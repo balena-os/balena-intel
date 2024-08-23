@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v5.3.25+rev10
+## (2024-08-23)
+
+* Add GHA workflows for Surface Go and Pro 6 [Kyle Harding]
+
 # v5.3.25+rev9
 ## (2024-08-20)
 

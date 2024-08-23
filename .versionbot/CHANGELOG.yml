@@ -1,4 +1,18 @@
 - commits:
+    - subject: Add GHA workflows for Surface Go and Pro 6
+      hash: 59eb7b18d7b9d1f28e185eaa91d92c78d3ff2128
+      body: ""
+      footer:
+        Changelog-entry: Add GHA workflows for Surface Go and Pro 6
+        changelog-entry: Add GHA workflows for Surface Go and Pro 6
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 5.3.25+rev10
+  title: ""
+  date: 2024-08-23T11:42:11.597Z
+- commits:
     - subject: Enable PINCTRL_BROXTON support in the kernel
       hash: e5ebda4c8c9dcf77ec17a4dc6e542c9fd009a089
       body: ""
