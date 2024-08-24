@@ -1,6 +1,357 @@
 Change log
 -----------
 
+# v6.0.12
+## (2024-08-24)
+
+
+<details>
+<summary> Update layers/meta-balena to a8d6ff62e7ab5bc1f8b1d0a6a8d06d6da84e11af [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.0.12
+> ### (2024-08-23)
+> 
+> * Update balena-os/balena-yocto-scripts action to v1.25.25 [balena-renovate[bot]]
+> 
+> ## meta-balena-6.0.11
+> ### (2024-08-21)
+> 
+> * Update balena-os/balena-yocto-scripts action to v1.25.24 [balena-renovate[bot]]
+> 
+> ## meta-balena-6.0.10
+> ### (2024-08-14)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v16.4.6 [balena-renovate[bot]] </summary>
+> 
+>> ### balena-supervisor-16.4.6
+>> #### (Invalid date)
+>> 
+>> * Update semver to v7.6.3 [Self-hosted Renovate Bot]
+>> 
+>> ### balena-supervisor-16.4.5
+>> #### (2024-07-25)
+>> 
+>> * Update balena-io/deploy-to-balena-action action to v2.0.74 [Self-hosted Renovate Bot]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-6.0.9
+> ### (2024-08-14)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to f4e9332 [balena-renovate[bot]] </summary>
+> 
+>> ### leviathan-2.31.25
+>> #### (2024-08-06)
+>> 
+>> * Update actions/upload-artifact digest to 834a144 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.31.24
+>> #### (2024-08-06)
+>> 
+>> * Update core/contracts digest to 6d69a05 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.31.23
+>> #### (2024-07-23)
+>> 
+>> * core: remove nested retries in getDutIp function [rcooke-warwick]
+>> 
+>> ### leviathan-2.31.22
+>> #### (2024-07-23)
+>> 
+>> * patch: Add migration & secureboot options to e2e test suite [Vipul Gupta (@vipulgupta2048)]
+>> 
+>> ### leviathan-2.31.21
+>> #### (2024-07-22)
+>> 
+>> * Update docker/setup-buildx-action digest to aa33708 [Self-hosted Renovate Bot]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-6.0.8
+> ### (2024-08-14)
+> 
+> * tests: os: add check for iptables rules [rcooke-warwick]
+> 
+> ## meta-balena-6.0.7
+> ### (2024-08-09)
+> 
+> * modemmanager: Fix Quectel modems initialization bug [Florin Sarbu]
+> 
+> ## meta-balena-6.0.6
+> ### (2024-07-25)
+> 
+> * patch: Fix broken links in CDS Docs [Vipul Gupta]
+> 
+> ## meta-balena-6.0.5
+> ### (2024-07-22)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v16.4.4 [Self-hosted Renovate Bot] </summary>
+> 
+>> ### balena-supervisor-16.4.4
+>> #### (2024-07-17)
+>> 
+>> * Improve log message typing [Pagan Gazzard]
+>> 
+>> ### balena-supervisor-16.4.3
+>> #### (2024-07-16)
+>> 
+>> * Logs: only truncate the message if it's possible it will need it [Pagan Gazzard]
+>> * Logs: skip setting default values if we're dropping as an invalid log [Pagan Gazzard]
+>> * Logs: only call `Date.now()` if a timestamp is not already present [Pagan Gazzard]
+>> 
+>> ### balena-supervisor-16.4.2
+>> #### (2024-07-16)
+>> 
+>> * Cleanup images after state-engine tests [Felipe Lalanne]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-6.0.4
+> ### (2024-07-22)
+> 
+> * Update balena-os/balena-yocto-scripts action to v1.25.8 [Self-hosted Renovate Bot]
+> 
+> ## meta-balena-6.0.3
+> ### (2024-07-22)
+> 
+> * Update docker API version to match the v20.10 engine version [Alex Gonzalez]
+> * conf: distro: set default docker API version [Alex Gonzalez]
+> 
+> ## meta-balena-6.0.2
+> ### (2024-07-19)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 081cbeb [Self-hosted Renovate Bot] </summary>
+> 
+>> ### leviathan-2.31.20
+>> #### (2024-07-15)
+>> 
+>> * Update core/contracts digest to 17b44ca [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.31.19
+>> #### (2024-07-12)
+>> 
+>> * Update core/contracts digest to 773c77c [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.31.18
+>> #### (2024-07-12)
+>> 
+>> * client: use /start endpoint of worker to reserve worker if IDLE immediately [rcooke-warwick]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-6.0.1
+> ### (2024-07-19)
+> 
+> * NetworkManager: remove duplicate rules in shared dispatcher script [Michal Toman]
+> 
+> ## meta-balena-6.0.0
+> ### (2024-07-19)
+> 
+> * common: remove module compression bbclass [Joseph Kogut]
+> * kernel-balena: enable zstd module compression [Joseph Kogut]
+> * image-balena: support zst compressed modules [Joseph Kogut]
+> * kmod: enable zstd [Joseph Kogut]
+> 
+> ## meta-balena-5.4.1
+> ### (2024-07-17)
+> 
+> * Add build-only GHA workflows for missing devices [Kyle Harding]
+> 
+> ## meta-balena-5.4.0
+> ### (2024-07-13)
+> 
+> * classes: kernel-balena: remove configuration warnings for 6.1 [Alex Gonzalez]
+> * classes: balena-bootloader: add USB configuration dependencies [Alex Gonzalez]
+> * initrscripts: migrate: use configuration file to specify post-install action [Alex Gonzalez]
+> * resin-init-flasher: use configuration file to specify post-install action [Alex Gonzalez]
+> * tests: secureboot: add RPI specialization [Alex Gonzalez]
+> 
+> ## meta-balena-5.3.28
+> ### (2024-07-10)
+> 
+> * Add GHA yocto workflows for common device types [Kyle Harding]
+> 
+> ## meta-balena-5.3.27
+> ### (2024-07-07)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 60b559c [Self-hosted Renovate Bot] </summary>
+> 
+>> ### leviathan-2.31.17
+>> #### (2024-07-05)
+>> 
+>> * Update actions/upload-artifact digest to 0b2256b [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.31.16
+>> #### (2024-07-04)
+>> 
+>> * Update docker/setup-buildx-action digest to 4fd8129 [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.31.15
+>> #### (2024-06-24)
+>> 
+>> * patch: Remove internal presentation link to testbot [Vipul Gupta (@vipulgupta2048)]
+>> 
+>> ### leviathan-2.31.14
+>> #### (2024-06-24)
+>> 
+>> * Update Lock file maintenance [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.31.13
+>> #### (2024-06-19)
+>> 
+>> * Update balena-os/leviathan-worker to v2.9.41 [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.31.12
+>> #### (2024-06-19)
+>> 
+>> * Docs: Fix endpoint name from s/status/state [Vipul Gupta]
+>> 
+>> ### leviathan-2.31.11
+>> #### (2024-06-17)
+>> 
+>> * Update Lock file maintenance [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.31.10
+>> #### (2024-06-14)
+>> 
+>> * Update Lock file maintenance [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.31.9
+>> #### (2024-06-14)
+>> 
+>> * Update core/contracts digest to 8adfb6d [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.31.8
+>> #### (2024-06-14)
+>> 
+>> * Update actions/checkout digest to 692973e [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.31.7
+>> #### (2024-06-14)
+>> 
+>> * Update balena-os/leviathan-worker to v2.9.40 [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.31.6
+>> #### (2024-06-14)
+>> 
+>> * allow for secureboot flasher env var for non-qemu runs [rcooke-warwick]
+>> 
+>> ### leviathan-2.31.5
+>> #### (2024-06-02)
+>> 
+>> * Update core/contracts digest to 94c4f90 [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.31.4
+>> #### (2024-05-27)
+>> 
+>> * Update Lock file maintenance [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.31.3
+>> #### (2024-05-24)
+>> 
+>> * Update actions/upload-artifact digest to 6546280 [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.31.2
+>> #### (2024-05-23)
+>> 
+>> * Update Pin docker/setup-buildx-action action to d70bba7 [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.31.1
+>> #### (2024-05-23)
+>> 
+>> * Client: Update alpine packages before installing packages [Vipul Gupta (@vipulgupta2048)]
+>> 
+>> ### leviathan-2.31.0
+>> #### (2024-05-23)
+>> 
+>> * minor: Add leviathan GitHub Action [Vipul Gupta (@vipulgupta2048)]
+>> 
+>> ### leviathan-2.30.22
+>> #### (2024-05-20)
+>> 
+>> * Update actions/checkout digest to a5ac7e5 [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.30.21
+>> #### (2024-05-20)
+>> 
+>> * Update Lock file maintenance [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.30.20
+>> #### (2024-05-13)
+>> 
+>> * Update Lock file maintenance [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.30.19
+>> #### (2024-05-08)
+>> 
+>> * Update actions/checkout digest to 44c2b7a [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.30.18
+>> #### (2024-05-07)
+>> 
+>> * Update balena-os/leviathan-worker to v2.9.39 [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.30.17
+>> #### (2024-05-06)
+>> 
+>> * Update balena-os/leviathan-worker to v2.9.38 [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.30.16
+>> #### (2024-05-06)
+>> 
+>> * Update Lock file maintenance [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.30.15
+>> #### (2024-05-06)
+>> 
+>> * patch: Replace environment switcher in e2e config.js [Vipul Gupta (@vipulgupta2048)]
+>> 
+>> ### leviathan-2.30.14
+>> #### (2024-04-29)
+>> 
+>> * Update Lock file maintenance [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.30.13
+>> #### (2024-04-25)
+>> 
+>> * Update actions/upload-artifact digest to 6546280 [Self-hosted Renovate Bot]
+>> 
+>> ### leviathan-2.30.12
+>> #### (2024-04-25)
+>> 
+>> * Update actions/checkout digest to 0ad4b8f [Self-hosted Renovate Bot]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-5.3.26
+> ### (2024-07-07)
+> 
+> * tests: secureboot: rename resetWorker() to resetDUT() [Alex Gonzalez]
+> * tests: secureboot: refactor to facilitate extension [Alex Gonzalez]
+> 
+
+</details>
+
 # v5.3.25+rev10
 ## (2024-08-23)
 
