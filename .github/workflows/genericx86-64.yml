@@ -8,13 +8,11 @@ on:
       - main
       - master
       # ESR branches glob pattern
-      - v20[0-9][0-9].[0-1]?[1470].[0-9]+
+      - 20[0-9][0-9].[0-1]?[1470].x
   pull_request_target:
     branches:
       - main
       - master
-      # ESR branches glob pattern
-      - v20[0-9][0-9].[0-1]?[1470].[0-9]+
   push:
     tags:
       # Semver tags glob pattern (includes ESR in format v20YY.MM.PATCH)
@@ -36,7 +34,7 @@ on:
 jobs:
   yocto:
     name: Yocto
-    uses: balena-os/balena-yocto-scripts/.github/workflows/yocto-build-deploy.yml@a3dfa265480986251193a989b1077939f38c4dc3 # v1.25.26
+    uses: balena-os/balena-yocto-scripts/.github/workflows/yocto-build-deploy.yml@v1.25.27
     # Prevent duplicate workflow executions for pull_request (PR) and pull_request_target (PRT) events.
     # Both PR and PRT will be triggered for the same pull request, whether it is internal or from a fork.
     # This condition will prevent the workflow from running twice for the same pull request while
@@ -56,4 +54,4 @@ jobs:
       # Allow manual workflow runs to force finalize without checking previous test runs
       # force-finalize: ${{ inputs.force-finalize || false }}
       # Default to balena-staging.com for workflow dispatch, but balena-cloud.com for other events
-      deploy-environment: ${{ inputs.deploy-environment || 'balena-staging.com' }}
+      deploy-environment: ${{ inputs.deploy-environment || 'balena-cloud.com' }}
