@@ -1,6 +1,121 @@
 Change log
 -----------
 
+# v6.0.16
+## (2024-08-30)
+
+
+<details>
+<summary> Update layers/meta-balena to ff036025013fc850f9293e3ff590ea467543172f [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.0.16
+> ### (2024-08-29)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to ff6a079 [balena-renovate[bot]] </summary>
+> 
+>> ### leviathan-2.31.29
+>> #### (2024-08-29)
+>> 
+>> * Update core/contracts digest to 59752b7 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.31.28
+>> #### (2024-08-29)
+>> 
+>> * Update balena-os/leviathan-worker to v2.9.43 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.31.27
+>> #### (2024-08-29)
+>> 
+>> * Update docker/setup-buildx-action digest to 988b5a0 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.31.26
+>> #### (2024-08-29)
+>> 
+>> * specify ipv4 localhost for balena tunnel [rcooke-warwick]
+>> * Move balena-cli download to a build stage with renovate management [Kyle Harding]
+>> * core: update CLI to 19.0.0 [rcooke-warwick]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-6.0.15
+> ### (2024-08-29)
+> 
+> * remove up-board and cl-som-imx8 [rcooke-warwick]
+> * Add GHA workflows for additional device types [Kyle Harding]
+> 
+> ## meta-balena-6.0.14
+> ### (2024-08-28)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v16.5.8 [balena-renovate[bot]] </summary>
+> 
+>> ### balena-supervisor-16.5.8
+>> #### (2024-08-27)
+>> 
+>> * Update webpack to v5.94.0 [SECURITY] [balena-renovate[bot]]
+>> 
+>> ### balena-supervisor-16.5.7
+>> #### (2024-08-27)
+>> 
+>> * Add unit test for usingInferStepsLock [Christina Ying Wang]
+>> 
+>> ### balena-supervisor-16.5.6
+>> #### (2024-08-23)
+>> 
+>> * Revert PR #2364 [Christina Ying Wang]
+>> 
+>> ### balena-supervisor-16.5.5
+>> #### (2024-08-21)
+>> 
+>> * Avoid unnecessary config calls during Supervisor init [Christina Ying Wang]
+>> 
+>> ### balena-supervisor-16.5.4
+>> #### (2024-08-16)
+>> 
+>> * Add kmod to runtime-base [Joseph Kogut]
+>> 
+>> ### balena-supervisor-16.5.3
+>> #### (2024-08-08)
+>> 
+>> * Do not write `noProxy` to redsocks.conf [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-16.5.2
+>> #### (2024-08-07)
+>> 
+>> * Verify that LED_FILE exists on blinking setup [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-16.5.1
+>> #### (2024-08-05)
+>> 
+>> * Avoid leaking memory on deep promise recursions [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-16.5.0
+>> #### (Invalid date)
+>> 
+>> * Use promises for setup/writing for logging backend [Felipe Lalanne]
+>> * Improve the LogBackend interface [Felipe Lalanne]
+>> * Use stream pipeline instead of pipe [Felipe Lalanne]
+>> * Do not use DB to store container logs info [Felipe Lalanne]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-6.0.13
+> ### (2024-08-26)
+> 
+> * classes/image_types_balena: Add support for device specific boot filesystem options [Alexandru Costache]
+> 
+
+</details>
+
+* Update GHA default environment to production [Kyle Harding]
+
 # v6.0.12+rev1
 ## (2024-08-28)
 
