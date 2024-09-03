@@ -1,4 +1,17 @@
 - commits:
+    - subject: Remove Jenkins build and deploy job
+      hash: 85b38e90382e1f73d3a8bdcc062696ed158cf381
+      body: |
+        This is performed by the yocto-scripts workflow now.
+      footer:
+        Changelog-entry: Remove Jenkins build and deploy job
+        changelog-entry: Remove Jenkins build and deploy job
+      author: Kyle Harding
+      nested: []
+  version: 6.0.16+rev3
+  title: ""
+  date: 2024-09-03T19:14:50.455Z
+- commits:
     - subject: Update layers/poky to 2b5ca6638e1a490a1230bccdb34a95b43f3d253e
       hash: 3b3d9dbb05c479c7ab14703ea2239ad4a557b2b9
       body: Update layers/poky

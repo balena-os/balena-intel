@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v6.0.16+rev3
+## (2024-09-03)
+
+* Remove Jenkins build and deploy job [Kyle Harding]
+
 # v6.0.16+rev2
 ## (2024-08-31)
 
