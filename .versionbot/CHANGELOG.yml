@@ -1,4 +1,33 @@
 - commits:
+    - subject: update git ref of 8812au driver
+      hash: 58ea10bfa15c647165834629c167ca7f617c2f53
+      body: >
+        The git ref used for the Realtek 802.11n WLAN Adapter Linux driver was
+        deprecated, and to build successfully needed to be updated to an updated
+        ref
+      footer:
+        Changelog-entry: update git ref of 8812au driver
+        changelog-entry: update git ref of 8812au driver
+        Signed-off-by: Ryan Cooke <ryan@balena.io>
+        signed-off-by: Ryan Cooke <ryan@balena.io>
+      author: rcooke-warwick
+      nested: []
+    - subject: Update meta-balena from v5.2.10 to v5.2.12
+      hash: 8ac596fed27080e02b114e980547aa152108e3fb
+      body: |
+        Includes a patch for CVE-2024-6387 and updates balena-supervisor
+        to v16.4.1
+      footer:
+        Changelog-entry: Update meta-balena from v5.2.10 to v5.2.12
+        changelog-entry: Update meta-balena from v5.2.10 to v5.2.12
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 2024.7.1
+  title: ""
+  date: 2024-09-12T12:18:44.450Z
+- commits:
     - subject: Update balena-os/github-workflows to v0.0.27
       hash: 3e0b4827fad15c7e87ce52cc46ed3bae331de285
       body: Update balena-os/github-workflows

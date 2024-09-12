@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v2024.7.1
+## (2024-09-12)
+
+* update git ref of 8812au driver [rcooke-warwick]
+* Update meta-balena from v5.2.10 to v5.2.12 [Kyle Harding]
+
 # 2024.7.0
 ## (2024-07-02)
 
