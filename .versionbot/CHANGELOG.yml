@@ -1,4 +1,37 @@
 - commits:
+    - subject: Update layers/meta-balena to 99684cda8ebe27dc5c5882ebc410b525d606b632
+      hash: 459d9cc3a1f83241abb675b3042617afafb41482
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 99684cda8ebe27dc5c5882ebc410b525d606b632
+        changelog-entry: Update layers/meta-balena to 99684cda8ebe27dc5c5882ebc410b525d606b632
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "common: fix return in commit_apply-dbx HUP hook"
+              hash: a557b614a0ce2cf39d6bdfb3e464834b0d570895
+              body: >
+                This code was moved from rollback-health into a hostapp-update
+                commit
+
+                hook, where it now runs outside of a function.
+
+
+                Replace the invalid return statements with exits.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: meta-balena-6.0.24
+          title: ""
+          date: 2024-09-13T08:22:06.217Z
+  version: 6.0.24
+  title: ""
+  date: 2024-09-13T16:59:55.312Z
+- commits:
     - subject: Update layers/meta-openembedded to
         9a24b7679810628b594cc5a9b52f77f53d37004f
       hash: 043b4d7ad6cde60632c04dbdb1ca19e273603b0e

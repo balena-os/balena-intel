@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.0.24
+## (2024-09-13)
+
+
+<details>
+<summary> Update layers/meta-balena to 99684cda8ebe27dc5c5882ebc410b525d606b632 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.0.24
+> ### (2024-09-13)
+> 
+> * common: fix return in commit_apply-dbx HUP hook [Joseph Kogut]
+> 
+
+</details>
+
 # v6.0.23+rev2
 ## (2024-09-13)
 
