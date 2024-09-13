@@ -1,6 +1,67 @@
 Change log
 -----------
 
+# v6.0.23
+## (2024-09-13)
+
+
+<details>
+<summary> Update layers/meta-balena to b81a2d7084cb519aa78b5d56a96ca571150df63b [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.0.23
+> ### (2024-09-12)
+> 
+> * tests:os: Avoid setting apiEndpoint for unmanaged tests [Kyle Harding]
+> 
+> ## meta-balena-6.0.22
+> ### (2024-09-12)
+> 
+> * Update balena-os/balena-yocto-scripts action to v1.25.39 [balena-renovate[bot]]
+> 
+> ## meta-balena-6.0.21
+> ### (2024-09-01)
+> 
+> * Update balena-os/balena-yocto-scripts action to v1.25.30 [balena-renovate[bot]]
+> 
+> ## meta-balena-6.0.20
+> ### (2024-09-01)
+> 
+> * tests: config: restore both network options to false [Kyle Harding]
+> 
+> ## meta-balena-6.0.19
+> ### (2024-09-01)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v16.6.1 [balena-renovate[bot]] </summary>
+> 
+>> ### balena-supervisor-16.6.1
+>> #### (2024-08-29)
+>> 
+>> * Remove unused patchDevice function [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-16.6.0
+>> #### (2024-08-28)
+>> 
+>> * Add support for redsocks dnsu2t config [Christina Ying Wang]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-6.0.18
+> ### (2024-09-01)
+> 
+> * Update balena-os/balena-yocto-scripts action to v1.25.28 [balena-renovate[bot]]
+> 
+> ## meta-balena-6.0.17
+> ### (2024-09-01)
+> 
+> * Update Pin balena-os/balena-yocto-scripts action to a3dfa26 [balena-renovate[bot]]
+> 
+
+</details>
+
 # v6.0.16+rev3
 ## (2024-09-03)
 
