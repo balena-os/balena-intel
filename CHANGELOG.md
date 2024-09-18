@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v6.0.26+rev2
+## (2024-09-18)
+
+* Enable force-finalize flag for manual workflow dispatch [Kyle Harding]
+
 # v6.0.26+rev1
 ## (2024-09-17)
 
