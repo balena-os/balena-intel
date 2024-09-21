@@ -1,4 +1,147 @@
 - commits:
+    - subject: Update layers/meta-balena to b3ab5311c0ad999dc896ab5b9a85e48098ddd3dc
+      hash: fe34e1d0d8728c2ec29a76003bb76122d4464c25
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to b3ab5311c0ad999dc896ab5b9a85e48098ddd3dc
+        changelog-entry: Update layers/meta-balena to b3ab5311c0ad999dc896ab5b9a85e48098ddd3dc
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "mkfs-hostapp-native: update Dockerfile to using trixie"
+              hash: 61265dc52127a461b476c225268e3d6be6f9eabf
+              body: >-
+                This is required to be able to build in host distributions that
+                use
+
+                glibc v2.39 to avoid errors such as:
+
+
+                ```
+
+                | + hostapp-update -f /input -n
+
+                | Running hostapp update...
+
+                | touch: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.38'
+                not found (required by touch)
+
+                ```
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "meta-balena-rust: rust-llvm: backport a fix for build with gcc-13"
+              hash: c8863a14595c7147a7072b21420eb803ef146779
+              body: |
+                * needed for rust-llvm-native on hosts with gcc-13
+
+                (backport from
+                335eb3a93e96 rust-llvm: backport a fix for build with gcc-13)
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-6.0.31
+          title: ""
+          date: 2024-09-20T21:32:01.568Z
+        - commits:
+            - subject: Update tests/leviathan digest to 17c522f
+              hash: d4f0f9ccb2a819a22213d7cb5822534a5191014d
+              body: Update tests/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested:
+                - commits:
+                    - subject: Update balena-io/balena-cli to v19.0.11
+                      hash: 2824ed421ede89a422157bae190ce00d1443548e
+                      body: |
+                        Update balena-io/balena-cli from 19.0.10 to 19.0.11
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.31.44
+                  title: ""
+                  date: 2024-09-18T17:49:06.237Z
+          version: meta-balena-6.0.30
+          title: ""
+          date: 2024-09-18T21:20:36.785Z
+        - commits:
+            - subject: "modemmanager: Fix SIM7100E crash"
+              hash: e397c18742117596fed133e0b5992362e230f538
+              body: >
+                With the update to MM 1.22.0 we have received reports that
+
+                SIM7100E is not functioning correctly.
+
+                Followed up with ModemManager devs and it was discovered the
+                issue
+
+                is related to a PCO setting:
+
+                https://gitlab.freedesktop.org/mobile-broadband/ModemManager/-/issues/884
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-6.0.29
+          title: ""
+          date: 2024-09-18T12:31:58.505Z
+        - commits:
+            - subject: "initrdscripts: replace cut by awk for parsing lsblk in cryptsetup
+                hook"
+              hash: c9544aaf502943f3b492d0a5907f1c1e401c6ac7
+              body: >
+                cut is sensitive to the amount of delimiter characters when
+                parsing
+
+                output, so e.g. an additional space between two elements causes
+
+                every field shift by one index.
+
+
+                This patch replaces the use of cut by awk, which should be more
+                robust.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-6.0.28
+          title: ""
+          date: 2024-09-18T04:59:46.616Z
+        - commits:
+            - subject: "tests:os: Use writeConfigJsonProp helper function"
+              hash: b44642caa14c4fb791d99e5705499b710a98c3e9
+              body: >
+                Use the existing helper function to write changes to config.json.
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Kyle Harding
+              nested: []
+          version: meta-balena-6.0.27
+          title: ""
+          date: 2024-09-17T13:31:39.490Z
+  version: 6.0.31
+  title: ""
+  date: 2024-09-21T05:23:14.174Z
+- commits:
     - subject: Enable force-finalize flag for manual workflow dispatch
       hash: 44136b0d158017cbe77ed9cde6021e8a5207a7df
       body: |
