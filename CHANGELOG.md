@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.0.32
+## (2024-09-21)
+
+
+<details>
+<summary> Update layers/meta-balena to 8786d755f72c35fb3b332c26b32c3de576d3d0ce [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.0.32
+> ### (2024-09-21)
+> 
+> * kernel-headers-test: update dockerfile to bullseye [Alex Gonzalez]
+> 
+
+</details>
+
 # v6.0.31+rev2
 ## (2024-09-21)
 
