@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.0.33
+## (2024-09-23)
+
+
+<details>
+<summary> Update layers/meta-balena to f2c72d6bbd312821f0bb97897fe7836c525950f7 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.0.33
+> ### (2024-09-22)
+> 
+> * Override the default commit body for digest updates [Kyle Harding]
+> 
+
+</details>
+
 # v6.0.32
 ## (2024-09-21)
 
