@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.0.33+rev2
+## (2024-09-28)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 3b2b1bd6c51fd9662b5ea422ec85f523caf2d4ee [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.25.46
+> ### (2024-09-27)
+> 
+> * use genericx86-64-ext image for testing the workflow [rcooke-warwick]
+> 
+
+</details>
+
 # v6.0.33+rev1
 ## (2024-09-28)
 

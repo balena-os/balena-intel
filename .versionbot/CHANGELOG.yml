@@ -1,4 +1,32 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 3b2b1bd6c51fd9662b5ea422ec85f523caf2d4ee
+      hash: 83fd3ec6d9bcec52549e102f538b599fcd918640
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 3b2b1bd6c51fd9662b5ea422ec85f523caf2d4ee
+        changelog-entry: Update balena-yocto-scripts to 3b2b1bd6c51fd9662b5ea422ec85f523caf2d4ee
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: use genericx86-64-ext image for testing the workflow
+              hash: 20435d215d18aba21502871cd8249437c39914a1
+              body: >
+                Using genericx86-64-ext as its smaller, faster to build and the
+                repo is blocked less often
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+          version: balena-yocto-scripts-1.25.46
+          title: ""
+          date: 2024-09-27T15:13:10.481Z
+  version: 6.0.33+rev2
+  title: ""
+  date: 2024-09-28T18:13:21.181Z
+- commits:
     - subject: Update layers/meta-openembedded to
         dd3d2293ffdf2559f8a433f241765a8ab50cd085
       hash: 85675c31b7f2ea21560ad5b4c05e5ff9d6466d54
