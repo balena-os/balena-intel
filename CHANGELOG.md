@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v6.0.34+rev2
+## (2024-09-29)
+
+* Update contracts to 1fb0b0c4e488ba81fcdcfeacfda771730c3dad98 [balena-renovate[bot]]
+
 # v6.0.34+rev1
 ## (2024-09-29)
 
