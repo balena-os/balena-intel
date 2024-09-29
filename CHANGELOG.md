@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.0.34
+## (2024-09-29)
+
+
+<details>
+<summary> Update layers/meta-balena to f9f06afdd1c02bdd2f6d3fa7aada116b2bb97074 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.0.34
+> ### (2024-09-27)
+> 
+> * CI: Update checkout settings [Pagan Gazzard]
+> 
+
+</details>
+
 # v6.0.33+rev2
 ## (2024-09-28)
 
