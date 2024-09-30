@@ -1,4 +1,28 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 9646cf9ad0f3c6ac4b2ce11e0ef21b8fa9276149
+      hash: 288eaf1b0de77ac8994100f00dcbdea06d5e0443
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 9646cf9ad0f3c6ac4b2ce11e0ef21b8fa9276149
+        changelog-entry: Update balena-yocto-scripts to 9646cf9ad0f3c6ac4b2ce11e0ef21b8fa9276149
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "patch: Stop persisting credentials in actions/checkout"
+              hash: 0fa90791298e14fa15dbba2b82e0579ed85c41a4
+              body: ""
+              footer:
+                Signed-off-by: Vipul Gupta (@vipulgupta2048) <vipulgupta2048@gmail.com>
+                signed-off-by: Vipul Gupta (@vipulgupta2048) <vipulgupta2048@gmail.com>
+              author: Vipul Gupta (@vipulgupta2048)
+              nested: []
+          version: balena-yocto-scripts-1.25.47
+          title: ""
+          date: 2024-09-30T10:53:24.792Z
+  version: 6.0.34+rev3
+  title: ""
+  date: 2024-09-30T14:46:21.939Z
+- commits:
     - subject: Update contracts to 1fb0b0c4e488ba81fcdcfeacfda771730c3dad98
       hash: e44072112355c6093b5571f56526fc92c24d2499
       body: Update contracts
