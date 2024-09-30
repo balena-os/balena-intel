@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.0.35
+## (2024-09-30)
+
+
+<details>
+<summary> Update layers/meta-balena to 7ca35a3ea56820fd0b58ed0239dc058a5ec28ee0 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.0.35
+> ### (Invalid date)
+> 
+> * tests: cloud: prevent hanging in cloud suite teardown [rcooke-warwick]
+> 
+
+</details>
+
 # v6.0.34+rev3
 ## (2024-09-30)
 

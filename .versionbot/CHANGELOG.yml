@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update layers/meta-balena to 7ca35a3ea56820fd0b58ed0239dc058a5ec28ee0
+      hash: 67b0e7079377588433cd58e883cdb54ba81f6742
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 7ca35a3ea56820fd0b58ed0239dc058a5ec28ee0
+        changelog-entry: Update layers/meta-balena to 7ca35a3ea56820fd0b58ed0239dc058a5ec28ee0
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "tests: cloud: prevent hanging in cloud suite teardown"
+              hash: 66c2e28b0b5bb108308feda044418f04a113b742
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+          version: meta-balena-6.0.35
+          title: ""
+          date: 2024-09-30T14:59:40.189Z
+  version: 6.0.35
+  title: ""
+  date: 2024-09-30T19:09:59.193Z
+- commits:
     - subject: Update balena-yocto-scripts to 9646cf9ad0f3c6ac4b2ce11e0ef21b8fa9276149
       hash: 288eaf1b0de77ac8994100f00dcbdea06d5e0443
       body: Update balena-yocto-scripts
