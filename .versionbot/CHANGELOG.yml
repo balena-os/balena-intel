@@ -1,4 +1,52 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 50139f9c5a786a12e0852cadbd2bef6d4195c3b7
+      hash: 188c2352bdf9b2f971a044383a35e9f8d128b5b8
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 50139f9c5a786a12e0852cadbd2bef6d4195c3b7
+        changelog-entry: Update balena-yocto-scripts to 50139f9c5a786a12e0852cadbd2bef6d4195c3b7
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Only attempt to decrypt if we have encrypted in the build step
+              hash: c3d677008304b4b4744f6cf88e50b2ff65814079
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke<ryan@balena.io>
+                signed-off-by: Ryan Cooke<ryan@balena.io>
+              author: Ryan Cooke
+              nested: []
+            - subject: Fetch full depth in order to checkout custom meta-balena-refs
+              hash: e1f1a2fdafe58bd3f87b68fdec3c0bd195671eea
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: Encrypt balenaOS artifacts at rest in GitHub
+              hash: 116d81b89cde4f6d99c10c3b32d66e64322258a7
+              body: |
+                Applies symmetric encryption (PBKDF2 hardened) to balenaOS
+                build assets prior to uploading them to GitHub for temporary
+                storage between builds. Decrypts assets after downloading.
+
+                Requires: https://github.com/balena-os/.github/pull/83
+              footer:
+                change-type: patch
+              author: Anton Belodedenko
+              nested: []
+          version: balena-yocto-scripts-1.25.49
+          title: ""
+          date: 2024-10-01T17:06:45.014Z
+  version: 6.0.35+rev4
+  title: ""
+  date: 2024-10-01T22:17:23.176Z
+- commits:
     - subject: Update balena-os/balena-yocto-scripts to v1.25.48
       hash: d56c154b6ae57dec7c5c66d9ab56befd8cc3cb57
       body: Update balena-os/balena-yocto-scripts
