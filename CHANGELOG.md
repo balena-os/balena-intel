@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.0.35+rev7
+## (2024-10-03)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 654f5cf71ee54748cf217e1e1ab56c510143f3fc [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.25.50
+> ### (2024-10-02)
+> 
+> * use github app installation token for device repository cloning [Ryan Cooke]
+> 
+
+</details>
+
 # v6.0.35+rev6
 ## (2024-10-03)
 

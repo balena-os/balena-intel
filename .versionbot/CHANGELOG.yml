@@ -1,4 +1,33 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 654f5cf71ee54748cf217e1e1ab56c510143f3fc
+      hash: c09f137d2e95f1dd3b86da05d916ee96bbf6e1f5
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 654f5cf71ee54748cf217e1e1ab56c510143f3fc
+        changelog-entry: Update balena-yocto-scripts to 654f5cf71ee54748cf217e1e1ab56c510143f3fc
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: use github app installation token for device repository cloning
+              hash: 8eff76f9e8c5b03bf767edde7430bc414af0e028
+              body: >
+                This is required for cloning private submodules - as the default
+                behaviour means the token is scoped only to the repository the
+                workflow is running on
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: Ryan Cooke
+              nested: []
+          version: balena-yocto-scripts-1.25.50
+          title: ""
+          date: 2024-10-02T11:17:01.374Z
+  version: 6.0.35+rev7
+  title: ""
+  date: 2024-10-03T17:20:44.151Z
+- commits:
     - subject: alter workflow triggers
       hash: be5ebe32fc3fface09a922b4e45697ede0e8a2a0
       body: ""
