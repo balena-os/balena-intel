@@ -1,4 +1,18 @@
 - commits:
+    - subject: alter workflow triggers
+      hash: be5ebe32fc3fface09a922b4e45697ede0e8a2a0
+      body: ""
+      footer:
+        Changelog-entry: alter workflow triggers
+        changelog-entry: alter workflow triggers
+        Signed-off-by: Ryan Cooke <ryan@balena.io>
+        signed-off-by: Ryan Cooke <ryan@balena.io>
+      author: rcooke-warwick
+      nested: []
+  version: 6.0.35+rev6
+  title: ""
+  date: 2024-10-03T12:39:37.785Z
+- commits:
     - subject: Update balena-os/balena-yocto-scripts to v1.25.49
       hash: 6e8c862104d83f271c6da17b834ca6c9fe7d31ca
       body: Update balena-os/balena-yocto-scripts

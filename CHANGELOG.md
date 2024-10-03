@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v6.0.35+rev6
+## (2024-10-03)
+
+* alter workflow triggers [rcooke-warwick]
+
 # v6.0.35+rev5
 ## (2024-10-02)
 
