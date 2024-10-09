@@ -1,6 +1,32 @@
 Change log
 -----------
 
+# v6.0.41
+## (2024-10-09)
+
+
+<details>
+<summary> Update layers/meta-balena to 1fcd66fe37f5d683c57d9187f3f819f139ff1baf [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.0.41
+> ### (2024-10-09)
+> 
+> * Update balena-os/balena-yocto-scripts action to v1.25.59 [balena-renovate[bot]]
+> 
+> ## meta-balena-6.0.40
+> ### (2024-10-08)
+> 
+> * os-helpers-efi: silence secure boot variable checks [Joseph Kogut]
+> * os-helpers-efi: silence od stderr [Joseph Kogut]
+> 
+> ## meta-balena-6.0.39
+> ### (2024-10-07)
+> 
+> * tests: hup: login with sdk before fetching image [Ryan Cooke]
+> 
+
+</details>
+
 # v6.0.38+rev3
 ## (2024-10-07)
 

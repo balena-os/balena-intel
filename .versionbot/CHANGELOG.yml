@@ -1,4 +1,81 @@
 - commits:
+    - subject: Update layers/meta-balena to 1fcd66fe37f5d683c57d9187f3f819f139ff1baf
+      hash: 59cc7c8f95e3ba599ef2482e3d5e148cada41555
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 1fcd66fe37f5d683c57d9187f3f819f139ff1baf
+        changelog-entry: Update layers/meta-balena to 1fcd66fe37f5d683c57d9187f3f819f139ff1baf
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update balena-os/balena-yocto-scripts action to v1.25.59
+              hash: b657c30b13e4bf9e66dbd1fd0d9612ce2f27768c
+              body: |
+                Update balena-os/balena-yocto-scripts from v1.25.49 to v1.25.59
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: meta-balena-6.0.41
+          title: ""
+          date: 2024-10-09T12:24:24.775Z
+        - commits:
+            - subject: "os-helpers-efi: silence secure boot variable checks"
+              hash: 7815bc8ea4496a704fe1c6dc6ecae36d1d9bbb86
+              body: >
+                If the SecureBoot variable is non-existent, the parsed value is
+                not an
+
+                integer, and test complains. Redirect stderr to silence this.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+            - subject: "os-helpers-efi: silence od stderr"
+              hash: 095d63b8fe773ebd7c9075bb6495f4620fcd238f
+              body: >
+                When parsing an efivar value, od will complain if a given file
+                does not
+
+                exist, such as the SecureBoot variable.
+
+
+                Silence stderr to ignore this.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: meta-balena-6.0.40
+          title: ""
+          date: 2024-10-08T20:12:41.671Z
+        - commits:
+            - subject: "tests: hup: login with sdk before fetching image"
+              hash: b8e558c74ad626dfaf77f56aad5952225fed3e17
+              body: >
+                This is to ensure we have an authenticated SDK before trying to
+                get the last known production image - it needs to be
+                authenticated in case the DT is private
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: Ryan Cooke
+              nested: []
+          version: meta-balena-6.0.39
+          title: ""
+          date: 2024-10-07T16:47:42.103Z
+  version: 6.0.41
+  title: ""
+  date: 2024-10-09T17:59:58.703Z
+- commits:
     - subject: Update balena-yocto-scripts to a9654d395259d264d463c80d62bf53231776a0a1
       hash: 910b6488df31d48eaa35c8b40e0a890553e4cb2d
       body: Update balena-yocto-scripts
