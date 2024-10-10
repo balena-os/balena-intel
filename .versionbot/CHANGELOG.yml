@@ -1,4 +1,39 @@
 - commits:
+    - subject: Update contracts to 5ac053bb4bfe82519a1ea8bd53b9adb8e925051e
+      hash: 2e7bb8104ef929ec6147f3fcb2b5a7bd205e4f2c
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to 5ac053bb4bfe82519a1ea8bd53b9adb8e925051e
+        changelog-entry: Update contracts to 5ac053bb4bfe82519a1ea8bd53b9adb8e925051e
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "sw.os+hw.device-type: Update all Orin devices to r36.3 in
+                sources.list"
+              hash: f2b34b2d9c7c6a58b74984ca5c14217effe253d0
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+            - subject: "hw.device-type: Remove superfluous instructions for beagleplay"
+              hash: 3f400e0f27d792734a2db70cc53863ffeb87907c
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru
+          version: contracts-2.0.114
+          title: ""
+          date: 2024-10-09T13:56:48.392Z
+  version: 6.0.41+rev2
+  title: ""
+  date: 2024-10-10T13:07:02.825Z
+- commits:
     - subject: Update balena-os/balena-yocto-scripts to v1.25.60
       hash: f914fbd14d69b32dacec6dbc171b66c96ae2e0df
       body: Update balena-os/balena-yocto-scripts
