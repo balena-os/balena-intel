@@ -1,6 +1,26 @@
 Change log
 -----------
 
+# v6.0.43
+## (2024-10-10)
+
+
+<details>
+<summary> Update layers/meta-balena to ec5d469cfb7954bb684e764dfcd6aa004a818f66 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.0.43
+> ### (2024-10-10)
+> 
+> * initrdscripts: Wait for boot partition in the abroot script [Michal Toman]
+> 
+> ## meta-balena-6.0.42
+> ### (2024-10-09)
+> 
+> * flasher: improve logging with secure boot [Joseph Kogut]
+> 
+
+</details>
+
 # v6.0.41+rev2
 ## (2024-10-10)
 

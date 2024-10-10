@@ -1,4 +1,61 @@
 - commits:
+    - subject: Update layers/meta-balena to ec5d469cfb7954bb684e764dfcd6aa004a818f66
+      hash: 542676fefce73674314ee2a3117303442838e112
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to ec5d469cfb7954bb684e764dfcd6aa004a818f66
+        changelog-entry: Update layers/meta-balena to ec5d469cfb7954bb684e764dfcd6aa004a818f66
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "initrdscripts: Wait for boot partition in the abroot script"
+              hash: 2ede3ce578907c2f2eb75598b0b599bb12913929
+              body: |
+                At this moment the abroot script assumes that the boot partition
+                is already in place when it executes. This might not be true
+                if the rootfs sits on a device that takes a while to initialize,
+                such as a USB drive. The script fails hard if that is the case.
+
+                This patch replicates a waiting loop from the rootfs script,
+                which addresses the same issue for systems that do not use
+                the balena bootloader.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-6.0.43
+          title: ""
+          date: 2024-10-10T15:37:21.568Z
+        - commits:
+            - subject: "flasher: improve logging with secure boot"
+              hash: ebde0895df02810798d80c585d5496d3b8d72909
+              body: >
+                Print the PCR digest values used to create the PCR policy used
+                to seal
+
+                the LUKS passphrase during flashing. These values can be cross
+
+                referenced with the logs during secure boot to diagnose policy
+                check
+
+                failures.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: meta-balena-6.0.42
+          title: ""
+          date: 2024-10-09T18:02:04.416Z
+  version: 6.0.43
+  title: ""
+  date: 2024-10-10T20:32:44.567Z
+- commits:
     - subject: Update contracts to 5ac053bb4bfe82519a1ea8bd53b9adb8e925051e
       hash: 2e7bb8104ef929ec6147f3fcb2b5a7bd205e4f2c
       body: Update contracts
