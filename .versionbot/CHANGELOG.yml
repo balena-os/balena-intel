@@ -1,4 +1,38 @@
 - commits:
+    - subject: Update contracts to 88fb8adfa09a1a270d9cd5d59627255298e1684e
+      hash: 743c110e5ca6443ce2c6f905701ebd5b8ab16322
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to 88fb8adfa09a1a270d9cd5d59627255298e1684e
+        changelog-entry: Update contracts to 88fb8adfa09a1a270d9cd5d59627255298e1684e
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Add alpine 3.20
+              hash: 6d47b5012c98f11c2a6e83944509aee90db099c0
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Otavio Jacobi
+          version: contracts-2.0.116
+          title: ""
+          date: 2024-10-17T14:55:03.926Z
+        - commits:
+            - subject: Add alpine 3.19
+              hash: a598678f0c478fe3f0f8a560d3e698ace3561e26
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Otavio Jacobi
+          version: contracts-2.0.115
+          title: ""
+          date: 2024-10-17T14:01:53.134Z
+  version: 6.0.44+rev4
+  title: ""
+  date: 2024-10-17T23:26:15.670Z
+- commits:
     - subject: Update balena-yocto-scripts to d9a810c7eb0d8e37c37b1bc27ecc0b4347a9dc21
       hash: 0799af550aee4995742203b557ef0db3588aeaf7
       body: Update balena-yocto-scripts
