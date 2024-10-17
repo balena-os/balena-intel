@@ -1,4 +1,196 @@
 - commits:
+    - subject: Update balena-yocto-scripts to d9a810c7eb0d8e37c37b1bc27ecc0b4347a9dc21
+      hash: 0799af550aee4995742203b557ef0db3588aeaf7
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to d9a810c7eb0d8e37c37b1bc27ecc0b4347a9dc21
+        changelog-entry: Update balena-yocto-scripts to d9a810c7eb0d8e37c37b1bc27ecc0b4347a9dc21
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Expose secure boot testing features via matrix input
+              hash: 922d1dd1e09c74e393962069bdac0ce69c17e9cb
+              body: >
+                Some device types (generic-armd64) need to run the test
+
+                suites twice for the same base image, once with secure boot
+
+                vars enabled in Leviathan, and once without.
+
+
+                Rather than run the suites in series, or require building the
+
+                image twice, we can allow the test matrix to define separate
+                runs
+
+                for the two modes.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.26.0
+          title: ""
+          date: 2024-10-15T14:38:39.423Z
+        - commits:
+            - subject: Update balena-os/leviathan action to v2.31.60
+              hash: 9911262656b19e657578bb97c2e39a7c0580ac97
+              body: |
+                Update balena-os/leviathan from 2.31.59 to 2.31.60
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.25.63
+          title: ""
+          date: 2024-10-11T15:36:10.972Z
+        - commits:
+            - subject: Fix concurrency and cancel in progress contexts
+              hash: 912b07647f7d0114d53b5971e653a65ed6fedd67
+              body: |
+                When evaluating expressions for cancel-in-progress, certain
+                parameters may not be available at the time of evaluation.
+
+                For instance, the github.job context is not accessible, as it's
+                specific to the running job and not the concurrency group.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.25.62
+          title: ""
+          date: 2024-10-11T13:09:20.324Z
+        - commits:
+            - subject: Update balena-os/leviathan action to v2.31.59
+              hash: cd7c9cc85c215a7bc823b0dd6e631b87629ce7b0
+              body: |
+                Update balena-os/leviathan from 2.31.56 to 2.31.59
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.25.61
+          title: ""
+          date: 2024-10-10T20:19:05.108Z
+        - commits:
+            - subject: Update actions/upload-artifact action to v4.4.3
+              hash: 2cbcd4df35a61e824eeb48407b530d05ddd0f382
+              body: |
+                Update actions/upload-artifact from 4.4.2 to 4.4.3
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.25.60
+          title: ""
+          date: 2024-10-09T21:12:59.016Z
+        - commits:
+            - subject: Update actions/upload-artifact action to v4.4.2
+              hash: 247e98873b5e53b5cca43c26ec7953faa2ad9d77
+              body: |
+                Update actions/upload-artifact from 4.4.1 to 4.4.2
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.25.59
+          title: ""
+          date: 2024-10-09T09:51:45.026Z
+        - commits:
+            - subject: Update balena-os/leviathan action to v2.31.56
+              hash: d145f7d01225df1c4b57b06bf583d0e36a1f95ff
+              body: |
+                Update balena-os/leviathan from 2.31.54 to 2.31.56
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.25.58
+          title: ""
+          date: 2024-10-09T06:47:51.300Z
+        - commits:
+            - subject: Update balena-os/leviathan action to v2.31.54
+              hash: 04e5d8224d3b10b8800578f8cc4ff6a2af8342fa
+              body: |
+                Update balena-os/leviathan from 2.31.51 to 2.31.54
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.25.57
+          title: ""
+          date: 2024-10-08T19:15:28.461Z
+        - commits:
+            - subject: Update actions/upload-artifact action to v4.4.1
+              hash: b0f48ee82f07ec40b5cd585a7ac47f5f6c4dec7b
+              body: |
+                Update actions/upload-artifact from 4.4.0 to 4.4.1
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.25.56
+          title: ""
+          date: 2024-10-07T23:38:41.293Z
+        - commits:
+            - subject: Update balena-os/leviathan action to v2.31.51
+              hash: e80eacc2c50440dee81aa8c32176d80e93e37a8a
+              body: |
+                Update balena-os/leviathan from 2.31.50 to 2.31.51
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.25.55
+          title: ""
+          date: 2024-10-07T22:03:13.933Z
+        - commits:
+            - subject: Update actions/checkout action to v4.2.1
+              hash: 89821425b164c0dcd1a3a03b5a778774911dc7f9
+              body: |
+                Update actions/checkout from 4.2.0 to 4.2.1
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.25.54
+          title: ""
+          date: 2024-10-07T19:40:37.283Z
+        - commits:
+            - subject: fix balena deploy quotes
+              hash: aa40859d69147e04b99691028101ce650ccfb568
+              body: >
+                A previous commit added quotes to some of the `balena deploy`
+                command args - when $status or $_debug aren't defined, this
+                means empty quote gets passed as an arg, making the CLI fail.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: Ryan Cooke
+              nested: []
+          version: balena-yocto-scripts-1.25.53
+          title: ""
+          date: 2024-10-07T15:31:38.815Z
+  version: 6.0.44+rev3
+  title: ""
+  date: 2024-10-17T14:30:43.881Z
+- commits:
     - subject: Update layers/poky to c8f1b3762d0bc3c8296cbb45660d1016161f2ab6
       hash: fbe283c78b42af7f5995b5c7065cd86cad0c1a77
       body: Update layers/poky
