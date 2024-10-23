@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v6.0.44+rev7
+## (2024-10-23)
+
+* Update layers/meta-openembedded to 4ad41baed6236d499804cbfc4f174042d84fce97 [balena-renovate[bot]]
+
 # v6.0.44+rev6
 ## (2024-10-18)
 
