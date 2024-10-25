@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update balena-os/balena-yocto-scripts to v1.27.2
+      hash: 5bdcc3a209c802133477121cbd1c690e51fa22a7
+      body: Update balena-os/balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-os/balena-yocto-scripts to v1.27.2
+        changelog-entry: Update balena-os/balena-yocto-scripts to v1.27.2
+      author: balena-renovate[bot]
+      nested: []
+  version: 6.0.44+rev9
+  title: ""
+  date: 2024-10-25T17:58:09.936Z
+- commits:
     - subject: Update layers/poky to 1ab34a5f6407b597f569c4b08d341e82db488f2c
       hash: ac1ec60e103710a1612e3005919f0860524bd2ee
       body: Update layers/poky
