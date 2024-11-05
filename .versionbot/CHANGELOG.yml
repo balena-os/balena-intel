@@ -1,4 +1,42 @@
 - commits:
+    - subject: Add iwlwifi-so-a0-hr-b0-64.ucode for Intel Wi-Fi 6 AX201
+      hash: 19ee1ecb3988118dc9906d1da08e8ddce9826dbe
+      body: >
+        We need to add an older version of the firmware because the iwlwifi
+        driver
+
+        we currently have in our kernel requires a minimum version
+        iwlwifi-so-a0-hr-b0-39
+
+        and a maximum version iwlwifi-so-a0-hr-b0-66.
+
+
+        The firmware file was obtained from:
+
+        https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/tree/?h=20230117
+      footer:
+        Changelog-entry: Add iwlwifi-so-a0-hr-b0-64.ucode for Intel Wi-Fi 6 AX201
+        changelog-entry: Add iwlwifi-so-a0-hr-b0-64.ucode for Intel Wi-Fi 6 AX201
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+    - subject: Fix SRC_URI for github.com/RPi-Distro/firmware-nonfree
+      hash: 49fa7b44968e0b1a10be28b6c19674d741e9512c
+      body: >
+        The upstream has changed the branch from which we need to fetch the
+        firmware
+      footer:
+        Changelog-entry: Fix SRC_URI for github.com/RPi-Distro/firmware-nonfree
+        changelog-entry: Fix SRC_URI for github.com/RPi-Distro/firmware-nonfree
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+      nested: []
+  version: 6.0.44+rev10
+  title: ""
+  date: 2024-11-05T12:31:08.216Z
+- commits:
     - subject: Update balena-os/balena-yocto-scripts to v1.27.2
       hash: 5bdcc3a209c802133477121cbd1c690e51fa22a7
       body: Update balena-os/balena-yocto-scripts

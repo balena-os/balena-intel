@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v6.0.44+rev10
+## (2024-11-05)
+
+* Add iwlwifi-so-a0-hr-b0-64.ucode for Intel Wi-Fi 6 AX201 [Florin Sarbu]
+* Fix SRC_URI for github.com/RPi-Distro/firmware-nonfree [Florin Sarbu]
+
 # v6.0.44+rev9
 ## (2024-10-25)
 
