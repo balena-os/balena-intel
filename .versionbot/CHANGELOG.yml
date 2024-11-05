@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update layers/poky to 647bd689e95f971e5ec069cd123bdf5157c686a4
+      hash: 44300af64e889ff8205f51c6ce0c4906d2f995a1
+      body: Update layers/poky
+      footer:
+        Changelog-entry: Update layers/poky to 647bd689e95f971e5ec069cd123bdf5157c686a4
+        changelog-entry: Update layers/poky to 647bd689e95f971e5ec069cd123bdf5157c686a4
+      author: balena-renovate[bot]
+      nested: []
+  version: 6.0.44+rev11
+  title: ""
+  date: 2024-11-05T19:26:37.894Z
+- commits:
     - subject: Add iwlwifi-so-a0-hr-b0-64.ucode for Intel Wi-Fi 6 AX201
       hash: 19ee1ecb3988118dc9906d1da08e8ddce9826dbe
       body: >
