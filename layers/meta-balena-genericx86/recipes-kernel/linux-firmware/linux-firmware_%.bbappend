@@ -29,6 +29,7 @@ SRC_URI:append = " \
     file://ibt-0040-0041.sfi \
     file://iwlwifi-so-a0-gf-a0-64.ucode \
     file://iwlwifi-so-a0-gf-a0.pnvm \
+    file://iwlwifi-so-a0-hr-b0-64.ucode \
     file://kbl_guc_62.0.0.bin \
     file://kbl_guc_69.0.3.bin \
     file://kbl_guc_70.1.1.bin \
@@ -66,6 +67,7 @@ RDEPENDS:${PN}-ibt-40-41 = "${PN}-ibt-license"
 FILES:${PN}-iwlwifi-so-a0  = " \
     ${nonarch_base_libdir}/firmware/iwlwifi-so-a0-gf-a0-64.ucode \
     ${nonarch_base_libdir}/firmware/iwlwifi-so-a0-gf-a0.pnvm \
+    ${nonarch_base_libdir}/firmware/iwlwifi-so-a0-hr-b0-64.ucode \
 "
 LICENSE:${PN}-iwlwifi-so-a0 = "Firmware-iwlwifi_firmware"
 RDEPENDS:${PN}-iwlwifi-so-a0 = "${PN}-iwlwifi-license"
@@ -104,6 +106,7 @@ do_install:append() {
     install -m 0644 ${WORKDIR}/ibt-0040-0041.sfi ${D}${nonarch_base_libdir}/firmware/intel/ibt-0040-0041.sfi
     install -m 0644 ${WORKDIR}/iwlwifi-so-a0-gf-a0-64.ucode ${D}${nonarch_base_libdir}/firmware/iwlwifi-so-a0-gf-a0-64.ucode
     install -m 0644 ${WORKDIR}/iwlwifi-so-a0-gf-a0.pnvm ${D}${nonarch_base_libdir}/firmware/iwlwifi-so-a0-gf-a0.pnvm
+    install -m 0644 ${WORKDIR}/iwlwifi-so-a0-hr-b0-64.ucode ${D}${nonarch_base_libdir}/firmware/iwlwifi-so-a0-hr-b0-64.ucode
 
     install -m 0644 ${WORKDIR}/kbl_guc_62.0.0.bin ${D}${nonarch_base_libdir}/firmware/i915/kbl_guc_62.0.0.bin
     install -m 0644 ${WORKDIR}/kbl_guc_69.0.3.bin ${D}${nonarch_base_libdir}/firmware/i915/kbl_guc_69.0.3.bin
