@@ -19,7 +19,7 @@ SRC_URI += " \
 # https://github.com/RPi-Distro/firmware-nonfree
 
 SRC_URI:append = " \
-    git://github.com/RPi-Distro/firmware-nonfree;destsuffix=raspbian-nf;protocol=https;name=raspbian-nf \
+    git://github.com/RPi-Distro/firmware-nonfree;destsuffix=raspbian-nf;protocol=https;name=raspbian-nf;branch=buster \
 "
 
 # NOTE: These files show be removed once linux-firmware is updated in meta-balena,
