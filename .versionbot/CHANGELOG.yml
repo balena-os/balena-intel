@@ -1,4 +1,145 @@
 - commits:
+    - subject: Update balena-yocto-scripts to d8d6b50ec334769cfc000ef8b619cfb35a5a65d5
+      hash: 79c9a4f63eeb2d37fe2dbda7f79369dd69b8d2b8
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to d8d6b50ec334769cfc000ef8b619cfb35a5a65d5
+        changelog-entry: Update balena-yocto-scripts to d8d6b50ec334769cfc000ef8b619cfb35a5a65d5
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update product-os/review-commit-action action to v0.1.7
+              hash: 004842cbb18903272ec44e4231cb9dc414c97e80
+              body: |
+                Update product-os/review-commit-action from 0.1.4 to 0.1.7
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.27.8
+          title: ""
+          date: 2024-11-04T20:59:02.375Z
+        - commits:
+            - subject: Update Pin product-os/review-commit-action action to 81db18c
+              hash: f8438cfe5656c7c50498dc697252553e4acafec7
+              body: |
+                Update product-os/review-commit-action
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.27.7
+          title: ""
+          date: 2024-11-04T18:29:00.633Z
+        - commits:
+            - subject: Use official aws cli binaries and commands
+              hash: 654d96e4746f42065d24d5fe47f0fd3fb54741e1
+              body: |
+                The modern awscli command is optimized for these
+                tasks and better maintained.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.27.6
+          title: ""
+          date: 2024-11-04T17:10:05.029Z
+        - commits:
+            - subject: Update Lock file maintenance
+              hash: 682f9788db9491cbbb583524c1795b9c537c0239
+              body: |
+                Update 
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.27.5
+          title: ""
+          date: 2024-11-04T01:27:08.934Z
+        - commits:
+            - subject: Update actions/checkout action to v4.2.2
+              hash: d89823d9ca73820021f78f917c383edd4a274407
+              body: |
+                Update actions/checkout from 4.2.1 to 4.2.2
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.27.4
+          title: ""
+          date: 2024-11-01T14:36:07.101Z
+        - commits:
+            - subject: Add pull request write permissions for workflow approvals
+              hash: 5e07998255f053630c5cce03057a64ac6ee27802
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.27.3
+          title: ""
+          date: 2024-10-29T15:54:58.766Z
+        - commits:
+            - subject: Update Lock file maintenance
+              hash: 411a89ea7bc3bbd83d112a93f627a7debe5fdc0f
+              body: |
+                Update 
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.27.2
+          title: ""
+          date: 2024-10-23T16:53:51.185Z
+        - commits:
+            - subject: remove CLI check if not deploying
+              hash: 074575784eb9ab6ae67c8b07cb3ce6c4366d85be
+              body: >
+                nitpicky fix, we don't use the CLI when not deploying - so no
+                need to check its version
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: rcooke-warwick
+              nested: []
+          version: balena-yocto-scripts-1.27.1
+          title: ""
+          date: 2024-10-23T14:14:50.171Z
+        - commits:
+            - subject: add review-commit-action to wait for approvals on PRT events
+              hash: 8b1271ac548f0d2a8365181561d791a72145ccb8
+              body: |
+                The existing method of using labels allows for
+                Actions Time Of Check to Time Of Use (TOCTOU) attacks
+                because we do not associate the label with any commit.
+
+                This action requires approvals via reactions on a unique
+                comment generated for each workflow run.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: Ryan Cooke
+              nested: []
+          version: balena-yocto-scripts-1.27.0
+          title: ""
+          date: 2024-10-23T09:46:23.415Z
+  version: 6.1.0+rev2
+  title: ""
+  date: 2024-11-06T10:37:21.605Z
+- commits:
     - subject: Update balena-os/balena-yocto-scripts to v1.27.8
       hash: 91899fc1ec8936973e50b0c3580d67f028647d2c
       body: Update balena-os/balena-yocto-scripts
