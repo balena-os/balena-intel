@@ -1,4 +1,40 @@
 - commits:
+    - subject: Update layers/meta-balena to 63320a6e5e6ff2b2d45cff81ea2e1b11a15ee3e3
+      hash: 7ff2a9677f00f5610024882419308cf69963942a
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 63320a6e5e6ff2b2d45cff81ea2e1b11a15ee3e3
+        changelog-entry: Update layers/meta-balena to 63320a6e5e6ff2b2d45cff81ea2e1b11a15ee3e3
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "README: format the supported Yocto versions for legibility"
+              hash: 848985f1c041fa2e3c3b66baeaa5b97b5d7ed6c7
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: Extend README to add balena bootloader
+              hash: f4f10eb6d6291ae568a61800cc89ef0423ff9c17
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-6.1.1
+          title: ""
+          date: 2024-11-07T15:40:15.964Z
+  version: 6.1.1
+  title: ""
+  date: 2024-11-08T08:14:21.487Z
+- commits:
     - subject: Update balena-yocto-scripts to d8d6b50ec334769cfc000ef8b619cfb35a5a65d5
       hash: 79c9a4f63eeb2d37fe2dbda7f79369dd69b8d2b8
       body: Update balena-yocto-scripts

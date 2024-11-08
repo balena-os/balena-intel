@@ -1,6 +1,22 @@
 Change log
 -----------
 
+# v6.1.1
+## (2024-11-08)
+
+
+<details>
+<summary> Update layers/meta-balena to 63320a6e5e6ff2b2d45cff81ea2e1b11a15ee3e3 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.1.1
+> ### (2024-11-07)
+> 
+> * README: format the supported Yocto versions for legibility [Alex Gonzalez]
+> * Extend README to add balena bootloader [Alex Gonzalez]
+> 
+
+</details>
+
 # v6.1.0+rev2
 ## (2024-11-06)
 
