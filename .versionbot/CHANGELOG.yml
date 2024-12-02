@@ -1,4 +1,32 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 3eebec1f898038f5bbee0fcccb62b7178db2ef47
+      hash: f5b273e999a1f3f0497a84552a8207182a3fd84f
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 3eebec1f898038f5bbee0fcccb62b7178db2ef47
+        changelog-entry: Update balena-yocto-scripts to 3eebec1f898038f5bbee0fcccb62b7178db2ef47
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Set additional github token permissions
+              hash: 41cd691fdad8edfcb6664cd1a2cc8966da7e3475
+              body: >
+                THis is to allow the workflow to function under an org with
+                restricitve github token permissions
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: Ryan Cooke
+              nested: []
+          version: balena-yocto-scripts-1.27.16
+          title: ""
+          date: 2024-11-29T19:18:27.347Z
+  version: 6.1.16+rev3
+  title: ""
+  date: 2024-12-02T17:51:54.544Z
+- commits:
     - subject: Explicitly set GITHUB_TOKEN permissions for yocto workflow
       hash: 7438c8875b96fc8a001a69b2806ef5d806f9fbb3
       body: ""
