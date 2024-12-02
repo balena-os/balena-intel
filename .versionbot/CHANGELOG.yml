@@ -1,4 +1,73 @@
 - commits:
+    - subject: Update layers/meta-balena to b6d27b0d06a7be0f47e42173627bdb8102938a52
+      hash: e1adb822a09baf8944623d8523c5373b8cce61e7
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to b6d27b0d06a7be0f47e42173627bdb8102938a52
+        changelog-entry: Update layers/meta-balena to b6d27b0d06a7be0f47e42173627bdb8102938a52
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "resin-init-flasher: adapt EFI snippets to non-LUKS devices support"
+              hash: 014cfbc22b26cb642a9ebd59612208866d22497f
+              body: >
+                Adapt the EFI include file to the non-LUKS device support
+                changes
+
+                introduced in cfa24c60b25699cadd2ca2e6c00232b515c1c6dc.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "balena-config-vars: adapt to flasher non-LUKS device support"
+              hash: 426fd4aa88f25e6b231d017ca26659e07cd06f13
+              body: >
+                Adapt to the changes to the flasher script to support non-LUKS
+                devices
+
+                introduced in cfa24c60b25699cadd2ca2e6c00232b515c1c6dc.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "resin-init-flasher: add default LUKS configuration"
+              hash: 29df43ae23c12afd821f1e3d4ce3017bd201ca1a
+              body: >
+                The LUKS configuration now lives in the flasher configuration
+                file.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "hostapp-update-hooks: replace the identification of encrypted
+                partitions"
+              hash: 910a88eaf84e571bc53ea50ca167d9e703a063d8
+              body: |
+                Adapt the grub update hook to the changes introduced in
+                https://github.com/balena-os/meta-balena/commit/d50e221988b3eda595bd86f93fd08965d6a09293
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-6.1.17
+          title: ""
+          date: 2024-12-02T09:47:19.858Z
+  version: 6.1.17
+  title: ""
+  date: 2024-12-02T21:08:58.546Z
+- commits:
     - subject: Update balena-yocto-scripts to 3eebec1f898038f5bbee0fcccb62b7178db2ef47
       hash: f5b273e999a1f3f0497a84552a8207182a3fd84f
       body: Update balena-yocto-scripts

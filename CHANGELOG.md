@@ -1,6 +1,24 @@
 Change log
 -----------
 
+# v6.1.17
+## (2024-12-02)
+
+
+<details>
+<summary> Update layers/meta-balena to b6d27b0d06a7be0f47e42173627bdb8102938a52 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.1.17
+> ### (2024-12-02)
+> 
+> * resin-init-flasher: adapt EFI snippets to non-LUKS devices support [Alex Gonzalez]
+> * balena-config-vars: adapt to flasher non-LUKS device support [Alex Gonzalez]
+> * resin-init-flasher: add default LUKS configuration [Alex Gonzalez]
+> * hostapp-update-hooks: replace the identification of encrypted partitions [Alex Gonzalez]
+> 
+
+</details>
+
 # v6.1.16+rev3
 ## (2024-12-02)
 
