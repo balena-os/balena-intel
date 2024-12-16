@@ -1,4 +1,29 @@
 - commits:
+    - subject: Update contracts to 9ce0ad766c4f9b46cd78462813ff01600a61cde5
+      hash: 320cf922b82c55ce05309266d7eba5bc594328d6
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to 9ce0ad766c4f9b46cd78462813ff01600a61cde5
+        changelog-entry: Update contracts to 9ce0ad766c4f9b46cd78462813ff01600a61cde5
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "contracts/hw.device-type: Update instructions for Orin flasher types"
+              hash: 79b1757276a189f0b898903f5d85658e0b5c478a
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+          version: contracts-2.0.119
+          title: ""
+          date: 2024-12-16T04:57:49.690Z
+  version: 6.1.19+rev4
+  title: ""
+  date: 2024-12-16T09:39:04.723Z
+- commits:
     - subject: Update balena-yocto-scripts to cece7bfab266136d81db610c3b22dae221ee7682
       hash: 2851a7966c4fbbda02fb7a4424bb8351019f9ab8
       body: Update balena-yocto-scripts
