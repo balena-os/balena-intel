@@ -1,6 +1,76 @@
 Change log
 -----------
 
+# v6.2.0+rev1
+## (2024-12-17)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 1c15d4194787879aeec7a84c22bf3dd2712f239a [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.29.7
+> ### (2024-12-17)
+> 
+> * Unset AWS credentials to avoid overriding MinIO credentials [Kyle Harding]
+> 
+> ## balena-yocto-scripts-1.29.6
+> ### (2024-12-17)
+> 
+> * Update balena-os/leviathan action to v2.31.71 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.29.5
+> ### (2024-12-16)
+> 
+> * Remove hostapp creation step [Ryan Cooke]
+> 
+> ## balena-yocto-scripts-1.29.4
+> ### (2024-12-14)
+> 
+> * Compress artifacts with gzip and zstd before encrypting [Kyle Harding]
+> 
+> ## balena-yocto-scripts-1.29.3
+> ### (2024-12-13)
+> 
+> * Update Pin dependencies [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.29.2
+> ### (2024-12-13)
+> 
+> * Update balena-os/leviathan action to v2.31.70 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.29.1
+> ### (2024-12-13)
+> 
+> * re-enable AMI deploys [Ryan Cooke]
+> 
+> ## balena-yocto-scripts-1.29.0
+> ### (2024-12-13)
+> 
+> * Use S3 sstate cache on self-hosted runners [Kyle Harding]
+> * Sync shared downloads to S3 to use as a sources mirror [Kyle Harding]
+> * Sync the shared sstate to github actions cache [Kyle Harding]
+> * Use legacy yocto NFS cache as a source mirror [Kyle Harding]
+> * Enable mirror tarballs bitbake feature [Kyle Harding]
+> 
+> ## balena-yocto-scripts-1.28.1
+> ### (2024-12-10)
+> 
+> * Update balena-os/leviathan action to v2.31.69 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.28.0
+> ### (2024-12-09)
+> 
+> * Update the App Id and Private Key for ephemeral app tokens [Kyle Harding]
+> 
+> ## balena-yocto-scripts-1.27.20
+> ### (2024-12-09)
+> 
+> * barys: add support for scarthgap [Joseph Kogut]
+> * barys: make honister+ syntax default [Joseph Kogut]
+> 
+
+</details>
+
 # v6.2.0
 ## (2024-12-16)
 
