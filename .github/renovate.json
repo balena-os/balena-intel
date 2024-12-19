@@ -1,5 +1,16 @@
 {
 	"extends": [
 		"github>balena-os/renovate-config"
+	],
+	"packageRules": [
+		{
+			"matchManagers": ["git-submodules"],
+			"matchPackageNames": ["balena-yocto-scripts"],
+			"postUpgradeTasks": {
+				"commands": ["yq '.jobs.*.uses |= sub(\"yocto-build-deploy.yml@[^[:space:]]+$\", \"yocto-build-deploy.yml@{{{newDigest}}}\")' -i .github/workflows/*.yml"],
+				"fileFilters": [".github/workflows/*.yml"],
+				"executionMode": "update"
+			}
+		}
 	]
 }
