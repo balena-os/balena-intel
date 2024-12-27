@@ -1,4 +1,55 @@
 - commits:
+    - subject: Update contracts to 8bd56512c375e2f39b532fdb3882a7b5243f7ece
+      hash: 9905c423ad6cae6e5c23de3f2ab0b16266954497
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to 8bd56512c375e2f39b532fdb3882a7b5243f7ece
+        changelog-entry: Update contracts to 8bd56512c375e2f39b532fdb3882a7b5243f7ece
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "hw.device-type: add Forecr DSB ORNX entries"
+              hash: aaacf7dde8997f5291da82aab537ca902a24267e
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Suykov <alex.suykov@sirinsoftware.com>
+                signed-off-by: Alex Suykov <alex.suykov@sirinsoftware.com>
+              author: Alex Suykov
+          version: contracts-2.0.122
+          title: ""
+          date: 2024-12-23T10:57:21.261Z
+        - commits:
+            - subject: "hw.device-type: Fix compatibility with existing sdk structure"
+              hash: e234b48207f0a7e82e56fb636d2791ba2a364a68
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+          version: contracts-2.0.121
+          title: ""
+          date: 2024-12-18T20:31:37.211Z
+        - commits:
+            - subject: add eg5120-imx8mp contract
+              hash: 272015edab63d911b6a716b43d3ef52f3c577153
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: Ryan Cooke
+          version: contracts-2.0.120
+          title: ""
+          date: 2024-12-18T12:47:37.969Z
+  version: 6.2.4+rev1
+  title: ""
+  date: 2024-12-27T23:08:02.628Z
+- commits:
     - subject: Update layers/meta-balena to 88eebcdae6187f606db9c9c3bd6c9542ba4a9bec
       hash: 2d080d08587078609b6fdbdb303a64d5b5dddbbe
       body: Update layers/meta-balena
