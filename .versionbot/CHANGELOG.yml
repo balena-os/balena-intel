@@ -1,4 +1,202 @@
 - commits:
+    - subject: Update layers/meta-balena to 88eebcdae6187f606db9c9c3bd6c9542ba4a9bec
+      hash: 2d080d08587078609b6fdbdb303a64d5b5dddbbe
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 88eebcdae6187f606db9c9c3bd6c9542ba4a9bec
+        changelog-entry: Update layers/meta-balena to 88eebcdae6187f606db9c9c3bd6c9542ba4a9bec
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update balena-supervisor to v16.10.3
+              hash: 5ee7bf1d8a23220f81b1c4de67e85f4d7cc94328
+              body: |
+                Update balena-supervisor from 16.10.1 to 16.10.3
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested:
+                - commits:
+                    - subject: Update systeminformation to v5.23.8 [SECURITY]
+                      hash: 92b26c7ae2d8d329be18806abe24ab312e92db68
+                      body: |
+                        Update systeminformation from 5.22.7 to 5.23.8
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: balena-supervisor-16.10.3
+                  title: ""
+                  date: 2024-12-20T20:43:23.372Z
+                - commits:
+                    - subject: Wait for service dependencies to be running
+                      hash: 8e6c0fcad729b56e386ac27754c48c97517e293a
+                      body: |
+                        This fixes a regression where dependencies would only be started in
+                        order and would start the dependent service if its dependency had been
+                        started at some point in the past, regardless of the running condition.
+
+                        This makes the behavior more consistent with docker compose where the
+                        [dependency needs to be
+                        running or healthy](https://github.com/docker/compose/blob/69a83d1303a103d82b05d512baf273244b4dbd94/pkg/compose/convergence.go#L441) for the service to be started.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Felipe Lalanne
+                      nested: []
+                  version: balena-supervisor-16.10.2
+                  title: ""
+                  date: 2024-12-18T18:48:52.008Z
+          version: meta-balena-6.2.4
+          title: ""
+          date: 2024-12-26T13:14:08.203Z
+        - commits:
+            - subject: Update tests/leviathan digest to 2a609bc
+              hash: 73c4edaf6615d148bf382ff7589fa9d6874fa753
+              body: Update tests/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested:
+                - commits:
+                    - subject: "lib/components/os: Add SRD3 JP4 and JP5 device type boot partition
+                        indexes"
+                      hash: db7fdad6e920295cf3200ca3309fde65dd5c039f
+                      body: >
+                        The JP5 device-type uses the same boot partition index
+                        as the
+
+                        jetson-xavier on JP5.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                        signed-off-by: Alexandru Costache <alexandru@balena.io>
+                      author: Alexandru Costache
+                      nested: []
+                  version: leviathan-2.31.76
+                  title: ""
+                  date: 2024-12-19T14:11:20.112Z
+                - commits:
+                    - subject: Update balena-io/balena-cli to v20.1.2
+                      hash: 15e18d79118af19c0362decc13b9c9b692d49ca9
+                      body: |
+                        Update balena-io/balena-cli from 20.1.0 to 20.1.2
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.31.75
+                  title: ""
+                  date: 2024-12-19T02:57:30.738Z
+                - commits:
+                    - subject: Update docker/setup-buildx-action digest to 6524bf6
+                      hash: 4157efa263e7c545933c7c8ca6d3ecac5cc189f5
+                      body: |
+                        Update docker/setup-buildx-action
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.31.74
+                  title: ""
+                  date: 2024-12-19T02:01:02.721Z
+                - commits:
+                    - subject: Update core/contracts digest to 9383b36
+                      hash: 3229a8f75ad3c6610ba72d6a0edb446d6b875cf1
+                      body: |
+                        Update core/contracts
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.31.73
+                  title: ""
+                  date: 2024-12-18T22:34:03.777Z
+                - commits:
+                    - subject: Update actions/upload-artifact digest to 6f51ac0
+                      hash: 695be0565fd7d6e1be7cea5ed83ff6febe02a1ae
+                      body: |
+                        Update actions/upload-artifact
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.31.72
+                  title: ""
+                  date: 2024-12-18T00:11:58.435Z
+                - commits:
+                    - subject: Enable selection of workers with locked DUT in secureboot tests
+                      hash: 92972900c54a2f0ea9a1b7e41f83adc6c32cafe0
+                      body: >
+                        This will make the client look for workers with a "DUT:
+                        <deviceType>-sb" tag if FLASHER_SECUREBOOT=1 when
+                        starting tests. This is to enable differentiation
+                        between locked and unlocked DUTs for device types that
+                        support secureboot.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Ryan Cooke <ryan@balena.io>
+                        signed-off-by: Ryan Cooke <ryan@balena.io>
+                      author: Ryan Cooke
+                      nested: []
+                  version: leviathan-2.31.71
+                  title: ""
+                  date: 2024-12-17T11:11:15.435Z
+          version: meta-balena-6.2.3
+          title: ""
+          date: 2024-12-21T13:31:50.987Z
+        - commits:
+            - subject: "hostapp-update-hooks: fix path for grub_extraenv in blacklist"
+              hash: a3d5424af810b62a672f325ef666c366776b0502
+              body: >
+                The `grub_extraenv` file is actually either installed under
+                `/grub` for
+
+                MBR systems or `/EFI/BOOT` for EFI ones.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-6.2.2
+          title: ""
+          date: 2024-12-20T12:03:20.889Z
+        - commits:
+            - subject: "classes: kernel-balena: configure reset on oops"
+              hash: dc2c8fc20d27d269d0132981ab03e62c882a9e8b
+              body: >
+                This is specially useful to prevent devices freezing at boot on
+                errors,
+
+                for example when the initramfs fail() is called allowing the
+                device to
+
+                reboot and rollback.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-6.2.1
+          title: ""
+          date: 2024-12-19T11:55:56.499Z
+  version: 6.2.4
+  title: ""
+  date: 2024-12-27T17:04:56.118Z
+- commits:
     - subject: Update layers/meta-openembedded to
         7b3fdcdfaab2fc964bbf9eec2cce4e03001fa8cf
       hash: 1da5bca96fad18bd5bfee2720591740789a43a2b
