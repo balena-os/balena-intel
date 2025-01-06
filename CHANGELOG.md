@@ -1,6 +1,36 @@
 Change log
 -----------
 
+# v6.2.4+rev3
+## (2025-01-06)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 3b8a226f678fed1555d43120036715094fb7732a [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.30.6
+> ### (2025-01-06)
+> 
+> * Update balena-os/leviathan action to v2.31.78 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.30.5
+> ### (2025-01-06)
+> 
+> * Update Lock file maintenance [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.30.4
+> ### (Invalid date)
+> 
+> * Update actions/create-github-app-token action to v1.11.1 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.30.3
+> ### (Invalid date)
+> 
+> * Update balena-os/leviathan action to v2.31.77 [balena-renovate[bot]]
+> 
+
+</details>
+
 # v6.2.4+rev2
 ## (2024-12-28)
 
