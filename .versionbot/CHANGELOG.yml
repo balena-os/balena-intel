@@ -1,4 +1,38 @@
 - commits:
+    - subject: Update contracts to b042ab7fbdd2b774e8b462f442c1c37fa6da1377
+      hash: 4b1cbc4589946f60275f6b78a51c40a0772e2ac2
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to b042ab7fbdd2b774e8b462f442c1c37fa6da1377
+        changelog-entry: Update contracts to b042ab7fbdd2b774e8b462f442c1c37fa6da1377
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Mark alpine 3.21 as the default alpine version
+              hash: 0b465e81526a82aa749e5360ee16c973771d6d75
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Thodoris Greasidis
+          version: contracts-2.0.127
+          title: ""
+          date: 2025-01-28T17:12:51.562Z
+        - commits:
+            - subject: Add alpine 3.21
+              hash: 53eda7f97f29b7321862c3f057710ba0010aa463
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Felipe Lalanne
+          version: contracts-2.0.126
+          title: ""
+          date: 2025-01-28T16:35:59.267Z
+  version: 6.3.12+rev1
+  title: ""
+  date: 2025-01-31T13:18:17.540Z
+- commits:
     - subject: Update layers/meta-balena to a62daefb9f01eb0c494ec27b1efe051b40f1f54b
       hash: 64247c4fefbab048a6f06fb488a174fbe4f5e0c7
       body: Update layers/meta-balena
