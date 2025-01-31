@@ -1,4 +1,288 @@
 - commits:
+    - subject: Update layers/meta-balena to a62daefb9f01eb0c494ec27b1efe051b40f1f54b
+      hash: 64247c4fefbab048a6f06fb488a174fbe4f5e0c7
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to a62daefb9f01eb0c494ec27b1efe051b40f1f54b
+        changelog-entry: Update layers/meta-balena to a62daefb9f01eb0c494ec27b1efe051b40f1f54b
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "kernel-balena.bbclass: silence regex escape warnings"
+              hash: 2b737fdc534da23c6f22efc83e1e64e109a8fb29
+              body: |
+                This patch converts the regex strings to raw strings to silence
+                `DeprecationWarning: invalid escape sequence \d`
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+            - subject: "kernel-balena.bbclass: Add aufs patches for 6.6 kernels"
+              hash: 54faaa0714db55ebe486a101eb2ad62e75679ffd
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-6.3.12
+          title: ""
+          date: 2025-01-30T11:44:21.994Z
+        - commits:
+            - subject: Update balena-supervisor to v16.12.0
+              hash: 41c4f1ded4dd881dc97eabaa531a2ccfb212e528
+              body: |
+                Update balena-supervisor from 16.10.3 to 16.12.0
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested:
+                - commits:
+                    - subject: Update contrato to v0.12.0
+                      hash: 85fc5784bcd187d086bffbd0c2167ce9eb34650f
+                      body: ""
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Felipe Lalanne
+                      nested: []
+                    - subject: Update alpine base image to 3.21
+                      hash: 55f22dbc0f4792033b6253af89c6adde6a727ab0
+                      body: >
+                        This allows to update Node to v22 on production
+                        supervisor images
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Felipe Lalanne
+                      nested: []
+                    - subject: Update Node support to v22
+                      hash: ea594b18abb6b82f498071e50f71422dedb5b280
+                      body: |
+                        Updates @types/node and expands module support to v22.
+                        Support for v20 will be removed on a future version.
+                      footer:
+                        Change-type: minor
+                        change-type: minor
+                      author: Felipe Lalanne
+                      nested: []
+                  version: balena-supervisor-16.12.0
+                  title: ""
+                  date: 2025-01-20T22:14:35.646Z
+                - commits:
+                    - subject: Add support for `io.balena.update.requires-reboot`
+                      hash: e416ad0daf61fba14cd8c2012c5b2f66d8fb5f4a
+                      body: >
+                        This label can be used by user services to indicate that
+                        a reboot is
+
+                        required after the install of a service in order to
+                        fully apply an update.
+                      footer:
+                        Change-type: minor
+                        change-type: minor
+                      author: Felipe Lalanne
+                      nested: []
+                    - subject: Move reboot breadcrumb check to device-state
+                      hash: 75127c6074531fd20199ed07d6860687b4105cfb
+                      body: >
+                        This was on device-config before, but we'll need to set
+                        the reboot
+
+                        breadcrumb from the application-manager as well when we
+                        introduce
+
+                        `requires-reboot` as a label.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Felipe Lalanne
+                      nested: []
+                    - subject: Refactor device-config as part of device-state
+                      hash: 51f1fb0f30e04ece6a00d2d8b9420b49703a2fde
+                      body: >
+                        Move the device-config module to the device-state folder
+                        and export only
+
+                        those functions that are needed elsewhere in the
+                        codebase
+
+
+                        This moves us closer to making the device-state module
+                        the only way to
+
+                        modify application and configuration.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Felipe Lalanne
+                      nested: []
+                  version: balena-supervisor-16.11.0
+                  title: ""
+                  date: 2025-01-14T18:15:55.879Z
+          version: meta-balena-6.3.11
+          title: ""
+          date: 2025-01-27T20:20:58.111Z
+        - commits:
+            - subject: Update tests/leviathan digest to 25370da
+              hash: 0d1300383c19f479b47fd6ce8d14ec03cb9b1ab4
+              body: Update tests/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested:
+                - commits:
+                    - subject: Update actions/upload-artifact digest to 65c4c4a
+                      hash: 41ecb3c5112bc5b2b6d8e63dabb05fbf558c9df1
+                      body: |
+                        Update actions/upload-artifact
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.31.87
+                  title: ""
+                  date: 2025-01-26T14:28:56.808Z
+                - commits:
+                    - subject: Fix extractVersion renovate template
+                      hash: fc005a800f77b29dae553ef38d45ef705a011dbf
+                      body: ""
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Kyle Harding
+                      nested: []
+                  version: leviathan-2.31.86
+                  title: ""
+                  date: 2025-01-26T12:57:09.462Z
+                - commits:
+                    - subject: Update core/contracts digest to cde8b88
+                      hash: 4aad7b4af4fed4fc54ceb874330c0e8b2a86b70e
+                      body: |
+                        Update core/contracts
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.31.85
+                  title: ""
+                  date: 2025-01-24T18:32:12.098Z
+                - commits:
+                    - subject: "lib/components: Add partition index for Jetson TX2 NX types"
+                      hash: 3db19db2746a55855b6601f37f791f5d7e6e5487
+                      body: ""
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                        signed-off-by: Alexandru Costache <alexandru@balena.io>
+                      author: Alexandru Costache
+                      nested: []
+                  version: leviathan-2.31.84
+                  title: ""
+                  date: 2025-01-23T08:13:42.965Z
+          version: meta-balena-6.3.10
+          title: ""
+          date: 2025-01-27T16:33:22.765Z
+        - commits:
+            - subject: "workflows: iot-gate-imx8plus: add custom template path"
+              hash: 0aa5664c4edba93084e81c184119b1fc7a31fbc8
+              body: |
+                A custom template path has originally been added in
+                https://github.com/balena-os/meta-balena/pull/3599
+                for the iot-gate-imx8. The iot-gate-imx8plus needs
+                one as well because it's now using the meta-balena-hab
+                submodule.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+          version: meta-balena-6.3.9
+          title: ""
+          date: 2025-01-27T09:32:28.028Z
+        - commits:
+            - subject: "resin-init-flasher: add openssl dependency"
+              hash: 49b2d8635d5c4837f651f16f97fae18bda50a3c1
+              body: >
+                This is required for openssl to be available on the initramfs so
+                that
+
+                migration can use it.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "initrdscript: copy image signature to memory if required"
+              hash: 6963166ed83138d15f39a7efd54beb2a6088febe
+              body: >
+                For migration to work on signed images, the signature needs to
+                be
+
+                available in memory.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-6.3.8
+          title: ""
+          date: 2025-01-22T16:04:48.428Z
+        - commits:
+            - subject: Update tests/leviathan digest to 03a7057
+              hash: c7785c82e087b501b9cea7ee66f696af043c0755
+              body: Update tests/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested:
+                - commits:
+                    - subject: Update balena-io/balena-cli to v20.2.1
+                      hash: 247459b21aa26c329a474677c47d504b5b62fb2a
+                      body: |
+                        Update balena-io/balena-cli from 20.1.6 to 20.2.1
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.31.83
+                  title: ""
+                  date: 2025-01-09T14:36:41.373Z
+                - commits:
+                    - subject: "patch: Add retention & compression to Leviathan action artifacts"
+                      hash: 00573208b857067c1471dcaaac6d77e7bcc4754e
+                      body: ""
+                      footer: {}
+                      author: Vipul Gupta
+                      nested: []
+                  version: leviathan-2.31.82
+                  title: ""
+                  date: 2025-01-09T14:06:23.177Z
+          version: meta-balena-6.3.7
+          title: ""
+          date: 2025-01-20T22:06:50.879Z
+  version: 6.3.12
+  title: ""
+  date: 2025-01-31T10:04:14.868Z
+- commits:
     - subject: Update balena-yocto-scripts to 0789537c32942ad53f61c59388d71b87a831387d
       hash: c05a183cec50adde7d9c4bf30a970b9b3e05656f
       body: Update balena-yocto-scripts
