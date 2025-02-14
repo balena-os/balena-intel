@@ -1,6 +1,57 @@
 Change log
 -----------
 
+# v6.3.19
+## (2025-02-14)
+
+
+<details>
+<summary> Update layers/meta-balena to da5f840db1f2dee4e4c5893f31ddf29c0bb9237f [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.3.19
+> ### (2025-02-13)
+> 
+> * wpa-supplicant: Update to recipe from Kirkstone [Florin Sarbu]
+> 
+> ## meta-balena-6.3.18
+> ### (2025-02-07)
+> 
+> * Update actions/setup-python digest to 4237552 [balena-renovate[bot]]
+> 
+> ## meta-balena-6.3.17
+> ### (2025-02-07)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to ae96a7e [balena-renovate[bot]] </summary>
+> 
+>> ### leviathan-2.31.89
+>> #### (2025-02-06)
+>> 
+>> * Update balena-os/leviathan-worker to v2.9.57 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.31.88
+>> #### (2025-02-06)
+>> 
+>> * Fix running tests over local worker IP [Ryan Cooke]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-6.3.16
+> ### (2025-02-06)
+> 
+> * tests: os: swap: increase wiggle room in swap check [Ryan Cooke]
+> 
+> ## meta-balena-6.3.15
+> ### (2025-02-06)
+> 
+> * tests: cloud: env vars: restart supervisor to speed up tests [Ryan Cooke]
+> 
+
+</details>
+
 # v6.3.14+rev1
 ## (2025-02-06)
 
