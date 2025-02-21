@@ -1,4 +1,59 @@
 - commits:
+    - subject: Update layers/meta-balena to b87445d1ae125b108e2d8e0fa766382a42ba7730
+      hash: b5754bf51165dd67ea687a97701ec41564a0f65d
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to b87445d1ae125b108e2d8e0fa766382a42ba7730
+        changelog-entry: Update layers/meta-balena to b87445d1ae125b108e2d8e0fa766382a42ba7730
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "kernel-balena.bbclass: Add aufs patches for 6.12 kernels"
+              hash: 21469a4d0fb4ddf15d17ec1cff3687329abea018
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-6.3.21
+          title: ""
+          date: 2025-02-21T20:03:08.166Z
+        - commits:
+            - subject: "resin-mounts: only run non-encrypted mount if partition exists"
+              hash: 8af007811087416a98826d138d6e654941d9716c
+              body: >
+                When signed images are used without opting in secure boot, we
+                don't want
+
+                the encrypted mount service to run and fail as there is no
+                encrypted
+
+                boot partition.
+
+
+                This commit adds a condition to the encrypted boot mount service
+                to only
+
+                run if the encrypted boot partition exists, similarly to what is
+
+                already done for EFI builds.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-6.3.20
+          title: ""
+          date: 2025-02-18T17:33:52.196Z
+  version: 6.3.21
+  title: ""
+  date: 2025-02-21T22:28:07.213Z
+- commits:
     - subject: Update layers/poky to 6840d3b71ed6adfcd2c2e46daf8a93d3755c5d99
       hash: 057cdd94fbb38def40be485e926a7bfe13bcd4b2
       body: Update layers/poky
