@@ -1,6 +1,56 @@
 Change log
 -----------
 
+# v6.3.21+rev1
+## (2025-02-22)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 1e3c94d6ea91d7c580acbeb9331403803ba60266 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.30.32
+> ### (2025-02-21)
+> 
+> * Update actions/upload-artifact action to v4.6.1 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.30.31
+> ### (2025-02-21)
+> 
+> * barys: build unique machine-image combinations [Alex Gonzalez]
+> 
+> ## balena-yocto-scripts-1.30.30
+> ### (2025-02-17)
+> 
+> * Update Lock file maintenance [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.30.29
+> ### (2025-02-15)
+> 
+> * Update actions/create-github-app-token action to v1.11.5 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.30.28
+> ### (2025-02-11)
+> 
+> * Update aws-actions/configure-aws-credentials action to v4.1.0 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.30.27
+> ### (2025-02-06)
+> 
+> * Update balena-os/leviathan action to v2.31.89 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.30.26
+> ### (2025-02-06)
+> 
+> * Update actions/create-github-app-token action to v1.11.3 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.30.25
+> ### (2025-02-06)
+> 
+> * generate-oscontracts: remove sw.os-image selector [Ryan Cooke]
+> 
+
+</details>
+
 # v6.3.21
 ## (2025-02-21)
 
