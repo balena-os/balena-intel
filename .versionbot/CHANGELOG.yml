@@ -1,4 +1,69 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 554a174f504e2e6aa0c51b59b9279efe8e16d8f0
+      hash: 738aa1d7ad6a9cf88ec858215b0223b9ffe03dfe
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 554a174f504e2e6aa0c51b59b9279efe8e16d8f0
+        changelog-entry: Update balena-yocto-scripts to 554a174f504e2e6aa0c51b59b9279efe8e16d8f0
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update product-os/review-commit-action action to v0.1.12
+              hash: 42105754eb5dfd53b4535d76f70122a796ff26f6
+              body: |
+                Update product-os/review-commit-action from 0.1.11 to 0.1.12
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.30.36
+          title: ""
+          date: 2025-02-26T03:12:54.670Z
+        - commits:
+            - subject: Update balena-os/leviathan action to v2.31.90
+              hash: 795fff76a07637937692262d557d252b4d9072dd
+              body: |
+                Update balena-os/leviathan from 2.31.89 to 2.31.90
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.30.35
+          title: ""
+          date: 2025-02-26T02:24:03.285Z
+        - commits:
+            - subject: Update product-os/review-commit-action action to v0.1.11
+              hash: 9a175c1e8d4e95ab7a17a8dbe495da529d956ee3
+              body: |
+                Update product-os/review-commit-action from 0.1.7 to 0.1.11
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.30.34
+          title: ""
+          date: 2025-02-25T22:51:33.890Z
+        - commits:
+            - subject: Remove legacy yocto NFS cache host setup
+              hash: 3554f19eecca29a7c7af2d73693b1238a787bfb9
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.30.33
+          title: ""
+          date: 2025-02-24T16:35:19.346Z
+  version: 6.3.21+rev4
+  title: ""
+  date: 2025-02-26T07:22:40.471Z
+- commits:
     - subject: Update layers/poky to b5aa03f336c121269551f9e7baed4c677c76bb39
       hash: 8208f070bdaaf8621417c3108386b248b634ab3f
       body: Update layers/poky
