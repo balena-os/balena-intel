@@ -1,4 +1,126 @@
 - commits:
+    - subject: Update balena-yocto-scripts to a3833c2e74cea22461c45feb790e7893858da70b
+      hash: 2eb9368c0321752237862480e48bd623b66bc25b
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to a3833c2e74cea22461c45feb790e7893858da70b
+        changelog-entry: Update balena-yocto-scripts to a3833c2e74cea22461c45feb790e7893858da70b
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Rename build environment to signing environment
+              hash: 3e545cbea7641d1f7cf9e7e12265be09a4cb5a50
+              body: |
+                This better aligns with the purpose.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: Do not allow changing the S3 deploy environment
+              hash: a4aea6f919ff6e82d173defd0f31dbdd3b915f84
+              body: |
+                The AWS environment is always tied to the balenaCloud deploy
+                environment so exposing this to the device workflows is only
+                potential for issues, and no benefit.
+
+                For the time being, the deploy environment will contain
+                both the AWS and BC vars and secrets.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.31.3
+          title: ""
+          date: 2025-02-28T19:02:20.368Z
+        - commits:
+            - subject: Unset the new environment inputs until they have been deployed
+              hash: 5ee032a311e915b27420eb261d06f6d6555b9c8d
+              body: |
+                By setting defaults here we are overriding values that may
+                have been set at the device level via deploy-environment.
+
+                For now leave them blank until we have rolled out the new
+                environments to all the repositories.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.31.2
+          title: ""
+          date: 2025-02-27T20:42:14.925Z
+        - commits:
+            - subject: Update Pin dependencies
+              hash: 9ad66c325cd50213bd128ed684684b8ad13f335d
+              body: |
+                Update actions/github-script
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.31.1
+          title: ""
+          date: 2025-02-27T18:02:39.719Z
+        - commits:
+            - subject: Remove balena API key from yocto build step
+              hash: 4beb0be8adddcf2dcac6e04f38a25b7e72ab7b05
+              body: >
+                This key was only used to fetch the supervisor image name from
+                the API,
+
+                but that endpoint does not need auth as the supervisor images
+                are public.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: Separate build jobs by environments
+              hash: c91dc23ff49f1c7f07206709b5a4cda77fa7c26c
+              body: >
+                This allows more granular control over which environments are
+                used
+
+                for which steps, and avoids requiring a single environment to
+                define
+
+                how to build, sign, and publish.
+
+
+                This is better for security as it allows each job to only have
+
+                the secrets it needs, and not all secrets for all steps.
+
+
+                We retain backwards compatibility by falling back to the
+                original
+
+                monolith environment input for now.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.31.0
+          title: ""
+          date: 2025-02-27T14:28:24.783Z
+  version: 6.3.23+rev2
+  title: ""
+  date: 2025-02-28T22:08:50.201Z
+- commits:
     - subject: Update layers/poky to 975fa4831521d56a7e782b6cd0140d14a0f41b99
       hash: 0e68d42d725531c94d6113dc3b0fc378a9f13909
       body: Update layers/poky

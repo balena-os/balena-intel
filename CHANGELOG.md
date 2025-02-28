@@ -1,6 +1,38 @@
 Change log
 -----------
 
+# v6.3.23+rev2
+## (2025-02-28)
+
+
+<details>
+<summary> Update balena-yocto-scripts to a3833c2e74cea22461c45feb790e7893858da70b [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.31.3
+> ### (2025-02-28)
+> 
+> * Rename build environment to signing environment [Kyle Harding]
+> * Do not allow changing the S3 deploy environment [Kyle Harding]
+> 
+> ## balena-yocto-scripts-1.31.2
+> ### (2025-02-27)
+> 
+> * Unset the new environment inputs until they have been deployed [Kyle Harding]
+> 
+> ## balena-yocto-scripts-1.31.1
+> ### (2025-02-27)
+> 
+> * Update Pin dependencies [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.31.0
+> ### (2025-02-27)
+> 
+> * Remove balena API key from yocto build step [Kyle Harding]
+> * Separate build jobs by environments [Kyle Harding]
+> 
+
+</details>
+
 # v6.3.23+rev1
 ## (2025-02-26)
 
