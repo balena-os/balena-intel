@@ -1,6 +1,46 @@
 Change log
 -----------
 
+# v6.3.23+rev3
+## (2025-03-03)
+
+
+<details>
+<summary> Update balena-yocto-scripts to db58d6f22e5dcc3808ed86b256cda1fb3f27c0c9 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.31.9
+> ### (2025-03-03)
+> 
+> * Update aws/aws-cli to v2.24.15 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.31.8
+> ### (2025-03-03)
+> 
+> * Update balena-io/balena-cli to v20.2.9 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.31.7
+> ### (2025-03-03)
+> 
+> * Update actions/create-github-app-token action to v1.11.6 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.31.6
+> ### (2025-03-03)
+> 
+> * Update aws/aws-cli to v2.22.35 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.31.5
+> ### (2025-03-02)
+> 
+> * Update actions/download-artifact digest to cc20338 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.31.4
+> ### (2025-03-02)
+> 
+> * Unpack all artifacts for S3 upload [Kyle Harding]
+> 
+
+</details>
+
 # v6.3.23+rev2
 ## (2025-02-28)
 
