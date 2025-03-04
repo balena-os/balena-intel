@@ -1,4 +1,70 @@
 - commits:
+    - subject: Update balena-yocto-scripts to a0963e8a0a86ba15eff836aa717e3bb6bb897109
+      hash: a556b88433f9ce8c0d0aae847ef289578a678a44
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to a0963e8a0a86ba15eff836aa717e3bb6bb897109
+        changelog-entry: Update balena-yocto-scripts to a0963e8a0a86ba15eff836aa717e3bb6bb897109
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Add signing environment to All Jobs context
+              hash: 592bf3a1261009519b101577c64258306e932f34
+              body: |
+                This is one of the unique identifiers for merge requirements.
+              footer:
+                CHange-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.31.13
+          title: ""
+          date: 2025-03-04T12:49:02.985Z
+        - commits:
+            - subject: Update aws/aws-cli to v2.24.16
+              hash: c3a58167929e76227947323638f92190a26f5c53
+              body: |
+                Update aws/aws-cli from 2.24.15 to 2.24.16
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.31.12
+          title: ""
+          date: 2025-03-03T23:01:36.452Z
+        - commits:
+            - subject: Update product-os/review-commit-action action to v0.2.0
+              hash: 946ce45bf57dde1c3d390e566f34732d42f349c2
+              body: |
+                Update product-os/review-commit-action from 0.1.12 to 0.2.0
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.31.11
+          title: ""
+          date: 2025-03-03T17:15:01.189Z
+        - commits:
+            - subject: Update aws-actions/configure-aws-credentials action to v4.1.0
+              hash: 8d02327368ce46acefed4700d14997911733cfae
+              body: |
+                Update aws-actions/configure-aws-credentials from 4.0.2 to 4.1.0
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.31.10
+          title: ""
+          date: 2025-03-03T13:56:03.329Z
+  version: 6.4.1+rev1
+  title: ""
+  date: 2025-03-04T16:22:43.710Z
+- commits:
     - subject: Update layers/meta-balena to c5c44af22a753a6678504d2f1d3c3f23d1405a45
       hash: 0b1d785d593e855f6db634118df4b1af776565bf
       body: Update layers/meta-balena
