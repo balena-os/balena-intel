@@ -1,4 +1,29 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 84d10b12adfa1a37fb845e429cce1c82248d1ca2
+      hash: 1fad5f027d7d0f593bd3ef6206b5289fbf6f7ff6
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 84d10b12adfa1a37fb845e429cce1c82248d1ca2
+        changelog-entry: Update balena-yocto-scripts to 84d10b12adfa1a37fb845e429cce1c82248d1ca2
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update balena-io/balena-cli to v20.2.10
+              hash: 2e0b946a39db0d6f88b8ad03eb44582a51a79e76
+              body: |
+                Update balena-io/balena-cli from 20.2.9 to 20.2.10
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.31.21
+          title: ""
+          date: 2025-03-10T19:31:55.527Z
+  version: 6.4.2+rev8
+  title: ""
+  date: 2025-03-10T21:57:36.908Z
+- commits:
     - subject: Update layers/poky to d103d2df505abd76f75e75114905062503a6bcc8
       hash: e5dae16d896e2f7e8dff5710eca768abe423dc93
       body: Update layers/poky
