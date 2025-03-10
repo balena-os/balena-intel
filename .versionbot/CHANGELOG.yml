@@ -1,4 +1,29 @@
 - commits:
+    - subject: Update balena-yocto-scripts to bf40474f48fdf8631160849a9a636e0d172401ca
+      hash: 6357aa27ff1edece44a617d7a6a1e33e697431d6
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to bf40474f48fdf8631160849a9a636e0d172401ca
+        changelog-entry: Update balena-yocto-scripts to bf40474f48fdf8631160849a9a636e0d172401ca
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update Lock file maintenance
+              hash: 54a3a99f0b4caa31e407da6aff704e53f10b42d6
+              body: |
+                Update 
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.31.20
+          title: ""
+          date: 2025-03-10T01:45:33.930Z
+  version: 6.4.2+rev6
+  title: ""
+  date: 2025-03-10T04:29:35.144Z
+- commits:
     - subject: Update layers/meta-openembedded to
         7e18b3fc774b7efabf9a20ae3cd6abd0e0715b59
       hash: b4e08de109b29d599608f684903521eec99986af
