@@ -1,6 +1,28 @@
 Change log
 -----------
 
+# v6.5.8
+## (2025-04-02)
+
+
+<details>
+<summary> Update layers/meta-balena to 6044474909712be4847b62e03bee411337d7d967 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.5.8
+> ### (2025-04-02)
+> 
+> * resin-init-flasher: Do not check exitcode of reboot, halt or poweroff [Michal Toman]
+> * Replace the usage of /dev/fd/1 by /proc/self/fd/1 [Michal Toman]
+> * balena-init-flasher-efi: look for kernel in both / and /tmp [Michal Toman]
+> 
+> ## meta-balena-6.5.7
+> ### (2025-04-01)
+> 
+> * kernel-balena.bbclass: enable multipath TCP [Joseph Kogut]
+> 
+
+</details>
+
 # v6.5.6+rev1
 ## (2025-04-02)
 
