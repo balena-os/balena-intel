@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.5.9
+## (2025-04-03)
+
+
+<details>
+<summary> Update layers/meta-balena to 538b193865ffd18d7a2becce76cccc962945813d [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.5.9
+> ### (2025-04-03)
+> 
+> * balena-unique-key: Fix dependency on /home/root/.rnd mount point [Florin Sarbu]
+> 
+
+</details>
+
 # v6.5.8
 ## (2025-04-02)
 

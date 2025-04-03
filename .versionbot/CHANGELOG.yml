@@ -1,4 +1,35 @@
 - commits:
+    - subject: Update layers/meta-balena to 538b193865ffd18d7a2becce76cccc962945813d
+      hash: 819da560c8af332d204597359161252affcc24e8
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 538b193865ffd18d7a2becce76cccc962945813d
+        changelog-entry: Update layers/meta-balena to 538b193865ffd18d7a2becce76cccc962945813d
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "balena-unique-key: Fix dependency on /home/root/.rnd mount point"
+              hash: fa7215bbef396dfe75f7ebd9ab6b1b5d568fe47a
+              body: >
+                We have changed the mount units to service units a while back
+                but forgot to update a
+
+                depending service to use the new service unit instead of the
+                older mount point unit.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-6.5.9
+          title: ""
+          date: 2025-04-03T03:23:17.919Z
+  version: 6.5.9
+  title: ""
+  date: 2025-04-03T09:28:21.118Z
+- commits:
     - subject: Update layers/meta-balena to 6044474909712be4847b62e03bee411337d7d967
       hash: 25b58cc7972952576384562be193f8151f98c896
       body: Update layers/meta-balena
