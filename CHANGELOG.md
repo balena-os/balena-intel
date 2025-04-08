@@ -1,6 +1,31 @@
 Change log
 -----------
 
+# v6.5.9+rev5
+## (2025-04-08)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 9c6efc52769cec4b0454a50ae928cbcba14785eb [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.31.67
+> ### (2025-04-07)
+> 
+> * Update balena-io/balena-cli to v21.1.9 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.31.66
+> ### (2025-04-07)
+> 
+> * workflows: yocto-build-deploy: provide header files to test suite [Alex Gonzalez]
+> 
+> ## balena-yocto-scripts-1.31.65
+> ### (2025-04-07)
+> 
+> * Update balena-os/leviathan action to v2.31.101 [balena-renovate[bot]]
+> 
+
+</details>
+
 # v6.5.9+rev4
 ## (2025-04-05)
 
