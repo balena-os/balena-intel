@@ -1,4 +1,113 @@
 - commits:
+    - subject: Update layers/meta-balena to 908a989d9cd5e71f03e6590d37b94a5b299f9397
+      hash: 523bb41529cb503098528ff6aca02ad9f37a73e4
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 908a989d9cd5e71f03e6590d37b94a5b299f9397
+        changelog-entry: Update layers/meta-balena to 908a989d9cd5e71f03e6590d37b94a5b299f9397
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "os-helpers: tpm_nvram_store_passphrase: remove tpm2_shutdown"
+              hash: 3526cac33a536465ec60a26214213ddf580c099e
+              body: |
+                This should only be called during machine shutdown
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Joseph Kogut <joseph@balena.io>
+                signed-off-by: Joseph Kogut <joseph@balena.io>
+              author: Joseph Kogut
+              nested: []
+          version: meta-balena-6.5.16
+          title: ""
+          date: 2025-04-09T16:17:22.672Z
+        - commits:
+            - subject: "initrdscripts: mount securityfs in migrate script"
+              hash: 37c70ed240e67ff367ae5af44f287a5089a5fde7
+              body: >
+                At this moment securityfs is not mounted in the initramfs,
+
+                so when flasher is running from the migrate script, it won't
+                find
+
+                the TPM event log. This is fine for most systems, but on systems
+
+                that have extra TPM events logged and measured, the expected
+                PCR7
+
+                value will be computed incorrectly.
+
+
+                This patch mounts securityfs before running flasher from the
+                migrate
+
+                script.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-6.5.15
+          title: ""
+          date: 2025-04-09T12:39:41.112Z
+        - commits:
+            - subject: "tests: whitelist extra PCR2 events by default"
+              hash: 0c8fe3a4e9d00a2b766677b1e43b30c586202126
+              body: >
+                By introducing the option to whitelist or ignore extra events in
+                PCR2,
+
+                we have changed the default behavior of the system. Instead of
+                copying
+
+                the contents of PCR2 during provisioning, we now expect no
+                drivers
+
+                to be loaded, unless there was an explicit opt-in through
+                config.json.
+
+                This is the behavior that we've seen on physical hardware,
+                however
+
+                qemu behaves differently - it loads the PXE driver for the
+                network card
+
+                unconditionally, even if secure boot is enabled and the driver
+
+                has not been whitelisted.
+
+
+                This patch makes all the testsuites opt-in for the PCR2
+                whitelist,
+
+                which is just a workaround to restore the previous behavior and
+                unblock
+
+                the automated testsuite.
+
+
+                A proper fix should either be in leviathan, or in QEMU, or
+                implementing
+
+                a proper test for the PCR2 feature, that checks all the possible
+                states.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-6.5.14
+          title: ""
+          date: 2025-04-09T09:23:44.803Z
+  version: 6.5.16
+  title: ""
+  date: 2025-04-09T20:02:20.690Z
+- commits:
     - subject: Update layers/meta-balena to 5dceb047406569a50bf74276362bbe167f576b7e
       hash: d43ee56e19f984d62da1cef1e1eed5e12873942a
       body: Update layers/meta-balena
