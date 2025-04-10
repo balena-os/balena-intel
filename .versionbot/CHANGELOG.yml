@@ -1,4 +1,42 @@
 - commits:
+    - subject: Update layers/meta-balena to c2846896f832365bb2205d75d509fe69e034385f
+      hash: 6b92d54fae8ac5dcbe328c7a94a75aa0539f8154
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to c2846896f832365bb2205d75d509fe69e034385f
+        changelog-entry: Update layers/meta-balena to c2846896f832365bb2205d75d509fe69e034385f
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "tests: os: secureboot: update kernel-module-build to v3.0.2"
+              hash: 230a38b7b558fe4c9104f86fc605d5d1982759b9
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "tests: secureboot: adapt kernel modules test to private device types"
+              hash: ffb5bd295200dbd081a30789cf0c6a7b5d7d1650
+              body: >
+                If a kernel headers file is provided, use it for the kernel
+                module test.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-6.5.17
+          title: ""
+          date: 2025-04-09T21:47:13.513Z
+  version: 6.5.17
+  title: ""
+  date: 2025-04-10T04:36:23.629Z
+- commits:
     - subject: Update balena-yocto-scripts to ef0d51425a3098a010f8922b340afc9e5e4c3c41
       hash: 68e527cdcb51d4df98b069866b005bfce97af31d
       body: Update balena-yocto-scripts
