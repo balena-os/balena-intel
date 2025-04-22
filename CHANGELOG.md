@@ -1,6 +1,47 @@
 Change log
 -----------
 
+# v6.5.22
+## (2025-04-22)
+
+
+<details>
+<summary> Update layers/meta-balena to ff1b4cc06eb027b8f5d51384b32cbcb01bcab6d8 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.5.22
+> ### (2025-04-21)
+> 
+> * Use workflow_call for balena-generic device type tests [Kyle Harding]
+> 
+> ## meta-balena-6.5.21
+> ### (2025-04-19)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 5ecdcd3 [balena-renovate[bot]] </summary>
+> 
+>> ### leviathan-2.31.104
+>> #### (2025-04-16)
+>> 
+>> * Update balena-os/leviathan-worker to v2.9.59 [balena-renovate[bot]]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-6.5.20
+> ### (2025-04-19)
+> 
+> * kernel-balena: add aufs commit for v6.6.84 [Alex Gonzalez]
+> 
+> ## meta-balena-6.5.19
+> ### (2025-04-17)
+> 
+> * os-helpers-tpm2: Always use password protection for TPM NVRAM writes [Michal Toman]
+> 
+
+</details>
+
 # v6.5.18
 ## (2025-04-17)
 
