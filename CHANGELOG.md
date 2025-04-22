@@ -1,6 +1,31 @@
 Change log
 -----------
 
+# v6.5.23+rev1
+## (2025-04-22)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 4b8835af9cd78184a0460b45b586037a661251b8 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.31.79
+> ### (2025-04-21)
+> 
+> * Update aws/aws-cli to v2.26.6 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.31.78
+> ### (2025-04-18)
+> 
+> * Update aws/aws-cli to v2.26.5 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.31.77
+> ### (2025-04-15)
+> 
+> * Leviathan: Add aarch64 testbot fleet to worker pool [Ryan Cooke]
+> 
+
+</details>
+
 # v6.5.23
 ## (2025-04-22)
 
