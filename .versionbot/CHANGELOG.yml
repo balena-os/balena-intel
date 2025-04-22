@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update layers/meta-balena to 688d07fe8d3304534022c2e28578b097d3b49379
+      hash: 70353d9f738ad88601b5862b5a693394c24f5c15
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 688d07fe8d3304534022c2e28578b097d3b49379
+        changelog-entry: Update layers/meta-balena to 688d07fe8d3304534022c2e28578b097d3b49379
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update actions/setup-python digest to 8d9ed9a
+              hash: 50dd1e53238b004511d2854291c81afa6bd9604e
+              body: >
+                Update actions/setup-python to
+                8d9ed9ac5c53483de85588cdf95a591a75ab9f55
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: meta-balena-6.5.23
+          title: ""
+          date: 2025-04-22T10:52:53.386Z
+  version: 6.5.23
+  title: ""
+  date: 2025-04-22T16:49:13.341Z
+- commits:
     - subject: Update layers/poky to 6eba29d9462a5833fbd49064ea32502c8da6405c
       hash: ade8a8d58a906c1841a21faa5f591ba3bf8dcfd1
       body: Update layers/poky

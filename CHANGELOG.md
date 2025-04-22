@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.5.23
+## (2025-04-22)
+
+
+<details>
+<summary> Update layers/meta-balena to 688d07fe8d3304534022c2e28578b097d3b49379 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.5.23
+> ### (2025-04-22)
+> 
+> * Update actions/setup-python digest to 8d9ed9a [balena-renovate[bot]]
+> 
+
+</details>
+
 # v6.5.22+rev1
 ## (2025-04-22)
 
