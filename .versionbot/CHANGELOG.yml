@@ -1,4 +1,55 @@
 - commits:
+    - subject: Update balena-yocto-scripts to f82136ae1c5d5550ee18f105a5d8552433fe1932
+      hash: 9233e6af34a7ba23e8f808ac38c644196b21f046
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to f82136ae1c5d5550ee18f105a5d8552433fe1932
+        changelog-entry: Update balena-yocto-scripts to f82136ae1c5d5550ee18f105a5d8552433fe1932
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update aws/aws-cli to v2.27.6
+              hash: 719c38020d6fe952be29d01d41115170aa52de49
+              body: |
+                Update aws/aws-cli from 2.27.4 to 2.27.6
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.31.87
+          title: ""
+          date: 2025-05-01T20:59:27.508Z
+        - commits:
+            - subject: Update actions/create-github-app-token action to v2.0.3
+              hash: 272433b18fb94f7d4637672c11b8fc10d3c66de5
+              body: |
+                Update actions/create-github-app-token from 2.0.2 to 2.0.3
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.31.86
+          title: ""
+          date: 2025-05-01T17:16:05.552Z
+        - commits:
+            - subject: Update actions/download-artifact digest to d3f86a1
+              hash: b3741d2c4ce0983c456b384fbb95683f40aa59b9
+              body: |
+                Update actions/download-artifact
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.31.85
+          title: ""
+          date: 2025-04-30T03:31:36.722Z
+  version: 6.5.24+rev5
+  title: ""
+  date: 2025-05-02T03:52:27.229Z
+- commits:
     - subject: Update layers/meta-openembedded to
         e42549cef364ae09b3b7c8b64bbeab32e50f1bb0
       hash: eaad545b986472de1b7f63e7ea74d83941e65d3c

@@ -1,6 +1,31 @@
 Change log
 -----------
 
+# v6.5.24+rev5
+## (2025-05-02)
+
+
+<details>
+<summary> Update balena-yocto-scripts to f82136ae1c5d5550ee18f105a5d8552433fe1932 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.31.87
+> ### (2025-05-01)
+> 
+> * Update aws/aws-cli to v2.27.6 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.31.86
+> ### (2025-05-01)
+> 
+> * Update actions/create-github-app-token action to v2.0.3 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.31.85
+> ### (Invalid date)
+> 
+> * Update actions/download-artifact digest to d3f86a1 [balena-renovate[bot]]
+> 
+
+</details>
+
 # v6.5.24+rev4
 ## (2025-05-01)
 
