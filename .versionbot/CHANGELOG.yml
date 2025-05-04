@@ -1,4 +1,41 @@
 - commits:
+    - subject: Update layers/meta-balena to 1846975cb70489cdf3fcaff507355b0eb45fd77a
+      hash: df7ef4541422793158d4c5ebe4ae4729fa3db935
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 1846975cb70489cdf3fcaff507355b0eb45fd77a
+        changelog-entry: Update layers/meta-balena to 1846975cb70489cdf3fcaff507355b0eb45fd77a
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update tests/leviathan digest to 769d8e6
+              hash: 3fc4f63b17c401143523698731924a07599a8818
+              body: Update tests/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested:
+                - commits:
+                    - subject: Update core/contracts digest to a1e8b75
+                      hash: 4b8505c58f5cd30541d334077ee2b96f3cfe233c
+                      body: |
+                        Update core/contracts
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.31.105
+                  title: ""
+                  date: 2025-04-30T22:32:41.266Z
+          version: meta-balena-6.5.25
+          title: ""
+          date: 2025-05-04T12:47:31.788Z
+  version: 6.5.25
+  title: ""
+  date: 2025-05-04T17:12:18.075Z
+- commits:
     - subject: Update layers/poky to e9e862752d122945318685ff9eaf6a3090f0f961
       hash: ec2dbdb9ef8b7c43b560688466ee2272046153cf
       body: Update layers/poky

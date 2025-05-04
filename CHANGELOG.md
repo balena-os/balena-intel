@@ -1,6 +1,32 @@
 Change log
 -----------
 
+# v6.5.25
+## (2025-05-04)
+
+
+<details>
+<summary> Update layers/meta-balena to 1846975cb70489cdf3fcaff507355b0eb45fd77a [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.5.25
+> ### (2025-05-04)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 769d8e6 [balena-renovate[bot]] </summary>
+> 
+>> ### leviathan-2.31.105
+>> #### (Invalid date)
+>> 
+>> * Update core/contracts digest to a1e8b75 [balena-renovate[bot]]
+>> 
+> 
+> </details>
+> 
+> 
+
+</details>
+
 # v6.5.24+rev6
 ## (2025-05-03)
 
