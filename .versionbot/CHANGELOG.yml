@@ -1,4 +1,55 @@
 - commits:
+    - subject: Update layers/meta-balena to 02e240a0bbd1d7d95c33c0f421b90923ac74fbdc
+      hash: 0be38a8bb11ec860b7235284bba1214be034f2c2
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 02e240a0bbd1d7d95c33c0f421b90923ac74fbdc
+        changelog-entry: Update layers/meta-balena to 02e240a0bbd1d7d95c33c0f421b90923ac74fbdc
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update tests/leviathan digest to 81e581a
+              hash: 8d082e3e727f18c7b58098debdb522dfaf3831fd
+              body: Update tests/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested:
+                - commits:
+                    - subject: Update balena-io/balena-cli to v21.1.10
+                      hash: cd9d6e00b478dde5dc69ac2fbfa1b127a588bb3b
+                      body: |
+                        Update balena-io/balena-cli from 21.1.9 to 21.1.10
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.31.106
+                  title: ""
+                  date: 2025-05-05T18:57:38.638Z
+          version: meta-balena-6.5.27
+          title: ""
+          date: 2025-05-06T15:08:40.140Z
+        - commits:
+            - subject: "tests/os: Add regdb load failure test"
+              hash: 545214b5e3a19bda78254bf1f9e01de34f3c8df1
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+          version: meta-balena-6.5.26
+          title: ""
+          date: 2025-05-05T18:46:13.539Z
+  version: 6.5.27
+  title: ""
+  date: 2025-05-07T10:14:01.690Z
+- commits:
     - subject: Update balena-yocto-scripts to f2d6f1272fad38ea5258d773446352483caaaeea
       hash: 6669f02f6efebbc9371a1f6be10a97e2046e6cf6
       body: Update balena-yocto-scripts

@@ -1,6 +1,37 @@
 Change log
 -----------
 
+# v6.5.27
+## (2025-05-07)
+
+
+<details>
+<summary> Update layers/meta-balena to 02e240a0bbd1d7d95c33c0f421b90923ac74fbdc [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.5.27
+> ### (2025-05-06)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 81e581a [balena-renovate[bot]] </summary>
+> 
+>> ### leviathan-2.31.106
+>> #### (2025-05-05)
+>> 
+>> * Update balena-io/balena-cli to v21.1.10 [balena-renovate[bot]]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-6.5.26
+> ### (2025-05-05)
+> 
+> * tests/os: Add regdb load failure test [Alexandru Costache]
+> 
+
+</details>
+
 # v6.5.25+rev2
 ## (2025-05-07)
 
