@@ -1,6 +1,28 @@
 Change log
 -----------
 
+# v6.5.29+rev1
+## (2025-05-09)
+
+
+<details>
+<summary> Update contracts to f084a7ccb2b17cfc846cc3fd348e659686e9a92e [balena-renovate[bot]] </summary>
+
+> ## contracts-2.0.134
+> ### (2025-05-07)
+> 
+> * Remove Ubuntu Lunar 23.04 leftovers from dotnet & python contracts [Thodoris Greasidis]
+> 
+> ## contracts-2.0.133
+> ### (2025-05-07)
+> 
+> * Remove Ubuntu Xenial from supported distros [Kyle Harding]
+> * Remove Ubuntu Bionic from supported distros [Kyle Harding]
+> * Remove Ubuntu Focal from supported distros [Kyle Harding]
+> 
+
+</details>
+
 # v6.5.29
 ## (2025-05-09)
 
