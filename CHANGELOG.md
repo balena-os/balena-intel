@@ -1,6 +1,26 @@
 Change log
 -----------
 
+# v6.5.30+rev2
+## (2025-05-14)
+
+
+<details>
+<summary> Update contracts to 417aec2b1a551295d855acd551cd810d2b69420e [balena-renovate[bot]] </summary>
+
+> ## contracts-2.0.136
+> ### (2025-05-14)
+> 
+> * patch: Add deprecation notice for balenalib base images [Vipul Gupta (@vipulgupta2048)]
+> 
+> ## contracts-2.0.135
+> ### (2025-05-14)
+> 
+> * patch: Add deprecation notice to balenalib readme [Vipul Gupta (@vipulgupta2048)]
+> 
+
+</details>
+
 # v6.5.30+rev1
 ## (2025-05-14)
 
