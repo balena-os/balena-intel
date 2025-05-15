@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update balena-yocto-scripts to b4573d4f11bd961495fc7ca41db74604dcc21755
+      hash: dc09752ac3ca596533bd1f3cbfdbaf124d346676
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to b4573d4f11bd961495fc7ca41db74604dcc21755
+        changelog-entry: Update balena-yocto-scripts to b4573d4f11bd961495fc7ca41db74604dcc21755
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "AMI deploy: parameterise test org + use TEST api key"
+              hash: 10710ecebdc57c3d0bab3abbff6379005f7c0fdd
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: Ryan Cooke
+              nested: []
+          version: balena-yocto-scripts-1.32.6
+          title: ""
+          date: 2025-05-14T18:12:17.036Z
+  version: 6.5.30+rev3
+  title: ""
+  date: 2025-05-15T00:13:12.280Z
+- commits:
     - subject: Update contracts to 417aec2b1a551295d855acd551cd810d2b69420e
       hash: 030ccb8c6f1b837ef691aa9a2037cc8a18fa24da
       body: Update contracts

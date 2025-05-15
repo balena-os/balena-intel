@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.5.30+rev3
+## (2025-05-15)
+
+
+<details>
+<summary> Update balena-yocto-scripts to b4573d4f11bd961495fc7ca41db74604dcc21755 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.32.6
+> ### (2025-05-14)
+> 
+> * AMI deploy: parameterise test org + use TEST api key [Ryan Cooke]
+> 
+
+</details>
+
 # v6.5.30+rev2
 ## (2025-05-14)
 
