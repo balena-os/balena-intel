@@ -1,4 +1,70 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 842df4103631564574dcb25c92b99587cb8d0c34
+      hash: ec00039e61dea8496063c7445034a50dd2f06a1a
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 842df4103631564574dcb25c92b99587cb8d0c34
+        changelog-entry: Update balena-yocto-scripts to 842df4103631564574dcb25c92b99587cb8d0c34
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update aws/aws-cli to v2.27.17
+              hash: ef2595778ae877867203766ef7fe9d2e5a5f7663
+              body: |
+                Update aws/aws-cli from 2.27.16 to 2.27.17
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.32.12
+          title: ""
+          date: 2025-05-17T01:40:57.195Z
+        - commits:
+            - subject: Update balena-io/balena-cli to v21.1.12
+              hash: 1ed133b904609c2be462e1c4c59125c066c0f36e
+              body: |
+                Update balena-io/balena-cli from 21.1.11 to 21.1.12
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.32.11
+          title: ""
+          date: 2025-05-16T21:41:27.996Z
+        - commits:
+            - subject: Remove the old grep for build errors
+              hash: d3fdb6474c7efb10c8b92dedd1584dac428e0ca8
+              body: >
+                This grep has started to catch file strings in the cooker logs,
+                even on success, so instead just rely on the success message in
+                the second grep of balena build logs.
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.32.10
+          title: ""
+          date: 2025-05-16T18:13:50.676Z
+        - commits:
+            - subject: Update aws/aws-cli to v2.27.16
+              hash: 7d7bd44f22ae9e8b185171c438d5a798e4d9bd65
+              body: |
+                Update aws/aws-cli from 2.27.15 to 2.27.16
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.32.9
+          title: ""
+          date: 2025-05-16T09:26:02.165Z
+  version: 6.5.30+rev6
+  title: ""
+  date: 2025-05-17T04:48:19.116Z
+- commits:
     - subject: Update layers/poky to 8c0982c306cbaf9acbf93d9987f9df0dda7c536c
       hash: aae0631cc330ff666d87ccc5871cfe742d80b89c
       body: Update layers/poky
