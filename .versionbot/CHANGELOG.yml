@@ -1,4 +1,32 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 787f27f3c1650c9285603442d485a0358ead3de1
+      hash: f8c110ee446818bc04fd1b76180cd90337f24b1d
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 787f27f3c1650c9285603442d485a0358ead3de1
+        changelog-entry: Update balena-yocto-scripts to 787f27f3c1650c9285603442d485a0358ead3de1
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "grant actions: read permissions to jobs needing to download build
+                artifacts"
+              hash: 0af02513df61ab15bc73596b8432c1a65326f3f3
+              body: |
+                This is required to download build artifacts in private repos
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: Ryan Cooke
+              nested: []
+          version: balena-yocto-scripts-1.32.14
+          title: ""
+          date: 2025-05-19T12:18:11.912Z
+  version: 6.5.32+rev1
+  title: ""
+  date: 2025-05-19T17:02:45.281Z
+- commits:
     - subject: Update layers/meta-balena to ea86709a93ff8615c3b28cfccedba7546ae6ba3a
       hash: 0628b50d629c5aa793afb22f9567bfa57dc13abd
       body: Update layers/meta-balena

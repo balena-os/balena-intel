@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.5.32+rev1
+## (2025-05-19)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 787f27f3c1650c9285603442d485a0358ead3de1 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.32.14
+> ### (2025-05-19)
+> 
+> * grant actions: read permissions to jobs needing to download build artifacts [Ryan Cooke]
+> 
+
+</details>
+
 # v6.5.32
 ## (2025-05-17)
 
