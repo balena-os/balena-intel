@@ -1,6 +1,32 @@
 Change log
 -----------
 
+# v6.5.33
+## (2025-05-22)
+
+
+<details>
+<summary> Update layers/meta-balena to 06fa4a8d1f01dae6bb5cae23dbde98ac1d00d756 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.5.33
+> ### (2025-05-21)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v17.0.3 [balena-renovate[bot]] </summary>
+> 
+>> ### balena-supervisor-17.0.3
+>> #### (2025-05-13)
+>> 
+>> * Simplify contract validation module [Felipe Lalanne]
+>> 
+> 
+> </details>
+> 
+> 
+
+</details>
+
 # v6.5.32+rev3
 ## (2025-05-22)
 

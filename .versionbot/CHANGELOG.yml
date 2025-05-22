@@ -1,4 +1,45 @@
 - commits:
+    - subject: Update layers/meta-balena to 06fa4a8d1f01dae6bb5cae23dbde98ac1d00d756
+      hash: aa714a7bf1ec8d17d2d758ea92dec99ee8da8804
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 06fa4a8d1f01dae6bb5cae23dbde98ac1d00d756
+        changelog-entry: Update layers/meta-balena to 06fa4a8d1f01dae6bb5cae23dbde98ac1d00d756
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update balena-supervisor to v17.0.3
+              hash: 85752e8323d83b7ed8fc705df7239157bf0640c6
+              body: |
+                Update balena-supervisor from 17.0.2 to 17.0.3
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested:
+                - commits:
+                    - subject: Simplify contract validation module
+                      hash: 7c83eaef8024cec9052eb0051a1a1f47e238c690
+                      body: >
+                        Use `satisfiesChildContract` instead of Blueprints as
+                        the previous
+
+                        implementation did.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Felipe Lalanne
+                      nested: []
+                  version: balena-supervisor-17.0.3
+                  title: ""
+                  date: 2025-05-13T14:50:13.303Z
+          version: meta-balena-6.5.33
+          title: ""
+          date: 2025-05-21T07:30:02.404Z
+  version: 6.5.33
+  title: ""
+  date: 2025-05-22T10:12:45.487Z
+- commits:
     - subject: Update balena-yocto-scripts to daf7b30838848a5072a4ee76abcc86887e0f775f
       hash: bb9d90267c13ed44d4288b621e6f9e28ec66e1df
       body: Update balena-yocto-scripts
