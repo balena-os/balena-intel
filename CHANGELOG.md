@@ -1,6 +1,36 @@
 Change log
 -----------
 
+# v6.5.32+rev3
+## (2025-05-22)
+
+
+<details>
+<summary> Update balena-yocto-scripts to daf7b30838848a5072a4ee76abcc86887e0f775f [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.32.19
+> ### (2025-05-22)
+> 
+> * Update aws/aws-cli to v2.27.20 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.32.18
+> ### (2025-05-21)
+> 
+> * Update balena-os/leviathan action to v2.31.109 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.32.17
+> ### (2025-05-21)
+> 
+> * Update balena-io/balena-cli to v21.1.13 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.32.16
+> ### (2025-05-20)
+> 
+> * Update tespkg/actions-cache action to v1.9.0 [balena-renovate[bot]]
+> 
+
+</details>
+
 # v6.5.32+rev2
 ## (2025-05-20)
 
