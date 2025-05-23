@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update layers/meta-balena to 8ac612e8067ccf04a437a4213e9d0d8704c094b9
+      hash: c5f47aab05675bb51fb8ad32b50e63b2d4d4b467
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 8ac612e8067ccf04a437a4213e9d0d8704c094b9
+        changelog-entry: Update layers/meta-balena to 8ac612e8067ccf04a437a4213e9d0d8704c094b9
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Increases persistent logs size to 128M
+              hash: ffe62ab787a0d50bf48fea0d9a9c28fb9f163221
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-6.5.34
+          title: ""
+          date: 2025-05-23T08:18:21.963Z
+  version: 6.5.34
+  title: ""
+  date: 2025-05-23T14:18:09.489Z
+- commits:
     - subject: Update layers/meta-balena to 06fa4a8d1f01dae6bb5cae23dbde98ac1d00d756
       hash: aa714a7bf1ec8d17d2d758ea92dec99ee8da8804
       body: Update layers/meta-balena

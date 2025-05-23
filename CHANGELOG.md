@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.5.34
+## (2025-05-23)
+
+
+<details>
+<summary> Update layers/meta-balena to 8ac612e8067ccf04a437a4213e9d0d8704c094b9 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.5.34
+> ### (2025-05-23)
+> 
+> * Increases persistent logs size to 128M [Alex Gonzalez]
+> 
+
+</details>
+
 # v6.5.33
 ## (2025-05-22)
 
