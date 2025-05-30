@@ -1,6 +1,61 @@
 Change log
 -----------
 
+# v6.5.34+rev3
+## (2025-05-30)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 36cce69da58f4e7703fe94c192b68d1a75ed3368 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.33.4
+> ### (Invalid date)
+> 
+> * Update balena-io-examples/setup-balena-action action to v0.0.17 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.33.3
+> ### (2025-05-29)
+> 
+> * Update balena-io-examples/setup-balena-action action to v0.0.16 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.33.2
+> ### (2025-05-28)
+> 
+> * Update aws/aws-cli to v2.27.24 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.33.1
+> ### (2025-05-28)
+> 
+> * Update balena-io/balena-cli to v22.0.1 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.33.0
+> ### (2025-05-28)
+> 
+> * Make hostapp-deploy depend on a successful s3-deploy [Kyle Harding]
+> 
+> ## balena-yocto-scripts-1.32.30
+> ### (2025-05-28)
+> 
+> * Update aws/aws-cli to v2.27.23 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.32.29
+> ### (2025-05-27)
+> 
+> * Update balena-io/balena-cli to v22 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.32.28
+> ### (2025-05-27)
+> 
+> * Update balena-os/leviathan action to v2.32.2 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.32.27
+> ### (2025-05-27)
+> 
+> * Update Lock file maintenance [balena-renovate[bot]]
+> 
+
+</details>
+
 # v6.5.34+rev2
 ## (2025-05-27)
 
