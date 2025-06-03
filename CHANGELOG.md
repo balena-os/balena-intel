@@ -1,6 +1,68 @@
 Change log
 -----------
 
+# v6.5.35
+## (2025-06-03)
+
+
+<details>
+<summary> Update layers/meta-balena to 9f01560e2872a20b1112377f467200247eb8c5e8 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.5.35
+> ### (2025-06-03)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 17aa86b [balena-renovate[bot]] </summary>
+> 
+>> ### leviathan-2.32.2
+>> #### (2025-05-27)
+>> 
+>> * Update balena-io/balena-cli to v22 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.32.1
+>> #### (2025-05-23)
+>> 
+>> * Update Lock file maintenance [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.32.0
+>> #### (2025-05-23)
+>> 
+>> * Remove custom compose binary installation from Make [Kyle Harding]
+>> 
+>> ### leviathan-2.31.111
+>> #### (2025-05-23)
+>> 
+>> * Update balena-io/balena-cli to v21.1.14 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.31.110
+>> #### (2025-05-23)
+>> 
+>> * Core: update to node 22 [Ryan Cooke]
+>> 
+>> ### leviathan-2.31.109
+>> #### (2025-05-21)
+>> 
+>> * Update balena-io/balena-cli to v21.1.13 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.31.108
+>> #### (2025-05-14)
+>> 
+>> * Update core/contracts digest to 417aec2 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.31.107
+>> #### (2025-05-06)
+>> 
+>> * Update balena-io/balena-cli to v21.1.11 [balena-renovate[bot]]
+>> 
+> 
+> </details>
+> 
+> * tests: update for node 22 [Ryan Cooke]
+> 
+
+</details>
+
 # v6.5.34+rev4
 ## (2025-05-30)
 
