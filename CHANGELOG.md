@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.5.36
+## (2025-06-05)
+
+
+<details>
+<summary> Update layers/meta-balena to 3c38e8730a7ab77734a4f1119783a9ce7d460a05 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.5.36
+> ### (2025-06-04)
+> 
+> * classes: Make sure we disable debug info for newer kernels [Florin Sarbu]
+> 
+
+</details>
+
 # v6.5.35+rev3
 ## (2025-06-05)
 
