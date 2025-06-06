@@ -1,6 +1,31 @@
 Change log
 -----------
 
+# v6.5.36+rev1
+## (2025-06-06)
+
+
+<details>
+<summary> Update balena-yocto-scripts to a6a270257ff9a0c7fd119de2848490a26419def0 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.33.16
+> ### (2025-06-05)
+> 
+> * Update aws/aws-cli to v2.27.30 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.33.15
+> ### (2025-06-05)
+> 
+> * Update balena-os/leviathan action to v2.32.6 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.33.14
+> ### (2025-06-04)
+> 
+> * Update aws/aws-cli to v2.27.29 [balena-renovate[bot]]
+> 
+
+</details>
+
 # v6.5.36
 ## (2025-06-05)
 
