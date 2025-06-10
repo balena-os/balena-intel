@@ -1,6 +1,22 @@
 Change log
 -----------
 
+# v6.5.37
+## (2025-06-10)
+
+
+<details>
+<summary> Update layers/meta-balena to 1503c909a6164f06e503990aaf08fff30f65b39e [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.5.37
+> ### (2025-06-09)
+> 
+> * Update tests/leviathan digest to 2c6c6ef [balena-renovate[bot]]
+> * tests: hup: enable specifying image type [Ryan Cooke]
+> 
+
+</details>
+
 # v6.5.36+rev2
 ## (2025-06-06)
 

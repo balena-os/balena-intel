@@ -1,4 +1,40 @@
 - commits:
+    - subject: Update layers/meta-balena to 1503c909a6164f06e503990aaf08fff30f65b39e
+      hash: f6c541e4137f65f317a675baeda462969e4de9cd
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 1503c909a6164f06e503990aaf08fff30f65b39e
+        changelog-entry: Update layers/meta-balena to 1503c909a6164f06e503990aaf08fff30f65b39e
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update tests/leviathan digest to 2c6c6ef
+              hash: 31b6a51e1a0e635377b3f5e6025a75ca054c49b6
+              body: Update tests/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+            - subject: "tests: hup: enable specifying image type"
+              hash: fe0c0c5c2542e3eb325f217c9b3439f2c2a473d0
+              body: >
+                Allows selecting image type (flasher vs raw) in the hup suite,
+                to hup from
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: Ryan Cooke
+              nested: []
+          version: meta-balena-6.5.37
+          title: ""
+          date: 2025-06-09T13:51:50.387Z
+  version: 6.5.37
+  title: ""
+  date: 2025-06-10T13:54:17.620Z
+- commits:
     - subject: Update layers/poky to 81e0dc80d72d66b7f15a34c0da7a0a8c58809056
       hash: e06b8cdca8693046d4e7dd230102bf62fb8a15ec
       body: Update layers/poky
