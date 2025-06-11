@@ -1,4 +1,113 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 0402d0439cfa0dcc10e24e6ad0497ba133cbe8f3
+      hash: a63a7bac2a23c651659f70159953acbb73166735
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 0402d0439cfa0dcc10e24e6ad0497ba133cbe8f3
+        changelog-entry: Update balena-yocto-scripts to 0402d0439cfa0dcc10e24e6ad0497ba133cbe8f3
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update balena-io-examples/setup-balena-action action to v0.0.19
+              hash: 5d2a34635bd8f46fa93dba0eb4ff867eb2590fcd
+              body: >
+                Update balena-io-examples/setup-balena-action from 0.0.18 to
+                0.0.19
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.33.23
+          title: ""
+          date: 2025-06-11T01:03:25.525Z
+        - commits:
+            - subject: Update aws/aws-cli to v2.27.33
+              hash: c841e536441912944161b9ff9d227caeed21c854
+              body: |
+                Update aws/aws-cli from 2.27.31 to 2.27.33
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.33.22
+          title: ""
+          date: 2025-06-10T21:23:36.122Z
+        - commits:
+            - subject: Update balena-io/balena-cli to v22.1.0
+              hash: 5118271a8ab737a8c951a4f4b1df120355672ac0
+              body: |
+                Update balena-io/balena-cli from 22.0.6 to 22.1.0
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.33.21
+          title: ""
+          date: 2025-06-10T01:03:16.625Z
+        - commits:
+            - subject: Remove deprecated poll-interval input from review-commit-action
+              hash: 185bf9342daf06809f83c10d0aa57928308b4490
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.33.20
+          title: ""
+          date: 2025-06-09T19:43:26.314Z
+        - commits:
+            - subject: Update balena-os/leviathan action to v2.32.8
+              hash: 950bd24c2801c575a21f460279434c8f8fd35881
+              body: |
+                Update balena-os/leviathan from 2.32.6 to 2.32.8
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.33.19
+          title: ""
+          date: 2025-06-09T14:23:54.773Z
+        - commits:
+            - subject: Update aws/aws-cli to v2.27.31
+              hash: bc57af45e3ad57db7c1f8a4f5e6715e7c04f552a
+              body: |
+                Update aws/aws-cli from 2.27.30 to 2.27.31
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.33.18
+          title: ""
+          date: 2025-06-06T21:03:06.224Z
+        - commits:
+            - subject: "Leviathan: Configure image type for hup suite"
+              hash: f7c0ba950665e14c56aab1d93da6c8cca9b70e3b
+              body: >
+                This is needed to pass the image type to the hup suite, so in
+                teh cases where the non-default image is used, the correct type
+                is downloaded from balena cloud
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: Ryan Cooke
+              nested: []
+          version: balena-yocto-scripts-1.33.17
+          title: ""
+          date: 2025-06-06T13:20:55.980Z
+  version: 6.5.37+rev1
+  title: ""
+  date: 2025-06-11T05:38:19.812Z
+- commits:
     - subject: Update layers/meta-balena to 1503c909a6164f06e503990aaf08fff30f65b39e
       hash: f6c541e4137f65f317a675baeda462969e4de9cd
       body: Update layers/meta-balena
