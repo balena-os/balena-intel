@@ -1,4 +1,38 @@
 - commits:
+    - subject: Update layers/meta-balena to 3fb88b23e141d1177729937f08562e2a086fdbc1
+      hash: 26287138394ff8599f1f6b23d65c2028a3b84b5a
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 3fb88b23e141d1177729937f08562e2a086fdbc1
+        changelog-entry: Update layers/meta-balena to 3fb88b23e141d1177729937f08562e2a086fdbc1
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "workflows: remove Jetson Xavier AGX"
+              hash: 2c15ce8d878115f45c77bc39ced83ab4bfda0d4d
+              body: >
+                This device type is no longer being built in the device
+                repository,
+
+                although it has not been officially discontinued yet it probably
+                should.
+
+
+                Removing it from meta-balena not to block development.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-6.5.39
+          title: ""
+          date: 2025-06-20T12:30:59.288Z
+  version: 6.5.39
+  title: ""
+  date: 2025-06-20T19:52:15.078Z
+- commits:
     - subject: Update balena-yocto-scripts to 6794e1b259860c5881c65856f2f51294711f5d79
       hash: c5cc294740a9a0b3e50c35335abe5823923e556c
       body: Update balena-yocto-scripts

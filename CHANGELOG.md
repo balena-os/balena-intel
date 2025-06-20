@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.5.39
+## (2025-06-20)
+
+
+<details>
+<summary> Update layers/meta-balena to 3fb88b23e141d1177729937f08562e2a086fdbc1 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.5.39
+> ### (2025-06-20)
+> 
+> * workflows: remove Jetson Xavier AGX [Alex Gonzalez]
+> 
+
+</details>
+
 # v6.5.38+rev2
 ## (2025-06-20)
 
