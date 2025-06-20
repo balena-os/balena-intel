@@ -1,4 +1,75 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 6794e1b259860c5881c65856f2f51294711f5d79
+      hash: c5cc294740a9a0b3e50c35335abe5823923e556c
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 6794e1b259860c5881c65856f2f51294711f5d79
+        changelog-entry: Update balena-yocto-scripts to 6794e1b259860c5881c65856f2f51294711f5d79
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update balena-os/leviathan action to v2.33.5
+              hash: 6126f27adbf2dc94544298a61e1e1a6752d2166a
+              body: |
+                Update balena-os/leviathan from 2.33.3 to 2.33.5
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.34.7
+          title: ""
+          date: 2025-06-20T05:22:52.367Z
+        - commits:
+            - subject: Update aws/aws-cli to v2.27.39
+              hash: be6a92dfd9d44e60c99719bacfab3b0ec9f45dbd
+              body: |
+                Update aws/aws-cli from 2.27.37 to 2.27.39
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.34.6
+          title: ""
+          date: 2025-06-20T01:52:48.983Z
+        - commits:
+            - subject: Update balena-io/balena-cli to v22.1.1
+              hash: de8d36b8369843e6e9d67a69cd9c8775e7431e1e
+              body: |
+                Update balena-io/balena-cli from 22.1.0 to 22.1.1
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.34.5
+          title: ""
+          date: 2025-06-19T14:22:07.954Z
+        - commits:
+            - subject: prepare deflate artifacts even on PRs
+              hash: 642f6faa706f308a328e0a68e1da0e7b2d16ea22
+              body: >
+                On PRs if there are no deflate files generated, the subsequent
+                encrypt step will fail (it is run only for private DTs). Rather
+                than add any further complication to that step, its cleaner to
+                just prepare the deflate files regardless. Especially as we
+                might be adding them to PR draft releases in the future anyway.
+                The time cost is low for this step anyway.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: Ryan Cooke
+              nested: []
+          version: balena-yocto-scripts-1.34.4
+          title: ""
+          date: 2025-06-18T12:42:10.225Z
+  version: 6.5.38+rev2
+  title: ""
+  date: 2025-06-20T12:40:00.270Z
+- commits:
     - subject: Update balena-yocto-scripts to 12e1c0ebd66b9e6813979ab4ee291512f2d7365b
       hash: c61caae8a2b147f4f8263a91051ec9367a180319
       body: Update balena-yocto-scripts

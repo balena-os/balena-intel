@@ -1,6 +1,36 @@
 Change log
 -----------
 
+# v6.5.38+rev2
+## (2025-06-20)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 6794e1b259860c5881c65856f2f51294711f5d79 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.34.7
+> ### (2025-06-20)
+> 
+> * Update balena-os/leviathan action to v2.33.5 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.34.6
+> ### (2025-06-20)
+> 
+> * Update aws/aws-cli to v2.27.39 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.34.5
+> ### (2025-06-19)
+> 
+> * Update balena-io/balena-cli to v22.1.1 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.34.4
+> ### (2025-06-18)
+> 
+> * prepare deflate artifacts even on PRs [Ryan Cooke]
+> 
+
+</details>
+
 # v6.5.38+rev1
 ## (2025-06-18)
 
