@@ -1,4 +1,29 @@
 - commits:
+    - subject: Update balena-yocto-scripts to f34dc1bb455189c3c4ba12ea089c64a76a4c06c3
+      hash: 404a871a4915a9c8240dbece2aa24235e4446ac2
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to f34dc1bb455189c3c4ba12ea089c64a76a4c06c3
+        changelog-entry: Update balena-yocto-scripts to f34dc1bb455189c3c4ba12ea089c64a76a4c06c3
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update aws/aws-cli to v2.27.40
+              hash: c9a94972758edd81cafa5be9f4ab819086a0b2ec
+              body: |
+                Update aws/aws-cli from 2.27.39 to 2.27.40
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.34.8
+          title: ""
+          date: 2025-06-20T21:35:48.637Z
+  version: 6.5.39+rev2
+  title: ""
+  date: 2025-06-21T02:54:19.123Z
+- commits:
     - subject: Update layers/poky to 58c95e1d4c44d54eee44a3503371b4f672790897
       hash: 23ea75b02c63bd93c51328cd1f58383684e9f031
       body: Update layers/poky
