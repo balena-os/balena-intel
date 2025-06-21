@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.5.39+rev3
+## (2025-06-21)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 1e29b4fb3762d557e3a5883329fcced76815ca7c [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.34.9
+> ### (2025-06-21)
+> 
+> * Update balena-io-examples/setup-balena-action action to v0.0.20 [balena-renovate[bot]]
+> 
+
+</details>
+
 # v6.5.39+rev2
 ## (2025-06-21)
 
