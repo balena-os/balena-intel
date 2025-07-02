@@ -1,6 +1,30 @@
 Change log
 -----------
 
+# v6.5.41
+## (2025-07-02)
+
+
+<details>
+<summary> Update layers/meta-balena to ed8866d6a0b4de8bb40dfd35fbdd465c8814bb57 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.5.41
+> ### (2025-07-02)
+> 
+> * Update outdated context of efitools patches [Florin Sarbu]
+> 
+> ## meta-balena-6.5.40
+> ### (2025-06-26)
+> 
+> * busybox: add conv support in dd [Alex Gonzalez]
+> * initrdscripts: cryptsetup-efi-tmp: use common encrypted partition asserts [Alex Gonzalez]
+> * os-helpers-fs: move logic to assert luks encrypted partitions [Alex Gonzalez]
+> * initrdscripts: migrate: use an estimated compressed size for raw image [Alex Gonzalez]
+> * os-helpers-fs: add a function to estimate zram compression sizes [Alex Gonzalez]
+> 
+
+</details>
+
 # v6.5.39+rev4
 ## (2025-06-21)
 
