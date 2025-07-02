@@ -1,6 +1,30 @@
 Change log
 -----------
 
+# v6.5.41+rev2
+## (2025-07-02)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 8d43b5b5bec783ee6e65d6e784e83023139f8147 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.35.1
+> ### (2025-07-02)
+> 
+> * workflows: yocto-build-deploy: pass RSA key if available [Alex Gonzalez]
+> * workflows: yocto-build-deploy: deploy RPI locking artifacts as assets if available [Alex Gonzalez]
+> * balena-deploy: compress RPI secure boot locking artifacts [Alex Gonzalez]
+> 
+> ## balena-yocto-scripts-1.35.0
+> ### (2025-07-02)
+> 
+> * Remove .img and .img.zip files from hostapp artifacts [Kyle Harding]
+> * Remove old manual uploads of licenses and changelog [Kyle Harding]
+> * Upload release assets to hostapp on merge [Kyle Harding]
+> 
+
+</details>
+
 # v6.5.41+rev1
 ## (2025-07-02)
 
