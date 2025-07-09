@@ -1,6 +1,22 @@
 Change log
 -----------
 
+# v6.5.41+rev8
+## (2025-07-09)
+
+
+<details>
+<summary> Update balena-yocto-scripts to ccb8899d87c181fa3198a496fe1a514a93de90e5 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.36.0
+> ### (2025-07-09)
+> 
+> * minor: upload cyclonedx bom.json and vex.json as independend files [Edwin Joassart]
+> * Generate SBOM and VEX (cycloneDX) [Edwin Joassart]
+> 
+
+</details>
+
 # v6.5.41+rev7
 ## (2025-07-08)
 
