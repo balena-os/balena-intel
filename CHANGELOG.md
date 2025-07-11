@@ -1,6 +1,31 @@
 Change log
 -----------
 
+# v6.5.44
+## (2025-07-11)
+
+
+<details>
+<summary> Update layers/meta-balena to 4e67673a7d7d67b5fc4b6d87065b900b00d72341 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.5.44
+> ### (2025-07-09)
+> 
+> * meta-balena-YOCTO_RELEASE: update bmap-tools branch name [Ryan Cooke]
+> 
+> ## meta-balena-6.5.43
+> ### (2025-07-07)
+> 
+> * meta-balena-esr: fall back to current minor [Ryan Cooke]
+> 
+> ## meta-balena-6.5.42
+> ### (2025-07-03)
+> 
+> * Enable zram zstd compression for 6.12+ kernels [Florin Sarbu]
+> 
+
+</details>
+
 # v6.5.41+rev10
 ## (2025-07-11)
 

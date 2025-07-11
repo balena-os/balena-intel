@@ -1,4 +1,81 @@
 - commits:
+    - subject: Update layers/meta-balena to 4e67673a7d7d67b5fc4b6d87065b900b00d72341
+      hash: d2a42547678afb12b8dbb80d01495c5445ae7450
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 4e67673a7d7d67b5fc4b6d87065b900b00d72341
+        changelog-entry: Update layers/meta-balena to 4e67673a7d7d67b5fc4b6d87065b900b00d72341
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "meta-balena-YOCTO_RELEASE: update bmap-tools branch name"
+              hash: ca3e8df431c811088982050c5053d4fb5ca46499
+              body: |
+                In Nov 2024 bmap-tools  master branch was renamed to main
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: Ryan Cooke
+              nested: []
+          version: meta-balena-6.5.44
+          title: ""
+          date: 2025-07-09T16:53:56.590Z
+        - commits:
+            - subject: "meta-balena-esr: fall back to current minor"
+              hash: b04c4769fdffb61e65c365aad7cea8907991cb2d
+              body: >
+                If an esr branch for a previous minor already exists, then fall
+                back to the current minor
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ryan Cooke <ryan@balena.io>
+                signed-off-by: Ryan Cooke <ryan@balena.io>
+              author: Ryan Cooke
+              nested: []
+          version: meta-balena-6.5.43
+          title: ""
+          date: 2025-07-07T10:43:40.599Z
+        - commits:
+            - subject: Enable zram zstd compression for 6.12+ kernels
+              hash: ffafb1007a8deab5bd80de5cb65fbc81c18f4e7d
+              body: >
+                Kernels 6.12+ need the corresponding CONFIG_ZRAM_BACKEND_* linux
+
+                kernel config item enabled for the respective compression
+                support
+
+                to be available for zram.
+
+
+                For the flasher we need zram zstd support so we need to enable
+                the new
+
+                CONFIG_ZRAM_BACKEND_ZSTD option.
+
+
+                This fixes the following error when booting a flasher image
+                running a 6.12+ kernel:
+
+                zramctl: /dev/zram1: failed to set algorithm: Invalid argument
+              footer:
+                Change-type: patch
+                change-type: patch
+                Changelog-entry: Enable zram zstd compression for 6.12+ kernels
+                changelog-entry: Enable zram zstd compression for 6.12+ kernels
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-6.5.42
+          title: ""
+          date: 2025-07-03T13:05:08.986Z
+  version: 6.5.44
+  title: ""
+  date: 2025-07-11T10:32:03.570Z
+- commits:
     - subject: Update layers/poky to 3171dcc835afe49ab49847bdd6bf0d6d392fad03
       hash: e289ab7752d1b4a691b22d487c555d09e14e4b25
       body: Update layers/poky
