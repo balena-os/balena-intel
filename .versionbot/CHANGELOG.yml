@@ -1,4 +1,55 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 972d8235cfde35394f24df80486c6e8ba5e056e5
+      hash: b220b747e9f4cf74870f7b2a72e3ed29d78533fe
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 972d8235cfde35394f24df80486c6e8ba5e056e5
+        changelog-entry: Update balena-yocto-scripts to 972d8235cfde35394f24df80486c6e8ba5e056e5
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update aws/aws-cli to v2.27.53
+              hash: 00df051abb4c2f5cd58d58dea6ccd6d65fe56da2
+              body: |
+                Update aws/aws-cli from 2.27.52 to 2.27.53
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.36.7
+          title: ""
+          date: 2025-07-16T23:58:55.907Z
+        - commits:
+            - subject: Update aws/aws-cli to v2.27.52
+              hash: 5863314e2f0fb2665ef9b7aff939c44d414f72d1
+              body: |
+                Update aws/aws-cli from 2.27.51 to 2.27.52
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.36.6
+          title: ""
+          date: 2025-07-16T05:36:50.240Z
+        - commits:
+            - subject: Update aws/aws-cli to v2.27.51
+              hash: 9e42d7cef2de41a9d08c9de7af4c08b71b61c20c
+              body: |
+                Update aws/aws-cli from 2.27.50 to 2.27.51
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.36.5
+          title: ""
+          date: 2025-07-15T21:55:14.789Z
+  version: 6.5.44+rev3
+  title: ""
+  date: 2025-07-17T04:38:37.026Z
+- commits:
     - subject: Update layers/poky to 4ee43d7d686836b27d4f6c075915b7a2e14db997
       hash: 4e70618d617142cc576ed5764236c5254e583c7a
       body: Update layers/poky
