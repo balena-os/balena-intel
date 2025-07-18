@@ -1,4 +1,29 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 7b93474962f3c9ebd516402869077a4aad560834
+      hash: 8c704472dc3b1af742b94e379c7cf6d74eb2d13a
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 7b93474962f3c9ebd516402869077a4aad560834
+        changelog-entry: Update balena-yocto-scripts to 7b93474962f3c9ebd516402869077a4aad560834
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update unfor19/install-aws-cli-action digest to f5b46b7
+              hash: 933ce489b7259ac6ba31610f4e5328ab3d0f2245
+              body: |
+                Update unfor19/install-aws-cli-action
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.36.9
+          title: ""
+          date: 2025-07-18T10:31:32.727Z
+  version: 6.5.44+rev5
+  title: ""
+  date: 2025-07-18T17:38:33.092Z
+- commits:
     - subject: Update balena-yocto-scripts to 9d6705528d41d637d2e9291978b682cb856a4f65
       hash: f5538cc9cdb2f71f33876e154dc0cbc79a913dd7
       body: Update balena-yocto-scripts

@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.5.44+rev5
+## (2025-07-18)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 7b93474962f3c9ebd516402869077a4aad560834 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.36.9
+> ### (2025-07-18)
+> 
+> * Update unfor19/install-aws-cli-action digest to f5b46b7 [balena-renovate[bot]]
+> 
+
+</details>
+
 # v6.5.44+rev4
 ## (2025-07-18)
 
