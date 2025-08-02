@@ -1,6 +1,63 @@
 Change log
 -----------
 
+# v6.5.48
+## (2025-08-02)
+
+
+<details>
+<summary> Update layers/meta-balena to 0dd9f8e4c8a32a503723375bc4a87c557d57f356 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.5.48
+> ### (2025-08-02)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 9df0f9b [balena-renovate[bot]] </summary>
+> 
+>> ### leviathan-2.36.2
+>> #### (2025-08-01)
+>> 
+>> * Core: sdk: Fix error handling on fetchOS function [Ryan Cooke]
+>> 
+>> ### leviathan-2.36.1
+>> #### (2025-08-01)
+>> 
+>> * Update balena-io/balena-cli to v22.1.5 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.0
+>> #### (2025-08-01)
+>> 
+>> * Core: worker: update flashing method to use native fetch API [Ryan Cooke]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-6.5.47
+> ### (2025-07-29)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to b33ddb7 [balena-renovate[bot]] </summary>
+> 
+>> ### leviathan-2.35.3
+>> #### (2025-07-28)
+>> 
+>> * Bind mount private contracts in the core service [Kyle Harding]
+>> 
+>> ### leviathan-2.35.2
+>> #### (2025-07-28)
+>> 
+>> * Update Lock file maintenance [balena-renovate[bot]]
+>> 
+> 
+> </details>
+> 
+> 
+
+</details>
+
 # v6.5.46+rev5
 ## (2025-08-02)
 
