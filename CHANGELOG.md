@@ -1,6 +1,36 @@
 Change log
 -----------
 
+# v6.5.53+rev2
+## (2025-08-19)
+
+
+<details>
+<summary> Update balena-yocto-scripts to d2b30dabd4df9ded5a2d0f4250a09e2516eda209 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.38.2
+> ### (2025-08-19)
+> 
+> * Update actions/checkout action to v5 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.38.1
+> ### (2025-08-18)
+> 
+> * Update balena-io/balena-cli to v22.2.4 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.38.0
+> ### (2025-08-18)
+> 
+> * Split testing artifacts into individual files [Kyle Harding]
+> 
+> ## balena-yocto-scripts-1.37.20
+> ### (2025-08-18)
+> 
+> * barys: default to highest priority layers for template paths [Alex Gonzalez]
+> 
+
+</details>
+
 # v6.5.53+rev1
 ## (2025-08-17)
 
