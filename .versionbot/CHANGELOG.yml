@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update layers/meta-cyclonedx to 61c6b6be40daa132beef72a3e04dc97337ef17c1
+      hash: 80919fd625c23aea0b255a3b18ac6fe7f07a037a
+      body: Update layers/meta-cyclonedx
+      footer:
+        Changelog-entry: Update layers/meta-cyclonedx to
+          61c6b6be40daa132beef72a3e04dc97337ef17c1
+        changelog-entry: Update layers/meta-cyclonedx to
+          61c6b6be40daa132beef72a3e04dc97337ef17c1
+      author: balena-renovate[bot]
+      nested: []
+  version: 6.5.53+rev4
+  title: ""
+  date: 2025-08-20T16:52:53.737Z
+- commits:
     - subject: Update balena-yocto-scripts to fc8c535752ed62f8c141dc792b17bffe305b5386
       hash: af9b83a706b1caee29638e6107e61d60f42e801b
       body: Update balena-yocto-scripts
