@@ -1,4 +1,55 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 488e344cd11e0aa8ca9ff0bdbfd365704910461e
+      hash: d289637cb0663d97dc9821a549001c3aebcec180
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 488e344cd11e0aa8ca9ff0bdbfd365704910461e
+        changelog-entry: Update balena-yocto-scripts to 488e344cd11e0aa8ca9ff0bdbfd365704910461e
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update aws/aws-cli to v2.28.18
+              hash: f18b9b717a1357ff510b9dc93df1cae80200880c
+              body: |
+                Update aws/aws-cli from 2.28.16 to 2.28.18
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.38.6
+          title: ""
+          date: 2025-08-26T22:01:06.979Z
+        - commits:
+            - subject: Update Lock file maintenance
+              hash: b90712407d422f7995ff9cd08d1ad291cfc079f5
+              body: |
+                Update 
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.38.5
+          title: ""
+          date: 2025-08-25T04:44:50.372Z
+        - commits:
+            - subject: Update aws/aws-cli to v2.28.16
+              hash: 4cb24e51447699fdb0932838d97b546c55c81b9a
+              body: |
+                Update aws/aws-cli from 2.28.13 to 2.28.16
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.38.4
+          title: ""
+          date: 2025-08-22T22:44:36.551Z
+  version: 6.5.53+rev5
+  title: ""
+  date: 2025-08-27T00:18:58.162Z
+- commits:
     - subject: Update layers/meta-cyclonedx to 61c6b6be40daa132beef72a3e04dc97337ef17c1
       hash: 80919fd625c23aea0b255a3b18ac6fe7f07a037a
       body: Update layers/meta-cyclonedx
