@@ -1,6 +1,157 @@
 Change log
 -----------
 
+# v6.6.5
+## (2025-09-16)
+
+
+<details>
+<summary> Update layers/meta-balena to e56962514ac0f10e17406bfc1b1f2b2612d4fe5d [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.6.5
+> ### (2025-09-15)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 3e61af4 [balena-renovate[bot]] </summary>
+> 
+>> ### leviathan-2.36.35
+>> #### (2025-09-15)
+>> 
+>> * Update balena-io/balena-cli to v22.4.4 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.34
+>> #### (2025-09-15)
+>> 
+>> * worker: extend total flashing timeout to 25 minutes [Alex Gonzalez]
+>> 
+>> ### leviathan-2.36.33
+>> #### (2025-09-15)
+>> 
+>> * Update Lock file maintenance [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.32
+>> #### (2025-09-11)
+>> 
+>> * Core: worker: remove exponential backoff on flash status check [Ryan Cooke]
+>> 
+>> ### leviathan-2.36.31
+>> #### (2025-09-10)
+>> 
+>> * Update balena-io/balena-cli to v22.4.3 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.30
+>> #### (2025-09-10)
+>> 
+>> * Update balena-io/balena-cli to v22.4.2 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.29
+>> #### (2025-09-08)
+>> 
+>> * Update Lock file maintenance [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.28
+>> #### (2025-09-02)
+>> 
+>> * Update balena-io/balena-cli to v22.4.1 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.27
+>> #### (2025-09-02)
+>> 
+>> * Update balena-io/balena-cli to v22.4.0 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.26
+>> #### (2025-09-02)
+>> 
+>> * Update balena-io/balena-cli to v22.3.4 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.25
+>> #### (2025-09-02)
+>> 
+>> * Update balena-io/balena-cli to v22.3.3 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.24
+>> #### (2025-09-02)
+>> 
+>> * Update balena-io/balena-cli to v22.3.1 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.23
+>> #### (2025-09-01)
+>> 
+>> * Update Lock file maintenance [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.22
+>> #### (2025-08-29)
+>> 
+>> * Update balena-io/balena-cli to v22.3.0 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.21
+>> #### (2025-08-25)
+>> 
+>> * Update balena-os/leviathan-worker to v2.10.6 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.20
+>> #### (2025-08-25)
+>> 
+>> * Update Lock file maintenance [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.19
+>> #### (2025-08-18)
+>> 
+>> * Update balena-os/leviathan-worker to v2.10.5 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.18
+>> #### (2025-08-18)
+>> 
+>> * Update balena-os/leviathan-worker to v2.10.4 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.17
+>> #### (2025-08-18)
+>> 
+>> * Update Lock file maintenance [balena-renovate[bot]]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-6.6.4
+> ### (2025-09-03)
+> 
+> * Fail if IOMMU is disabled on secure boot systems [Michal Toman]
+> 
+> ## meta-balena-6.6.3
+> ### (2025-08-29)
+> 
+> * recipes-connectivity/libnss-ato: Do not hardcode the homedir for user root [Florin Sarbu]
+> 
+> ## meta-balena-6.6.2
+> ### (2025-08-26)
+> 
+> * linux-firmware: Ensure Intel AX210 firmware can be installed [Alexandru Costache]
+> 
+> ## meta-balena-6.6.1
+> ### (2025-08-25)
+> 
+> * Remove the AX102 requirement for secure boot tests [Kyle Harding]
+> 
+> ## meta-balena-6.6.0
+> ### (2025-08-23)
+> 
+> * minor: remove ssh service from os-config.json [Edwin Joassart]
+> 
+> ## meta-balena-6.5.55
+> ### (2025-08-22)
+> 
+> * patch: add metadata to improve balena-engine cve tracking [Edwin Joassart]
+> 
+> ## meta-balena-6.5.54
+> ### (2025-08-21)
+> 
+> * recipes-connectivity/balena-proxy-config: Clean-up redsocks rules by index [Alexandru Costache]
+> 
+
+</details>
+
 # v6.5.53+rev12
 ## (2025-09-16)
 
