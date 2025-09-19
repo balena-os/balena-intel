@@ -1,4 +1,82 @@
 - commits:
+    - subject: Update layers/meta-balena to 6af9a3b1261477fc00fb319116ddf76c5606f298
+      hash: 7076335be1a8da9b25759d500e5b926e0f1fd056
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 6af9a3b1261477fc00fb319116ddf76c5606f298
+        changelog-entry: Update layers/meta-balena to 6af9a3b1261477fc00fb319116ddf76c5606f298
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update tests/leviathan digest to d9e2486
+              hash: 307089e9d6567003fcfe116c7c682cbef0a67d03
+              body: Update tests/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested:
+                - commits:
+                    - subject: Update balena-io/balena-cli to v22.4.6
+                      hash: 4df062e386b5b721f12f5e77e7d21cd009be9310
+                      body: |
+                        Update balena-io/balena-cli from 22.4.5 to 22.4.6
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.36.37
+                  title: ""
+                  date: 2025-09-18T06:41:12.087Z
+                - commits:
+                    - subject: Update balena-io/balena-cli to v22.4.5
+                      hash: 3963fbc4a55ec37cd1a5ba523bf941fd08e2d5a3
+                      body: |
+                        Update balena-io/balena-cli from 22.4.4 to 22.4.5
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.36.36
+                  title: ""
+                  date: 2025-09-17T14:43:37.964Z
+          version: meta-balena-6.6.7
+          title: ""
+          date: 2025-09-19T01:29:39.395Z
+        - commits:
+            - subject: Condition the start of update-balena-supervisor.service after internet
+                connectivity
+              hash: d5b31e24d8d772deeb8b2bf961bb206ecb999289
+              body: |
+                There is a board that is slower to get to internet connectivity over WiFi (slower interface
+                bring-up, slower initial DNS resolution). Because of this, in cases where we need to update
+                the supervisor just after boot (such as after clearing the data partiton by means of deleting
+                /mnt/data/remove_me_to_reset and after that rebooting the board) the update-balena-supervisor.service
+                will fail because internet connectivity is not yet established.
+
+                To overcome this we make update-balena-supervisor.service depend on a separate target we have defined solely
+                for the purpose of waiting for network connectivity. See
+                https://github.com/balena-os/meta-balena/commit/a6781d54c6edced457ad916cac3fec9c70d25a0a for details
+              footer:
+                Changelog-entry: Condition the start of update-balena-supervisor.service after
+                  internet connectivity
+                changelog-entry: Condition the start of update-balena-supervisor.service after
+                  internet connectivity
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-6.6.6
+          title: ""
+          date: 2025-09-17T09:45:49.030Z
+  version: 6.6.7
+  title: ""
+  date: 2025-09-19T07:03:35.854Z
+- commits:
     - subject: Update balena-yocto-scripts to 7084f3fe4ba0a5f088379cbc269d13b80babe873
       hash: 7cda04b670b8207e811656375970869ed162415a
       body: Update balena-yocto-scripts
