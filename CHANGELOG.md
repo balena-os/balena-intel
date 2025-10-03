@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.6.10
+## (2025-10-03)
+
+
+<details>
+<summary> Update layers/meta-balena to 3a3fa5f6be255506a45d7a98328e0b5f32e4cac4 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.6.10
+> ### (2025-10-03)
+> 
+> * meta-balena-common: Consistently prepend spaces when using append [Alexandru Costache]
+> 
+
+</details>
+
 # v6.6.9+rev1
 ## (2025-09-30)
 
