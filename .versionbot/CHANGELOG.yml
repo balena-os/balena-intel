@@ -1,4 +1,47 @@
 - commits:
+    - subject: Update layers/meta-balena to e7cececd6d654b36e286b2759b0450e4c36dd629
+      hash: cfce843c7999efd51b4f00c1ec2fd48cbf2933b8
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to e7cececd6d654b36e286b2759b0450e4c36dd629
+        changelog-entry: Update layers/meta-balena to e7cececd6d654b36e286b2759b0450e4c36dd629
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "kernel-balena.bbclass: Fix zram failure when setting algorithm"
+              hash: ca456a422109f6cd4132d0c74fc012ec12a01f91
+              body: >
+                The initramfs error addressed by this commit is:
+
+                    zramctl: /dev/zram1: failed to set algorithm: Invalid argument
+
+                zstd is the default algorithm currently used by the zram
+                initramfs module,
+
+                which is installed for all device-types. Also, the crypto API
+                provides
+
+                the compression algorithms used by the zram kernel module, so
+                let's make
+
+                this available for all devices as built-in, so it is accessible
+                in the
+
+                initramfs.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru
+              nested: []
+          version: meta-balena-6.6.13
+          title: ""
+          date: 2025-10-16T10:23:25.020Z
+  version: 6.6.13
+  title: ""
+  date: 2025-10-16T16:46:34.130Z
+- commits:
     - subject: Update balena-yocto-scripts to a1cf9a86cb25f4801013cbda24322757bdcda84b
       hash: 7ae24ea25a74754fa659ad01a1f5aeb3ddd1e451
       body: Update balena-yocto-scripts

@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.6.13
+## (2025-10-16)
+
+
+<details>
+<summary> Update layers/meta-balena to e7cececd6d654b36e286b2759b0450e4c36dd629 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.6.13
+> ### (2025-10-16)
+> 
+> * kernel-balena.bbclass: Fix zram failure when setting algorithm [Alexandru]
+> 
+
+</details>
+
 # v6.6.12+rev2
 ## (2025-10-16)
 
