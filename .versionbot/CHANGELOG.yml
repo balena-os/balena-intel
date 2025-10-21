@@ -1,4 +1,46 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 91589af4968ec5a482ac6ee8315d45607a89b828
+      hash: 1fff6fd7a575d5c9ee6b91bc00f79243f64a90e6
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 91589af4968ec5a482ac6ee8315d45607a89b828
+        changelog-entry: Update balena-yocto-scripts to 91589af4968ec5a482ac6ee8315d45607a89b828
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update acceptable states for previous test runs
+              hash: 736cb72e967d4e5e814b0d49a577283d0b4b5a76
+              body: |
+                This makes the test run check more robust and handles
+                cases where we may see unexpected results like more or
+                fewer test runs with varying conclusions.
+
+                Github script is also more secure and less prone
+                to string processing issues than bash CLI commands.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: Fix AMI decrypt step paths
+              hash: 8257cae6fef47b7dd5fb5ec3693e893fc6b1314d
+              body: ""
+              footer:
+                CHange-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.38.54
+          title: ""
+          date: 2025-10-20T21:05:57.787Z
+  version: 6.6.13+rev4
+  title: ""
+  date: 2025-10-21T01:26:12.603Z
+- commits:
     - subject: Update balena-yocto-scripts to 1981d86cd29fd000f554ea61eae51b74d9588fd1
       hash: 13c4162f7528e4aa303aa4e44c20c94f1e565cc7
       body: Update balena-yocto-scripts

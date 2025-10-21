@@ -1,6 +1,22 @@
 Change log
 -----------
 
+# v6.6.13+rev4
+## (2025-10-21)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 91589af4968ec5a482ac6ee8315d45607a89b828 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.38.54
+> ### (2025-10-20)
+> 
+> * Update acceptable states for previous test runs [Kyle Harding]
+> * Fix AMI decrypt step paths [Kyle Harding]
+> 
+
+</details>
+
 # v6.6.13+rev3
 ## (2025-10-18)
 
