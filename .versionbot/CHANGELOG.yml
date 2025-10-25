@@ -1,4 +1,89 @@
 - commits:
+    - subject: Update balena-yocto-scripts to d568fafb891046a37b835faa82f2e5a89308eebe
+      hash: aa60c2342931a5aef09622a63401e70800ef31a9
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to d568fafb891046a37b835faa82f2e5a89308eebe
+        changelog-entry: Update balena-yocto-scripts to d568fafb891046a37b835faa82f2e5a89308eebe
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update actions/upload-artifact action to v5
+              hash: 7362bb09e978a783076f5c9a24f143dbe8d7567e
+              body: |
+                Update actions/upload-artifact from 4.6.2 to 5.0.0
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.38.61
+          title: ""
+          date: 2025-10-25T02:56:18.502Z
+        - commits:
+            - subject: Update aws/aws-cli to v2.31.21
+              hash: 96890cceffc759bb4ce873dbfe883eac03fd189b
+              body: |
+                Update aws/aws-cli from 2.31.20 to 2.31.21
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.38.60
+          title: ""
+          date: 2025-10-23T22:53:39.741Z
+        - commits:
+            - subject: Update aws/aws-cli to v2.31.20
+              hash: 56621d72ec533e366acf85934791dda6f6c712c8
+              body: |
+                Update aws/aws-cli from 2.31.19 to 2.31.20
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.38.59
+          title: ""
+          date: 2025-10-23T14:33:34.854Z
+        - commits:
+            - subject: Update balena-io/balena-cli to v22.4.15
+              hash: 1f95e7a8f499a23b880f8398d9a6317e70b8352b
+              body: |
+                Update balena-io/balena-cli from 22.4.14 to 22.4.15
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.38.58
+          title: ""
+          date: 2025-10-23T11:06:03.538Z
+        - commits:
+            - subject: Check test_matrix is non-null before transforming as JSON
+              hash: 4cc46babdc2d3974565eee17164551bec111ee9e
+              body: >
+                Currently breaks on merge for device types without test_matrix
+                defined.
+
+
+                > The template is not valid.
+                Newtonsoft.Json.JsonReaderException: Error reading JToken from
+                JsonReader.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.38.57
+          title: ""
+          date: 2025-10-23T07:15:46.580Z
+  version: 6.6.13+rev6
+  title: ""
+  date: 2025-10-25T07:54:36.194Z
+- commits:
     - subject: Update balena-yocto-scripts to ee9d9f77cab8411071a4653ccd92365bf4d5ddd9
       hash: a2d520dba42d7b94d808dc688a28ea3dcadbf98f
       body: Update balena-yocto-scripts
