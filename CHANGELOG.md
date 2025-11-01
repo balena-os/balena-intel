@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.6.16+rev1
+## (2025-11-01)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 1184d75bd1a0e77591f2f2d87af755e5d035f7a6 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.38.71
+> ### (2025-11-01)
+> 
+> * Update Pin actions/download-artifact action to 018cc2c [balena-renovate[bot]]
+> 
+
+</details>
+
 # v6.6.16
 ## (2025-11-01)
 
