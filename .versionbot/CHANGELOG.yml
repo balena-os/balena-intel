@@ -1,4 +1,29 @@
 - commits:
+    - subject: Update layers/meta-balena to ffa081034b9066c287cb23020c03354bed643ac9
+      hash: 767b79d3ec128b116af95b36be45d7af5658d766
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to ffa081034b9066c287cb23020c03354bed643ac9
+        changelog-entry: Update layers/meta-balena to ffa081034b9066c287cb23020c03354bed643ac9
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update actions/setup-python action to v6
+              hash: 00de2112bdc41a488ab09eaec47015b88caa3fa5
+              body: |
+                Update actions/setup-python from v5 to v6
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: meta-balena-6.7.6
+          title: ""
+          date: 2025-11-13T06:31:58.282Z
+  version: 6.7.6
+  title: ""
+  date: 2025-11-13T12:42:11.752Z
+- commits:
     - subject: Update layers/meta-balena to 79d40cae6a10b5c7e5b3788b541bbfd2eb979648
       hash: a2a1e860c0635e05dd86933da09b6b1ee65ce4c0
       body: Update layers/meta-balena
