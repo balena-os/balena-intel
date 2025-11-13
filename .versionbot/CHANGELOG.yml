@@ -1,4 +1,168 @@
 - commits:
+    - subject: Update layers/meta-balena to 79d40cae6a10b5c7e5b3788b541bbfd2eb979648
+      hash: a2a1e860c0635e05dd86933da09b6b1ee65ce4c0
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 79d40cae6a10b5c7e5b3788b541bbfd2eb979648
+        changelog-entry: Update layers/meta-balena to 79d40cae6a10b5c7e5b3788b541bbfd2eb979648
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "kernel-balena.bbclass: Enable required CONFIG_CGROUP_BPF"
+              hash: 21b4333b7cf17399b1ee5c82e646eb369a1a77f7
+              body: >
+                This is required to fix the following error:
+
+
+                balena-supervisor[13352]: Error response from daemon: No such
+                container: resin_supervisor
+
+                balena-supervisor[13361]: balena_supervisor
+
+                balena-supervisor[13370]: active
+
+                balena-supervisor[13381]: Container config has not changed
+
+                balena-supervisor[13447]: time="2025-11-12T06:15:12Z"
+                level=error msg="error waiting for container: context canceled"
+
+                balena-supervisor[13447]: Error response from daemon: failed to
+                create shim task: OCI runtime create failed: runc create failed:
+
+                unable to start container process: error during container init:
+                error setting cgroup config for procHooks process:
+                bpf_prog_query(BPF_CGROUP_DEVICE) failed: function not
+                implemented: unknown
+
+
+                systemd[1]: balena-supervisor.service: Main process exited,
+                code=exited, status=1/FAILURE
+
+                systemd[1]: balena-supervisor.service: Failed with result
+                'exit-code'.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-6.7.5
+          title: ""
+          date: 2025-11-12T20:17:22.886Z
+        - commits:
+            - subject: add CONFIG_DM_FLAKEY for disk-watchdog testing
+              hash: f523f9cde68a93b770f47f6cc2522b1a96284eea
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Yann CARDAILLAC <yann.cardaillac@balena.io>
+                signed-off-by: Yann CARDAILLAC <yann.cardaillac@balena.io>
+              author: Yann CARDAILLAC
+              nested: []
+          version: meta-balena-6.7.4
+          title: ""
+          date: 2025-11-08T09:10:11.321Z
+        - commits:
+            - subject: Update tests/leviathan digest to c549c54
+              hash: e4de9a070360d2f934743b1bedcbfb62995bb079
+              body: Update tests/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested:
+                - commits:
+                    - subject: Update balena-os/leviathan-worker to v2.10.14
+                      hash: 1492ec2da6a3a93a5bd1d06f076d4532d331497a
+                      body: >
+                        Update balena-os/leviathan-worker from 2.10.12 to 2.10.14
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.36.62
+                  title: ""
+                  date: 2025-11-06T14:45:42.174Z
+          version: meta-balena-6.7.3
+          title: ""
+          date: 2025-11-07T17:05:12.407Z
+        - commits:
+            - subject: "balena-os.inc: Enforce PACKAGE_CLASSES to package_ipk"
+              hash: 5c530095011bba2935b3dcac374a415b6710d7ec
+              body: >
+                We used to have the PACKAGE_CLASSES default to package_ipk by
+                using the soft ?= assignment.
+
+                However, starting with Scarthgap poky.conf also does a soft
+                assignment to package_rpm so we
+
+                end up with that instead.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-6.7.2
+          title: ""
+          date: 2025-11-07T10:28:02.622Z
+        - commits:
+            - subject: "packagegroups/packagegroup-resin-flasher: Set PACKAGE_ARCH"
+              hash: fb118c04107f0aa4c17caf933938038f13963e96
+              body: >
+                Fixes the following error:
+
+                    packagegroup-resin-flasher-1.0-r1 do_package_write_rpm: An allarch packagegroup shouldn't depend on packages which are dynamically renamed
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+            - subject: "tests/suites: Use USB relay to toggle boot switch on certain devices"
+              hash: 5890f661fac084258c26fe0fe7c5a3572af98521
+              body: |
+                We no longer need to override the boot switch from
+                the flasher image because we have access to the boot pins
+                of the device in question and can control them using a
+                relay. This way we can test if the bootswitch detection
+                mechanism in u-boot works properly.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+          version: meta-balena-6.7.1
+          title: ""
+          date: 2025-11-06T11:49:00.999Z
+        - commits:
+            - subject: add disk-watchdog daemon
+              hash: fa725ce23e93d918d0eafaf9fa7b15549b0f8b7f
+              body: >
+                This service helps in detecting io errors and try to solve them
+                by issuing a reboot. It avoids reboot loops by tracking boot
+                with a timestamp.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Yann CARDAILLAC <yann.cardaillac@balena.io>
+                signed-off-by: Yann CARDAILLAC <yann.cardaillac@balena.io>
+              author: Yann CARDAILLAC
+              nested: []
+          version: meta-balena-6.7.0
+          title: ""
+          date: 2025-11-05T10:29:49.790Z
+  version: 6.7.5
+  title: ""
+  date: 2025-11-13T03:16:19.206Z
+- commits:
     - subject: Update layers/poky to e2d947b1cce43f3c4ab5cd6bbe69ea466339666b
       hash: ee06d6ec60fa3b35c6eeb57bb13fb329c96e1a94
       body: Update layers/poky

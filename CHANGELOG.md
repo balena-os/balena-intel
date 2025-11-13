@@ -1,6 +1,58 @@
 Change log
 -----------
 
+# v6.7.5
+## (2025-11-13)
+
+
+<details>
+<summary> Update layers/meta-balena to 79d40cae6a10b5c7e5b3788b541bbfd2eb979648 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.7.5
+> ### (2025-11-12)
+> 
+> * kernel-balena.bbclass: Enable required CONFIG_CGROUP_BPF [Florin Sarbu]
+> 
+> ## meta-balena-6.7.4
+> ### (2025-11-08)
+> 
+> * add CONFIG_DM_FLAKEY for disk-watchdog testing [Yann CARDAILLAC]
+> 
+> ## meta-balena-6.7.3
+> ### (2025-11-07)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to c549c54 [balena-renovate[bot]] </summary>
+> 
+>> ### leviathan-2.36.62
+>> #### (2025-11-06)
+>> 
+>> * Update balena-os/leviathan-worker to v2.10.14 [balena-renovate[bot]]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-6.7.2
+> ### (2025-11-07)
+> 
+> * balena-os.inc: Enforce PACKAGE_CLASSES to package_ipk [Florin Sarbu]
+> 
+> ## meta-balena-6.7.1
+> ### (2025-11-06)
+> 
+> * packagegroups/packagegroup-resin-flasher: Set PACKAGE_ARCH [Alexandru Costache]
+> * tests/suites: Use USB relay to toggle boot switch on certain devices [Alexandru Costache]
+> 
+> ## meta-balena-6.7.0
+> ### (2025-11-05)
+> 
+> * add disk-watchdog daemon [Yann CARDAILLAC]
+> 
+
+</details>
+
 # v6.6.17+rev1
 ## (2025-11-07)
 
