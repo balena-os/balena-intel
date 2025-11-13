@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.7.6+rev2
+## (2025-11-13)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 888ffe70e5bbca3386b502c075de3b25ea8c226c [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.38.80
+> ### (2025-11-13)
+> 
+> * balena-build: Fix typo [Atanas Bunchev]
+> 
+
+</details>
+
 # v6.7.6+rev1
 ## (2025-11-13)
 

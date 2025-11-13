@@ -1,4 +1,28 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 888ffe70e5bbca3386b502c075de3b25ea8c226c
+      hash: c9e33d02df4acd01292529cc28fae36ed793f85f
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 888ffe70e5bbca3386b502c075de3b25ea8c226c
+        changelog-entry: Update balena-yocto-scripts to 888ffe70e5bbca3386b502c075de3b25ea8c226c
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "balena-build: Fix typo"
+              hash: 718ad2c049ca031a4b808f2c5107a7291e76789e
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Atanas Bunchev
+              nested: []
+          version: balena-yocto-scripts-1.38.80
+          title: ""
+          date: 2025-11-13T17:47:44.068Z
+  version: 6.7.6+rev2
+  title: ""
+  date: 2025-11-13T20:41:48.104Z
+- commits:
     - subject: Update balena-yocto-scripts to a4c7a6331ad341e58d0f526764107c706513cd30
       hash: d49105a1c708f56e6428d41063ee5e64c5562435
       body: Update balena-yocto-scripts
