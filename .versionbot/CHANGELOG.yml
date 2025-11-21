@@ -1,4 +1,114 @@
 - commits:
+    - subject: Update layers/meta-balena to 37b7e9efbdbcab4bc487993f5736ec4fe6974f1c
+      hash: 75e3e094cf4b11c07768737e4bf3eaf7b6f8d44d
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 37b7e9efbdbcab4bc487993f5736ec4fe6974f1c
+        changelog-entry: Update layers/meta-balena to 37b7e9efbdbcab4bc487993f5736ec4fe6974f1c
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "balena: disable buildkit and dependencies with no_buildkit tag"
+              hash: 977ac4e187e4888286ddec1ef926fe195cf0e01d
+              body: |
+                This change disables the builkit backend to reduce the final
+                binary size by 3-4mb.
+
+                If buildkit is enabled manually via DOCKER_BUILDKIT=1 the
+                engine will return a clear error that buildkit is not supported.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: "balena: Rebase patches onto upstream Moby v20.10.27"
+              hash: 2533a1a701bcac6cacac1504180475968c3ceee9
+              body: >
+                This rebases all balenaEngine-specific features on top of the
+
+                upstream Moby v20.10.27 release, cleaning up the previously
+
+                intermingled history of merge commits while preserving full
+                commit attribution.
+
+
+                The patch revision appears to go backwards as previously the
+                patch
+
+                value would increase whenever local commits were added. However
+                going forward
+
+                we will track the upstream version exactly and only pin commit
+                SHAs.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: "go: Update to 1.22.12 for compatibility with balena v20.10.27"
+              hash: a6168f3da54c275d7929fe99a0eecc3c2651b4f8
+              body: >
+                Imports go 1.22.12 from poky scarthgap branch (c973f0e006) to
+                meet
+
+                the minimum version requirement for building balena v20.10.27.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: meta-balena-6.8.0
+          title: ""
+          date: 2025-11-21T17:52:58.091Z
+        - commits:
+            - subject: "os-helpers: generalize get_sector_size"
+              hash: 6501bcfec6810499a78347f09bac8b43b641b6b7
+              body: |
+                Do not limit to specific partition types.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "tests: secureboot: generalize U-boot binary naming"
+              hash: 91bb7f49910b4cb8661e993d798e57a736b7b6b1
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-6.7.8
+          title: ""
+          date: 2025-11-21T09:46:55.177Z
+        - commits:
+            - subject: simplify disk watchdog tests
+              hash: 2216355d073162c79748367f49d4a1294ede7796
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Yann CARDAILLAC <yann.cardaillac@balena.io>
+                signed-off-by: Yann CARDAILLAC <yann.cardaillac@balena.io>
+              author: Yann CARDAILLAC
+              nested: []
+          version: meta-balena-6.7.7
+          title: ""
+          date: 2025-11-18T17:31:09.706Z
+  version: 6.8.0
+  title: ""
+  date: 2025-11-21T22:49:43.069Z
+- commits:
     - subject: Update balena-yocto-scripts to 67b90ae49c2a0b5384617deae749f452e689323e
       hash: 2f58ebe58ee672f7609e385072c59e84408c1d67
       body: Update balena-yocto-scripts
