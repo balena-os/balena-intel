@@ -1,6 +1,22 @@
 Change log
 -----------
 
+# v6.8.0+rev3
+## (2025-11-22)
+
+
+<details>
+<summary> Update balena-yocto-scripts to a43efa088b39da73ff625ad47edc1eed68b25c99 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.38.94
+> ### (2025-11-22)
+> 
+> * Update actions/checkout action to v6 [balena-renovate[bot]]
+> * Update balena-io/balena-cli to v23.2.0 [balena-renovate[bot]]
+> 
+
+</details>
+
 # v6.8.0+rev2
 ## (2025-11-22)
 
