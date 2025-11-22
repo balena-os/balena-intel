@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v6.8.0+rev1
+## (2025-11-22)
+
+* Update layers/poky to 851a3f0c556f18fcbe82717b5acc366cf4b3f676 [balena-renovate[bot]]
+
 # v6.8.0
 ## (2025-11-21)
 
