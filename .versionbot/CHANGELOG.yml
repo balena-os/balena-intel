@@ -1,4 +1,44 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 7b2a9b7878cc4352c1451ccb531c7b01c2885e9c
+      hash: 48f0678d4bc148c9bb2be59768b368f55b992c9f
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 7b2a9b7878cc4352c1451ccb531c7b01c2885e9c
+        changelog-entry: Update balena-yocto-scripts to 7b2a9b7878cc4352c1451ccb531c7b01c2885e9c
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "workflows: Add Generic x86_64 (GPT) and Generic AARCH64 device tests"
+              hash: 275e4dd5f5cef11e410c9713cf8e6ad23ec45071
+              body: |
+                These provide better test coverage of the workflow, including
+                - signed/unsigned
+                - aarch64/amd64
+                - AMI deploy
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: "Dockerfile_yocto-build-env: Avoid balena CLI duplicate install"
+              hash: 269850acff96b92c871756555d05ee4178c76aa4
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.38.96
+          title: ""
+          date: 2025-11-24T17:20:16.243Z
+  version: 6.8.0+rev5
+  title: ""
+  date: 2025-11-24T23:33:46.352Z
+- commits:
     - subject: Update balena-yocto-scripts to 6a399312257153d5bc3577e9e7120acdf68a4f1a
       hash: ca8d8d7e29dfa597c4e21aeece955cdd040e4762
       body: Update balena-yocto-scripts
