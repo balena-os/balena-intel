@@ -1,4 +1,65 @@
 - commits:
+    - subject: Update layers/meta-balena to f8542a3b92f2c76f7051477d298422f7cdd5238b
+      hash: 1497581c3ac21d075a27c27aef337cb306f6b23a
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to f8542a3b92f2c76f7051477d298422f7cdd5238b
+        changelog-entry: Update layers/meta-balena to f8542a3b92f2c76f7051477d298422f7cdd5238b
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "balena-os.inc: Enable firmware compression by default"
+              hash: 67b37d3f74c4e589a195774fb15f5534dc648bae
+              body: >
+                The only requirement is kernel >= 5.3, we should default to
+                compressed
+
+                and opt-out on devices with older kernels.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-6.10.1
+          title: ""
+          date: 2025-12-11T21:36:10.715Z
+        - commits:
+            - subject: "networkmanager: update to 1.52.0"
+              hash: 2595dd8712d093d8fd4fc9166da2bfc40c77c038
+              body: >
+                This recipe is taken from meta-openembedded commit
+
+                33fec4b4f47ae5b86f274c352939437b641e7f8d with the only changes
+                being
+
+                that we removed the initd configuration which we don't use, and
+                removed
+
+                tag from the GIT URL because yocto spits an error when both tag
+
+                and SRCREV are used at the same time. Remaining tweaks are
+                handled
+
+                in bbappend.
+
+
+                Fixes #3677
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-6.10.0
+          title: ""
+          date: 2025-12-11T12:11:50.125Z
+  version: 6.10.1
+  title: ""
+  date: 2025-12-12T09:07:19.891Z
+- commits:
     - subject: Update balena-yocto-scripts to 8cbefeedbc99bb8a29a28e9540dee75e216b172f
       hash: f002cfc5ce1778386fb2afde6edacfd97030672d
       body: Update balena-yocto-scripts
