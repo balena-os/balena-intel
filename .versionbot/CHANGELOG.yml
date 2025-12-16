@@ -1,4 +1,71 @@
 - commits:
+    - subject: Update layers/meta-balena to 560b3c5c44d1c99dfb8fdd2cb790d28e366374f1
+      hash: 048cc569e69d65246bd7e74a18ebaf4cdeb0df0b
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 560b3c5c44d1c99dfb8fdd2cb790d28e366374f1
+        changelog-entry: Update layers/meta-balena to 560b3c5c44d1c99dfb8fdd2cb790d28e366374f1
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: remove disk watchdog logs
+              hash: 426c342e1c3ee87b752c88ef6805da093249bd51
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Yann CARDAILLAC <yann.cardaillac@balena.io>
+                signed-off-by: Yann CARDAILLAC <yann.cardaillac@balena.io>
+              author: Yann CARDAILLAC
+              nested: []
+          version: meta-balena-6.10.3
+          title: ""
+          date: 2025-12-15T18:38:40.829Z
+        - commits:
+            - subject: Update balena-supervisor to v17.2.2
+              hash: 0d50a5c161c26f741a85aa48169328f989534a80
+              body: |
+                Update balena-supervisor from 17.2.1 to 17.2.2
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested:
+                - commits:
+                    - subject: Improve issue of very early container logs potentially being dropped
+                      hash: b97dc2bba2ca7c560a88b497ce5a78e1ec77bb61
+                      body: >
+                        It is possible for logs to be received for a container
+                        before we have
+
+                        marked it for attachment and hence cause those logs to
+                        be skipped and
+
+                        never sent to the backend. Waiting for a lock before
+                        attaching makes
+
+                        this more likely to happen and is unnecessary as we are
+                        not directly
+
+                        interacting with/affecting the container and it only
+                        affects the
+
+                        journalctl tailing
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Pagan Gazzard
+                      nested: []
+                  version: balena-supervisor-17.2.2
+                  title: ""
+                  date: 2025-12-11T20:44:07.627Z
+          version: meta-balena-6.10.2
+          title: ""
+          date: 2025-12-13T01:27:35.362Z
+  version: 6.10.3
+  title: ""
+  date: 2025-12-16T00:10:08.021Z
+- commits:
     - subject: Update layers/meta-balena to f8542a3b92f2c76f7051477d298422f7cdd5238b
       hash: 1497581c3ac21d075a27c27aef337cb306f6b23a
       body: Update layers/meta-balena

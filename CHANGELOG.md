@@ -1,6 +1,37 @@
 Change log
 -----------
 
+# v6.10.3
+## (2025-12-16)
+
+
+<details>
+<summary> Update layers/meta-balena to 560b3c5c44d1c99dfb8fdd2cb790d28e366374f1 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.10.3
+> ### (2025-12-15)
+> 
+> * remove disk watchdog logs [Yann CARDAILLAC]
+> 
+> ## meta-balena-6.10.2
+> ### (2025-12-13)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v17.2.2 [balena-renovate[bot]] </summary>
+> 
+>> ### balena-supervisor-17.2.2
+>> #### (2025-12-11)
+>> 
+>> * Improve issue of very early container logs potentially being dropped [Pagan Gazzard]
+>> 
+> 
+> </details>
+> 
+> 
+
+</details>
+
 # v6.10.1
 ## (2025-12-12)
 
