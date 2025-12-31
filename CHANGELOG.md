@@ -1,6 +1,46 @@
 Change log
 -----------
 
+# v6.10.6+rev1
+## (2025-12-31)
+
+
+<details>
+<summary> Update balena-yocto-scripts to d8ce8169949e64dbf2bf58aa9f10ac4b7103076d [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.39.7
+> ### (Invalid date)
+> 
+> * Update Lock file maintenance [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.39.6
+> ### (Invalid date)
+> 
+> * Fix condition to check for test suites in workflow [Kyle Harding]
+> 
+> ## balena-yocto-scripts-1.39.5
+> ### (2025-12-29)
+> 
+> * Update aws/aws-cli to v2.32.25 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.39.4
+> ### (2025-12-29)
+> 
+> * Update GitHub Actions [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.39.3
+> ### (2025-12-19)
+> 
+> * Update aws/aws-cli to v2.32.21 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.39.2
+> ### (2025-12-17)
+> 
+> * Update aws/aws-cli to v2.32.18 [balena-renovate[bot]]
+> 
+
+</details>
+
 # v6.10.6
 ## (2025-12-24)
 

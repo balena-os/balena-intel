@@ -1,4 +1,96 @@
 - commits:
+    - subject: Update balena-yocto-scripts to d8ce8169949e64dbf2bf58aa9f10ac4b7103076d
+      hash: 5e43bded3ded2c0fd73667ec8769287d9f70c0cd
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to d8ce8169949e64dbf2bf58aa9f10ac4b7103076d
+        changelog-entry: Update balena-yocto-scripts to d8ce8169949e64dbf2bf58aa9f10ac4b7103076d
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update Lock file maintenance
+              hash: f91307783b6b706cb921b194c88403f25e37ac3c
+              body: |
+                Update 
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.39.7
+          title: ""
+          date: 2025-12-31T00:43:20.659Z
+        - commits:
+            - subject: Fix condition to check for test suites in workflow
+              hash: e26c0f3b25eecba877b789620ef08b8293773c15
+              body: |
+                Check that test_matrix is truthy before attempting to parse as JSON to avoid the error:
+
+                > Error when evaluating 'if' for job 'test'. balena-os/balena-yocto-scripts/.github/workflows/yocto-build-deploy.yml@master (Line: 2239, Col: 9): could not get operand for index access: Error from function 'fromJSON': empty input
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.39.6
+          title: ""
+          date: 2025-12-30T18:18:07.761Z
+        - commits:
+            - subject: Update aws/aws-cli to v2.32.25
+              hash: b77b9b88998bf72ee3c613f313f9b8527ef31b3f
+              body: |
+                Update aws/aws-cli from 2.32.21 to 2.32.25
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.39.5
+          title: ""
+          date: 2025-12-29T22:42:24.107Z
+        - commits:
+            - subject: Update GitHub Actions
+              hash: 903567ebe732b29780f63a255f3be2c52a4fef53
+              body: |
+                Update actions/checkout from 6.0.0 to 6.0.1
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.39.4
+          title: ""
+          date: 2025-12-29T18:00:41.800Z
+        - commits:
+            - subject: Update aws/aws-cli to v2.32.21
+              hash: ee00fa27eadb563efe7fd8e3ef945da2fc7f571d
+              body: |
+                Update aws/aws-cli from 2.32.18 to 2.32.21
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.39.3
+          title: ""
+          date: 2025-12-19T23:14:45.915Z
+        - commits:
+            - subject: Update aws/aws-cli to v2.32.18
+              hash: fad4bfa2461e2db91dc8995e17282c32cd3de32c
+              body: |
+                Update aws/aws-cli from 2.32.15 to 2.32.18
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.39.2
+          title: ""
+          date: 2025-12-17T02:03:52.558Z
+  version: 6.10.6+rev1
+  title: ""
+  date: 2025-12-31T06:44:51.903Z
+- commits:
     - subject: Update layers/meta-balena to 8cd6c8ecaae04beabee77873db6407b8eda4d805
       hash: 108b2f12d7290cf1159ef5aebfed71a109a4ea48
       body: Update layers/meta-balena
