@@ -1,6 +1,22 @@
 Change log
 -----------
 
+# v6.10.7
+## (2025-12-31)
+
+
+<details>
+<summary> Update layers/meta-balena to 7128780e50b5c78f5b7a95cd8adaca6f5aaff44e [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.10.7
+> ### (Invalid date)
+> 
+> * add extra firmware tests [Yann CARDAILLAC]
+> * recipes-support/os-extra-firmware: Extract extra-firmware volume data path [Alexandru Costache]
+> 
+
+</details>
+
 # v6.10.6+rev1
 ## (2025-12-31)
 

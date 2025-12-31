@@ -1,4 +1,48 @@
 - commits:
+    - subject: Update layers/meta-balena to 7128780e50b5c78f5b7a95cd8adaca6f5aaff44e
+      hash: a08d55dbfdb276b21667c61811180473885087d2
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 7128780e50b5c78f5b7a95cd8adaca6f5aaff44e
+        changelog-entry: Update layers/meta-balena to 7128780e50b5c78f5b7a95cd8adaca6f5aaff44e
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: add extra firmware tests
+              hash: 3ae3e4c6edf0096423d367952d79e43c6469d9a8
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Yann CARDAILLAC <yann.cardaillac@balena.io>
+                signed-off-by: Yann CARDAILLAC <yann.cardaillac@balena.io>
+              author: Yann CARDAILLAC
+              nested: []
+            - subject: "recipes-support/os-extra-firmware: Extract extra-firmware volume data
+                path"
+              hash: cc8a5cde75867e9842f8d9ca02f84f01af295300
+              body: >
+                The volume data path is currently
+                /var/lib/docker/volumes/extra-firmware/_data,
+
+                and might change in the future, so let's use the engine to
+                extract the
+
+                actual value.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+          version: meta-balena-6.10.7
+          title: ""
+          date: 2025-12-31T13:01:52.916Z
+  version: 6.10.7
+  title: ""
+  date: 2025-12-31T17:45:16.681Z
+- commits:
     - subject: Update balena-yocto-scripts to d8ce8169949e64dbf2bf58aa9f10ac4b7103076d
       hash: 5e43bded3ded2c0fd73667ec8769287d9f70c0cd
       body: Update balena-yocto-scripts
