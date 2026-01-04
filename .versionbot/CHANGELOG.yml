@@ -1,4 +1,35 @@
 - commits:
+    - subject: Update layers/meta-balena to bebcd53042463b275659675a13e85bcb797b5535
+      hash: a0854f7b472cd4c4e36cc90df01f3ae9630acae4
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to bebcd53042463b275659675a13e85bcb797b5535
+        changelog-entry: Update layers/meta-balena to bebcd53042463b275659675a13e85bcb797b5535
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "kernel-balena.bbclass: Enable DMA-BUF memory heaps"
+              hash: c3e207d8e8c5fa8f35c6f5e3f4ffc7962e579bd7
+              body: >
+                This is required by some external drivers (e.g. metis).
+
+
+                The configuration matches what Fedora 42 and Debian 13 have
+                enabled.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-6.10.9
+          title: ""
+          date: 2026-01-04T12:08:43.272Z
+  version: 6.10.9
+  title: ""
+  date: 2026-01-04T14:35:42.917Z
+- commits:
     - subject: Update layers/meta-balena to a7f2246bbd875c3e638eb3aa900b37a90b34a8be
       hash: 65e50d48561c4ca12858ee78cb4b5cf56998fb50
       body: Update layers/meta-balena
