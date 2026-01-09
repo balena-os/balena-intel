@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.10.14
+## (2026-01-09)
+
+
+<details>
+<summary> Update layers/meta-balena to 26357df251e2f5212058b3c69bde358d0fe54277 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.10.14
+> ### (2026-01-09)
+> 
+> * initrdscripts: Unlock mutex if regenerate_uuid fails in fsuuidsinit [Michal Toman]
+> 
+
+</details>
+
 # v6.10.13+rev2
 ## (2026-01-09)
 

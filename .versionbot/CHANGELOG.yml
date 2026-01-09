@@ -1,4 +1,53 @@
 - commits:
+    - subject: Update layers/meta-balena to 26357df251e2f5212058b3c69bde358d0fe54277
+      hash: 73ef315577d4deb20c7e80af6ec102f56821004e
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 26357df251e2f5212058b3c69bde358d0fe54277
+        changelog-entry: Update layers/meta-balena to 26357df251e2f5212058b3c69bde358d0fe54277
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "initrdscripts: Unlock mutex if regenerate_uuid fails in fsuuidsinit"
+              hash: 62657c7ccdb690015405804c8d3df00fa814bd87
+              body: >
+                In commit 3f6a302bf53c6c0a609015c92ff927c7575412d9 we've
+                introduced
+
+                a mutex that prevents a race condition between the fsuuidsinit
+                script
+
+                changing FS UUIDs and udev creating the by-state symlinks. This
+                mutex
+
+                is never unlocked if the FS UUID change fails and leaks out
+
+                from the initrd into the final system, where it blocks
+
+                the 65-resin-update-state udev rule from properly executing. The
+                system
+
+                will usually somewhat come up, but fail in weird ways, e.g.
+                automounts
+
+                not working.
+
+
+                This patch unlocks the mutex on failure.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-6.10.14
+          title: ""
+          date: 2026-01-09T13:35:21.220Z
+  version: 6.10.14
+  title: ""
+  date: 2026-01-09T18:29:23.321Z
+- commits:
     - subject: Update balena-yocto-scripts to bf41c3ab59edafcb639f490752f7008d8a2d3c0d
       hash: bbcb2bd2d7549a1ab44b33d21990f3be9be9b6d2
       body: Update balena-yocto-scripts
