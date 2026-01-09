@@ -1,4 +1,29 @@
 - commits:
+    - subject: Update balena-yocto-scripts to bf41c3ab59edafcb639f490752f7008d8a2d3c0d
+      hash: bbcb2bd2d7549a1ab44b33d21990f3be9be9b6d2
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to bf41c3ab59edafcb639f490752f7008d8a2d3c0d
+        changelog-entry: Update balena-yocto-scripts to bf41c3ab59edafcb639f490752f7008d8a2d3c0d
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update actions/download-artifact action to v7
+              hash: 28fef45074b612d63316f1ec110ca8f17543e0ac
+              body: |
+                Update actions/download-artifact from 6.0.0 to 7.0.0
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.39.9
+          title: ""
+          date: 2026-01-03T06:06:39.873Z
+  version: 6.10.13+rev2
+  title: ""
+  date: 2026-01-09T07:55:04.981Z
+- commits:
     - subject: Update layers/poky to c942cdb0572ab065a13424aa7482404269ff9554
       hash: 1782e41fa40ff6e425dd726796454a5c989412b2
       body: Update layers/poky
