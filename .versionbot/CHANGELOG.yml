@@ -1,4 +1,37 @@
 - commits:
+    - subject: Update layers/meta-balena to 45031eb688e478a90151d1d48e79ad86c0b27b19
+      hash: 27963578040612f78c7165e5d1e622fdea90f475
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 45031eb688e478a90151d1d48e79ad86c0b27b19
+        changelog-entry: Update layers/meta-balena to 45031eb688e478a90151d1d48e79ad86c0b27b19
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "os-helpers/os-helpers-bootloader-config: Add support for whitelisted
+                cmdline args"
+              hash: 549db4c8ead797a28243d8b99329aa17524dbdb9
+              body: >
+                ... and use grub-editenv where applicable. We also attempt to
+                save
+
+                any existing environment variables from grub_extra env if it was
+
+                created or edited with any tool other than grub-editenv.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+          version: meta-balena-6.10.15
+          title: ""
+          date: 2026-01-12T10:42:48.677Z
+  version: 6.10.15
+  title: ""
+  date: 2026-01-14T05:40:07.640Z
+- commits:
     - subject: Update balena-yocto-scripts to d3e228e92b3c9f714f4514206f085fa76c2f6629
       hash: 2804f11892a7f1af24ef89eb29a77f6e9b1668fb
       body: Update balena-yocto-scripts

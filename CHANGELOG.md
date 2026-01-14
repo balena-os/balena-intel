@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.10.15
+## (2026-01-14)
+
+
+<details>
+<summary> Update layers/meta-balena to 45031eb688e478a90151d1d48e79ad86c0b27b19 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.10.15
+> ### (2026-01-12)
+> 
+> * os-helpers/os-helpers-bootloader-config: Add support for whitelisted cmdline args [Alexandru Costache]
+> 
+
+</details>
+
 # v6.10.14+rev2
 ## (2026-01-14)
 
