@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.10.15+rev1
+## (2026-01-14)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 829fc3c99e238dd8a4f2c4bbfa84fac209e2b351 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.39.11
+> ### (2026-01-14)
+> 
+> * Update actions/upload-artifact action to v6 [balena-renovate[bot]]
+> 
+
+</details>
+
 # v6.10.15
 ## (2026-01-14)
 
