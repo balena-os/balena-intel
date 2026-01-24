@@ -1,6 +1,38 @@
 Change log
 -----------
 
+# v6.10.19
+## (2026-01-24)
+
+
+<details>
+<summary> Update layers/meta-balena to e512a0e8408220005e47cc1f7eec5411e034efc4 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.10.19
+> ### (2026-01-23)
+> 
+> * Further reduce the size of the balena bootloader by removing PTP clock support [Florin Sarbu]
+> 
+> ## meta-balena-6.10.18
+> ### (2026-01-21)
+> 
+> * initrdscripts: export IS_ROLLBACK and ROOT_PART flags from abroot script [Michal Toman]
+> * initrdscripts: add extrafw script [Michal Toman]
+> * initrdscripts: separate mounting boot partition from abroot [Michal Toman]
+> 
+> ## meta-balena-6.10.17
+> ### (2026-01-21)
+> 
+> * Update vacuum-size to 128M to match vacuum.conf and journald-balena-os.conf [Chris Sawer]
+> 
+> ## meta-balena-6.10.16
+> ### (2026-01-20)
+> 
+> * os-helpers: safe-reboot: always sync filesystem before reboot [Alex Gonzalez]
+> 
+
+</details>
+
 # v6.10.15+rev6
 ## (2026-01-24)
 

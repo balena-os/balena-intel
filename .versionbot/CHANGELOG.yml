@@ -1,4 +1,161 @@
 - commits:
+    - subject: Update layers/meta-balena to e512a0e8408220005e47cc1f7eec5411e034efc4
+      hash: 72b3b838d7357b347a69df9de1ced228ad4c1ffe
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to e512a0e8408220005e47cc1f7eec5411e034efc4
+        changelog-entry: Update layers/meta-balena to e512a0e8408220005e47cc1f7eec5411e034efc4
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Further reduce the size of the balena bootloader by removing PTP clock
+                support
+              hash: 793ab6bf9a64f1a27418c301a5c920454fd75f85
+              body: >
+                This disables support for PTP clock since it's not something
+
+                I foresee us needing in the balena bootloader.
+
+
+                Additionaly, fix the actual bootloader shrinking since the
+                initial
+
+                commit which introduced this did not effectively add the
+                disabling
+
+                of these options to the .config
+              footer:
+                Changelog-entry: Further reduce the size of the balena bootloader by removing
+                  PTP clock support
+                changelog-entry: Further reduce the size of the balena bootloader by removing
+                  PTP clock support
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-6.10.19
+          title: ""
+          date: 2026-01-23T05:03:51.721Z
+        - commits:
+            - subject: "initrdscripts: export IS_ROLLBACK and ROOT_PART flags from abroot
+                script"
+              hash: 19ed842efafa473f1f6d4a39cae8ac3fccf9df64
+              body: >
+                Some device types apply additional (bootloader-level) rollback
+                hooks
+
+                when the abroot script decides to roll back. Right now they keep
+
+                a cusomized fork of the abroot script in the device repo.
+
+
+                This patch exports the ROOT_PART variable from abroot to
+                indicate
+
+                which partition we're about to boot into, as well as a new
+                IS_ROLLBACK
+
+                variable. This way all the device types should be able to use
+                the same
+
+                abroot and add hooks as separate initrd scripts ordered after
+                abroot.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+            - subject: "initrdscripts: add extrafw script"
+              hash: f51d22a0f232844221badef4e793fa057d70fe1a
+              body: >
+                This enables the balena bootloader to set a custom firmware
+                search path
+
+                on the kernel command line.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+            - subject: "initrdscripts: separate mounting boot partition from abroot"
+              hash: 49a3c942b852dcc1e96b0bdfded6666c1fd7b369
+              body: >
+                Right now, abroot is the only script executed in the balena
+                bootloader
+
+                so it does everything - find the boot partition, mount it, read
+                boot
+
+                configuration, perform A/B selection, and unmount the boot
+                partition.
+
+
+                Long-term, we want to introduce other bootloader scripts that
+                read
+
+                the boot configuration and do other things, so we want to have
+
+                an "entry" script that finds and mounts the boot partition, so
+                that
+
+                the subsequently executed scripts can just use it.
+
+
+                This patch splits the abroot script into two - the mountboot
+                script
+
+                that finds and mounts the boot partition, and the abroot script,
+
+                that only performs tha A/B selection.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-6.10.18
+          title: ""
+          date: 2026-01-21T18:19:00.076Z
+        - commits:
+            - subject: Update vacuum-size to 128M to match vacuum.conf and
+                journald-balena-os.conf
+              hash: 42ac8ca0096c93c486ea29f2de4cd3bacd0460ff
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Chris Sawer <chris.sawer@demandlogic.co.uk>
+                signed-off-by: Chris Sawer <chris.sawer@demandlogic.co.uk>
+              author: Chris Sawer
+              nested: []
+          version: meta-balena-6.10.17
+          title: ""
+          date: 2026-01-21T11:49:44.917Z
+        - commits:
+            - subject: "os-helpers: safe-reboot: always sync filesystem before reboot"
+              hash: 69066785bef32cf64471f4e999d771dfd4d009fb
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-6.10.16
+          title: ""
+          date: 2026-01-20T11:56:13.550Z
+  version: 6.10.19
+  title: ""
+  date: 2026-01-24T19:41:29.762Z
+- commits:
     - subject: Update layers/meta-openembedded to
         8f5f5cf4b335a09313c48394c62bfb614868fc1e
       hash: a5791ead5d8c80247f2e06cc3372c54f7e2275a0
