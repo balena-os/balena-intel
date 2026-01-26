@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.10.20
+## (2026-01-26)
+
+
+<details>
+<summary> Update layers/meta-balena to f9543178d5ecb5b633cc139a0a56ce0b17ecce67 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.10.20
+> ### (2026-01-26)
+> 
+> * Update actions/setup-python digest to a309ff8 [balena-renovate[bot]]
+> 
+
+</details>
+
 # v6.10.19
 ## (2026-01-24)
 
