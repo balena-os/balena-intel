@@ -1,6 +1,22 @@
 Change log
 -----------
 
+# v6.10.21
+## (2026-01-27)
+
+
+<details>
+<summary> Update layers/meta-balena to 3238e53bf8221718b32066a36cddec8ecfafa979 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.10.21
+> ### (2026-01-26)
+> 
+> * classes/kernel-balena: Fix typo in kernel-balena.bbclass [Alexandru Costache]
+> * Fix type allSetConfigs -> allSetKernelConfigs [Christina Ying Wang]
+> 
+
+</details>
+
 # v6.10.20+rev2
 ## (2026-01-27)
 
