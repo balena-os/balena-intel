@@ -1,4 +1,38 @@
 - commits:
+    - subject: Update layers/meta-balena to 01d4419d2bfec3463905464776e17b90dc9e417d
+      hash: 1e47d2e4d4130fc5449a76cbf0d1b708849dc13e
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 01d4419d2bfec3463905464776e17b90dc9e417d
+        changelog-entry: Update layers/meta-balena to 01d4419d2bfec3463905464776e17b90dc9e417d
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "tests: Update kernel-module-build submodule"
+              hash: 36ca85a57312b0187cd6f74fe5542017a61b7ee5
+              body: |
+                ... in the extra-firmware and secure-boot tests.
+
+                The kernel-module-build used a Ubuntu base image,
+                which no longer works for the RaspberryPi because
+                arm32v6 is no longer provided for Ubuntu base images.
+
+                Therefore we're updating the submodule to make use of
+                an Alpine base image.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+          version: meta-balena-6.10.22
+          title: ""
+          date: 2026-01-27T19:02:51.427Z
+  version: 6.10.22
+  title: ""
+  date: 2026-01-28T00:29:24.397Z
+- commits:
     - subject: Update layers/meta-balena to 3238e53bf8221718b32066a36cddec8ecfafa979
       hash: e8028b5499926e0303101adc41d3ea1f76acbbd7
       body: Update layers/meta-balena

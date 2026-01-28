@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v6.10.22
+## (2026-01-28)
+
+
+<details>
+<summary> Update layers/meta-balena to 01d4419d2bfec3463905464776e17b90dc9e417d [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.10.22
+> ### (2026-01-27)
+> 
+> * tests: Update kernel-module-build submodule [Alexandru Costache]
+> 
+
+</details>
+
 # v6.10.21
 ## (2026-01-27)
 
