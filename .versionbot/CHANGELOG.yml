@@ -1,4 +1,447 @@
 - commits:
+    - subject: Update layers/meta-balena to 76525829a7ce8811faf20a1b6f20fef77c53b8c8
+      hash: 576a1d6d48900f76cc3116c9df7501b7c4587d44
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 76525829a7ce8811faf20a1b6f20fef77c53b8c8
+        changelog-entry: Update layers/meta-balena to 76525829a7ce8811faf20a1b6f20fef77c53b8c8
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "hostapp-update-hooks: allow GRUB downgrade during secure boot
+                rollbacks"
+              hash: 8855c81bff7c62f5e9d22779e4774df90d6e6f23
+              body: >
+                On systems where UEFI binaries are measured into PCR7,
+                rollback-altboot
+
+                currently doesn't work if GRUB has been updated. This is because
+
+                the 0-signed-update hook only recalculates the expected PCR7
+                hashes
+
+                when updating forward, so after GRUB is rolled back, it's no
+                longer
+
+                allowed to boot.
+
+
+                This is specific to rollback-altboot, but pretty much by
+                accident.
+
+                rollback-health works because it runs the old hooks
+
+                with DURING_UPDATE=1, so the system thinks it's updating
+
+                (and recalculates PCR7) even when it's really rolling back. This
+                has
+
+                an unwanted side-effect of applying the dbx blacklist from the
+                new OS
+
+                (the one we're rolling back from) and prevents a retry.
+
+
+                This patch fixes both issues, 0-signed-update now recalculates
+
+                PCR7 unconditionally and only applies the destructive changes
+
+                (db and dbx updates) when it's actually updating forward.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-6.11.8
+          title: ""
+          date: 2026-03-03T07:28:52.792Z
+        - commits:
+            - subject: Update balena-supervisor to v17.6.2
+              hash: 53ea95f465e96633f735e1025ce50bc64142ab27
+              body: |
+                Update balena-supervisor from 17.5.0 to 17.6.2
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested:
+                - commits:
+                    - subject: Fix storage usage over-reporting caused by duplicate mount points
+                      hash: b1c33d54f45998d6fc403b2637d35f0931e44d7a
+                      body: >
+                        systeminformation v5.30.8 no longer deduplicates
+                        fsSize() entries
+
+                        that share the same device but have different mount
+                        points. This
+
+                        caused getStorageInfo() to sum the `used` value multiple
+                        times for
+
+                        the same block device, inflating reported storage usage.
+
+
+                        Deduplicate fsSize() entries by device path before
+                        summing usage.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Christina Ying Wang <christina@balena.io>
+                        signed-off-by: Christina Ying Wang <christina@balena.io>
+                      author: Christina Ying Wang
+                      nested: []
+                  version: balena-supervisor-17.6.2
+                  title: ""
+                  date: 2026-02-25T23:04:51.224Z
+                - commits:
+                    - subject: Update systeminformation to v5.30.8 [SECURITY]
+                      hash: 90ee858e0e8feddcd520b59ae5e8e6a433c7e16c
+                      body: |
+                        Update systeminformation from 5.27.14 to 5.30.8
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: balena-supervisor-17.6.1
+                  title: ""
+                  date: 2026-02-19T18:52:53.065Z
+                - commits:
+                    - subject: Rewrite lock mechanism doc to include flock as well
+                      hash: cf6b80f4da3f6cf7df00113fd82713382d0be55e
+                      body: >
+                        Support ticket 5869, shows that there's two distinct
+                        locking mechanism.
+
+                        One for app update locking and configuration change
+                        reboot (supervisor): lockfile
+
+                        One for os update reboot (os's safe_reboot): flock
+
+
+                        This modification hopefully clarify this situation.
+                      footer:
+                        Change-type: minor
+                        change-type: minor
+                        Signed-off-by: Yann CARDAILLAC <yann.cardaillac@balena.io>
+                        signed-off-by: Yann CARDAILLAC <yann.cardaillac@balena.io>
+                      author: Yann CARDAILLAC
+                      nested: []
+                  version: balena-supervisor-17.6.0
+                  title: ""
+                  date: 2026-02-17T14:55:58.846Z
+                - commits:
+                    - subject: Update webpack to v5.104.1 [SECURITY]
+                      hash: 0caf4e6422336ab8ddb362afb62daacadc884124
+                      body: |
+                        Update webpack from 5.97.1 to 5.104.1
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: balena-supervisor-17.5.3
+                  title: ""
+                  date: 2026-02-15T16:35:00.854Z
+                - commits:
+                    - subject: Preserve unmanaged fields in extra_uEnv.txt
+                      hash: 475a8d19978cfad2409f9daf3429f34980e9d2c9
+                      body: >
+                        meta-balena PR #3754 added an extra field to
+                        extra_uEnv.txt
+
+                        for managing the extra-firmware volume loading, but the
+                        Supervisor
+
+                        doesn't play well with unmanaged fields in this file.
+
+
+                        This commit changes the Supervisor to preserve unmanaged
+                        fields
+
+                        in extra_uEnv.txt while overwriting managed fields if a
+                        new value
+
+                        is set.
+                      footer:
+                        See: https://github.com/balena-os/meta-balena/pull/3754
+                        see: https://github.com/balena-os/meta-balena/pull/3754
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Christina Ying Wang <christina@balena.io>
+                        signed-off-by: Christina Ying Wang <christina@balena.io>
+                      author: Christina Ying Wang
+                      nested: []
+                  version: balena-supervisor-17.5.2
+                  title: ""
+                  date: 2026-02-10T18:51:54.852Z
+                - commits:
+                    - subject: Do not rely on container timestamps to check for dependency start
+                      hash: 5aa64126ab059505b6456cd9b170a3d609db4b75
+                      body: >
+                        The start/stop timestamps have shown to be unreliable
+                        way to determine
+
+                        if the container has been started in the past. This
+                        shifts to relying
+
+                        only on the service status. A service that has
+                        `Installing` or
+
+                        `Installed` status has not yet been started, otherwise
+                        we can assume the
+
+                        container was started in the past.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: felipe
+                      nested: []
+                  version: balena-supervisor-17.5.1
+                  title: ""
+                  date: 2026-02-10T17:51:16.705Z
+          version: meta-balena-6.11.7
+          title: ""
+          date: 2026-03-02T14:28:01.708Z
+        - commits:
+            - subject: Update tests/leviathan digest to 4ac50e6
+              hash: 90d736c8a438da7086e0e668e58496ac96553529
+              body: Update tests/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested:
+                - commits:
+                    - subject: Update balena-os/leviathan-worker to v2.10.29
+                      hash: 7cc98152c439b468064549c9d30c04e27565ff3d
+                      body: >
+                        Update balena-os/leviathan-worker from 2.10.27 to 2.10.29
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.36.96
+                  title: ""
+                  date: 2026-02-28T04:58:54.168Z
+                - commits:
+                    - subject: Update actions/upload-artifact action to v7
+                      hash: 7d2cb2e908f0035fe21da5eeb69e5b8626b94944
+                      body: |
+                        Update actions/upload-artifact from 6 to 7
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.36.95
+                  title: ""
+                  date: 2026-02-28T01:11:13.190Z
+                - commits:
+                    - subject: Update balena-os/leviathan-worker to v2.10.27
+                      hash: a533ecf928b7ecc528491a76fe59733fbc5808ea
+                      body: >
+                        Update balena-os/leviathan-worker from 2.10.26 to 2.10.27
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.36.94
+                  title: ""
+                  date: 2026-02-25T14:59:07.240Z
+                - commits:
+                    - subject: Update Lock file maintenance
+                      hash: 289479093b72898e3379890d00d444a4e070e521
+                      body: |
+                        Update 
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.36.93
+                  title: ""
+                  date: 2026-02-23T01:18:49.892Z
+                - commits:
+                    - subject: Update Lock file maintenance
+                      hash: 8a639865f1674aede7d28dd24d25096efe6b449b
+                      body: |
+                        Update 
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.36.92
+                  title: ""
+                  date: 2026-02-16T01:19:09.865Z
+                - commits:
+                    - subject: Update balena-os/leviathan-worker to v2.10.26
+                      hash: d6a05f418f672a0e963c2dd8b1b44747fb52ecf1
+                      body: >
+                        Update balena-os/leviathan-worker from 2.10.25 to 2.10.26
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.36.91
+                  title: ""
+                  date: 2026-02-09T05:27:29.740Z
+                - commits:
+                    - subject: Update balena-os/leviathan-worker to v2.10.25
+                      hash: 1c15eba590a64f3ebd4a45c7e83385b18eeca21c
+                      body: >
+                        Update balena-os/leviathan-worker from 2.10.24 to 2.10.25
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.36.90
+                  title: ""
+                  date: 2026-02-09T03:48:08.731Z
+                - commits:
+                    - subject: Update Lock file maintenance
+                      hash: 98e5b8e869cc7c5de8ad8853850b1a644327802e
+                      body: |
+                        Update 
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.36.89
+                  title: ""
+                  date: 2026-02-09T01:19:28.262Z
+                - commits:
+                    - subject: Update actions/checkout digest to de0fac2
+                      hash: 91755a73f22aba07a30a4d98ae9a54a238cd6154
+                      body: |
+                        Update actions/checkout
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.36.88
+                  title: ""
+                  date: 2026-02-07T01:16:49.329Z
+                - commits:
+                    - subject: Update balena-os/leviathan-worker to v2.10.24
+                      hash: e4755da76f4ba6b251e9c5e859c8581f36fcffda
+                      body: >
+                        Update balena-os/leviathan-worker from 2.10.23 to 2.10.24
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.36.87
+                  title: ""
+                  date: 2026-02-02T03:53:34.926Z
+                - commits:
+                    - subject: Update Lock file maintenance
+                      hash: 4a7148083d36ca458dbe9504fa46af2f542b4cad
+                      body: |
+                        Update 
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.36.86
+                  title: ""
+                  date: 2026-02-02T01:32:26.564Z
+                - commits:
+                    - subject: Update balena-os/leviathan-worker to v2.10.23
+                      hash: 4b9c39f394308a46eac21ec359c87b73de45734a
+                      body: >
+                        Update balena-os/leviathan-worker from 2.10.22 to 2.10.23
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.36.85
+                  title: ""
+                  date: 2026-01-27T06:54:09.774Z
+                - commits:
+                    - subject: Update Lock file maintenance
+                      hash: 1167ddcb395714bec01e9fc259d15740fe7a42c5
+                      body: |
+                        Update 
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.36.84
+                  title: ""
+                  date: 2026-01-26T01:13:41.743Z
+                - commits:
+                    - subject: Update balena-os/leviathan-worker to v2.10.22
+                      hash: 53bad9a6e1c0af840cea0bf38da3507aecc980a8
+                      body: >
+                        Update balena-os/leviathan-worker from 2.10.20 to 2.10.22
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.36.83
+                  title: ""
+                  date: 2026-01-20T01:05:45.368Z
+                - commits:
+                    - subject: Update Lock file maintenance
+                      hash: 92881d676e3ce9cdd5d2f90e6ca7c34048dc2ff5
+                      body: |
+                        Update 
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.36.82
+                  title: ""
+                  date: 2026-01-19T01:14:35.573Z
+                - commits:
+                    - subject: Update Lock file maintenance
+                      hash: 1a97f504bd07aa5a355d93b42bd75a9036b5eb33
+                      body: |
+                        Update 
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.36.81
+                  title: ""
+                  date: 2026-01-12T01:08:44.091Z
+                - commits:
+                    - subject: Update Lock file maintenance
+                      hash: 3114801b367f3b3d46bd991121470798e1cf93f5
+                      body: |
+                        Update 
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.36.80
+                  title: ""
+                  date: 2026-01-05T01:10:26.115Z
+          version: meta-balena-6.11.6
+          title: ""
+          date: 2026-02-28T11:01:18.406Z
+  version: 6.11.8
+  title: ""
+  date: 2026-03-03T12:03:48.157Z
+- commits:
     - subject: Update layers/poky to 3f5e203cbf83669de4e31bc170224da271752069
       hash: fcdd43917e3f06edcb8a2a92289be0bda3116920
       body: Update layers/poky
