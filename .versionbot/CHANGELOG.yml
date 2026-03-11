@@ -1,4 +1,61 @@
 - commits:
+    - subject: Update contracts to ab2042b50e075fa27e16e23bb413adac7700c132
+      hash: 274956c0603bc804a805aef85b364c9c7db345f8
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to ab2042b50e075fa27e16e23bb413adac7700c132
+        changelog-entry: Update contracts to ab2042b50e075fa27e16e23bb413adac7700c132
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "iot-gate-imx8plus-d1d8: Enable bluetooth and wifi"
+              hash: 51c4c60e2b39798d8155a5bb732d8b119c2b9bcd
+              body: >
+                We attached the official IFM-WB Bluetooth and WiFi module to the
+                DUT in autokit
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+          version: contracts-2.0.140
+          title: ""
+          date: 2026-03-11T07:59:21.304Z
+        - commits:
+            - subject: "ucm-imx93: Set wifi and bt to false"
+              hash: 56818a46726b814a475d60152dffaf56f701cdb8
+              body: >
+                The SoM we have is a Lite variant (which lacks bluetooth and
+                wifi) so we set
+
+                these to false until we get another SoM that has them.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+          version: contracts-2.0.139
+          title: ""
+          date: 2026-03-11T07:23:06.723Z
+        - commits:
+            - subject: "contracts/raspberrypi5: Update device name to mention CM5 support"
+              hash: 5b3c3bb100da7a717be67e9acb168cc3d5721af3
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru
+          version: contracts-2.0.138
+          title: ""
+          date: 2026-03-09T10:27:43.239Z
+  version: 6.11.8+rev1
+  title: ""
+  date: 2026-03-11T13:15:46.551Z
+- commits:
     - subject: Update layers/meta-balena to 76525829a7ce8811faf20a1b6f20fef77c53b8c8
       hash: 576a1d6d48900f76cc3116c9df7501b7c4587d44
       body: Update layers/meta-balena

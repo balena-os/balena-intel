@@ -1,6 +1,31 @@
 Change log
 -----------
 
+# v6.11.8+rev1
+## (2026-03-11)
+
+
+<details>
+<summary> Update contracts to ab2042b50e075fa27e16e23bb413adac7700c132 [balena-renovate[bot]] </summary>
+
+> ## contracts-2.0.140
+> ### (2026-03-11)
+> 
+> * iot-gate-imx8plus-d1d8: Enable bluetooth and wifi [Florin Sarbu]
+> 
+> ## contracts-2.0.139
+> ### (2026-03-11)
+> 
+> * ucm-imx93: Set wifi and bt to false [Florin Sarbu]
+> 
+> ## contracts-2.0.138
+> ### (2026-03-09)
+> 
+> * contracts/raspberrypi5: Update device name to mention CM5 support [Alexandru]
+> 
+
+</details>
+
 # v6.11.8
 ## (2026-03-03)
 
