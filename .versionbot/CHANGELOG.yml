@@ -1,4 +1,101 @@
 - commits:
+    - subject: Update layers/meta-balena to db20cbc5a2111924ec896c183539400d81d29e4c
+      hash: a47367c6f9175834b367f746918da9843c279910
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to db20cbc5a2111924ec896c183539400d81d29e4c
+        changelog-entry: Update layers/meta-balena to db20cbc5a2111924ec896c183539400d81d29e4c
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update balena-supervisor to v17.6.3
+              hash: 2db60e91dec0cbde8bf5c6133b5ce001edad16ea
+              body: |
+                Update balena-supervisor from 17.6.2 to 17.6.3
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested:
+                - commits:
+                    - subject: Only report download progress if service status is `Downloading`
+                      hash: 1c3efc9316405aa81e9ace790f62202e068e7204
+                      body: >
+                        The value is useless for the backend otherwise and this
+                        also prevents
+
+                        calculating the wrong update status for reporting.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Felipe Lalanne
+                      nested: []
+                  version: balena-supervisor-17.6.3
+                  title: ""
+                  date: 2026-03-10T08:08:26.569Z
+          version: meta-balena-6.11.11
+          title: ""
+          date: 2026-03-10T12:46:02.038Z
+        - commits:
+            - subject: "efitools: update to master"
+              hash: 474f4bde4ff49250568628e1c88b622a1b433259
+              body: >
+                At this moment hash-to-efi-sig-list works fine on <= 6.12 kernel
+
+                binaries, but fails to get the hash of a kernel 6.18 binary,
+                reporting
+
+                a PECOFF error.
+
+
+                The latest released efitools is v1.9.2 from 2019, which we're
+                currently
+
+                using. In master, there are 4 extra commits from 2020 on top of
+                it, one
+
+                of which (namely 449cfc99c9453d6321116c12a19f7ceba0bd7fec) fixes
+
+                the issue.
+
+
+                This bumps efitools to follow master and include the 4 commits.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-6.11.10
+          title: ""
+          date: 2026-03-05T09:43:10.899Z
+        - commits:
+            - subject: "recipes-support/hostapp-update-hooks: Deploy blacklisted bootloader
+                files"
+              hash: 539bf3638f5ecab05c587b1a97f15b6f4b526405
+              body: >
+                ... only if they don't already exist. This way, devices which
+                are updated
+
+                from a version in which these files did not exist, will have
+                them from
+
+                now on.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+          version: meta-balena-6.11.9
+          title: ""
+          date: 2026-03-04T12:56:26.148Z
+  version: 6.11.11
+  title: ""
+  date: 2026-03-11T17:32:20.759Z
+- commits:
     - subject: Update contracts to ab2042b50e075fa27e16e23bb413adac7700c132
       hash: 274956c0603bc804a805aef85b364c9c7db345f8
       body: Update contracts
