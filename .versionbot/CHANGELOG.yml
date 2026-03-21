@@ -1,4 +1,33 @@
 - commits:
+    - subject: Update contracts to 7225779853a3904517285bd19f7e2be44026c108
+      hash: 1ad7a03e1fbbc03c71bc17082b0c656373728328
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to 7225779853a3904517285bd19f7e2be44026c108
+        changelog-entry: Update contracts to 7225779853a3904517285bd19f7e2be44026c108
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "iot-gate-imx8plus: replace dram size range with explicit dram sizes"
+              hash: 1863899288374bd7ff6b5d42f80480fff11635c9
+              body: >
+                The 1G-8G and 2G-4G slugs could be confused with ranges, so this
+                commit
+
+                replaces them with 1GB or 8GB and 2GB or 4GB.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+          version: contracts-2.0.141
+          title: ""
+          date: 2026-03-16T16:10:34.868Z
+  version: 6.11.11+rev2
+  title: ""
+  date: 2026-03-21T17:16:15.474Z
+- commits:
     - subject: Update layers/poky to cf615e1d3bde7e5cb53b56b67954bc6e75bbb1d6
       hash: ce5816bd666bf8234c46cf7492e4a0559f635712
       body: Update layers/poky
