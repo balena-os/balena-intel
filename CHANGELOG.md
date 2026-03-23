@@ -1,6 +1,79 @@
 Change log
 -----------
 
+# v6.12.2
+## (2026-03-23)
+
+
+<details>
+<summary> Update layers/meta-balena to 0cc73f5481ae9ac26369e78806fd7c907a6a4aeb [balena-renovate[bot]] </summary>
+
+> ## meta-balena-6.12.2
+> ### (2026-03-20)
+> 
+> * balena-supervisor: remove redundant bind mounts and DOCKER_ROOT [Alex Gonzalez]
+> * balena-supervisor: remove apps.json initialization from start script [Alex Gonzalez]
+> * balena-supervisor: remove restart from engine run command [Alex Gonzalez]
+> 
+> ## meta-balena-6.12.1
+> ### (2026-03-18)
+> 
+> * os/tests: Fix sporadic failure in recover-sshd-socket [Alexandru Costache]
+> 
+> ## meta-balena-6.12.0
+> ### (2026-03-17)
+> 
+> * add flock and lockfile documentation [Yann CARDAILLAC]
+> 
+> ## meta-balena-6.11.14
+> ### (2026-03-16)
+> 
+> * wpa-supplicant: Align to recipe from Scarthgap [Florin Sarbu]
+> 
+> ## meta-balena-6.11.13
+> ### (2026-03-14)
+> 
+> * tcgtool: update to v0.1.4 [Michal Toman]
+> 
+> ## meta-balena-6.11.12
+> ### (2026-03-14)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 6430fad [balena-renovate[bot]] </summary>
+> 
+>> ### leviathan-2.36.101
+>> #### (2026-03-11)
+>> 
+>> * Update core/contracts digest to ab2042b [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.100
+>> #### (2026-03-09)
+>> 
+>> * Update core/contracts digest to 73054ac [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.99
+>> #### (2026-03-09)
+>> 
+>> * Update Lock file maintenance [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.98
+>> #### (2026-03-07)
+>> 
+>> * Update docker/setup-buildx-action action to v4 [balena-renovate[bot]]
+>> 
+>> ### leviathan-2.36.97
+>> #### (2026-03-02)
+>> 
+>> * Update Lock file maintenance [balena-renovate[bot]]
+>> 
+> 
+> </details>
+> 
+> 
+
+</details>
+
 # v6.11.11+rev2
 ## (2026-03-21)
 

@@ -1,4 +1,260 @@
 - commits:
+    - subject: Update layers/meta-balena to 0cc73f5481ae9ac26369e78806fd7c907a6a4aeb
+      hash: 4043ff67ceefb7c78347fb7073db021ab374d0a2
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 0cc73f5481ae9ac26369e78806fd7c907a6a4aeb
+        changelog-entry: Update layers/meta-balena to 0cc73f5481ae9ac26369e78806fd7c907a6a4aeb
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "balena-supervisor: remove redundant bind mounts and DOCKER_ROOT"
+              hash: f89a663ce8fa379176f935a45ff6340c8e700f9e
+              body: >
+                The supervisor runs mount-partitions.sh on startup to discover
+                and
+
+                mount boot, state, and data partitions internally via DBus,
+                making
+
+                several host-provided bind mounts redundant:
+
+
+                - config.json: overridden by mount-partitions.sh (documented as
+                  legacy host mount)
+                - apps.json: target path /boot/apps.json has zero references;
+                  supervisor reads from /mnt/data/apps.json via its own mount
+                - fib_trie: zero references in the supervisor codebase
+
+                - ssl/certs and ca-certificates: container image includes
+                  ca-certificates, and the read-only mounts conflict with entry.sh
+                  which writes to these paths
+
+                Also remove DOCKER_ROOT env var as entry.sh defaults to the same
+
+                value (/mnt/root/var/lib/docker).
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "balena-supervisor: remove apps.json initialization from start script"
+              hash: be4807563191d94d14045542912fc146da16c3e9
+              body: >
+                The supervisor's preload logic handles a missing or empty
+                apps.json
+
+                gracefully and continuing normally. The host-side initialization
+                that creates
+
+                an empty apps.json is redundant.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "balena-supervisor: remove restart from engine run command"
+              hash: 373a600002fe1078ec9fdc83f5db983afb604c06
+              body: >
+                The supervisor service already specifies a restart - this
+                duplicity
+
+                causes race conditions that on occasions fail to boot the
+                supervisor.
+
+
+                See https://balena.zendesk.com/agent/tickets/5754
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-6.12.2
+          title: ""
+          date: 2026-03-20T19:35:25.556Z
+        - commits:
+            - subject: "os/tests: Fix sporadic failure in recover-sshd-socket"
+              hash: 093e3cbd633e418aa00665e13d9b591310c5bb56
+              body: >
+                Occasionally the recover-sshd-socket test may fail if
+
+                the exit reason for sshd.socket is 'success' instead
+
+                of 'trigger-limit-hit'. This seems to be a race which could
+
+                be caused by factors like the speed of the hardware, the way
+
+                systemd calculates time, as well as to how it determines "bad"
+
+                connections. For example if the first connection is fully
+
+                handed off before the next one arrived, the burst counter may
+
+                not reach the limit.
+
+
+                Also, if the socket unit is restarted while the script sleeps
+
+                for two seconds, the Result property would show 'success' as the
+
+                unit is now healthy again.
+
+
+                We switch to a lower burst limit and keep each connection
+
+                active for a period of time longer than the systemd's sliding
+                window,
+
+                to ensure that the connection limit is always exceeded in the
+                defined
+
+                interval.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+          version: meta-balena-6.12.1
+          title: ""
+          date: 2026-03-18T09:34:00.113Z
+        - commits:
+            - subject: add flock and lockfile documentation
+              hash: d5ae3bea0cce63d60e5048fe696c655a666b9550
+              body: ""
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Yann CARDAILLAC <yann.cardaillac@balena.io>
+                signed-off-by: Yann CARDAILLAC <yann.cardaillac@balena.io>
+              author: Yann CARDAILLAC
+              nested: []
+          version: meta-balena-6.12.0
+          title: ""
+          date: 2026-03-17T10:38:00.364Z
+        - commits:
+            - subject: "wpa-supplicant: Align to recipe from Scarthgap"
+              hash: bd8979799b88c68b40892af469d0fe1da5a7d791
+              body: >
+                We add the recipe with the patches from Scarthgap revision
+                97f732ce9b914ea4022c9425611c16d333c2787b
+
+
+                This is the same package version but adds additional CVE
+                patches.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-6.11.14
+          title: ""
+          date: 2026-03-16T13:02:38.469Z
+        - commits:
+            - subject: "tcgtool: update to v0.1.4"
+              hash: e87d51dcafe025009a86c18b757dbea6ebbaf6fe
+              body: |
+                This should fix hash calculation for kernel 6.18 binaries
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Michal Toman <michalt@balena.io>
+                signed-off-by: Michal Toman <michalt@balena.io>
+              author: Michal Toman
+              nested: []
+          version: meta-balena-6.11.13
+          title: ""
+          date: 2026-03-14T22:54:14.152Z
+        - commits:
+            - subject: Update tests/leviathan digest to 6430fad
+              hash: 0cdd837d6dc8a5664ce7ceb9710cd7539d43c214
+              body: Update tests/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested:
+                - commits:
+                    - subject: Update core/contracts digest to ab2042b
+                      hash: 9844b0bc7ed924da85ae18e1b36bc4e3f36f3c8e
+                      body: |
+                        Update core/contracts
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.36.101
+                  title: ""
+                  date: 2026-03-11T08:56:26.364Z
+                - commits:
+                    - subject: Update core/contracts digest to 73054ac
+                      hash: 73abc9499c4b37ff48a09bde7726f95463d27455
+                      body: |
+                        Update core/contracts
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.36.100
+                  title: ""
+                  date: 2026-03-09T11:05:19.331Z
+                - commits:
+                    - subject: Update Lock file maintenance
+                      hash: f1d17673fd16679a48021099c51fa9baaef1d1af
+                      body: |
+                        Update 
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.36.99
+                  title: ""
+                  date: 2026-03-09T01:21:48.394Z
+                - commits:
+                    - subject: Update docker/setup-buildx-action action to v4
+                      hash: 37c171f8292611acc86a6ebf9a664f64b134b46b
+                      body: |
+                        Update docker/setup-buildx-action from 3 to 4
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.36.98
+                  title: ""
+                  date: 2026-03-07T03:29:41.922Z
+                - commits:
+                    - subject: Update Lock file maintenance
+                      hash: e3904eb90cccd56f77b6d08fd771e6f8e3106888
+                      body: |
+                        Update 
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.36.97
+                  title: ""
+                  date: 2026-03-02T01:16:59.689Z
+          version: meta-balena-6.11.12
+          title: ""
+          date: 2026-03-14T15:19:40.272Z
+  version: 6.12.2
+  title: ""
+  date: 2026-03-23T12:04:04.851Z
+- commits:
     - subject: Update contracts to 7225779853a3904517285bd19f7e2be44026c108
       hash: 1ad7a03e1fbbc03c71bc17082b0c656373728328
       body: Update contracts
