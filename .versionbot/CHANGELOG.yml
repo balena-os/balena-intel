@@ -1,4 +1,29 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 1fd57160c9dea8e511e1c7dea52902438c6e45d8
+      hash: 450c00b6623fd46898397387513af1bd3e6e023d
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 1fd57160c9dea8e511e1c7dea52902438c6e45d8
+        changelog-entry: Update balena-yocto-scripts to 1fd57160c9dea8e511e1c7dea52902438c6e45d8
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update aws/aws-cli to v2.34.23
+              hash: 6dd4b0df079d84d31ea0157f30b086df6917de40
+              body: |
+                Update aws/aws-cli from 2.33.25 to 2.34.23
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.39.31
+          title: ""
+          date: 2026-04-03T08:24:34.624Z
+  version: 6.12.2+rev5
+  title: ""
+  date: 2026-04-04T09:22:33.315Z
+- commits:
     - subject: Update product-os/flowzone to 9ba87de4b6abf49c021894388f81de59bfa4a523
       hash: 3eb8574858c0a78ee711e9e702f4fa805550ed67
       body: Update product-os/flowzone
