@@ -1,4 +1,43 @@
 - commits:
+    - subject: Update contracts to 7c3bf64c92a839dcbf02cfd69367392e7728fcde
+      hash: 98a1899aa816ac32a4829bd6ecc34903dd907169
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to 7c3bf64c92a839dcbf02cfd69367392e7728fcde
+        changelog-entry: Update contracts to 7c3bf64c92a839dcbf02cfd69367392e7728fcde
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "hw.device-type: Add new device-type Compulab IOT-LINK Gateway"
+              hash: 9f8168327bc4393d5fe00aca5cb263003d76de7b
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+          version: contracts-2.0.143
+          title: ""
+          date: 2026-04-22T07:37:35.352Z
+        - commits:
+            - subject: Update iot-gate-imx8plus-d1d8 to remove Wifi and BT
+              hash: caa877e50405ec4dd3c399ae12753c4a4027f372
+              body: |
+                This board does not have a wireless module
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+          version: contracts-2.0.142
+          title: ""
+          date: 2026-04-09T12:32:15.819Z
+  version: 7.0.0+rev4
+  title: ""
+  date: 2026-05-02T16:58:36.217Z
+- commits:
     - subject: Update product-os/flowzone to 4b69bf10c6a124979d7c283321f65dd96a6ae09b
       hash: 3f8cc31bd08210d346af9034efa3e22a7e759779
       body: Update product-os/flowzone
