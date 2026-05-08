@@ -1,4 +1,31 @@
 - commits:
+    - subject: Update layers/meta-balena to f9a1cd0090e778084298dfc8b68f0b74286ffb47
+      hash: be7d12f78b55d624d9f86c04e1c10f6c6a79c6c5
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to f9a1cd0090e778084298dfc8b68f0b74286ffb47
+        changelog-entry: Update layers/meta-balena to f9a1cd0090e778084298dfc8b68f0b74286ffb47
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "kernel-balena: address CVE-2026-31431"
+              hash: d95ef53e5e65cabc0dcbb87db994463367bd2bad
+              body: |
+                Unconditionally remove CONFIG_CRYPTO_USER_API_AEAD.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-7.0.1
+          title: ""
+          date: 2026-05-08T11:09:20.703Z
+  version: 7.0.1
+  title: ""
+  date: 2026-05-08T15:30:16.875Z
+- commits:
     - subject: Update contracts to 7c3bf64c92a839dcbf02cfd69367392e7728fcde
       hash: 98a1899aa816ac32a4829bd6ecc34903dd907169
       body: Update contracts
