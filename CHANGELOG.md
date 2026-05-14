@@ -1,6 +1,26 @@
 Change log
 -----------
 
+# v7.0.3
+## (2026-05-14)
+
+
+<details>
+<summary> Update layers/meta-balena to 1dddc5142dd7c41755be8f2ee17bc43014fec9c6 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-7.0.3
+> ### (2026-05-13)
+> 
+> * plymouth: start after udev settle [Michal Toman]
+> 
+> ## meta-balena-7.0.2
+> ### (2026-05-11)
+> 
+> * kernel-balena: address CVE-2026-43284 [Alex Gonzalez]
+> 
+
+</details>
+
 # v7.0.1+rev1
 ## (2026-05-13)
 
