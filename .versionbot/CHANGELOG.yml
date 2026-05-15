@@ -1,4 +1,19 @@
 - commits:
+    - subject: Update layers/meta-openembedded to
+        ce8539c941f6fcbecaca4d16640ac105c0595589
+      hash: 726454ad23fbfc9ae40220a7710ed0210c571497
+      body: Update layers/meta-openembedded
+      footer:
+        Changelog-entry: Update layers/meta-openembedded to
+          ce8539c941f6fcbecaca4d16640ac105c0595589
+        changelog-entry: Update layers/meta-openembedded to
+          ce8539c941f6fcbecaca4d16640ac105c0595589
+      author: balena-renovate[bot]
+      nested: []
+  version: 7.0.3+rev2
+  title: ""
+  date: 2026-05-15T03:49:50.258Z
+- commits:
     - subject: Update balena-yocto-scripts to 50033716c5e2384d71a896205465d0a1223f3bed
       hash: 818a14e5ba465b905973d84431c13138d934a6b1
       body: Update balena-yocto-scripts
