@@ -1,4 +1,18 @@
 - commits:
+    - subject: "workflows: remove automatic triggers on discontinued DT workflows"
+      hash: a30fa5780d40648e115a22ee418071338ae67239
+      body: ""
+      footer:
+        Changelog-entry: "workflows: remove automatic triggers on discontinued DT workflows"
+        changelog-entry: "workflows: remove automatic triggers on discontinued DT workflows"
+        Signed-off-by: Ryan Cooke <ryan@balena.io>
+        signed-off-by: Ryan Cooke <ryan@balena.io>
+      author: Ryan Cooke
+      nested: []
+  version: 7.0.3+rev3
+  title: ""
+  date: 2026-05-15T20:47:51.849Z
+- commits:
     - subject: Update layers/meta-openembedded to
         ce8539c941f6fcbecaca4d16640ac105c0595589
       hash: 726454ad23fbfc9ae40220a7710ed0210c571497
