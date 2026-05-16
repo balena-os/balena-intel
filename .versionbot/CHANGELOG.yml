@@ -1,4 +1,19 @@
 - commits:
+    - subject: Update balena-os/github-workflows to
+        25e5b0d2d7bdd26b714368c326c939f5e5692d89
+      hash: d5f78ddd300cbdea7b757ff522b846795ab1a9e7
+      body: Update balena-os/github-workflows
+      footer:
+        Changelog-entry: Update balena-os/github-workflows to
+          25e5b0d2d7bdd26b714368c326c939f5e5692d89
+        changelog-entry: Update balena-os/github-workflows to
+          25e5b0d2d7bdd26b714368c326c939f5e5692d89
+      author: balena-renovate[bot]
+      nested: []
+  version: 7.0.3+rev4
+  title: ""
+  date: 2026-05-16T06:45:13.548Z
+- commits:
     - subject: "workflows: remove automatic triggers on discontinued DT workflows"
       hash: a30fa5780d40648e115a22ee418071338ae67239
       body: ""
