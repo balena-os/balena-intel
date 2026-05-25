@@ -1,4 +1,22 @@
 - commits:
+    - subject: unpin flowzone, track @master
+      hash: 242b21c3db5adf61f40df863add93c872f288d31
+      body: |
+        renovate pinned this to a sha by accident, config is fixed now. dropping
+        the `# master` comment since the ref self-documents.
+
+        See: https://balena.fibery.io/Security/Information_Security_and_Reliability_Incident/Renovate-infinite-pinning-actions-PRs-198
+      footer:
+        Changelog-entry: unpin flowzone, track @master
+        changelog-entry: unpin flowzone, track @master
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 7.0.6+rev1
+  title: ""
+  date: 2026-05-25T16:11:32.051Z
+- commits:
     - subject: Update layers/meta-balena to 79cfd47b693b7b2109db29d78b6d0ec516ae5f94
       hash: 13323bcffe21268045ce954612cafcd4c064558e
       body: Update layers/meta-balena
