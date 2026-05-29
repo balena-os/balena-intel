@@ -1,4 +1,26 @@
 - commits:
+    - subject: "workflows: workflows: Move testing to BC from BM"
+      hash: 997bb896192a0c78aa9aca33c7221486e355a9c7
+      body: ""
+      footer:
+        Changelog-entry: "workflows: workflows: Move testing to BC from BM"
+        changelog-entry: "workflows: workflows: Move testing to BC from BM"
+        Signed-off-by: Ryan Cooke<ryan@balena.io>
+        signed-off-by: Ryan Cooke<ryan@balena.io>
+      author: Ryan Cooke
+      nested: []
+    - subject: Update layers/poky to 393064579dfdd0ed2d4ed4c27d238d7d2292c08b
+      hash: 9da87ebff45a6948187e7bb8e320aa5559fdf90d
+      body: Update layers/poky
+      footer:
+        Changelog-entry: Update layers/poky to 393064579dfdd0ed2d4ed4c27d238d7d2292c08b
+        changelog-entry: Update layers/poky to 393064579dfdd0ed2d4ed4c27d238d7d2292c08b
+      author: balena-renovate[bot]
+      nested: []
+  version: 2025.10.1
+  title: ""
+  date: 2026-05-29T16:37:39.806Z
+- commits:
     - subject: Update layers/poky to 51dc9c464de0703bfbc6f1ee71ac9bea20933a45
       hash: e0a9df8cf4c659a3306a9cab44532fad81bbdf67
       body: Update layers/poky

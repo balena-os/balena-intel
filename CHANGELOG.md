@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v2025.10.1
+## (2026-05-29)
+
+* workflows: workflows: Move testing to BC from BM [Ryan Cooke]
+* Update layers/poky to 393064579dfdd0ed2d4ed4c27d238d7d2292c08b [balena-renovate[bot]]
+
 # 2025.10.0
 ## (2025-10-02)
 
