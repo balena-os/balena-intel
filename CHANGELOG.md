@@ -1,6 +1,24 @@
 Change log
 -----------
 
+# v7.2.0
+## (2026-05-30)
+
+
+<details>
+<summary> Update layers/meta-balena to 75d172bf9df87b05612f66e651341f4a98d652f9 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-7.2.0
+> ### (2026-05-29)
+> 
+> * balena: Remove aufs as a supported storage driver [Kyle Harding]
+> * balena: Remove aufs-to-overlay2 storage migration drop-in [Kyle Harding]
+> * go: Upgrade to 1.24.6 from upstream walnascar recipes [Kyle Harding]
+> * balena: Update balena engine to v25.0.14 [Kyle Harding]
+> 
+
+</details>
+
 # v7.1.1
 ## (2026-05-29)
 
