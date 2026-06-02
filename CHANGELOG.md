@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v7.2.0+rev1
+## (2026-06-02)
+
+
+<details>
+<summary> Update balena-yocto-scripts to d73fe53b5bcd894a8d9bb8794233484432e30115 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.40.0
+> ### (2026-06-02)
+> 
+> * Make release asset upload step required [Kyle Harding]
+> 
+
+</details>
+
 # v7.2.0
 ## (2026-05-30)
 

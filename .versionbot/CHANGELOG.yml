@@ -1,4 +1,32 @@
 - commits:
+    - subject: Update balena-yocto-scripts to d73fe53b5bcd894a8d9bb8794233484432e30115
+      hash: 0f5134f3885d45c145c472eed86de059e1d72902
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to d73fe53b5bcd894a8d9bb8794233484432e30115
+        changelog-entry: Update balena-yocto-scripts to d73fe53b5bcd894a8d9bb8794233484432e30115
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Make release asset upload step required
+              hash: e23ba4eee20843a54f278e7b720c2894f2e018cc
+              body: |
+                Release assets are now the primary artifact format and direct S3
+                is deprecated pending future removal.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.40.0
+          title: ""
+          date: 2026-06-02T17:11:29.468Z
+  version: 7.2.0+rev1
+  title: ""
+  date: 2026-06-02T21:40:03.163Z
+- commits:
     - subject: Update layers/meta-balena to 75d172bf9df87b05612f66e651341f4a98d652f9
       hash: 393bfd2a1cd508e45f6e2c7f3b6885497eaad3ae
       body: Update layers/meta-balena
