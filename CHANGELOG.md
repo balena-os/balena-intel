@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2025.10.2
+## (2026-06-03)
+
+* Update layers/meta-balena to bd18338dfe76c7d5231685e5751763c601c264d5 [Ryan Cooke]
+
 # v2025.10.1
 ## (2026-05-29)
 
