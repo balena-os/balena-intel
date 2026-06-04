@@ -1,4 +1,307 @@
 - commits:
+    - subject: Update balena-yocto-scripts to d73fe53b5bcd894a8d9bb8794233484432e30115
+      hash: eca3d95f881120166701303a2c8dda8497eb10d2
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to d73fe53b5bcd894a8d9bb8794233484432e30115
+        changelog-entry: Update balena-yocto-scripts to d73fe53b5bcd894a8d9bb8794233484432e30115
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Make release asset upload step required
+              hash: e23ba4eee20843a54f278e7b720c2894f2e018cc
+              body: |
+                Release assets are now the primary artifact format and direct S3
+                is deprecated pending future removal.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.40.0
+          title: ""
+          date: 2026-06-02T17:11:29.468Z
+        - commits:
+            - subject: "build/barys: Add Wrynose build support"
+              hash: 4c079e100c23f13adf3826fc68cc928a9aaef9e2
+              body: |
+                When building with Poky Wrynose,
+                the oe-init-build-env script needs
+                to be called from the openembedded-core
+                layer, instead of poky.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+          version: balena-yocto-scripts-1.39.35
+          title: ""
+          date: 2026-05-16T15:06:07.890Z
+        - commits:
+            - subject: "Dockerfile_yocto-build-env: Switch to docker-ce, pin 28.5.2"
+              hash: afd7b9b8e70f348317a3107103a6bb19303d3a7c
+              body: >
+                PR #899 pinned docker.io=27.* from jammy-security to fix the
+                API-1.41
+
+                client incompatibility introduced when Ubuntu pushed docker.io
+                29.1.3
+
+                to jammy-updates (Docker 29 raised MIN_API_VERSION from 1.24 to
+                1.44).
+
+
+                Ubuntu has since replaced 27.5.1 in jammy-security with 29.1.3
+                too, so
+
+                the 27.* wildcard now resolves to nothing and image rebuilds
+                fail. Only
+
+                20.10.12 (frozen in jammy/universe) and 29.1.3 (both update
+                pockets)
+
+                remain available from Ubuntu's archive — neither serves us.
+
+
+                Switch to docker-ce from Docker's official APT repo. Docker
+                retains all
+
+                historical versions persistently. Pin
+                docker-ce=5:28.5.2-1~ubuntu.22.04~jammy
+
+                — the newest version where moby's MinSupportedAPIVersion is
+                still 1.24
+
+                (verified at the v28.5.2 tag in moby/moby). Includes 27.x and
+                28.x
+
+                security fixes Ubuntu won't backport now that they've moved on
+                to 29.
+
+
+                The version is held in DOCKER_CE_VERSION with a renovate
+                annotation so
+
+                patch and minor bumps within 28.x land as reviewable PRs rather
+                than
+
+                silent drift on each rebuild. A renovate.json packageRule caps
+                moby/moby
+
+                at <29.0.0 so renovate stops at the API-min boundary instead of
+
+                proposing 29.x bumps.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.39.34
+          title: ""
+          date: 2026-05-07T14:02:00.032Z
+        - commits:
+            - subject: "yocto-build-deploy.yml: Wait for self-CI helper image before Build"
+              hash: 795ee59c2538578adb96117dec045e1666a5711b
+              body: >
+                Flowzone bakes the per-PR helper image in parallel with the
+                build
+
+                workflow, so when self-CI runs against this repo, the Build step
+
+                would race Flowzone's publish job and try to pull a tag that may
+
+                not exist yet. Wait on Flowzone's "Publish docker" checks
+                against
+
+                the PR head SHA before running Build — using check-regexp to
+                match
+
+                the per-target Publish variants. Only applies in self-CI on this
+
+                repo; downstream device repos consuming this reusable workflow
+                are
+
+                unaffected.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: "yocto-build-deploy.yml: Override helper image tag for self-CI"
+              hash: 0a2536c6c9adbc89e316e185ee9c87e35f8684b9
+              body: >
+                When a PR opens against this repo, the build steps default to
+                pulling
+
+                the helper image at the master-tip VERSION (read from the
+                VERSION
+
+                file), which doesn't reflect changes proposed by the PR.
+                Flowzone's
+
+                bake pushes a per-commit image at
+                build-<head.sha>-yocto-build-env,
+
+                so override BALENA_YOCTO_SCRIPTS_VERSION to that tag prefix when
+                this
+
+                workflow is running self-CI on a pull_request event. The
+                empty-string
+
+                fallback preserves the VERSION-file default for downstream
+                device
+
+                repos that consume this reusable workflow.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: "Dockerfile_yocto-build-env: Pin docker.io to 27.x"
+              hash: c10ee4194b9ccb0ddc19ecd26d691df9fb2f6cba
+              body: >
+                Ubuntu recently pushed docker.io 29.1.3 to jammy-updates. Docker
+                29.x
+
+                raised MIN_API_VERSION from 1.24 to 1.44, dropping support for
+                any
+
+                client speaking API < 1.44. The apt install of docker.io in this
+
+                Dockerfile is unpinned, so every helper-image rebuild silently
+                picks
+
+                up the latest version from jammy-updates — once 29.1.3 landed,
+
+                freshly baked images broke the API-1.41 client invoked by
+
+                mkfs-hostapp-native:do_compile.
+
+
+                Released image tags before v1.39.32 baked docker.io 28.2.2,
+                which
+
+                still accepted API-1.41 clients (Docker 26-28 kept
+                MIN_API_VERSION
+
+                at 1.24; only the *latest* API moved to 1.44). v1.39.32 — and
+                any
+
+                image rebuilt for a dev branch in the last few days — bakes
+                29.1.3.
+
+
+                Pin docker.io=27.* — the newest major in jammy that still
+                accepts
+
+                API-1.41 clients (currently 27.5.1-0ubuntu3~22.04.2 from
+                jammy-security).
+
+                The wildcard absorbs Ubuntu's future security patches within the
+                27.x
+
+                line without re-introducing this regression. Re-evaluate the pin
+                when
+
+                balena-engine moves to a newer major; jammy ships only 20.10 /
+                27.5
+
+                / 29.1 of docker.io, so for anything else, switch to docker-ce
+                from
+
+                Docker's official APT repo.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.39.33
+          title: ""
+          date: 2026-05-01T17:03:35.767Z
+        - commits:
+            - subject: Set the default source-mirror environment to
+                balena-production.us-east-1
+              hash: fd1aeffff07c05339cc928e9a87595c9e7c9bd47
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: Backup shared-downloads to S3 on build failure
+              hash: 0457daafd362362857bd8c4498cce3f0aa70dbe2
+              body: |
+                Avoid losing new downloaded files if the build
+                failed for unrelated reasons.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: ".github/workflows/yocto-build-deploy.yml: Add the rust crates to
+                MIRRORS"
+              hash: 9a9ee2ebc6140bf90ef87b5de937bea092a3b6b0
+              body: >
+                Lately fetching the rust crates has been rate limited so let's
+                make sure we
+
+                add our shared downloaded rust crates to MIRRORS in case we get
+                fetching errors
+
+                from upstream.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: balena-yocto-scripts-1.39.32
+          title: ""
+          date: 2026-04-30T00:59:39.473Z
+        - commits:
+            - subject: Update aws/aws-cli to v2.34.23
+              hash: 6dd4b0df079d84d31ea0157f30b086df6917de40
+              body: |
+                Update aws/aws-cli from 2.33.25 to 2.34.23
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.39.31
+          title: ""
+          date: 2026-04-03T08:24:34.624Z
+    - subject: Update layers/meta-balena to 72b0f53c9a127a65b06dfe83e15f66a38aedf20c
+      hash: 7abc8d1e8eea3b29026a27429890c89e6afc8063
+      body: ""
+      footer:
+        Changelog-entry: Update layers/meta-balena to 72b0f53c9a127a65b06dfe83e15f66a38aedf20c
+        changelog-entry: Update layers/meta-balena to 72b0f53c9a127a65b06dfe83e15f66a38aedf20c
+        Signed-off-by: Ryan Cooke<ryan@balena.io>
+        signed-off-by: Ryan Cooke<ryan@balena.io>
+      author: Ryan Cooke
+      nested: []
+  version: 2026.4.1
+  title: ""
+  date: 2026-06-04T12:13:55.849Z
+- commits:
     - subject: Update balena-yocto-scripts to 108f3c8fd68bcc4c09b015cafab1db722fdf71d5
       hash: 09d8e09ad5e94c438c0c90721f21579a2b7f0dac
       body: Update balena-yocto-scripts
