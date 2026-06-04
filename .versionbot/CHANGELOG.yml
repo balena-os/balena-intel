@@ -1,4 +1,51 @@
 - commits:
+    - subject: Update balena-yocto-scripts to f7ca5dec98b92de376cc3891d12db947d9ceb31d
+      hash: 54fc6f562fde1f6eb6922e9c8fec74b2e4b580c1
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to f7ca5dec98b92de376cc3891d12db947d9ceb31d
+        changelog-entry: Update balena-yocto-scripts to f7ca5dec98b92de376cc3891d12db947d9ceb31d
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update aws/aws-cli to v2.34.61
+              hash: 2758ddc6dbefcbc1b6792763cb7d2ce78d0162a7
+              body: |
+                Update aws/aws-cli from 2.34.23 to 2.34.61
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.41.1
+          title: ""
+          date: 2026-06-03T23:19:16.674Z
+        - commits:
+            - subject: Add hostapp composition build pipeline
+              hash: 2ad1221c707874f7ed85dc69f62125384d62ccef
+              body: |
+                Build a balenaOS hostapp from a Docker Compose composition declared by
+                the device repo. Services declaring x-build are built in parallel via
+                a matrix job; outputs and registry images are assembled into a single
+                release at deploy time.
+
+                See docs/specs/hostapp-composition.md for the contract.
+
+                Connects to https://balena.fibery.io/Work/Improvement/POC-Build-Pipeline-4069
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.41.0
+          title: ""
+          date: 2026-06-03T17:11:50.990Z
+  version: 7.2.0+rev2
+  title: ""
+  date: 2026-06-04T04:01:49.300Z
+- commits:
     - subject: Update balena-yocto-scripts to d73fe53b5bcd894a8d9bb8794233484432e30115
       hash: 0f5134f3885d45c145c472eed86de059e1d72902
       body: Update balena-yocto-scripts
