@@ -1,6 +1,22 @@
 Change log
 -----------
 
+# v7.2.0+rev3
+## (2026-06-05)
+
+
+<details>
+<summary> Update balena-yocto-scripts to 99279c8fb0f0ed977c1b11ecd3ce8a4a625f3ee7 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.41.2
+> ### (2026-06-04)
+> 
+> * yocto-build-deploy: soft-skip schema validation when not in checkout [Kyle Harding]
+> * yocto-build-deploy: normalize composition placeholders to __VAR__ form [Kyle Harding]
+> 
+
+</details>
+
 # v7.2.0+rev2
 ## (2026-06-04)
 
