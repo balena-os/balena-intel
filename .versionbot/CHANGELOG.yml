@@ -1,4 +1,30 @@
 - commits:
+    - subject: Update layers/meta-balena to f7032312d76882a40f26322b5702bd49dc5c4c88
+      hash: 6f60658424bc5771ff638270ef406e63dee4aa6d
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to f7032312d76882a40f26322b5702bd49dc5c4c88
+        changelog-entry: Update layers/meta-balena to f7032312d76882a40f26322b5702bd49dc5c4c88
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "hostapp.yml: Add root hostapp composition for all boards"
+              hash: 487eaa85a5b8edb115cf2b8b33005155f8df4760
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: meta-balena-7.2.1
+          title: ""
+          date: 2026-06-05T13:27:23.444Z
+  version: 7.2.1
+  title: ""
+  date: 2026-06-05T17:44:21.056Z
+- commits:
     - subject: Update balena-yocto-scripts to 99279c8fb0f0ed977c1b11ecd3ce8a4a625f3ee7
       hash: 69a9493d69f5933c7b4d23cd94f63c754537ca4b
       body: Update balena-yocto-scripts

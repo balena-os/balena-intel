@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v7.2.1
+## (2026-06-05)
+
+
+<details>
+<summary> Update layers/meta-balena to f7032312d76882a40f26322b5702bd49dc5c4c88 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-7.2.1
+> ### (2026-06-05)
+> 
+> * hostapp.yml: Add root hostapp composition for all boards [Kyle Harding]
+> 
+
+</details>
+
 # v7.2.0+rev3
 ## (2026-06-05)
 
