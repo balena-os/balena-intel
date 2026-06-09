@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v7.3.0
+## (2026-06-09)
+
+
+<details>
+<summary> Update layers/meta-balena to da9190fabf525a37eb1ac781e4a1664b386066d4 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-7.3.0
+> ### (2026-06-09)
+> 
+> * tests: pieeprom test raspberrypi4 and CM4 [Yann CARDAILLAC]
+> 
+
+</details>
+
 # v7.2.1
 ## (2026-06-05)
 
