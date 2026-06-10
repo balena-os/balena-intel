@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v7.4.0
+## (2026-06-10)
+
+
+<details>
+<summary> Update layers/meta-balena to 140f91eb3b28bf6d8da274b421999d2ba3520579 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-7.4.0
+> ### (2026-06-09)
+> 
+> * systemd: add configuration to ignore lid switch events [Dr Bill Mcilhargey]
+> 
+
+</details>
+
 # v7.3.0
 ## (2026-06-09)
 
