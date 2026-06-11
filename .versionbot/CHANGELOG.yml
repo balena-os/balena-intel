@@ -1,4 +1,48 @@
 - commits:
+    - subject: Update layers/meta-balena to b34a017a1cccfccd19ae871a767f9f21a4eb7f94
+      hash: 4655f7d8cd29a3d8147155b813d9d2b3aa72b698
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to b34a017a1cccfccd19ae871a767f9f21a4eb7f94
+        changelog-entry: Update layers/meta-balena to b34a017a1cccfccd19ae871a767f9f21a4eb7f94
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update tests/leviathan digest to a310841
+              hash: 2cdf1c6d12225dd6aee87db808482744cd3c2b8b
+              body: Update tests/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested:
+                - commits:
+                    - subject: "core/lib: Make Protected Management Frames (PMF) support optional /
+                        disabled when creating the wifi connection profile"
+                      hash: 2f56cc2c38b830a81492ddec574b91644953e16e
+                      body: >
+                        We have a case where not setting this to optional will
+                        cause issues
+
+                        when authenticating to an AP created by the worker (a
+                        RPi 4 worker).
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Florin Sarbu <florin@balena.io>
+                        signed-off-by: Florin Sarbu <florin@balena.io>
+                      author: Florin Sarbu
+                      nested: []
+                  version: leviathan-2.36.112
+                  title: ""
+                  date: 2026-06-10T14:29:15.175Z
+          version: meta-balena-7.4.1
+          title: ""
+          date: 2026-06-11T06:12:09.908Z
+  version: 7.4.1
+  title: ""
+  date: 2026-06-11T11:03:00.274Z
+- commits:
     - subject: Update layers/meta-balena to 140f91eb3b28bf6d8da274b421999d2ba3520579
       hash: 031f17aee49e2d698a40c507b91a15521a4b9b2e
       body: Update layers/meta-balena
