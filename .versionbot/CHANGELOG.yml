@@ -1,4 +1,53 @@
 - commits:
+    - subject: Update layers/meta-balena to 02273a709f119a093c4958cb6d0deed49df893eb
+      hash: 25b0e0dd3d964cfcb5dbb01ccb895b2fdcda1e02
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 02273a709f119a093c4958cb6d0deed49df893eb
+        changelog-entry: Update layers/meta-balena to 02273a709f119a093c4958cb6d0deed49df893eb
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "tests: Define imx8mmebcrs16a1 as flasherConfig type"
+              hash: 16c56bacdccd9e1a58aa32b0169d05302ebbd4e1
+              body: >
+                This allows us to boot the flasher image from microSD even when
+                the
+
+                bootswitch is set to eMMC boot. This is needed for automated
+                testing.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-7.5.1
+          title: ""
+          date: 2026-06-15T18:09:10.587Z
+        - commits:
+            - subject: "conf/layer.conf: Specify Wrynose compatibility"
+              hash: b5779e477068e55f3110cf735db17fdb33eb522b
+              body: |
+                ... and populate UNPACKDIR for the dunfell, kirkstone
+                and scarthgap layers, to ensure backwards compatibility.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Co-authored-by: Florin Sarbu <florin@balena.io>
+                co-authored-by: Florin Sarbu <florin@balena.io>
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+          version: meta-balena-7.5.0
+          title: ""
+          date: 2026-06-12T08:17:26.427Z
+  version: 7.5.1
+  title: ""
+  date: 2026-06-15T23:15:26.515Z
+- commits:
     - subject: Update balena-yocto-scripts to 28481193eb5a8748685099096e148bb8cf3b54fc
       hash: 9edb0e3788250296735a5142c6d61be00a7a835c
       body: Update balena-yocto-scripts

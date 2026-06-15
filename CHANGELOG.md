@@ -1,6 +1,26 @@
 Change log
 -----------
 
+# v7.5.1
+## (2026-06-15)
+
+
+<details>
+<summary> Update layers/meta-balena to 02273a709f119a093c4958cb6d0deed49df893eb [balena-renovate[bot]] </summary>
+
+> ## meta-balena-7.5.1
+> ### (2026-06-15)
+> 
+> * tests: Define imx8mmebcrs16a1 as flasherConfig type [Florin Sarbu]
+> 
+> ## meta-balena-7.5.0
+> ### (2026-06-12)
+> 
+> * conf/layer.conf: Specify Wrynose compatibility [Alexandru Costache]
+> 
+
+</details>
+
 # v7.4.1+rev1
 ## (2026-06-11)
 
