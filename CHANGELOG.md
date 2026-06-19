@@ -1,6 +1,26 @@
 Change log
 -----------
 
+# v7.5.3
+## (2026-06-19)
+
+
+<details>
+<summary> Update layers/meta-balena to 9ae8d9833a1c8d1f6ee7bc5565aea158a358e501 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-7.5.3
+> ### (2026-06-19)
+> 
+> * networkmanager_%.bbappend: Don't remove /usr/lib/NetworkManager/conf.d from the rootfs [Florin Sarbu]
+> 
+> ## meta-balena-7.5.2
+> ### (2026-06-17)
+> 
+> * recipes-core/systemd: Fix building with Wrynose [Alexandru]
+> 
+
+</details>
+
 # v7.5.1
 ## (2026-06-15)
 
