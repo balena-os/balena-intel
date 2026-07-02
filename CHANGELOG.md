@@ -1,45 +1,10 @@
 Change log
 -----------
 
-# v7.5.3
-## (2026-06-19)
+# 2026.7.0
+## (2026-07-02)
 
-
-<details>
-<summary> Update layers/meta-balena to 9ae8d9833a1c8d1f6ee7bc5565aea158a358e501 [balena-renovate[bot]] </summary>
-
-> ## meta-balena-7.5.3
-> ### (2026-06-19)
-> 
-> * networkmanager_%.bbappend: Don't remove /usr/lib/NetworkManager/conf.d from the rootfs [Florin Sarbu]
-> 
-> ## meta-balena-7.5.2
-> ### (2026-06-17)
-> 
-> * recipes-core/systemd: Fix building with Wrynose [Alexandru]
-> 
-
-</details>
-
-# v7.5.1
-## (2026-06-15)
-
-
-<details>
-<summary> Update layers/meta-balena to 02273a709f119a093c4958cb6d0deed49df893eb [balena-renovate[bot]] </summary>
-
-> ## meta-balena-7.5.1
-> ### (2026-06-15)
-> 
-> * tests: Define imx8mmebcrs16a1 as flasherConfig type [Florin Sarbu]
-> 
-> ## meta-balena-7.5.0
-> ### (2026-06-12)
-> 
-> * conf/layer.conf: Specify Wrynose compatibility [Alexandru Costache]
-> 
-
-</details>
+* Declare ESR 2026.7.0
 
 # v7.4.1+rev1
 ## (2026-06-11)
