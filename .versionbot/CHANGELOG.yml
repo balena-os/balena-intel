@@ -1,4 +1,121 @@
 - commits:
+    - subject: Update balena-yocto-scripts to b82363e38d36ba5f76b739b906f67f6d0b729464
+      hash: 0127b420ed1562f0e012776644cf7a8a2b33fce6
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to b82363e38d36ba5f76b739b906f67f6d0b729464
+        changelog-entry: Update balena-yocto-scripts to b82363e38d36ba5f76b739b906f67f6d0b729464
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update product-os/review-commit-action action to v0.3.2
+              hash: d60f358679df56824fd0a24bfb5959e029152ab1
+              body: |
+                Update product-os/review-commit-action from 0.3.0 to 0.3.2
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.41.7
+          title: ""
+          date: 2026-07-14T15:56:52.158Z
+        - commits:
+            - subject: Update balena-io/balena-cli to v25
+              hash: 8dd6bdbcf9024a7b9cdbbaa91ee4c2080a396b61
+              body: |
+                Update balena-io/balena-cli from 24.0.3 to 25.1.10
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.41.6
+          title: ""
+          date: 2026-07-13T13:20:06.104Z
+        - commits:
+            - subject: "yocto-build-deploy: replace pattern based all history first parent
+                match"
+              hash: b3c08ee1850c7013706a2e945f529aa28f329b1d
+              body: >
+                Instead, resolve the PR commit by walking the pushed ref's own
+
+                first-parent history.
+
+
+                Pattern search returns the youngest match reachable from ANY
+                ref,
+
+                so it can jump onto an unrelated branch (e.g. an ESR PR) whose
+                commit is
+
+                not even an ancestor of this tag.
+
+
+                Also,  match any `#<num>` instead of the literal "Merge pull
+                request"
+
+                prefix, so squash merged and custom titled merges
+
+                (like "Update GitHub Actions (#759)") are found, but not
+                version-bump
+
+                commits made by bots.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: balena-yocto-scripts-1.41.5
+          title: ""
+          date: 2026-06-29T15:55:45.595Z
+        - commits:
+            - subject: Decode base64-encoded GitHub App private key before token generation
+              hash: dd490e2aa8ec393f4b0d3fd97cb2f68568234ad8
+              body: >
+                The BALENAOS_CI_APP_PRIVATE_KEY secret can now be stored raw or
+
+                base64-encoded. base64 avoids the newline mangling that
+                multi-line PEM
+
+                secrets are prone to in GitHub secret storage.
+
+
+                Each job gets a decode step that passes the key through
+                unchanged if it
+
+                already looks like a PEM (-----BEGIN), otherwise base64-decodes
+                it and
+
+                masks the decoded lines. The six create-github-app-token steps
+                now read
+
+                the decoded output instead of the secret directly.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: Update actions/create-github-app-token action to v3
+              hash: 87341be50b5fabca1c3c42499c49c30b0ed40ea7
+              body: |
+                Update actions/create-github-app-token from 2.2.2 to 3.2.0
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.41.4
+          title: ""
+          date: 2026-06-23T13:27:23.760Z
+  version: 7.5.3+rev1
+  title: ""
+  date: 2026-07-14T21:15:10.557Z
+- commits:
     - subject: Update layers/meta-balena to 9ae8d9833a1c8d1f6ee7bc5565aea158a358e501
       hash: a315606bbf53f7ed4919b7a79c75159ff5ed07af
       body: Update layers/meta-balena
