@@ -1,6 +1,140 @@
 Change log
 -----------
 
+# v7.6.0
+## (2026-07-15)
+
+
+<details>
+<summary> Update layers/meta-balena to 8657261fc9d135b152e38a0db058e1bc66ea196b [balena-renovate[bot]] </summary>
+
+> ## meta-balena-7.6.0
+> ### (2026-07-14)
+> 
+> * mobynit: update to v1.0.1 [Alex Gonzalez]
+> 
+> ## meta-balena-7.5.11
+> ### (2026-07-12)
+> 
+> 
+> <details>
+> <summary> Update balena-supervisor to v18 [balena-renovate[bot]] </summary>
+> 
+>> ### balena-supervisor-18.2.2
+>> #### (2026-07-06)
+>> 
+>> * Clean up supervisor images in the database [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-18.2.1
+>> #### (2026-07-02)
+>> 
+>> * Clarify documentation on device tags API [Jonathan Berger]
+>> 
+>> ### balena-supervisor-18.2.0
+>> #### (2026-06-22)
+>> 
+>> * Rename the supervisor service to core on the commposition [Felipe Lalanne]
+>> * Report the supervisor main service to backend [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-18.1.2
+>> #### (2026-06-22)
+>> 
+>> * Docs: clarify behavior for `PATCH /v2/device/tags` [Pagan Gazzard]
+>> 
+>> ### balena-supervisor-18.1.1
+>> #### (2026-06-05)
+>> 
+>> * Pass correct value for restart policy 'no' [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-18.1.0
+>> #### (2026-06-03)
+>> 
+>> * Remove any overrides created by helios and restore service [Felipe Lalanne]
+>> * Revert "Add `helios` service to composition" [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-18.0.0
+>> #### (2026-05-27)
+>> 
+>> * Add `helios` service to composition [Felipe Lalanne]
+>> * Restrict supervisor API listen address when overriding port [Felipe Lalanne]
+>> * Use RESIN_BOARD_REV OS release info as a fallback [Felipe Lalanne]
+>> * Add BALENA_HOST_OS_BUILD as environment variable [Felipe Lalanne]
+>> * Add firewall configurations for the override port [Felipe Lalanne]
+>> * Allow overriding apiEndpoint from a database field [Felipe Lalanne]
+>> 
+>> ### balena-supervisor-17.8.5
+>> #### (2026-05-26)
+>> 
+>> * Convert extra_hosts separator from `=` to `:` [Christina Ying Wang]
+>> 
+>> ### balena-supervisor-17.8.4
+>> #### (2026-05-21)
+>> 
+>> * Remove debugging-supervisor docs in favor of moving directly to docs [Matthew Yarmolinsky]
+>> 
+>> ### balena-supervisor-17.8.3
+>> #### (2026-05-20)
+>> 
+>> * Remove update-locking docs in favor of moving them directly to the docs [Matthew Yarmolinsky]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-7.5.10
+> ### (2026-07-09)
+> 
+> * kernel-image-initramfs: multi-kernel support [Alex Gonzalez]
+> * kernel-balena-noimage: remove upstream rrecommends [Alex Gonzalez]
+> * kernel-balena-override: add config fragment support [Alex Gonzalez]
+> * kernel-balena: add multi kernel support [Alex Gonzalez]
+> 
+> ## meta-balena-7.5.9
+> ### (2026-07-08)
+> 
+> * renovate: Append major/minor/patch updates with change-type footer [Kyle Harding]
+> 
+> ## meta-balena-7.5.8
+> ### (2026-07-07)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to a8266fb [balena-renovate[bot]] </summary>
+> 
+>> ### leviathan-2.36.113
+>> #### (2026-07-06)
+>> 
+>> * Update balena-os/leviathan-worker to v2.10.35 [Florin Sarbu]
+>> * core/lib/common/worker.js: Switch to segmented OS image upload to worker [Florin Sarbu]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-7.5.7
+> ### (2026-06-24)
+> 
+> * classes/image-balena: Cleanup issue file in Wrynose [Alexandru Costache]
+> 
+> ## meta-balena-7.5.6
+> ### (2026-06-23)
+> 
+> * tests: Add uptime regression test to the os suite [Kyle Harding]
+> * coreutils: Restore /proc/uptime read so uptime works on scarthgap [Kyle Harding]
+> 
+> ## meta-balena-7.5.5
+> ### (2026-06-22)
+> 
+> * meta-balena-esr: Use GitHub REST API for verified commits [Kyle Harding]
+> 
+> ## meta-balena-7.5.4
+> ### (2026-06-21)
+> 
+> * balena: bump balena-engine to restore 1777 default for bare tmpfs mounts [Kyle Harding]
+> 
+
+</details>
+
 # v7.5.3+rev2
 ## (2026-07-15)
 

@@ -1,4 +1,608 @@
 - commits:
+    - subject: Update layers/meta-balena to 8657261fc9d135b152e38a0db058e1bc66ea196b
+      hash: 4032f60358447300be729b63d5c7f65c418f2a6f
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 8657261fc9d135b152e38a0db058e1bc66ea196b
+        changelog-entry: Update layers/meta-balena to 8657261fc9d135b152e38a0db058e1bc66ea196b
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "mobynit: update to v1.0.1"
+              hash: d65e6a18847b96ff1258c8942bf7ee15a2e3fb31
+              body: |
+                This version add kernel ABI extension filtering.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-7.6.0
+          title: ""
+          date: 2026-07-14T15:48:07.936Z
+        - commits:
+            - subject: Update balena-supervisor to v18
+              hash: acc41cd3fea8bcd7ba189da9074d9b622adcd7a8
+              body: |
+                Update balena-supervisor from 17.8.2 to 18.2.2
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested:
+                - commits:
+                    - subject: Clean up supervisor images in the database
+                      hash: 4b7d733e4c4d0c78284c4090bb10ec82e4ba2df5
+                      body: |
+                        On supervisor v18.2.0, we renamed the supervisor service to `core` in
+                        the [supervisor
+                        composition](https://github.com/balena-os/balena-supervisor/blob/v18.2.0/docker-compose.yml). That change also updated the [isSupervisor](https://github.com/balena-os/balena-supervisor/blob/v18.2.0/src/lib/supervisor-metadata.ts#L34) filter in the supervisor-metadata module.
+
+                        The problem is that when updating to v18.2.0, the following race
+                        condition may happen
+
+                        - The device is on v17.8.5, and the user updates the supervisor on the dashboard to v18.2.0. The target state changes
+                        - Before the update-balena-supervisor script can run, supervisor v17.8.5,
+                          sees the new `core` service which it not part of its filter list and
+                          creates the service and image on the database.
+                        - Eventually supervisor v18.2.0 runs, it knows to filter `core` and tries
+                          to remove the image, but its using the image itself, so it gets stuck
+                          in a loop trying to remove the image and failing.
+
+                        This adds a `isSupervisor` check to the initial application manager
+                        image cleanup to avoid the issue happening altogether.
+
+                        If a customer is stuck in the delete loop, updating to this supervisor
+                        should fix it.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Felipe Lalanne
+                      nested: []
+                  version: balena-supervisor-18.2.2
+                  title: ""
+                  date: 2026-07-06T19:00:57.589Z
+                - commits:
+                    - subject: Clarify documentation on device tags API
+                      hash: 29b23c9f867f2ef2b50f70966e97eeee36e2b503
+                      body: >
+                        Add titles to remove confusion in the device tags API
+                        docs section
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Jonathan Berger
+                      nested: []
+                  version: balena-supervisor-18.2.1
+                  title: ""
+                  date: 2026-07-02T16:03:57.956Z
+                - commits:
+                    - subject: Rename the supervisor service to core on the commposition
+                      hash: 2c6627b369f43fffdd56eedd20c7f3a88b6720a6
+                      body: >
+                        This will allow it to show on the dashboard with that
+                        name in the
+
+                        Supervisor services table.
+                      footer:
+                        Change-type: minor
+                        change-type: minor
+                      author: Felipe Lalanne
+                      nested: []
+                    - subject: Report the supervisor main service to backend
+                      hash: 14e7f97ea15d6699cd778ad573246932aec5d550
+                      body: >
+                        The supervisor cannot update itself so its core service
+                        is removed from
+
+                        the target state before applying steps. However we do
+                        want the service
+
+                        to be reported so it shows up in the new `Supervisor
+                        services` table on
+
+                        the dashboard.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Felipe Lalanne
+                      nested: []
+                  version: balena-supervisor-18.2.0
+                  title: ""
+                  date: 2026-06-22T20:17:31.186Z
+                - commits:
+                    - subject: "Docs: clarify behavior for `PATCH /v2/device/tags`"
+                      hash: 13881bed43f564b6168c64f78db4c15d4fdd308c
+                      body: |
+                        https://balena.fibery.io/Work/Project/1031
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Pagan Gazzard
+                      nested: []
+                  version: balena-supervisor-18.1.2
+                  title: ""
+                  date: 2026-06-22T11:43:14.014Z
+                - commits:
+                    - subject: Pass correct value for restart policy 'no'
+                      hash: 57f300e957f41776ab1ffa24f789a4d4332afe2a
+                      body: >
+                        The supervisor was passing an empty string '' when
+                        receiving
+
+                        `restart_policy: no`, this now passes the direct name
+                        which is required
+
+                        by engine v25
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Felipe Lalanne
+                      nested: []
+                  version: balena-supervisor-18.1.1
+                  title: ""
+                  date: 2026-06-05T18:56:17.011Z
+                - commits:
+                    - subject: Remove any overrides created by helios and restore service
+                      hash: e5c66d90586f127fee9713445dcc9aa868131c57
+                      body: >
+                        This restores single-service operation for those users
+                        that already
+
+                        updated to v18.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Felipe Lalanne
+                      nested: []
+                    - subject: Revert "Add `helios` service to composition"
+                      hash: 80d77392a363d9f2e60436b69d2f1fd01d28b73c
+                      body: >
+                        We are re-working our release strategy around the new
+                        multi-container
+
+                        supervisor after some initial customer concerns. This
+                        removes the new
+
+                        services from the supervisor release composition,
+                        reverting
+
+                        commit e62c021b0c065b8f66164fe661754d7f796206c2.
+                      footer:
+                        Change-type: minor
+                        change-type: minor
+                      author: Felipe Lalanne
+                      nested: []
+                  version: balena-supervisor-18.1.0
+                  title: ""
+                  date: 2026-06-03T16:22:13.155Z
+                - commits:
+                    - subject: Add `helios` service to composition
+                      hash: e62c021b0c065b8f66164fe661754d7f796206c2
+                      body: >
+                        Helios is the experimental supervisor replacement. The
+                        service acts as
+
+                        a proxy for the existing supervisor and will slowly take
+                        over supervisor features
+
+
+                        This also adds a `helios-api` service to listen on port
+                        48484
+
+
+                        While this should not break any of the interfaces, it is
+                        an important
+
+                        change so it has a new major version.
+                      footer:
+                        Change-type: major
+                        change-type: major
+                      author: Felipe Lalanne
+                      nested: []
+                    - subject: Restrict supervisor API listen address when overriding port
+                      hash: 0af5da36f3dfdfe0be0bce9d85deb1c0c2a7409f
+                      body: >
+                        The supervisor would listen to the override port on all
+                        interfaces,
+
+                        however this would unnecessarily expose the port to the
+                        local network.
+
+                        We now listen to requests only on the supervisor0
+                        interface to admit
+
+                        traffic from containers only.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Felipe Lalanne
+                      nested: []
+                    - subject: Use RESIN_BOARD_REV OS release info as a fallback
+                      hash: 070ad7c0deed893ffdbcbe246822e55f5ff90bdc
+                      body: >
+                        This is needed for older OS versions where
+                        `BALENA_BOARD_REV` is not
+
+                        available on `/etc/os-release`
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Felipe Lalanne
+                      nested: []
+                    - subject: Add BALENA_HOST_OS_BUILD as environment variable
+                      hash: ebda244c295cc2acb69b7ea306bd9383f0411760
+                      body: >
+                        This is added when the `board-rev` feature is enabled.
+                        It's a more
+
+                        generic name over `BALENA_HOST_OS_BOARD_REV` and will
+                        replace it
+
+                        eventually
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Felipe Lalanne
+                      nested: []
+                    - subject: Add firewall configurations for the override port
+                      hash: fa3fd3d15c323e73dd257ed73fd1c0cb7c13528f
+                      body: >
+                        When the override port is set, the firewall is
+                        configured to only allow
+
+                        traffic on `supervisor0` interface for that port. In
+                        that case a new
+
+                        chain `BALENA-SUPERVISOR` is added to `DOCKER-USER`,
+                        that chain blocks
+
+                        access to the regular listen port from any interface
+                        other than
+
+                        resin-vpn when in non-local-mode and allows any traffic
+                        on local-mode.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Felipe Lalanne
+                      nested: []
+                    - subject: Allow overriding apiEndpoint from a database field
+                      hash: 67d479e05625d2fbea193498fc58ffc64c091a73
+                      body: >
+                        This is an experimental change to allow an external
+                        service to intercept
+
+                        API calls of the supervisor as a potential path for
+                        migration
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Felipe Lalanne
+                      nested: []
+                  version: balena-supervisor-18.0.0
+                  title: ""
+                  date: 2026-05-27T16:24:12.773Z
+                - commits:
+                    - subject: Convert extra_hosts separator from `=` to `:`
+                      hash: dc636b5521982596e868c866074d92706b86bb11
+                      body: |
+                        Engine expects `:` but compose-go from compose-parser
+                        outputs `=`.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Relates-to: https://github.com/balena-io-modules/balena-compose-parser/pull/28
+                        relates-to: https://github.com/balena-io-modules/balena-compose-parser/pull/28
+                      author: Christina Ying Wang
+                      nested: []
+                  version: balena-supervisor-17.8.5
+                  title: ""
+                  date: 2026-05-26T20:41:50.015Z
+                - commits:
+                    - subject: Remove debugging-supervisor docs in favor of moving directly to docs
+                      hash: d506754539c953eb004e11542848963b43f70af1
+                      body: ""
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Matthew Yarmolinsky
+                      nested: []
+                  version: balena-supervisor-17.8.4
+                  title: ""
+                  date: 2026-05-21T20:35:06.680Z
+                - commits:
+                    - subject: Remove update-locking docs in favor of moving them directly to the docs
+                      hash: 705df2c966d90a946acb915391e57a25894a83d8
+                      body: ""
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: Matthew Yarmolinsky
+                      nested: []
+                  version: balena-supervisor-17.8.3
+                  title: ""
+                  date: 2026-05-20T20:14:30.054Z
+          version: meta-balena-7.5.11
+          title: ""
+          date: 2026-07-12T14:34:50.121Z
+        - commits:
+            - subject: "kernel-image-initramfs: multi-kernel support"
+              hash: b867868f36008b78f4c80491659c51a9394ddca4
+              body: >
+                Generalize the recipe so it can be re-used on different kernel
+                builds.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "kernel-balena-noimage: remove upstream rrecommends"
+              hash: 83873f45a68f1f031bd257573a901e07afef7215
+              body: >
+                The upstream RRECOMMENDS that drags in via kernel-base
+                overwrites
+
+                /boot/<type> with the no-initramfs binary.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "kernel-balena-override: add config fragment support"
+              hash: ff42195a77fa045eabc6477f78d504d440fbf6b7
+              body: >
+                Auto-merge kconfig fragments found in FILESEXTRAPATHS.
+
+
+                Yocto's stock kernel-yocto.bbclass already merges *.cfg
+                fragments listed in
+
+                SRC_URI through do_kernel_configme. This step complements
+                discovering
+
+                every *.cfg file reachable via FILESEXTRAPATHS and merging them
+                into
+
+                ${B}/.config, then runs olddefconfig to resolve dependencies.
+
+
+                - It lets recipes ship fragments by dropping them in
+                ${THISDIR}/files/ (or any
+                  FILESEXTRAPATHS-reachable dir) without touching SRC_URI.
+                - Allows sharing of kernel fragments across kernel siblings
+
+                - Allow fragments to override BALENA_CONFIGS-injected values
+                when needed.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "kernel-balena: add multi kernel support"
+              hash: 99058c43b1981d025d0556ca2931ac093fff52b3
+              body: >
+                Different kernel recipes might declare different deploy
+                directories
+
+                not to clash between them.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-7.5.10
+          title: ""
+          date: 2026-07-09T17:44:56.012Z
+        - commits:
+            - subject: "renovate: Append major/minor/patch updates with change-type footer"
+              hash: 04b5a9c25690ae21d6e8967619515589c265d377
+              body: >
+                The existing top-level property is being overridden by a
+                packageRule
+
+                in the balena-os/renovate-config shared settings, so we need a
+                local package
+
+                rule to take priority.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: meta-balena-7.5.9
+          title: ""
+          date: 2026-07-08T11:14:53.897Z
+        - commits:
+            - subject: Update tests/leviathan digest to a8266fb
+              hash: e502a8cfabe88513a4249118818bd0defcad35ce
+              body: Update tests/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested:
+                - commits:
+                    - subject: Update balena-os/leviathan-worker to v2.10.35
+                      hash: 22f6b08c504f610ff41cebb1250f072d38a8ae10
+                      body: >
+                        Update balena-os/leviathan-worker from 2.10.30 to 2.10.35
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Florin Sarbu <florin@balena.io>
+                        signed-off-by: Florin Sarbu <florin@balena.io>
+                      author: Florin Sarbu
+                      nested: []
+                    - subject: "core/lib/common/worker.js: Switch to segmented OS image upload to
+                        worker"
+                      hash: 2664ab80d20f592752f32801bd655bc0be9eff40
+                      body: |
+                        This will circumvent the Cloudlink timeouts.
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                        Signed-off-by: Florin Sarbu <florin@balena.io>
+                        signed-off-by: Florin Sarbu <florin@balena.io>
+                      author: Florin Sarbu
+                      nested: []
+                  version: leviathan-2.36.113
+                  title: ""
+                  date: 2026-07-06T09:49:57.428Z
+          version: meta-balena-7.5.8
+          title: ""
+          date: 2026-07-07T15:51:56.668Z
+        - commits:
+            - subject: "classes/image-balena: Cleanup issue file in Wrynose"
+              hash: f5591ed2b60d1bddd07152e1ac6ad5806d34566a
+              body: |
+                Commit https://git.openembedded.org/openembedded-core/commit/?id=b650bd2c94f9aefd4dec82b27285ed1d439778bc
+                introduces an empty root  password note in /etc/issue
+                at build time, if passwordless root login is enabled.
+
+                The Scarthgap bbclass does not include this note at all
+                and in Wrynose it breaks the /etc/issue file tests. It also
+                is only meaningful if developmentMode is set to 'true'.
+
+                We thus remove the note altogether to keep the /etc/issue file clean
+                and consistent across all versions.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+              nested: []
+          version: meta-balena-7.5.7
+          title: ""
+          date: 2026-06-24T16:43:04.211Z
+        - commits:
+            - subject: "tests: Add uptime regression test to the os suite"
+              hash: d2d0888090d64172ce92f547b23f0d1c67fb1006
+              body: >
+                Guards against the coreutils 9.4 utmp BOOT_TIME breakage fixed
+                in the
+
+                previous commit: asserts uptime exits 0, prints an elapsed time
+                and load
+
+                average, and emits neither "couldn't get boot time" nor the
+                "????"
+
+                placeholder. Provider-agnostic, so it holds whether uptime comes
+                from
+
+                coreutils, busybox or procps.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: "coreutils: Restore /proc/uptime read so uptime works on scarthgap"
+              hash: 1903d863d9d1de8cdfaeeec624564fee0640b6ea
+              body: >
+                GNU coreutils 9.4 (scarthgap) rewrote src/uptime.c onto gnulib
+                readutmp and
+
+                dropped the direct /proc/uptime read. uptime now derives the
+                elapsed time
+
+                solely from a utmp BOOT_TIME record, which balenaOS has no
+                usable entry for,
+
+                so it fails with "couldn't get boot time" and prints "up ????
+                days ??:??".
+
+
+                Backport the pre-9.4 behaviour: read the up-seconds from
+                /proc/uptime (gated on
+
+                -DHAVE_PROC_UPTIME, already set by the common coreutils
+                bbappend), falling back
+
+                to the utmp BOOT_TIME computation only when that read fails.
+                busybox's uptime
+
+                already relies on /proc/uptime on the same devices and reports
+                correctly.
+
+
+                Scoped to the scarthgap layer with a version-pinned bbappend so
+                it cannot affect
+
+                older layers (dunfell/honister/kirkstone, coreutils 8.32-9.1)
+                whose uptime.c
+
+                still reads /proc/uptime.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: meta-balena-7.5.6
+          title: ""
+          date: 2026-06-23T13:29:39.960Z
+        - commits:
+            - subject: "meta-balena-esr: Use GitHub REST API for verified commits"
+              hash: 89ffe906af62cc1eb83afa93cbcb229987b4f4ae
+              body: |
+                Bring the meta-balena ESR workflow to parity with the sibling
+                balena-os/github-workflows esr.yml. Replace the local
+                git commit/push/tag commands with GitHub REST API calls
+                (createRef/createBlob/createTree/createCommit/updateRef/createTag) so
+                the ESR bot's branch and tag are authored by the GitHub App and show as
+                verified.
+
+                Also adopt the dual-format (raw PEM or base64) private key decode step,
+                switch from tibdex/github-app-token to actions/create-github-app-token,
+                and drop the now-unused GIT_AUTHOR/COMMITTER env vars (the API uses the
+                App identity). Harden the esr-version workflow_dispatch input by passing
+                it via env instead of interpolating into a run block.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: meta-balena-7.5.5
+          title: ""
+          date: 2026-06-22T19:33:56.967Z
+        - commits:
+            - subject: "balena: bump balena-engine to restore 1777 default for bare tmpfs
+                mounts"
+              hash: 94d798cdc879b302f5fc481f63e0be8f12e8175c
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: meta-balena-7.5.4
+          title: ""
+          date: 2026-06-21T20:25:17.143Z
+  version: 7.6.0
+  title: ""
+  date: 2026-07-15T08:35:23.215Z
+- commits:
     - subject: Update contracts to 8612b73406fd9c8242bc13ce979fd10e06f6c789
       hash: 996b861fe6a5ec385433f69f43ec3a2d0c6993eb
       body: Update contracts
