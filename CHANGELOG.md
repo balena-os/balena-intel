@@ -1,6 +1,29 @@
 Change log
 -----------
 
+# v7.7.0
+## (2026-07-15)
+
+
+<details>
+<summary> Update layers/meta-balena to 5328f65b08ed69d691dd077bfd700269a46f7370 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-7.7.0
+> ### (2026-07-15)
+> 
+> * image-types: tag hostapp during import so it includes RepoTags [Alex Gonzalez]
+> * hostapp-update-hooks: add extensions support [Alex Gonzalez]
+> * packagegroup-resin: add extension OCI runtime [Alex Gonzalez]
+> * balena: register extensions runtime [Alex Gonzalez]
+> * balena-extension-runtime: add recipe [Alex Gonzalez]
+> * os-helpers: add bootenv helper [Alex Gonzalez]
+> * os-helpers: add extensions helper [Alex Gonzalez]
+> * docker-disk: remove built-in extension support [Alex Gonzalez]
+> * hostapp-extensions-update: remove recipe. [Alex Gonzalez]
+> 
+
+</details>
+
 # v7.6.0
 ## (2026-07-15)
 
