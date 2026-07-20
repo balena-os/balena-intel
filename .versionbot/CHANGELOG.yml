@@ -1,4 +1,20 @@
 - commits:
+    - subject: Set explicit partition size overrides for each machine
+      hash: fd80cf9d72386e77c0e372dee7a113a8db0623a4
+      body: |
+        Ensure IMAGE_ROOTFS_SIZE, BALENA_BOOT_SIZE, and BALENA_STATE_SIZE are
+        explicitly defined for every machine target
+      footer:
+        Changelog-entry: Set explicit partition size overrides for each machine
+        changelog-entry: Set explicit partition size overrides for each machine
+        Signed-off-by: guille-vega <guillermo.vega@balena.io>
+        signed-off-by: guille-vega <guillermo.vega@balena.io>
+      author: guille-vega
+      nested: []
+  version: 7.7.0+rev3
+  title: ""
+  date: 2026-07-20T18:10:52.857Z
+- commits:
     - subject: Update balena-yocto-scripts to 4c19733cad4cd1473d196d41ea7d2f4531913172
       hash: 6732e37790278cc56808be092062db72417502ed
       body: Update balena-yocto-scripts
