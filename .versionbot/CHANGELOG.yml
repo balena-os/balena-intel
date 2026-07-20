@@ -1,4 +1,29 @@
 - commits:
+    - subject: Update contracts to a4ab96e2b9f6f8c40f80072f7dd1d2369eb7466e
+      hash: 52c68184563fbb3e2b38dd30f7aeef9f6f3f7e7b
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to a4ab96e2b9f6f8c40f80072f7dd1d2369eb7466e
+        changelog-entry: Update contracts to a4ab96e2b9f6f8c40f80072f7dd1d2369eb7466e
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Modify existing device family and manufacturer metadata
+              hash: cd120576e7c0f021b84c1e81096c188862a144df
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Pranas Ziaukas <pranas@balena.io>
+                signed-off-by: Pranas Ziaukas <pranas@balena.io>
+              author: Pranas Ziaukas
+          version: contracts-2.0.146
+          title: ""
+          date: 2026-07-16T13:59:26.149Z
+  version: 7.7.0+rev4
+  title: ""
+  date: 2026-07-20T22:07:40.521Z
+- commits:
     - subject: Set explicit partition size overrides for each machine
       hash: fd80cf9d72386e77c0e372dee7a113a8db0623a4
       body: |
