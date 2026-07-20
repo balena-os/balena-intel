@@ -11,3 +11,15 @@ IMAGE_INSTALL:append:genericx86-64-ext =" \
 "
 
 IMAGE_ROOTFS_SIZE:genericx86-64-ext = "1024000"
+
+BALENA_BOOT_SIZE:genericx86-64-ext = "40960"
+BALENA_STATE_SIZE:genericx86-64-ext = "20480"
+IMAGE_ROOTFS_SIZE:genericx86-64 = "327680"
+BALENA_BOOT_SIZE:genericx86-64 = "40960"
+BALENA_STATE_SIZE:genericx86-64 = "20480"
+IMAGE_ROOTFS_SIZE:surface-go = "327680"
+BALENA_BOOT_SIZE:surface-go = "40960"
+BALENA_STATE_SIZE:surface-go = "20480"
+IMAGE_ROOTFS_SIZE:surface-pro-6 = "327680"
+BALENA_BOOT_SIZE:surface-pro-6 = "40960"
+BALENA_STATE_SIZE:surface-pro-6 = "20480"
