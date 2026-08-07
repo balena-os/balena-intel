@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v7.9.1
+## (2026-08-07)
+
+
+<details>
+<summary> Update layers/meta-balena to f388c39586de4919dfa25d37eb0a85198932d148 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-7.9.1
+> ### (2026-08-07)
+> 
+> * recipes-containers/balena-extension-runtime: Enable Wrynose builds [Alexandru Costache]
+> 
+
+</details>
+
 # v7.9.0+rev1
 ## (2026-08-06)
 
