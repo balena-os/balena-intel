@@ -1,4 +1,62 @@
 - commits:
+    - subject: Update layers/meta-balena to c806f4ead5c1fb34ed161266c2ed07a7c3b150d6
+      hash: 5a12b8a965ae0456152466f199c9f79d05822850
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to c806f4ead5c1fb34ed161266c2ed07a7c3b150d6
+        changelog-entry: Update layers/meta-balena to c806f4ead5c1fb34ed161266c2ed07a7c3b150d6
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "balena-extension-runtime: do not duplicate binary"
+              hash: ad640a5705664e0b2e97d90d74c2947239324f5f
+              body: >
+                The extension runtime and manager share the binary so we can
+                symlink it
+
+                instead.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "balena-extension-runtime: update to v1.2.1"
+              hash: 23113b376b7adc6566791098ba357aa6bec9a843
+              body: |
+                Update from v1.1.0 to v1.2.1
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-7.9.3
+          title: ""
+          date: 2026-08-08T12:40:26.836Z
+        - commits:
+            - subject: "extra-udev-rules: Disable power management on mlan* wireless network
+                interfaces"
+              hash: ad892c3e437a49a800d57e665f31a834c0dad0b8
+              body: >
+                The moal driver used in various hardware exposes the wireless
+                network interfaces as mlan*
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: meta-balena-7.9.2
+          title: ""
+          date: 2026-08-07T15:12:33.847Z
+  version: 7.9.3
+  title: ""
+  date: 2026-08-08T17:17:37.245Z
+- commits:
     - subject: Update layers/meta-balena to f388c39586de4919dfa25d37eb0a85198932d148
       hash: 5b3b20a10d7cc5f1ba66438cf5df442a136be5ca
       body: Update layers/meta-balena
