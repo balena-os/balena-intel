@@ -4,5 +4,9 @@ do_install:append() {
 
 [device]
 wifi.scan-rand-mac-address=no
+
+[connection]
+wifi.powersave=2
+
 EOF
 }
