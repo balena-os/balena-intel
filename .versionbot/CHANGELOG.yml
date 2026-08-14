@@ -1,4 +1,66 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 4b858287c2b8eb6ffb7bedb66908ddde47525605
+      hash: 30525972bf50e1d11fb92fbca8aa2de540a44d93
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 4b858287c2b8eb6ffb7bedb66908ddde47525605
+        changelog-entry: Update balena-yocto-scripts to 4b858287c2b8eb6ffb7bedb66908ddde47525605
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Deploy the hostApp with `os-profiles` draft release channel
+              hash: 772f3cc8b5203605857dd148a3cd9c556004c170
+              body: |
+                Bump setup-balena-action to v0.1.0, which adds `cli-channel`.
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Christina Ying Wang
+              nested: []
+          version: balena-yocto-scripts-1.42.4
+          title: ""
+          date: 2026-08-12T18:12:59.907Z
+        - commits:
+            - subject: Update GitHub Actions
+              hash: 72fa14c6875acd783a5251cf7b9deeb7b90979da
+              body: |
+                Update actions/checkout from 6.0.3 to 6.1.0
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.42.3
+          title: ""
+          date: 2026-08-12T05:19:09.347Z
+        - commits:
+            - subject: Add source-mirror-setup dependency to All Jobs
+              hash: cfd9b04da5abda6e8495ded8796b27b22eed9626
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.42.2
+          title: ""
+          date: 2026-08-12T00:49:58.776Z
+    - subject: "networkmanager: Disable Wi-Fi power_save to improve Intel AX stability"
+      hash: 177f7fa6a2ede0a9cf5c3d116a5af5a00dec6ccd
+      body: ""
+      footer:
+        Changelog-entry: "networkmanager: Disable Wi-Fi power_save to improve Intel AX
+          stability"
+        changelog-entry: "networkmanager: Disable Wi-Fi power_save to improve Intel AX
+          stability"
+        Signed-off-by: guille-vega <guillermo.vega@balena.io>
+        signed-off-by: guille-vega <guillermo.vega@balena.io>
+      author: guille-vega
+      nested: []
+  version: 7.9.3+rev3
+  title: ""
+  date: 2026-08-14T11:23:58.528Z
+- commits:
     - subject: Update balena-yocto-scripts to 41fe121711c72f671c4b756f3e19f89f0d9561cc
       hash: 5b48f9b1b4ae62c710b0efa6ab5e212c2bc47596
       body: Update balena-yocto-scripts
