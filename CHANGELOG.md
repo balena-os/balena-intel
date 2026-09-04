@@ -1,6 +1,61 @@
 Change log
 -----------
 
+# v8.0.7+rev1
+## (2026-09-04)
+
+
+<details>
+<summary> Update balena-yocto-scripts to e040066f030e2ba6577fe9bc481c22e614ec336a [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.42.13
+> ### (2026-09-03)
+> 
+> * yocto-build-deploy: Use authenticated user to update submodules [Kyle Harding]
+> 
+> ## balena-yocto-scripts-1.42.12
+> ### (2026-09-02)
+> 
+> * Update actions/upload-artifact action to v7 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.42.11
+> ### (Invalid date)
+> 
+> * Update GitHub Actions [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.42.10
+> ### (2026-08-28)
+> 
+> * Update aws/aws-cli to v2.36.33 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.42.9
+> ### (2026-08-28)
+> 
+> * Update flowzonify to v0.4.2 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.42.8
+> ### (2026-08-20)
+> 
+> * Update balena-io/upload-balena-release-asset action to v0.2.0 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.42.7
+> ### (2026-08-19)
+> 
+> * Update lodash to v4.18.1 [SECURITY] [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.42.6
+> ### (2026-08-19)
+> 
+> * Update actions/github-script action to v9 [balena-renovate[bot]]
+> 
+> ## balena-yocto-scripts-1.42.5
+> ### (2026-08-19)
+> 
+> * yocto-build-deploy: Drop container-path license symlinks before upload [Kyle Harding]
+> 
+
+</details>
+
 # v8.0.7
 ## (2026-09-03)
 
