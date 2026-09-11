@@ -1,6 +1,26 @@
 Change log
 -----------
 
+# v8.0.10+rev1
+## (2026-09-11)
+
+
+<details>
+<summary> Update contracts to 93b30010e7441051d361fa319a6e395f5a3c94f4 [balena-renovate[bot]] </summary>
+
+> ## contracts-2.0.149
+> ### (2026-08-28)
+> 
+> * revpi-connect-4: remove led [Alex Gonzalez]
+> 
+> ## contracts-2.0.148
+> ### (2026-08-24)
+> 
+> * hw.device-type: Update Orin boards L4T version to 39.2.0 [Alexandru Costache]
+> 
+
+</details>
+
 # v8.0.10
 ## (2026-09-11)
 
