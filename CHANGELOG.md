@@ -1,6 +1,44 @@
 Change log
 -----------
 
+# v8.0.10
+## (2026-09-11)
+
+
+<details>
+<summary> Update layers/meta-balena to 84a61cce6adbcb6bfe05cf08a96f6fe415359104 [balena-renovate[bot]] </summary>
+
+> ## meta-balena-8.0.10
+> ### (2026-09-11)
+> 
+> 
+> <details>
+> <summary> Update tests/leviathan digest to 466e576 [balena-renovate[bot]] </summary>
+> 
+>> ### leviathan-2.36.132
+>> #### (2026-09-02)
+>> 
+>> * Update Node.js [balena-renovate[bot]]
+>> 
+> 
+> </details>
+> 
+> 
+> ## meta-balena-8.0.9
+> ### (2026-09-07)
+> 
+> * kernel-headers-test: Pin apt to the snapshot archive [Kyle Harding]
+> * kernel-headers-test: Replace deprecated balenalib base with debian:bullseye [Kyle Harding]
+> * .gitmodules: Declare a branch for every submodule [Kyle Harding]
+> 
+> ## meta-balena-8.0.8
+> ### (2026-09-03)
+> 
+> * docs: Fix obsolete link to application update locking documentation [Ken Bannister]
+> 
+
+</details>
+
 # v8.0.7+rev1
 ## (2026-09-04)
 

@@ -1,4 +1,140 @@
 - commits:
+    - subject: Update layers/meta-balena to 84a61cce6adbcb6bfe05cf08a96f6fe415359104
+      hash: 76ae128e51cbbae51a12f209c9e2737c47b31433
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 84a61cce6adbcb6bfe05cf08a96f6fe415359104
+        changelog-entry: Update layers/meta-balena to 84a61cce6adbcb6bfe05cf08a96f6fe415359104
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update tests/leviathan digest to 466e576
+              hash: 202b6b05fa009aec7c61883c419d94f7d72aa8bd
+              body: Update tests/leviathan
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested:
+                - commits:
+                    - subject: Update Node.js
+                      hash: 17b2e1ed1544c90d8d63d97c8ff0edef7474a9c7
+                      body: |
+                        Update node from 22.14.0 to 22.23.2
+                      footer:
+                        Change-type: patch
+                        change-type: patch
+                      author: balena-renovate[bot]
+                      nested: []
+                  version: leviathan-2.36.132
+                  title: ""
+                  date: 2026-09-02T20:19:30.667Z
+          version: meta-balena-8.0.10
+          title: ""
+          date: 2026-09-11T10:47:29.394Z
+        - commits:
+            - subject: "kernel-headers-test: Pin apt to the snapshot archive"
+              hash: 80a936f7feda864aad0b949f3b5be12909cd492a
+              body: >
+                Debian 11 bullseye LTS ended 2026-08-31. Packages are being
+                removed from the
+
+                live mirrors while bullseye-security still advertises them, so
+                apt 404s on
+
+                libc-dev-bin, libssl-dev and linux-libc-dev. bullseye-security
+                has not landed
+
+                on archive.debian.org yet, so there is no live mirror serving a
+                consistent set.
+
+
+                Point apt at the snapshot archive for 20260824T000000Z, the
+                instant this image
+
+                tag was built from. Index and pool then come from the same
+                snapshot and cannot
+
+                disagree. Snapshot Release files are historical so their
+                Valid-Until has passed,
+
+                which needs Acquire::Check-Valid-Until "false".
+
+
+                The base image already ships these lines commented out in
+
+                /etc/apt/sources.list, so this only chooses them.
+              footer:
+                Change-type: patch
+                change-type: patch
+                See: https://github.com/balena-os/meta-balena/issues/3938
+                see: https://github.com/balena-os/meta-balena/issues/3938
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: "kernel-headers-test: Replace deprecated balenalib base with
+                debian:bullseye"
+              hash: a87af651323dcd3f1d1c085a1b9e82a0bf3db08e
+              body: >
+                The balenalib base images were deprecated some time ago, and
+                this one also
+
+                pinned a dated tag from 2023 that no longer receives updates.
+                Use the
+
+                upstream debian image instead, pinned to bullseye-20260824. The
+                recipe
+
+                installs everything it needs with apt, so nothing from the
+                balenalib layer
+
+                was being used.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+            - subject: ".gitmodules: Declare a branch for every submodule"
+              hash: e85ef7467e498ccdba63982788d2d96d48a0fac8
+              body: >
+                check_gitmodules_branches fails while any submodule has no
+                branch declared,
+
+                which currently blocks every PR in this repo. All three pins are
+                ancestors of
+
+                master on their remotes.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: meta-balena-8.0.9
+          title: ""
+          date: 2026-09-07T12:08:43.712Z
+        - commits:
+            - subject: "docs: Fix obsolete link to application update locking documentation"
+              hash: 7331c93c62095217cbe9924a655e04215235f853
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Ken Bannister <kb2ma@runbox.com>
+                signed-off-by: Ken Bannister <kb2ma@runbox.com>
+              author: Ken Bannister
+              nested: []
+          version: meta-balena-8.0.8
+          title: ""
+          date: 2026-09-03T22:55:02.129Z
+  version: 8.0.10
+  title: ""
+  date: 2026-09-11T17:28:44.202Z
+- commits:
     - subject: Update balena-yocto-scripts to e040066f030e2ba6577fe9bc481c22e614ec336a
       hash: 1b1397ceb17823c0d118a903b3d5cd1a0d0e3ab7
       body: Update balena-yocto-scripts
