@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v8.0.10+rev4
+## (2026-09-14)
+
+
+<details>
+<summary> Update balena-yocto-scripts to cfcaee3d08296635a74f3841839401afa0298e01 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.42.14
+> ### (2026-09-14)
+> 
+> * Fix ESR tagging step [Ryan Cooke]
+> 
+
+</details>
+
 # v8.0.10+rev3
 ## (2026-09-12)
 
