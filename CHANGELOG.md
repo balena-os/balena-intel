@@ -1,6 +1,22 @@
 Change log
 -----------
 
+# v8.0.10+rev6
+## (2026-09-16)
+
+
+<details>
+<summary> Update contracts to 3b3e3a334e5aa3f67b99ee900b2d738f2fcf8574 [balena-renovate[bot]] </summary>
+
+> ## contracts-2.0.150
+> ### (2026-09-16)
+> 
+> * edgeai-orn-nx: Add contract for new public device-type [Alexandru Costache]
+> * hw.device-type: Re-word provisioning instructions for Orin and Thor boards [Alexandru Costache]
+> 
+
+</details>
+
 # v8.0.10+rev5
 ## (2026-09-15)
 
