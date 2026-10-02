@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v8.0.14+rev1
+## (2026-10-02)
+
+
+<details>
+<summary> Update balena-yocto-scripts to f493532250022bcf723bddd055c3c8cb770ae649 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.42.16
+> ### (2026-10-02)
+> 
+> * Update ubuntu:22.04 Docker digest to b8b6ee6 [balena-renovate[bot]]
+> 
+
+</details>
+
 # v8.0.14
 ## (2026-10-01)
 
