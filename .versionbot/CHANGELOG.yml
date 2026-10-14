@@ -1,4 +1,34 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 436cae1eb39b15b2c74bac1450162eba0855eb0d
+      hash: 1efd16f7c6d6177ecd739c3d4204cf91205c1240
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 436cae1eb39b15b2c74bac1450162eba0855eb0d
+        changelog-entry: Update balena-yocto-scripts to 436cae1eb39b15b2c74bac1450162eba0855eb0d
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "hostapp-composition(overlays): extend schema to check for runtime"
+              hash: 29a5adcbec208f1f723d464c5dcce3ae81ac0b75
+              body: >
+                An image declaring io.balena.image.class as overlay needs to
+                define
+
+                what runtime to use.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: balena-yocto-scripts-1.42.17
+          title: ""
+          date: 2026-10-13T20:35:35.076Z
+  version: 8.0.14+rev2
+  title: ""
+  date: 2026-10-14T01:22:19.454Z
+- commits:
     - subject: Update balena-yocto-scripts to f493532250022bcf723bddd055c3c8cb770ae649
       hash: 1e39e80be4be3a69a6494f4f5cee4889c551f600
       body: Update balena-yocto-scripts
