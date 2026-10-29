@@ -1,4 +1,51 @@
 - commits:
+    - subject: Update layers/meta-balena to bcf48b44f9a35603274e06a2c663ddc5716d9d72
+      hash: 4d81ecdb11bd323e1b68ad7bdeed1ded019d5060
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to bcf48b44f9a35603274e06a2c663ddc5716d9d72
+        changelog-entry: Update layers/meta-balena to bcf48b44f9a35603274e06a2c663ddc5716d9d72
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "balena-os.inc: Derive the board VERSION path from COREBASE"
+              hash: 2a2915b92799a09c9914cde7b267d4e39d4a35ca
+              body: >
+                The previous code searched BBLAYERS for a layer that ends in
+                poky/meta.
+
+                Yocto 6.0 Wrynose retires the poky combo repository. A Wrynose
+                build uses
+
+                openembedded-core, bitbake and meta-yocto directly. No layer
+                path then
+
+                ends in poky/meta, so HOSTOS_VERSION kept its default. COREBASE
+                points at
+
+                the core metadata directory in both layouts.
+
+
+                Fail the build when the VERSION file is missing or empty, or
+                when COREBASE
+
+                is unset.
+              footer:
+                See: https://www.yoctoproject.org/blog/2026/05/13/yocto-project-6-0-wrynose-is-here/
+                see: https://www.yoctoproject.org/blog/2026/05/13/yocto-project-6-0-wrynose-is-here/
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-9.0.4
+          title: ""
+          date: 2026-10-29T08:50:17.780Z
+  version: 9.0.4
+  title: ""
+  date: 2026-10-29T16:46:56.483Z
+- commits:
     - subject: Update layers/meta-balena to 7f1a0e5c983a45cea4a4aad23c56134e3a3cea2f
       hash: faf9ce2e736149e4a4c67027decba600be1318d7
       body: Update layers/meta-balena
