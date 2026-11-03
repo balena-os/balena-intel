@@ -1,4 +1,31 @@
 - commits:
+    - subject: Update contracts to 17d87d30099bcc7bbd457488c19e626dd658ac97
+      hash: d741bb7217bbd96547d92a444b67a1e700418401
+      body: Update contracts
+      footer:
+        Changelog-entry: Update contracts to 17d87d30099bcc7bbd457488c19e626dd658ac97
+        changelog-entry: Update contracts to 17d87d30099bcc7bbd457488c19e626dd658ac97
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "hw.device-type: Add new device-type - Compulab IOT-GATE-RPI5"
+              hash: 654d03f81ec00d71588a2a023ba0d8b454d8e40e
+              body: >
+                ... and improve instructions in RaspberryPi4 CM4 IOBoard
+                contract.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alexandru Costache <alexandru@balena.io>
+                signed-off-by: Alexandru Costache <alexandru@balena.io>
+              author: Alexandru Costache
+          version: contracts-2.0.151
+          title: ""
+          date: 2026-11-03T07:53:38.332Z
+  version: 9.0.4+rev1
+  title: ""
+  date: 2026-11-03T10:51:44.060Z
+- commits:
     - subject: Update layers/meta-balena to bcf48b44f9a35603274e06a2c663ddc5716d9d72
       hash: 4d81ecdb11bd323e1b68ad7bdeed1ded019d5060
       body: Update layers/meta-balena
