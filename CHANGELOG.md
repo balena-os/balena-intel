@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v9.0.4+rev2
+## (2026-11-04)
+
+* recipes/kernel: update kernel to 5.15.223 [Ryan Cooke]
+
 # v9.0.4+rev1
 ## (2026-11-03)
 
