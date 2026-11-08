@@ -1,4 +1,19 @@
 - commits:
+    - subject: "recipes/kernel: update kernel to 5.15.223"
+      hash: 1631eba484703553b4e7102c948bf9e7d2758f6f
+      body: |
+        This is to mitigate CVE-2026-98432
+      footer:
+        Changelog-entry: "recipes/kernel: update kernel to 5.15.223"
+        changelog-entry: "recipes/kernel: update kernel to 5.15.223"
+        Signed-off-by: Ryan Cooke <ryan@balena.io>
+        signed-off-by: Ryan Cooke <ryan@balena.io>
+      author: Ryan Cooke
+      nested: []
+  version: 2026.7.2
+  title: ""
+  date: 2026-11-08T12:09:51.219Z
+- commits:
     - subject: Update layers/meta-balena to 1b781862ebc83556e4b51985b4ac5b3bbf3f3688
       hash: d174a9379dd3aad816afaf28e8ae77daf9d4439d
       body: |
