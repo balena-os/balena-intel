@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2026.10.2
+## (2026-11-09)
+
+* recipes/kernel: update kernel to 5.15.223 [Ryan Cooke]
+
 # v2026.10.1
 ## (2026-10-22)
 
