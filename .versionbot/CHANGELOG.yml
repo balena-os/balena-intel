@@ -1,4 +1,131 @@
 - commits:
+    - subject: Update layers/meta-balena to 61d294761aaafe47398d4a4be5001577c29e2ac2
+      hash: 813d1e285bc4e264f1158592f36c4836f07ac139
+      body: Update layers/meta-balena
+      footer:
+        Changelog-entry: Update layers/meta-balena to 61d294761aaafe47398d4a4be5001577c29e2ac2
+        changelog-entry: Update layers/meta-balena to 61d294761aaafe47398d4a4be5001577c29e2ac2
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "systemd: break unit ordering loop cycle"
+              hash: 07d020686a7854155789aa7354e2a97df6c3ce58
+              body: >
+                Every balenaOS boot since v2.73.8 carries a systemd ordering
+                cycle that
+
+                systemd breaks by deleting one job randomly from the boot
+                transaction.
+
+                When the deleted job is `var-volatile.mount`, the device goes
+                offline.
+
+
+                The cycle is:
+
+
+                `resin-state-reset.service -> var-volatile.mount ->
+                local-fs-pre.target
+                    -> systemd-remount-fs.service -> systemd-fsck-root.service
+                    -> fake-hwclock.service -> etc-fake-hwclock.mount
+                    -> resin-state-reset.service`
+
+                A second loop goes from `etc-fake-hwclock.mount` to
+                `local-fs-pre.target`
+
+                through the default dependencies of the mount, and back through
+                the
+
+                same fsck edge.
+
+
+                This commit:
+
+
+                - Drops `var-volatile.mount` from `resin-state-reset.service`.
+                The reset
+                  script only writes to `/mnt/state` and never touches `/var/volatile`.
+                - Drops `systemd-fsck-root.service` from the `Before=` list of
+                  `fake-hwclock.service`. The edge has no function: `e2fsck.conf` sets
+                  `broken_system_clock=1`, so fsck ignores the clock. With the edge, any
+                  ordering from the state units to an ordinary mount closes the loop
+                  again.
+                - Adds `DefaultDependencies=no` to `etc-fake-hwclock.mount`.
+                This removes
+                  the implicit `After=local-fs-pre.target`, so `fake-hwclock` still sets
+                  the clock before journald starts and does not wait for the local
+                  filesystems.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "test: add systemd unit ordering check"
+              hash: 79e6561050f22ae148e33dfcd6ddc9479f587603
+              body: >
+                Check that no circular cycles exist that systemd detects and
+                breaks.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-9.0.7
+          title: ""
+          date: 2026-11-12T10:02:50.364Z
+        - commits:
+            - subject: "tests: os: config-json: use the shared journal helper"
+              hash: 1d5b4bc2985617007bb62d5179683467b85e290a
+              body: ""
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+            - subject: "dnsmasq: move the settings to a conf.d drop-in"
+              hash: 37dde807ac5e7494c1b38a50acbb05f4b2df038b
+              body: >
+                The v2.92 update stopped installing file://dnsmasq.conf, which
+                carried
+
+                enable-dbus, domain-needed and bogus-priv.
+
+
+                enable-dbus lets any container with io.balena.features.dbus set
+                the
+
+                upstream servers. That is the documented contract of the label.
+
+
+                This commit moves  them into a balena-files directory so they
+                can not be missed
+
+                again.
+
+
+                Devices running without these options forwarded plain names and
+
+                private reverse lookups upstream.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Alex Gonzalez <alexg@balena.io>
+                signed-off-by: Alex Gonzalez <alexg@balena.io>
+              author: Alex Gonzalez
+              nested: []
+          version: meta-balena-9.0.6
+          title: ""
+          date: 2026-11-09T12:21:03.299Z
+  version: 9.0.7
+  title: ""
+  date: 2026-11-12T14:45:16.295Z
+- commits:
     - subject: Update layers/meta-balena to a89848c3869823b40be382158dc4ad3ac1ab20c4
       hash: 4b2f4635fa73a52d7d292a177f32e42a5bd1c13e
       body: Update layers/meta-balena
