@@ -1,4 +1,40 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 6396c352087dfb8e51878aac70a59b5806eafebf
+      hash: 5bbc2f5da7837ffd105b49eb9da9a360ef8bce70
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 6396c352087dfb8e51878aac70a59b5806eafebf
+        changelog-entry: Update balena-yocto-scripts to 6396c352087dfb8e51878aac70a59b5806eafebf
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "build/barys: Follow symlinks when looking for conf sample files"
+              hash: 7ce9e549c2efc31a9c0058b49345a6a81d5da2f7
+              body: >
+                When using additional layers like the ones adding secure boot
+                support
+
+                (which would have conf/templates as symlink to conf/samples in
+                order to support
+
+                multiple Yocto releases at the same time) we need to make sure
+                the "find" command
+
+                is able to search into such symkinked directories.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Florin Sarbu <florin@balena.io>
+                signed-off-by: Florin Sarbu <florin@balena.io>
+              author: Florin Sarbu
+              nested: []
+          version: balena-yocto-scripts-1.42.18
+          title: ""
+          date: 2026-11-13T19:35:23.517Z
+  version: 9.1.0+rev1
+  title: ""
+  date: 2026-11-14T05:23:08.917Z
+- commits:
     - subject: Update layers/meta-balena to 6ce4cc6078d2f518a7141afc18f1a131d61e9da6
       hash: 33724ed09f175037f5165152db246d9d341fff99
       body: Update layers/meta-balena
