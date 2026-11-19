@@ -1,4 +1,49 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 748e807bac710fad9771c25caab88bca8088a14b
+      hash: 7aaf9661d332362b85f15c8222aefa2b01d9ecb6
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 748e807bac710fad9771c25caab88bca8088a14b
+        changelog-entry: Update balena-yocto-scripts to 748e807bac710fad9771c25caab88bca8088a14b
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update Lock file maintenance
+              hash: 4be9cd19f94e88acd1c678fefbcf8a2159641f54
+              body: |
+                Update 
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.42.20
+          title: ""
+          date: 2026-11-18T23:33:26.645Z
+        - commits:
+            - subject: "hostapp-deploy: Stop depending on s3-deploy"
+              hash: 667d2aad52da867ba651c5169ac7e0e410e5e309
+              body: >
+                web-artifacts are now the required release artifact and fail the
+
+                deploy if missing. S3 is legacy and slated for deprecation, so
+                an S3
+
+                failure should no longer block the hostapp release.
+              footer:
+                Change-type: patch
+                change-type: patch
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.42.19
+          title: ""
+          date: 2026-11-18T17:07:59.256Z
+  version: 9.1.1+rev1
+  title: ""
+  date: 2026-11-19T03:45:16.763Z
+- commits:
     - subject: Update layers/meta-balena to e5ab77289dba2ed27e48b92958c0fd323916d697
       hash: 538c16b7f99c18fe81506736bae797a28e3dd96e
       body: Update layers/meta-balena
