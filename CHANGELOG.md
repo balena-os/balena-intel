@@ -1,6 +1,22 @@
 Change log
 -----------
 
+# v9.1.1+rev2
+## (2026-11-20)
+
+
+<details>
+<summary> Update balena-yocto-scripts to d4d2564a897cb117a47fe3991605bdd7ce1544c4 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.43.0
+> ### (2026-11-19)
+> 
+> * yocto-build-deploy: Build hostapp and extensions in one bitbake invocation [Kyle Harding]
+> * yocto-build-deploy: Match built images to services by name [Kyle Harding]
+> 
+
+</details>
+
 # v9.1.1+rev1
 ## (2026-11-19)
 
