@@ -1,4 +1,43 @@
 - commits:
+    - subject: Update balena-yocto-scripts to ac62fde95212b8eb2c40b385b530fefbd765846f
+      hash: 8937f3ed747eed2b10eead39411c0f80c4a9ac83
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to ac62fde95212b8eb2c40b385b530fefbd765846f
+        changelog-entry: Update balena-yocto-scripts to ac62fde95212b8eb2c40b385b530fefbd765846f
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: "yocto-build-deploy: Attach all service assets under flat keys"
+              hash: 2c9ac676f3f869de9df462dec3f877d181fe3175
+              body: >
+                The build job collects every service's assets into one
+                release-assets
+
+                artifact and applies the flat key transform there. Extension
+                assets get
+
+                the same keys as hostapp assets, and a PR build fails on a key
+                conflict
+
+                instead of the deploy overwriting or 409ing. Overlay asset lists
+                append
+
+                to the meta-balena base list instead of merging by index.
+              footer:
+                Change-type: minor
+                change-type: minor
+                Signed-off-by: Kyle Harding <kyle@balena.io>
+                signed-off-by: Kyle Harding <kyle@balena.io>
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.44.0
+          title: ""
+          date: 2026-11-24T13:40:10.507Z
+  version: 9.1.2+rev1
+  title: ""
+  date: 2026-11-26T04:23:48.807Z
+- commits:
     - subject: Update layers/meta-balena to 2c5bb6e19fb0b26a962e9a0a4b662345cb38e89d
       hash: 25efc55c2c40e6fc410a08a6a840cb30e678f811
       body: Update layers/meta-balena
