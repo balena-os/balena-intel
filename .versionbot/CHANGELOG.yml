@@ -1,4 +1,31 @@
 - commits:
+    - subject: Update balena-yocto-scripts to d747b3b055f7db08aca18af0ad0eed9a3443e9f8
+      hash: 36987f30b3c4b520fdaba4c4bfe04c6e271a0845
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to d747b3b055f7db08aca18af0ad0eed9a3443e9f8
+        changelog-entry: Update balena-yocto-scripts to d747b3b055f7db08aca18af0ad0eed9a3443e9f8
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Change CLI channel to os-profiles-with-runtimes
+              hash: 85596207aca5072bc955d6a6b914c4fc02526847
+              body: >
+                This branch contains support for both profiles and custom
+                container runtimes via the CLI, which are needed to deploy OS
+                Blocks.
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: Kyle Harding
+              nested: []
+          version: balena-yocto-scripts-1.44.5
+          title: ""
+          date: 2026-11-27T17:43:30.263Z
+  version: 9.1.2+rev5
+  title: ""
+  date: 2026-11-27T23:50:38.477Z
+- commits:
     - subject: Update balena-yocto-scripts to 067c1a2c06ecae0f26e5ffe2e10b17f9485b5bb9
       hash: da2e94662525ebba6ef20a9a396835da6dfa1b70
       body: Update balena-yocto-scripts

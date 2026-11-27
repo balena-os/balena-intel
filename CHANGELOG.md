@@ -1,6 +1,21 @@
 Change log
 -----------
 
+# v9.1.2+rev5
+## (2026-11-27)
+
+
+<details>
+<summary> Update balena-yocto-scripts to d747b3b055f7db08aca18af0ad0eed9a3443e9f8 [balena-renovate[bot]] </summary>
+
+> ## balena-yocto-scripts-1.44.5
+> ### (2026-11-27)
+> 
+> * Change CLI channel to os-profiles-with-runtimes [Kyle Harding]
+> 
+
+</details>
+
 # v9.1.2+rev4
 ## (2026-11-27)
 
