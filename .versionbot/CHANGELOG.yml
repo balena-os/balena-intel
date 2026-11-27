@@ -1,4 +1,29 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 067c1a2c06ecae0f26e5ffe2e10b17f9485b5bb9
+      hash: da2e94662525ebba6ef20a9a396835da6dfa1b70
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 067c1a2c06ecae0f26e5ffe2e10b17f9485b5bb9
+        changelog-entry: Update balena-yocto-scripts to 067c1a2c06ecae0f26e5ffe2e10b17f9485b5bb9
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update ubuntu:22.04 Docker digest to b000e69
+              hash: c14fb3244cd21272fd6b8f705e3f5a97a2b50f08
+              body: |
+                Update ubuntu
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.44.4
+          title: ""
+          date: 2026-11-27T07:27:22.474Z
+  version: 9.1.2+rev4
+  title: ""
+  date: 2026-11-27T10:28:37.014Z
+- commits:
     - subject: Update balena-yocto-scripts to 0bf5764fb40947925781012d10bf3e514569d898
       hash: 9437ae54e4ee5a16154da972058d902cc702785d
       body: Update balena-yocto-scripts
