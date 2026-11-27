@@ -1,4 +1,42 @@
 - commits:
+    - subject: Update balena-yocto-scripts to 0bf5764fb40947925781012d10bf3e514569d898
+      hash: 9437ae54e4ee5a16154da972058d902cc702785d
+      body: Update balena-yocto-scripts
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to 0bf5764fb40947925781012d10bf3e514569d898
+        changelog-entry: Update balena-yocto-scripts to 0bf5764fb40947925781012d10bf3e514569d898
+      author: balena-renovate[bot]
+      nested:
+        - commits:
+            - subject: Update coffee-script to ~1.12.0
+              hash: 166f23a8d206a84a499be7b93be89465d00a4c7f
+              body: |
+                Update coffee-script from 1.10.0 to 1.12.7
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.44.3
+          title: ""
+          date: 2026-11-27T03:11:43.064Z
+        - commits:
+            - subject: Update balena-io/balena-cli to v25.2.44
+              hash: e0c6060164f90b188d5f0e890a508ac1fe6e1e05
+              body: |
+                Update balena-io/balena-cli from 25.1.10 to 25.2.44
+              footer:
+                Change-type: patch
+                change-type: patch
+              author: balena-renovate[bot]
+              nested: []
+          version: balena-yocto-scripts-1.44.2
+          title: ""
+          date: 2026-11-26T22:49:09.825Z
+  version: 9.1.2+rev3
+  title: ""
+  date: 2026-11-27T06:28:56.385Z
+- commits:
     - subject: Update balena-yocto-scripts to 6fb8bd255436e8e4d330e78bbce67fd08363558b
       hash: 7fa5d650095c30e5ce1de8e88d4807d90bbdc6b0
       body: Update balena-yocto-scripts
